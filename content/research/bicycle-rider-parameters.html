@@ -1,0 +1,31 @@
+---
+title: Bicycle and Rider Physical Parameters
+subtitle: how accurate can you get
+description:
+startdate: !!timestamp '2003-06-01 10:00:00'
+enddate: !!timestamp '2003-12-31 10:00:00'
+---
+
+{% mark image -%}
+
+{% filter restructuredtext %}
+.. image:: {{ media_url('images/zambulance.jpg') }}
+{% endfilter %}
+
+{%- endmark %}
+
+{% mark excerpt -%}
+
+{% filter restructuredtext %}
+
+To accurately model the bicycle and rider system, the basic physical parameters
+of the bicycle and the rider must be measured or estimated. These parameters
+include the geometry, mass, mass locations, and mass distribution of all the
+bodies in the system at the most basic level and but may include any other
+constants such as frictional coefficients, damping constants, etc. Starting at
+TU Delft with Jodi Kooijman's tools and methods as a starting point I refined a
+technique for measuring both the bicycle and rider's basic parameters.
+
+{% endfilter %}
+
+{%- endmark %}

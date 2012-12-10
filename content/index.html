@@ -1,0 +1,62 @@
+---
+extends: columns.j2
+default_block: main
+description: webspace de moorepants
+---
+
+<div class="row">
+	<div class="span12">
+{% filter restructuredtext -%}
+.. image:: {{ media_url('images/headshot.jpg') }}
+   :class: img-rounded pull-right
+
+moorepants /mʊərpænts/
+   A reverend, a wizard, a bicyclist, a doer. Raised among the tobacco fields
+   of southern Virginia, now exploring the word  thinking, learning, teaching,
+   absorbing, creating. Plus, his mom claims he is a super duper guy.
+{%- endfilter %}
+	</div>
+</div>
+
+<div class="row">
+	<div class="span4">
+		<h3><a class="btn btn-primary btn-large" href="about.html"><i class="icon-user
+					icon-white"></i> About</a></h3>
+		<p>Just a bit about me. You know, my CV and all that jazz.</p>
+	</div>
+	<div class="span4">
+		<h3><a class="btn btn-primary btn-large" href="blog"><i class="icon-bullhorn icon-white"></i> Blog</a></h3>
+		{% from "macros.j2" import render_blog_excerpt with context %}
+		<section class="blog_excerpt">
+		{% set latest = site.content.walk_resources_sorted_by_time()|first %}
+		{% if latest -%}
+		{{ render_blog_excerpt(latest, 'post') }}
+		<a class="btn btn-small"
+				href="{{ content_url(latest.url) }}">Read more&hellip;</a>
+		{%- endif %}
+	</div>
+	<div class="span4">
+		<h3><a class="btn btn-primary btn-large" href="portfolio"><i class="icon-tint icon-white"></i> Portfolio</a></h3>
+		<img class="pull-right img-rounded" src="media/images/portfolio.png" />
+		<p>The intergalatic portal to my projects. From mechanical engineering to
+		non-profit wizardy.</p>
+	</div>
+<div class="row">
+</div>
+	<div class="span4">
+		<h3><a class="btn btn-primary btn-large" href="research"><i class="icon-fire icon-white"></i> Research</a></h3>
+		<p>The curiosities that intrigue me.</p>
+	</div>
+	<div class="span4">
+		<h3><a class="btn btn-primary btn-large" href="teaching.html"><i class="icon-leaf icon-white"></i> Teaching</a></h3>
+		<p>Teaching, a new frontier.</p>
+	</div>
+	<div class="span4">
+		<h3><a class="btn btn-primary btn-large" href="interests.html"><i class="icon-magnet icon-white"></i> Interests</a></h3>
+		<img class="pull-right img-rounded" src="media/images/skate-pants-good.jpg" />
+		<p>I used to do some things besides work, like standing around in Walmart
+		parking lots thinking of things that would be cool to do.</p>
+	</div>
+</div>
+
+</section>

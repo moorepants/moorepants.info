@@ -1,0 +1,41 @@
+{% extends "columns.j2" %}
+
+{% block main -%}
+<article class="post">
+<nav class="post_nav">
+<a class="backlink" href="{{ content_url(resource.node.url) }}">Back to list</a>
+<a class="prev{{' disabled' if not resource.prev_by_name }}"
+    title="{{ resource.prev_by_name.meta.title }}"
+    {% if resource.prev_by_name %}
+    href="{{ content_url(resource.prev_by_name.url) }}"{% endif %}>
+    Previous
+</a>
+
+<a class="next{{' disabled' if not resource.next_by_name }}"
+    title="{{ resource.next_by_name.meta.title }}"
+    {% if resource.next_by_name %}
+    href="{{ content_url(resource.next_by_name.url) }}"{% endif %}>
+    Next
+</a>
+
+</nav>
+
+{% if resource.meta.tags %}
+<ul class="tags clear">
+{% for tag in resource.meta.tags %}
+<li>
+    <a class="small" href="{{ content_url('portfolio/tags/'~tag~'.html') }}">
+        {{ tag }}
+    </a>
+</li>
+{% endfor %}
+</ul>
+{% endif %}
+{% filter markdown|typogrify -%}
+{% mark post -%}
+{% block post -%}{%- endblock %}
+{%- endmark %}
+{%- endfilter %}
+</article>
+
+{%- endblock %}

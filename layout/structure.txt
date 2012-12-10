@@ -1,0 +1,20 @@
+base.j2 (includes analytics.j2, footer.j2)
+|
+--tagged_posts.j2
+|
+--topbar.j2 (imports render_main_menu from macros.j2)
+  |
+  --columns.j2
+    |
+    --blog.j2
+    |
+    --listing.j2 (imports render_blog_excerpt from macros.j2)
+    |
+    --portfolio.j2
+    |
+    --portfolio_listing.j2 (imports render_excerpt from macros.j2)
+
+analytics.j2
+atom.j2
+macros.j2: render_main_menu, render_blog_excerpt, render_excerpt
+footer.j2

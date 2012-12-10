@@ -1,0 +1,3 @@
+extends: site.yaml
+mode: production
+media_url: media

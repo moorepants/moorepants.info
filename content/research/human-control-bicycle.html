@@ -1,0 +1,35 @@
+---
+title: Human Control of a Bicycle
+subtitle: what about bears?
+description: what I studied for my phd degree
+startdate: !!timestamp '2003-06-01 10:00:00'
+enddate: !!timestamp '2003-12-31 10:00:00'
+---
+
+{% mark image -%}
+
+{% filter restructuredtext %}
+.. image:: {{ media_url('images/zambulance.jpg') }}
+{% endfilter %}
+
+{%- endmark %}
+
+{% mark excerpt -%}
+
+{% filter restructuredtext %}
+
+My graduate work at UC Davis was rounded out with a project that focused on
+identifying the control actions and model employed by a human during simple
+manuevers. I constructed a heavily instrumented bicycle and collected a great
+deal of data during a series of experiments in which the rider attempted to
+balance a bicycle under lateral perturbations. This data was then used to
+identify both a plant and control model of the underlying system and validate
+our hypostheses about the rider's control structure. The work is detailed both
+in `my dissertation`_ and `my lab's website`_.
+
+.. _my dissertation: http://moorepants.github.com/dissertation
+.. _my lab's website: http://biosport.ucdavis.edu/research-projects/bicycle
+
+{% endfilter %}
+
+{%- endmark %}
