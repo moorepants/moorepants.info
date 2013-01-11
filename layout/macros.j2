@@ -11,8 +11,8 @@
 {% refer to res.url as post %}
 <article {{'class='~class if class }}>
 <h3><a href="{{ content_url(res.url) }}">{{ res.meta.title }}</a></h3>
-<a href="{{ content_url(res.url) }}">{{ post.image|markdown|typogrify }}</a>
-{{ post.excerpt|markdown|typogrify }}
+<a href="{{ content_url(res.url) }}">{{ post.image|typogrify }}</a>
+{{ post.excerpt|typogrify }}
 <time datetime="{{ res.meta.created.strftime('%Y-%m-%d') }}">
     Posted: {{ res.meta.created.strftime('%a, %d %b %Y') }}
 </time>

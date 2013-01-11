@@ -27,13 +27,7 @@
     <script type="text/javascript"
         src="http://platform.twitter.com/widgets.js"></script>
 </div>
-<div id="facebook_like">
-<iframe src="http://www.facebook.com/plugins/like.php?href&amp;layout=box_count&amp;show_faces=false&amp;width=450&amp;action=like&amp;font=arial&amp;colorscheme=light&amp;height=65"
-            scrolling="no"
-            frameborder="0"
-            style="border:none; overflow:hidden; width:450px; height:65px;"
-            allowTransparency="true"></iframe>
-</div>
+<div class="g-plusone" data-href="http://www.moorepants.info{{ content_url(resource.url) }}"></div>
 </nav>
 <h1 class="title">
     <a href="{{ content_url(resource.url) }}">
@@ -55,7 +49,7 @@
 {% endfor %}
 </ul>
 {% endif %}
-{% filter markdown|typogrify -%}
+{% filter typogrify -%}
 {% mark post -%}
 {% block post -%}{%- endblock %}
 {%- endmark %}
@@ -63,3 +57,14 @@
 </article>
 
 {%- endblock %}
+
+{% block js %}
+{{ super() }}
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+{% endblock js %}
