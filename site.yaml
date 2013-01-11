@@ -15,37 +15,37 @@ context:
         menu:
             -
                 name: About
-                description: About
+                description: Just a bit about me. You know, my CV and all that jazz.
                 css_class: about
                 type: page
                 url: about.html
             -
                 name: Portfolio
-                description: Portfolio
+                description: The intergalatic portal to my projects. From mechanical engineering to non-profit wizardy.
                 css_class: portfolio
                 type: node
                 url: portfolio
             -
                 name: Research
-                description: Research
+                description: The curiosities that intrigue me.
                 css_class: research
                 type: node
                 url: research
             -
                 name: Teaching
-                description: Teaching
+                description: Teaching, a new frontier.
                 css_class: teaching
                 type: page
                 url: teaching.html
             -
                 name: Blog
-                description: Blog
+                description: Here is the pulpit. I recommend not listening to me.
                 css_class: blog
                 type: node
                 url: blog
             -
                 name: Interests
-                description: Interests
+                description: I used to do some things besides work, like standing around in Walmart parking lots thinking of things that would be cool to do.
                 css_class: interests
                 type: page
                 url: interests.html
