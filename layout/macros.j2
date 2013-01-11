@@ -2,7 +2,7 @@
 <ul class="nav">
 {% for menu_item in menu -%}
   <li{% if menu_item.url == resource.url or menu_item.active %}
-  class="active"{% endif %}><a href="{{ menu_item.url }}">{{ menu_item.name }}</a></li>
+  class="active"{% endif %}><a href="/{{ menu_item.url }}">{{ menu_item.name }}</a></li>
 {%- endfor %}
 </ul>
 {%- endmacro %}

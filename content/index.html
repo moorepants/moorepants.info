@@ -1,6 +1,8 @@
 ---
 extends: columns.j2
 default_block: main
+title: moorepants
+subtitle: a website
 description: webspace de moorepants
 ---
 
@@ -26,14 +28,7 @@ moorepants /mʊərpænts/
 	</div>
 	<div class="span4">
 		<h3><a class="btn btn-primary btn-large" href="blog"><i class="icon-bullhorn icon-white"></i> Blog</a></h3>
-		{% from "macros.j2" import render_blog_excerpt with context %}
-		<section class="blog_excerpt">
-		{% set latest = site.content.walk_resources_sorted_by_time()|first %}
-		{% if latest -%}
-		{{ render_blog_excerpt(latest, 'post') }}
-		<a class="btn btn-small"
-				href="{{ content_url(latest.url) }}">Read more&hellip;</a>
-		{%- endif %}
+		Here is the pulpit. I recommending not listening to me.
 	</div>
 	<div class="span4">
 		<h3><a class="btn btn-primary btn-large" href="portfolio"><i class="icon-tint icon-white"></i> Portfolio</a></h3>

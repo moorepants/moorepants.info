@@ -1,7 +1,7 @@
 {% extends "columns.j2" %}
 {% from "macros.j2" import render_blog_excerpt with context  %}
+
 {% block main %}
-<!-- {% block page_title %}<h1 class="title">{{ resource.meta.title }}</h1>{% endblock %} -->
 
 <ul class="listing clear">
 {% for res in resource.node.walk_resources_sorted_by_time() %}
@@ -10,4 +10,5 @@
 </li>
 {% endfor %}
 </ul>
+
 {% endblock %}
