@@ -7,7 +7,8 @@
 <a class="prev{{' disabled' if not resource.prev_by_time }}"
     title="{{ resource.prev_by_time.meta.title }}"
     {% if resource.prev_by_time %}
-    href="{{ content_url(resource.prev_by_time.url) }}"{% endif %}>
+    href="{{ content_url(resource.prev_by_time.url) }}"
+    {% endif %}>
     Previous
 </a>
 
@@ -27,6 +28,7 @@
     <script type="text/javascript"
         src="http://platform.twitter.com/widgets.js"></script>
 </div>
+<!-- Google Plus One Button -->
 <div class="g-plusone" data-href="http://www.moorepants.info{{ content_url(resource.url) }}"></div>
 </nav>
 <h1 class="title">
