@@ -9,19 +9,28 @@ enddate: !!timestamp '2003-12-31 10:00:00'
 {% mark image -%}
 
 {% filter restructuredtext %}
-.. image:: {{ media_url('images/zambulance.jpg') }}
+.. image:: {{ media_url('images/jason-bicycle-mo-cap.jpg') }}
+   :class: img-rounded
 {% endfilter %}
 
 {%- endmark %}
 
-{% mark excerpt -%}
 
 {% filter restructuredtext %}
+
+{% mark excerpt -%}
 
 We measured the kinematics of a bicycle and rider during typical riding and
 maneuvers using motion capture technologies and analyzed the data using
 principal component analysis to characterize the dominant motions in control.
 
+{%- endmark %}
+
+This is a video of a Dutch television show that did a piece on the work:
+
 {% endfilter %}
 
-{%- endmark %}
+<iframe width="560" height="315"
+	src="http://www.youtube.com/embed/rD21JAsq0Kg"
+	frameborder="0" allowfullscreen></iframe>
+

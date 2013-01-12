@@ -9,14 +9,15 @@ enddate: !!timestamp '2003-12-31 10:00:00'
 {% mark image -%}
 
 {% filter restructuredtext %}
-.. image:: {{ media_url('images/zambulance.jpg') }}
+.. image:: {{ media_url('images/jason-on-instrumented-bicycle.jpg') }}
+   :class: img-rounded
 {% endfilter %}
 
 {%- endmark %}
 
-{% mark excerpt -%}
-
 {% filter restructuredtext %}
+
+{% mark excerpt -%}
 
 My graduate work at UC Davis was rounded out with a project that focused on
 identifying the control actions and model employed by a human during simple
@@ -30,6 +31,18 @@ in `my dissertation`_ and `my lab's website`_.
 .. _my dissertation: http://moorepants.github.com/dissertation
 .. _my lab's website: http://biosport.ucdavis.edu/research-projects/bicycle
 
+{%- endmark %}
+
+Videos
+------
+
+These are two videos that were produced about the research:
+
 {% endfilter %}
 
-{%- endmark %}
+<iframe width="560" height="315" src="http://www.youtube.com/embed/zShn5xMueso"
+	frameborder="0" allowfullscreen></iframe>
+
+<iframe width="560" height="315"
+	src="http://www.youtube.com/embed/HcYbn_RCLiw"
+	frameborder="0" allowfullscreen></iframe>
