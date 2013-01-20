@@ -6,3 +6,255 @@ extends: portfolio_listing.j2
 default_block: test
 listable: false
 ---
+
+{% filter restructuredtext %}
+
+Research Statement
+==================
+
+If one word can represent the glue in my research ideas and intentions it would
+be "human". With a mechanical engineering focus, I'm mostly concerned with
+various ways humans interact with machines. The past decades of mechanical
+engineering advancement have brought us great strides in automatic control and
+machine design. But this body of research often neglects that humans are still
+and will be for the foreseeable future an integrable part of machines.
+Machines will need to become more and more aware of the human's actions and
+intentions, complementing the higher cerebral control that computers cannot yet
+demonstrate with the massive data parsing and repetitive tasks that computers
+excel at. We must understand the human to better interact with its environment
+which is starting to include more advanced vehicles, environments, machines,
+and software. The more we understand how the human works the better these
+devices can be designed to complement the human's strengths.
+
+My doctoral dissertation work focused on the human's unique ability to balance
+a mostly unstable vehicle, the bicycle. The bicycle control problem is an ideal
+platform for investigating many, if not all of the facets of complex human
+control and complementary machine design, all in a tractable, economically
+viable, and familiar machine. On-board data acquisition has improved
+dramatically with the advent of tiny sensor and data collection abilities that
+are being pushed by the smartphone industry, which is helping propel
+engineering into a big data field. This sensor and data collection allowed me
+to collect substantial amounts of data from both the bicycle and the human
+subject in maneuvering experiments. I made use of a combination of first
+principles modeling techniques and grey box system identification approaches to
+develop realistic models of both the bicycle and the human's control behavior.
+This research is covered in detail in my `dissertation
+<http://moorepants.github.com/dissertation>`_ and a series of journal and
+conference papers found in my resume.
+
+My doctoral work has built my aptitude in a broad range of theoretical and
+experimental sub-disciplines which include:
+
+- Multibody dynamics and classical mechanics
+- Classical and modern automatic control systems
+- System identification
+- Signal processing
+- Human biomechanics
+- Human operator control (i.e. manual control)
+- Vehicle dynamics (single track vehicles, automobiles, and aircraft)
+- Aircraft dynamics and control
+- Vehicle handling qualities
+- Open source software engineering and agile development
+- Statistical modeling
+- Machine design
+- Sports engineering
+- Appropriate technology
+- Human powered machines
+- Wind tunnel experimentation
+- Mobile instrumentation
+
+My future research directions are going to leverage collaborative initiatives
+to fill in the gaps in my expertise with the intent of developing a more
+holistic research plan centered around the human as a controller and his or her
+interactions with machines. In particular, connection to the fields of
+cognitive psychology, neuroscience, and machine learning will be a priority.
+The prediction of human behavior in a machine interaction sense requires
+greater understanding of the mind and the complexities of the human's internal
+control scheme.
+
+My primary goal will be do assemble a team of scientists (students, post docs,
+and fellow collegues) to tackle research fundamental concepts in our
+understanding of the human's control system and the machines that the human
+interacts with. The applications are wide ranged but the research will
+primarily focus on the basics of human motor control from simple balance to
+manipulator control to vehicle control. I am interested in pushing the
+boundaries into biofeeback in automatic control systems and operator
+"awareness".
+
+In my tenure as a graduate student researcher I have already gained a great
+deal of experience in project management, student mentoring, and successful
+grant writing. The final years of my graduate work was funded by an National
+Science Foundation grant, of which I played a large role in writing and
+managing under my principal investigators. Combining this with successful
+grants from the Department of State (Fulbright), many local UC Davis grants,
+and two Google Summer of Code grants, I feel quite prepared to secure funding
+and management a large lab and several research projects.
+
+When does the automatic take control of the vehicle if the human isn't up to
+the control task? Can automatic control constantly be aware of the human's
+state such that it can adapt to the human's ability or inability? Can machines
+become aware of their surroundings such that they never harm a human? Autmoatic
+control of manually controlled systems must be able to augment the human's
+actions both enhacing their ability and filling in when the human loses the
+ability to be an adequate controller. It should be aware of things the human
+cannot be.
+
+Research Proposals
+==================
+
+The following give brief proposals for research projects ideas and seeds.
+
+Manual Control and Human Machine Interaction
+--------------------------------------------
+
+I'd like to explore the human as a machine controller for very fundamental
+problems. For example, how do we balance a broom stick on our hand? What is the
+fundamental sensory information that we take in, how we process that, and
+produce the correct control action. Developing experiments around simple
+input/output relationships with machines and software can help expose the
+essense of human control.
+
+In constract to simple systems and first principles modeling cosntructs, the
+collection of a large amount of varying dynamic data from forces and kinematics
+to psyiological sensations combined with machine learning and system
+identication will allow for the development of predictive models of human
+control behavior in complex tasks.
+
+Cheap UAVs offer a new complex platform for testing helicopter dynamics.
+
+Balance
+-------
+
+One of the most fundamental control tasks we do as a human is to balance.
+Balancing is learned at a very young age when it is a task that dominates the
+frontal cortex computations but which becomes a learned skill which moves to
+the spinal cord. I'd like to study details of postrual control and the way in
+which we learn the skill through carefully crafted experiments that can expose
+the sensory motor control the human uses in balancing.
+
+Single Track Vehicle Dynamics
+-----------------------------
+
+Single track vehicles such as bicycles, motorcycles, unicycles offer a unique
+platform to study and understand human control. These vehicles limit the
+human's input sources to affect the vehicles behavior which allow for more
+controlled input/output experimental reslationsips t be studied. Furthermore
+the vehicles themselves have non-trivial open loop dynamics which provides a
+rich system for exposing the human's unique control abilities such as
+non-minimum phase, instabilty, and directional control.
+
+Vehicle and Machine Handling Qualities
+--------------------------------------
+
+When human's interact with machines whether it be flying an aircraft or playing
+a video game there is feel, a subjective opinion on the ease of control. Does
+the machine do what I want it to with minimal effort? The performance while
+completing a task with a manually control machine and the machines open loop
+dynamics can be objectively measured. There must be connections between the the
+subjective feeling and the objective measurements. Unlocking this connection
+will allow for the design of machines that compliment the human in a passive
+way and in combination with automatic control will allow machines to adapt
+the machine's dynamics in response to the humans desires. But understanding
+what makes a machine easy to control will take an interdiciplianry approach
+that involves an understanding of dynamics, control, neuroscience, and
+pyschology.
+
+Vehicle Model Software and Database
+-----------------------------------
+
+Scientists create models of vehicles constantly. There are well known models
+like the "bicycle" model for cars, the Pacjeka automobile tire model, the
+Whipple bicycle model, the Sharp motorcycle model, etc. The currently
+availabilty of free an unhindered use of these models detracts from the
+scientific community being able to trust resutls. A large database that allowed
+models to developed, submitted and validated for easy reuse will. I'd like to
+start with vehicle models, but this concept can extend to any system described
+by differential equations and such.
+
+Vehicle Simulation Database
+---------------------------
+
+Dynamics data is constantly collected on different vehilcles but is only stored
+locally on scientists computers. If there were an easy way to stored time
+series measurements with accompanying meta data, a large database of
+simulations could be built up. This would allow modelers to validate their
+models against thousands and thousands of simulations. In my field, most models
+are accepted after being validated on only a tiny set of data. Imagine if you
+could validate your model on huge datasets of simulations.
+
+Bicycle Tire Modeling
+---------------------
+
+The rigid body dynamics bicycles and motorcycles have advanced enough for most
+prediction abiliaties, but the most glaring deficiency is models that can
+accurately predict the ground reaction forces between a tire and the surface
+that it is rolling on. I'm interested in creating large amounts of tire force
+data and identifiying models for validation and creation of first principles
+models.
+
+Open Source Software
+--------------------
+
+The academic needs powerful cutting edges computation tools at his or her
+disposal. In academia, I believe that these tools are best provided by open
+source software that is collaboratively developed among the leading scientists
+in the field. The nature of open source software parallels the idea of
+reproducible, reusable science. I've spent a great deal of time working on open
+source software as a tightly knit companion to my research. All of my research
+will have open source software as an integral component and here are some
+specific examples of projects:
+
+- Dynamics (problem development, simulation, and visualization)
+- Symbolic equation of motion generation for dynamic systems
+- Control Systems
+- System Identification
+
+I'm interested in developing reusale, tested open source software suites that
+leverage cloud computing resources to solve big problems in my field, but to
+have the software general enough that many other fields will use the software.
+
+Big Data For Engineers
+----------------------
+
+The web has caught on to the big data movement, but much of the engineering
+world is still behind the times. It is obvious that the more data we We now
+have the capability for data driven models and predictions of physical
+phenomina by making use of vast database stores and cloud powered computing
+resources.
+
+Data Sharing For Engineers
+--------------------------
+
+The vehicle simulation database and model database can evenutally be expanded
+to other fields.
+
+Human Inertia
+-------------
+
+Develop more realistic mathematical models for human inertia. Current rigid
+body models do not accurate model the human intertia around the joints when in
+arbitrary configurations. The need for more complex volumetric equations
+defining the flexible regions around the primary joints can increase the
+accuracy of human inertia esitmation in arbtrary configurations.
+
+Segmented density areas within segements.
+
+Validation of inertia models
+
+Human power
+-----------
+
+Machines that are controlled with the human need to be aware of the human and
+continously adapt to the human's varying control. We need to combine the best
+of automatic control and the best of manual control to produce synergesitc
+systems that best perform.
+
+Energetics of Transportation
+----------------------------
+
+- Speed limits per vehicle kinetic energy
+- GPS controlled Speed limit
+- Self drving cars
+- Efficient route choices based on the energetics of travel
+
+{% endfilter %}
