@@ -16,3 +16,6 @@ push: getresume
 	#ssh $(username)@$(server) 'chmod -R u+w,a+rX $(destination)'
 	ssh $(username)@$(server) 'find $(destination) -type f -exec chmod 644 {} \;'
 	ssh $(username)@$(server) 'find $(destination) -type d -exec chmod 755 {} \;'
+
+clean:
+	rm -rf $(source)
