@@ -9,6 +9,8 @@ genserve: getresume
 
 getresume:
 	rsync /media/Data/Documents/Resume/JasonMoore_cv.pdf content/media/docs/JasonMoore_cv.pdf
+	rsync /media/Data/Documents/School/UC\ Davis/Appropriate\ Technology/HumanPowerPresentation/hppres.pdf content/media/docs/hppres.pdf
+	rsync /media/Data/Documents/School/UC\ Davis/Appropriate\ Technology/HumanPowerPresentation/hppres-notes.pdf content/media/docs/hppres-notes.pdf
 
 push: getresume
 	hyde gen -r -c prod.yaml
