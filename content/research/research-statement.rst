@@ -1,5 +1,8 @@
+==================
 Research Statement
 ==================
+
+:Author: Jason K. Moore
 
 If one word can represent the glue that binds my research concepts and
 intentions it would be "human". With a mechanical engineering focus, my
@@ -270,4 +273,3 @@ engineers, planners, and policy makers.
 - Self driving cars
 - Efficient route choices based on the energetics of travel
 - Fuel economy feedback reformulated with energy economy in mind
-

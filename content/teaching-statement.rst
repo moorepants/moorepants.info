@@ -1,5 +1,8 @@
+===================
 Teaching Philosophy
 ===================
+
+:Author: Jason K. Moore
 
 I would like to join an educational institution that encourages, sustains, and
 nurtures non-traditional engineering education models. The traditional
@@ -53,7 +56,7 @@ problems sourced from research and industry.
 
 So far, my teaching experience is based on:
 
-- teaching a large undergraduate engineering course at UC Davis 
+- teaching a large undergraduate engineering course at UC Davis
 - the four teaching assistantships I've had in the UC Davis MAE department,
 - my work mentoring 15+ graduate and undergraduate students in a lab setting
 - supervising and teaching students in the UC Davis engineering machine shop
@@ -144,7 +147,7 @@ to incorporate and include some class designs for undergraduates and
 graduates.
 
 Collaborative Teaching
-----------------------
+======================
 
 I am interested in collaborative teaching efforts, as a good team of teachers
 will often complement each other and exceed what is provided by a singleton.
@@ -155,7 +158,7 @@ collaborative teaching groups in courses that span not only our small
 departments, but across other colleges around the world.
 
 Grades
-------
+======
 
 Individual performance and scholastic aptitude are certainly a way to evaluate
 someone's potential, but traditional grading derived from tests and assignments
@@ -169,7 +172,7 @@ measures of a student's success and would not complain at all if traditional
 grades could be left out of the picture altogether.
 
 Technology
-----------
+==========
 
 Expanding teaching techniques and the freedom to be experimental are high
 priorities for me. Students continue to absorb and learn in new ways faster
@@ -187,7 +190,7 @@ to make strong use of these latest tools in the classroom, including:
 - class wikis
 
 Learning to teach
------------------
+=================
 
 PhD students in engineering are typically not taught how to teach. We are
 measured on our research and scholastic capabilities but not on our teaching
@@ -202,7 +205,7 @@ relationships will be a core part of my continuing education on education to
 make up for the gaps in my skill set.
 
 Text books
-----------
+==========
 
 Expensive text books in which a new version is published every year will become
 a thing of the past. The average semester/quarter cost of engineering text
@@ -226,7 +229,7 @@ Connexions_, and WikiBooks_.
 .. _WikiBooks: http://www.wikibooks.org
 
 Project Based Learning
-----------------------
+======================
 
 Young students have a deep reservoir for passion and we as teachers should help
 that flourish as early in the engineering curriculum as possible. One way to do
@@ -234,7 +237,7 @@ this is to give students real-life problems to solve and have them use the
 power of team work to create and innovate solutions.
 
 Course Ideas
-------------
+============
 
 I am interested in teaching many classes. I am well equipped to teach
 undergraduate courses in dynamics, control, bio-mechanics, vehicle dynamics,
@@ -265,7 +268,7 @@ often hard to come by. I'd like to develop one that is founded and linked to
 machine learning and big data problems.
 
 Bicycle Dynamics
-................
+----------------
 
 Lastly, I am interested in developing a course modeled after a colleague in
 Spain that centers on the bicycle. The bicycle is an interestingly rich
@@ -275,4 +278,3 @@ canned, but complex, dynamic system to model, measure, and validate with
 experimentation. The bicycle offers an economical and tractable platform for
 learning the whole picture in experimentation which is perfect for a
 undergraduate or graduate level course.
-
