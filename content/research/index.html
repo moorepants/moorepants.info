@@ -7,6 +7,8 @@ default_block: test
 listable: false
 ---
 
+{% block intro %}
+
 {% filter restructuredtext %}
 
 Research Statement
@@ -284,4 +286,9 @@ engineers, planners, and policy makers.
 - Efficient route choices based on the energetics of travel
 - Fuel economy feedback reformulated with energy economy in mind
 
+Past and Ongoing Research Projects
+==================================
+
 {% endfilter %}
+
+{% endblock%}

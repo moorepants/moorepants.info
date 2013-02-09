@@ -3,6 +3,8 @@
 
 {% block main %}
 
+{% block intro %}{% endblock%}
+
 <div class="row">
 {% for res in resource.node.walk_resources_sorted_by_name() %}
   <div class="span4">
