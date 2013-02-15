@@ -21,6 +21,14 @@ enddate: !!timestamp '2009-08-31 00:00:00'
 
 {% filter restructuredtext %}
 
+CAD modeling of an innovative Maglev train.
+
+{% endfilter %}
+
+{%- endmark %}
+
+{% filter restructuredtext %}
+
 In the early 2000's Old Dominion University made a deal with some company that
 claimed they had the latest, greatest maglev train technology. They installed a
 track at the University and mounted a vehicle that didn't actually work and
@@ -31,11 +39,6 @@ below. We used Autodesk's Mechanical Desktop for the modeling and I had to
 measure everything by hand to reverse engineer it because the company that
 built the thing supposedly had no drawings of the machine.
 
-{% endfilter %}
-
-{%- endmark %}
-
-{% filter restructuredtext %}
 
 .. image:: {{ media_url('images/maglev-frame.png') }}
 
