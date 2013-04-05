@@ -46,6 +46,18 @@ These are two videos that were produced about the research:
 
 {% endfilter %}
 
+Future Idea Snippets
+--------------------
+
+- Use a Kalman filter to generate the angles, rates, and accelerations of the
+system and then run the M, C, K linear least squares fitting routine to data.
+This may give more consistentcy between the angles, rates, and accels and lower
+the uncertainity in the identified parameters in the plant id.
+- Setup up an optimization problem that maximizes our analytic handling quality
+metric with respect to the bicycle's physical parameters. If lucky, this could
+spit out some unusual type of optimal vehicle. This concept leads to deriving
+vehicle designs from optimization instead of human intuition and experience.
+
 <iframe width="560" height="315" src="http://www.youtube.com/embed/zShn5xMueso"
 	frameborder="0" allowfullscreen></iframe>
 
