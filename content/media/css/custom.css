@@ -96,3 +96,6 @@ ul.tags li a:hover{
     color: #222;
 }
 
+blockquote p{
+	margin-bottom: 10px;
+}
