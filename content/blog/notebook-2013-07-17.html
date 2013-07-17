@@ -1,0 +1,294 @@
+---
+title: Notebook Entry
+subtitle: July 17, 2013
+description:
+created: !!timestamp '2013-07-17 18:00:00'
+tags:
+    - notebook
+---
+
+{% mark image -%}
+
+{%- endmark %}
+
+{% mark excerpt -%}
+{% filter restructuredtext %}
+
+Today's task list:
+
+- [x] Write up findings on cost of Matlab and use with AWS
+- [x] Talk to Patsy about purchasing our stuff and the AWS account
+- [x] Order computers
+- Install Matlab
+- Run structural identifications for Dr. Hess
+- [x] Read and do exercises in Chapter of Professional Plone Development
+- Reply to Open Science email
+- Review the todo items on the Yeadon paper
+- Work on parsing the walking data
+
+Matlab Purchasing Options
+=========================
+
+The following is a copy of the email I sent to my PI and the lab about
+purchasing Matlab licenses:
+
+I spoke with our Mathworks rep yesterday about purchasing Matlab licenses for
+the lab and the ability to use Amazon AWS with Matlab for parallel computing
+needs.
+
+Basic Matlab
+------------
+
+We have two licensing options from Mathworks:
+
+Academic License
+****************
+
+Matlab plus all desired tool boxes are purchased for each computer we need it
+for. This allows you to install the software on a machine for perpetual use,
+but only on one machine. This is the ideal situation as but there is another
+potentially cheaper option below.
+
+Concurrent License
+******************
+
+The concurrent license scheme allows you to install software on a personal
+server that allows people to checkout a license to Matlab. So Matlab is
+installed on as many machines as you want, but you can't use it unless you are
+connected to the server and a license is available. If you want to use Matlab
+while you are away from the lab you would need to have a VPN type of IP routing
+so that you can checkout a license when you are not in the lab. Going this
+route could potentially allow you to purchase fewer copies of Matlab and fewer
+copies of toolboxes because everyone isn't actually using all of these at the
+same time as each other. This will require us to run and manage a local server
+and probably setup this VPN thing.
+
+Cost of core Matlab (no toolboxes):
+
+- 1 license: $500
+- 5-9 license: $300 each
+- 10-?: $220 each
+
+Cost of toolboxes:
+
+- 1 general toolbox: $200
+- 2-4 general toolboxes: $158 each
+- 5-? general toolboxes: $105 each
+- Simulink 5-?: $150
+
+This includes 1 year of tech support and 1 year of upgrades (Matlab releases
+twice a year).
+
+Additional years of tech support and upgrades cost 20% of total license cost
+(including toolbox costs) per year per license.
+
+There is also a Student Version of Matlab that students can purchase for $99
+for their personal machines. These technically can't be installed on University
+owned computers. But our grad students can run this on their own machines if
+they want.
+
+The wish list of toolboxes we may use:
+
+- Optimization Toolbox
+- Global Optimization Toolbox
+- Control System Toolbox
+- System Identification Toolbox
+- Signal Processing Toolbox
+- Data Acquisition Toolbox
+- SimMechanics 
+- Simulink
+- Parallel Computing Toolbox
+
+Let me know if you have any other favorites!
+
+We can probably get away without buying all these depending on what we use. It
+sounds like Sandy and Obinna only use simulink and the sys id toolboxes.
+
+Ok, drum roll ....
+
+If we assume we need 5 licenses available for simultaneous use and we get all
+the tool boxes then the expensive cost (academic licenses) is something like:
+
+5*$300 + 5*8*$105 + 5*$150 = *$6450*
+
+plus a *$1290* per year tech support/upgrade fee
+
+If we got the cheaper route and get 5 licenses in the concurrent scheme,
+purchase 2 of each toolbox, and buy a cheap low power server then we would
+spend something like:
+
+5*$300 + 2*8*$105 + 2*$150 = *$3480*
+
+plus a *$696* per year tech support/upgrade fee
+
+If we go really cheap and I give you all a 2-3 workshop on Octave, Scilab, GSL,
+and/or SciPy, etc then we can get "most" of this for:
+
+$0
+
+:)
+
+Parallel Computing
+------------------
+
+Matlab has a parallel toolbox that helps you parallelize your code from up to
+12 cores per license. It offer's some basic function for writing parallel code
+and you have access to many functions that we may normally use that have being
+parallelized by Mathworks engineers. If you want to send jobs from this tool
+box to higher core systems or clusters, then you need to buy the Distributed
+Computing Server from Matlab. Dawei, in Dr. Simon's lab, somehow uses 2
+licenses to run on 24 cores with simultaneous Matlab instances which is some
+sort of hack, but can save you lots of money. The Distributed Computing server
+also has facilities to send jobs to Amazon Web Services Ec2 instances for
+multicore runs (this is relatively new).
+
+The Distrubuted Computer Server has some steep costs:
+
+- up to 16 cores is $1650
+- up to 32 cores is $2950
+
+Plus if you want to use AWS instead of us buying and maintaining our own
+hardware you pay these fees:
+
+- Matlab usage fee: $0.16 per core per hour
+- AWS Ec2 $0.06 to $4.60 per hour depending on size of machine/cluster (they
+  have up to 32 core machines and I think you can cluster instances too, maybe
+  up to 8).
+
+So for 1 32 core machine on AWS with Matlab for an hour computation you may
+spend $5-$10. And for a AWS cluster of 32 core machines you may spend $40-$50
+per hour.
+
+My humble opinion on this is that if we really have some massive problems that
+we want to run on clusters and/or high core machines that we rewrite our Matlab
+code in other languages and deploy our problems to the cloud and we don't have
+to pay Matlab's overhead. The open source world has this problem figured out
+better than Matlab from what I can tell so far and there is little incentive to
+pay Matlab's fees for this kind of stuff.
+
+Making Purchases at CSU
+=======================
+
+I spoke with Patsy, our secretary, about how to actually purchase stuff we want
+for the lab. For general lab equipment and such the process is:
+
+- Make sure the vendor can accept a purchase order
+- Go to online vendor's website
+- Select the items you want and put them in your shopping cart
+- Before you press "Buy", print out the itemize cost sheet
+- Take this printout to the ME office
+- Patsy's fills out a form and sends it to the PI and the Chair for approval
+- Then this goes to the Dean's office for approval
+- Then it comes back to our office
+- Then I go back on the website to my hopefully saved shopping cart and finish the order
+
+I'm still not sure how this works and if the vendor's online websites will take
+a purchase order number instead of a credit card. This process seems like a
+nightmare and no fun to do. Why are University's such in the stone age about
+purchasing. Why can't I just have a debit card that is tied to our grant. I can
+order stuff at my leisure and the power-at-be can approve things as I buy them
+to finalize the deal. I don't even want to think about the number of hours I've
+wasted with this kind of stuff in the past. The other option would be to by
+anything less than $1500 or so with my personal debit/credit card and just turn
+in a reimbursement form. Which often seems so much easier than a PO. Patsy also
+wasn't sure how we can pay for online services that may or may not have a
+variable monthly bill (like AWS, Dropbox, etc). She's looking into that for me.
+
+Matlab and the Structural Model Work
+====================================
+
+I had some issues installing Matlab as I lost my original disk. I'll have to
+figure something out soon to run my structural model system id. Postponed.
+
+Lab Web Site
+============
+
+I thought I wouldn't ever deploy a Plone site again and would probably lean
+towards static site generators, Django, Flask, etc, but I feel pretty
+confident that this is a good solution for the Human Motion & Control's lab
+website. Plone offers an full featured solution to do the things we want to do:
+
+- Have public facing website
+- Have a collaborative work space for sharing our work both publically and
+  privately within out group
+- Share our publications, data, source code
+- Have a lab member web page for each student
+- Have a lab blog
+
+I purchased the better of the Plone books a year or so back
+http://www.packtpub.com/professional-plone-4-development/book and will go
+through several of the Chapters so I can setup a proper dev environment for a
+plone site and build our own theme with diazo.
+
+User of the site
+
+- The public
+- Grad students in the lab
+- The PI
+- Post docs and other lab members
+
+The PI, students, and other lab members should be able to edit the website content.
+Content should default to private when published.
+
+Sandy, one of Ton's grad students, made a sweet prototype of the website design:
+
+.. image:: {{ media_url('images/hmc-prototype.png') }}
+   :class: img-rounded
+
+Data backup
+===========
+
+We are trying to think of a nice centralized way to backup our experimental
+data. We have two computers that are offline and networked together that run
+our data collection software (D-Flow and Cortex). They generate flat text files
+for each experiment. But because they are offline for no-virus reasons, we need
+a way to get the data from there to a backup destination and to our personal
+computers for data analysis. I thought that we may be able to utilize cloud
+data backup. Here's the email I sent out with a workflow idea:
+
+  I think this could be a solution for our data backup:
+  
+  https://www.dropbox.com/business
+  
+  But it does seem pricey. Basically about 100 bucks per user per year.
+  
+  I chatted with a sales rep and it has many cool features that we can use.
+  
+  I imagine this work flow:
+  
+  1. take data on the offline mocap computer
+  2. plug in flash drive to mocap computer and run a simple program that
+     synchronizes the flash drive to a folder(s) in the d-flow/mocap computer
+  3. take the flash drive to a server we have connected to the net
+  4. run a similar script that synchronizes the flash drive to the drop box
+     folder on that machine
+  5. then drop box automatically does its synchronization to put our data in
+     the cloud
+  6. at this point there are four copies of the data: one on mocap computer,
+     one on flash drive, one on server, and one in the cloud (and the dropbox data
+     is versioned)
+  7. Now you go to your computer and select which folders you want to have
+     synchronized to your machine on dropbox so you can access the data you need
+  
+  So all data will be available to anyone with the our account (or we can even
+  make files public in dropbox for easy wider sharing).
+  
+  But I also realized we could skip the drop box thing and do the traditional
+  method and just have this server so that we can ssh/ftp into it from anywhere
+  to get a copy of data. We'd lose automatic versioning and easy dropbox
+  interface, but it should effectively do the same thing.
+  
+  I was also trying to imagine this workflow where we don't have the server
+  mentioned in step 3 and simply bring the flash drive back to your personal
+  computer. But we don't want to force our personal computers to have a full copy
+  of all the data, we only want the data we want to use on our personal
+  computers.
+  
+  Thoughts?
+  
+I could also use our Amazon AWS server and an S3 bucket to run our own server
+backup. And the S3 pricing is much more favorable. Even with the 30% academic
+price reduction, drop box is super expensive.
+
+{% endfilter %}
+{%- endmark %}
