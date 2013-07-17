@@ -12,15 +12,15 @@ genserve: getresume buildstatements
 	hyde serve
 
 getresume:
-	rsync /media/Data/Documents/Resume/JasonMoore_cv.pdf content/media/docs/JasonMoore_cv.pdf
-	rsync /media/Data/Documents/School/UC\ Davis/Appropriate\ Technology/HumanPowerPresentation/hppres.pdf content/media/docs/hppres.pdf
-	rsync /media/Data/Documents/School/UC\ Davis/Appropriate\ Technology/HumanPowerPresentation/hppres-notes.pdf content/media/docs/hppres-notes.pdf
+	rsync ~/Documents/resume/JasonMoore_cv.pdf content/media/docs/JasonMoore_cv.pdf
+	rsync ~/Projects/appropriate-tech/HumanPowerPresentation/hppres.pdf content/media/docs/hppres.pdf
+	rsync ~/Projects/appropriate-tech/HumanPowerPresentation/hppres-notes.pdf content/media/docs/hppres-notes.pdf
 
 buildstatements:
-	rst2latex.py --date --documentoptions="letter,10pt" --use-latex-docinfo --latex-preamble="$(statementpreamble)" content/research/$(rs).rst $(docdir)/$(rs).tex
+	rst2latex --date --documentoptions="letter,10pt" --use-latex-docinfo --latex-preamble="$(statementpreamble)" content/research/$(rs).rst $(docdir)/$(rs).tex
 	pdflatex --output-directory=$(docdir) $(docdir)/$(rs).tex > /dev/null
 	rm $(docdir)/$(rs).aux $(docdir)/$(rs).out $(docdir)/$(rs).log #$(docdir)/$(rs).tex
-	rst2latex.py --date --documentoptions="letter,10pt" --use-latex-docinfo --latex-preamble="$(statementpreamble)" content/$(ts).rst $(docdir)/$(ts).tex
+	rst2latex --date --documentoptions="letter,10pt" --use-latex-docinfo --latex-preamble="$(statementpreamble)" content/$(ts).rst $(docdir)/$(ts).tex
 	pdflatex --output-directory=$(docdir) $(docdir)/$(ts).tex > /dev/null
 	rm $(docdir)/$(ts).aux $(docdir)/$(ts).out $(docdir)/$(ts).log #$(docdir)/$(ts).tex
 
