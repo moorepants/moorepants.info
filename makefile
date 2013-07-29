@@ -15,6 +15,7 @@ getresume:
 	rsync ~/Documents/resume/JasonMoore_cv.pdf content/media/docs/JasonMoore_cv.pdf
 	rsync ~/Projects/appropriate-tech/HumanPowerPresentation/hppres.pdf content/media/docs/hppres.pdf
 	rsync ~/Projects/appropriate-tech/HumanPowerPresentation/hppres-notes.pdf content/media/docs/hppres-notes.pdf
+	rsync ~/Research/structuralid/Hess_Moore_MST_Paper.pdf content/media/docs/hess-moore-mst-final.pdf
 
 buildstatements:
 	rst2latex --date --documentoptions="letter,10pt" --use-latex-docinfo --latex-preamble="$(statementpreamble)" content/research/$(rs).rst $(docdir)/$(rs).tex
