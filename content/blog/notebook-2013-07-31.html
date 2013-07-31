@@ -1,0 +1,105 @@
+---
+title: Notebook Entry
+subtitle: July 31, 2013
+description:
+created: !!timestamp '2013-07-31 10:02:00'
+tags:
+    - notebook
+---
+
+{% mark image -%}
+
+{%- endmark %}
+
+{% mark excerpt -%}
+{% filter restructuredtext %}
+
+Today's task list:
+
+- [~] Finish ordering electronic workbench stuff (waiting on PO stuff)
+- [x] Talk with Jenny Jia about purchasing issues (AWS, newegg, etc)
+- [x] Review Tarun's latest code additions
+- [x] Read and do exercises in Chapter of Professional Plone Development
+- [] Get reimbursement forms from Patsy
+- [] Order Matlab
+- [] Work on parsing the walking data
+- [] Review the todo items on the Yeadon paper
+- [] Do D-Flow/Cortex tutorial (Due August 12)
+
+{% endfilter %}
+{%- endmark %}
+
+{% filter restructuredtext %}
+
+Purchasing
+==========
+
+I spoke with Jenny Jia today and got more info on how purchasing works. Turns
+out I missed a step or two in my first explanation. Here is the update:
+
+- Make sure the vendor can accept a purchase order
+- Go to online vendor's website
+- Select the items you want and put them in your shopping cart
+- Before you press "Buy", print out the itemize cost sheet
+- Take this printout to the ME office
+- Patsy's fills out a form and sends it to the PI and the Chair for approval
+- Then she sends this to the Dean's office for approval
+- Then it comes back to the ME office with the approval (or not)
+- Call the company and ask for an invoice for the selected items.
+- The company sends an invoice.
+- Print out the invoice and take it to Patsy to fill out that paperwork to
+  actually purchase the item(s).
+- Patsy then sends this to purchasing to get the payments sent through.
+
+I also found out that paying for a variable monthly bill (like AWS) may not be
+possible, but maybe some strings can be pulled. I'm sure this kind of thing
+will be requested more and more often in the future as cloud services become
+more suitable than rolling your own stuff in your lab.
+
+Patsy's not in today so the remaining reimbursements and PO's will have to
+wait till when she returns.
+
+Matlab
+------
+
+More info from our sales rep, Alyssa:
+
+  You cannot pair an individual license with a concurrent license. However,
+  with the concurrent license, you do not need to have the same number of
+  toolbox seats to MATLAB seats. The license server must be owned by CSU and
+  reside physically on campus. Yes, the student version comes with several
+  toolboxes, but can only be installed on a personal machine, not a
+  university machine.
+
+  http://www.mathworks.com/academia/student_version/index.html?s_tid=acmain_sv_cta1
+
+I think I'm going to go with 5 academic licenses with these toolboxes for each:
+
+- Control toolbox
+- System ID
+- Simulink
+- Signal processing
+
+Just need to verify whether you can use the same academic license for dual
+booted machines or virtual machines.
+
+GSoC
+====
+
+I reviewed a bit of Tarun's VisualizationFrame PR,
+https://github.com/PythonDynamics/pydy-viz/pull/17. He has two camera's now
+that mirror the ones in three.js. The code looks pretty good, just needs some
+polishing for style, method names, etc.
+
+Plone
+=====
+
+Made it into Chapter 5 of the Plone book and have a working dev environment.
+
+Notes for what I did are currently in
+
+/home/moorepants/Websites/professional-plone-4-development/chapter-3/notes.rst
+
+I'll push them to github  soon.
+
+{% endfilter %}
