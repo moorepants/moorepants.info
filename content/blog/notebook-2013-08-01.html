@@ -1,0 +1,118 @@
+---
+title: Notebook Entry
+subtitle: August 1, 2013
+description:
+created: !!timestamp '2013-08-01 09:12:00'
+tags:
+    - notebook
+    - structural model identification
+    - system identification
+    - purchasing
+    - plone
+---
+
+{% mark image -%}
+
+{%- endmark %}
+
+{% mark excerpt -%}
+{% filter restructuredtext %}
+
+Today's task list:
+
+- [x] Finish ordering electronic workbench stuff (waiting on PO stuff)
+- [x] Email Amazon Web Services business sales
+- [x] Get reimbursement forms from Patsy
+- [x] Turn in PO's to Patsy
+- [x] Rerun the for plant #2 no K estimation for Ron to check values
+- [~] Figure out what to do about the incorrect budget category for the
+  computers
+- [] Make sure I'm using the correct data for the structural id
+- [x] Meet with Tarun
+- [x] Read and do exercises in Chapter of Professional Plone Development
+- [] Order Matlab
+- [] Work on parsing the walking data
+- [] Review the todo items on the Yeadon paper
+- [] Do D-Flow/Cortex tutorial (Due August 12)
+
+{% endfilter %}
+{%- endmark %}
+
+{% filter restructuredtext %}
+
+Purchasing
+==========
+
+The remaining POs for higher dollar items were turned into Patsy and I gave
+her my reimbursement requests for the lower $ purchases.
+
+Two more annoyances and wastes of time on purchasing:
+
+- CSU has not mechanism to purchase from Newegg.com who doesn't do purchase
+  orders. Why isn't there a college or department credit card for this stuff?
+- I'm trying to order the computers but because our grant budget has no special
+  category for computers, then we can't orderd them until the account is
+  rebudgeted. This takes a form and signature from Ton and he is out of town
+  till the 13th. The computers take 2-4 weeks to get in from IT & S so we will
+  likely not have the computers for 2.5-3 months after we decided to get them.
+
+I'm quickly getting frustrated with purchasing stuff and the amount of wasted
+time dealing with it. I thought UC Davis was bad, but man CSU is worse off.
+The ideal situation would be to have a credit card for purchases under a
+certain amount that would be linked to a grant account, then I can go to
+vendors and purchase as needed. But this removes the approval step which I
+doubt the University would give up. UCD CoE had a decent online purchasing
+system put in a few years back that alleviates much of the wasted time. I'm
+trying to track down what that is.
+
+Structural Model Identification
+===============================
+
+From Ron:
+
+  I need the identified gains for Task 2, no K estimation.  This is one of  the
+  runs that you did while you were still in Davis.  I seem to have misplaced
+  these results that you emailed me.
+
+  What I have recorded for the identified gains are:  K1 = 14.4, K2 = .284, K3 =
+  1.02 and K4 = 121.8.  The K4 value looks suspicious. I may have transcribed it
+  incorrectly.  Do you have them available?
+
+These are likely results from Matlab 2010a, which I used for all the previous
+analysis. But I don't have access to that version anymore and 2013a gives
+different results (WTF!)::
+
+  Plant #2,  Run #1, K estimated: no
+  Best ARX [na=3, nb=1, nk=24]
+  The order of the closed loop system is 8.
+  The gain guesses: k1=14.500000, k2=0.375000, k3=1.000000, k4=20.000000
+  The identified gains: k1=41.742796+\-1.496914, k2=1.241115+\-0.005499,
+  k3=1.466902+\-0.000640, k4=10.349165+\-0.149289
+
+I'm not sure what to do about this. Maybe Ron can run the code on his previous
+versions of Matlab.
+
+Here is the results I got from Matlab 2010a on June 18, 2013 with the same code::
+
+  Plant #2,  K estimated: no
+  Best ARX [na=1, nb=3, nk=3]
+  The order of the closed loop system is 8.
+  The gain guesses: k1=14.500000, k2=0.375000, k3=1.000000, k4=20.000000
+  The identified gains: k1=34.679381+\-0.532964, k2=1.100302+\-0.002407,
+  k3=1.255370+\-0.000265, k4=9.427437+\-0.071185
+
+I need to check and make sure I'm actually using the original data Ron sent me,
+because he has an even different set of numbers.
+
+Plone
+=====
+
+I made it through chapter 7. A few more chapters and I'll be ready to setup a
+site that has a version control configuration based on my dev environment.
+Tomorrow is theming so we can work on implementing Sandy's design once I go
+through that chapter.
+
+Source for the practice stuff is here: https://github.com/moorepants/optilux,
+including notes on installing on Ubuntu 13.04.
+
+{% endfilter %}
