@@ -1,0 +1,50 @@
+---
+title: Notebook Entry
+subtitle: August 2, 2013
+description:
+created: !!timestamp '2013-08-02 10:30:00'
+tags:
+    - notebook
+---
+
+{% mark image -%}
+
+{%- endmark %}
+
+{% mark excerpt -%}
+{% filter restructuredtext %}
+
+Today's task list:
+
+- [] Figure out what to do about the incorrect budget category for the
+  computers
+- [x] Call Alyssa from Matlab
+- [] Make sure I'm using the correct data for the structural id
+- [] Read and do exercises in Chapter 8 (Themeing) in the Plone book
+- [] Order Matlab
+- [] Work on parsing the walking data
+- [] Review the todo items on the Yeadon paper
+- [] Do D-Flow/Cortex tutorial (Due August 12)
+
+{% endfilter %}
+{%- endmark %}
+
+{% filter restructuredtext %}
+
+Matlab
+======
+
+Matlab has two academic licenses: group and concurrent. I was mistakenly
+calling the group license "academic" earlier. The group licenses register your
+computer's mac address on activation so running a dual boot machine with Matlab
+on both Windows and Linux will work because they will both have the same Mac
+address. But running in a virtual machine's OS could be problematic because the
+Virtual Machine generates a new mac address for each OS that is running. So if
+you activate Matlab on your real machine and then on the virtual machine you
+will have an issue unless you can make your virtual machine mac address the
+same as your real machine's max address. Theorectically you can install Matlab
+on many virtual machines that have the same MAC addresses, but just not run the
+virtual machines at the same time on the same computer. I think this can be
+done.
+
+{% endfilter %}
