@@ -1,0 +1,71 @@
+---
+title: Notebook Entry
+subtitle: August 5, 2013
+description:
+created: !!timestamp '2013-08-05 09:45:00'
+tags:
+    - notebook
+---
+
+{% mark image -%}
+
+{%- endmark %}
+
+{% mark excerpt -%}
+{% filter restructuredtext %}
+
+Today's task list:
+
+- [x] Try to contact Amazon business sales again
+- [x] Setup PO and account for AWS
+- [x] Get a quote for Matlab
+- [x] Continue discussion with Adam Leeper about MGView
+- [x] Start on a html5/css3 bootstrap mockup of the website
+- [x] Finish Chapter 8 (Theming) in the Plone book
+- [~] Figure out the bug I'm getting at the end of page 153 on the plone book
+- [] Figure out what to do about the incorrect budget category for the
+  computers
+- [] Make sure I'm using the correct data for the structural id
+- [] Work on parsing the walking data
+- [] Review the todo items on the Yeadon paper
+- [] Do D-Flow/Cortex tutorial (Due August 12)
+
+{% endfilter %}
+{%- endmark %}
+
+{% filter restructuredtext %}
+
+Amazon Web Services
+===================
+
+Woohoo! Looks like Amazon can invoice us and I finally turned in all the
+purchasing papers to make this happen. Maybe I'll have the website online by
+the end of the week.
+
+Matlab
+======
+
+I requested a quote for 5 academic group licenses with 4 toolboxes but the rep
+is on vacation so this may not come back till next week.
+
+MGView
+======
+
+Adam Leeper released MGView under the MIT license today so Tarun and I are
+looking into potentially using it for pydy-viz and giving our efforts to
+contributions to the project. See his repo on github:
+https://github.com/mgview/mgview
+
+Plone
+=====
+
+I finished Chapter 8 but hit a bug which I'm trying to get an answer to on the
+Plone user's mailing list. Martin replied, so I'll probably get to the bottom
+of it.
+
+I started a mockup using bootstrap and html5 boilerplate for the new site theme:
+
+.. image:: {{ media_url('images/hmc-initial-mockup.png') }}
+   :class: img-rounded
+
+{% endfilter %}
