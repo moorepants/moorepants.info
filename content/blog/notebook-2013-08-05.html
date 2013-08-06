@@ -5,6 +5,11 @@ description:
 created: !!timestamp '2013-08-05 09:45:00'
 tags:
     - notebook
+    - mgview
+    - amazon web services
+    - plone
+    - matlab
+    - structural model identification
 ---
 
 {% mark image -%}
@@ -23,9 +28,9 @@ Today's task list:
 - [x] Start on a html5/css3 bootstrap mockup of the website
 - [x] Finish Chapter 8 (Theming) in the Plone book
 - [~] Figure out the bug I'm getting at the end of page 153 on the plone book
+- [x] Make sure I'm using the correct data for the structural id
 - [] Figure out what to do about the incorrect budget category for the
   computers
-- [] Make sure I'm using the correct data for the structural id
 - [] Work on parsing the walking data
 - [] Review the todo items on the Yeadon paper
 - [] Do D-Flow/Cortex tutorial (Due August 12)
@@ -67,5 +72,46 @@ I started a mockup using bootstrap and html5 boilerplate for the new site theme:
 
 .. image:: {{ media_url('images/hmc-initial-mockup.png') }}
    :class: img-rounded
+
+The code for the theme is here: https://github.com/moorepants/hmc.theme
+
+Structural Model
+================
+
+Ron sent me the first set of data on August 20, 2013. I made sure that my
+renamed data file `plant_02_run_01.mat` is the same file, it is.
+
+The first time (Jan 14, 2013) I sent solutions for the 4 gain model, plant #2
+[Matlab 2010a]::
+
+  Plant #2,  K estimated: no
+  Best ARX [na=6, nb=1, nk=22]
+  The order of the closed loop system is 8.
+  The gain guesses: k1=14.500000, k2=0.375000, k3=1.000000, k4=20.000000
+  The identified gains: k1=41.743034+\-1.496923, k2=1.241126+\-0.005499,
+  k3=1.466906+\-0.000640, k4=10.349137+\-0.149286
+
+Here is the results I got from Matlab 2010a on June 18::
+
+  Plant #2,  K estimated: no
+  Best ARX [na=1, nb=3, nk=3]
+  The order of the closed loop system is 8.
+  The gain guesses: k1=14.500000, k2=0.375000, k3=1.000000, k4=20.000000
+  The identified gains: k1=34.679381+\-0.532964, k2=1.100302+\-0.002407,
+  k3=1.255370+\-0.000265, k4=9.427437+\-0.071185
+
+And now with Matlab 2013a::
+
+  Plant #2,  Run #1, K estimated: no
+  Best ARX [na=3, nb=1, nk=24]
+  The order of the closed loop system is 8.
+  The gain guesses: k1=14.500000, k2=0.375000, k3=1.000000, k4=20.000000
+  The identified gains: k1=41.742796+\-1.496914, k2=1.241115+\-0.005499,
+  k3=1.466902+\-0.000640, k4=10.349165+\-0.149289
+
+Looks like I got the same answer on Jan 14 2013 with Matlab 2010a and now with
+Matlab 2013a. I'm not sure what was different on the June 18 results. None of
+these match Ron's 12.84 number for the K4 gain. I'm not sure where that number
+is coming from.
 
 {% endfilter %}
