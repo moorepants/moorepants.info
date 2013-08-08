@@ -5,6 +5,12 @@ description:
 created: !!timestamp '2013-08-07 09:12:00'
 tags:
     - notebook
+    - manual control
+    - zotero
+    - reference management
+    - copyright
+    - plone
+    - amazon web services
 ---
 
 {% mark image -%}
@@ -16,12 +22,13 @@ tags:
 
 Today's task list:
 
-- [] Discuss copyright issues with BMD
-- [x] Archive Simon Grant's thesis
 - [x] Install Zotero
-- [] Work on parsing the walking data
-- [~] Figure out the bug I'm getting at the end of page 153 on the plone book
-- [] Setup our webserver on AWS
+- [x] Archive Simon Grant's thesis
+- [x] Discuss copyright issues with BMD and blog about it
+- [x] Setup our webserver on AWS
+- [x] Figure out the bug I'm getting at the end of page 153 on the plone book
+- [x] Work on parsing the walking data
+- [] Install our production Plone site on the new AWS server
 - [] Work on the website theme
 - [] Figure out what to do about the incorrect budget category for the
   computers
@@ -99,119 +106,26 @@ standalone Zotero, which I said yes too.
 BMD Coyright
 ============
 
-Three of my papers got accepted to BMD 2013 (two oral presentations and one
-poster). I'm very elated about this as I only got a poster presentation at the
-first BMD conference in 2010. My intention was to submit papers that are
-reflections/enchancments of work presented in my dissertation
-(moorepants.github.io/dissertation). The paper titles are:
+See `<bmd-copyright.html>`_.
 
-- Identification of manual control employed during bicycling (poster)
-- A review of steer torque measurement in bicycles and motorcycles (oral
-  presentation)
-- Identification of the open loop dynamics of a bicycle-rider system
-  under manual control (oral presentation)
+Plone Bug
+=========
 
-I thought the most interesting paper would be the manul control identification,
-but it was selected as a poster. Maybe this was random since I submitted so
-many papers.
+I found the bug:
 
-I released the abstracts for the conference and my dissertation under the
-Creative Commons Attribution 3.0 Unported License for ease of reuse and all the
-source code that generates the dissertation is released under BSD style
-licenses.
+https://github.com/moorepants/optilux/commit/0f61fd826c48f2b212c84a1ba0e365e8e1041f91
 
-The BMD organizers have teamed up with the Japanese Society of Automotive
-Engineers to help publish the proceedings of the conference, but JSAE requires
-that you sign the copyright over to them.
+Just had an extra `>`.
 
-When I submitted my abstracts I expressed a desire to retain the copyright but
-got no response, except the standard paper acceptance letter. So I emailed the
-orgnizers specifically about this issue and got this response:
+AWS Webserver
+=============
 
-  Thanks for your message concerning about the copyright transfer. First of
-  all, the BMD2013 abstract review is a peer review, and we need a copyright
-  transfer form from the author to publish the full paper. If you submit the
-  same full paper to other conference, it's a dual submission which is
-  ethically illegal.
+I have a live Ubuntu 12.04 LTS 64 bit server running on a micro instance. Time
+to install Plone so we can start adding some content to the web site.
 
-  Moreover, we would like to let you know that after the copyright of your full
-  paper is transformed to JSAE, you have the right to put your paper on your
-  homepage so that everybody can download. You may also use your figures, graphs
-  or sentences on your other papers. You may not use the same paper to submit to
-  other conferences which is ethically illegal.
+Walking System ID
+=================
 
-  As you might know, since we are going to select several good full papers to
-  recommend to a IAVSD Journal, it's a very good chance to submit full paper to
-  BMD 2013. If that paper is selected, you can just modify some formats and add
-  some, you can submit very similar paper to a journal.
-
-  If you do not wish to transfer the copyright of your full paper, there are
-  several options below.
-
-  (1) Present all of your three papers as Panel.
-      If you select this option, you have to submit camera ready copy of
-      revised camera ready copy of two pages abstract, but you do not have to
-      send copyright transfer form, since you are not going to submit full
-      papers.
-
-  (2) Withdraw your oral presentations
-
-  (3) Present one for poster and two for oral by transfer copyright to JSAE for
-      two papers.
-
-  Since your paper titles "Identification of Manual Control ...." is selected
-  as poster, there is no problem for copyright problem. You have submitted  two
-  others, one is "Identification of the Open Loop Dynamics..." and other is "A
-  review of steer torque measurement... " . We would like to know which of them
-  you would like not to transfer your copyright?
-
-  Anyway, we have already setup a provisional program, and we are going to send
-  them to ISC member soon, and it's already on our web page. We will change the
-  program after we will receive your final decision about this issue.
-
-Some thoughts:
-
-1. What does copyright have to do with peer reviewing? Does this mean that the
-   publisher needs copyright to the work to allow other researchers to read it
-   and provide suggestions for improvement?
-
-2. I never told the organizers that I was interested in submitting the same
-   paper to multiple conferences, but I find it funny that that is such and
-   "ethically illegal" violation. Seems to me that if I do some science that is
-   good, then ideally it should be disimenated as widely as possible.
-   Presenting the same topic at multiple conferences should be encouraged not
-   deemed as something unethical and definitely not something that is illegal.
-
-3. The first option about a panel is the only one that is actually favorable to
-   me in turns of being able to aprticipate and retaining my copyright.
-
-I sent this response to the organizers:
-
-   Thank you for the response and the options. Before I choose one of your
-   options I'd like to propose another option to see if you all and JSAE would
-   be interested as I believe it is the most favorable option for all parties
-   involved.
-
-   Ideally I'd like to submit three full papers to the BMD conference for peer
-   review and publishing in the conference proceedings, but I'd like to retain
-   the copyright. I'm happy to release the papers under the Creative Commons
-   Attribution License 3.0 (http://creativecommons.org/licenses/by/3.0/us/).
-   This legally binding license allows for sharing (copying, distributing, and
-   transmission), remixing, and commercial use of the works and thus JSAE will
-   have all of the legal right to publish and do what they will with my papers,
-   including selling access to their final published form.
-
-   I'd also like to note that I have no intention of submitting these papers to
-   other conferences. But my intention is to submit the papers to BMD so that I
-   can share the work in person with the BMD community. After the conference, I
-   plan to submit these papers to an open access journal of my choosing for
-   publishing. If I don't retain the copyright to these papers, then it will
-   legally prevent me from publishing in my journal of choosing. I do not plan
-   to submit to The International Association for Vehicle System Dynamics,
-   regardless if my paper is chosen as exceptional, because they do not have a
-   suitable Open Access publishing model for me.
-
-I hope this 4th option can work out as it seems like the obvious best choice
-for everyone.
+Worked out the maths for the linear least squares. Will post tomorrow.
 
 {% endfilter %}
