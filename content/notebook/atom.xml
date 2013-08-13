@@ -1,0 +1,5 @@
+===
+title: moorepants' lab notebook full text feed
+extends: atom.j2
+listable: false
+===

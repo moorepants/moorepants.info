@@ -44,6 +44,12 @@ context:
                 type: node
                 url: blog
             -
+                name: Lab Notebook
+                description: Documentation for my work.
+                css_class: blog
+                type: node
+                url: notebook
+            -
                 name: Interests
                 description: I used to do some things besides work, like standing around in Walmart parking lots thinking of things that would be cool to do.
                 css_class: interests
@@ -77,6 +83,13 @@ tagger:
         blog:
             source: blog
             target: blog/tags
+            template: tagged_posts.j2
+            archive_extension: html
+            meta:
+                listable: false
+        notebook:
+            source: notebook
+            target: notebook/tags
             template: tagged_posts.j2
             archive_extension: html
             meta:
