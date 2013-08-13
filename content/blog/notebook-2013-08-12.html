@@ -1,0 +1,144 @@
+---
+title: Notebook Entry
+subtitle: August 12, 2013
+description:
+created: !!timestamp '2013-08-12 08:40:00'
+tags:
+    - notebook
+    - system identification
+    - walking
+    - cleveland pug
+    - python
+    - d-flow
+---
+
+{% mark image -%}
+
+{%- endmark %}
+
+{% mark excerpt -%}
+{% filter restructuredtext %}
+
+Today's task list:
+
+- [x] Work on parsing the walking data
+- [] Make generic settings on the lab website
+- [] Work on the website theme
+- [] Fix the budgeting and purchasing issues
+- [] Review the TODO items on the Yeadon paper
+
+{% endfilter %}
+{%- endmark %}
+
+{% filter restructuredtext %}
+
+Walking System Identification
+=============================
+
+#. Load data.
+#. Find the heel strike and toe-off for each foot for the run.
+#. Align each foot down section in time with the first one and truncate the
+   data for each to have equal length time series for each foot down.
+#. Segment and truncate the interesting time series to match (rates, angles, etc)
+#. Specify the number of time steps to retain for the control extraction.
+#. Store these reduced time series in a 3D array. This can be a pandas Panel
+   where each DataFrame in the Panel is one foot down time series. There should
+   be one Panel for each leg.
+#. Find the mean of the time series and store as the limit cycle definition.
+#. Specify the inputs and outputs to the controller.
+#. Form Ax=b.
+#. Call linear least squares to get the gains.
+
+Software additions
+------------------
+
+I move some signal sync functions from BicycleDataProcessor into DTK and
+generalized them. I plan to use it to align and truncate a series of signals
+from walking data.
+
+- https://github.com/moorepants/DynamicistToolKit/commit/a7f005adef6d0ff8a0047a065eafedc21ec71d00
+- https://github.com/moorepants/DynamicistToolKit/commit/ac4aa3cd16c01e392e2ba22bf4aa93eece78f111
+
+D-Flow
+======
+
+Sanne is here this week from `Motek <http://www.motekmedical.com/>`_ to fix
+some issues with D-Flow and the treadmill system and to also train us in using
+the equipment/software. I asked her a bit about the Lua scripting in D-Flow.
+Sounds like they chose the language because it was easy to learn for wrapping
+*some* of their API. It is not possible to use D-Flow without manipulating the
+graphical programming they have implemented. In particular access to the data
+sources is not available so you always have to drop in the mocap or other
+modules for a source stream of data.
+
+D-Flow outputs tab delimited text files when you want to extract the data from
+the system. When they have missing data (i.e. missing markers or force
+measurements) they replace them with a zero in the file. This is very
+problematic because the sensors can also actually output a value of zero.
+Sanne mentioned the unlikelihood of a sensor value to actually be 0.0000... but
+I don't think this is a good argument. Good software like R use NA for missing
+data (Pandas is bound by numpy's implementation and only has NaN, but this will
+be fixed). It is also important to note that NaN is different than NA and is
+the result of a computation than give a Not-A-Number answer. D-Flow may need a
+combination of NA's and NaN' because they also do internal computations (HBM
+for example).
+
+Bugs
+----
+
+- Missing values are replaced with a zero value.
+
+Feature Requests
+----------------
+
+- Expand the Lua API such that the user can script the whole program and avoid
+  using anything in the GUI, in particular add access to the data sources.
+- Allow the user to specify a desired text editor (vim, emacs, notepad++, etc)
+  for the scripting environment so that editing a script automatically loads
+  the desired text editor.
+- Make the C++ API available so that we can use it directly or wrap it with our
+  desired programming languages. This will allow us to integrate our software
+  with D-Flow. Currently D-Flow seems to be a walled box with only an exit for
+  text data after a simulation is run. It would be preferable to be able to
+  access realtime data from our own software.
+- It seems that D-Flow has limited use if you don't have the hardware that goes
+  with it (i.e. treadmill, force plates, video screen, motion capture, etc).
+  This makes the D-Flow software a prime candidate for open sourcing. If the
+  software were open source then all the above points would not be issues, as
+  we could extend the software and use it like we please.
+- Make the feature request and bug tracker available to the public (or at least
+  the licensed users). It would save time if we can report both of these
+  directly to the tacking system, versus calling a support person and asking
+  them to submit items.
+- Port the software to other operating systems (in particular Linux). If the
+  software could run in Linux then we have much better control of the security of
+  the software via user permissions. Then we can have the system connected to a
+  network which is connected to the internet. This would allow us to pass data
+  out from D-Flow without having to download text files to a USB stick. There
+  may be a way to solve this in Windows too, but I'm ignorant of that.
+
+Cleveland Python Users Group
+============================
+
+I went to the monthly Cleveland PUG meeting last night. Seemed like a bunch of
+good people. We met at Lean Dog which has a really nice office on a boat by the
+Rock and Roll Hall of Fame. One guy presented his work with Jenkins which looks
+cool. It is an open source continuous integration system that you have full
+control over and can install it on your server. This seems more flexible than the
+Travis-CI system which is just a hosted service, but Jenkins doesn't have as
+nice integration with Github, you have to manually setup some hooks.
+
+The same guy also is going to give a talk at DjangoCon soon on some interesting
+concepts. But I've forgotten what they were, but definitely interesting.
+
+There was chatter about the Center for Open Science from PyOhio. Some folks met
+Jeffery and others at the conference.
+
+I was surprised that everyone wasn't a complete nerd like our LUGOD meetings
+back in Davis. The group seemed very social which is cool.
+
+I got to show off PyDy and SymPy for a few minutes and folks seemed to dig it.
+
+Supposedly, next month a person will show off Kivy.
+
+{% endfilter %}
