@@ -1,0 +1,99 @@
+---
+title: Notebook Entry
+subtitle: August 14, 2013
+description:
+created: !!timestamp '2013-08-14 09:15:00'
+tags:
+    - notebook
+    - walking
+    - system identification
+    - d-flow
+    - motek
+---
+
+{% mark image -%}
+
+{%- endmark %}
+
+{% mark excerpt -%}
+{% filter restructuredtext %}
+
+Today's task list:
+
+- [x] Motek training, Day One
+- [x] Work on parsing the walking data
+- [] Make generic settings on the lab website
+- [] Work on the website theme
+- [] Fix the budgeting and purchasing issues
+- [] Review the TODO items on the Yeadon paper
+- [] Run variations in guesses for structural id
+- [] Work on BMD papers
+
+{% endfilter %}
+{%- endmark %}
+
+{% filter restructuredtext %}
+
+Motek Training
+==============
+
+The Lua scripting environment.
+
+D-Flow Feature Requests
+-----------------------
+
+- feature request: output mox files to hdf5 instead
+- support python alongside of lua because of the abundance of scientific code
+- allow scripting outside the d-flow loop, ie.e start stop the loop, init code
+  outside of it
+- include the Lua interpreter in the script module window for interactive
+  debugging
+- Allow Lua scripts to be run and debugged outside of D-Flow
+- Introduce extensive keyboard shortcuts for interacting with modules.
+
+Bugs
+----
+
+- Any top layer D-Flow related window does not gt hidden when you select
+  windows that are behind it.
+
+Walking System Identification
+=============================
+
+Ton's idea is to identify both the phase dependent gain matrix *and* the
+"commanded" gait cycle. I didn't understand the idea about identifying the
+commanded gait cycle (angles and rates) and still don't know if I understand
+what it means conceptually. But I think the problem now becomes non-linear.
+
+\\[m(t) = K(t) [s_{lc}(t) - s(t)]\\]
+
+If we measure \\(m(t)\\) and \\(s(t)\\) and want to solve for \\(K(t)\\) and
+\\(s_{lc}(t)\\) then things look non-linear:
+
+\\[m(t) = K(t) s_{lc}(t) - K(t)s(t)\\]
+
+But Ton was writing it like:
+
+\\[m(t) = A(t) - K(t)s(t)\\]
+
+If we have:
+
+- \\(n\\) time samples in a cycle
+- \\(m\\) cycles
+- \\(p\\) sensors
+- \\(q\\) controls
+
+Then for one cycle:
+
+- \\(K\\): \\(q \\times p\\)
+- \\(s\\): \\(p \\times 1\\)
+- \\(s_{lc}\\): \\(p \\times 1\\)
+- \\(m\\): \\(q x 1\\)
+
+\\(A\\) is then shape \\(q \\times 1\\) so we could solve for the entries of \\(A\\)
+and not for \\(s_{lc}\\) explicitly. Then at each time step in a cycle we have
+\\(q + qp\\) unknowns giving \\(nq(1 + p)\\) unknowns for a cycle and thus need
+that many equations. Each cycle gives us \\(nq\\) equations so we need at least
+\\(1 + p\\) cycles to solve for the entries of \\(A\\) and \\(K\\).
+
+{% endfilter %}
