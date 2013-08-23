@@ -34,21 +34,3 @@ push: getresume buildstatements
 
 clean:
 	rm -rf $(source)
-
-newnotebook:
-	$(eval today=$(shell date +%Y-%m-%d))
-	git checkout -b notebook-$(today)
-	$(eval notfound=1)
-	$(eval n=1)
-	while ifeq ($(notfound), 1); do \
-	$(eval mostrecentdate=$(shell date +%Y-%m-%d --date="$(n) days ago")) ; \
-	if [ -a content/notebook/notebook-$(mostrecentdate).html ] ; \
-	then \
-	cp content/notebook/notebook-$(mostrecentdate).html content/notebook/notebook-$(today).html ; \
-	$(eval notfound=0) ; \
-	fi;
-	$(eval n = $(n) + 1) ; \
-	done
-	# TODO : change the date/time in file and wipe the content, leaving the task
-	# list alone
-	vim content/notebook-$(today).html
