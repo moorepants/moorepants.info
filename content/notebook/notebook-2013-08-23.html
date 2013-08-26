@@ -1,0 +1,56 @@
+---
+title: Notebook Entry
+subtitle: August 22, 2013
+description:
+created: !!timestamp '2013-08-22 15:00:00'
+tags:
+    - notebook
+---
+
+{% mark image -%}
+
+{%- endmark %}
+
+{% mark excerpt -%}
+{% filter restructuredtext %}
+
+Today's task list:
+
+- [] Work on parsing the walking data
+- [~] Make generic settings on the lab website
+- [~] Setup a data backup for the website
+- [] Work on the website theme
+- [] Review the TODO items on the Yeadon paper
+- [] Run variations in guesses for structural id
+- [] Work on BMD papers
+- [] Book flight for BMD
+- [] Book hotel for BMD
+- [] Post update about BMD copyright
+
+{% endfilter %}
+{%- endmark %}
+
+{% filter restructuredtext %}
+
+Lab Notebook
+============
+
+I wasted way too much time today trying to automate my notebook blog creation
+today with make. I finally switched to fabric and got it working in a 15
+minutes. The virtues of python...(or working with something you know).
+
+https://github.com/moorepants/moorepants.info/commit/840096e41f4f14e5d65c884e4e35fe04f8e2cad4
+
+Lab Website
+===========
+
+I made a github org for our lab: https://github.com/csu-hmc
+
+And moved the three plone repos to it.
+
+I tried pulling down the buildout.cfg from the server unified installer but ran
+into issues building from the develop.cfg file. Tired of looking at it...
+
+Not much accomplished today except getting a headache from Plone backend admin.
+
+{% endfilter %}
