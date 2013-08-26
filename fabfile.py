@@ -28,7 +28,7 @@ def new_notebook():
         try:
             with open(path_to_most_recent, 'r') as f:
                 pass
-        except ImportError:
+        except IOError:
             n += 1
         else:
             local('cp {0}/notebook-{1}.html {0}/notebook-{2}.html'.format(notebook_dir, most_recent, today))
