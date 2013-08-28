@@ -7,6 +7,8 @@ from fabric.api import local
 
 
 def finish_notebook():
+    """If you have a notebook that hasn't been added to the repo and it is
+    done, then run this command."""
 
     current_branch_name = local('git rev-parse --abbrev-ref HEAD',
                                 capture=True)
@@ -21,6 +23,7 @@ def finish_notebook():
     local('git checkout master')
     local('git merge {}'.format(current_branch_name))
     local('git push origin master')
+    local('git branch -d {}'.format(current_branch_name))
     local('make push')
 
 
