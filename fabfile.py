@@ -6,6 +6,24 @@ import re
 from fabric.api import local
 
 
+def finish_notebook():
+
+    current_branch_name = local('git rev-parse --abbrev-ref HEAD',
+                                capture=True)
+    if not current_branch_name.startswith('notebook-'):
+        raise Exception("You are not in a notebook branch.")
+    the_date = current_branch_name.split('notebook-')[1]
+    path_to_notebook = 'content/notebook/{}.html'.format(current_branch_name)
+    local('git add {}'.format(path_to_notebook))
+    local('git commit {} -m "Added the notebook for {}."'.format(
+        path_to_notebook, the_date))
+    local('git rebase master')
+    local('git checkout master')
+    local('git merge {}'.format(current_branch_name))
+    local('git push origin master')
+    local('make push')
+
+
 def new_notebook():
     from datetime import datetime, timedelta
 
