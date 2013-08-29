@@ -27,7 +27,7 @@ buildstatements:
 
 push: getresume buildstatements
 	hyde gen -r -c prod.yaml
-	rsync -r -t -v --delete --progress $(source) $(username)@$(server):$(destination)
+	rsync -r -t --delete --progress $(source) $(username)@$(server):$(destination)
 	#ssh $(username)@$(server) 'chmod -R u+w,a+rX $(destination)'
 	ssh $(username)@$(server) 'find $(destination) -type f -exec chmod 644 {} \;'
 	ssh $(username)@$(server) 'find $(destination) -type d -exec chmod 755 {} \;'
