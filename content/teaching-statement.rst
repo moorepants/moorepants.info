@@ -267,9 +267,6 @@ generation of engineering problems. Good system identification courses are
 often hard to come by. I'd like to develop one that is founded and linked to
 machine learning and big data problems.
 
-Bicycle Dynamics
-----------------
-
 Lastly, I am interested in developing a course modeled after a colleague in
 Spain that centers on the bicycle. The bicycle is an interestingly rich
 dynamics and control problem and is a familiar object to most people. The class
@@ -278,3 +275,101 @@ canned, but complex, dynamic system to model, measure, and validate with
 experimentation. The bicycle offers an economical and tractable platform for
 learning the whole picture in experimentation which is perfect for a
 undergraduate or graduate level course.
+
+Reproducible Scientific Computing
+---------------------------------
+
+Prerequisites: undergraduate course in computer programming
+Recommended: undergraduate statistics
+Suggested level: advanced undergraduates or graduate students
+
+This class will introduce students to modern scientific data analysis which is
+structured around reproducible computational workflows. Large amounts of data
+are often overwhelming and managing that data becomes cumbersome and error
+prone with commonly learned computational tools.Topics will include version
+control, databases, unit testing, reproducible software, the unix shell,
+Python, R, BASH, regular expressions, data types, object oriented programming,
+Make, matrix programming, scientific document creation, and sharing data
+through the web. The class will also delve into general topics in Open Science
+and what role massive sharing of data, code, and literature will play in the
+future. Students will come away with a broad toolset for managing data and
+software at the research level along with new ideas related to open science.
+Students will be responsible for creating a complete computationally
+reproducible project based on real data and sharing it via the web.
+
+Multibody Dynamics
+------------------
+
+Prerequisite: undergraduate Newtonian dynamics
+Recommended: graduate advanced dynamics
+Suggested Level: graduate students
+
+This class will explore the derivation of nonlinear and linear equations of
+motion for constrained multi-body systems by utilizing Kane's method. The basic
+topics include coupled rigid-body kinematics/dynamics, reference frames, vector
+differentiation, configuration and motion constraints, holonomicity,
+generalized speeds, partial velocities, mass, inertia tensor/theorems, angular
+momentum, generalized forces, comparison of Newton/Euler, Lagrange, Kane,
+Featherstone, etc methods, and orientation: Euler, Quaternion, and Rodrigues
+parameters. The theory will be tightly coupled with computer-aided symbolic
+equation derivation and software tools to ease the workflow of complex dynamics
+problems from derivation to simulation. Groups will be responsible for
+designing an analytical study of a multibody system with the techniques taught
+in the course.
+
+Experimental Methods in Biomechanics
+------------------------------------
+
+Prerequisite: undergraduate Newtonian dynamics, biomechanics theory, computer
+programming
+Suggested Level: graduate students
+
+This course will familiarize students with modern experimental techniques for
+biomechanical analysis of human movement. The lab based class will cover data
+acquisition, force platform analysis, planar and three-dimensional motion
+capture, inertial measurement units, image processing, data reduction and
+smoothing, body segment parameter estimation, gait, electromyography, and
+biomechanical computational analysis. Groups will be responsible for the design
+of and performing a mini-experiment with the newly learned techniques.
+
+Vehicle Dynamics
+----------------
+
+Prerequisite: advanced dynamics, control systems, computer programming
+Suggested Level: upper level undergrads and graduate students
+
+This course will cover the general theories of vehicle dynamics. We will study
+the derivation and analysis of the equations of motion for automobiles,
+trailers, planes, single track vehicles, etc. Topics will include lateral
+dynamics, stability, control, simulation, visualization, longitudinal dynamics
+(acceleration and braking), suspension, etc. Demonstrations of real vehicles
+will be held. Students will be responsible for a completing a group project in
+the analysis of a vehicle.
+
+Experimental Methods in Vehicle Dynamics
+----------------------------------------
+
+Prerequisite: undergraduate Newtonian dynamics, vehicle dynamics theory, computer
+programming
+Suggested Level: graduate students
+
+This course will familiarize students with modern experimental techniques for
+dynamic measurement and analysis of vehicles (automobiles, trains, planes,
+boats, etc). The lab based class will cover data acquisition, force
+measurement, kinematic measurements (angular rate, acceleration, GPS, IMUs,
+etc), data reduction and smoothing, system identification, mass and inertia
+estimation, and dynamical computational analysis. Each class member will be
+responsible for a part an class wide team project to measure and validate the
+dynamics of a common bicycle.
+
+System Identification
+---------------------
+
+Prerequisites: linear algebra, control systems
+Suggested Level: upper level undergraduates and graduate students
+
+This course will cover linear and nonlinear system identification. Topics will
+include discrete systems, data quality, stochastic processes, noise, black box
+identification, grey box identification, non-linear identification. The course
+will approach the theory from a practical point of view and students will be
+responsible for identifying models based on real data.
