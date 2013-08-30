@@ -279,9 +279,9 @@ undergraduate or graduate level course.
 Reproducible Scientific Computing
 ---------------------------------
 
-Prerequisites: undergraduate course in computer programming
-Recommended: undergraduate statistics
-Suggested level: advanced undergraduates or graduate students
+| Prerequisites: undergraduate course in computer programming
+| Recommended: undergraduate statistics
+| Suggested level: advanced undergraduates or graduate students
 
 This class will introduce students to modern scientific data analysis which is
 structured around reproducible computational workflows. Large amounts of data
@@ -300,9 +300,9 @@ reproducible project based on real data and sharing it via the web.
 Multibody Dynamics
 ------------------
 
-Prerequisite: undergraduate Newtonian dynamics
-Recommended: graduate advanced dynamics
-Suggested Level: graduate students
+| Prerequisite: undergraduate Newtonian dynamics
+| Recommended: graduate advanced dynamics
+| Suggested Level: graduate students
 
 This class will explore the derivation of nonlinear and linear equations of
 motion for constrained multi-body systems by utilizing Kane's method. The basic
@@ -320,9 +320,9 @@ in the course.
 Experimental Methods in Biomechanics
 ------------------------------------
 
-Prerequisite: undergraduate Newtonian dynamics, biomechanics theory, computer
-programming
-Suggested Level: graduate students
+| Prerequisite: undergraduate Newtonian dynamics, biomechanics theory, computer
+| programming
+| Suggested Level: graduate students
 
 This course will familiarize students with modern experimental techniques for
 biomechanical analysis of human movement. The lab based class will cover data
@@ -335,8 +335,8 @@ of and performing a mini-experiment with the newly learned techniques.
 Vehicle Dynamics
 ----------------
 
-Prerequisite: advanced dynamics, control systems, computer programming
-Suggested Level: upper level undergrads and graduate students
+| Prerequisite: advanced dynamics, control systems, computer programming
+| Suggested Level: upper level undergrads and graduate students
 
 This course will cover the general theories of vehicle dynamics. We will study
 the derivation and analysis of the equations of motion for automobiles,
@@ -349,9 +349,9 @@ the analysis of a vehicle.
 Experimental Methods in Vehicle Dynamics
 ----------------------------------------
 
-Prerequisite: undergraduate Newtonian dynamics, vehicle dynamics theory, computer
-programming
-Suggested Level: graduate students
+| Prerequisite: undergraduate Newtonian dynamics, vehicle dynamics theory, computer
+| programming
+| Suggested Level: graduate students
 
 This course will familiarize students with modern experimental techniques for
 dynamic measurement and analysis of vehicles (automobiles, trains, planes,
@@ -365,8 +365,8 @@ dynamics of a common bicycle.
 System Identification
 ---------------------
 
-Prerequisites: linear algebra, control systems
-Suggested Level: upper level undergraduates and graduate students
+| Prerequisites: linear algebra, control systems
+| Suggested Level: upper level undergraduates and graduate students
 
 This course will cover linear and nonlinear system identification. Topics will
 include discrete systems, data quality, stochastic processes, noise, black box
