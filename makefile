@@ -20,10 +20,10 @@ getresume:
 buildstatements:
 	rst2latex --date --documentoptions="letter,10pt" --use-latex-docinfo --latex-preamble="$(statementpreamble)" content/research/$(rs).rst $(docdir)/$(rs).tex
 	pdflatex --output-directory=$(docdir) $(docdir)/$(rs).tex > /dev/null
-	rm $(docdir)/$(rs).aux $(docdir)/$(rs).out $(docdir)/$(rs).log #$(docdir)/$(rs).tex
+	rm $(docdir)/$(rs).aux $(docdir)/$(rs).out $(docdir)/$(rs).log $(docdir)/$(rs).tex
 	rst2latex --date --documentoptions="letter,10pt" --use-latex-docinfo --latex-preamble="$(statementpreamble)" content/$(ts).rst $(docdir)/$(ts).tex
 	pdflatex --output-directory=$(docdir) $(docdir)/$(ts).tex > /dev/null
-	rm $(docdir)/$(ts).aux $(docdir)/$(ts).out $(docdir)/$(ts).log #$(docdir)/$(ts).tex
+	rm $(docdir)/$(ts).aux $(docdir)/$(ts).out $(docdir)/$(ts).log $(docdir)/$(ts).tex
 
 push: getresume buildstatements
 	hyde gen -r -c prod.yaml
