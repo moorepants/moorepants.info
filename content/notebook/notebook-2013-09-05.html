@@ -1,0 +1,126 @@
+---
+title: Notebook Entry
+subtitle: September 5, 2013
+description:
+created: !!timestamp '2013-09-05 13:16:19'
+tags:
+    - notebook
+---
+
+{% mark image -%}
+
+{%- endmark %}
+
+{% mark excerpt -%}
+{% filter restructuredtext %}
+
+Today's task list:
+
+- [x] Work on parsing the walking data
+- [] Work on BMD papers
+- [] Book hotel for BMD
+- [] Post update about BMD copyright
+- [] Finish reading the van der Kooij paper
+- [] See if our controller can drive an OpenSim model or Ton's 2D model
+- [x] Wrap the HBM C code
+- [] Duplicate website backups on a S3 bucket
+- [] Work on the website theme
+- [] Make generic settings on the lab website
+- [] Review the TODO items on the Yeadon paper
+- [] Do CITI course
+- [] Do FERPA course
+- [] Write up database proposal
+- [] Try out CSympy with some mechanics problems
+- [] Email Mounir about teaching
+
+{% endfilter %}
+{%- endmark %}
+
+{% filter restructuredtext %}
+
+Wrapping HMB
+============
+
+I read about SWIG, Cython, and ctypes last night for wrapping the HBM code in
+Python. SWIG is cool because you can wrap C code by writing a seemingly simple
+``*.i`` file that declares function calls in the C header and then SWIG it to
+create code for a variety of languages including Python, R, and Octave. Cython
+seems similar. You have to create a ``*.pyx`` file declaring some mappings to
+your C header file function calls. Then you run Cython and it generates some C
+code and compiles it. Both systems integrate with docutils for auto building
+when you run ``python setup.py install``. Cython also supports NumPy and most
+numeric folks use it because of this. Finally, you can also write a python file
+and use ctypes to connect to functions in your header files, which seems ideal
+but there were many warnings about using it because it isn't flexible in the
+long run.
+
+Walking System Identification
+=============================
+
+I updated the simple control solver to convert the dense A matrix to a
+scipy.sparse.csr_matrix and then to use scipy.sparse.linalg.lsqr to solve the
+sparse system (A is mostly zeros which has a thick diagonal). I thought it
+would be faster that solving the dense linear least square problem, but it
+wasn't. And I'm probably not saving any memory because I'm constructing the
+matrix as a dense matrix and then converting it. I need to change the code to
+construct a lil_matrix manually and then maybe get some memory reduction. It
+gave the same solution as the dense solver, so that is good.
+
+From Ljung 1999
+---------------
+
+There are three basic methods of identifying a plant in a closed loop system,
+according to Ljung 1999 (page ~423):
+
+1. The Direct Approach: apply prediction error method to the output of the
+plant, \\(y\\), and the input to the plant, \\(u\\). Ignore feedback and the
+reference signal.
+
+2. The Indirect Approach: Identify the full closed loop system from reference
+input, \\(r\\), to plant output, \\(y\\). If the controller is known, and you have
+the closed loop transfer function, you can then compute the plant.
+
+3. The Joint Input-Output Approach: Consider the plant outputs and inputs,
+\\(y\\) and \\(u\\) as the outputs to a system that is driven by the reference
+signal \\(r\\).
+
+Our human walking control system identification problem can be framed to match
+Ljung's framework like so::
+
+                              m
+    r   +  u  ------------ d  |+ y
+    ---->o--->|controller|--->o-->
+        -|    ------------   +|
+         |    --------------  |
+         -----|human       |---
+           c  |biomechanics|
+              --------------
+
+Here \\(r\\) is the reference signal, i.e. the ideal walking motion (angles,
+rates). \\(u\\) is the error between \\(c\\) and \\(r\\). \\(c\\) are the biomechanic
+model outputs, i.e.  joint angles, joint rates, etc. \\(d\\) is the controller
+output, i.e. the joint torque additions. \\(m\\) is the nominal joint torques to
+keep the standard motion \\(r\\) and \\(y\\) is the sum of \\(d\\) and \\(m\\) which is
+fed back through the regulator, i.e. human bio model.
+
+We measure \\(c\\) from motion capture. These are pretty much direct
+measurements. We can also use inverse dynamics with a biomechanical model to
+get good estimates of \\(y\\).
+
+With that in mind, the direct approach doesn't seem feasible because we don't
+have a measurement or estimate of \\(u\\). The direct approach for closed loop
+systems also requires that you have a noise model which is close to the true
+noise model, otherwise bias is introduced in the identification.
+
+For the indirect approach we do have a regulator model (i.e. the human
+biomechanical model) which is required, and we "measure" \\(y\\) but we don't
+measure or have an estimate of \\(r\\).
+
+And thirdly, the Joint Input-Output approach requires \\(y\\), \\(u\\), and \\(r\\),
+of which only \\(y\\) is available.
+
+So all three of these methods don't seem applicable as stated. But the "direct"
+measurements of \\(c\\) must be able to be used in the identification. This
+doesn't seem to be regarded in the framework presented in Ljung's book.
+
+{% endfilter %}
