@@ -1,3 +1,14 @@
+/* bootstrap has really big values for the heading fonts so I'm overiding them here */
+h1 {
+  font-size: 24px
+}
+h1 small {
+    font-size: 18px;
+}
+h2 {
+  font-size: 20px
+}
+
 nav.post_nav{
     background-color: #efefef;
     position: fixed;
