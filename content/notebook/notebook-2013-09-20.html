@@ -1,0 +1,139 @@
+---
+title: Notebook Entry
+subtitle: September 20, 2013
+description:
+created: !!timestamp '2013-09-20 09:20:49'
+tags:
+    - notebook
+    - google calendar
+    - rss
+    - sample size
+    - plone
+---
+
+{% mark image -%}
+
+{%- endmark %}
+
+{% mark excerpt -%}
+{% filter restructuredtext %}
+
+- Test out being perturbed on the treadmill while walking
+- Go over Tarun's final PRs and decide what's in and out for the GSoC
+  deadline
+- Meet with Tarun
+- Run the JS tests in pydy-viz
+- Contact Mike about senior design projects
+- Help Sandy with visualizing the inertial compensation results
+- Tidy up PyDy
+- Embed the google calendar on the website
+- Do FERPA course, due Sept 20
+- Took photos of high school kids that visited the lab
+
+{% endfilter %}
+{%- endmark %}
+
+{% filter restructuredtext %}
+
+Google Calendar RSS Feeds
+=========================
+
+I use this feed for the rss portlet in plone:
+
+https://www.google.com/calendar/feeds/username/basic?futureevents=true&orderby=starttime&sortorder=ascending&singleevents=true
+
+The parameters show the latest upcoming events, but Plone rss feed portlet
+displays the date of create of the event instead of the start time of the
+event, which I need to figure out. Might need to be a custom portlet that
+copies the RSS portlet, but changes the displayed date.
+
+Sample Size Determination
+=========================
+
+Obinna has a model that computes joint angles given accelerometer data. Ton has
+a model that computes joint angles given marker data. We believe the marker
+data model is pretty accurate, but the joint angles from accelerometers is a new
+idea. Obinna would like to know how many samples (subjects, speeds, cadences,
+of walking) are needed to ensure that his model is equivalent to Ton's model.
+
+Obinna picks some statistics like peak joint angles in a gait cycle and
+computes them with both methods. If he plots the peak joint angle computed from
+each trial with joint angle on both the x an y axes and where the x axes is the
+joint angle computed from Ton's method and the y axes computed from Obinna's
+model then you'd expect to see a line form with slope = 1 and y-intercept = 0.
+
+y = m x + b
+
+y = obinna's output
+x = ton's output
+
+\hat{m} and \hat{b} are the estiamted slope and intercept given the actual
+data.
+
+Thus we'd like to make some hypotheses.
+
+H_0 (null hypothesis): m_o = m_t and b_o = b_t
+H_1 (alternative hypothesis): m_o \neq m_t and b_o \neq b_t
+
+If null hyptothesis is rejected when it is acutally true:
+
+\alpha = P(type I error) = P(reject H_o|H_0 is true)
+
+and if the null hypothesis is not rejected when it is false then
+
+\beta = P(type II error) = P(fail to reject H_0|H_0 is false)
+
+power is often talked about instead of \beta:
+
+Power = 1 - \beta = P(reject H_0|H_0 is false)
+
+If we had only one variable in the hypotheses we could compute the power for a
+t-test and try to estimate sample size there.
+
+For example the R pwr package gives::
+
+  > pwr.t.test(d=0.8, sig.level=.05, power=.95)
+
+       Two-sample t test power calculation 
+
+                n = 41.59414
+                d = 0.8
+        sig.level = 0.05
+            power = 0.95
+      alternative = two.sided
+
+   NOTE: n is number in *each* group
+
+where d is set for large effects (Cohen recommends 0.8).
+
+On page 275 of Discovering Statistics using R, Field 2012 the authors show a
+plot of sample size as a function of predictors in the regression equation for
+different effect sizes. For 2 predictors and large effect, it recommends at
+least 40 samples. This graph comes form Miles and Shelvin 2001. But in the
+preceding text he gives two rules of thumb from Green 1991:
+
+50 + 8k if you only want to test only the overall fit of your regression
+
+and
+
+104 + k if you want to test the individual predictors
+
+For 2 predictors we need then either 66 or 106 samples.
+
+https://stat.ethz.ch/pipermail/r-help/2006-November/117902.html
+
+Applying Regression and Correlation: A Guide for Students and Researchers
+Miles and Shelvin 2001
+
+Green 1991 How many subjects does it take to a regression analysis?
+
+R pwr package examples:
+
+http://www.statmethods.net/stats/power.html
+
+Related to what we are after, i.e. testing hypotheses of the relationship in
+the two models with simple linear model:
+
+http://www.weibull.com/DOEWeb/hypothesis_tests_in_simple_linear_regression.htm
+
+{% endfilter %}
