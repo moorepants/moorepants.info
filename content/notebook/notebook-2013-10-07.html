@@ -1,0 +1,62 @@
+---
+title: Notebook Entry
+subtitle: October 7, 2013
+description:
+created: !!timestamp '2013-10-07 09:38:30'
+tags:
+    - notebook
+    - system identification
+    - walking
+---
+
+{% mark image -%}
+{%- endmark %}
+
+{% mark excerpt -%}
+{% filter restructuredtext %}
+
+  - [x] Validate the identified walking control model on different data
+  - [x] Learn C the hard way: Exercise 13
+
+{% endfilter %}
+{%- endmark %}
+
+{% filter restructuredtext %}
+
+Walking System Identification
+=============================
+
+Over the weekend I setup the `SimpleControlSolver`_ to validate the identified
+model against different data than that used for the identification. Right now
+if you pass in a data set it will use the first half of the steps for
+identification and the second half for validation. You can also pass in a
+separate data set for the validation data if desired. The `latest version of
+the control solver example`_ shows the results.
+
+The picture hasn't gotten a whole lot clearer, but here are some observations:
+
+- There are no apparent patterns in the gains as a function of percent of gait
+  cycle. In a few of the gains there may be less activity in the swing phase,
+  but it isn't clear.
+- The variance in the identified gains with respect to the fit seem to be quite
+  large. This may imply that the cost function has a large flat bottom where a
+  variety of gain combinations will give pretty good fits.
+- The VAF for the validations range between 45% and 80% for the different
+  controls. The hip moments are better identified than the knee moments. And on
+  average 10-20 Nm is error.
+- The control contribution plots show that there is a nominal moment generated
+  and the controller compensates for the remaining error in the sensors.
+- The line charts for the control contribution plots which show the mean
+  controls and give some idea in how much compensation is needed at each time
+  step in the gait cycle. I'm not sure if this give much insight.
+- Very oddly, the VAF is better if we use a "diagonal" gain matrix for the same
+  data set. I have a hard time believing that is correct. There still isn't any
+  apparent pattern in the gains either.
+- The second data set gives similar results to the first in terms of gain
+  magnitudes and VAF.
+- There is one wild gain at about 60% in the model from the second data set.
+
+.. _SimpleControlSolver: https://github.com/moorepants/DynamicistToolKit/blob/master/dtk/walk.py
+.. _latest version of the control solver example: http://nbviewer.ipython.org/urls/raw.github.com/moorepants/walking-sys-id/3df104efc957cd02ed16dcebc222c31b9ee312cd/src/control_solver_example.ipynb
+
+{% endfilter %}
