@@ -4,24 +4,35 @@ Research Statement
 
 :Author: Jason K. Moore
 
-If one word can represent the glue that binds my research concepts and
-intentions it would be "human". With a mechanical engineering focus, my
-predominant interests are concerned with how humans interact with machines and
-how humans can be described as machines. Although past decades of mechanical
-engineering advancement have made great strides in automatic control and machine
+If one word could represent what bridges my research concepts and
+intentions, it would be "human". My predominant interests are concerned with 
+how humans interact with and can be described as machines, 
+with a mechanical engineering focus. Although past decades of mechanical
+engineering advancement have made great strides in automatic control and machine <--instrument?
 design, this body of research often neglects the intimate association between
-humans and machines, a relationship that exists now and will for much of the
-foreseeable future. As machines are developed to tackle more complicated tasks
-they will need to be more aware of their environment, especially the human's
-actions and intentions. A machine that is aware of the human will result in a
-system in which the human's higher cerebral control abilities are complemented
-by massive data parsing and repetitive tasks at which computers excel. In order
-to design devices that optimize this symbiosis we must better understand how
-people interact with their surroundings and use machines to do so. Such advanced
-technologies have recently come to light, examples of which are self-driving
-cars, assistive aircraft control, haptic feedback, human-aware factory robots,
-and others. The more we can understand how the human behaves the better these
-devices can be designed to compensate for human weaknesses.
+humans and machines. 
+
+##Below: really long confusing sentences. I changed some to make shorter & more concise. 
+
+As more complx devices are developed, the relationship between the machine and the human controller
+becomes more intimate. The machine must be more aware of its environment, especially the human's
+actions and intentions. Such a relationship results in a system where the higher human cerebral control 
+is complemented by the computer's massive data parsing and repetitive task abilities. 
+
+##sentense is awkward, tried to fix + adding better transition
+
+If we are to optimize this symbiosis and thus develop more sophisticated instruments,
+we must improve our understanding of how humans use machines to better interact with their surroundings. 
+Such advanced technologies have recently come to light including: self-driving
+cars, assistive aircraft control, haptic feedback, and human-aware factory robots. 
+
+##I feel this is repetative. Possibly nix.
+The more we can understand how the human behaves the better these devices can be designed to compensate 
+for human weaknesses.
+
+##also, a concluding sentence that goes back to your comment regarding how mechanical engineering still neglects
+the intimate association between humand ans machines. Is research still lacking even thought there have been
+big strides like the self-driving car? What's missing?
 
 My doctoral dissertation focused on the human's unique ability to balance a
 mostly unstable vehicle, the bicycle. The bicycle is an interesting machine
