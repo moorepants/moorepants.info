@@ -35,20 +35,32 @@ the intimate association between humand ans machines. Is research still lacking 
 big strides like the self-driving car? What's missing?
 
 My doctoral dissertation focused on the human's unique ability to balance a
-mostly unstable vehicle, the bicycle. The bicycle is an interesting machine
-because it requires a human's constant interaction to balance and stay on
-course. This makes it an ideal platform for investigating many, if not all, of
-the facets of complex human control and complementary machine design, all in a
-tractable, economically viable, and socially familiar machine. On-board data
+mostly unstable vehicle, the bicycle. 
+
+#fixed a bit
+The bicycle is an interesting machine requiring constant human interaction for it to 
+balance and stay on course. This (what? this intimate relationship? Interdependance? 
+Not really great to start sentence with just "this")
+makes the bicycle an ideal platform for investigating several facets of complex human control 
+and complementary machine design, all in a
+tractable, economically viable, and socially familiar machine (object??). 
+
+##this sentence comes out of nowhere. Need a transition. Also too long. Maybe nix this whole paragraph.
+On-board data
 acquisition has improved dramatically with the advent and rapid growth of micro-
 and nano-scale sensors paired with data collection abilities in small devices
 such as smart phones, which is helping to propel engineering into the realm of
 big data. These technologies allowed me to collect substantial amounts of
 kinematic and kinetic data from both the bicycle and the human subject in
-maneuvering experiments. I made use of a combination of first-principles
+maneuvering experiments. 
+
+##how about just: I collected substantial amounts of kinematic and kinetic data from both bicycle
+and human subjects in maneuvering experiments using on-board data acquisition.
+
+I made use of a combination of first-principle
 modeling techniques and grey box system identification approaches to develop
-realistic models of both the bicycle and the human's control behavior. The
-bicycle dynamics and control research is covered in detail in my `dissertation
+realistic models of the bicycle and the human control behavior. Detailed
+bicycle dynamics and control research can be found in my dissertation
 <http://moorepants.github.com/dissertation>`_ and a series of journal and
 conference papers listed in my resume.
 
