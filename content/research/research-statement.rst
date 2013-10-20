@@ -114,41 +114,62 @@ understanding of the human mind and internal control scheme complexities.
 
 My primary goal will be to assemble a team of scientists (students, post docs,
 and fellow colleagues) to tackle fundamental concepts in our understanding of
-the human control system and the machines with which a person interacts. The
-applications are wide ranging but the research will focus primarily on the
-basics of human motor control from simple balance to manipulator control and
+the the interaction between machines and the human control system. The research will focus 
+primarily on the basics of human motor control: from simple balance to manipulator and
 vehicle control. I want to push the boundaries in understanding how to utilize
-human physiological feedback signals in automatic control systems and, in
+human physiological feedback signals in automatic control systems and in
 particular, to increase the automatic controller's operator "awareness".
 
 Questions I plan to seek answers to include: Can machines become aware of their
-surroundings so that they never harm a human? When does the automatic system
-take control of the vehicle if the human isn't up to the control task? Can
-automatic control constantly be aware of the human's state such that it can
-adapt to the human's ability or inability? Automatic control of manually
+surroundings so they never harm a human? 
+
+##awkward sentence, fix. Is this better: "At what point does the automatic system take control when
+##the human loses the ability to maneuver the vehicle?
+When does the automatic system take control of the vehicle if the human isn't up to the control task? 
+
+##isn't this sort of what you are asking above? maybe combine
+Can automatic control constantly be aware of the human's state such that it can
+adapt to the human's ability or inability?
+
+##This basically repeats your questions in comment form. Maybe delete.
+Automatic control of manually
 controlled systems must be able to augment the human's actions both enhancing
 their ability and filling in when the human loses the ability to be an adequate
 controller. It should be aware of the environment when the human cannot be.
 
+
+##this comes out of nowhere. Need a transition. This says how you are qualified to be a
+##lead researcher? Maybe use that as a lead in to this paragraph--you need to link the above
+##paragraphs with this one better. Also, you list your grant awards, but these are also listed in your CV, correct?
+##I know you're not really supposed to re-iterate what's in your CV in your cover letter. Just a though. You can keep
+##but maybe cut down a little.
+
 During my tenure as a graduate student researcher I gained a great deal of
 experience in organization, project management, student mentoring, and
-successful grant writing. For example, I closely mentored six graduate students,
+successful grant writing. I closely mentored six graduate students,
 and numerous undergraduates in a lab setting. The final years of my graduate
 work were funded by a National Science Foundation grant (`# 0928339
-<http://www.nsf.gov/awardsearch/showAward?AWD_ID=0928339>`_), which I played a
-large role in writing and managing under my principal investigators, Dr. Mont
-Hubbard and Dr. Ronald Hess. Before the NSF funding, I was also awarded a
-Fulbright to the Netherlands from the Department of State, which is a very
-competitive individual grant. Combining those with successfully obtaining many
+<http://www.nsf.gov/awardsearch/showAward?AWD_ID=0928339>`_), in which I played a
+large role writing and project managing under my principal investigators, Dr. Mont
+Hubbard and Dr. Ronald Hess. Prior to the NSF funding, I was awarded a
+Fulbright, a competitive individual grant, and studied bicycle dynamics in the Netherlands. 
+
+##this sentence needs work.
+Combining these with successfully obtaining many
 university-level grants and co-writing two successful Google Summer of Code
-grants has made my experience at obtaining funding very strong. Furthermore, I
-am a very active participant in service to academics in my field of study and to
+grants has made my experience at obtaining funding very strong. 
+
+Furthermore, I am a very active participant in service to academics in my field of study and to
 my department and university. I have organized and chaired conference sessions,
 been elected to the scientific committee of my sub-field's main conference, and
-developed broad relationships with my fellow researchers all at the graduate
-student level. My role as a co-founder of the Davis Open Science group has
+developed broad relationships with my fellow researchers. My role as a co-founder of the Davis Open Science group has
 allowed me to participate in many panels and meetings on topics such as Open
-Access at the university level. I feel fully prepared to pursue and secure
+Access at the university level. 
+
+##this also comes out of nowhere, get a transition. Maybe like "With my experiences in various facets of
+##acedemic responsibilities, blah blah
+
+I feel fully prepared to pursue and secure
 funding to manage a large lab with many simultaneous research projects all the
 while serving in academic leadership positions.
 
