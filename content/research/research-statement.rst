@@ -101,6 +101,9 @@ Miscellaneous
    - Appropriate technologies
    - Human powered machines
 
+##I think this paragraph can be condensed a bit--you repeat collaboration a lot and sort 
+##of say the same thing over and over. Maybe say like:
+ 
 My future research directions will leverage collaborative initiatives to fill
 gaps in my expertise. I want to develop a more holistic research plan centered
 on the human as a controller and his/her interactions with machines. In
