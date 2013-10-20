@@ -183,14 +183,17 @@ the most potential for impact.
 Manual Control and Human Machine Interaction
 --------------------------------------------
 
+## you say "fundamental" a lot here. maybe pick a different word...?
 I plan to explore the human as a machine controller for very fundamental
-problems. For example, current understandings leave much to be desired when we
+problems. Current understandings leave much to be desired when we
 ask fundamental questions such as "How do we balance a broom stick on our hand?"
 To answer this question, we need to consider the fundamental sensory information
 that we take in, how we process that and produce the correct control action.
 Developing experiments involving such input/output relationships with simple
 machines can help expose the essence of human control which will have broad
 impacts for understanding more complex scenarios such as operating a spacecraft.
+
+##I don't see how this lower paragraph really relates to the upper paragraph.
 
 In contrast to simple systems and first-principles modeling constructs, the
 collection of a large amount of varying dynamic data from force, kinematic, and
@@ -201,7 +204,7 @@ both simple and complex tasks.
 Balance
 -------
 
-One of the most fundamental control tasks we accomplish, as human, is postural
+One of the most fundamental control tasks humans accomplish is postural
 balance. Balancing is learned at a very young age; a task that initially
 dominates computations in areas of the frontal cortex. This later becomes a
 learned skill as much of the computation moves to the more reactionary portion
@@ -229,25 +232,26 @@ Vehicle and Machine Handling Qualities
 
 When humans interact with machines, whether it be flying an aircraft or playing
 a video game, the operator has a subjective opinion of the ease of control. For
-example, does the machine do what I want it to with minimal effort? Although
+example, does the machine do what I want with minimal effort? Although
 machine performance during a manually controlled task and the machine's open
 loop dynamics can be objectively measured, there must be connections between the
 subjective feeling and these objective measurements. Unlocking this connection
 will allow for the design of machines that complement the human in a passive way
-by changing their open loop dynamics through machine design.Furthermore, if
-knowledge of handling qualities is combined with automatic control the machine
+by changing their open loop dynamics through machine design. Furthermore, if
+knowledge of handling qualities is combined with automatic control, the machine can
 adapt to the human's desires without modifying the vehicle's physical design.
 But developing theoretical models that describe a machine's ease of control will
 take an interdisciplinary approach that involves an understanding of dynamics,
-control, neuroscience, and psychology. Topics of this nature dominant research
+control, neuroscience, and psychology. Topics of this nature dominate research
 in human factors, but the link to vehicle design and engineering is still weak.
 I plan to strengthen that link with collaborative research in this area.
 
 Bicycle and Motorcycle Tire Modeling
 ------------------------------------
 
-The rigid body dynamics of bicycles and motorcycles have advanced enough for
-relatively good prediction abilities, but the most glaring deficiency are models
+
+ALthough igid body dynamics of bicycles and motorcycles have advanced enough for
+relatively good prediction abilities, the most glaring deficiency are in models
 that can accurately predict the ground reaction forces between a tire and the
 rolling surface. I am interested in collecting large amounts of tire force data
 using the latest ob-board kinetic sensing techniques to acquire data in normal
