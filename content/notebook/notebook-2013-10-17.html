@@ -1,0 +1,185 @@
+---
+title: Notebook Entry
+subtitle: October 17, 2013
+description:
+created: !!timestamp '2013-10-17 10:07:17'
+tags:
+    - notebook
+    - gyrobike
+    - opensim
+    - simbody
+    - python
+---
+
+{% mark image -%}
+{%- endmark %}
+
+{% mark excerpt -%}
+{% filter restructuredtext %}
+
+- [x] Wrote script to automate my personal machine installation
+- [x] Prepare the gyro bike non-linear and linear models for the senior design
+  group.
+- [x] Send the main bicycle papers to senior design group.
+- [x] Make an information web page for the senior design group.
+- [x] Build simbody and opensim
+
+{% endfilter %}
+{%- endmark %}
+
+{% filter restructuredtext %}
+
+Gyrobike model
+==============
+
+I built linear and non-linear models of an extended Whipple model which
+includes an additional flywheel mounted concentricly with the front wheel. This
+was already done in my dissertation, but I converted the models to Matlab for
+the senior design group to remove the requirement to learn a new language and
+match up with what they are learning in their controls course. The models are
+available here:
+
+https://github.com/moorepants/gyrobike
+
+Opensim/Simbody
+===============
+
+Some notes to install on Ubuntu 13.04 from
+7e06039b0aa4188d2ae63dd5ba36304cb6af467e.
+
+Simbody
+-------
+
+Here is some step by step instructions for installing on Ubuntu 12.04. I'm not
+sure which version of the software is was:
+
+http://simtk-confluence.stanford.edu:8080/pages/viewpage.action?pageId=5114489
+
+These requirements are already installed in the software dev and blas/lapack
+sections::
+
+   $ sudo aptitude install build-essential cmake cmake-curses-gui
+
+This will get all the headers for the BLAS/LAPACK versions that are available::
+
+   $ sudo aptitude install libblas-dev libatlas-dev libopenblas-dev liblapack-dev
+
+Visualizer requires::
+
+   $ sudo aptitude install freeglut3-dev libxmu-dev libxi-dev
+
+::
+   $ mkdir ~/src/simbody
+   $ cd ~/src/simbody
+   $ git clone git@github.com:simbody/simbody.git
+   $ mkdir build
+   $ mkdir build_d
+   $ cd build
+   $ ccmake ../simbody
+
+In ccmake type 'c' for configure, 't' to toggle to advanced mode, edit any
+values, 'c' again for configure, and 'g' for generate.
+
+::
+
+   $ cd ../build_d
+   $ ccmake ../simbody
+
+In ccmake change `CMAKE_BUILD_TYPE` to `Debug`.
+
+::
+   $ make -j2 # -j2 specifies the number of cores you have
+   $ make test
+   $ ./ExamplePendulum # should show visualization
+   $ make doxygen
+
+The following puts everything in /usr/local, but it should have went into
+/usr/local/SimTK. See https://github.com/simbody/simbody/issues/47 for more
+info.
+
+::
+
+   $ sudo make install
+   $ cd ../build
+   $ make -j2
+   $ make test
+   $ sudo make install
+
+Now try out using the libraries from an arbitrary directory. First, copy the
+raw C++ files for the examples to a new directory to play with::
+
+   $ cp -r ~/src/simbody/simbody/Simbody/examples ~/src/simbody-examples
+   $ cd ~/src/simbody-examples
+   $ export LD_LIBRARY_PATH=/usr/local/lib/
+   $ export SIMBODY_HOME=/usr/local
+
+Comment out this line in the Makefile because I'm on a 64 bit system::
+
+   M32FLAG = -m32
+
+I also changed this line to::
+
+   SimTK_HOME=/usr/local
+
+to reflect where my libs were actually installed. Now try running the example::
+
+   $ make ExamplePendulum
+   $ ./ExamplePendulum
+
+The gui should pop up. You can build all examples with::
+
+   $ make all
+
+I've read that having to set the LD_LIBRARY_PATH should only be used for
+testing. You shouldn't have to do this for standard installs. So I think the
+Simbody devs should fix this. Also the compiled examples can't find the
+/usr/local/bin directory unless I set SIMBODY_HOME. Otherwise it looks in
+/usr/local/SimTK/bin which doesn't exist. When I originally ran ccmake it
+didn't give me an option to set the installation directory and the default
+seems to have been /usr/local instead of /usr/local/SimTK.
+
+I need to uninstall and go into the advanced toggle in ccmake and set
+`CMAKE_INSTALL_PREFIX` to `/usr/local/SimTK` and then reinstall.
+
+I filed these issues:
+
+- https://github.com/simbody/simbody/issues/48
+- https://github.com/simbody/simbody/issues/47
+- https://github.com/simbody/simbody/issues/46
+
+OpenSim
+-------
+
+::
+
+   mkdir ~/src/opensim
+   cd ~/src/opensim
+   $ svn checkout https://simtk.org/svn/opensim/Trunk
+   $ mkdir build
+   $ cd build
+   $ ccmake ../Trunk
+
+Type 'c' and add::
+
+   SimTK_INSTALL_DIR=/usr/local
+
+Type 'c' and then 'g'.
+
+::
+
+   $ make test
+
+These tests failed on the trunk::
+
+   32/51 Test #32: testOptimizationExampleRuns ..................***Timeout 1500.03 sec
+         Start 33: testOptimizationExample
+   33/51 Test #33: testOptimizationExample ......................***Failed    0.28 sec
+
+These instructions are here:
+
+https://github.com/moorepants/bin/blob/master/ubuntu_setup.rst
+
+and will be updated as I work out the kinks.
+
+
+{% endfilter %}
