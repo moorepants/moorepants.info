@@ -64,6 +64,8 @@ meta:
     url: http://moorepants.info
     analytics:
         id: UA-15966419-6
+restructuredtext:
+    highlight_source: true
 sorter:
     time:
         attr:

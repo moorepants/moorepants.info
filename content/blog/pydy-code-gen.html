@@ -183,6 +183,131 @@ These are the resources I used to learn about Cython and NumPy use:
 - The SciPy lecture notes on interfacing with C: http://scipy-lectures.github.io/advanced/interfacing_with_c/interfacing_with_c.html
 - Travis Oliphant's blog post comparing Cython, Weave, and NumPy: http://technicaldiscovery.blogspot.com/2011/06/speeding-up-python-numpy-cython-and.html
 
+Cython Code
+===========
+
+Here is the example C code and the Cython wrapping for a simple 1 DoF mass,
+spring, damper system under the influence of gravity and an external force.
+First the C code, ``mass_forcing_c.c`` (make sure to name this different than
+you desired Cython module name or it will be overwritten), and the header file,
+``mass_forcing_c.h``:
+
+.. sourcecode:: c
+
+   #include <math.h>
+   #include "mass_forcing_c.h"
+
+   void mass_forcing(double constants[4], // constants = [m, k, c, g]
+                     double coordinates[1], // generalized_coordinates = [x]
+                     double speeds[1], // generalized_speeds = [v]
+                     double specified[1], // external = [F]
+                     double mass_matrix[4], // computed
+                     double forcing_vector[2]) // computed
+   {
+       // common subexpressions
+       double z_0 = speeds[0];
+
+       // mass matrix
+       mass_matrix[0] = 1;
+       mass_matrix[1] = 0;
+       mass_matrix[2] = 0;
+       mass_matrix[3] = constants[0];
+
+       // forcing vector
+       forcing_vector[0] = z_0;
+       forcing_vector[1] = -constants[2]*z_0 + constants[3]*constants[0] - constants[1]*coordinates[0] + specified[0];
+   }
+
+.. sourcecode:: c
+
+   void mass_forcing(double constants[4], // constants = [m, k, c, g]
+                     double coordinates[1], // generalized_coordinates = [x]
+                     double speeds[1], // generalized_speeds = [v]
+                     double specified[1], // external = [F]
+                     double mass_matrix[4], // computed
+                     double forcing_vector[2]); // computed
+
+I simply stored :math:`M` as a flat array. It may be better to stored it as a
+2D array so that I don't need a ``reshape()`` call in the Cython wrapper. I
+also store all of the inputs as arrays. It could make sense to stored the
+some or all of them in structs so that we could access them be name instead of
+indice.
+
+The ``mass_forcing.pyx`` file declares the contents of the header file and
+defines a function for easy use in Python. The types are pinned to the NumPy C
+API definitions for 1D continous arrays. I could potentially avoid defining
+arrays of zeros for initialization by passing in empty or zero arrays and the
+reshaping step on the output. Both of those could potentially speed things up.
+
+.. sourcecode:: cython
+
+   import numpy as np
+   cimport numpy as np
+
+   cdef extern from "mass_forcing.h":
+       void mass_forcing(double constants[4],
+                         double coordinates[1],
+                         double speeds[1],
+                         double specified[1],
+                         double mass_matrix[4],
+                         double forcing_vector[2])
+
+
+   def mass_forcing_matrices(np.ndarray[np.double_t, ndim=1] constants,
+                             np.ndarray[np.double_t, ndim=1] coordinates,
+                             np.ndarray[np.double_t, ndim=1] speeds,
+                             np.ndarray[np.double_t, ndim=1] specified):
+
+       assert len(constants) == 4
+       assert len(coordinates) == 1
+       assert len(speeds) == 1
+
+       cdef np.ndarray[np.double_t, ndim=1] mass_matrix = np.zeros(4)
+       cdef np.ndarray[np.double_t, ndim=1] forcing_vector = np.zeros(2)
+
+       mass_forcing(<double*> constants.data,
+                    <double*> coordinates.data,
+                    <double*> speeds.data,
+                    <double*> specified.data,
+                    <double*> mass_matrix.data,
+                    <double*> forcing_vector.data)
+
+       return mass_matrix.reshape(4, 1), forcing_vector.reshape(2, 1)
+
+Finally, I use the disutils method of building the shared object file which can
+be imported into Python. Here is the ``mass_forcing_setup.py`` file:
+
+.. sourcecode:: python
+
+   import numpy
+   from distutils.core import setup
+   from distutils.extension import Extension
+   from Cython.Distutils import build_ext
+
+   ext_modules = [Extension(
+                   name="mass_forcing",
+                   sources=["mass_forcing.pyx", "mass_forcing.c"],
+                   include_dirs=[numpy.get_include()],
+                   )]
+
+   setup(
+       name="mass_forcing",
+       cmdclass = {'build_ext': build_ext},
+       ext_modules = ext_modules,
+   )
+
+To buid the extension simple type::
+
+  $ python mass_forcing_setup.py build_ext --inplace
+
+And you can import and use the function:
+
+.. sourcecode:: pycon
+
+   >>> import mass_forcing
+   >>> from numpy.random import random as r
+   >>> mass_matrix, forcing_vector = mass_forcing.mass_forcing_matrices(r(4), r(1), r(1), r(1))
+
 Benchmark Problem
 =================
 
@@ -202,9 +327,9 @@ this plot:
 integration over 10 seconds of real time (100 hz) for the 20 link problem, the
 Cython method wins out at 39 seconds. Theano took 914 seconds (23x slower) and
 lambdify took 2374 seconds (60x slower). Cython was able to integrate the
-equations of motion for 17 links at real time speeds (9.5 seconds) for 100hz
-throughput. The timing was dependent on my system processes, so there are some
-blips. It'd be nice to get an average of this computation. You can run the
+equations of motion for up to 17 links at real time speeds (9.5 seconds) for
+100hz throughput. The timing was dependent on my system processes, so there are
+some blips. It'd be nice to get an average of this computation. You can run the
 benchmark yourself here:
 
 https://github.com/PythonDynamics/pydy-code-gen/blob/master/misc/benchmark.py
@@ -219,8 +344,8 @@ These are some general observations:
 - The Cython wrapped C code evaluates extremely faster than both methods and
   doesn't take to long to generate the code.
 - The derivations are pretty fast, with the 20 link pendulum taking 88 seconds.
-  I'm looking for to trying out Ondřej's csympy implementation for this, which
-  could get derivations down to second speeds.
+  I'm looking forward to trying out Ondřej's csympy implementation for this,
+  which could get derivations down to second speeds.
 
 The package and benchmark code are hosted here:
 
