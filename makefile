@@ -6,6 +6,8 @@ docdir=content/media/docs
 statementpreamble=\usepackage[top=1in,bottom=1in,right=1in,left=1in]{geometry}
 rs=research-statement
 ts=teaching-statement
+presentationsource=/home/moorepants/Presentations/
+presentationdestination=/home/jasonkmoore/moorepants.info/presentations/
 
 genserve: getresume buildstatements
 	hyde gen -r
@@ -27,7 +29,8 @@ buildstatements:
 
 push: getresume buildstatements
 	hyde gen -r -c prod.yaml
-	rsync -r -t --delete --progress $(source) $(username)@$(server):$(destination)
+	rsync -r -t --delete --progress --exclude 'presentations' $(source) $(username)@$(server):$(destination)
+	rsync -r -t --delete --progress $(presentationsource) $(username)@$(server):$(presentationdestination)
 	#ssh $(username)@$(server) 'chmod -R u+w,a+rX $(destination)'
 	ssh $(username)@$(server) 'find $(destination) -type f -exec chmod 644 {} \;'
 	ssh $(username)@$(server) 'find $(destination) -type d -exec chmod 755 {} \;'
