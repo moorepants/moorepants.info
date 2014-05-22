@@ -1,0 +1,96 @@
+---
+title: Notebook Entry
+subtitle: May 16, 2014
+description:
+created: !!timestamp '2014-05-16 13:32:53'
+tags:
+    - notebook
+---
+
+{% mark image -%}
+{%- endmark %}
+
+{% mark excerpt -%}
+{% restructuredtext %}
+
+
+{% endrestructuredtext %}
+{%- endmark %}
+
+{% restructuredtext %}
+
+..math::
+
+  -gm_t - m_t\dot{v}_t - F_c + F_p = 0
+
+  -c\Delta y - gm_f - k\Delta y - m_f\dot{v}_f - F_a - F_o + F_c = 0
+
+  c\Delta y - gm_s + k\Delta y - m_s\dot{v}_s + F_a + F_o = 0
+
+Now thinking about the second equation we can measure, or estimate reasonably
+well, these quantities: :math:`\Delta y, g, m_f, \dot{v}_f, F_c`. So inverse
+dynamics says we can solve for :math:`F` given our measurements:
+
+Second order Equations of motion for open loop planar walker:
+
+.. math::
+
+   0 = F_r + F_r^*
+
+   0 = f(x(t)) + u(t) + w(t)
+
+:math:`u(t)` are the joint torques
+:math:`x(t)` are the states: joint angles and rates (9 joint DoFs + 3 DoFs for
+global location and orientation)
+
+:math:`w(t)` is the external input which should be a force that corresponds to
+the random longitudinal change in belt velocity. This will need to be modeled
+as a specified speed input so the measured belt speed velocity can be used
+directly.
+
+We also can have some output equations that spit out marker location and ground
+reaction forces (these are the things we actually measure).
+
+.. math::
+
+   y = g(x(t))
+
+We then assume a controller of the form:
+
+.. math::
+
+   u(t) = m^*(\varphi) - K(\varphi) x(t)
+
+:math:`\varphi` is the proportion of the gait cycle time (percent heel strike
+to heel strike)
+
+This then creates our closed loop system:
+
+.. math::
+
+   0 = f(x(t)) + m^*(\varphi) - K(\varphi) x(t) + w(t)
+
+Then we discretize :math:`x(t)`, :math:`u(t)`, and :math:`w(t)`. At any instant
+in time the equations of motion must be true.
+
+Question, how will :math:`\varphi` be known during any given interation of the
+solver. Will heel strikes have to be determined for each interation? Or is that
+something that comes from the data, i.e. :math:`\varphi` is fixed (i.e. for a
+given time :math:`t` in the data recording, :math:`\varphi` can be computed).
+
+The cost function will be designed to minimize energy (sum of square of joint
+torques) and to minimize the difference in measured ground reaction forces and
+the marker positions.
+
+The free parameters (unknowns) in the optimization problem will be the
+discretized states, the discretized :math:`w(t)` input, and the controller
+parameters.
+
+There are 12 markers with two coordinates each, 4 ground reaction forces, 2
+ground reaction moments, and one measured belt speed. We measure each of these
+at 100 hz over 8 minutes for each trial. So 48000 samples.
+
+The closed loop model has 9 DoF, 18 states, and 1 input.
+
+
+{% endrestructuredtext %}
