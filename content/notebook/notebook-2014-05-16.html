@@ -5,6 +5,9 @@ description:
 created: !!timestamp '2014-05-16 13:32:53'
 tags:
     - notebook
+    - direct collocation
+    - system identification
+    - walking
 ---
 
 {% mark image -%}
@@ -13,13 +16,17 @@ tags:
 {% mark excerpt -%}
 {% restructuredtext %}
 
+Some thoughts on system identification of planar walking control with direct
+collocation.
 
 {% endrestructuredtext %}
 {%- endmark %}
 
 {% restructuredtext %}
 
-..math::
+The system's equations:
+
+.. math::
 
   -gm_t - m_t\dot{v}_t - F_c + F_p = 0
 
