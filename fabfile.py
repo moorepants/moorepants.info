@@ -3,7 +3,74 @@
 import os
 import re
 
-from fabric.api import local
+from fabric.api import local, settings
+
+VARIABLES = {
+             'username': 'jasonkmoore',
+             'server': 'moorepants.info',
+             'source': 'deploy/',
+             'destination': '/home/jasonkmoore/moorepants.info/',
+             'docdir': 'content/media/docs',
+             'statementpreamble': r'\usepackage[top=1in,bottom=1in,right=1in,left=1in]{geometry}',
+             'rs': 'research-statement',
+             'ts': 'teaching-statement',
+             'presentationsource': '/home/moorepants/Presentations/',
+             'presentationdestination': '/home/jasonkmoore/moorepants.info/presentations/',
+             'del': '',
+            }
+
+def create_doc_dir():
+    if not os.path.exists(VARIABLES['docdir']):
+        os.makedirs(VARIABLES['docdir'])
+
+def gen_serve():
+    get_resume()
+    build_statements()
+    local('hyde gen -r')
+    local('hyde serve')
+
+
+def get_resume():
+    create_doc_dir()
+    with settings(warn_only=True):
+        local('rsync ~/Documents/resume/JasonMoore_cv.pdf content/media/docs/JasonMoore_cv.pdf')
+        local('rsync ~/Projects/appropriate-tech/HumanPowerPresentation/hppres.pdf content/media/docs/hppres.pdf')
+        local('rsync ~/Projects/appropriate-tech/HumanPowerPresentation/hppres-notes.pdf content/media/docs/hppres-notes.pdf')
+        local('rsync ~/Research/structuralid/Hess_Moore_MST_Paper.pdf content/media/docs/hess-moore-mst-final.pdf')
+
+
+def build_statements():
+    create_doc_dir()
+    statements = [
+        'rst2latex --date --documentoptions="letter,10pt" --use-latex-docinfo --latex-preamble="{statementpreamble}" content/research/{rs}.rst {docdir}/{rs}.tex',
+        'pdflatex --output-directory={docdir} {docdir}/{rs}.tex',
+        'rm {docdir}/{rs}.aux {docdir}/{rs}.out {docdir}/{rs}.log {docdir}/{rs}.tex',
+        'rst2latex --date --documentoptions="letter,10pt" --use-latex-docinfo --latex-preamble="{statementpreamble}" content/{ts}.rst {docdir}/{ts}.tex',
+        'pdflatex --output-directory={docdir} {docdir}/{ts}.tex',
+        'rm {docdir}/{ts}.aux {docdir}/{ts}.out {docdir}/{ts}.log {docdir}/{ts}.tex',
+        ]
+    for statement in statements:
+        with settings(warn_only=True):
+            local(statement.format(**VARIABLES), capture=True)
+
+
+def push(delete=False):
+    if bool(delete):
+        VARIABLES['del'] = ' --delete'
+
+    get_resume()
+    build_statements()
+    statements = [
+        'hyde gen -r -c prod.yaml',
+        "rsync -r -t{del} --progress --exclude 'presentations' {source} {username}@{server}:{destination}",
+        'rsync -r -t{del} --progress {presentationsource} {username}@{server}:{presentationdestination}',
+        "ssh {username}@{server} 'find {destination} -type f -exec chmod 644 {} \;'",
+        "ssh {username}@{server} 'find {destination} -type d -exec chmod 755 {} \;'",
+    ]
+    for statement in statements:
+        local(statement.format(**VARIABLES))
+
+    VARIABLES['del'] = ''
 
 
 def finish_notebook():
