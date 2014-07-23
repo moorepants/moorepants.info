@@ -64,8 +64,8 @@ def push(delete=False):
         'hyde gen -r -c prod.yaml',
         "rsync -r -t{del} --progress --exclude 'presentations' {source} {username}@{server}:{destination}",
         'rsync -r -t{del} --progress {presentationsource} {username}@{server}:{presentationdestination}',
-        "ssh {username}@{server} 'find {destination} -type f -exec chmod 644 {} \;'",
-        "ssh {username}@{server} 'find {destination} -type d -exec chmod 755 {} \;'",
+        "ssh {username}@{server} 'find {destination} -type f -exec chmod 644 {{}} \;'",
+        "ssh {username}@{server} 'find {destination} -type d -exec chmod 755 {{}} \;'",
     ]
     for statement in statements:
         local(statement.format(**VARIABLES))
@@ -91,7 +91,7 @@ def finish_notebook():
     local('git merge {}'.format(current_branch_name))
     local('git push origin master')
     local('git branch -d {}'.format(current_branch_name))
-    local('make push')
+    push()
 
 
 def new_notebook():
