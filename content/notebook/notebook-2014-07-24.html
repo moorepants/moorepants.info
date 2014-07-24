@@ -1,0 +1,85 @@
+---
+title: Notebook Entry
+subtitle: July 24, 2014
+description: AOI
+created: !!timestamp '2014-07-24 11:13:02'
+tags:
+    - notebook
+    - aoi
+    - stanford
+---
+
+{% mark image -%}
+{%- endmark %}
+
+{% mark excerpt -%}
+{% restructuredtext %}
+
+A NMBL AOI for my first week or so.
+
+{% endrestructuredtext %}
+{%- endmark %}
+
+
+{% restructuredtext %}
+
+AOI
+===
+
+Accomplishments
+---------------
+
+- Prepared and gave a NCSRR visiting scholar kickoff talk.
+- Met with Jen, Ajay, and Jimmy about 5 week goals.
+- Completed most of the orientation here at Stanford.
+- Setup a new opensim dev env on linux based on the new git repos.
+- Emailed with Jack Wang about modifying the planar walker code and he agreed
+  to let me build of his current work.
+- I was introduced to the Wang et. al walker code base by Chris. The code
+  compiles and runs on my machine and I got a copy of the AWS ami to use with my
+  account.
+- Read some papers on homotopy and discussed it along with direct collocation
+  with Tom.
+- Met with Soha to discuss her work.
+- Read some papers to get an idea of scale limits in NLP problems with IPOPT.
+- Built most of the rigid body portion of my unactuated planar gait model in
+  Opensim.
+- Completed the code for the inverted pendulum on a cart direct collocation
+  problem and tested with IPOPT...but still tracking bugs.
+- Many email discussions with Ton back in Cleveland which included a basic
+  parameter id with direct collocation based on one of Tom's homotopy example
+  problems that showed DC can work for parameter id with 5000 nodes (solves in
+  23s on desktop machine but sensitive to initial guess in parameters). See
+  https://gist.github.com/moorepants/3f122bbad42ca7e910f8 for code.
+- Mentored the SymPy/PyDy google summer of code students on various issues:
+  vector calculus, code generation, and visualization.
+- Worked on revising my research statement for a prof application.
+- Worked on a lingering software paper with Chris to finalize and send it to
+  F1000Research.
+
+Objectives
+----------
+
+- Read and understand Jack and Tim's code focusing on the objective function
+  evaluation. Make a plan to implement the tracking objective.
+- Sniff out the errors in the inverted pendulum dc problem and get it running
+  for a large number of nodes. Implement an implicit backward Euler integrator
+  for the simulation to match the DC discretization I'm using.
+- Complete the 2D gait opensim model and compare it's output to the custom
+  models I have.
+- Design a gain scheduled full state feedback controller in opensim for the 2D
+  gait model that matches the one used in the direct approach system id method.
+
+Issues
+------
+
+- I still have a bug preventing the inverted pendulum direct collocation
+  problem from converging. I think I've narrowed it down to the differences in
+  integration routine (LSODA: Adams + BDF) for the simulation and the
+  discretization method (backward Euler) for the direct collocation.
+- Never got all the paperwork and stuff together to get a building key.
+  Abandoned...
+- I'm already a half a week or so behind what I proposed for the 5 week period
+  here.
+
+{% endrestructuredtext %}
