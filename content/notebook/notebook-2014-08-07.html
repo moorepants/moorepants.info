@@ -1,0 +1,66 @@
+---
+title: Notebook Entry
+subtitle: August 7, 2014
+description: AOI
+created: !!timestamp '2014-08-07 08:45:28'
+tags:
+    - notebook
+    - aoi
+    - stanford
+---
+
+{% mark image -%}
+{%- endmark %}
+
+{% mark excerpt -%}
+{% restructuredtext %}
+
+AOI for July 31 to August 7
+
+{% endrestructuredtext %}
+{%- endmark %}
+
+{% restructuredtext %}
+
+
+A
+=
+
+- Read and organized Tim/Jack's predictive sim code.
+- Completed an opensim planar walking model that matches Gait2D.
+- Discussed dynamics software with Sherm.
+- Mentored GSoC students and prepared for final two weeks. Contributed to a
+  System class to help Tarun move forward.
+- Met twice with Jack Wang and once with Ajay about utilizing Jack's work along
+  with my data. Less clear now if there is anything worth doing there.
+- Read Tim, Jack et al's preprint.
+- Hashed out an opensim computational plan for direct collocation system id on
+  a planar walking model with gait gain scheduled full state feedback torque
+  control. Got Ajay's advice on this.
+- Learned the basics of using the eigen C++ lib.
+- Built a simbody conda package.
+
+O
+=
+
+- Run extensive tests on the inverted pendulum system id system and summarize
+  the method's abilities to identify the controller for a variety of # of
+  degrees of freedom, initial guesses, measurement noise, discretization
+  intervals and simulation durations. The idea is to make sure that the scale
+  of the gait control id problem can be solved.
+- Complete the controller implementation in opensim.
+- Start on the direct collocation code: data loading, objective func, etc.
+- Learn some about O(n) multibody dynamics with Sherm.
+
+I
+=
+
+- Still haven't successfully compiled Opensim with working Python bindings. The
+  SWIG stuff eats up about all the memory on my machine so it is painful to
+  compile it. Started work on binary installers for simbody and opensim for the
+  conda package manager with Chris to address this (for others at least).
+- Floundered around in idea space and didn't make much progress on implementing
+  an opensim system id approach.
+- Slow movement in C++ development.
+
+{% endrestructuredtext %}
