@@ -1,0 +1,447 @@
+---
+title: NCSRR Visiting Scholar Wrap Up
+subtitle: or woodpecker in the window
+description:
+created: !!timestamp '2014-08-13 09:44:00'
+tags:
+    - ncsrr
+    - direct collocation
+    - system identification
+---
+
+{% mark image -%}
+
+{%- endmark %}
+
+{% mark excerpt %}
+
+{% restructuredtext %}
+
+There are only two more days left for me here at Stanford's Neuromuscular
+Biomechanics Lab for the NCSRR visiting scholar program. This blog post
+summarizes what I've done while being here over the last five weeks.
+
+{% endrestructuredtext %}
+
+{% endmark %}
+
+{% restructuredtext %}
+
+I reviewed the proposal_ I wrote almost 7 months ago for this visiting
+position. My main goals were to:
+
+1. Implement a closed loop muscle driven gait simulation in Opensim that would
+   simulate significantly faster than the one in [Wang2012]_ and also include
+   longitudinal and lateral perturbation inputs at the ground surface.
+2. Run a shooting optimization in the same fashion as [Wang2012]_ that would
+   discover the control parameters in the closed loop model by minimizing the
+   error in the model's outputs and the gait measurements from subjects being
+   perturbed by walking.
+
+.. _proposal:: http://dx.doi.org/10.6084/m9.figshare.1137192
+
+I didn't accomplish either of these goals. During the 6 months between writing
+the proposal and coming to work here at Stanford I collected all of the
+necessary data and worked on a computationally simple direct identification
+technique to identify the control mechanism during walking. The direct
+identification method "worked" except that I had no way to validate that the
+gain scheduled controller can actually control something. So an indirect method
+became more and more appealing.
+
+I started thinking about this more deeply and came to realize that the
+computational costs for the indirect identification technique via shooting that
+I'd proposed was going to put computation time into number of weeks instead of
+number of hours, likely regardless of how fast I could make things run. So I
+started working on understanding the direct collocation techniques that Ton had
+been using to find optimal open loop control inputs to walking models. This
+became much more appealing, so over the month before I came out to Stanford I
+began implementing an identification example for a simpler, known system. I
+arrived at Stanford with this example close to complete and spent the first
+couple of weeks getting that to work hoping that it would be suitable for the
+gait identification problem. It ended up working and seemed promising so I
+ultimately decided to implement it using IPOPT and Opensim. I've got a great
+start on it but there is still work to be done to see if this method will work
+on a gait problem.
+
+What I did accomplish:
+
+1. Completed a direct collocation identification for a simpler but similar
+   system with promising results.
+2. Created a joint torque driven planar gait model with prescribed perturbation
+   inputs in Opensim that matches our other Gait2D model implementations.
+3. Developed a gain scheduled controller that works with the Opensim plant
+   model.
+4. Developed a skeleton structure for the code to run the direct collocation
+   system id with the closed loop Opensim model. (i.e. idea is in place but
+   implementation still is not complete)
+5. Learned how to develop with the Opensim API.
+6. Had lots of fruitful conversations with the other researchers in the NMBL.
+
+Things diverted a bit from my original proposal and I didn't get nearly done
+the amount I'd proposed. This diversion was the result of finding promising
+results with the direct collocation approach and finding out that Jack and
+others had already implemented a 2D gait model which ran even slower than his
+original 3D model, making shooting based optimization less appealing.
+
+System Identification with Direct Collocation
+---------------------------------------------
+
+System identification is the process of discovering a mathematical model of a
+dynamic system from measurements of that system. In my case I'm interested in
+identifying a mathematical model that shows the relationship between what a
+human senses during walking and the low level actuations of the human's body to
+produce stable and robust walking using those sensors and actuators that could
+be realized on an assistive powered prosthetic.
+
+System identification starts with the data. At CSU we've collected typical gait
+lab data (full body motion capture and ground reaction forces) of several
+subjects walking for 8 minutes while being longitudinally perturbed with random
+disturbances at the feet during each stance phase. We believe that this data is
+rich enough that we can use it to expose a mathematical model of the feedback
+mechanism the control when walking.
+
+The objective in system identification is relatively simple. We typically want
+to minimize the difference in the measurements of a real system and the outputs
+of a model that represents that system. The measurements :math:`y_m` are noisy
+and the model is a mathematical simplification of reality. For discrete
+measurements, :math:`y`, taken at a sampling interval :math:`h`, the cost
+function that needs to be minimized can take this form:
+
+.. math::
+
+   J(\theta) = h \sum_{i=1}^N (y_{mi} - y_i(\theta))^2
+
+:math:`y` can be determined by forward simulation of the ODE's that govern the
+dynamical system given the plant dynamics, controller dynamics and the free
+system parameters, :math:`\theta`. But forward simulation of complex dynamical
+systems can take computational time, i.e. often more time than the real motion
+took. This means that every step in an optimization procedue would have to
+simulate the system and, for thousands of optimization iterations, this becomes
+probhitively computationally expensive. The computational costs is especially
+high for a system identification problems because it relies on longer
+measurements to ensure accurate predicition.
+
+But direct collocation formulations and nonlinear programming can speed up the
+optimization iterations significantly by pushing the equations of motion to
+nonlinaer constraints as opposed to using them for simuluation.
+
+A basic nonlinear programming problem with equality constraints then takes this
+form:
+
+.. math::
+
+   \min_{\theta \in \Re^{N + q}}  J(\theta)
+
+   g(\theta) = 0
+
+   \theta^L \leq \theta \leq \theta^U
+
+where the cost function, :math:`J` is minimized while the free parameters are
+bounded by :math:`\theta^L` and :math:`\theta^U` and the equality constraints
+:math:`g(\theta)` are satisfied.
+
+With the cost function specified as shown above, the constraints can be
+introduced that enforce that :math:`F=ma` holds at each collocation node.
+
+For a typical dynamical system that has a feedback controller that closes the
+loop, we can describe the system by a set of ordinary differential equations.
+
+First a structure for the open loop dynamics and the controller are assumed.
+The open loop dynamics are generally described by a set of ordinary
+differential equations.
+
+.. math::
+
+0 = f^{open}(\dot{x}(t), x(t), u^{con}(t), u^{ext}(t), p^{open}, t)
+
+- :math:`x`: system state
+- :math:`u`: system inputs (composed of those to control and external inputs)
+
+   - u^{con}(t) : inputs which will be control inputs
+   - u^{ext}(t) : disturbance inputs
+
+- :math:`p`: system parameters which are constant with respect to time
+- :math:`t`: time
+
+A variety of outputs can be measured from the system and you can call them
+:math:`y`. These are generally a function of the state, the inputs, and time,
+but more likely just a function of state and time.
+
+.. math::
+
+   y = g(x, t)
+
+The simplest controllers that don't introduce any new states to the system can
+be described as a function of the outputs and new control parameters, often
+gains. State feedback controllers, as will be used below, fit this model.
+
+.. math::
+
+   u^{con} = h(y, p^{closed}, t)
+
+State feedback would follow this pattern:
+
+.. math::
+
+   y^{con} = K (x_{eq} - x)
+
+These functions for the controlled inputs can be substituted into the open loop
+differential equations to get the closed loop dynamics
+
+.. math::
+
+   0 = f^{closed}(\dot{x}(t), x(t), u_{ext}(t), p^{open}, p^{closed}, t)
+
+These closed loop equations that describe the evolution of the system's states
+must hold true at any point in time. To transform this continous equation into
+a set of constraints for the non-linear programming problem, we first have to
+make some assumption on the discrete relationship between :math:`\dot{x}` and
+:math:`x`. There are many different ingration approximation methods that could
+be utilize. Ton has had good luck wiht backward Euler which is an implicit
+method and robust for stiff systems. For a step size of :math:`h`, backward
+Euler integration is:
+
+.. math::
+
+   x_{k+1} = x_k + h * f(t_{k+1}, x_{k+1})
+
+So :math:`\dot{x}` can be approximated by:
+
+.. math::
+
+   \frac{{x_{k+1} - x_k}{h} =  f(t_{k+1}, x_{k+1})
+
+or
+
+.. math::
+
+   \frac{{x_k - x_{k-1}}{h} =  f(t_k, x_k)
+
+With this assumption the closed loop equations of motion can be discretized and
+now fit this form:
+
+.. math::
+
+   0 = f^{closed}_i(x_{k}, x_{k-1}, u^{ext}_i, p^{open}, p^{closed}, h)
+
+So for :math:`N` collocation nodes, this equation must hold.
+
+The free parameters in the optimization probelm are at least the state values
+at the collocation nodes and can include the parameters for the open and closed
+loop system and the remaining input trajectories (if not known).
+
+.. math::
+
+   \theta = [x_{k}, u^{ext}, p^{open}, p^{closed}]
+
+For a control parameter identification problem with measured external inputs,
+ :math:`\theta` is:
+
+.. math::
+
+   \theta = [x_{k}, p^{closed}]
+
+The remaining tricky parts are computing the gradient of the objective function
+and the Jacobian of the constraints, as these are necessary for the gradient
+based optimization algorithms employed in NLP solvers.
+
+Example Known System: Laterally Perturbed N-Link Pendulum on a Cart
+-------------------------------------------------------------------
+
+TODO: Sketch of system
+
+The first step is to derive the equations for the system. The following just
+shows the one link system for brevity, but the code supports any number of
+links:
+
+.. math::
+
+  \left[\begin{matrix}
+
+    \dot{q}_{0} - u_{0} \\
+
+    \dot{q}_{1} - u_{1} \\
+
+    c u_{0} + k q_{0} + l_{0} m_{1} u^{2}_{1} \operatorname{sin}\left(q_{1}\right) -
+    l_{0} m_{1} \operatorname{cos}\left(q_{1}\right) \dot{u}_{1} + \left(m_{0} + m_{1}\right) \dot{u}_{0} - F \\
+
+    -g l_{0} m_{1} \operatorname{sin}\left(q_{1}\right) + l_{0}^{2} m_{1}
+    \dot{u}_{1} - l_{0} m_{1} \operatorname{cos}\left(q_{1}\right) \dot{u}_{0} - T_{1}
+  \end{matrix}\right]
+
+x = [q_0, q_1, u_0, u_1]
+x_{eq} = 0
+y = x
+
+Define a state feedback controller symbolically:
+
+.. math::
+
+   r = K * (x_{eq} - x)
+   T_{1} = -k_{00} q_0 - k_{01} q_1 - k_{02} u_0 - k_{03} u_1
+
+Substitute controller into internal inputs
+
+Simulate the system under the influence of cart perturbations (sum of sines):
+
+F(t) = \sum sin()
+
+Objective function
+
+f = \sum x_m - x
+
+TODO : Show cart simulation animation and trajectory plots.
+
+df/d\theta = 2 * \sum x_m - x
+
+Constraints
+
+Constraint Jacobian
+
+IPOPT
+
+N = 36,000 (h = 0.01 s (100 hz) over 6 minutes, 360 seconds)
+
+
+Command line program
+
+pendulum.py -n 1 -d 100.0 -r -p -a -s 100.0 -i random
+
+
+Results
+
+Constraint violation plot
+
+Trajectory
+
+Compare known gains to found gains.
+
+
+Planar Gait System
+------------------
+
+9 DoF
+18 states: joint angles and angular rates
+
+
+sketch or picture of model
+
+Gait2D
+
+Creates the planar walking model.
+
+States:
+Trunk translation and orientation
+Ankle, knee, and hip rotation
+
+Inputs:
+
+Joint torques
+Prescribed lateral motion of the floor (like variable speed treadmill)
+
+Controller
+
+Uses preknown heel strike times from the data to compute percent gait cycle for
+a given time in the "simulation". (this would not work in a real time
+controller)
+
+.. math::
+
+   T(t) = T_0(\phi) + K(\phi)[s_0(\phi) - s(t)]
+   T(t) = T*(\phi) - K(\phi) s(t)
+
+T* is a vector of 6 torques scheduled over the gait cycle at n points.
+K is state feedback matrix (6 x 12) scheduled over the gait cycle at n points.
+
+Interpolates from the schedule T* and K to get the gains used at the given
+percentage gait cycle.
+
+Data
+
+Loads joint angles, joint angular rates (ankle, hip, knee) and estimates of
+the trunk location and orientation data from a trial.
+
+Prepares an initial guess for the state trajectories.
+
+Loads T* and K from the direct id method results and prepares them for initial
+guess for the free parameters.
+
+Optimize
+
+Model description
+
+number of free parameters
+number of constraints
+number of zeros in the Jacobian matrix
+
+Constructs model from
+
+Cost Function And Gradient
+
+h \sum (x_m - x)^2
+
+Gradient
+
+2 h (x - x_m)
+
+dobj_dfree[:N * o] = 2.0 * dis_period * (model_outputs - func(model_time)).T.flatten()
+
+Free parameters:
+
+N : number of discretization points
+M : number of measured time samples
+P : Number of gait cycle discretization points
+
+n : number of states
+o : number of model outputs
+p : total number of model constants
+q : number of free model constants
+r : number of free specified inputs
+
+x, T*, K
+
+x: 18 x N
+T*: 6 x P
+K : 6 x 12 x P
+
+If N = 36,000 and n = 10 then the length of \theta is 648,780 where 780 are the
+# model constants.
+
+Constraints and Gradient
+
+For a backward Euler assumption in solving
+
+\frac{dy}{dt} = f(t, y)
+
+y_{k+1} = y_k + h f(t_{k+1}, y_{k+1})
+
+We will enfoce the equation of motion constraints at N - 1 nodes (skip the
+first node).
+
+This is a vector function equal to the number of states:
+
+g_i(\theta) = 0 = f_i(x_i, x_{i-1}, T*_i, K_i) for i = 2, ..., N
+
+Constrain Jacobian
+
+Mostly banded sparse matrix. Created by numerically differentiating the g_i
+with repect to \theta
+
+Show Jacobian structure
+
+780 model parameters.
+num rows = num constraints
+num cols = num free parameters
+There are two non zeros per row per state + a nonzero for each free
+parameter in the dynamic equations (i.e. parameter derivs are zero in the
+kinematic equations)
+(2 * 18) * 647982 + 780 * 647982 / 2
+
+Hessian
+
+Use IPOPT's limier membory hessian approximation.
+
+Solve!
+
+
+{% endrestructuredtext %}
