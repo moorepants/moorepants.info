@@ -7,22 +7,20 @@ tags:
     - ncsrr
     - direct collocation
     - system identification
+    - inverted pendulum
 ---
 
 {% mark image -%}
-
 {%- endmark %}
 
 {% mark excerpt %}
-
 {% restructuredtext %}
 
-There are only two more days left for me here at Stanford's Neuromuscular
-Biomechanics Lab for the NCSRR visiting scholar program. This blog post
-summarizes what I've done while being here over the last five weeks.
+This is my last day here at Stanford's Neuromuscular Biomechanics Lab for the
+NCSRR visiting scholar program. This blog post summarizes what I've done while
+being here over the last five weeks.
 
 {% endrestructuredtext %}
-
 {% endmark %}
 
 {% restructuredtext %}
@@ -38,34 +36,33 @@ position. My main goals were to:
    error in the model's outputs and the gait measurements from subjects being
    perturbed by walking.
 
-.. _proposal:: http://dx.doi.org/10.6084/m9.figshare.1137192
+.. _proposal: http://dx.doi.org/10.6084/m9.figshare.1137192
 
 I didn't accomplish either of these goals. During the 6 months between writing
-the proposal and coming to work here at Stanford I collected all of the
-necessary data and worked on a computationally simple direct identification
-technique to identify the control mechanism during walking. The direct
-identification method "worked" except that I had no way to validate that the
-gain scheduled controller can actually control something. So an indirect method
-became more and more appealing.
+the proposal and coming to work here at Stanford Sandy and I collected all of
+the necessary data and I worked on a computationally simple direct
+identification technique to identify a control mechanism during walking. The
+direct identification method "worked" except that I had no way to validate that
+the gain scheduled controller can actually control something. So an indirect
+method became more and more appealing.
 
-I started thinking about this more deeply and came to realize that the
-computational costs for the indirect identification technique via shooting that
-I'd proposed was going to put computation time into number of weeks instead of
-number of hours, likely regardless of how fast I could make things run. So I
-started working on understanding the direct collocation techniques that Ton had
-been using to find optimal open loop control inputs to walking models. This
-became much more appealing, so over the month before I came out to Stanford I
-began implementing an identification example for a simpler, known system. I
-arrived at Stanford with this example close to complete and spent the first
-couple of weeks getting that to work hoping that it would be suitable for the
-gait identification problem. It ended up working and seemed promising so I
-ultimately decided to implement it using IPOPT and Opensim. I've got a great
-start on it but there is still work to be done to see if this method will work
-on a gait problem.
+I started thinking about the indirect method I'd proposed more deeply and came
+to realize that the computational costs for the indirect identification
+technique via shooting that I'd proposed was going to put computation time into
+number of weeks instead of number of hours, likely regardless of how fast I
+could make things run. So I started working on understanding the direct
+collocation techniques that Ton had been using to find optimal open loop
+control inputs to walking models. This became much more appealing, so over the
+month before I came out to Stanford I began implementing an identification
+example for a simpler, known system. I arrived at Stanford with this example
+close to complete and spent the first couple of weeks getting that to work
+hoping that it would be suitable for the gait identification problem. It ended
+up working and seemed promising so I ultimately decided to implement the gait
+id problem using IPOPT and Opensim. I made strong headway on implementing this
+but there is still work to be done to see if this method will work on a gait
+problem. My main accomplishments over the five weeks were:
 
-What I did accomplish:
-
-1. Completed a direct collocation identification for a simpler but similar
+1. Completed a direct collocation identification for a simple inverted pendulum
    system with promising results.
 2. Created a joint torque driven planar gait model with prescribed perturbation
    inputs in Opensim that matches our other Gait2D model implementations.
@@ -81,10 +78,10 @@ Things diverted a bit from my original proposal and I didn't get nearly done
 the amount I'd proposed. This diversion was the result of finding promising
 results with the direct collocation approach and finding out that Jack and
 others had already implemented a 2D gait model which ran even slower than his
-original 3D model, making shooting based optimization less appealing.
+original 3D model, making shooting based optimization even less appealing.
 
 System Identification with Direct Collocation
----------------------------------------------
+=============================================
 
 System identification is the process of discovering a mathematical model of a
 dynamic system from measurements of that system. In my case I'm interested in
@@ -93,52 +90,56 @@ human senses during walking and the low level actuations of the human's body to
 produce stable and robust walking using those sensors and actuators that could
 be realized on an assistive powered prosthetic.
 
+TODO:: Add diagram of controller here.
+
 System identification starts with the data. At CSU we've collected typical gait
 lab data (full body motion capture and ground reaction forces) of several
 subjects walking for 8 minutes while being longitudinally perturbed with random
 disturbances at the feet during each stance phase. We believe that this data is
 rich enough that we can use it to expose a mathematical model of the feedback
-mechanism the control when walking.
+mechanism used in control during walking.
 
 The objective in system identification is relatively simple. We typically want
 to minimize the difference in the measurements of a real system and the outputs
 of a model that represents that system. The measurements :math:`y_m` are noisy
 and the model is a mathematical simplification of reality. For discrete
-measurements, :math:`y`, taken at a sampling interval :math:`h`, the cost
+measurements, :math:`y`, taken at a sampling interval :math:`h` the cost
 function that needs to be minimized can take this form:
 
 .. math::
 
-   J(\theta) = h \sum_{i=1}^N (y_{mi} - y_i(\theta))^2
+   J(\theta) = h \sum_{i=1}^N \left[y_{mi} - y_i(\theta)\right]^2 \approx \int_0^{t_f} [y_m(t) - y(t)]^2 dt
 
 :math:`y` can be determined by forward simulation of the ODE's that govern the
 dynamical system given the plant dynamics, controller dynamics and the free
 system parameters, :math:`\theta`. But forward simulation of complex dynamical
 systems can take computational time, i.e. often more time than the real motion
-took. This means that every step in an optimization procedue would have to
+took. This means that every step in an optimization procedure would have to
 simulate the system and, for thousands of optimization iterations, this becomes
-probhitively computationally expensive. The computational costs is especially
+prohibitively computationally expensive. The computational cost is especially
 high for a system identification problems because it relies on longer
-measurements to ensure accurate predicition.
+measurements to ensure accurate prediction.
 
 But direct collocation formulations and nonlinear programming can speed up the
 optimization iterations significantly by pushing the equations of motion to
-nonlinaer constraints as opposed to using them for simuluation.
+nonlinear constraints as opposed to using them for simulation.
 
 A basic nonlinear programming problem with equality constraints then takes this
 form:
 
 .. math::
 
-   \min_{\theta \in \Re^{N + q}}  J(\theta)
+   \min_{\theta \in \Re^{n}}  J(\theta)
 
-   g(\theta) = 0
+   c(\theta) = 0
 
    \theta^L \leq \theta \leq \theta^U
 
 where the cost function, :math:`J` is minimized while the free parameters are
 bounded by :math:`\theta^L` and :math:`\theta^U` and the equality constraints
-:math:`g(\theta)` are satisfied.
+:math:`c(\theta)` are satisfied.
+
+TODO : Choose a variable to represent the space of theta.
 
 With the cost function specified as shown above, the constraints can be
 introduced that enforce that :math:`F=ma` holds at each collocation node.
@@ -146,34 +147,35 @@ introduced that enforce that :math:`F=ma` holds at each collocation node.
 For a typical dynamical system that has a feedback controller that closes the
 loop, we can describe the system by a set of ordinary differential equations.
 
-First a structure for the open loop dynamics and the controller are assumed.
+First, a structure for the open loop dynamics and the controller are assumed.
 The open loop dynamics are generally described by a set of ordinary
 differential equations.
 
 .. math::
 
-0 = f^{open}(\dot{x}(t), x(t), u^{con}(t), u^{ext}(t), p^{open}, t)
+   0 = f^{open}(\dot{x}, x, u^{con}, u^{ext}, p^{open}, t)
 
 - :math:`x`: system state
 - :math:`u`: system inputs (composed of those to control and external inputs)
 
-   - u^{con}(t) : inputs which will be control inputs
-   - u^{ext}(t) : disturbance inputs
+   - :math:`u^{con}` : inputs which will be control inputs
+   - :math:`u^{ext}` : disturbance inputs
 
 - :math:`p`: system parameters which are constant with respect to time
 - :math:`t`: time
 
-A variety of outputs can be measured from the system and you can call them
-:math:`y`. These are generally a function of the state, the inputs, and time,
-but more likely just a function of state and time.
+A variety of outputs, :math:`y`, can be measured from the system. These are
+generally a function of the state, the inputs, and time, but more likely just a
+function of state and time.
 
 .. math::
 
    y = g(x, t)
 
 The simplest controllers that don't introduce any new states to the system can
-be described as a function of the outputs and new control parameters, often
-gains. State feedback controllers, as will be used below, fit this model.
+be described as a function of the outputs and new control parameters
+:math:`p^{closed}`, often gains. State feedback controllers, as will be used
+below, fit this model.
 
 .. math::
 
@@ -183,59 +185,59 @@ State feedback would follow this pattern:
 
 .. math::
 
-   y^{con} = K (x_{eq} - x)
+   u^{con} = \mathbf{K} (x_{eq} - x)
 
 These functions for the controlled inputs can be substituted into the open loop
-differential equations to get the closed loop dynamics
+differential equations to get the closed loop dynamics:
 
 .. math::
 
-   0 = f^{closed}(\dot{x}(t), x(t), u_{ext}(t), p^{open}, p^{closed}, t)
+   0 = f^{closed}(\dot{x}, x, u_{ext}, p^{open}, p^{closed}, t)
 
 These closed loop equations that describe the evolution of the system's states
-must hold true at any point in time. To transform this continous equation into
+must hold true at any point in time. To transform this continuous equation into
 a set of constraints for the non-linear programming problem, we first have to
 make some assumption on the discrete relationship between :math:`\dot{x}` and
-:math:`x`. There are many different ingration approximation methods that could
-be utilize. Ton has had good luck wiht backward Euler which is an implicit
-method and robust for stiff systems. For a step size of :math:`h`, backward
-Euler integration is:
+:math:`f`. There are many different integration approximation methods that could
+be utilized. Ton has had good luck with backward Euler which is an implicit
+method and robust for stiff systems. For an integration step size of :math:`h`,
+backward Euler integration is:
 
 .. math::
 
-   x_{k+1} = x_k + h * f(t_{k+1}, x_{k+1})
+   x_{i+1} = x_i + h f(t_{i+1}, x_{i+1})
 
 So :math:`\dot{x}` can be approximated by:
 
 .. math::
 
-   \frac{{x_{k+1} - x_k}{h} =  f(t_{k+1}, x_{k+1})
+   \frac{x_{i+1} - x_i}{h} =  f(t_{i+1}, x_{i+1})
 
 or
 
 .. math::
 
-   \frac{{x_k - x_{k-1}}{h} =  f(t_k, x_k)
+   \frac{x_i - x_{i-1}}{h} =  f(t_i, x_i)
 
 With this assumption the closed loop equations of motion can be discretized and
 now fit this form:
 
 .. math::
 
-   0 = f^{closed}_i(x_{k}, x_{k-1}, u^{ext}_i, p^{open}, p^{closed}, h)
+   0 = f^{closed}_i(x_{i}, x_{i-1}, u^{ext}_i, p^{open}, p^{closed}, h)
 
-So for :math:`N` collocation nodes, this equation must hold.
+So for :math:`i=1 \ldots N` collocation nodes, this equation must hold.
 
-The free parameters in the optimization probelm are at least the state values
+The free parameters in the optimization problem always include the state values
 at the collocation nodes and can include the parameters for the open and closed
 loop system and the remaining input trajectories (if not known).
 
 .. math::
 
-   \theta = [x_{k}, u^{ext}, p^{open}, p^{closed}]
+   \theta = [x_{i}, u^{ext}, p^{open}, p^{closed}]
 
 For a control parameter identification problem with measured external inputs,
- :math:`\theta` is:
+:math:`\theta` is:
 
 .. math::
 
@@ -246,202 +248,457 @@ and the Jacobian of the constraints, as these are necessary for the gradient
 based optimization algorithms employed in NLP solvers.
 
 Example Known System: Laterally Perturbed N-Link Pendulum on a Cart
--------------------------------------------------------------------
+===================================================================
 
-TODO: Sketch of system
+An inverted pendulum is a common system used to model a variety of things about
+human motion. I decided to start with a simple system to see if the direct
+collocation method would be successful. The inverted pendulum on a cart is easy
+to control and the system has well known solutions. The cart with mass
+:math:`m_0` is attached to the origin via a linear spring and damper. It can
+move laterally along the :math:`\hat{i}_x` axis. Attached to the cart are a
+series of massless links with a mass at each joint. There are actuators at each
+pin joint that apply a torque between the links and one torque between the
+lowest link and the cart. An external force can be applied to the cart base to
+perturb the system.
 
-The first step is to derive the equations for the system. The following just
-shows the one link system for brevity, but the code supports any number of
-links:
+.. image:: {{ media_url('images/n-pendulum-with-cart.png') }}
 
-.. math::
-
-  \left[\begin{matrix}
-
-    \dot{q}_{0} - u_{0} \\
-
-    \dot{q}_{1} - u_{1} \\
-
-    c u_{0} + k q_{0} + l_{0} m_{1} u^{2}_{1} \operatorname{sin}\left(q_{1}\right) -
-    l_{0} m_{1} \operatorname{cos}\left(q_{1}\right) \dot{u}_{1} + \left(m_{0} + m_{1}\right) \dot{u}_{0} - F \\
-
-    -g l_{0} m_{1} \operatorname{sin}\left(q_{1}\right) + l_{0}^{2} m_{1}
-    \dot{u}_{1} - l_{0} m_{1} \operatorname{cos}\left(q_{1}\right) \dot{u}_{0} - T_{1}
-  \end{matrix}\right]
-
-x = [q_0, q_1, u_0, u_1]
-x_{eq} = 0
-y = x
-
-Define a state feedback controller symbolically:
+The first step is to derive the equations for the system. The following gives
+the one link system for brevity, but the code supports any number of links:
 
 .. math::
 
-   r = K * (x_{eq} - x)
-   T_{1} = -k_{00} q_0 - k_{01} q_1 - k_{02} u_0 - k_{03} u_1
+   \begin{bmatrix}
+     0 \\\\ 0 \\\\ 0 \\\\ 0
+   \end{bmatrix}
+   =
+   \begin{bmatrix}
+     \dot{q}_{0} - u_{0} \\\\
+     \dot{q}_{1} - u_{1} \\\\ c u_{0} + k q_{0} + l_{0} m_{1} u^{2}_{1}
+     \operatorname{sin}\left(q_{1}\right) - l_{0} m_{1}
+     \operatorname{cos}\left(q_{1}\right) \dot{u}_{1} + \left(m_{0} +
+     m_{1}\right) \dot{u}_{0} - F \\\\
+     -g l_{0} m_{1} \operatorname{sin}\left(q_{1}\right) + l_{0}^{2} m_{1} \dot{u}_{1} - l_{0} m_{1} \operatorname{cos}\left(q_{1}\right) \dot{u}_{0} - T_{1}
+   \end{bmatrix}
 
-Substitute controller into internal inputs
+The states are:
 
-Simulate the system under the influence of cart perturbations (sum of sines):
+.. math::
 
-F(t) = \sum sin()
+   x = [q_0, q_1, u_0, u_1]
 
-Objective function
+And we will assume the output are simply the coordinates:
 
-f = \sum x_m - x
+.. math::
 
-TODO : Show cart simulation animation and trajectory plots.
+   y = [q_0, q_1]
 
-df/d\theta = 2 * \sum x_m - x
+Define a state feedback controller symbolically where :math:`x_{eq} = 0`:
 
-Constraints
+.. math::
 
-Constraint Jacobian
+   u^{con} = \mathbf{K} (x_{eq} - x)
 
-IPOPT
+   u^{con} = T_{1} = -k_{00} q_0 - k_{01} q_1 - k_{02} u_0 - k_{03} u_1
 
-N = 36,000 (h = 0.01 s (100 hz) over 6 minutes, 360 seconds)
+This control law can then be substituted into the open loop equations of
+motion. Simulate the system under the influence of cart perturbations (sum of
+sines):
+
+.. math::
+
+   u^{ext} = F(t) = \sum m_i \sin(\omega_i t)
+
+The numerical values of the controller can be found by solving an LQR control
+problem once numerical values are chosen for the open loop model parameters.
+
+.. raw:: html
+
+   <video width="640" height="480" controls>
+     <source src={{ media_url('videos/one-link.mp4') }} type="video/mp4">
+     <source src={{ media_url('videos/one-link.ogg') }} type="video/ogg">
+   Your browser does not support the video tag.
+   </video>
+
+The objective function is simply:
+
+.. math::
+
+   J(\theta) = \sum_{i=1}^N (y^m_i - y_i)^2
+
+:math:`y_i` is a subset of :math:`\theta`. The measurements will have some
+additive noise:
+
+.. math::
+
+   y_m = [q_0, q_1] + [e_0, e_1]
+
+The gradient of the objective function with respect to :math:`\theta` is then:
+
+.. math::
+
+   \frac{dJ}{d \theta} = [2 (y^m_i - y_i) \qquad \mathbf{0}]
+
+The constraints are evaluated at N-1 collocation nodes (skip the first one).
+And given :math:`\theta`, the ith and i-1th states are used along with the
+controller parameters to compute the right hand side of the system dynamics.
+
+.. math::
+
+   c_i(\theta) = f_i(x_i, x_{i-1}, u_i, k) = 0
+
+The Jacobian of the constraints is mostly a sparse banded matrix. The
+parameters, :math:`k` don't show up in the kinematic equations so all of those
+entries are zero. The only other non-zero entries are two values per state for
+each constraint and values for each dynamic equation constraint (not kinematic)
+for each of the parameters.
+
+.. math::
+
+   \frac{\partial c_i}{\partial \theta}
+
+TODO: Type basic Jacobian structure here.
+
+The source code builds functions that evaluates the constraints and the
+Jacobian of the constraints given :math:`\theta` automatically from the
+symbolic equations of motion. The objective function and gradient are also
+built, but not yet as automated as the constraints.
+
+To run the pendulum example there is a basic command line interface::
+
+   python pendulum.py -h
+   usage: pendulum.py [-h] [-n NUMLINKS] [-d DURATION] [-s SAMPLERATE]
+                      [-i INITIALCONDITIONS] [-r] [-a] [-p]
+
+   Run N-Link System ID
+
+   optional arguments:
+     -h, --help            show this help message and exit
+     -n NUMLINKS, --numlinks NUMLINKS
+                           The number of links in the pendulum.
+     -d DURATION, --duration DURATION
+                           The duration of the simulation in seconds.
+     -s SAMPLERATE, --samplerate SAMPLERATE
+                           The sample rate of the discretization.
+     -i INITIALCONDITIONS, --initialconditions INITIALCONDITIONS
+                           The type of initial conditions.
+     -r, --sensornoise     Add noise to sensor data.
+     -a, --animate         Show the pendulum animation.
+     -p, --plot            Show result plots.
+
+Running this program does these following steps:
 
 
-Command line program
+1. Constructs the symbolic equations of motion for the open loop system.
+2. Finds an optimal controller.
+3. Simulates the closed loop system to generate noisy measurement data.
+4. Constructs the symbolic closed loop backward Euler discretized constraint
+   equation.
+5. Constructs the symbolic sparse constraint Jacobian matrix.
+6. Defines numerical functions that evaluate the objective and it's gradient.
+7. Defines an IPOPT problem with the above.
+8. Constructs and initial guess for the solution.
+9. Runs IPOPT to solve for the free parameters.
+10. Saves results in a database.
+11. Makes plots and such.
 
-pendulum.py -n 1 -d 100.0 -r -p -a -s 100.0 -i random
+
+So for example with a 1 link pendulum (4 unknown gains), a simulation duration
+of 120 seconds, discretized at 0.01 s (100 Hz), and random initial guess for
+the gains the problem will be constructed and IPOPT will try to solve it.
+
+The initial guess for the system are the estimated state trajectories and some
+"close" random values for the gains. The command is::
+
+   pendulum.py -n 1 -d 60.0 -r -p -a -s 100.0 -i close
+
+- N = 6,000 (h = 0.01 s (100 hz) over 1 minutes, 60 seconds)
+- Number of free variables = 24,008
+- Number of non-zero's in the constraint Jacobian = 132,000
+
+IPOPT Results::
+
+   197  3.4918824e-03 1.56e-10 7.95e-09 -11.0 1.94e-04    -  1.00e+00 1.00e+00h  1
+
+   Number of Iterations....: 197
+
+                                      (scaled)                 (unscaled)
+   Objective...............:   3.4918824191332988e-03    3.4918824191332988e-03
+   Dual infeasibility......:   7.9471792187856150e-09    7.9471792187856150e-09
+   Constraint violation....:   1.4589055009873315e-10    1.5641832273871614e-10
+   Complementarity.........:   0.0000000000000000e+00    0.0000000000000000e+00
+   Overall NLP error.......:   7.9471792187856150e-09    7.9471792187856150e-09
 
 
-Results
+   Number of objective function evaluations             = 746
+   Number of objective gradient evaluations             = 198
+   Number of equality constraint evaluations            = 757
+   Number of inequality constraint evaluations          = 0
+   Number of equality constraint Jacobian evaluations   = 198
+   Number of inequality constraint Jacobian evaluations = 0
+   Number of Lagrangian Hessian evaluations             = 0
+   Total CPU secs in IPOPT (w/o function evaluations)   =     94.770
+   Total CPU secs in NLP function evaluations           =    353.544
 
-Constraint violation plot
+   EXIT: Optimal Solution Found.
+   Initial gain guess: [ 107.21621286 14.48140057  37.61288637  -76.37491515]
+   Known gains:        [  -4.71764346 19.67083668  -3.69402157    5.57114809]
+   Identified gains:   [  -3.45783597 17.0274554   -3.27007286    5.24318706]
+   Adding run 36033e34d60ef96463e1b16277e8a4a3fcec9370 to the database.
 
-Trajectory
+The total computation time on a laptop PC was ~7.5 minutes. Where as a shooting
+may have taken 1.5 hours for the same number of iterations and needed a large
+multi-core machine. This is with a relatively naive implementation and lots of
+time unnecessary time spent in the function calls.
 
-Compare known gains to found gains.
+.. image:: {{ media_url('images/one-link-pendulum-trajectory.png') }}
 
+.. image:: {{ media_url('images/one-link-pendulum-constraint-violation.png') }}
 
-Planar Gait System
+.. image:: {{ media_url('images/one-link-pendulum-trajectory-comparison.png') }}
+
+Four Link Pendulum
 ------------------
 
-9 DoF
-18 states: joint angles and angular rates
+.. raw:: html
 
+   <video width="640" height="480" controls>
+     <source src={{ media_url('videos/four-link.mp4') }} type="video/mp4">
+     <source src={{ media_url('videos/four-link.ogg') }} type="video/ogg">
+   Your browser does not support the video tag.
+   </video>
 
-sketch or picture of model
+.. image:: {{ media_url('images/four-link-pendulum-trajectory.png') }}
 
-Gait2D
+.. image:: {{ media_url('images/four-link-pendulum-constraint-violation-from-initial-guess.png') }}
 
-Creates the planar walking model.
+.. image:: {{ media_url('images/four-link-pendulum-constraint-violation-from-optimal-solution.png') }}
 
-States:
-Trunk translation and orientation
-Ankle, knee, and hip rotation
+.. image:: {{ media_url('images/four-link-pendulum-trajectory-comparison.png') }}
+   :width: 800px
 
-Inputs:
+Planar Gait System ID
+=====================
 
-Joint torques
-Prescribed lateral motion of the floor (like variable speed treadmill)
+Plant
+-----
+
+The next step is to implement this for a data collected from perturbed
+walking. A plant model and controller structure are required. I constructed a
+planar gait model:
+
+- 7 rigid bodies: trunk, thighs, shanks, feet
+- 9 DoF, 18 states
+- Compliant heel and toe contact spheres
+- Longitudinally translatable floor with prescribed motion input
+- Joint torque coordinate actuators: hip, knee, ankle
+- Physical parameters from Winters, stored in yaml files
+- Still needs subject specific scaling
+- Constructed with the Opensim C++ API
+
+.. image:: {{ media_url('images/osgait2d.png') }}
 
 Controller
+----------
 
-Uses preknown heel strike times from the data to compute percent gait cycle for
-a given time in the "simulation". (this would not work in a real time
-controller)
+.. image:: {{ media_url('images/gait-gain-scheduled-controller.png') }}
+
+A gain gait cycle scheduled joint angle/rate feedback controller was
+implemented by sub-classing ``OpenSim::Controller``. It follows this control
+law:
 
 .. math::
 
-   T(t) = T_0(\phi) + K(\phi)[s_0(\phi) - s(t)]
-   T(t) = T*(\phi) - K(\phi) s(t)
+   T(t) = T_0(\varphi) + \mathbf{K}(\varphi)[s_0(\phi) - s(t)]
 
-T* is a vector of 6 torques scheduled over the gait cycle at n points.
-K is state feedback matrix (6 x 12) scheduled over the gait cycle at n points.
+   T(t) = T^*(\varphi) - \mathbf{K}(\varphi) s(t)
 
-Interpolates from the schedule T* and K to get the gains used at the given
-percentage gait cycle.
+- :math:`T` is the 6 x 1 vector of applied joint torques.
+- :math:`T^*` is a vector of 6 torques scheduled over the gait cycle at P
+  points.
+- :math:`\mathbf{K}` is a partial state feedback matrix (6 x 12) scheduled over
+  the gait cycle at P points.
+- :math:`s` is the 12 x 1 vector of joint angles and angular rates.
+
+The computation uses pre-known heel strike times from the data to compute
+percent gait cycle for a given time in the simulation. Once the percent gait
+cycle is known it interpolates from the scheduled :math:`T^*` and
+:math:`\mathbf{K}` to get the gains used at the given percentage gait cycle.
 
 Data
+----
 
-Loads joint angles, joint angular rates (ankle, hip, knee) and estimates of
-the trunk location and orientation data from a trial.
+The raw data is processed by our gait analysis toolkit. That software outputs
+csv text files for 8 minute trials sampled at 100 hz that contain columns for:
 
-Prepares an initial guess for the state trajectories.
+- ankle, knee, hip joint angles and joint angular rates from inverse kinematics
+- spacial trunk location and orientation
+- belt position over time
+- right and left heelstrike times
 
-Loads T* and K from the direct id method results and prepares them for initial
-guess for the free parameters.
+These data files are parsed and stored in memory in ``SimTK::Matrix`` objects.
+
+The toolkit also computes :math:`T^*(\varphi)` and :math:`\mathbf{K}(\varphi)`
+using the direct id method and outputs these to disk. These data files are
+parsed in C++ to construct std::vectors of SimTK::Vectors/SimTK::Matrices.
 
 Optimize
+--------
 
-Model description
+IPOPT will be used to solve the problem as in the above. It requires a set of
+information to fully describe the problem.
 
-number of free parameters
-number of constraints
-number of zeros in the Jacobian matrix
+Variables:
 
-Constructs model from
+- :math:`N` : number of collocation nodes
+- :math:`M` : number of measured time samples
+- :math:`P` : Number of gait cycle discretization points
 
-Cost Function And Gradient
-
-h \sum (x_m - x)^2
-
-Gradient
-
-2 h (x - x_m)
-
-dobj_dfree[:N * o] = 2.0 * dis_period * (model_outputs - func(model_time)).T.flatten()
+- :math:`n` : number of states
+- :math:`o` : number of model outputs
+- :math:`p` : total number of model constants
+- :math:`q` : number of free model constants
+- :math:`r` : number of free specified inputs
 
 Free parameters:
 
-N : number of discretization points
-M : number of measured time samples
-P : Number of gait cycle discretization points
+- :math:`x`: 18 x N
+- :math:`T^*`: 6 x P
+- :math:`\mathbf{K}` : 6 x 12 x P
 
-n : number of states
-o : number of model outputs
-p : total number of model constants
-q : number of free model constants
-r : number of free specified inputs
+I start by using 3/4 of the data (6 minutes) from each trial for the
+identification. The remaining 1/4 of data from each trial will be used to
+validate the identified model. So if If N = 36,000 and n = 18 then the length
+of :math:`\theta=648,780` where there are 780 controller parameters.
 
-x, T*, K
+The initial guess for the free parameters will be constructed from the
+estimated state trajectories computed from inverse kinematics and the gains
+computed from the direct identification approach.
 
-x: 18 x N
-T*: 6 x P
-K : 6 x 12 x P
+The cost function and it's gradient are defined as they were in the pendulum
+problem and only the joint coordinates are tracked:
 
-If N = 36,000 and n = 10 then the length of \theta is 648,780 where 780 are the
-# model constants.
+.. math::
 
-Constraints and Gradient
+   J(\theta) = \sum_{i=1}^N (y^m_i - y_i)^2
 
-For a backward Euler assumption in solving
+   \frac{dJ}{d \theta} = [2 (y^m_i - y_i) \qquad \mathbf{0}]
 
-\frac{dy}{dt} = f(t, y)
+As will the constraints and the Jacobian of the constraints. I will enforce the
+equation of motion constraints at N - 1 nodes (skip the first node). This is a
+vector function equal to the number of states:
 
-y_{k+1} = y_k + h f(t_{k+1}, y_{k+1})
+.. math::
 
-We will enfoce the equation of motion constraints at N - 1 nodes (skip the
-first node).
+   c_i(\theta) = 0 = f_i(x_i, x_{i-1}, T*_i, K_i, h)
 
-This is a vector function equal to the number of states:
-
-g_i(\theta) = 0 = f_i(x_i, x_{i-1}, T*_i, K_i) for i = 2, ..., N
-
-Constrain Jacobian
-
-Mostly banded sparse matrix. Created by numerically differentiating the g_i
-with repect to \theta
-
-Show Jacobian structure
-
-780 model parameters.
-num rows = num constraints
-num cols = num free parameters
 There are two non zeros per row per state + a nonzero for each free
-parameter in the dynamic equations (i.e. parameter derivs are zero in the
-kinematic equations)
-(2 * 18) * 647982 + 780 * 647982 / 2
+parameter in the dynamic equations (i.e. parameter derivatives are zero in the
+kinematic equations) giving
 
-Hessian
+.. math::
 
-Use IPOPT's limier membory hessian approximation.
+   (2 * 18) * 647982 + 780 * 647982 / 2 = 276,040,332
+
+The non-zero entries in the Jacobian matrix will be computed via numerical
+differentiation and stored in a sparse triplet format. So the evaluation of
+:math:`c_i` should be as fast as possible to minimize computation time a this
+step.
+
+Use IPOPT's limited memory Hessian approximation instead of computing it
+explicitly.
 
 Solve!
 
+Lessons Learned
+===============
+
+This experience at Stanford has provided me with a lot. Here are some of the
+highlights:
+
+AOIs were interesting. Each week every person in the lab sends out
+accomplishments, objectives and issues. The objectives should be concrete goals
+for the upcoming week. The accomplishments section should list what objectives
+you completed (and didn't complete) from the previous week. And the issues
+should detail anything that prevented you from reaching your objectives for
+that past week. I wasn't using this properly for the first 4 weeks because we
+weren't given the correct instructions, just told to copy others and it turns
+out others were not using it correctly either. I've tried this kind of thing
+for myself in the past, but it has always broken down. In the past, it failed
+both because there was no one to hold me accountable (I even post them to my
+lab notebook, but no one actually reads that) and I didn't always write down
+concrete goals that were within a week's scope.
+
+The AOIs are, in general, a good idea. But there are some things I'd do
+differently.
+
+1. People rarely use the issues. My hunch is that, in a group, people want to
+   seem like they are accomplishing a lot and have little trouble doing so.
+   That could be especially true in a place like Stanford. I have a feeling
+   that there are more issues in the week that aren't shown. I think this is
+   typical in science in general. We show our best results in the paper, i.e.
+   the results that we just barely got to work, yet don't show the faults of
+   the method or the difficulties. I wonder if naming this section something
+   different could help people be more willing to share their issues. It may be
+   nice to come up with a word that invokes a positiveness to the topic
+   "Looking back on the week, what would have helped you meet you objectives?",
+   or "What would have helped you meet your objectives faster?", or "What
+   information/knowledge/etc is needed to make a big stride towards your
+   objective?", "What during the past week came up that you wish you had a
+   teammate to collectively solve the problem with?".
+2. I felt the need to write a lot in my accomplishments so that I didn't look
+   like I'm doing less than other people (which I generally felt). Competition
+   is probably good, it helps me improve my performance and be more efficient
+   but it can also be a drain. Others may not feel like the accomplishments are
+   competitive but it may be good to think about how to make it feel like a
+   healthy competition. I'm at the point in my career where I'm finally tired
+   of working late into the night and 60+ hours a week and I often choose to
+   sleep or not work to keep those hours of work more sane. This article made
+   me think about being more real with myself about the # of hours I want to
+   work:
+   http://blogs.scientificamerican.com/guest-blog/2013/07/21/the-awesomest-7-year-postdoc-or-how-i-learned-to-stop-worrying-and-love-the-tenure-track-faculty-life/
+
+Nice to be in an environment where lots of people can help answer questions.
+
+Interesting to see how a high profile lab like this runs.
+
+Collaboration and Collectivation
+
+The NMBL seems to work collectively on quite a few things. Each lab member has
+their own research project
+
+References
+==========
+
+.. [Wang2012] Wang, Jack M., Samuel R. Hamner, Scott L. Delp, and Vladlen
+   Koltun. “Optimizing Locomotion Controllers Using Biologically-Based
+   Actuators and Objectives.” ACM Transactions on Graphics (TOG) 31, no. 4 (2012):
+   25.
+
+Notes
+=====
+
+OpenMP
+
+Mombaur, Katja Daniela does open loop direct collocation for walking.
+
+Parallize the jacobian evaluation because you only need certain parameters for
+each row in the jacobian.
+
+Think about using different integrator assumptions so you can increase h.
+
+Add the plant controller diagram before the system id explanation.
+
+Boyd Convex Optimization
+
+Constrained problems.
+
+M u' = f - G^T lam
+Gu' = 0
+
+G u' + G M^-1 G^T lam = G M^-1 f
+G M^-1 G^T lam = G M^-1 f
+
+G M^-1 G^T lam = u_o
 
 {% endrestructuredtext %}
