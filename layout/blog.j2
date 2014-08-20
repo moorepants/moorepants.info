@@ -58,11 +58,9 @@
 {% endfor %}
 </ul>
 {% endif %}
-{% filter typogrify -%}
 {% mark post -%}
 {% block post -%}{%- endblock %}
 {%- endmark %}
-{%- endfilter %}
 </article>
 
 <div id="disqus_thread"></div>
