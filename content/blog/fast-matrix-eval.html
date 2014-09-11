@@ -292,10 +292,11 @@ speedup on my lambify code for the constraints.
 
 Other notes of interest:
 
-- Assuming the number of expressions << the number of evaluations, the loop on
-  the expressions with NumPy expression evaluations, ``numpy``, is pretty fast
-  and is 2X faster than the default lambdify method. You can even speed up
-  lambdify by simply computing each expression in the matrix seperately.
+- Assuming the number of expressions is much greater than the number of
+  evaluations, the loop on the expressions with NumPy expression evaluations,
+  ``numpy``, is pretty fast and is 2X faster than the default lambdify method.
+  You can even speed up lambdify by simply computing each expression in the
+  matrix seperately.
 - The three Cython/C based methods all give about the same speed.
 - I don't know why the Fortran backend is faster. But I've seen a number of
   other benchmarks that show Fortran is generally faster than C for these kinds
@@ -307,5 +308,108 @@ Other notes of interest:
 The working code is avaiable in this gist:
 
 https://gist.github.com/moorepants/6ef8ab450252789a1411
+
+Update (September 11, 2014)
+---------------------------
+
+My PI was curious how these speeds compare to Matlab, so I wrote two Matlab
+functions that mirror ``eval_matrix_loop_python`` and
+``eval_matrix_loop_numpy``. The code is in the gist and these are the results::
+
+   >> version
+
+   ans =
+
+   8.3.0.532 (R2014a)
+
+   >> test_matrix_eval
+   ------------------------------------
+   Mean time to evaluate the loop 0.1158 s
+   Ratio to the Python loop benchmark time is 1.18
+   Ratio to the Python vectorized time is 0.03
+   ------------------------------------
+   Mean time to evaluate the vectorized loop 0.0026 s
+   Ratio to the Python loop benchmark time is 53.60
+   Ratio to the Python vectorized time is 1.24
+   ------------------------------------
+
+Matlab beats Python on both functions in this case but not by leaps and bounds.
+Matlab as a JIT since version 6.5 that helps speed up loops and Pure python
+doesn't. There are several JITs for Python (pypy, numba, parakeet, etc). I
+tried a version that grows lists in Python and PyPy and get these results::
+
+   $ python -mtimeit -s "import test_pypy" "test_pypy.eval_matrix_loop_pypy()"
+   10 loops, best of 3: 36.2 msec per loop
+
+   $ pypy -mtimeit -s "import test_pypy" "test_pypy.eval_matrix_loop_pypy()"
+   100 loops, best of 3: 7.2 msec per loop
+
+This gives an improvement but Matlab still beats PyPy. This isn't a good
+comparison though, as the arrays are preallocated in Matlab and not in the PyPy
+version.
+
+Matlab's vectorized version is closer in speed to my generated Fortran code.
+
+Also I created a basic function that ufuncifies a SymPy matrix all in one shot.
+It even uses CSE to improve things. It automatically creates what I did
+manually for the Cython files. New timings show the obvious, that it gives the
+same results and the manual one. But for large matrices, the compile times are
+significantly reduced. Now I need to make that function generate Fortran code
+and I think that will be the fastest option.
+
+::
+
+   Testing results.
+
+   Timing the functions.
+
+   Timing: cython
+   cython time: 0.00288254904747 s
+
+   Timing: numpy_broadcast
+   numpy_broadcast time: 0.00597401690483 s
+
+   Timing: lambdify_individual
+   lambdify_individual time: 0.00303873364131 s
+
+   Timing: ufuncify_f2py
+   ufuncify_f2py time: 0.00201614236832 s
+
+   Timing: python
+   python time: 0.119000189304 s
+
+   Timing: ufuncify_cython
+   ufuncify_cython time: 0.00293522365888 s
+
+   Timing: numpy
+   numpy time: 0.00303197193146 s
+
+   Timing: c
+   c time: 0.0029081483682 s
+
+   Timing: lambdify
+   lambdify time: 0.00599523711205 s
+
+   Timing: ufuncify_matrix_cython
+   ufuncify_matrix_cython time: 0.00292766968409 s
+
+   Benchmark time: 0.119000189304 s
+
+   Ratios of the timings to the benchmark time:
+   --------------------------------------------
+
+   ufuncify_f2py ratio: 59.0237034717
+   cython ratio: 41.2829711983
+   c ratio: 40.9195729508
+   ufuncify_matrix_cython ratio: 40.6467266273
+   ufuncify_cython ratio: 40.5421198294
+   numpy ratio: 39.2484468836
+   lambdify_individual ratio: 39.1611122761
+   numpy_broadcast ratio: 19.9196271454
+   lambdify ratio: 19.8491214076
+
+After all this, I'm not sure this is the best benchmark. I really need a
+benchmark that includes varying the size of the matrices and the expression
+length and complexity to find the best solution.
 
 {% endrestructuredtext %}
