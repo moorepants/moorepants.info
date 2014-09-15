@@ -274,7 +274,7 @@ can be applied to the cart base to perturb the system.
 
 The source code for the following example can be found here:
 
-https://github.com/moorepants/walking-sys-id/tree/master/direct-collocation/inverted-pendulum-example
+https://github.com/csu-hmc/inverted-pendulum-sys-id
 
 The first step is to derive the equations for the system. The following gives
 the open loop equations for a one link system for brevity, but the code
@@ -796,9 +796,10 @@ Notes
 These are just some notes I took from the comments after I presented this:
 
 - Look up OpenMP for parallel stuff.
-- Mombaur, Katja Daniela does open loop direct collocation for walking.
-- Parallelize the jacobian evaluation because you only need certain parameters for
-  each row in the jacobian.
+- Mombaur, Katja Daniela supposedly does open loop direct collocation for
+  walking.
+- Parallelize the jacobian evaluation because you only need certain parameters
+  for each row in the jacobian.
 - Think about using different integrator assumptions so you can increase h.
 - Add the plant controller diagram before the system id explanation.
 - Boyd Convex Optimization
