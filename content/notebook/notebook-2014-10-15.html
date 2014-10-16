@@ -1,0 +1,61 @@
+---
+title: Notebook Entry
+subtitle: October 15, 2014
+description: AIO
+created: !!timestamp '2014-10-15 14:48:46'
+tags:
+    - notebook
+---
+
+{% mark image -%}
+{%- endmark %}
+
+{% mark excerpt -%}
+{% restructuredtext %}
+
+EEE
+
+{% endrestructuredtext %}
+{%- endmark %}
+
+{% restructuredtext %}
+
+Matlab Integrators
+==================
+
+Non-stiff
+---------
+
+- ode45 : Runge-Kutta (4, 5), Dormand-Prince pair | dopri5
+- ode23 : Runge-Kutta (2,3) pair of Bogacki and Shampine
+- ode113 : variable order Adams-Bashforth-Moulton PECE
+
+Stiff
+-----
+
+- ode15s : variable order based on numerical differentation formulas (optionally use BDF backward diff formula)
+- ode23s : modified Rosenbrock formula of order 2, one step solver
+- ode23t : trapezoidal rule usnig a "free" interpolant
+- ode23tb : TR-BDF2, implicit Runge-Kutta (first stage: trapezoidal, second stage: backward diffierentiation of order two)
+- ode15i : variable order, fully implicit differential equations
+
+scipy.integrate.odeint uses lsoda which switching between Adams for non-stiff
+and BDF for stiff. This would be similar to a combination of ode113 and ode15s.
+
+scipy.integrate.ode provides these:
+
+- vode: This is similar to lsoda as it uses a combination of Adams and BDF
+  methods. In fact, the docs sound identical to lsoda.
+- lsoda
+- dopri5: explicit Runge-Kutta of order (4)5 due to Dormand and Prince. (so
+  same as ode45)
+- dopri853: explicit Runge-Kutta 8(5,3) due to Dormand and Prince.
+
+http://people.sc.fsu.edu/~jburkardt/f77_src/odepack/odepack.html
+
+It'd be nice to have LSODI and its variants available for multibody dynamic
+systems so the mass matrix and forcing vector can be passed in in that linearly
+implicit form. Looks like scikits.odes includes a wrapper to LSODI:
+https://pypi.python.org/pypi/scikits.odes
+
+{% endrestructuredtext %}
