@@ -5,6 +5,11 @@ description: AIO
 created: !!timestamp '2014-10-15 14:48:46'
 tags:
     - notebook
+    - ordinary differential equations
+    - integration
+    - matlab
+    - scipy
+    - python
 ---
 
 {% mark image -%}
@@ -13,7 +18,7 @@ tags:
 {% mark excerpt -%}
 {% restructuredtext %}
 
-EEE
+A few notes on the Matlab and Python ODE integrators.
 
 {% endrestructuredtext %}
 {%- endmark %}
@@ -38,6 +43,9 @@ Stiff
 - ode23t : trapezoidal rule usnig a "free" interpolant
 - ode23tb : TR-BDF2, implicit Runge-Kutta (first stage: trapezoidal, second stage: backward diffierentiation of order two)
 - ode15i : variable order, fully implicit differential equations
+
+SciPy Integrators
+=================
 
 scipy.integrate.odeint uses lsoda which switching between Adams for non-stiff
 and BDF for stiff. This would be similar to a combination of ode113 and ode15s.
