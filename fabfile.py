@@ -136,4 +136,4 @@ def new_notebook():
     with open(path_to_todays_notebook, 'w') as f:
         f.write(new_text)
 
-    local('vim -O ~/Research/todo/readme.rst {}'.format(path_to_todays_notebook))
+    local('vim -O {}'.format(path_to_todays_notebook))
