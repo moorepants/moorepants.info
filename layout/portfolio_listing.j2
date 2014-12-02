@@ -6,7 +6,7 @@
 {% block intro %}{% endblock%}
 
 <div class="row">
-{% for res in resource.node.walk_resources_sorted_by_name() %}
+{% for res in resource.node.walk_resources_sorted_by_startdate() %}
   <div class="span4">
   {{ render_excerpt(res) }}
   </div>

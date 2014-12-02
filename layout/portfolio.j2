@@ -4,17 +4,17 @@
 <article class="post">
 <nav class="post_nav">
 <a class="backlink" href="{{ content_url(resource.node.url) }}">Back to list</a>
-<a class="prev{{' disabled' if not resource.prev_by_name }}"
-    title="{{ resource.prev_by_name.meta.title }}"
-    {% if resource.prev_by_name %}
-    href="{{ content_url(resource.prev_by_name.url) }}"{% endif %}>
+<a class="prev{{' disabled' if not resource.prev_by_startdate }}"
+    title="{{ resource.prev_by_startdate.meta.title }}"
+    {% if resource.prev_by_startdate %}
+    href="{{ content_url(resource.prev_by_startdate.url) }}"{% endif %}>
     Previous
 </a>
 
-<a class="next{{' disabled' if not resource.next_by_name }}"
-    title="{{ resource.next_by_name.meta.title }}"
-    {% if resource.next_by_name %}
-    href="{{ content_url(resource.next_by_name.url) }}"{% endif %}>
+<a class="next{{' disabled' if not resource.next_by_startdate }}"
+    title="{{ resource.next_by_startdate.meta.title }}"
+    {% if resource.next_by_startdate %}
+    href="{{ content_url(resource.next_by_startdate.url) }}"{% endif %}>
     Next
 </a>
 

@@ -74,6 +74,13 @@ sorter:
         filters:
             source.kind: html
             meta.listable: true
+    startdate:
+        attr:
+            - meta.startdate
+        reverse: true
+        filters:
+            source.kind: html
+            meta.listable: true
     name:
         attr: name
         filters:
