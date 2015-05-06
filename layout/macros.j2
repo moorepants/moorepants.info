@@ -27,9 +27,21 @@
 
 {% macro render_excerpt(res, class=None) %}
 {% refer to res.url as post %}
-<h3><a href="{{ content_url(res.url) }}">{{ res.meta.title }}</a></h3>
-<p><a href="{{ content_url(res.url) }}">{{ post.image }}</a>
-{{ post.excerpt }}</p>
+<div class="row">
+  <h3>
+    <a href="{{ content_url(res.url) }}">{{ res.meta.title }}</a>
+  </h3>
+  <div class="span1">
+  </div>
+  <div class="span5">
+    <p><a href="{{ content_url(res.url) }}">{{ post.image }}</a></p>
+  </div>
+  <div class="span5">
+    <p>{{ post.excerpt }}</p>
+  </div>
+  <div class="span1">
+  </div>
+</div>
 {% endmacro %}
 
 {% macro render_nav(menu, cls=None) -%}

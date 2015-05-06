@@ -1,13 +1,19 @@
+/* This is the pallete I worked from: */
+/* http://coolors.co/app/2e382e-50c9ce-efc0f7-72a1e5-9883e5 */
+
 /* bootstrap has really big values for the heading fonts so I'm overiding them here */
 h1 {
-  font-size: 24px
+  font-size: 24px;
 }
 h1 small {
-    font-size: 18px;
+  font-size: 18px;
 }
 h2 {
-  font-size: 20px
+  font-size: 20px;
+  color: grey;
 }
+
+/* These make the blog side bar navigator look decent. */
 
 nav.post_nav{
     background-color: #efefef;
@@ -130,3 +136,79 @@ blockquote p{
 .listing .document{
     padding-top: 4px;
 }
+
+/* Custom Navigation Bar */
+
+.navbar-simple .brand {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.navbar-simple .navbar-inner {
+  background: #72A1E5;
+  filter: none !important;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.25);
+  -moz-box-shadow: 0 2px 15px rgba(0,0,0,0.25);
+  -webkit-box-shadow: 0 2px 15px rgba(0,0,0,0.25);
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+.navbar-simple .navbar-inner .nav {
+    float: right;
+}
+.navbar-simple .navbar-inner .nav li a {
+    background: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    color: #fff;
+    font-size: 13px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-weight: 600;
+}
+.navbar-simple .navbar-inner .nav li a:hover {
+    background: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    color: #efc0f7;
+}
+.navbar-simple .navbar-inner .nav li.active a {
+    color: #efc0f7;
+}
+
+.navbar .brand {
+  color: #fff;
+  text-shadow: 0 1px 0 #2E382e;
+}
+
+.navbar .nav > li > a {
+  text-shadow: 0 1px 0 #2E382E;
+}
+
+.page-header {
+  background-color: #2e382e;
+}
+
+.page-header h1 {
+  color: #fff;
+  background-color: #2e382e;
+}
+
+a {
+  color: #72a1e5;
+}
+
+a:hover {
+  color: #9883E5;
+  text-decoration: none;
+}
+
+/* Force the portfolio listings images to all have the same height. */
+.portfolio-list img{
+  max-height: 300px;
+}
+
+.portfolio-list h3{
+  padding-left: 20px;
+}
+
