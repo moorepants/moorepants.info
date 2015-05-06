@@ -1,14 +1,16 @@
-{% macro render_main_menu() -%}
-<ul class="nav">
-{% for menu_item in menu -%}
-  <li{% if menu_item.url == resource.url or menu_item.active %}
-  class="active"{% endif %}>
-  <a href="/{{ menu_item.url }}" title="{{ menu_item.description }}">
-    {{ menu_item.name }}
-  </a></li>
-{%- endfor %}
-</ul>
-{%- endmacro %}
+{% macro render_main_menu() %}
+<div class="nav-collapse collapse">
+  <ul class="nav">
+    {% for menu_item in menu %}
+    <li{% if menu_item.url == resource.url or menu_item.active %} class="active"{% endif %}>
+      <a href="/{{ menu_item.url }}" title="{{ menu_item.description }}">
+        {{ menu_item.name }}
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+{% endmacro %}
 
 {% macro render_blog_excerpt(res, class=None) %}
 {% refer to res.url as post %}

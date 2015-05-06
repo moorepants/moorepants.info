@@ -1,12 +1,10 @@
 {% extends "topbar.j2" %}
-
 {% block basecss %}
 {{ super() }}
 <link href="{{ media_url('css/columns.css') }}" rel="stylesheet">
 {% endblock basecss %}
 
 {% block content %}
-
 <div class="page-header">
   {% block header %}
   <h1>
@@ -16,10 +14,11 @@
   {% endblock header %}
 </div>
 
-<div class="row">
-  <div class="span12">
+<div class="container">
+  <div class="row">
+    <div class="span12">
     {% block main %}{% endblock %}
+    </div>
   </div>
 </div>
-
 {% endblock content %}
