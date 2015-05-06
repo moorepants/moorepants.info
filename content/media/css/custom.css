@@ -4,6 +4,7 @@
 /* bootstrap has really big values for the heading fonts so I'm overiding them here */
 h1 {
   font-size: 24px;
+  font-weight: 500;
 }
 h1 small {
   font-size: 18px;
@@ -142,6 +143,8 @@ blockquote p{
 .navbar-simple .brand {
   padding-top: 15px;
   padding-bottom: 15px;
+  font-size: 30px;
+  font-weight: 300;
 }
 .navbar-simple .navbar-inner {
   background: #72A1E5;
@@ -186,12 +189,12 @@ blockquote p{
 }
 
 .page-header {
-  background-color: #2e382e;
+  background-color: #593a6a;
 }
 
 .page-header h1 {
   color: #fff;
-  background-color: #2e382e;
+  background-color: #593a6a;
 }
 
 a {
