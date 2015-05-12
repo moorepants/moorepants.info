@@ -61,7 +61,7 @@ def push(delete=False):
     get_resume()
     build_statements()
     statements = [
-        'hyde gen -r -c prod.yaml',
+        'hyde gen -c prod.yaml',
         "rsync -r -t{del} --progress --exclude 'presentations' {source} {username}@{server}:{destination}",
         'rsync -r -t{del} --progress {presentationsource} {username}@{server}:{presentationdestination}',
         "ssh {username}@{server} 'find {destination} -type f -exec chmod 644 {{}} \;'",
