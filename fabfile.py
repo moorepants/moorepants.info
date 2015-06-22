@@ -61,6 +61,7 @@ def push(delete=False):
     get_resume()
     build_statements()
     statements = [
+        'rm -rf deploy',
         'hyde gen -c prod.yaml',
         "rsync -r -t{del} --progress --exclude 'presentations' {source} {username}@{server}:{destination}",
         'rsync -r -t{del} --progress {presentationsource} {username}@{server}:{presentationdestination}',
