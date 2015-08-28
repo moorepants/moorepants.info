@@ -8,21 +8,16 @@ enddate: !!timestamp '2007-12-31 00:00:00'
 
 {% mark image -%}
 
-<img src="../media/images/pedal-desk.jpg" />
+.. image:: {{ media_url('images/pedal-desk.jpg') }}
+   :class: img-rounded
 
 {%- endmark %}
 
-{% mark excerpt -%}
-
-{% filter restructuredtext %}
+{% mark excerpt %}
 
 The pedal powered laptop charging station and energy demonstration device.
 
-{% endfilter %}
-
-{%- endmark %}
-
-{% filter restructuredtext %}
+{% endmark %}
 
 I led a group of students from UC Davis in an Action Research Team for the
 Education for Sustainable Living Program. The ART was put together to idenifty
@@ -33,5 +28,3 @@ enviromment.
 
 Check out my old website for details:
 http://mae.ucdavis.edu/~biosport/jkm/ped_desk.htm.
-
-{% endfilter %}

@@ -8,25 +8,17 @@ enddate: !!timestamp '2003-12-31 00:00:00'
 
 {% mark image -%}
 
-{% filter restructuredtext %}
 .. image:: {{ media_url('images/bauer-compressor-3d.jpg') }}
    :align: center
    :class: img-rounded
-{% endfilter %}
 
 {%- endmark %}
 
-{% mark excerpt -%}
-
-{% filter restructuredtext %}
+{% mark excerpt %}
 
 CAD modeling and machine design internship at Bauer Compressors in Norfolk, VA.
 
-{% endfilter %}
-
-{%- endmark %}
-
-{% filter restructuredtext %}
+{% endmark %}
 
 I worked at `Bauer Compressors`_ in Norfolk, Virginia as an intern for the good
 part of a year. I mostly spent my time creating solid models of existing parts
@@ -48,5 +40,3 @@ immediate supervisor and can vouch for my work there.
 
 .. image:: {{ media_url('images/bauer-compressor-2d.jpg')}}
    :align: center
-
-{% endfilter %}

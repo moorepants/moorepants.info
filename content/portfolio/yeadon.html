@@ -7,15 +7,14 @@ enddate: !!timestamp '2014-11-30 10:00:00'
 ---
 
 {% mark image -%}
-{% filter restructuredtext %}
+
 .. image:: {{ media_url('images/yeadon-gui-screenshot.png') }}
    :class: img-rounded
    :align: center
-{% endfilter %}
+
 {%- endmark %}
 
-{% mark excerpt -%}
-{% filter restructuredtext %}
+{% mark excerpt %}
 
 ``yeadon`` is a software package that implements Fred Yeadon's popular method
 for estimating the body segment parameters of a human. The package can be used
@@ -23,10 +22,7 @@ as library, as in BicycleParameters_, or as a standalone GUI application.
 
 .. _BicycleParameters: https://github.com/moorepants/BicycleParameters
 
-{% endfilter %}
-{%- endmark %}
-
-{% filter restructuredtext %}
+{% endmark %}
 
 Software
 ========
@@ -93,5 +89,3 @@ Screenshots
 .. image:: {{ media_url('images/ice-skater-double.png') }}
    :class: img-rounded
    :align: center
-
-{% endfilter %}

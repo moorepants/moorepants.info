@@ -15,7 +15,6 @@ tags:
 {%- endmark %}
 
 {% mark excerpt -%}
-{% filter restructuredtext %}
 
 Today's task list:
 
@@ -26,10 +25,8 @@ Today's task list:
 - [] Review the TODO items on the Yeadon paper
 - [] Run variations in guesses for structural id
 
-{% endfilter %}
 {%- endmark %}
 
-{% filter restructuredtext %}
 
 Walking System Identification
 =============================
@@ -57,5 +54,3 @@ time series.
 Now I just need to transform these things into a nice API where the user can
 select the data source, the names of the controls and sensors, and it will find
 the gains. Nice and general.
-
-{% endfilter %}

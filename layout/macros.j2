@@ -22,8 +22,17 @@
 <time datetime="{{ res.meta.created.strftime('%Y-%m-%d') }}">
     Posted: {{ res.meta.created.strftime('%a, %d %b %Y') }}
 </time>
-<a href="{{ content_url(res.url) }}">{{ post.image|typogrify }}</a>
-{{ post.excerpt|typogrify }}
+{% if res.meta.jupyter_notebook %}
+<a href="{{ content_url(res.url) }}">
+  {{ post.image }}
+</a>
+{{ post.excerpt }}
+{% else %}
+<a href="{{ content_url(res.url) }}">
+  {{ post.image|restructuredtext }}
+</a>
+{{ post.excerpt|restructuredtext }}
+{% endif %}
 </article>
 {% endmacro %}
 
@@ -36,10 +45,10 @@
   <div class="span1">
   </div>
   <div class="span5">
-    <p><a href="{{ content_url(res.url) }}">{{ post.image }}</a></p>
+    <p><a href="{{ content_url(res.url) }}">{{ post.image|restructuredtext }}</a></p>
   </div>
   <div class="span5">
-    <p>{{ post.excerpt }}</p>
+    <p>{{ post.excerpt|restructuredtext }}</p>
   </div>
   <div class="span1">
   </div>

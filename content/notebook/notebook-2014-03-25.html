@@ -13,14 +13,11 @@ tags:
 {%- endmark %}
 
 {% mark excerpt -%}
-{% restructuredtext %}
 
 Some on sparse matrix solve speed.
 
-{% endrestructuredtext %}
 {%- endmark %}
 
-{% restructuredtext %}
 
 The sparse solvers in scipy don't necessarily seem faster but these are tiny matrices.
 
@@ -83,5 +80,3 @@ The sparse solvers in scipy don't necessarily seem faster but these are tiny mat
 
   In [32]: %timeit solve = factorized(a1); solve(b)
   10000 loops, best of 3: 158 µs per loop
-
-{% endrestructuredtext %}

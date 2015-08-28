@@ -64,8 +64,6 @@ meta:
     url: http://moorepants.info
     analytics:
         id: UA-15966419-6
-restructuredtext:
-    highlight_source: true
 sorter:
     time:
         attr:
@@ -103,3 +101,5 @@ tagger:
             archive_extension: html
             meta:
                 listable: false
+restructuredtext:
+    highlight_source: true

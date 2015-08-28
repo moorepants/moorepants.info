@@ -14,7 +14,6 @@ tags:
 {%- endmark %}
 
 {% mark excerpt -%}
-{% filter restructuredtext %}
 
 Today's task list:
 
@@ -29,10 +28,8 @@ Today's task list:
 - [] Book hotel for BMD
 - [] Post update about BMD copyright
 
-{% endfilter %}
 {%- endmark %}
 
-{% filter restructuredtext %}
 
 Walking System ID
 =================
@@ -58,5 +55,3 @@ The final plot gives the gains as a function of time in the step for two
 sensors and three controls in the right leg. Now I need to see if this
 controller can actually drive Ton's human body model. I'd like to wrap his C
 code with Python for ease of use.
-
-{% endfilter %}

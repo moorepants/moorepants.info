@@ -31,7 +31,7 @@
 {% endfor %}
 </ul>
 {% endif %}
-{% filter typogrify -%}
+{% filter restructuredtext|typogrify -%}
 {% mark post -%}
 {% block post -%}{%- endblock %}
 {%- endmark %}

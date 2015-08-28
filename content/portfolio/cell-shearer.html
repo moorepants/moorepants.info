@@ -8,25 +8,15 @@ enddate: !!timestamp '2009-08-31 00:00:00'
 
 {% mark image -%}
 
-{% filter restructuredtext %}
-
 .. image:: {{ media_url('images/fancy-cell-shearer.png') }}
-
-{% endfilter %}
 
 {%- endmark %}
 
-{% mark excerpt -%}
-
-{% filter restructuredtext %}
+{% mark excerpt %}
 
 Biomedical blood cell shearing device machine design.
 
-{% endfilter %}
-
-{%- endmark %}
-
-{% filter restructuredtext %}
+{% endmark %}
 
 While I was employed at the student machine shop at UC Davis my supervisor
 arranged for me to work on a design project with `Anthony Passerini`_ and his
@@ -63,5 +53,3 @@ Downloads
 __ {{ media_url('docs/DeVerse2010.pdf')}}
 __ {{ media_url('docs/cell-shearer-08-11-12.pdf')}}
 __ {{ media_url('docs/cell-shearer-assembly.pdf')}}
-
-{% endfilter %}

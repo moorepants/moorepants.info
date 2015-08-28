@@ -2,13 +2,11 @@
 {% from "macros.j2" import render_blog_excerpt with context  %}
 
 {% block main %}
-
 <ul class="listing clear">
 {% for res in resource.node.walk_resources_sorted_by_time() %}
-<li>
+  <li>
     {{ render_blog_excerpt(res) }}
-</li>
+  </li>
 {% endfor %}
 </ul>
-
 {% endblock %}

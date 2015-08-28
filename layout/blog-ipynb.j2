@@ -762,3 +762,8 @@ init_mathjax = function() {
 init_mathjax();
 </script>
 {% endblock endhead %}
+{% block blogpostcontent %}
+{% mark post -%}
+{% block post -%}{%- endblock %}
+{%- endmark %}
+{% endblock %}

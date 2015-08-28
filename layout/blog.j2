@@ -2,8 +2,9 @@
 
 {% block headjs %}
 {{ super() }}
+{# Adds in MathJax to blog posts. #}
 <script type="text/javascript"
-    src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 {% endblock headjs %}
 
@@ -58,9 +59,13 @@
 {% endfor %}
 </ul>
 {% endif %}
+{% block blogpostcontent %}
 {% mark post -%}
+{% filter restructuredtext -%}
 {% block post -%}{%- endblock %}
+{% endfilter %}
 {%- endmark %}
+{% endblock %}
 </article>
 
 <div id="disqus_thread"></div>

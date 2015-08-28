@@ -16,7 +16,6 @@ tags:
 {%- endmark %}
 
 {% mark excerpt -%}
-{% filter restructuredtext %}
 
 Today's task list:
 
@@ -29,10 +28,8 @@ Today's task list:
 - [] Run variations in guesses for structural id
 - [] Work on BMD papers
 
-{% endfilter %}
 {%- endmark %}
 
-{% filter restructuredtext %}
 
 Motek Training
 ==============
@@ -95,5 +92,3 @@ and not for \\(s_{lc}\\) explicitly. Then at each time step in a cycle we have
 \\(q + qp\\) unknowns giving \\(nq(1 + p)\\) unknowns for a cycle and thus need
 that many equations. Each cycle gives us \\(nq\\) equations so we need at least
 \\(1 + p\\) cycles to solve for the entries of \\(A\\) and \\(K\\).
-
-{% endfilter %}

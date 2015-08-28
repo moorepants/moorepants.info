@@ -6,30 +6,19 @@ startdate: !!timestamp '2004-06-01 00:00:00'
 enddate: !!timestamp '2005-08-31 00:00:00'
 ---
 
-
-{% mark image %}
-
-{% filter restructuredtext %}
+{% mark image -%}
 
 .. image:: {{ media_url('images/lfst-bwb.jpg') }}
    :class: img-rounded
    :width: 640
 
-{% endfilter %}
+{%- endmark %}
 
-{% endmark %}
-
-{% mark excerpt -%}
-
-{% filter restructuredtext %}
+{% mark excerpt %}
 
 Work at the Langley full scale tunnel.
 
-{% endfilter %}
-
-{%- endmark %}
-
-{% filter restructuredtext %}
+{% endmark %}
 
 My senior design project advisor, Dr. Drew Landman, at Old Dominion University
 offered me a unique internship opportunity at `NASA Langley's Full Scale Tunnel
@@ -134,5 +123,3 @@ The following gives a brief over view of my work at LFST:
 .. [#stockcar] The stock car racing that grew out bootlegging and delivering
    moonshine during prohibition in the Southern United States. Some of which
    happened in the county I grew up in.
-
-{% endfilter %}

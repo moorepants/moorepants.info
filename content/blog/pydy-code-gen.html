@@ -17,8 +17,6 @@ tags:
 
 {% mark excerpt %}
 
-{% restructuredtext %}
-
 I've been working on implementing a walking simulation model that is based on
 and compatible with a model developed by my PI, Ton van den Bogert, in
 http://dx.doi.org/10.1016/j.jbiomech.2009.12.012. Ton provided me with source
@@ -31,11 +29,7 @@ would do and rewrote Ton's model with an open source tool chain. In the
 process, I needed to improve the code generation capabilities we were relying
 on for the PyDy workflow and have a small step in improvements on that front.
 
-{% endrestructuredtext %}
-
 {% endmark %}
-
-{% restructuredtext %}
 
 We are primarily interested in generating numerical code from SymPy's symbolic
 expressions which are stored in two matrices that generalize a set of first
@@ -178,10 +172,14 @@ Cython wrapper for the matrix/vector evaluations we need. It works like this:
 
 These are the resources I used to learn about Cython and NumPy use:
 
-- Nice example on Stack Overflow: http://stackoverflow.com/questions/3046305/simple-wrapping-of-c-code-with-cython
-- Cython docs: http://docs.cython.org/src/tutorial/numpy.html and http://docs.cython.org/src/userguide/numpy_tutorial.html
-- The SciPy lecture notes on interfacing with C: http://scipy-lectures.github.io/advanced/interfacing_with_c/interfacing_with_c.html
-- Travis Oliphant's blog post comparing Cython, Weave, and NumPy: http://technicaldiscovery.blogspot.com/2011/06/speeding-up-python-numpy-cython-and.html
+- Nice example on Stack Overflow:
+  http://stackoverflow.com/questions/3046305/simple-wrapping-of-c-code-with-cython
+- Cython docs: http://docs.cython.org/src/tutorial/numpy.html and
+  http://docs.cython.org/src/userguide/numpy_tutorial.html
+- The SciPy lecture notes on interfacing with C:
+  http://scipy-lectures.github.io/advanced/interfacing_with_c/interfacing_with_c.html
+- Travis Oliphant's blog post comparing Cython, Weave, and NumPy:
+  http://technicaldiscovery.blogspot.com/2011/06/speeding-up-python-numpy-cython-and.html
 
 Cython Code
 ===========
@@ -361,5 +359,3 @@ to take no more than 20 seconds for relatively complex problems to expect this
 to be used for any kind of backend to a GUI based model builder. That may be
 too much to expect though, as purely numerical :math:`O(n)` methods for
 multibody dynamics are still superior for this.
-
-{% endrestructuredtext %}

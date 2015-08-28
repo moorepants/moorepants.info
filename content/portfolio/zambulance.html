@@ -8,23 +8,15 @@ enddate: !!timestamp '2006-09-01 10:00:00'
 
 {% mark image -%}
 
-{% filter restructuredtext %}
 .. image:: {{ media_url('images/zambulance.jpg') }}
-{% endfilter %}
 
 {%- endmark %}
 
-{% mark excerpt -%}
-
-{% filter restructuredtext %}
+{% mark excerpt %}
 
 Appropriate technologies for the disabled in Zambia.
 
-{% endfilter %}
-
-{%- endmark %}
-
-{% filter restructuredtext %}
+{% endmark %}
 
 In the winter of 2006 I attended Ralf Hotchkiss's `wheelchair construction
 class`_ at SFSU to prepare for a trip to work with a wheelchair center in
@@ -36,5 +28,3 @@ Zambulance_, and improve wheelchair manufacturing tools in Lusaka, Zambia.
 .. _Zambulance: http://cadlab6.mit.edu/bike.ambulance/
 
 - `Photos from the trip <https://plus.google.com/photos/110966557175293116547/albums/5451690185631963089>`_
-
-{% endfilter %}

@@ -18,7 +18,6 @@ tags:
 {%- endmark %}
 
 {% mark excerpt -%}
-{% filter restructuredtext %}
 
 Today's task list:
 
@@ -26,7 +25,7 @@ Today's task list:
 - [] Work on BMD papers
 - [] Book hotel for BMD
 - [] Post update about BMD copyright
-- [~] Finish reading the van der Kooij paper
+- [?] Finish reading the van der Kooij paper
 - [] See if our controller can drive an OpenSim model or Ton's 2D model
 - [x] Wrap the HBM C code
 - [] Duplicate website backups on a S3 bucket
@@ -39,10 +38,7 @@ Today's task list:
 - [] Try out CSympy with some mechanics problems
 - [] Email Mounir about teaching
 
-{% endfilter %}
 {%- endmark %}
-
-{% filter restructuredtext %}
 
 Wrapping HMB
 ============
@@ -76,7 +72,7 @@ From Ljung 1999
 ---------------
 
 There are three basic methods of identifying a plant in a closed loop system,
-according to Ljung 1999 (page ~423):
+according to Ljung 1999 (page 423):
 
 1. The Direct Approach: apply prediction error method to the output of the
 plant, \\(y\\), and the input to the plant, \\(u\\). Ignore feedback and the
@@ -128,5 +124,3 @@ of which only \\(y\\) is available.
 So all three of these methods don't seem applicable as stated. But the "direct"
 measurements of \\(c\\) must be able to be used in the identification. This
 doesn't seem to be regarded in the framework presented in Ljung's book.
-
-{% endfilter %}

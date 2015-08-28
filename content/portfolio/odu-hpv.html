@@ -8,24 +8,16 @@ enddate: !!timestamp '2005-01-01 10:00:00'
 
 {% mark image -%}
 
-{% filter restructuredtext %}
 .. image:: {{ media_url('images/odu-hpv.jpg') }}
    :align: center
-{% endfilter %}
 
 {%- endmark %}
 
-{% mark excerpt -%}
-
-{% filter restructuredtext %}
+{% mark excerpt %}
 
 ODU human powered vehicle senior design project.
 
-{% endfilter %}
-
-{%- endmark %}
-
-{% filter restructuredtext %}
+{% endmark %}
 
 For my senior project at `ODU <http://www.odu.edu>`_ my teammates and I
 designed a human powered vehicle to race in the annual `ASME HPV competition
@@ -36,5 +28,3 @@ happened to be a guy in my class that I always saw riding around in a long
 wheelbased recumbent. I approached him about the project and the rest was
 history. We ended up doing pretty good in competition. I documented most
 everything on the `team website <http://www.lions.odu.edu/~dlandman/hpv/>`_.
-
-{% endfilter %}
