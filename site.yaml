@@ -26,17 +26,17 @@ context:
                 type: node
                 url: portfolio
             -
-                name: Research
-                description: The curiosities that intrigue me.
-                css_class: research
-                type: node
-                url: research
-            -
                 name: Teaching
                 description: Teaching, a new frontier.
                 css_class: teaching
                 type: node
                 url: teaching
+            -
+                name: Research
+                description: The curiosities that intrigue me.
+                css_class: research
+                type: node
+                url: research
             -
                 name: Blog
                 description: Here is the pulpit. I recommend not listening to me.
