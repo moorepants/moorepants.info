@@ -40,8 +40,8 @@ def get_resume():
 def build_statements():
     create_doc_dir()
     rst_files = ['content/research/research-statement.rst',
-                 'content/teaching/teaching-statement-2013.html',
-                 'content/teaching/teaching-statement-2015.html']
+                 'content/teaching/teaching-statement-2013.rst',
+                 'content/teaching/teaching-statement-2015.rst']
     statements = [
         'rst2latex --date --documentoptions="letter,10pt" --use-latex-docinfo --latex-preamble="{statementpreamble}" {inputfile} {docdir}/{prefix}.tex',
         'pdflatex --output-directory={docdir} {docdir}/{prefix}.tex',
