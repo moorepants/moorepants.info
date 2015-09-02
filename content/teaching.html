@@ -1,15 +1,40 @@
 ---
 extends: columns.j2
-default_block: main
+default_block: pagecontent
 title: Teaching
 subtitle: Enabling the next generation
 description: moorepants' teachings
 ---
 
-{% filter restructuredtext -%}
+I am a full time lecturer in the `UC Davis Mechanical and Aerospace Engineering
+Department` where I focus on instruction in a number of undergraduate courses,
+curriculum design and improvement, accreditation assessment, and innovation in
+engineering education. Below you will find various links to my teaching related
+activities including my teaching philosophy and materials for the courses I
+teach.
 
-.. include:: content/teaching-statement.rst
+.. _UC Davis Mechanical and Aerospace Engineering Department: http://mae.ucdavis.edu
 
-`[Teaching statement PDF download] <{{ media_url('docs/teaching-statement.pdf') }}>`_
+Teaching Statements
+===================
 
-{%- endfilter %}
+- `2015 Teaching Statement`_ [`pdf <{{ media_url('docs/teaching-statement-2015.pdf') }}>`__]
+- `2013 Teaching Statement`_ [`pdf <{{ media_url('docs/teaching-statement-2013.pdf') }}>`__]
+
+.. _2015 Teaching Statement: {{ content_url('teaching-statement-2015.html') }}
+.. _2013 Teaching Statement: {{ content_url('teaching-statement-2013.html') }}
+
+Courses
+=======
+
+Fall 2015
+---------
+
+- Mechanical Design [EME 150A]
+
+Fall 2012
+---------
+
+- `Engineering Graphics in Design [ENG 004]`_
+
+.. _Engineering Graphics in Design [ENG 004]: http://www.moorepants.info/jkm/courses/eng4

@@ -1,28 +1,28 @@
 {% extends "topbar.j2" %}
 {% block basecss %}
 {{ super() }}
-<link href="{{ media_url('css/columns.css') }}" rel="stylesheet">
+    <link href="{{ media_url('css/columns.css') }}" rel="stylesheet">
 {% endblock basecss %}
 
 {% block content %}
 <div class="page-header">
-  {% block header %}
+{% block header %}
   <h1>
     {% block page_title %}{{ resource.meta.title }}{% endblock %}
     {% if resource.meta.subtitle %}<small>{% block page_subtitle %}{{ resource.meta.subtitle }}{% endblock %}</small>{% endif %}
   </h1>
-  {% endblock header %}
+{% endblock header %}
 </div>
 
 <div class="container">
   <div class="row">
     <div class="span12">
-    {% block main %}
+{% block main %}
 {% filter restructuredtext %}
 {% block pagecontent %}
 {% endblock %}
 {% endfilter %}
-    {% endblock %}
+{% endblock %}
     </div>
   </div>
 </div>
