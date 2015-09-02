@@ -35,8 +35,8 @@ context:
                 name: Teaching
                 description: Teaching, a new frontier.
                 css_class: teaching
-                type: page
-                url: teaching.html
+                type: node
+                url: teaching
             -
                 name: Blog
                 description: Here is the pulpit. I recommend not listening to me.
