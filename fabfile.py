@@ -12,8 +12,6 @@ VARIABLES = {
              'destination': '/home/jasonkmoore/moorepants.info/',
              'docdir': 'content/media/docs',
              'statementpreamble': r'\usepackage[top=1in,bottom=1in,right=1in,left=1in]{geometry}',
-             'rs': 'research-statement',
-             'ts': 'teaching-statement',
              'presentationsource': '/home/moorepants/Presentations/',
              'presentationdestination': '/home/jasonkmoore/moorepants.info/presentations/',
              'del': '',
@@ -41,17 +39,22 @@ def get_resume():
 
 def build_statements():
     create_doc_dir()
+    rst_files = ['content/research/research-statement.rst',
+                 'content/teaching/teaching-statement-2013.html',
+                 'content/teaching/teaching-statement-2015.html']
     statements = [
-        'rst2latex --date --documentoptions="letter,10pt" --use-latex-docinfo --latex-preamble="{statementpreamble}" content/research/{rs}.rst {docdir}/{rs}.tex',
-        'pdflatex --output-directory={docdir} {docdir}/{rs}.tex',
-        'rm {docdir}/{rs}.aux {docdir}/{rs}.out {docdir}/{rs}.log {docdir}/{rs}.tex',
-        'rst2latex --date --documentoptions="letter,10pt" --use-latex-docinfo --latex-preamble="{statementpreamble}" content/{ts}.rst {docdir}/{ts}.tex',
-        'pdflatex --output-directory={docdir} {docdir}/{ts}.tex',
-        'rm {docdir}/{ts}.aux {docdir}/{ts}.out {docdir}/{ts}.log {docdir}/{ts}.tex',
+        'rst2latex --date --documentoptions="letter,10pt" --use-latex-docinfo --latex-preamble="{statementpreamble}" {inputfile} {docdir}/{prefix}.tex',
+        'pdflatex --output-directory={docdir} {docdir}/{prefix}.tex',
+        'rm {docdir}/{prefix}.aux {docdir}/{prefix}.out {docdir}/{prefix}.log {docdir}/{prefix}.tex',
         ]
-    for statement in statements:
-        with settings(warn_only=True):
-            local(statement.format(**VARIABLES), capture=True)
+    for rst_file in rst_files:
+        VARIABLES['inputfile'] = rst_file
+        VARIABLES['prefix'] = os.path.splitext(os.path.basename(rst_file))[0]
+        for statement in statements:
+            with settings(warn_only=True):
+                local(statement.format(**VARIABLES), capture=True)
+        VARIABLES.pop('inputfile')
+        VARIABLES.pop('prefix')
 
 
 def push(delete=False):
