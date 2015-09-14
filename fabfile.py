@@ -43,7 +43,7 @@ def build_statements():
                  'content/teaching/teaching-statement-2013.rst',
                  'content/teaching/teaching-statement-2015.rst']
     statements = [
-        'rst2latex --date --documentoptions="letter,10pt" --use-latex-docinfo --latex-preamble="{statementpreamble}" {inputfile} {docdir}/{prefix}.tex',
+        'rst2latex.py --date --documentoptions="letter,10pt" --use-latex-docinfo --latex-preamble="{statementpreamble}" {inputfile} {docdir}/{prefix}.tex',
         'pdflatex --output-directory={docdir} {docdir}/{prefix}.tex',
         'rm {docdir}/{prefix}.aux {docdir}/{prefix}.out {docdir}/{prefix}.log {docdir}/{prefix}.tex',
         ]
