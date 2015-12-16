@@ -103,3 +103,5 @@ tagger:
                 listable: false
 restructuredtext:
     highlight_source: true
+simple_copy:
+    - media/*.js
