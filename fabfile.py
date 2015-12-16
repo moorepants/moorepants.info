@@ -72,7 +72,8 @@ def push(delete=False):
         "ssh {username}@{server} 'find {destination} -type d -exec chmod 755 {{}} \;'",
     ]
     for statement in statements:
-        local(statement.format(**VARIABLES))
+        with settings(warn_only=True):
+            local(statement.format(**VARIABLES))
 
     VARIABLES['del'] = ''
 
