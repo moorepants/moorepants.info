@@ -68,8 +68,8 @@ def push(delete=False):
         'hyde gen -c prod.yaml',
         "rsync -r -t{del} --progress --exclude 'presentations' {source} {username}@{server}:{destination}",
         'rsync -r -t{del} --progress {presentationsource} {username}@{server}:{presentationdestination}',
-        "ssh {username}@{server} 'find {destination} -type f -exec chmod 644 {{}} \;'",
-        "ssh {username}@{server} 'find {destination} -type d -exec chmod 755 {{}} \;'",
+        """ssh {username}@{server} 'find {destination} ! -path "*/zotero/*" -type f -exec chmod 644 {{}} \;'""",
+        """ssh {username}@{server} 'find {destination} -type d -exec chmod 755 {{}} \;'""",
     ]
     for statement in statements:
         with settings(warn_only=True):
