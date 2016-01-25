@@ -149,3 +149,45 @@ In [18]: %timeit f_no_cse(x, r, p, m, f)
 
 In [19]: 48.3 / 13.6
 Out[19]: 3.551470588235294
+
+In [20]: x = np.random.random((100000, len(sys.states)))
+
+In [21]: r = np.random.random((100000, len(sys.specifieds_symbols)))
+
+In [22]: m = np.empty(sys.eom_method.mass_matrix.shape).flatten()
+
+In [23]: f = np.squeeze(np.empty(sys.eom_method.forcing.shape))
+
+In [24]: def run_comp():
+   ....:     for x_i, r_i in zip(x, r):
+   ....:         f_cse(x_i, r_i, p, m, f)
+   ....:         
+
+In [26]: run_comp()
+
+In [27]: %time run_comp()
+CPU times: user 1.54 s, sys: 4 ms, total: 1.54 s
+Wall time: 1.54 s
+
+In [28]: %time run_comp()
+KeyboardInterrupt
+
+In [28]: def run_comp2():
+    for x_i, r_i in zip(x, r):
+        f_no_cse(x_i, r_i, p, m, f)
+   ....:         
+
+In [29]: %time run_comp2()
+CPU times: user 5.83 s, sys: 0 ns, total: 5.83 s
+Wall time: 5.83 s
+
+In [30]: 5.83 / 1.54
+Out[30]: 3.7857142857142856
+
+In [31]: %time run_comp()
+CPU times: user 1.57 s, sys: 0 ns, total: 1.57 s
+Wall time: 1.57 s
+
+In [32]: %time run_comp2()
+CPU times: user 5.89 s, sys: 0 ns, total: 5.89 s
+Wall time: 5.89 s
