@@ -1,0 +1,151 @@
+---
+title: 
+subtitle: 
+description: 
+created: !!timestamp '2013-08-07 11:19:00'
+tags:
+    - sympy
+    - code generation
+---
+
+{% mark image -%}
+{%- endmark %}
+
+{% mark excerpt %}
+
+We recently added the option to flip on common subexpression elimnation for our
+PyDy code generators. It turns out that spending some effort pre-optimizing the
+code in this way can save significant computation time. The common
+sub-expression elimination available with gcc's ``-O3`` optimization flag
+doesn't eliminate the expressions to the extent that SymPy's algorithm can.
+
+{% endmark %}
+
+.. code::
+
+  moorepants@garuda:pydy$ ipython
+  Python 3.5.1 |Continuum Analytics, Inc.| (default, Dec  7 2015, 11:16:01)
+  Type "copyright", "credits" or "license" for more information.
+
+  IPython 4.0.1 -- An enhanced Interactive Python.
+  ?         -> Introduction and overview of IPython's features.
+  %quickref -> Quick reference.
+  help      -> Python's own help system.
+  object?   -> Details about 'object', use 'object??' for extra details.
+
+  In [1]: import sympy as sm
+
+  In [2]: import numpy as np
+
+  In [3]: from pydy.models import n_link_pendulum_on_cart
+
+  In [4]: from pydy.codegen.cython_code import CythonMatrixGenerator
+
+  In [5]: sys = n_link_pendulum_on_cart(10, True, True)
+
+Now I can generate two C/Cython functions to evaluate the mass matrix and the
+forcing vector.
+
+.. code::
+
+  In [6]: g_cse = CythonMatrixGenerator([sys.coordinates + sys.speeds, sys.specifieds_symbols, sys.constants_symbols], [sys.eom_method.mass_matrix, sys.eom_method.forcing])
+
+  In [7]: g_no_cse = CythonMatrixGenerator([sys.coordinates + sys.speeds, sys.specifieds_symbols, sys.constants_symbols], [sys.eom_method.mass_matrix, sys.eom_method.forcing], cse=False)
+
+The mass matrix and forcing vector have around 12 thousand mathematical
+operations.
+
+  In [8]: sm.count_ops(sys.eom_method.mass_matrix)
+  Out[8]: 5575
+
+  In [9]: sm.count_ops(sys.eom_method.forcing)
+  Out[9]: 6739
+
+The compilation of each function seems to take about these same amount of time.
+
+  In [10]: %time f_cse = g_cse.compile()
+  CPU times: user 0 ns, sys: 4 ms, total: 4 ms
+  Wall time: 2.42 s
+
+  In [11]: %time f_no_cse = g_no_cse.compile()
+  CPU times: user 4 ms, sys: 4 ms, total: 8 ms
+  Wall time: 2.49 s
+
+Finally, I make check whether to see which function evaulates faster.
+
+  In [12]: x = np.random.random(len(sys.states))
+
+  In [13]: r = np.random.random(len(sys.specifieds_symbols))
+
+  In [14]: p = np.random.random(len(sys.constants_symbols))
+
+  In [15]: m = np.random.random(sys.eom_method.mass_matrix.shape).flatten()
+
+  In [16]: f = np.squeeze(np.random.random(sys.eom_method.forcing.shape))
+
+  In [17]: %timeit f_no_cse(x, r, p, m, f)
+  100000 loops, best of 3: 12.1 µs per loop
+
+  In [18]: %timeit f_cse(x, r, p, m, f)
+  100000 loops, best of 3: 3.71 µs per loop
+
+The CSE'd version runs around four times as fast for this particular example.
+
+For 20 degrees of freedom:
+
+Python 3.5.1 |Continuum Analytics, Inc.| (default, Dec  7 2015, 11:16:01) 
+Type "copyright", "credits" or "license" for more information.
+
+IPython 4.0.1 -- An enhanced Interactive Python.
+?         -> Introduction and overview of IPython's features.
+%quickref -> Quick reference.
+help      -> Python's own help system.
+object?   -> Details about 'object', use 'object??' for extra details.
+
+In [1]: import numpy as np
+
+In [2]: import sympy as sm
+
+In [3]: from pydy.models import n_link_pendulum_on_cart
+
+In [4]: from pydy.codegen.cython_code import CythonMatrixGenerator
+
+In [5]: sys = n_link_pendulum_on_cart(20, True, True)
+
+In [6]: sm.count_ops(sys.eom_method.mass_matrix)
+Out[6]: 42250
+
+In [7]: sm.count_ops(sys.eom_method.forcing)
+Out[7]: 50879
+
+In [8]: g_cse = CythonMatrixGenerator([sys.coordinates + sys.speeds, sys.specifieds_symbols, sys.constants_symbols], [sys.eom_method.mass_matrix, sys.eom_method.forcing])
+
+In [9]: g_no_cse = CythonMatrixGenerator([sys.coordinates + sys.speeds, sys.specifieds_symbols, sys.constants_symbols], [sys.eom_method.mass_matrix, sys.eom_method.forcing], cse=False)
+
+In [10]: x = np.random.random(len(sys.states))
+
+In [11]: r = np.random.random(len(sys.specifieds_symbols))
+
+In [12]: p = np.random.random(len(sys.constants_symbols))
+
+In [13]: m = np.random.random(sys.eom_method.mass_matrix.shape).flatten()
+
+In [14]: f = np.squeeze(np.random.random(sys.eom_method.forcing.shape))
+
+In [15]: %time f_cse = g_cse.compile()
+CPU times: user 0 ns, sys: 4 ms, total: 4 ms
+Wall time: 15.6 s
+
+In [16]: %time f_no_cse = g_no_cse.compile()
+CPU times: user 0 ns, sys: 8 ms, total: 8 ms
+Wall time: 8.49 s
+
+In [17]: %timeit f_cse(x, r, p, m, f)
+The slowest run took 25.83 times longer than the fastest. This could mean that an intermediate result is being cached 
+100000 loops, best of 3: 13.6 µs per loop
+
+In [18]: %timeit f_no_cse(x, r, p, m, f)
+10000 loops, best of 3: 48.3 µs per loop
+
+In [19]: 48.3 / 13.6
+Out[19]: 3.551470588235294
