@@ -32,8 +32,8 @@ def get_resume():
     create_doc_dir()
     with settings(warn_only=True):
         local('rsync ~/Documents/resume/resume.pdf content/media/docs/JasonMoore_cv.pdf')
-        local('rsync ~/Projects/appropriate-tech/HumanPowerPresentation/hppres.pdf content/media/docs/hppres.pdf')
-        local('rsync ~/Projects/appropriate-tech/HumanPowerPresentation/hppres-notes.pdf content/media/docs/hppres-notes.pdf')
+        local('rsync ~/Presentations/human-power/hppres.pdf content/media/docs/hppres.pdf')
+        local('rsync ~/Presentations/human-power/hppres-notes.pdf content/media/docs/hppres-notes.pdf')
         local('rsync ~/Research/structuralid/Hess_Moore_MST_Paper.pdf content/media/docs/hess-moore-mst-final.pdf')
 
 
