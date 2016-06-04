@@ -1,6 +1,14 @@
 /* This is the pallete I worked from: */
 /* http://coolors.co/app/2e382e-50c9ce-efc0f7-72a1e5-9883e5 */
 
+/* Class for centered images with captions */
+div.figure {
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  font-style: italic;
+}
+
 /* bootstrap has really big values for the heading fonts so I'm overiding them here */
 h1 {
   font-size: 24px;
