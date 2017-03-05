@@ -1,6 +1,11 @@
 /* This is the pallete I worked from: */
 /* http://coolors.co/app/2e382e-50c9ce-efc0f7-72a1e5-9883e5 */
 
+blockquote p {
+    font-size: 14px;
+    font-weight: 200;
+}
+
 /* Class for centered images with captions */
 div.figure {
   padding: 10px;
