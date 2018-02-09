@@ -74,9 +74,9 @@ Interactive Digital Textbook
 ----------------------------
 
 We wrote a series of 14 Jupyter notebooks that serve as the core learning
-resources for the course. These notebooks together effecitvely act as a
-textbook and replace the need for a traditional static, paper text. The design
-of these notebooks has these features:
+resources for the course. These notebooks together are effecitvely a textbook
+and replace the need for a traditional static, paper text. The design of these
+notebooks has these features:
 
 - Approximately 1 notebook per 20 two hour lecture periods, i.e. just the right
   length for the 10 week course.
@@ -91,13 +91,16 @@ Software Library
 ----------------
 
 The text book is accompanied by a custom Python software library called
-resonance. This library was designed with these features in mind:
+"resonance". This library was designed with these features in mind:
 
 - Provide a framework for learning mechanical vibration concepts.
-- Allow students to construct, simulate, and analyze vibrating systems with
-- Hide Python many programming details up front, but allow them to be exposed
-  in a scoffolded way as the course progresses. Hide object oriented class
+- Allow students to construct, simulate, analyze, and visualize vibrating
+  systems with a simple application programming interface.
+- Hide Python programming details up front, but allow them to be exposed in a
+  scoffolded way as the course progresses. Hide object oriented class
   construction completely.
+- Structed around "system" objects that have similarities to real vibrating
+  mechanical systems.
 
 Active Computing In Class
 -------------------------
@@ -105,11 +108,13 @@ Active Computing In Class
 The notebooks were presented live in class. Each student downloaded the
 notebook at the beginning of the class period for use on their laptop. The
 instructor led the students through the notebooks by offereing verbal summaries
-and addendums to the written text. The instructor executed the code cells to
-produce various figures and then discuss them. Each notebook included short
-exercises (about 8-10 per 2 hr period) interspersed throughout the text that
-were geared to assessing students on what they had just learned. These
-exercises had solutions
+and addendums via "boardwork" to the written text. The instructor executed the
+code cells to produce various figures and then discussed them. Each notebook
+included short exercises (about 8-10 per 2 hr period) interspersed throughout
+the text that were geared to assessing students on the prior 10 minutes of
+instruction. These exercises had easily accessible solutions to ensure students
+could move forward even if the solution was not obtained. The notebooks were
+submitted at the end of the class for participation credit.
 
 Computational Homeworks
 -----------------------
@@ -118,16 +123,31 @@ Computational Homeworks
 Project Instead of Exams
 ------------------------
 
+We orginally intended to have a midterm, a final, and a course project. We
+dropped the final exam due to two reasons:
+
+1. It was simply too much work for the students.
+2. We gave a midterm that required live coding to solve the problems.
+
+Next year, I will likely remove the midterm and break the projec tinto two
+phases.
+
 JupyterHub Service
 ------------------
 
 SciPy BoF
 ---------
 
-We led a "Birds of a Feather" session 
+We led a "Birds of a Feather" session on teaching modeling and simulation at
+SciPy 2017 in Austin, Texas. There were 13 participants from a variety of
+disciplines and schools. Notes from this session can be found on this blogpost.
 
-Computational Thinking Workshop
--------------------------------
+Computational Thinking Workshop and Seminar
+-------------------------------------------
+
+We held a "Computational Thinking in the Engineering and Sciences Curriculum"
+workshop on January 5th for about 20 faculty, staff, and graduate students.
+
 
 What To Improve
 ===============
@@ -136,3 +156,14 @@ What To Improve
 
 Conclusion
 ==========
+
+
+Acknowledgements
+================
+
+This blog post was made possible by the Undergraduate Instructional Innovation
+Program at the `Center for Educational Effectiveness`_ at the University of
+California, Davis. The funding proposal can be viewed on Figshare_.
+
+.. _Figshare: https://doi.org/10.6084/m9.figshare.5229886.v1
+.. _Center for Educational Effectiveness: https://cee.ucdavis.edu/
