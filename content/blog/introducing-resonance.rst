@@ -49,8 +49,9 @@ Here are some reasons that we wanted to change the course
 
 - This type of course has likely only changed in one significnat way in 100
   years with addition of computational tools in the 80s. It is true that
-  foundational theory doesn't change much in that time, but it is true that
-  much of it may not be relevant to solving modern problems.
+  foundational theory doesn't change much in that time, but it is equally true
+  that much of traditional materials may not be directly relevant to solving
+  modern vibration related problems.
 - Traditional engineering textbooks are becoming antiquated due to their high
   cost to the students, their scope not fitting courses they are designed for,
   the fact that they are closed access materials, and they do not utlize the
@@ -61,6 +62,7 @@ Here are some reasons that we wanted to change the course
   tools to solve engineering problems when they leave our bachelor's program.
 - There is evidence that methods other than the traditional lecture style of
   typical engineering classes are more effective for student learning.
+- We wanted to experiement with using computational thinking methods.
 
 Computation
 ===========
@@ -73,25 +75,32 @@ What We Did
 Interactive Digital Textbook
 ----------------------------
 
-We wrote a series of 14 Jupyter notebooks that serve as the core learning
-resources for the course. These notebooks together are effecitvely a textbook
-and replace the need for a traditional static, paper text. The design of these
-notebooks has these features:
+We wrote a series of 14 Jupyter_ notebooks that serve as the core learning
+resources for the course. These notebooks taken together are effecitvely a
+textbook and replace the need for a traditional static, paper text. The design
+of this text has these features:
 
-- Approximately 1 notebook per 20 two hour lecture periods, i.e. just the right
-  length for the 10 week course.
-- The notebooks mix written text, mathematical equations, static figures, and
-  live Python code that can be executed to create interactive figures.
+- Approximately 1 notebook per each of the 20 two hour lecture periods, i.e.
+  just the right length for the 10 week course.
+- The notebooks mix written text, mathematical equations, static figures,
+  videos, and live Python code that can be executed to create interactive
+  figures.
 - Each notebook introduces a new real vibrating mechanical system as a
-  motivation for learning the following concepts.
+  motivation for learning the subsequent concepts.
 - The notebooks are licensed under the Creative Commons Attribution license to
   maximize reuse potential.
+- The notebooks are intended to be used live in class with embedded interactive
+  exercises.
+
+.. _Jupyter: http://jupyter.org
 
 Software Library
 ----------------
 
 The text book is accompanied by a custom Python software library called
-"resonance". This library was designed with these features in mind:
+"resonance". We decided to develop the custom library so that we could
+carefully design it to scaffold the exposure to the concepts we introduced in
+the text. The library was designed with these features in mind:
 
 - Provide a framework for learning mechanical vibration concepts.
 - Allow students to construct, simulate, analyze, and visualize vibrating
@@ -100,7 +109,8 @@ The text book is accompanied by a custom Python software library called
   scoffolded way as the course progresses. Hide object oriented class
   construction completely.
 - Structed around "system" objects that have similarities to real vibrating
-  mechanical systems.
+  mechanical systems and can be experiemented with in much the same way one
+  might do in lab.
 
 Active Computing In Class
 -------------------------
@@ -123,13 +133,18 @@ Computational Homeworks
 Project Instead of Exams
 ------------------------
 
-We orginally intended to have a midterm, a final, and a course project. We
+The previous course design had two in-class pen and paper exams. We added an
+individual course project to more effectively assess the course learning
+objectives and provide a realistic engineering exercise.
+
+We orginally intended to have a midterm, a final, and a course project but we
 dropped the final exam due to two reasons:
 
-1. It was simply too much work for the students.
-2. We gave a midterm that required live coding to solve the problems.
+1. Two exams and a project was simply too much work.
+2. We gave a midterm that required live coding to solve the problems that did
+   not effectively assess what the students had learned.
 
-Next year, I will likely remove the midterm and break the projec tinto two
+Next year, I will likely remove the midterm and break the project into two
 phases.
 
 JupyterHub Service
@@ -146,8 +161,10 @@ Computational Thinking Workshop and Seminar
 -------------------------------------------
 
 We held a "Computational Thinking in the Engineering and Sciences Curriculum"
-workshop on January 5th for about 20 faculty, staff, and graduate students.
-
+workshop at the UCD Data Science Institute on January 5th for about 20 faculty,
+staff, and graduate students from a variety of discplines around campus. We
+proposed seven methods of utilizing computation to learn domain specific
+concepts and the attendees developed examples from their domains.
 
 What To Improve
 ===============
