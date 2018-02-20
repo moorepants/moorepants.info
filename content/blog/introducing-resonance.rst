@@ -21,37 +21,43 @@ Course Description
 *Introduction to Mechanical Vibrations* is a 30+ year old upper level elective
 in the mechanical engineering curriculum at UC Davis. It is a classic
 mechanical engineering course that likely stems from the courses and books of
-Den Hartog in the 1920s at MIT in the USA.
+Timoshenko and Den Hartog in the early 20th century.
 
 The course advances students' understanding of vibrating mechanical systems,
 building on fundmendtal dynamics and providing the theory of small periodic
-motions based on analytical analysis of linear differential equations that
-derive from Newton's Second Law of Motion. These foundational concepts provide
-insight into the design of machines to both minimize undesired vibrations and
-exploit desired vibrations.
+motions based primarily on the mathematical analysis of linear differential
+equations which are derived from Newton's Second Law of Motion. These
+foundational concepts provide insight into the design of machines to both
+minimize undesired vibrations and exploit desired vibrations.
 
-Early mechanical vibration courses were mostly theorecitcal and not
-particularly applied in nature. There may be some accompanying laboratories to
-experimeent with real vibrating systems at some universities and since the 80s,
-these courses have often been enhanced by utilizing computational tools such as
-Matlab to solve problems that are difficult or unwiedly to solve by hand.
+Early mechanical vibration courses were presented from a theorecitcal veiwpoint
+and tied to the analtyic tools of the day. There may have been some courses
+with accompanying laboratories to experimeent with real vibrating systems and
+since the 80s, mechanical vibrations courses have often been enhanced with
+computational tools such as Matlab to solve problems that are difficult or
+unwiedly to solve by hand.
 
 These courses typically have the standard engineering course format: professor
-lectures in class by deriving mathematical theory on the board and doing
-example problems, the students are assigned homework problems each week for
-practice at appling and understanding the theory, and exams are given that are
-similar to homework problems to assess student learning.
+lectures in class by deriving mathematical theory on the board and does example
+problems to accompany the theory, the students are assigned homework problems
+each week for practice at appling and understanding the theory, and exams are
+given that are similar to homework problems to assess student learning.
+
+This format has served the engineering profession for a century or more, but
+there are a number of reasons to believe that this course could be changed to
+both improve learning and provide students with skills that are more relevant
+to their future work.
 
 Why Change?
 ===========
 
-Here are some reasons that we wanted to change the course
+Here are the main reasons that we wanted to change the course:
 
 - This type of course has likely only changed in one significnat way in 100
   years with addition of computational tools in the 80s. It is true that
   foundational theory doesn't change much in that time, but it is equally true
   that much of traditional materials may not be directly relevant to solving
-  modern vibration related problems.
+  modern vibration related problems and thus could be removed.
 - Traditional engineering textbooks are becoming antiquated due to their high
   cost to the students, their scope not fitting courses they are designed for,
   the fact that they are closed access materials, and they do not utlize the
@@ -69,6 +75,46 @@ Computation
 
 An aside to talk a bit about computational thinking and experimentation.
 
+An engineer's primary goal is to solve problems. Solving each problem requires
+some minimal understanding of how the world works. Before computers, engineers
+performed, potentially costly, experiments and developed mathematical models of
+the phoemoma the observed so that these models can predict similar phenomena.
+Thus, if one could reason about the world uwsing mathematical language, you
+could gain great power. With the advent of computers, computation was typically
+used to enhance the mathematics so that mathematical problems could be solve
+more efficiently. The steps were:
+
+1. Observe phenomena
+2. Develop a mathematical causal relationship that predicts the phenomena
+3. Implement the mathematical relationship with computation
+4. Make predictions to solve problems
+
+This is a powerful and invaluable process, but it is also true that,
+taken to an extream, one can remove step 2 and potentially reason about the
+world directly in the language of computation. Calculating probabilites offer
+simple examples.
+
+TOOD : Rolling dice example
+TODO : Or do the frequency response example
+
+.. code:: python
+
+   from random import choice
+   count = 0
+   num_trials = 10000
+   for trial in range(num_trials):
+       rolls = []
+       for roll in range(10):
+               rolls.append(choice([1, 2, 3, 4, 5, 6]))
+       if len([r for r in rolls if r == 3]) > 1:
+               count += 1
+   print(count / num_trials)
+
+This abilty to reason about the world through computational languages, is the
+essence of "computational thinking". Computational thinking adds a
+complementary mode of reasoning to experimentation and mathematical modeling.
+In some cases, it may even be used as a replacement.
+
 What We Did
 ===========
 
@@ -76,9 +122,9 @@ Interactive Digital Textbook
 ----------------------------
 
 We wrote a series of 14 Jupyter_ notebooks that serve as the core learning
-resources for the course. These notebooks taken together are effecitvely a
-textbook and replace the need for a traditional static, paper text. The design
-of this text has these features:
+resources for the course. We consider these notebooks taken together a textbook
+and replace the need for a traditional static, paper text. The design of this
+text has these features:
 
 - Approximately 1 notebook per each of the 20 two hour lecture periods, i.e.
   just the right length for the 10 week course.
@@ -108,6 +154,8 @@ the text. The library was designed with these features in mind:
 - Hide Python programming details up front, but allow them to be exposed in a
   scoffolded way as the course progresses. Hide object oriented class
   construction completely.
+- Include many very informative error messages.
+- Performance is secondary to usability.
 - Structed around "system" objects that have similarities to real vibrating
   mechanical systems and can be experiemented with in much the same way one
   might do in lab.
@@ -169,7 +217,9 @@ concepts and the attendees developed examples from their domains.
 What To Improve
 ===============
 
-- Need classroom that fits the class (tables!)
+- Need classroom that is appropirate for the class activities (i.e. need tables!)
+- Analytical ODEs need to be shown after the computational methods, could
+  motivate students to learn more about them.
 
 Conclusion
 ==========
