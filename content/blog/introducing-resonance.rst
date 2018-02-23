@@ -23,27 +23,28 @@ Course Description
 *Introduction to Mechanical Vibrations* is a 30+ year old upper level elective
 in the mechanical engineering curriculum at UC Davis. It is a classic
 mechanical engineering course that likely stems from the courses and books of
-Timoshenko and Den Hartog in the early 20th century.
+Timoshenko and Den Hartog from the early 20th century.
 
 The course advances students' understanding of `vibrating mechanical systems`_,
-building on fundmendtal dynamics and providing the theory of small periodic
-motions based primarily on the mathematical analysis of linear differential
-equations which are derived from Newton's Second Law of Motion. These
-foundational concepts provide insight into the design of machines to both
-minimize undesired vibrations and exploit desired vibrations.
+which is backed by the theory of small periodic motions based primarily on the
+mathematical analysis of linear differential equations which are derived from
+Newton's Second Law of Motion. These foundational concepts provide insight into
+the design of machines to both minimize undesired vibrations and exploit
+desired vibrations.
 
-Early mechanical vibration courses were presented from a theorecitcal veiwpoint
-and tied to the analtyic tools of the day. There may have been some courses
-with accompanying laboratories to experimeent with real vibrating systems and
+Early mechanical vibration courses were presented from a theoretical viewpoint
+and tied to the analytic tools of the day. There may have been some courses
+with accompanying laboratories to experiment with real vibrating systems and
 since the 80s, mechanical vibrations courses have often been enhanced with
-computational tools such as Matlab to solve problems that are difficult or
-unwiedly to solve by hand.
+computational tools, such as Matlab, to solve problems that are difficult or
+unwieldy to solve by hand.
 
-These courses typically have the standard engineering course format: professor
-lectures in class by deriving mathematical theory on the board and does example
-problems to accompany the theory, the students are assigned homework problems
-each week for practice at appling and understanding the theory, and exams are
-given that are similar to homework problems to assess student learning.
+These courses typically have the standard engineering course format, i.e. the
+professor lectures in class by deriving mathematical theory on the board and
+does example problems to accompany the theory, the students are assigned
+homework problems each week for practice at applying and understanding the
+theory, and exams are given that are similar to homework problems to assess
+student learning.
 
 This format has served the engineering profession for a century or more, but
 there are a number of reasons to believe that this course could be changed to
@@ -59,8 +60,8 @@ Why Change?
 
 Here are the main reasons that we wanted to change the course:
 
-- This type of course has likely only changed in one significnat way in 100
-  years with addition of accessible computational tools in the 80s. Althought
+- This type of course has likely only changed in one significant way in 100
+  years with addition of accessible computational tools in the 80s. Although
   it is true that foundational theory does not change much in that time, but it
   is equally true that much of traditional materials may not be directly
   relevant to solving modern vibration related problems and thus could be
