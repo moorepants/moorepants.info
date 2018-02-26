@@ -22,22 +22,22 @@ Course Description
 
 *Introduction to Mechanical Vibrations* is a 30+ year old upper level elective
 in the mechanical engineering curriculum at UC Davis. It is a classic
-mechanical engineering course that likely stems from the courses and books of
+mechanical engineering course that stems from the courses and books of
 Timoshenko and Den Hartog from the early 20th century.
 
 The course advances students' understanding of `vibrating mechanical systems`_,
-which is backed by the theory of small periodic motions based primarily on the
+who's foundation is the theory of small periodic motions based primarily on the
 mathematical analysis of linear differential equations which are derived from
 Newton's Second Law of Motion. These foundational concepts provide insight into
 the design of machines to both minimize undesired vibrations and exploit
 desired vibrations.
 
-Early mechanical vibration courses were presented from a theoretical viewpoint
-and tied to the analytic tools of the day. There may have been some courses
-with accompanying laboratories to experiment with real vibrating systems and
-since the 80s, mechanical vibrations courses have often been enhanced with
-computational tools, such as Matlab, to solve problems that are difficult or
-unwieldy to solve by hand.
+Early mechanical vibration courses were presented primarily from a theoretical
+viewpoint and tied to the analytic tools of the day. There have also been some
+courses with accompanying laboratories to experiment with real vibrating
+systems, but those are fewer. And since the late 80s, mechanical vibrations
+courses have often been enhanced with computational tools, such as Matlab, to
+solve problems that are difficult or unwieldy to solve by hand.
 
 These courses typically have the standard engineering course format, i.e. the
 professor lectures in class by deriving mathematical theory on the board and
@@ -46,10 +46,10 @@ homework problems each week for practice at applying and understanding the
 theory, and exams are given that are similar to homework problems to assess
 student learning.
 
-This format has served the engineering profession for a century or more, but
-there are a number of reasons to believe that this course could be changed to
-both improve learning and provide students with skills that are more relevant
-to their future work.
+This format has served the engineering profession well for a century or more,
+but there are a number of reasons to believe that this course could be changed
+to both improve learning and provide students with skills that are more
+relevant to their future work.
 
 .. _vibrating mechanical systems: https://en.wikipedia.org/wiki/Vibration
 
@@ -62,72 +62,81 @@ Here are the main reasons that we wanted to change the course:
 
 - This type of course has likely only changed in one significant way in 100
   years with addition of accessible computational tools in the 80s. Although
-  it is true that foundational theory does not change much in that time, but it
+  it is true that foundational theory does not change much in that time, it
   is equally true that much of traditional materials may not be directly
   relevant to solving modern vibration related problems and thus could be
   removed.
 - Traditional engineering textbooks are becoming antiquated due to their high
   cost to the students, their scope not fitting courses they are designed for,
-  the fact that they are closed access materials, and they do not utlize the
+  the fact that they are closed access, and that they do not utilize the
   power of the world wide web to optimally enhance the materials. Additionally,
   there is a long list of mechanical vibrations textbooks and editions from the
   past 100 years that more-or-less provide the same materials.
 - There is evidence that methods other than the traditional lecture style of
   typical engineering classes are more effective for student learning.
-- We would like to increase the likelhood that students utlize computatoinal
-  thinking and related tools to solve engineering problems when they leave our
-  bachelor's program.
+- We would like to increase the likelihood that students utilize computational
+  thinking and the related tools to solve engineering problems when they leave
+  our bachelor's program.
 
 Computational Thinking
 ======================
 
+The last point above requires some explanation. Engineering courses often have
+computational components, but students may or may not learn to "think
+computationally".
+
 An engineer's primary goal is to solve problems, using the knowledge and tools
 at hand. In some sense, all people are engineers, but effective engineers make
-use of TODO. Solving each problem requires some minimal understanding of how
-the world works. Before computers, engineers performed, potentially costly,
-experiments and developed mathematical models of the phoemoma the observed so
-that these models can predict similar phenomena.  Thus, if one could reason
-about the world uwsing mathematical language, you could gain great power. With
-the advent of computers, computation was typically used to enhance the
-mathematics so that mathematical problems could be solve more efficiently. The
-steps are something like:
+heavy use of scientifically backed theory. Solving each problem requires some
+minimal understanding of how the world works. Before computers, engineers
+performed, potentially costly, experiments and developed mathematical models of
+the phenomena the observed so that these models can predict similar phenomena.
+Thus, if one could reason about the world using mathematical language, you
+could gain great power. With the advent of computers, computation was typically
+used to enhance the mathematics so that mathematical problems could be solve
+more efficiently. The steps are something along the lines of:
 
 1. Observe phenomena
-2. Optionally, perform a controlled physical experiement to learn specfically
-   about the phenoma
+2. Optionally, perform a controlled physical experiment to learn specifically
+   about the phenomena
 3. Develop a mathematical causal relationship that predicts the phenomena
 4. Implement the mathematical relationship with computation
 5. Make predictions to solve problems
 
-This is a powerful and invaluable process, but it is also true that,
-taken to an extreme, one can remove step 3 and potentially reason about the
-world directly in the language of computation.
+This is a powerful and invaluable process, but it is also true that, taken to
+an extreme, one can remove step 3 and potentially reason about the world
+directly in the language of computation.
 
-Calculating probabilites offers simple examples. For example, if you want to
-answer "What is the probabily of rolling at least two 3's if you roll a 6 sided dice 10
-times?" You can mathematically formulate the following equation using
-probability theory:
+Calculating probabilities offers simple examples. For example, if you want to
+answer:
+
+   What is the probability of rolling at least two 3's if you roll a 6 sided
+   dice 10 times?
+
+You can mathematically formulate the following equation using probability
+theory:
 
 .. math::
 
    P(A) = \sum_{i=2}^{10} \binom{10}{i} \left(\frac{1}{6}\right)^i \left(\frac{5}{6}\right)^{10-i}
 
 and when you complete the numerical calculation you will find the probability
-is about 52%.
+is about 52 in a 100.
 
 You can also literally roll 10 dice many many times and tally how many of the
 sets of rolls met the criteria. Thinking about this experiment is much easier
-than reasoning about probabilities. But you'd have to roll the ten dice about
-10000 times to get an accurate probabilty. Fortunately, this is something a
-computer is good at. Being able to reason about this problem and, for example,
-write in the following Python code you will get the same answer as the
-reasoning through probability theory. In this case, computational reasoning is
-vastly simpler than what is needed for the mathematical reasoning.
+than reasoning about probabilities. But you'd have to roll the ten dice upwards
+of 10000 times to get an accurate estimate of the probability. Fortunately,
+this is something a computer is good at. Being able to reason about this
+problem and, for example, write in the following Python code you will get the
+same answer as the reasoning through probability theory. In this case,
+computational reasoning is vastly simpler than what is needed for the
+mathematical reasoning.
 
 .. code:: python
 
    from random import choice
-   num_trials = 100000
+   num_trials = 10000
    dice_sides = [1, 2, 3, 4, 5, 6]
    count = 0
    for trial in range(num_trials):
@@ -135,7 +144,7 @@ vastly simpler than what is needed for the mathematical reasoning.
             count += 1
    print(count / num_trials)
 
-This abilty to reason about the world through computational language, is the
+This ability to reason about the world through computational language, is the
 essence of "computational thinking". Computational thinking adds a
 complementary mode of reasoning to experimentation and mathematical modeling.
 In some cases, it may even be used as a replacement for one, the other, or
@@ -169,7 +178,7 @@ text. The design of this text has these features:
   figures.
 - Each notebook introduces a new real vibrating mechanical system as a
   motivation for learning the subsequent concepts.
-- Computational thining approaches are utilized if possible.
+- Computational thinking approaches are utilized if possible.
 - The notebooks are licensed under the Creative Commons Attribution license to
   maximize reuse potential.
 - The notebooks are intended to be used live in class with embedded interactive
@@ -194,8 +203,8 @@ the text. The library was designed with these features in mind:
   construction completely.
 - Include many very informative error messages.
 - Performance is secondary to usability.
-- Structed around "system" objects that have similarities to real vibrating
-  mechanical systems and can be experiemented with in much the same way one
+- Structured around "system" objects that have similarities to real vibrating
+  mechanical systems and can be experimented with in much the same way one
   might do in lab.
 
 .. _resonance: https://github.com/moorepants/resonance/
@@ -205,8 +214,8 @@ Active Computing In Class
 
 The notebooks were presented live in class. Each student downloaded the
 notebook at the beginning of the class period for use on their laptop. The
-instructor led the students through the notebooks by offereing verbal summaries
-and addendums via "boardwork" to the written text. The instructor executed the
+instructor led the students through the notebooks by offering verbal summaries
+and addenda via "board work" to the written text. The instructor executed the
 code cells to produce various figures and then discussed them. Each notebook
 included short exercises (about 8-10 per 2 hr period) interspersed throughout
 the text that were geared to assessing students on the prior 10 minutes of
@@ -228,7 +237,7 @@ several reasons:
   one point, Kenny fixed a library bug live in class as soon as we uncovered
   it.
 - We were able to utilize nbgrader_ for distribution, collection, and grading
-  of the materials and assginments (see more below).
+  of the materials and assignments (see more below).
 
 Computational Homeworks
 -----------------------
@@ -243,7 +252,7 @@ The previous course design had two in-class pen and paper exams. We added an
 individual course project to more effectively assess the course learning
 objectives and provide a realistic engineering exercise.
 
-We orginally intended to have a midterm, a final, and a course project but we
+We originally intended to have a midterm, a final, and a course project but we
 dropped the final exam due to two reasons:
 
 1. Two exams and a project was simply too much work.
@@ -268,7 +277,7 @@ Computational Thinking Workshop and Seminar
 
 We held a "Computational Thinking in the Engineering and Sciences Curriculum"
 workshop at the UCD Data Science Institute on January 5th for about 20 faculty,
-staff, and graduate students from a variety of discplines around campus. We
+staff, and graduate students from a variety of disciplines around campus. We
 proposed seven methods of utilizing computation to learn domain specific
 concepts and the attendees developed examples from their domains.
 
@@ -298,13 +307,18 @@ http://allendowney.blogspot.com/2018/01/computation-in-stem-workshop.html
 What To Improve
 ===============
 
-- Need classroom that is appropirate for the class activities (i.e. need tables!)
+- Need classroom that is appropriate for the class activities (i.e. need tables!)
 - Analytical ODEs need to be shown after the computational methods, could
   motivate students to learn more about them.
 
 Conclusion
 ==========
 
+After the first delivery of the course, I think the best questing to ask is
+"Can students solve problems related to mechanical vibrations better than if
+they were to take a different course?", as that is the primary objective. It
+was evident from their final project that they could, but the problem was
+designed by me to be solvable with the things I knew (or hoped) they'd learned.
 
 Acknowledgements
 ================
