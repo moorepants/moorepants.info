@@ -279,7 +279,7 @@ We held a "Computational Thinking in the Engineering and Sciences Curriculum"
 workshop at the UCD Data Science Institute on January 5th for about 20 faculty,
 staff, and graduate students from a variety of disciplines around campus. We
 proposed seven methods of utilizing computation to learn domain specific
-concepts and the attendees developed examples from their domains.
+concepts and the attendees developed a variety of examples from their domains.
 
    This workshop invites faculty to think about computation in the context of
    engineering education and to design classroom experiences that develop
@@ -289,6 +289,8 @@ concepts and the attendees developed examples from their domains.
    materials to deploy in their classes. Although our examples come from
    engineering, this workshop may also be of interest to faculty in the natural
    and social sciences as well as mathematics.
+
+Workshop slides:
 
 .. raw:: html
 
@@ -303,6 +305,33 @@ concepts and the attendees developed examples from their domains.
    </iframe>
 
 http://allendowney.blogspot.com/2018/01/computation-in-stem-workshop.html
+
+Our workshop video:
+
+.. raw:: html
+
+   <iframe
+     width="560"
+     height="315"
+     src="https://www.youtube.com/embed/lfRVRqdYdjM"
+     frameborder="0"
+     allow="autoplay; encrypted-media"
+     allowfullscreen>
+   </iframe>
+
+Allen's talk "Programming as a Way of Thinking":
+
+.. raw:: html
+
+   <iframe
+     width="560"
+     height="315"
+     src="https://www.youtube.com/embed/6noFqh7JIR0"
+     frameborder="0"
+     allow="autoplay; encrypted-media"
+     allowfullscreen>
+   </iframe>
+
 
 What To Improve
 ===============
