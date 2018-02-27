@@ -20,13 +20,12 @@ tags:
 Course Description
 ==================
 
-*Introduction to Mechanical Vibrations* is a 30+ year old upper level elective
-in the mechanical engineering curriculum at UC Davis. It is a classic
+*`Introduction to Mechanical Vibrations`_* is a 30+ year old upper level
+elective in the mechanical engineering curriculum at UC Davis. It is a classic
 mechanical engineering course that stems from the courses and books of
-Timoshenko and Den Hartog from the early 20th century.
-
-The course advances students' understanding of `vibrating mechanical systems`_,
-who's foundation is the theory of small periodic motions based primarily on the
+Timoshenko and Den Hartog from the early 20th century. The course advances
+students' understanding of `vibrating mechanical systems`_, that has a
+foundation is the theory of small periodic motions based primarily on the
 mathematical analysis of linear differential equations which are derived from
 Newton's Second Law of Motion. These foundational concepts provide insight into
 the design of machines to both minimize undesired vibrations and exploit
@@ -51,6 +50,7 @@ but there are a number of reasons to believe that this course could be changed
 to both improve learning and provide students with skills that are more
 relevant to their future work.
 
+.. _Introduction to Mechanical Vibrations: https://github.io/moorepants/eng122
 .. _vibrating mechanical systems: https://en.wikipedia.org/wiki/Vibration
 
 {% endmark %}
@@ -275,11 +275,12 @@ blog post`_.
 Computational Thinking Workshop and Seminar
 -------------------------------------------
 
-We held a "Computational Thinking in the Engineering and Sciences Curriculum"
-workshop at the UCD Data Science Institute on January 5th for about 20 faculty,
-staff, and graduate students from a variety of disciplines around campus. We
-proposed seven methods of utilizing computation to learn domain specific
-concepts and the attendees developed a variety of examples from their domains.
+We held a workshop titled "Computational Thinking in the Engineering and
+Sciences Curriculum" at the UCD Data Science Institute on January 5th for about
+20 faculty, staff, and graduate students from a variety of disciplines around
+campus. We proposed seven methods of utilizing computation to learn domain
+specific concepts and the attendees developed a variety of examples from their
+domains. The abstract read:
 
    This workshop invites faculty to think about computation in the context of
    engineering education and to design classroom experiences that develop
@@ -290,7 +291,19 @@ concepts and the attendees developed a variety of examples from their domains.
    engineering, this workshop may also be of interest to faculty in the natural
    and social sciences as well as mathematics.
 
-Workshop slides:
+The workshop was recorded and can be viewed below along with the accompanying
+slides:
+
+.. raw:: html
+
+   <iframe
+     width="560"
+     height="315"
+     src="https://www.youtube.com/embed/lfRVRqdYdjM"
+     frameborder="0"
+     allow="autoplay; encrypted-media"
+     allowfullscreen>
+   </iframe>
 
 .. raw:: html
 
@@ -306,20 +319,8 @@ Workshop slides:
 
 http://allendowney.blogspot.com/2018/01/computation-in-stem-workshop.html
 
-Our workshop video:
-
-.. raw:: html
-
-   <iframe
-     width="560"
-     height="315"
-     src="https://www.youtube.com/embed/lfRVRqdYdjM"
-     frameborder="0"
-     allow="autoplay; encrypted-media"
-     allowfullscreen>
-   </iframe>
-
-Allen's talk "Programming as a Way of Thinking":
+Additionally, Allen gave a more general seminar on "Programming as a Way of
+Thinking":
 
 .. raw:: html
 
@@ -332,6 +333,7 @@ Allen's talk "Programming as a Way of Thinking":
      allowfullscreen>
    </iframe>
 
+TODO : Added slides.
 
 What To Improve
 ===============
@@ -343,28 +345,34 @@ What To Improve
 Conclusion
 ==========
 
-After the first delivery of the course, I think the best questing to ask is
+After the first delivery of the course, the best question to ask may be
 "Can students solve problems related to mechanical vibrations better than if
-they were to take a different course?", as that is the primary objective. It
+they were to have taken a different course?", as that is the primary objective. It
 was evident from their final project that they could, but the problem was
 designed by me to be solvable with the things I knew (or hoped) they'd learned.
+This question is difficult to answer without a properly designed and executed
+experiment.
 
 Acknowledgements
 ================
 
 This blog post was made possible by the Undergraduate Instructional Innovation
 Program at the `Center for Educational Effectiveness`_ at the University of
-California, Davis. The funding proposal can be viewed on Figshare_.
+California, Davis.
 
-Many thanks to Jason Moore in the MAE Department at UC Davis for inviting me
-and running the workshop with me, to Pamela Reynolds at the UC Davis Data
-Science Initiative for hosting us, and to the Collaboratory at Olin College for
-supporting my participation.  This workshop was supported by funding from the
-Undergraduate Instructional Innovation Program, which is funded by the
-Association of American Universities (AAU) and Google, and administered by UC
-Davis's Center for Educational Effectiveness.
+This workshop
+was supported by funding from the Undergraduate Instructional Innovation
+Program, which is funded by the Association of American Universities (AAU) and
+Google, and administered by UC Davis's Center for Educational Effectiveness.
 
-Luiz, Kenny, Ben
+
+We thank Allen Downey from Olin College for visitng and teaching us, Pamela
+Reynolds at the UC Davis Data Science Initiative for hosting the workshop. 
+
+Luize Irber for filming and editing the videos, Kenneth Lyons and Benjamin
+Margolis for help with organizing the workshops
+
+The funding proposal can be viewed on Figshare_.
 
 .. _Figshare: https://doi.org/10.6084/m9.figshare.5229886.v1
 .. _Center for Educational Effectiveness: https://cee.ucdavis.edu/
