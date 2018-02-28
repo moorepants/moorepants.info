@@ -31,12 +31,12 @@ Newton's Second Law of Motion. These foundational concepts provide insight into
 the design of machines to both minimize undesired vibrations and exploit
 desired vibrations.
 
-Early mechanical vibration courses were presented primarily from a theoretical
-viewpoint and tied to the analytic tools of the day. There have also been some
-courses with accompanying laboratories to experiment with real vibrating
-systems, but those are fewer. And since the late 80s, mechanical vibrations
-courses have often been enhanced with computational tools, such as Matlab, to
-solve problems that are difficult or unwieldy to solve by hand.
+Early mechanical vibration courses have been presented primarily from a
+theoretical viewpoint and tied to the analytic tools of the day. There have
+also been some courses with accompanying laboratories to experiment with real
+vibrating systems, but those are fewer. And since the late 80s, mechanical
+vibrations courses have often been enhanced with computational tools, such as
+Matlab, to solve problems that are difficult or unwieldy to solve by hand.
 
 These courses typically have the standard engineering course format, i.e. the
 professor lectures in class by deriving mathematical theory on the board and
@@ -58,7 +58,7 @@ relevant to their future work.
 Why Change?
 ===========
 
-Here are the main reasons that we wanted to change the course:
+The main reasons that we wanted to change the course are:
 
 - This type of course has likely only changed in one significant way in 100
   years with addition of accessible computational tools in the 80s. Although
@@ -81,9 +81,9 @@ Here are the main reasons that we wanted to change the course:
 Computational Thinking
 ======================
 
-The last point above requires some explanation. Engineering courses often have
-computational components, but students may or may not learn to "think
-computationally".
+The last point above requires some elaboration, as it is central tenant to the
+course redesign. Engineering courses often have computational components, but
+students may or may not learn to "think computationally".
 
 An engineer's primary goal is to solve problems, using the knowledge and tools
 at hand. In some sense, all people are engineers, but effective engineers make
@@ -121,17 +121,19 @@ theory:
    P(A) = \sum_{i=2}^{10} \binom{10}{i} \left(\frac{1}{6}\right)^i \left(\frac{5}{6}\right)^{10-i}
 
 and when you complete the numerical calculation you will find the probability
-is about 52 in a 100.
+is about 52 in a 100. To be able to do this you need to be well verse it a
+number of mathematical theories.
 
-You can also literally roll 10 dice many many times and tally how many of the
-sets of rolls met the criteria. Thinking about this experiment is much easier
-than reasoning about probabilities. But you'd have to roll the ten dice upwards
-of 10000 times to get an accurate estimate of the probability. Fortunately,
-this is something a computer is good at. Being able to reason about this
-problem and, for example, write in the following Python code you will get the
-same answer as the reasoning through probability theory. In this case,
-computational reasoning is vastly simpler than what is needed for the
-mathematical reasoning.
+From another perspective, you can also literally roll 10 dice many many times
+and tally how many of the sets of rolls met the criteria. Thinking about this
+experiment is much easier than reasoning about probabilities. But you'd have to
+roll the ten dice upwards of 10000 times to get an accurate estimate of the
+probability. Fortunately, this is something a computer is good at. Being able
+to reason about this problem and, for example, write in the following Python
+code you will get the same answer as the reasoning through probability theory.
+In this case, computational reasoning is likely vastly simpler than what is
+needed for the mathematical reasoning if you have basic programming concepts in
+your toolbox.
 
 .. code:: python
 
@@ -163,8 +165,11 @@ simulation instead of frequency domain transfer function.
 What We Did
 ===========
 
-Interactive OA Digital Textbook
--------------------------------
+The course redesign require quite a few changes to structure the learning as
+desired. The following presents summaries of the various changes:
+
+Interactive Open Access Digital Textbook
+----------------------------------------
 
 We wrote a `series of 14 modules`_ in the form of Jupyter_ notebooks that serve
 as the core learning resources for the course. We consider these notebooks
@@ -176,8 +181,8 @@ text. The design of this text has these features:
 - The notebooks mix written text, mathematical equations, static figures,
   videos, and live Python code that can be executed to create interactive
   figures.
-- Each notebook introduces a new real vibrating mechanical system as a
-  motivation for learning the subsequent concepts.
+- Each notebook introduces a new real (and hopefully interesting) vibrating
+  mechanical system as a motivation for learning the subsequent concepts.
 - Computational thinking approaches are utilized if possible.
 - The notebooks are licensed under the Creative Commons Attribution license to
   maximize reuse potential.
@@ -191,16 +196,17 @@ Software Library
 ----------------
 
 The text book is accompanied by a custom Python software library called
-"resonance_". We decided to develop the custom library so that we could
-carefully design it to scaffold the exposure to the concepts we introduced in
-the text. The library was designed with these features in mind:
+"resonance_". We decided to create this library so that we could carefully
+design the application programming interface (API) to scaffold the exposure to
+the concepts we introduced in the text. The library was designed with these
+features in mind:
 
 - Provide a framework for learning mechanical vibration concepts.
 - Allow students to construct, simulate, analyze, and visualize vibrating
-  systems with a simple application programming interface.
+  systems with a simple API.
 - Hide Python programming details up front, but allow them to be exposed in a
-  scoffolded way as the course progresses. Hide object oriented class
-  construction completely.
+  scoffolded way as the course progresses. For example, hide object oriented
+  class construction completely.
 - Include many very informative error messages.
 - Performance is secondary to usability.
 - Structured around "system" objects that have similarities to real vibrating
@@ -216,19 +222,23 @@ The notebooks were presented live in class. Each student downloaded the
 notebook at the beginning of the class period for use on their laptop. The
 instructor led the students through the notebooks by offering verbal summaries
 and addenda via "board work" to the written text. The instructor executed the
-code cells to produce various figures and then discussed them. Each notebook
-included short exercises (about 8-10 per 2 hr period) interspersed throughout
-the text that were geared to assessing students on the prior 10 minutes of
-instruction. These exercises had easily accessible solutions to ensure students
-could move forward even if the solution was not obtained. The notebooks were
-submitted at the end of the class for participation credit.
+code cells to produce various figures and then discussed them, often live
+coding answers to questions. Each notebook included short exercises (about 8-10
+per 2 hr period) interspersed throughout the text that were geared to assessing
+students on the prior 10 minutes of instruction and reading. These exercises
+had easily accessible solutions to ensure students could move forward even if
+the solution was not obtained in the allocated time. We attempted to pace the
+exercises such that the vast majority of the class completed them. The students
+were encouraged to work together and the instructors were present to answer
+questions during the exercises. The notebooks were submitted at the end of the
+class for participation credit.
 
 JupyterHub Service
 ------------------
 
-We purchased a server and installed JupyterHub_ for the students to use both in
-and out of class for their course work. This turned out to be a great idea for
-several reasons:
+We purchased a server and installed the cloud computing service JupyterHub_ for
+the students to use both in and out of class for their course work. This turned
+out to be a great idea for several reasons:
 
 - Students did not have to install any software, we fully controlled the
   computation environment to ensure everything worked as desired.
@@ -257,10 +267,12 @@ dropped the final exam due to two reasons:
 
 1. Two exams and a project was simply too much work.
 2. We gave a midterm that required live coding to solve the problems that did
-   not effectively assess what the students had learned.
+   not effectively assess what the students had learned, due to student getting
+   caught on programming issues more than anticipated.
 
 Next year, I will likely remove the midterm and break the project into two
-phases.
+phases. The projects proved to be a much more effective method for students to
+demonstrate what they had learned.
 
 SciPy BoF
 ---------
@@ -268,7 +280,8 @@ SciPy BoF
 We led a "Birds of a Feather" session on teaching modeling and simulation at
 SciPy 2017 in Austin, Texas. There were 13 participants from a variety of
 disciplines and schools. Notes from this session can be found in a `separate
-blog post`_.
+blog post`_. This BoF introduced a large number best practices for teaching
+these types of courses and established a network of potential collaborators.
 
 .. _separate blog post: http://www.moorepants.info/blog/scipy-2017-bof.html
 
@@ -345,34 +358,29 @@ What To Improve
 Conclusion
 ==========
 
-After the first delivery of the course, the best question to ask may be
-"Can students solve problems related to mechanical vibrations better than if
-they were to have taken a different course?", as that is the primary objective. It
+After the first delivery of the course, a good question to ask may be "Can
+students solve problems related to mechanical vibrations better than if they
+were to have taken a different course?", as that is our primary objective. It
 was evident from their final project that they could, but the problem was
 designed by me to be solvable with the things I knew (or hoped) they'd learned.
 This question is difficult to answer without a properly designed and executed
-experiment.
+experiment, which may be something that should be done in the future. I have
+received a mix of feedback on the course that encompassed students enjoying it
+thorourghly to students that struggled getting past the programming
+requirements.
 
 Acknowledgements
 ================
 
-This blog post was made possible by the Undergraduate Instructional Innovation
-Program at the `Center for Educational Effectiveness`_ at the University of
-California, Davis.
-
-This workshop
-was supported by funding from the Undergraduate Instructional Innovation
-Program, which is funded by the Association of American Universities (AAU) and
-Google, and administered by UC Davis's Center for Educational Effectiveness.
-
+This effort was supported by funding from the Undergraduate Instructional
+Innovation Program, which is funded by the Association of American Universities
+(AAU) and Google, and administered by UC Davis's `Center for Educational
+Effectiveness`_. The funding proposal can be viewed on Figshare_.
 
 We thank Allen Downey from Olin College for visitng and teaching us, Pamela
-Reynolds at the UC Davis Data Science Initiative for hosting the workshop. 
-
-Luize Irber for filming and editing the videos, Kenneth Lyons and Benjamin
-Margolis for help with organizing the workshops
-
-The funding proposal can be viewed on Figshare_.
+Reynolds at the UC Davis Data Science Initiative for hosting the workshop, Luiz
+Irber for filming and editing the videos, and Kenneth Lyons and Benjamin
+Margolis for help with organizing the workshops.
 
 .. _Figshare: https://doi.org/10.6084/m9.figshare.5229886.v1
 .. _Center for Educational Effectiveness: https://cee.ucdavis.edu/
