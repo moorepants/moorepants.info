@@ -375,15 +375,15 @@ requirements.
 Acknowledgements
 ================
 
-This effort was supported by funding from the Undergraduate Instructional
-Innovation Program, which is funded by the Association of American Universities
+This effort was supported with funding from the Undergraduate Instructional
+Innovation Program, which is backed by the Association of American Universities
 (AAU) and Google, and administered by UC Davis's `Center for Educational
 Effectiveness`_. The funding proposal can be viewed on Figshare_.
 
 We thank Allen Downey from Olin College for visitng and teaching us, Pamela
 Reynolds at the UC Davis Data Science Initiative for hosting the workshop, Luiz
-Irber for filming and editing the videos, and Kenneth Lyons and Benjamin
-Margolis for help with organizing the workshops.
+Irber for filming and editing the videos, MAE staff for the seminar setup, and
+Kenneth Lyons and Benjamin Margolis for help with organizing the workshops.
 
 .. _Figshare: https://doi.org/10.6084/m9.figshare.5229886.v1
 .. _Center for Educational Effectiveness: https://cee.ucdavis.edu/
