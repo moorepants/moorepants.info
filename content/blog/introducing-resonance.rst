@@ -17,6 +17,8 @@ tags:
 
 {% mark excerpt %}
 
+**Co-authored by co-instructor Kenneth Lyons.**
+
 Course Description
 ==================
 
@@ -25,7 +27,7 @@ elective in the mechanical engineering curriculum at UC Davis. It is a classic
 mechanical engineering course that stems from the courses and books of
 Timoshenko and Den Hartog from the early 20th century. The course advances
 students' understanding of `vibrating mechanical systems`_, that has a
-foundation is the theory of small periodic motions based primarily on the
+foundation is the theory of small periodic motions resulting from the
 mathematical analysis of linear differential equations which are derived from
 Newton's Second Law of Motion. These foundational concepts provide insight into
 the design of machines to both minimize undesired vibrations and exploit
@@ -34,9 +36,10 @@ desired vibrations.
 Early mechanical vibration courses have been presented primarily from a
 theoretical viewpoint and tied to the analytic tools of the day. There have
 also been some courses with accompanying laboratories to experiment with real
-vibrating systems, but those are fewer. And since the late 80s, mechanical
-vibrations courses have often been enhanced with computational tools, such as
-Matlab, to solve problems that are difficult or unwieldy to solve by hand.
+vibrating systems, but those are fewer and far between. Also since the late
+80s, mechanical vibrations courses have often been enhanced with computational
+tools, such as Matlab, to solve problems that are difficult or unwieldy to
+solve by hand.
 
 These courses typically have the standard engineering course format, i.e. the
 professor lectures in class by deriving mathematical theory on the board and
@@ -58,7 +61,7 @@ relevant to their future work.
 Why Change?
 ===========
 
-The main reasons that we wanted to change the course are:
+The main reasons that we wanted to change the course are that:
 
 - This type of course has likely only changed in one significant way in 100
   years with addition of accessible computational tools in the 80s. Although
@@ -74,8 +77,8 @@ The main reasons that we wanted to change the course are:
   past 100 years that more-or-less provide the same materials.
 - There is evidence that methods other than the traditional lecture style of
   typical engineering classes are more effective for student learning.
-- We would like to increase the likelihood that students utilize computational
-  thinking and the related tools to solve engineering problems when they leave
+- We would like to increase the likelihood that students utilize "computational
+  thinking" and the related tools to solve engineering problems when they leave
   our bachelor's program.
 
 Computational Thinking
@@ -86,15 +89,14 @@ course redesign. Engineering courses often have computational components, but
 students may or may not learn to "think computationally".
 
 An engineer's primary goal is to solve problems, using the knowledge and tools
-at hand. In some sense, all people are engineers, but effective engineers make
-heavy use of scientifically backed theory. Solving each problem requires some
-minimal understanding of how the world works. Before computers, engineers
-performed, potentially costly, experiments and developed mathematical models of
-the phenomena the observed so that these models can predict similar phenomena.
-Thus, if one could reason about the world using mathematical language, you
-could gain great power. With the advent of computers, computation was typically
-used to enhance the mathematics so that mathematical problems could be solve
-more efficiently. The steps are something along the lines of:
+at hand. Solving each problem effectivley requires some understanding of how
+the world works. Engineers perform, potentially costly, experiments and develop
+mathematical models of the phenomena they observe so that these models can
+predict similar phenomena. Thus, if one could reason about the world using
+mathematical language, you could gain great power to change it. With the advent
+of computers, computation was typically used to enhance the mathematics so that
+mathematical problems could be solve more efficiently. The steps are something
+along the lines of:
 
 1. Observe phenomena
 2. Optionally, perform a controlled physical experiment to learn specifically
@@ -104,11 +106,11 @@ more efficiently. The steps are something along the lines of:
 5. Make predictions to solve problems
 
 This is a powerful and invaluable process, but it is also true that, taken to
-an extreme, one can remove step 3 and potentially reason about the world
+an extreme, one may be able to remove step 3 and reason about the world
 directly in the language of computation.
 
-Calculating probabilities offers simple examples. For example, if you want to
-answer:
+Calculating probabilities offers simple examples that can highlight what we
+mean. For example, if you want to answer:
 
    What is the probability of rolling at least two 3's if you roll a 6 sided
    dice 10 times?
@@ -121,8 +123,8 @@ theory:
    P(A) = \sum_{i=2}^{10} \binom{10}{i} \left(\frac{1}{6}\right)^i \left(\frac{5}{6}\right)^{10-i}
 
 and when you complete the numerical calculation you will find the probability
-is about 52 in a 100. To be able to do this you need to be well verse it a
-number of mathematical theories.
+is about 52 in a 100. To be able to do this you need to be well versed in a
+number of mathematical concepts.
 
 From another perspective, you can also literally roll 10 dice many many times
 and tally how many of the sets of rolls met the criteria. Thinking about this
@@ -146,8 +148,8 @@ your toolbox.
             count += 1
    print(count / num_trials)
 
-This ability to reason about the world through computational language, is the
-essence of "computational thinking". Computational thinking adds a
+This ability to reason about the world through computational language, is a
+prime of example "computational thinking". Computational thinking adds a
 complementary mode of reasoning to experimentation and mathematical modeling.
 In some cases, it may even be used as a replacement for one, the other, or
 both.
@@ -156,8 +158,8 @@ So this begs the question: "If we drastically increase the focus on
 computational thinking to learn about mechanical vibrations, will students be
 better equipped to solve real vibration problems when they leave the class?"
 
-We believe they will, but there are a number of aspects that need to be changed
-in the course to do test this.
+We believe they will, but there are a number of aspects that needed to be
+changed in the course to do test this.
 
 TODO : Worth showing a vibrations example, e.g. find frequency response via
 simulation instead of frequency domain transfer function.
@@ -165,8 +167,9 @@ simulation instead of frequency domain transfer function.
 What We Did
 ===========
 
-The course redesign require quite a few changes to structure the learning as
-desired. The following presents summaries of the various changes:
+The course redesign required quite a number of changes to structure the
+learning around computational thinking and meet the other goals. The following
+presents summaries of the various changes:
 
 Interactive Open Access Digital Textbook
 ----------------------------------------
@@ -205,10 +208,10 @@ features in mind:
 - Allow students to construct, simulate, analyze, and visualize vibrating
   systems with a simple API.
 - Hide Python programming details up front, but allow them to be exposed in a
-  scoffolded way as the course progresses. For example, hide object oriented
-  class construction completely.
-- Include many very informative error messages.
-- Performance is secondary to usability.
+  scoffolded way as the course progresses.
+- Hide object oriented class construction completely.
+- Include many and appropriately informative error messages.
+- Performance is secondary to usability and learning.
 - Structured around "system" objects that have similarities to real vibrating
   mechanical systems and can be experimented with in much the same way one
   might do in lab.
