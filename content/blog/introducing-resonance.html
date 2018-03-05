@@ -12,7 +12,7 @@ tags:
 
 ---
 
-**Co-authored by co-instructor Kenneth Lyons.**
+**Co-authored by co-instructors Jason K. Moore and Kenneth Lyons.**
 
 Course Description
 ==================
@@ -20,12 +20,12 @@ Course Description
 {% mark excerpt %}
 
 `Introduction to Mechanical Vibrations`_ is a 30+ year old upper level elective
-in the mechanical engineering curriculum at UC Davis. It is a classic
-mechanical engineering course that stems from the courses and books of
-Timoshenko and Den Hartog from the early 20th century. The course advances
-students' understanding of `vibrating mechanical systems`_, that has a
-foundation is the theory of small periodic motions resulting from the
-mathematical analysis of linear differential equations which are derived from
+in the mechanical engineering curriculum at the University of California,
+Davis. It is a classic mechanical engineering course that stems from the
+courses and books of Timoshenko and Den Hartog from the early 20th century. The
+course advances students' understanding of `vibrating mechanical systems`_,
+that has a foundation is the theory of small periodic motions resulting from
+the mathematical analysis of linear differential equations derived from
 Newton's Second Law of Motion. These foundational concepts provide insight into
 the design of machines to both minimize undesired vibrations and exploit
 desired vibrations.
@@ -35,18 +35,18 @@ desired vibrations.
 .. figure:: {{ media_url('images/car.gif') }}
    :align: center
 
-   Animation of a half car model created with resonance; an example of the type
-   of systems students analyze and design in the course.
+   Animation of a car vibration model created with resonance; an example of the
+   type of systems students analyze and design in the course.
 
 {% endmark %}
 
-Mechanical vibration courses have been presented primarily from a theoretical
-perspective and which was tied to the early analytic tools. There have also
-been some courses with accompanying laboratories to experiment with real
-vibrating systems, but those are fewer and far between. Also, since the late
-80s, mechanical vibrations courses have often been enhanced with computational
-tools, such as Matlab, to solve problems that are difficult or unwieldy to
-solve by hand.
+Most mechanical vibration courses have been presented primarily from a
+theoretical perspective and which was tied to the early analytic tools. There
+have also been some courses with accompanying laboratories to experiment with
+real vibrating systems, but those are fewer and far between. Also, since the
+late 80s, mechanical vibrations courses have often been enhanced with
+computational tools, such as Matlab, to solve problems that are difficult or
+unwieldy to solve by hand.
 
 These courses typically have the standard engineering course format, i.e. the
 professor lectures in class by deriving mathematical theory on the board and
@@ -172,10 +172,9 @@ We believe they will, but there are a number of aspects that needed to be
 changed in the course to do test this.
 
 TODO : Worth showing a vibrations example, e.g. find frequency response via
-simulation instead of frequency domain transfer function.
+simulation instead of frequency domain transfer function?
 
 .. _computational thinking: TODO
-
 
 What We Did
 ===========
@@ -220,8 +219,8 @@ features in mind:
 - Provide a framework for learning mechanical vibration concepts.
 - Allow students to construct, simulate, analyze, and visualize vibrating
   systems with a simple API.
-- Hide Python programming details up front, but allow them to be exposed in a
-  scoffolded way as the course progresses.
+- Hide Python programming details up front, but allow them to be exposed
+  through scaffolding as the course progresses.
 - Hide object oriented class construction completely.
 - Include many and appropriately informative error messages.
 - Performance is secondary to usability and learning.
@@ -229,25 +228,59 @@ features in mind:
   mechanical systems and can be experimented with in much the same way one
   might do in lab.
 
+Below shows a quick example of how the library would be used to construct and
+simulate a linear model of simple pendulum:
+
+.. sourcecode:: python
+
+   from resonance.linear_systems import SingleDoFLinearSystem
+
+   # create a system
+   sys = SingleDoFLinearSystem()
+
+   # define the constant parameters
+   sys.constants['length'] = 1.0  # m
+   sys.constants['grav_acc'] = 9.8  # m/s
+
+   # define the coordinate and its derivatives
+   sys.coordinates['angle'] = 0.1  # rad
+   sys.speeds['ang_rate'] = 0.0  # rad/s
+
+   # define a function that returns the coefficients of the canonical
+   # differential equation: m x'' + c x' + k x = 0
+   def coeff_func(length, grav_acc):
+       return 1.0, 0.0, grav_acc / length
+
+   sys.coeff_func = coeff_func
+
+   # simulate the system for 5 seconds given the initial values
+   traj = sys.free_response(5.0)
+
+   # print the array of angle values
+   print(traj.angle)
+
 .. _resonance: https://github.com/moorepants/resonance/
 
 Active Computing In Class
 -------------------------
 
-The notebooks were presented live in class. Each student downloaded the
-notebook at the beginning of the class period for use on their laptop. The
-instructor led the students through the notebooks by offering verbal summaries
-and addenda via "board work" to the written text. The instructor executed the
-code cells to produce various figures and then discussed them, often live
-coding answers to questions. Each notebook included short exercises (about 8-10
-per 2 hr period) interspersed throughout the text that were geared to assessing
-students on the prior 10 minutes of instruction and reading. These exercises
-had easily accessible solutions to ensure students could move forward even if
-the solution was not obtained in the allocated time. We attempted to pace the
-exercises such that the vast majority of the class completed them. The students
-were encouraged to work together and the instructors were present to answer
-questions during the exercises. The notebooks were submitted at the end of the
-class for participation credit.
+The notebooks were presented live in class and followed a similar style to the
+`Software Carpentry`_ method of teaching computational skills. Each student
+downloaded the notebook at the beginning of the class period for use on their
+laptop. The instructor led the students through the notebooks by offering
+verbal summaries and addenda via "board work" to the written text. The
+instructor executed the code cells to produce various figures and then
+discussed them, often live coding answers to questions. Each notebook included
+short exercises (about 8-10 per 2 hr period) interspersed throughout the text
+that were geared to assessing students on the prior 10 minutes of instruction
+and reading. These exercises had easily accessible solutions to ensure students
+could move forward even if the solution was not obtained in the allocated time.
+We attempted to pace the exercises such that the vast majority of the class
+completed them. The students were encouraged to work together and the
+instructors were present to answer questions during the exercises. The
+notebooks were submitted at the end of the class for participation credit.
+
+.. _Software Carpentry: http://software-carpentry.org
 
 JupyterHub Service
 ------------------
@@ -271,8 +304,9 @@ out to be a great idea for several reasons:
 Computational Homeworks
 -----------------------
 
-We created X number of homework sets using nbgrader. TODO : tell more about the
-design, etc.
+We created X number of homework sets using nbgrader.
+
+TODO : tell more about the design, etc.
 
 Project Instead of Exams
 ------------------------
@@ -289,7 +323,7 @@ dropped the final exam due to two reasons:
    not effectively assess what the students had learned, due to student getting
    caught on programming issues more than anticipated.
 
-Next year, I will likely remove the midterm and break the project into two
+Next year, we will likely remove the midterm and break the project into two
 phases. The projects proved to be a much more effective method for students to
 demonstrate what they had learned.
 
@@ -307,12 +341,12 @@ these types of courses and established a network of potential collaborators.
 Computational Thinking Workshop and Seminar
 -------------------------------------------
 
-We held a workshop titled "Computational Thinking in the Engineering and
-Sciences Curriculum" at the UCD Data Science Institute on January 5th for about
-20 faculty, staff, and graduate students from a variety of disciplines around
-campus. We proposed seven methods of utilizing computation to learn domain
-specific concepts and the attendees developed a variety of examples from their
-domains. The abstract read:
+Allen Downey of Olin College and we  held a workshop titled "Computational
+Thinking in the Engineering and Sciences Curriculum" at the UCD Data Science
+Institute on January 5th for about 20 faculty, staff, and graduate students
+from a variety of disciplines around campus. We proposed seven methods of
+utilizing computation to learn domain specific concepts and the attendees
+developed a variety of examples from their domains. The abstract read:
 
    This workshop invites faculty to think about computation in the context of
    engineering education and to design classroom experiences that develop
@@ -323,8 +357,7 @@ domains. The abstract read:
    engineering, this workshop may also be of interest to faculty in the natural
    and social sciences as well as mathematics.
 
-The workshop was recorded and can be viewed below along with the accompanying
-slides:
+The workshop was recorded:
 
 .. raw:: html
 
@@ -337,7 +370,7 @@ slides:
      allowfullscreen>
    </iframe>
 
-The workshop slides:
+and the accompanying slides are available here:
 
 .. raw:: html
 
@@ -351,10 +384,8 @@ The workshop slides:
      webkitallowfullscreen="true">
    </iframe>
 
-http://allendowney.blogspot.com/2018/01/computation-in-stem-workshop.html
-
-Additionally, Allen gave a more general seminar on "Programming as a Way of
-Thinking":
+In addition to the workshop, Allen gave a more general seminar on "Programming
+as a Way of Thinking", which can be viewed below:
 
 .. raw:: html
 
@@ -367,14 +398,35 @@ Thinking":
      allowfullscreen>
    </iframe>
 
-TODO : Added slides.
+TODO : Add slides for presentation.
+
+http://allendowney.blogspot.com/2018/01/computation-in-stem-workshop.html
 
 What To Improve
 ===============
 
-- Need classroom that is appropriate for the class activities (i.e. need tables!)
-- Analytical ODEs need to be shown after the computational methods, could
-  motivate students to learn more about them.
+Over the course we developed a number of things to adjust for a second
+offering. These are tracked in `resonance's issue tracker`_. We've also had
+some focus groups with a few students in the course to get more critical
+feedback on the materials, which can also be found in the issue tracker. The
+following list provides some of the more important changes we plan to make:
+
+- The programming skills necessary to solve the vibration problems need to ramp up
+  more slowly. Fixing this will involve hiding more details in the software
+  library and pacing the exposure of these details more linearly through the
+  notebook progression.
+- Some of the notebooks are too long and complicated. The notebooks needed to
+  be divided into smaller chunks that map to about 40 in-class learning sessions.
+- The textbook needs to be completed such that each notebook has sufficient
+  text to explain the lesson without the instructor explaining it.
+- More of the analytical methods need to be introduced after the computational
+  methods, especially for the concepts where the analytical methods prove to be
+  a superior tool.
+- Students balancing a laptop and notebook on a standard desk is difficult. We
+  need a classroom that is appropriate for the class activities (i.e. need
+  tables!).
+
+.. _resonance's issue tracker: https://github.com/moorepants/resonance/issues
 
 Conclusion
 ==========
@@ -382,12 +434,12 @@ Conclusion
 After the first delivery of the course, a good question to ask may be "Can
 students solve problems related to mechanical vibrations better than if they
 were to have taken a different course?", as that is our primary objective. It
-was evident from their final project that they could, but the problem was
-designed by me to be solvable with the things I knew (or hoped) they'd learned.
-This question is difficult to answer without a properly designed and executed
-experiment, which may be something that should be done in the future. I have
-received a mix of feedback on the course that encompassed students enjoying it
-thorourghly to students that struggled getting past the programming
+was evident from their final projects that they could, but the project problem
+was designed by me to be solvable with the things I knew (or hoped) they'd
+learned.  This question is difficult to answer without a properly designed and
+executed experiment, which may be something that should be done in the future.
+I have received a mix of feedback on the course that encompassed students
+enjoying it thoroughly to students that struggled getting past the programming
 requirements.
 
 Acknowledgements
@@ -401,7 +453,8 @@ Effectiveness`_. The funding proposal can be viewed on Figshare_.
 We thank Allen Downey from Olin College for visitng and teaching us, Pamela
 Reynolds at the UC Davis Data Science Initiative for hosting the workshop, Luiz
 Irber for filming and editing the videos, MAE staff for the seminar setup, and
-Kenneth Lyons and Benjamin Margolis for help with organizing the workshops.
+Kenneth Lyons and Benjamin Margolis for help with organizing the workshop.
 
 .. _Figshare: https://doi.org/10.6084/m9.figshare.5229886.v1
 .. _Center for Educational Effectiveness: https://cee.ucdavis.edu/
+
