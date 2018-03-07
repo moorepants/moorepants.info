@@ -161,6 +161,10 @@ mathematical reasoning if you have basic programming concepts in your toolbox.
             count += 1
    print(count / num_trials)
 
+The required knowledge here spans variables, data structures, loops, and flow
+control but it has the advantage that it maps directly to the experimental
+process with very little abstraction.
+
 This ability to reason about the world through computational language is a
 prime of example "computational thinking." Computational thinking adds a
 complementary mode of reasoning to experimentation and mathematical modeling.
@@ -169,10 +173,9 @@ both.
 
 So this raises the question: "If we drastically increase the focus on
 computational thinking to learn about mechanical vibrations, will students be
-better equipped to solve real vibration problems when they leave the class?"
-
-We believe they will, but there are a number of aspects that needed to be
-changed in the course to do test this.
+better equipped to solve real vibration problems when they leave the class?" We
+believe they will, but there are a number of aspects that needed to be changed
+in the course to do test this.
 
 .. _computational thinking: https://en.wikipedia.org/wiki/Computational_thinking
 
@@ -203,6 +206,19 @@ paper text. The design of this text has these features:
   maximize reuse potential.
 - The notebooks are intended to be used live in class with embedded interactive
   exercises.
+
+Below is an example of one of the notebooks:
+
+.. raw:: html
+
+   <div align="center">
+     <iframe
+       width="800"
+       height="400"
+       src="https://moorepants.github.io/resonance/03/03_bicycle_wheel_inertia.html"
+       frameborder="0">
+     </iframe>
+   </div>
 
 .. _series of 14 modules: https://moorepants.github.io/resonance/
 .. _Jupyter: http://jupyter.org
@@ -249,6 +265,7 @@ simulate a linear model of simple pendulum:
    # define a function that returns the coefficients of the canonical
    # differential equation: m x'' + c x' + k x = 0
    def coeff_func(length, grav_acc):
+       """Returns m, c, k."""
        return 1.0, 0.0, grav_acc / length
 
    sys.coeff_func = coeff_func
@@ -299,6 +316,13 @@ out to be a great idea for several reasons:
   it.
 - We were able to utilize nbgrader_ for distribution, collection, and grading
   of the in-class materials and homework assignments (see more below).
+
+.. figure:: {{ media_url('images/eng122-jupyterhub.png') }}
+   :align: center
+   :width: 600
+
+   A screenshot of the Jupyterhub nbgrader interface that lets students fetch
+   and submit assignments.
 
 .. _JupyterHub: https://jupyterhub.readthedocs.io/en/latest/
 .. _nbgrader: https://nbgrader.readthedocs.io/en/stable/
@@ -497,13 +521,13 @@ Acknowledgements
 This effort was supported with funding from the Undergraduate Instructional
 Innovation Program, which is backed by the Association of American Universities
 (AAU) and Google, and administered by UC Davis's `Center for Educational
-Effectiveness`_. The funding proposal can be viewed on Figshare_.
+Effectiveness`_. The `funding proposal`_ can be viewed on Figshare.
 
 We thank Allen Downey from Olin College for visiting and teaching us, Pamela
 Reynolds at the UC Davis Data Science Initiative for hosting the workshop, Luiz
 Irber for filming and editing the videos, MAE staff for the seminar setup, and
 Kenneth Lyons and Benjamin Margolis for help with organizing the workshop.
 
-.. _Figshare: https://doi.org/10.6084/m9.figshare.5229886.v1
+.. _funding proposal: https://doi.org/10.6084/m9.figshare.5229886.v1
 .. _Center for Educational Effectiveness: https://cee.ucdavis.edu/
 
