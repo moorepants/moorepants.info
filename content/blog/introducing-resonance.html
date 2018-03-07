@@ -2,7 +2,7 @@
 title: Introducing Resonance
 subtitle: Using computational thinking to teach mechanical vibrations
 description: Summary of the initial efforts to develop a new approach to teaching mechanical vibrations.
-created: !!timestamp '2018-03-01 00:00:00'
+created: !!timestamp '2018-03-07 00:00:00'
 tags:
     - education
     - engineering
@@ -71,7 +71,7 @@ The main reasons that we wanted to change the course are that:
 
 - This type of course has likely only changed in one significant way in the
   past century with addition of accessible computational tools in the 80s.
-  Although it is true that foundational theory does not change much in that
+  Although it is true that the foundational theory has not changed much in that
   time, much of the traditional material may not be directly relevant to
   solving modern vibration related problems and thus could be removed.
 - Traditional engineering textbooks are becoming antiquated due to their high
@@ -91,9 +91,9 @@ The main reasons that we wanted to change the course are that:
 Computational Thinking
 ======================
 
-The last point above requires some elaboration, as it is central tenant to the
-course redesign. Engineering courses often have computational components, but
-students may or may not learn to "think computationally."
+The last point above requires some elaboration, as it is a central tenant to
+the course redesign. Engineering courses often have computational components,
+but students may or may not learn to "think computationally."
 
 An engineer's primary goal is to solve problems, using the knowledge and tools
 at hand. Solving each problem requires some understanding of how the world
@@ -116,6 +116,9 @@ This is a powerful and invaluable process, but it is also interesting that,
 taken to an extreme, one may be able to remove step 3 and reason about the
 world in the language of computation directly.
 
+An example
+----------
+
 Calculating probabilities offers simple examples that can highlight what we
 mean. For example, if you want to answer:
 
@@ -132,9 +135,10 @@ using probability theory:
 and when you complete the numerical calculation you will find the probability
 is about 52 in a 100. To be able to do this you need to be well versed in a
 number of mathematical concepts that are often abstract relative to the primary
-question such as `conditional probability`_, the `binomial theorem`_,
-factorials_, etc.
+question such as `probability distributions`_, `conditional probability`_, the
+`binomial theorem`_, factorials_, etc.
 
+.. _probability distributions: TODO
 .. _conditional probability: https://en.wikipedia.org/wiki/Conditional_probability
 .. _binomial theorem: https://en.wikipedia.org/wiki/Binomial_theorem
 .. _factorials: https://en.wikipedia.org/wiki/Factorial
@@ -146,7 +150,7 @@ many of the abstractions are removed. However, you'd have to roll the ten dice
 upwards of 10000 times to get an accurate estimate of the probability.
 Fortunately, this is something a computer is good at. Being able to reason
 about this problem and, for example, write the following Python code, you will
-get the same answer as the reasoning through probability theory. In this case,
+get the same answer as reasoning through probability theory. In this case,
 computational reasoning is likely vastly simpler than what is needed for the
 mathematical reasoning if you have basic programming concepts in your toolbox.
 
@@ -164,7 +168,8 @@ mathematical reasoning if you have basic programming concepts in your toolbox.
 
 The required knowledge here spans variables, data structures, loops, and flow
 control but it has the advantage that it maps directly to the experimental
-process with very little abstraction.
+process with very little abstraction. Additionally, this knowledge is used in
+every computational problem, not just ones about probability.
 
 This ability to reason about the world through computational language is a
 prime of example "computational thinking." Computational thinking adds a
@@ -185,7 +190,8 @@ What We Did
 
 The course redesign required quite a number of changes in order to structure
 the learning around computational thinking and meet the other goals. The
-following presents summaries of the various changes:
+following presents summaries of the various changes and activities we did to
+bring this to fruition:
 
 Interactive Open Access Digital Textbook
 ----------------------------------------
@@ -208,7 +214,7 @@ paper text. The design of this text has these features:
 - The notebooks are intended to be used live in class with embedded interactive
   exercises.
 
-Below is an example of one of the notebooks:
+Below is a static version of one of the notebooks:
 
 .. raw:: html
 
@@ -221,8 +227,11 @@ Below is an example of one of the notebooks:
      </iframe>
    </div>
 
+You can execute the notebooks if you `load them using Binder`_
+
 .. _series of 14 modules: https://moorepants.github.io/resonance/
 .. _Jupyter: http://jupyter.org
+.. _load them using Binder: TODO
 
 Software Library
 ----------------
@@ -289,14 +298,15 @@ laptop. The instructor led the students through the notebooks by offering
 verbal summaries and addenda to the written text via "board work." The
 instructor executed the code cells to produce various figures and then
 discussed them, often live coding answers to questions. Each notebook included
-short exercises (about 8-10 per 2 hr period) interspersed throughout the text
+short exercises (about 5-8 per 2 hr period) interspersed throughout the text
 that were geared to assessing students on the prior 10 minutes of instruction
 and reading. These exercises had easily accessible solutions to ensure students
 could move forward even if the solution was not obtained in the allocated time.
 We attempted to pace the exercises such that the vast majority of the class
-completed them. The students were encouraged to work together and the
-instructors were present to answer questions during the exercises. The
-notebooks were submitted at the end of the class for participation credit.
+completed them before moving forward. The students were encouraged to work
+together and the instructors were present to answer questions during the
+exercises. The notebooks were submitted at the end of the class for
+participation credit.
 
 .. _Software Carpentry: http://software-carpentry.org
 
@@ -354,6 +364,13 @@ conventions, supplementing the in-class materials. Formatting and overall
 clarity of the submitted homework notebooks seemed to improve significantly by
 the end of the course.
 
+.. figure:: {{ media_url('images/eng122-nbgrader.png') }}
+   :align: center
+   :width: 640
+
+   A screenshot of the nbgrader grading interface for a single homework
+   problem.
+
 Project Instead of Exams
 ------------------------
 
@@ -387,11 +404,12 @@ these types of courses and established a network of potential collaborators.
 Computational Thinking Workshop and Seminar
 -------------------------------------------
 
-`Allen Downey`_ of Olin College and we held a workshop titled "Computational
-Thinking in the Engineering and Sciences Curriculum" at the UCD Data Science
-Institute on January 5th for about 20 faculty, staff, and graduate students
-from a variety of disciplines around campus. We proposed seven methods of
-utilizing computation to learn domain-specific concepts, and the attendees
+We also wanted to share these methods with the STEM faculty at UC Davis. To do
+so, `Allen Downey`_ of Olin College and we held a workshop titled
+"Computational Thinking in the Engineering and Sciences Curriculum" at the UCD
+Data Science Institute on January 5th for about 20 faculty, staff, and graduate
+students from a variety of disciplines around campus. We proposed seven methods
+of utilizing computation to learn domain-specific concepts, and the attendees
 developed a variety of examples from courses they have taught or would like to
 teach. The abstract read:
 
@@ -455,6 +473,8 @@ as a Way of Thinking", which can be viewed below:
    </iframe>
    </div>
 
+along with the slides:
+
 .. raw:: html
 
    <div align="center">
@@ -480,9 +500,9 @@ What To Improve
 Over the course of developing and teaching the class, we noted a number of
 things to adjust for a second offering. These are tracked in `resonance's issue
 tracker`_. We've also had focus groups with a few students in the course to get
-more critical feedback on the materials, which can also be found in the issue
-tracker. The following list provides some of the more important changes we plan
-to make:
+more critical feedback of the materials and methods, which can also be found in
+the issue tracker. The following list provides some of the more important
+changes we plan to make:
 
 - The programming skills necessary to solve the vibration problems need to ramp
   up more gradually. Fixing this will involve hiding more details in the
@@ -528,9 +548,10 @@ Effectiveness`_. The `funding proposal`_ can be viewed on Figshare.
 
 We thank Allen Downey from Olin College for visiting and teaching us, Pamela
 Reynolds at the UC Davis Data Science Initiative for hosting the workshop, Luiz
-Irber for filming and editing the videos, MAE staff for the seminar setup, and
-Kenneth Lyons and Benjamin Margolis for help with organizing the workshop.
+Irber for filming and editing the videos, MAE staff for the seminar setup,
+Kenneth Lyons and Benjamin Margolis for help with organizing the workshop, and
+all of the ENG 122 students that have taken the class and evaluated the
+materials.
 
 .. _funding proposal: https://doi.org/10.6084/m9.figshare.5229886.v1
 .. _Center for Educational Effectiveness: https://cee.ucdavis.edu/
-
