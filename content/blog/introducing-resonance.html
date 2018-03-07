@@ -157,7 +157,8 @@ mathematical reasoning if you have basic programming concepts in your toolbox.
    dice_sides = [1, 2, 3, 4, 5, 6]
    count = 0
    for trial in range(num_trials):
-       if [choice(dice_sides) for roll in range(10)].count(3) > 1:
+       ten_rolls = [choice(dice_sides) for roll in range(10)]
+       if ten_rolls.count(3) > 1:
             count += 1
    print(count / num_trials)
 
@@ -319,7 +320,7 @@ out to be a great idea for several reasons:
 
 .. figure:: {{ media_url('images/eng122-jupyterhub.png') }}
    :align: center
-   :width: 600
+   :width: 640
 
    A screenshot of the Jupyterhub nbgrader interface that lets students fetch
    and submit assignments.
@@ -510,9 +511,11 @@ was evident from their final projects that they could, but the project problem
 was designed by us to be solvable with the things we knew (or hoped) they'd
 learned. This question is difficult to answer without a properly designed and
 executed experiment, which may be something that should be done in the future.
-I have received a mix of feedback on the course that encompassed students
+We have received a mix of feedback on the course that encompassed students
 enjoying it thoroughly to students that struggled getting past the programming
-requirements. Overall, we feel good about the course direction and will
+requirements. It was quite fun to teach and really impressive to see the skills
+the students developed over the course both in vibrations and computational
+thinking with Python. Overall, we feel good about the course direction and will
 continue to improve it.
 
 Acknowledgements
