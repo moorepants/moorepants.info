@@ -1,10 +1,5 @@
 :title: About
 :subtitle: moorepants
-:url:
-:save_as: index.html
-:sortorder: 0
-:date: 2018-10-05
-:front: true
 :description: all the detailed info for the stalkers
 
 So you want to know about me. Well, I'll tell you one thing about me. When I
