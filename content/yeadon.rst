@@ -1,15 +1,15 @@
----
-title: What's your inertia?
-subtitle: Body segment parameters with Python
-description: Release materials for the Yeadon software package.
-created: !!timestamp '2013-07-08 18:00:00'
-tags:
-    - python
-    - body segment parameters
-    - mayavi
-    - yeadon
-    - inertia
----
+What's your inertia?
+====================
+
+:authors: Jason K. Moore
+:date: 2013-07-08 18:00:00
+:description: Release materials for the Yeadon software package.
+:category: software
+:slug: yeadon
+:subtitle: Body segment parameters with Python
+:summary: Blog post on creating a new interface to test different controller
+          designs for the Double Pendulum Robot.
+:tags: python, body segment parameters, mayavi, yeadon, inertia
 
 {% mark image %}
 
