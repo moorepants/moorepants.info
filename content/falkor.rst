@@ -30,7 +30,7 @@ Charlie.
 
 {% mark image %}
 
-.. figure:: {{ media_url('images/falkor-00.jpg') }}
+.. figure:: https://objects-us-east-1.dream.io/moorepants.info/falkor-00.jpg
    :class: img-rounded
 
    Falkor the Luck Dragon Tandem
@@ -40,7 +40,7 @@ Charlie.
 Build Description
 =================
 
-.. figure:: {{ media_url('images/falkor-01.jpg') }}
+.. figure:: https://objects-us-east-1.dream.io/moorepants.info/falkor-01.jpg
    :class: img-rounded
 
    We were able to find a `3D model of a Falkor`_ in STL format online. I
@@ -52,17 +52,17 @@ Build Description
 
 .. _3D model of a Falkor: http://www.123dapp.com/3dcr-Creature/Falcor-the-Luck-Dragon/1502912
 
-.. figure:: {{ media_url('images/falkor-02.jpg') }}
+.. figure:: https://objects-us-east-1.dream.io/moorepants.info/falkor-02.jpg
 
    We used long razor knives to cut out the cross sections.
 
-.. figure:: {{ media_url('images/falkor-03.jpg') }}
+.. figure:: https://objects-us-east-1.dream.io/moorepants.info/falkor-03.jpg
 
    This shot shows the layers stacked up (not quite properly aligned) and the
    eye balls which were made from a dollar store plastic coconut bra and
    painted with nail polish.
 
-.. figure:: {{ media_url('images/falkor-04.jpg') }}
+.. figure:: https://objects-us-east-1.dream.io/moorepants.info/falkor-04.jpg
 
    At this point we'd been debating how to mount the head, either on the frame
    or on the fork/handlebar assembly. To determine if the mass would make
@@ -70,7 +70,7 @@ Build Description
    gave it a whirl. The inertia of the head definitely increases the difficulty
    when starting but it works well enough to get around.
 
-.. figure:: {{ media_url('images/falkor-05.jpg') }}
+.. figure:: https://objects-us-east-1.dream.io/moorepants.info/falkor-05.jpg
 
    Antonia and Yumi glued the foam board together using foam board glue. The
    spokes were punched through the reference marks to ensure proper alignment.
@@ -78,17 +78,17 @@ Build Description
    handling it the next day and had to often realign the layers when they were
    out of place.
 
-.. figure:: {{ media_url('images/falkor-06.jpg') }}
+.. figure:: https://objects-us-east-1.dream.io/moorepants.info/falkor-06.jpg
 
    The head was glued together in three sections. In the middle section we
    installed wooden dowels for secure attachment points to the front rack.
 
-.. figure:: {{ media_url('images/falkor-07.jpg') }}
+.. figure:: https://objects-us-east-1.dream.io/moorepants.info/falkor-07.jpg
 
    With all of the head sections glued together the head is starting to look
    more like Falkor.
 
-.. figure:: {{ media_url('images/falkor-08.jpg') }}
+.. figure:: https://objects-us-east-1.dream.io/moorepants.info/falkor-08.jpg
 
    We then sanded the foam on the head to blend in all of the cross sections.
    Heavy grit sand paper did a great job at this except for the fact that we
@@ -96,11 +96,11 @@ Build Description
    the metallic film but didn't think to remove the translucent film and it
    prevented us from completely hiding the cross section seams.
 
-.. figure:: {{ media_url('images/falkor-09.jpg') }}
+.. figure:: https://objects-us-east-1.dream.io/moorepants.info/falkor-09.jpg
 
    Once sanded, the facial features start to stand out.
 
-.. figure:: {{ media_url('images/falkor-10.jpg') }}
+.. figure:: https://objects-us-east-1.dream.io/moorepants.info/falkor-10.jpg
 
    Johnny had the idea to bring the eyelids to life, which I was reluctant to
    pursue. But I couldn't get the idea out of my head and worked out that it
@@ -109,21 +109,21 @@ Build Description
    eyelid. We also carved grooves into the head for the shifter cable and cable
    housing which would function as the actuators.
 
-.. figure:: {{ media_url('images/falkor-11.jpg') }}
+.. figure:: https://objects-us-east-1.dream.io/moorepants.info/falkor-11.jpg
 
    Antonia covered the eyelids with our Falkor skin (dollar store car chamois).
 
-.. figure:: {{ media_url('images/falkor-12.jpg') }}
+.. figure:: https://objects-us-east-1.dream.io/moorepants.info/falkor-12.jpg
 
    We decided to cover most of the head with the chamois, except for the nose
    and forehead. Antonia hand shaped the nostrils and covered it with some
    light paper mache and white paint.
 
-.. figure:: {{ media_url('images/falkor-13.jpg') }}
+.. figure:: https://objects-us-east-1.dream.io/moorepants.info/falkor-13.jpg
 
    With the nose and eyes defined, the head started to really look like Falkor.
 
-.. figure:: {{ media_url('images/falkor-14.jpg') }}
+.. figure:: https://objects-us-east-1.dream.io/moorepants.info/falkor-14.jpg
 
    The eyes are independently controlled by a stem tube shifter that is mounted
    on the back of the head. To create a cable housing stop I inserted a stout
@@ -132,50 +132,50 @@ Build Description
    rim. This allowed the shifter to pull and push the eyelids open and closed,
    respectively.
 
-.. figure:: {{ media_url('videos/falkor-eyes.gif') }}
+.. figure:: https://objects-us-east-1.dream.io/moorepants.info/falkor-eyes.gif
 
    The eyes in operation.
 
-.. figure:: {{ media_url('images/falkor-15.jpg') }}
+.. figure:: https://objects-us-east-1.dream.io/moorepants.info/falkor-15.jpg
 
    At this point Yumi covered the head in fur and created brows and a mustache.
    The nostrils were accented with black paint and the forehead was paper
    machete'd and painted as pink scales. She also detailed the mouth to give
    Falkor teeth and a slight grin.
 
-.. figure:: {{ media_url('images/falkor-16.jpg') }}
+.. figure:: https://objects-us-east-1.dream.io/moorepants.info/falkor-16.jpg
 
    The last major touch was to attach the ears that Antonia sewed to the sides
    of the head.
 
-.. figure:: {{ media_url('images/falkor-17.jpg') }}
+.. figure:: https://objects-us-east-1.dream.io/moorepants.info/falkor-17.jpg
 
    We then attached the head to the front mounted rack using plenty of zip
    ties. The rack and head assembly can be removed from the bicycle by four
    bolts.
 
-.. figure:: {{ media_url('images/falkor-18.jpg') }}
+.. figure:: https://objects-us-east-1.dream.io/moorepants.info/falkor-18.jpg
 
    We covered the top tube with shredded fabric.
 
-.. figure:: {{ media_url('images/falkor-19.jpg') }}
+.. figure:: https://objects-us-east-1.dream.io/moorepants.info/falkor-19.jpg
 
    Here is the attached fabric and the pool noodle we used to support the tail.
    There is a wooden dowel in the pool noodle to give it some structure.
 
-.. figure:: {{ media_url('images/falkor-20.jpg') }}
+.. figure:: https://objects-us-east-1.dream.io/moorepants.info/falkor-20.jpg
 
    Antonia and Yumi carved the haunches by hand out of some leftover foam.
 
-.. figure:: {{ media_url('images/falkor-21.jpg') }}
+.. figure:: https://objects-us-east-1.dream.io/moorepants.info/falkor-21.jpg
 
    We used zip ties and dowels to attach the haunches.
 
-.. figure:: {{ media_url('images/falkor-22.jpg') }}
+.. figure:: https://objects-us-east-1.dream.io/moorepants.info/falkor-22.jpg
 
    The tail was covered in fabric and the rump was built up with pool noodle
    chunks and then covered too.
 
-.. figure:: {{ media_url('images/falkor-23.jpg') }}
+.. figure:: https://objects-us-east-1.dream.io/moorepants.info/falkor-23.jpg
 
    This shows the bicycle from the rear after it was completed.

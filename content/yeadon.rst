@@ -14,7 +14,7 @@ What's your inertia?
 
 {% mark image %}
 
-.. image:: {{ media_url('images/haya.png') }}
+.. image:: https://objects-us-east-1.dream.io/moorepants.info/haya.png
    :class: img-rounded
    :width: 400px
 

@@ -8,16 +8,9 @@ NCSRR Visiting Scholar Wrap Up
 :date: 2014-08-15 09:44:00
 :tags: ncsrr, direct collocation, system identification, inverted pendulum
 
-{% mark image -%}
-{%- endmark %}
-
-{% mark excerpt %}
-
 This is my last day here at Stanford's Neuromuscular Biomechanics Lab for the
 NCSRR visiting scholar program. This blog post summarizes what I've done while
 being here over the last five weeks.
-
-{% endmark %}
 
 I reviewed the proposal_ I wrote almost 7 months ago for this visiting
 position. My main goals were to:
@@ -263,7 +256,7 @@ series of massless links with a mass at each joint. There are actuators at each
 pin joint that apply a torque between the connected bodies. An external force
 can be applied to the cart base to perturb the system.
 
-.. image:: {{ media_url('images/n-pendulum-with-cart.png') }}
+.. image:: https://objects-us-east-1.dream.io/moorepants.info/n-pendulum-with-cart.png
    :align: center
 
 The source code for the following example can be found here:
@@ -321,13 +314,13 @@ The numerical values of the controller can easily be found by solving an LQR
 control problem once the numerical values are chosen for the open loop model
 parameters. An example simulation is shown below:
 
-.. image:: {{ media_url('images/one-link-pendulum-trajectory.png') }}
+.. image:: https://objects-us-east-1.dream.io/moorepants.info/one-link-pendulum-trajectory.png
 
 .. raw:: html
 
    <video width="640" height="480" controls>
-     <source src={{ media_url('videos/one-link.mp4') }} type="video/mp4">
-     <source src={{ media_url('videos/one-link.ogg') }} type="video/ogg">
+     <source src=https://objects-us-east-1.dream.io/moorepants.info/one-link.mp4 type="video/mp4">
+     <source src=https://objects-us-east-1.dream.io/moorepants.info/one-link.ogg type="video/ogg">
    Your browser does not support the video tag.
    </video>
 
@@ -538,12 +531,12 @@ time unnecessary time spent in the function calls.
 
 The constraint violations after finding the optimum look like:
 
-.. image:: {{ media_url('images/one-link-pendulum-constraint-violation.png') }}
+.. image:: https://objects-us-east-1.dream.io/moorepants.info/one-link-pendulum-constraint-violation.png
 
 And you can see that the predicted trajectories are tightly aligned with the
 measurements:
 
-.. image:: {{ media_url('images/one-link-pendulum-trajectory-comparison.png') }}
+.. image:: https://objects-us-east-1.dream.io/moorepants.info/one-link-pendulum-trajectory-comparison.png
 
 Four Link Pendulum
 ------------------
@@ -554,24 +547,24 @@ initial guesses for the 40 gains.
 .. raw:: html
 
    <video width="640" height="480" controls>
-     <source src={{ media_url('videos/four-link.mp4') }} type="video/mp4">
-     <source src={{ media_url('videos/four-link.ogg') }} type="video/ogg">
+     <source src=https://objects-us-east-1.dream.io/moorepants.info/four-link.mp4 type="video/mp4">
+     <source src=https://objects-us-east-1.dream.io/moorepants.info/four-link.ogg type="video/ogg">
    Your browser does not support the video tag.
    </video>
 
-.. image:: {{ media_url('images/four-link-pendulum-trajectory.png') }}
+.. image:: https://objects-us-east-1.dream.io/moorepants.info/four-link-pendulum-trajectory.png
 
 The constraint violations given the known gains:
 
-.. image:: {{ media_url('images/four-link-pendulum-constraint-violation-from-initial-guess.png') }}
+.. image:: https://objects-us-east-1.dream.io/moorepants.info/four-link-pendulum-constraint-violation-from-initial-guess.png
 
 The constraint violations given the optimal gains:
 
-.. image:: {{ media_url('images/four-link-pendulum-constraint-violation-from-optimal-solution.png') }}
+.. image:: https://objects-us-east-1.dream.io/moorepants.info/four-link-pendulum-constraint-violation-from-optimal-solution.png
 
 The trajectory comparison:
 
-.. image:: {{ media_url('images/four-link-pendulum-trajectory-comparison.png') }}
+.. image:: https://objects-us-east-1.dream.io/moorepants.info/four-link-pendulum-trajectory-comparison.png
    :width: 800px
 
 Planar Gait System ID
@@ -593,12 +586,12 @@ planar gait model:
 - Still needs subject specific scaling
 - Constructed with the Opensim C++ API
 
-.. image:: {{ media_url('images/osgait2d.png') }}
+.. image:: https://objects-us-east-1.dream.io/moorepants.info/osgait2d.png
 
 Controller
 ----------
 
-.. image:: {{ media_url('images/gait-gain-scheduled-controller.png') }}
+.. image:: https://objects-us-east-1.dream.io/moorepants.info/gait-gain-scheduled-controller.png
 
 A gain gait cycle scheduled joint angle/rate feedback controller was
 implemented by sub-classing ``OpenSim::Controller``. It follows this control

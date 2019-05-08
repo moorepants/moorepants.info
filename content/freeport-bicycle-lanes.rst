@@ -10,7 +10,7 @@ Freeport Boulevard Road Diet
 
 {% mark image %}
 
-.. figure:: {{ media_url('images/sacbee-freeport.jpeg') }}
+.. figure:: https://objects-us-east-1.dream.io/moorepants.info/sacbee-freeport.jpeg
    :class: img-rounded
    :width: 400px
 

@@ -10,7 +10,7 @@ Ohio City Bicycle Co-op
 
 {% mark image -%}
 
-.. image:: {{ media_url('images/cleveland-bridge.jpg') }}
+.. image:: https://objects-us-east-1.dream.io/moorepants.info/cleveland-bridge.jpg
    :class: img-rounded
    :width: 400px
 
