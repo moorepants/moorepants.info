@@ -1,14 +1,11 @@
----
-title: Negotiating the Academic Job Offer Session Notes
-subtitle: how much?
-description: My notes on the third Case Western academic job search session I went to.
-created: !!timestamp '2013-11-22 12:35:00'
-tags:
-    - professorship
-    - academic
-    - job search
-    - job offer
----
+Negotiating the Academic Job Offer Session Notes
+================================================
+
+:authors: Jason K. Moore
+:subtitle: how much?
+:description: My notes on the third Case Western academic job search session I went to.
+:date: 2013-11-22 12:35:00
+:tags: professorship, academic, job search, job offer
 
 {% mark image -%}
 
@@ -21,7 +18,7 @@ Some raw notes on the "Negotiating the Academic Job Offer" panel discussion.
 {%- endmark %}
 
 Panelists
-=========
+---------
 
 - Kathy Kash (Prof/Chair, Physics)
 - Bob Savinell (Prof, Chemical Engineering)
@@ -29,33 +26,33 @@ Panelists
 - Dave Schiraldi (Prof/Chair, Macromolecular Science & Engineering)
 
 Kathy
------
+~~~~~
 
 Case to Case in 1994 as an associate prof. Came from industry and had one post
 doc. They've hired about a dozen people in Physics since she's been there. She
 was an undergrad in a small liberal arts college.
 
 Bob
----
+~~~
 
 Been here since 1986. Taught at Uni of Akron for 7 years. Worked in industry
 for 3 years. Served as Dean for 7 years. Hired dozens of profs. Resigned now
 back running a lab.
 
 Jim
----
+~~~
 
 Postdoc at U of Penn. Been involved in hiring and unhiring. Was on committee
 for tenure and promotions.
 
 Dave
-----
+~~~~
 
 Spent 20 years in chemical engineers. Came here in 2002. He's hired three
 faculty members and offered to 5. Leading search for searches now.
 
 What is a typical job offer? What can they negotiate?
-=====================================================
+-----------------------------------------------------
 
 Kathy: salary, teaching load, pre-tenure teaching release, startup package
 (support for grad students, waivers for grad students, lab space, summer
@@ -94,7 +91,7 @@ Kathy: At her physics council with 35 institutions, they exchange info about
 how much they are offering among institutions.
 
 How do we find out about what a typical offer is?
-=================================================
+-------------------------------------------------
 
 Bob: Ask people who've been recently hired. Largest he's offered is 8 million.
 
@@ -106,7 +103,7 @@ Dave: There is probably a bottom line offer (the ceiling of the start up
 package). Summer salary should be in the package.
 
 What can you negotiate on?
-==========================
+--------------------------
 
 There are unofficial grids on salary so there is less room to negotiate there.
 
@@ -119,7 +116,7 @@ Dave: There is a bottom line. So you may be able to get a few more % but there
 may be hard chance to get big change.
 
 What about non-research focused schools?
-========================================
+----------------------------------------
 
 Bob: Teaching schools may give little start up packages. They may be more
 controlled in their salary because of unions.
@@ -131,7 +128,7 @@ in a percentage of your salary. Ask about this! to the chair, dean, and faculty
 members.
 
 At which stage do you mention your partner?
-===========================================
+-------------------------------------------
 
 Kathy: They are video interviewing 8 by video, choosing 3 for visits. At the in
 person interview they need to know what you need, including about the partner.
@@ -139,7 +136,7 @@ They need to know all constraints on what you need for a good offer. At Case
 there is a special type of money for partner hires.
 
 How do you start negotiating?
-=============================
+-----------------------------
 
 Kathy: They ask for an equipment list when you visit for the interview.
 
@@ -149,7 +146,7 @@ Jim: If you ask for a million dollar equipment as an assistant prof, you are
 not going to get it.
 
 Is the teaching load talked about?
-==================================
+----------------------------------
 
 Kathy: It is in the advertisement.
 
@@ -162,7 +159,7 @@ than once, everything must be in line.
 Bob: The chair is your best friend in getting the startup money.
 
 Is the tenure offer negotiable?
-===============================
+-------------------------------
 
 Bob: you can maybe adjust it.
 
@@ -176,7 +173,7 @@ longer tenure unless you have special circumstances.
 Kathy: You can't ask for earlier tenure clock in their department.
 
 How much time is given after offer is given?
-============================================
+--------------------------------------------
 
 Bob: 30 days, 60 days, or rarely several months.
 
@@ -185,7 +182,7 @@ Kathy: Tell them about your competing offer.
 Bob: Tell them your other competing offer.
 
 Are you allowed to bring the actual numbers of offer to another school?
-=======================================================================
+-----------------------------------------------------------------------
 
 Dave: Yes, but it can be distasteful.
 
@@ -197,7 +194,7 @@ Dave: If it is about your ego be careful. If more will ensure your success,
 then speak up about it.
 
 Sabbatical
-==========
+----------
 
 Bob: Most uni's have sabbatical policies. Usually can't get one till after 7
 years. Don't bring up retirement, just read the handbook.
@@ -205,12 +202,12 @@ years. Don't bring up retirement, just read the handbook.
 Dave: Just ask "Do people take sabbaticals?"
 
 Should I have a list of things that are important to you?
-=========================================================
+---------------------------------------------------------
 
 Bob: If it is important, then bring it up.
 
 Housing expenses, moving assistance?
-====================================
+------------------------------------
 
 Jim: The can arrange for real estate companies to show you around. Set up
 times to talk to specific offices on campus to ask about these things.
@@ -221,7 +218,7 @@ that are important to you as an individual.
 Bob: I gave a bonus to help with moving expenses.
 
 What is applying to national lab like?
-======================================
+--------------------------------------
 
 Bob: I think it is more like industry. I don't think there is any startup
 package negotiation.
@@ -234,7 +231,7 @@ their packages. There is more oversight on the line items these days.
 Dave: Get a discretionary account line item that you can spend on anything.
 
 Should we get it all in writing?
-================================
+--------------------------------
 
 Kathy: Completely in detail all in writing.
 

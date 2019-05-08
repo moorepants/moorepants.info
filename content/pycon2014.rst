@@ -1,14 +1,12 @@
----
-title: PyCon 2014 Notes
-subtitle: scribblings from Montreal
-description: Notes taken during PyCon and some talk recommendations
-created: !!timestamp '2014-04-17 15:22:00'
-tags:
-    - pycon
-    - python
-    - pydy
-    - sympy
----
+================
+PyCon 2014 Notes
+================
+
+:authors: Jason K. Moore
+:subtitle: scribblings from Montreal
+:description: Notes taken during PyCon and some talk recommendations
+:date: 2014-04-17 15:22:00
+:tags: pycon, python, pydy, sympy
 
 {% mark image -%}
 

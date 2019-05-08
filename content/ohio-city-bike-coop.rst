@@ -1,13 +1,12 @@
----
-title: Ohio City Bicycle Co-op
-subtitle: a visit to bicycle repair in the cold
-description: Some comments on the Ohio City Bicycle Co-op
-created: !!timestamp '2013-04-05 19:13:00'
-tags:
-    - bicycle collective
-    - Cleveland
-    - bicycle repair
----
+=======================
+Ohio City Bicycle Co-op
+=======================
+
+:authors: Jason K. Moore
+:subtitle: a visit to bicycle repair in the cold
+:description: Some comments on the Ohio City Bicycle Co-op
+:date: 2013-04-05 19:13:00
+:tags: bicycle collective, Cleveland, bicycle repair
 
 {% mark image -%}
 

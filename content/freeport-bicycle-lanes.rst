@@ -1,14 +1,12 @@
----
-title: Freeport Boulevard Road Diet
-subtitle: not nearly as safe as it could be
-description:
-created: !!timestamp '2016-11-20 14:20:00'
-tags:
-    - bicycle
-    - advocacy
-    - sacramento
-    - bicycle lane
----
+============================
+Freeport Boulevard Road Diet
+============================
+
+:authors: Jason K. Moore
+:subtitle: not nearly as safe as it could be
+:description:
+:date: 2016-11-20 14:20:00
+:tags: bicycle, advocacy, sacramento, bicycle lane
 
 {% mark image %}
 

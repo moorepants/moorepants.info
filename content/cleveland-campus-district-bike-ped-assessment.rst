@@ -1,13 +1,11 @@
----
-title: Campus District Assessment
-subtitle: How's the bicycling and walking?
-description: My thoughts on bicycling and walking in the Cleveland campus district.
-created: !!timestamp '2013-08-19 11:07:00'
-tags:
-    - bicycle
-    - pedestrian
-    - cleveland
----
+Campus District Assessment
+==========================
+
+:authors: Jason K. Moore
+:subtitle: How's the bicycling and walking?
+:description: My thoughts on bicycling and walking in the Cleveland campus district.
+:date: 2013-08-19 11:07:00
+:tags: bicycle, pedestrian, cleveland
 
 {% mark image -%}
 

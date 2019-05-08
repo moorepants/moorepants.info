@@ -1,12 +1,11 @@
----
-title: Being New
-subtitle: notes on starting up at CSU
-description: Details on IT stuff and such that I need to remember.
-created: !!timestamp '2013-07-11 16:46:00'
-tags:
-    - csu
-    - wireless
----
+Being New
+=========
+
+:authors: Jason K. Moore
+:subtitle: notes on starting up at CSU
+:description: Details on IT stuff and such that I need to remember.
+:date: 2013-07-11 16:46:00
+:tags: csu, wireless
 
 {% mark image -%}
 

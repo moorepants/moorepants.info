@@ -1,13 +1,11 @@
----
-title: Copyright at Engineering Conferences
-subtitle: why is it such a pain?
-description: Details about trying to get favorable copyright conditions for the BMD 2013 conference.
-created: !!timestamp '2013-08-07 11:19:00'
-tags:
-    - copyright
-    - conference
-    - open access
----
+Copyright at Engineering Conferences
+====================================
+
+:authors: Jason K. Moore
+:date: 2013-08-07 11:19:00
+:description: Details about trying to get favorable copyright conditions for the BMD 2013 conference.
+:subtitle: why is it such a pain?
+:tags: copyright, conference, open access
 
 {% mark image -%}
 {%- endmark %}

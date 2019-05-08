@@ -1,14 +1,13 @@
----
-title: Introducing the UCD MAE Solar Regatta Team
-subtitle: sun-boating
-description: UCD MAE students are competing in the Northern California Solar Regatta.
-created: !!timestamp '2016-04-28 16:09:00'
-tags:
-    - ucd
-    - mae
-    - senior design
-    - solar regatta
----
+==========================================
+Introducing the UCD MAE Solar Regatta Team
+==========================================
+
+:authors: Jason K. Moore
+:subtitle: sun-boating
+:description: UCD MAE students are competing in the Northern California Solar
+              Regatta.
+:date: 2016-04-28 16:09:00
+:tags: ucd, mae, senior design, solar regatta
 
 {% mark image -%}
 

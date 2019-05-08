@@ -1,17 +1,12 @@
----
-title: Vectorized Matrix Evaluation
-subtitle: using SymPy code generators
-description:
-created: !!timestamp '2014-08-28 14:11:00'
-tags:
-    - sympy
-    - cython
-    - fortran
-    - c
-    - matrices
-    - code generation
-    - python
----
+============================
+Vectorized Matrix Evaluation
+============================
+
+:authors: Jason K. Moore
+:subtitle: using SymPy code generators
+:description:
+:date: 2014-08-28 14:11:00
+:tags: sympy, cython, fortran, c, matrices, code generation, python
 
 {% mark image -%}
 {%- endmark %}

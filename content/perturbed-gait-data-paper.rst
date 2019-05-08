@@ -1,14 +1,12 @@
----
-title: My first data paper
-subtitle: Is it worth it?
-description: Some thoughts on publishing an open access data paper.
-created: !!timestamp '2015-04-28 10:56:00'
-tags:
-    - data
-    - gait
-    - research
-    - publishing
----
+===================
+My first data paper
+===================
+
+:authors: Jason K. Moore
+:subtitle: Is it worth it?
+:description: Some thoughts on publishing an open access data paper.
+:date: 2015-04-28 10:56:00
+:tags: data, gait, research, publishing
 
 {% mark image -%}
 {%- endmark %}

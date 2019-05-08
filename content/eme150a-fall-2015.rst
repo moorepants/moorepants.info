@@ -1,14 +1,12 @@
----
-title: Teaching Mechanical Design
-subtitle: a first attempt
-description: Description of what did and didn't work in teaching Mechanical Design.
-created: !!timestamp '2015-12-14 08:01:00'
-tags:
-    - teaching
-    - education
-    - ucd
-    - engineering
----
+==========================
+Teaching Mechanical Design
+==========================
+
+:authors: Jason K. Moore
+:subtitle: a first attempt
+:description: Description of what did and didn't work in teaching Mechanical Design.
+:date: 2015-12-14 08:01:00
+:tags: teaching, education, ucd, engineering
 
 {% mark image -%}
 {%- endmark %}
@@ -28,7 +26,7 @@ educational aspects of this course, what I tried, and what I learned.
 {% endmark %}
 
 Course Objectives
-=================
+-----------------
 
 The course's main objective is to develop the student's ability to design
 mechanical elements and structures with the prevention failure due to static
@@ -73,7 +71,7 @@ drastic improvements in the project reports over the course (4 memos, two
 reports, and a one report draft).
 
 Course Content
-==============
+--------------
 
 I used a combination of a public `course website`_ and Smartsite (Sakai_ 9) to
 deliver content and materials to the class. I did my best to share any
@@ -113,7 +111,7 @@ system so that we can wean away from the closed expensive ($275) content.
 .. _Chemwiki: http://chemwiki.ucdavis.edu/
 
 Active Learning
-===============
+---------------
 
 At the beginning of the course I imagined segmenting the 50 minute class
 periods into a series of 10 minutes of instruction followed by 10 minutes of
@@ -144,7 +142,7 @@ each other's designs strictly with additions. They'll get more of this from me
 in the capstone design course next quarter.
 
 Time
-====
+----
 
 I track my time with Hamster_ and it seems I spent around 375 hours prepping
 and running this course. That comes out to about 30 hours per week over 12
@@ -179,7 +177,7 @@ but I hear that was normal in the early days of the department and also for
 teachers at community colleges.
 
 Reverse Engineering Project
-===========================
+---------------------------
 
 During the first five weeks the students work on a mostly individual `reverse
 engineering project`_. The goals are to:
@@ -231,7 +229,7 @@ submit a PDF for the final report submission but a handful of reports'
 formatting didn't stay intact in the GDocs PDF export, which seems like a bug.
 
 Unitrans Bus Bicycle Rack Design Project
-========================================
+----------------------------------------
 
 The `second project`_ was an open ended mechanical design task that a teams of
 3 or 4 students worked on collaboratively. One previous course project that is
@@ -327,7 +325,7 @@ homeworks and examples I give are already in the simplified form, which leaves
 them just guessing how to do the actual modeling step.
 
 Feedback
-========
+--------
 
 I collected a large amount of feedback during the course. Each Friday I passed
 out sticky notes to the class and had them write one positive comment, one
@@ -453,7 +451,7 @@ than useful.
 .. _lots of indication: http://www.stat.berkeley.edu/~stark/Preprints/evaluations14.pdf
 
 Q&A Outside of Class
-====================
+--------------------
 
 UC Davis provides access to a tool called Piazza_ through Smartsite. Piazza is a
 student Q&A application and we made use of it extensively. I encouraged
@@ -498,7 +496,7 @@ other basic stats from the midterm and final.
 .. _stats notebook: https://gist.github.com/moorepants/a44ddbab1eaa51b4991f
 
 Assigning Groups
-================
+----------------
 
 I used the tool developed at Purdue called CATME_ for forming the project teams
 and collecting peer evaluations of the team work. This tool seems to work
@@ -527,7 +525,7 @@ meant that I had to readjust them when students dropped the class in the first
 week.
 
 FEA
-===
+---
 
 I hadn't planned on teaching anything about `Finite Element Analysis`_ but my
 TA had developed four or five FEA lectures/demos and accompanying assignments
@@ -566,7 +564,7 @@ overall it was an awesome and unexpected edition that was all initiated by my
 TA.
 
 Conclusion
-==========
+----------
 
 I believe the course was successful and most of the things I tried worked out
 and I will do them again. I'm going to spend some time this summer thinking

@@ -1,13 +1,10 @@
----
-title: Drive5
-subtitle: submision for Apps for Vehicles Challenge
-description: Introduction to our app idea.
-created: !!timestamp '2013-01-18 15:05:00'
-tags:
-    - fuel economy
-    - Drive5
-    - app
----
+Drive5
+======
+
+:subtitle: submision for Apps for Vehicles Challenge
+:description: Introduction to our app idea.
+:date: 2013-01-18 15:05:00
+:tags: fuel economy, Drive5, app
 
 {% mark image -%}
 

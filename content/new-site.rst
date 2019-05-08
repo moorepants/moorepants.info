@@ -1,13 +1,12 @@
----
-title: A new website is born
-subtitle: and it's not crying
-description: The first blog post on my new website.
-created: !!timestamp '2013-01-11 02:10:00'
-tags:
-    - website
-    - hyde
-    - bootstrap
----
+=====================
+A new website is born
+=====================
+
+:authors: Jason K. Moore
+:subtitle: and it's not crying
+:description: The first blog post on my new website.
+:date: 2013-01-11 02:10:00
+:tags: website, hyde, bootstrap
 
 {% mark image -%}
 

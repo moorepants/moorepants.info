@@ -1,16 +1,13 @@
----
-title: Introducing Resonance
-subtitle: Using computational thinking to teach mechanical vibrations
-description: Summary of the initial efforts to develop a new approach to teaching mechanical vibrations.
-created: !!timestamp '2018-03-10 11:00:00'
-tags:
-    - education
-    - engineering
-    - python
-    - jupyter
-    - computational thinking
+=====================
+Introducing Resonance
+=====================
 
----
+:authors: Jason K. Moore
+:subtitle: Using computational thinking to teach mechanical vibrations
+:description: Summary of the initial efforts to develop a new approach to
+              teaching mechanical vibrations.
+:date: 2018-03-10 11:00:00
+:tags: education, engineering, python, jupyter, computational thinking
 
 {% mark image %}
 {% endmark %}

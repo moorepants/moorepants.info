@@ -1,15 +1,12 @@
----
-title: Which topic should launch the UCD Hacker Within?
-subtitle: scientific computing and data tech at UCD
-description: Post to solicit suggestions on the first HW topic.
-created: !!timestamp '2016-01-06 10:25:00'
-tags:
-    - software
-    - hacker within
-    - ucd
-    - scientific computing
-    - data science
----
+================================================
+Which topic should launch the UCD Hacker Within?
+================================================
+
+:authors: Jason K. Moore
+:subtitle: scientific computing and data tech at UCD
+:description: Post to solicit suggestions on the first HW topic.
+:date: 2016-01-06 10:25:00
+:tags: software, hacker within, ucd, scientific computing, data science
 
 {% mark image %}
 {% endmark %}

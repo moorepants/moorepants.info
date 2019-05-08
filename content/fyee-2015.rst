@@ -1,12 +1,12 @@
----
-title: Summary of FYEE 2015
-subtitle: my first education conference
-description: Notes taken during FYEE 2015
-created: !!timestamp '2015-08-09 15:22:00'
-tags:
-    - fyee
-    - education
----
+====================
+Summary of FYEE 2015
+====================
+
+:authors: Jason K. Moore
+:subtitle: my first education conference
+:description: Notes taken during FYEE 2015
+:date: 2015-08-09 15:22:00
+:tags: fyee, education
 
 {% mark image -%}
 {%- endmark %}

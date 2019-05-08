@@ -1,14 +1,11 @@
----
-title: Building energy efficiency journal club
-subtitle: next quarter at UCD
-description: journal club
-created: !!timestamp '2015-11-05 8:13:00'
-tags:
-    - ucd
-    - engineering
-    - mae
-    - building efficiency
----
+Building energy efficiency journal club
+=======================================
+
+:authors: Jason K. Moore
+:subtitle: next quarter at UCD
+:description: journal club
+:date: 2015-11-05 8:13:00
+:tags: ucd, engineering, mae, building efficiency
 
 {% mark image -%}
 {%- endmark %}
@@ -39,7 +36,7 @@ for the course.
 | West Village 115 Sage St STE 100 RM 1104 (WCEC) Dr. Vinod Narayanan and Jonathan Woolley
 
 Overview
-========
+--------
 
 This graduate course is a broad scope review of recent literature and
 technology innovation surrounding energy efficiency in the built environment.
@@ -50,7 +47,7 @@ the implications of each energy efficiency concept from a variety of
 perspectives (eg: technical, economic, political, cultural).
 
 Topics
-======
+------
 
 May include: Zero net energy, ‘smart’ building controls, passive design
 strategies, energy use behavior, plug load management, natural ventilation,
@@ -58,13 +55,13 @@ role of energy efficiency standards, human health and wellness in buildings.
 Students are encouraged to introduce their own topic of interest.
 
 Each week
-=========
+---------
 
 - One student presents paper review and facilitates discussion
 - Each student reads one related paper
 - Group builds annotated bibliography on topic
 
 Final Deliverable
-=================
+-----------------
 
 - Individual synthesis paper on one topic from the quarter

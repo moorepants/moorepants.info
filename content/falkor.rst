@@ -1,14 +1,12 @@
----
-title: NeverEnding Tandem
-subtitle: Falkor flies again
-description: Build details of Falkor the tandem bicycle.
-created: !!timestamp '2016-06-04 13:57:00'
-tags:
-    - bicycle
-    - making
-    - falkor
-    - wedding
----
+==================
+NeverEnding Tandem
+==================
+
+:authors: Jason K. Moore
+:subtitle: Falkor flies again
+:description: Build details of Falkor the tandem bicycle.
+:date: 2016-06-04 13:57:00
+:tags: bicycle, making, falkor, wedding
 
 {% mark excerpt %}
 

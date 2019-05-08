@@ -1,12 +1,12 @@
----
-title: PyCon 2014 Walking Proposal
-subtitle: just a little too late
-description: I waited too late to try to submit this talk to PyCon 2014.
-created: !!timestamp '2013-09-16 10:16:00'
-tags:
-    - python
-    - pycon
----
+===========================
+PyCon 2014 Walking Proposal
+===========================
+
+:authors: Jason K. Moore
+:subtitle: just a little too late
+:description: I waited too late to try to submit this talk to PyCon 2014.
+:date: 2013-09-16 10:16:00
+:tags: python, pycon
 
 {% mark image -%}
 

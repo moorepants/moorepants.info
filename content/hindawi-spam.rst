@@ -1,13 +1,12 @@
----
-title: Hindawi
-subtitle: borderline scam journal
-description: Hindawi personally spammed me, wtf?
-created: !!timestamp '2013-04-16 10:17:00'
-tags:
-    - hindawi
-    - spam
-    - open access
----
+=======
+Hindawi
+=======
+
+:authors: Jason K. Moore
+:subtitle: borderline scam journal
+:description: Hindawi personally spammed me, wtf?
+:date: 2013-04-16 10:17:00
+:tags: hindawi, spam, open access
 
 {% mark image -%}
 

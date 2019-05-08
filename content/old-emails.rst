@@ -1,14 +1,13 @@
----
-title: PST2Gmail
-subtitle: missin my old email
-description: A brief explanation of the process of pushing old emails from an Outlook .pst file to Gmail.
-created: !!timestamp '2013-01-15 15:39:00'
-tags:
-    - email
-    - Outlook
-    - Gmail
-    - pst
----
+=========
+PST2Gmail
+=========
+
+:authors: Jason K. Moore
+:subtitle: missin my old email
+:description: A brief explanation of the process of pushing old emails from an
+              Outlook .pst file to Gmail.
+:date: 2013-01-15 15:39:00
+:tags: email, Outlook, Gmail, pst
 
 {% mark image -%}
 

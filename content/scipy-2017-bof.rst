@@ -1,16 +1,12 @@
----
-title: Teaching Modeling and Simulation with Python
-subtitle: A SciPy 2017 Birds of a Feather
-description: Notes from a SciPy BoF
-created: !!timestamp '2017-07-20 15:15:00'
-tags:
-    - teaching
-    - modeling
-    - simulation
-    - jupyter
-    - python
-    - scipy
----
+============================================
+Teaching Modeling and Simulation with Python
+============================================
+
+:authors: Jason K. Moore
+:subtitle: A SciPy 2017 Birds of a Feather
+:description: Notes from a SciPy BoF
+:date: 2017-07-20 15:15:00
+:tags: teaching, modeling, simulation, jupyter, python, scipy
 
 {% mark image %}
 

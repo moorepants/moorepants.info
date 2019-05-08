@@ -1,15 +1,12 @@
----
-title: PyDy ODE Code Generation
-subtitle: how fast can it get?
-description: Testing code generation methods for PyDy.
-created: !!timestamp '2013-11-01 07:44:00'
-tags:
-    - pydy
-    - python
-    - code generation
-    - multibody dynamics
-    - ordinary differential equations
----
+========================
+PyDy ODE Code Generation
+========================
+
+:authors: Jason K. Moore
+:subtitle: how fast can it get?
+:description: Testing code generation methods for PyDy.
+:date: 2013-11-01 07:44:00
+:tags: pydy, python, code generation, multibody dynamics, ordinary differential equations
 
 {% mark image -%}
 

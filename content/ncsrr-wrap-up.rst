@@ -1,14 +1,12 @@
----
-title: NCSRR Visiting Scholar Wrap Up
-subtitle: or woodpecker in the window
-description:
-created: !!timestamp '2014-08-15 09:44:00'
-tags:
-    - ncsrr
-    - direct collocation
-    - system identification
-    - inverted pendulum
----
+==============================
+NCSRR Visiting Scholar Wrap Up
+==============================
+
+:authors: Jason K. Moore
+:subtitle: or woodpecker in the window
+:description: NA
+:date: 2014-08-15 09:44:00
+:tags: ncsrr, direct collocation, system identification, inverted pendulum
 
 {% mark image -%}
 {%- endmark %}

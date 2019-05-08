@@ -1,15 +1,12 @@
----
-title: Fixin' photo timestamps
-subtitle: don't forget the travel setting
-description: Photo timestamp manipulation with Python
-created: !!timestamp '2013-05-26 02:10:00'
-tags:
-    - photo
-    - python
-    - timestamp
-    - gexiv2
-    - pytz
----
+=======================
+Fixin' photo timestamps
+=======================
+
+:authors: Jason K. Moore
+:subtitle: don't forget the travel setting
+:description: Photo timestamp manipulation with Python
+:date: 2013-05-26 02:10:00
+:tags: photo, python, timestamp, gexiv2, pytz
 
 {% mark image -%}
 

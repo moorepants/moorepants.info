@@ -1,12 +1,12 @@
----
-title: Where to go in the Netherlands
-subtitle: my tourist recommendations
-description: 
-created: !!timestamp '2015-12-05 16:12:00'
-tags:
-    - netherlands
-    - tourism
----
+==============================
+Where to go in the Netherlands
+==============================
+
+:authors: Jason K. Moore
+:subtitle: my tourist recommendations
+:description: NA
+:date: 2015-12-05 16:12:00
+:tags: netherlands, tourism
 
 {% mark image -%}
 {%- endmark %}

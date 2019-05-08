@@ -1,14 +1,12 @@
----
-title: In Defense of the NSF
-subtitle: let the scientists be the judge
-description: A letter to a journalist defending our NSF funded work.
-created: !!timestamp '2017-03-05 12:07:00'
-tags:
-    - national science foundation
-    - bicycle
-    - research
-    - congress
----
+=====================
+In Defense of the NSF
+=====================
+
+:authors: Jason K. Moore
+:subtitle: let the scientists be the judge
+:description: A letter to a journalist defending our NSF funded work.
+:date: 2017-03-05 12:07:00
+:tags: national science foundation, bicycle, research, congress
 
 {% mark image -%}
 {%- endmark %}

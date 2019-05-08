@@ -1,13 +1,11 @@
----
-title: Doing Math with Python Review
-subtitle: it's good!
-description: A review of Amit Saha's book, Doing Math with Python
-created: !!timestamp '2015-12-18 10:35:00'
-tags:
-    - python
-    - sympy
-    - review
----
+Doing Math with Python Review
+=============================
+
+:authors: Jason K. Moore
+:subtitle: it's good!
+:description: A review of Amit Saha's book, Doing Math with Python
+:date: 2015-12-18 10:35:00
+:tags: python, sympy, review
 
 {% mark image -%}
 
