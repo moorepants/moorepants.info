@@ -192,9 +192,9 @@ committees
 - run an etherpad for people to ask questions
 - green and red sticky notes to signal need help
 - minute cards: at break jot down one thing they didnt learn and one thing they
-did, this will tell you what you need to repeat.
+  did, this will tell you what you need to repeat.
 - sign up in groups: more diversity, because they are there with people they
-trust
+  trust
 - editors are hard, don't use the word "just" "just install ubuntu"
 
 Book: how learning works

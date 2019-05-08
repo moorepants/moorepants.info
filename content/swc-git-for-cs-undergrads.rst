@@ -1,15 +1,12 @@
----
-title: Teaching Git to 100 CS Undergrads
-subtitle: or bad jokes in the etherpad
-description: Some info about teaching the SWC style git to UCD CS Undergrads.
-created: !!timestamp '2016-02-01 18:03:00'
-tags:
-    - education
-    - software carpentry
-    - git
-    - computer science
-    - uc davis
----
+=================================
+Teaching Git to 100 CS Undergrads
+=================================
+
+:authors: Jason K. Moore
+:subtitle: or bad jokes in the etherpad
+:description: Some info about teaching the SWC style git to UCD CS Undergrads.
+:date: 2016-02-01 18:03:00
+:tags: education, software carpentry, git, computer science, uc davis
 
 {% mark image -%}
 {%- endmark %}
