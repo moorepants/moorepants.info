@@ -12,15 +12,12 @@ What's your inertia?
           designs for the Double Pendulum Robot.
 :tags: python, body segment parameters, mayavi, yeadon, inertia
 
-{% mark image %}
 
 .. image:: https://objects-us-east-1.dream.io/moorepants.info/haya.png
    :class: img-rounded
    :width: 400px
 
-{% endmark %}
 
-{% mark excerpt %}
 
 I recently attended `SciPy 2013`_ where I gave a couple of talks. The second
 talk was our first public showing of Yeadon, our Python package which
@@ -37,7 +34,6 @@ version just in time for the conference.
 
 The video of the conference talk is below:
 
-{% endmark %}
 
 .. raw:: html
 

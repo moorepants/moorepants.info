@@ -7,19 +7,15 @@ Doing Math with Python Review
 :date: 2015-12-18 10:35:00
 :tags: python, sympy, review
 
-{% mark image -%}
 
 .. image:: https://www.nostarch.com/sites/default/files/imagecache/product_main_page/pymath_cover-front_new.png
    :width: 200px
 
-{%- endmark %}
 
-{% mark excerpt %}
 
 I had the pleasure of reviewing Amit Saha's book "Doing Math with Python" over
 the Christmas break and this post contains the email I sent to Amit.
 
-{% endmark %}
 
    Amit,
 

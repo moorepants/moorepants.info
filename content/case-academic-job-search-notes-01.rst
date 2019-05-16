@@ -8,11 +8,8 @@ Academic Job Search Session Notes
 :date: 2013-10-25 15:32:00
 :tags: professorship, academic, job search
 
-{% mark image -%}
 
-{%- endmark %}
 
-{% mark excerpt -%}
 
 I went to a well attended and well put together panel discussion at Case today
 entitled "Behind the Scenes with the Search Committee: The Academic Application
@@ -32,7 +29,6 @@ frustrating.
 
 Here are the notes from this first session:
 
-{%- endmark %}
 
 October 25, 2013
 

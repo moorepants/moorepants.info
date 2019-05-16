@@ -8,11 +8,8 @@ Fixin' photo timestamps
 :date: 2013-05-26 02:10:00
 :tags: photo, python, timestamp, gexiv2, pytz
 
-{% mark image -%}
 
-{%- endmark %}
 
-{% mark excerpt %}
 
 Yumi and I just got back from a month long bicycle tour of Japan. We took two
 cameras with us. My Panasonic Lumix stopped autofocusing the first day of the
@@ -30,7 +27,6 @@ PyTZ_ package to sort things out.
 .. _Gexiv2: http://redmine.yorba.org/projects/gexiv2/wiki
 .. _PyTZ: http://pytz.sourceforge.net
 
-{% endmark %}
 
 To install Gexiv2 in Ubuntu 12.10 I ran these commands::
 

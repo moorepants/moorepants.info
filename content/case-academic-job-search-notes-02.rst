@@ -7,15 +7,11 @@ Negotiating the Academic Job Offer Session Notes
 :date: 2013-11-22 12:35:00
 :tags: professorship, academic, job search, job offer
 
-{% mark image -%}
 
-{%- endmark %}
 
-{% mark excerpt -%}
 
 Some raw notes on the "Negotiating the Academic Job Offer" panel discussion.
 
-{%- endmark %}
 
 Panelists
 ---------

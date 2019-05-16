@@ -8,11 +8,8 @@ Teaching Modeling and Simulation with Python
 :date: 2017-07-20 15:15:00
 :tags: teaching, modeling, simulation, jupyter, python, scipy
 
-{% mark image %}
 
-{% endmark %}
 
-{% mark excerpt %}
 
 Many instructors that teach modeling and simulation topics in a variety of
 domains are turning to `computational thinking
@@ -27,7 +24,6 @@ struggles using these new teaching strategies and tools. Below are the notes
 that were written by Kenneth Lyons and collaboratively edited by the session's
 attendees. We hope these will be helpful to the broader community.
 
-{% endmark %}
 
 Overview
 ========

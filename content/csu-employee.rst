@@ -7,11 +7,8 @@ Being New
 :date: 2013-07-11 16:46:00
 :tags: csu, wireless
 
-{% mark image -%}
 
-{%- endmark %}
 
-{% mark excerpt -%}
 
 I started my new job as a Research Associate/Fellow at Cleveland State
 University Monday. I had to fill out some standard paperwork the first morning
@@ -21,7 +18,6 @@ social security payments. The other papers were tax forms, ethics and fraud
 reporting, Viking card (employee card), direct deposit for payroll, personal
 data, etc. This took less than an hour and the folks were nice.
 
-{%- endmark %}
 
 After that you need to get hooked up to the computer systems. So I called 5050
 to get a temporary internet password and then logged into

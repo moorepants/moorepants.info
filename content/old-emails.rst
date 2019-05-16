@@ -9,11 +9,8 @@ PST2Gmail
 :date: 2013-01-15 15:39:00
 :tags: email, Outlook, Gmail, pst
 
-{% mark image -%}
 
-{%- endmark %}
 
-{% mark excerpt -%}
 
 I must have started my emailing career sometime in high school. I remember
 having the address jive@gamewood.net from our local internet provider around
@@ -26,7 +23,6 @@ on July 16, 2005. This file has been sitting on a backup CD since that day.
 I've occasionally wished I could search for emails from those years to dig up
 old contacts and such, but never did anything about it.
 
-{%- endmark %}
 
 I got inspired this morning and dug up the CD with the .pst file and found this
 nice `post

@@ -6,11 +6,8 @@ Drive5
 :date: 2013-01-18 15:05:00
 :tags: fuel economy, Drive5, app
 
-{% mark image -%}
 
-{%- endmark %}
 
-{% mark excerpt -%}
 
 My good friend, Tai Stillwater, studied driver feedback for his `PhD work
 <http://pubs.its.ucdavis.edu/download_pdf.php?id=1518>`_ and now as a post doc
@@ -28,7 +25,6 @@ of the underlying data so that end-users find it fun and easy to use.
 
 Checkout the screencast below showing how the app will work.
 
-{%- endmark %}
 
 
 .. raw:: html

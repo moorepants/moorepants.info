@@ -8,10 +8,7 @@ Which topic should launch the UCD Hacker Within?
 :date: 2016-01-06 10:25:00
 :tags: software, hacker within, ucd, scientific computing, data science
 
-{% mark image %}
-{% endmark %}
 
-{% mark excerpt %}
 
 I've been yearning for some kind of scientific computing meetup group at UC
 Davis and the spent last quarter searching for some like minded folks that
@@ -29,7 +26,6 @@ first topic neutral on that front, but I'd be willing to give that up for a
 super attractive first topic. What do you think would be the best topic to
 launch this with?
 
-{% endmark %}
 
 Some other desires for the group:
 

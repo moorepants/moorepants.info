@@ -8,11 +8,6 @@ In Defense of the NSF
 :date: 2017-03-05 12:07:00
 :tags: national science foundation, bicycle, research, congress
 
-{% mark image -%}
-{%- endmark %}
-
-{% mark excerpt %}
-
 In 2009, Mont Hubbard, Ronald A. Hess, Dale L. Peterson, and I were awarded
 $300K for a two year grant_ from the National Science Foundation (NSF) to study
 how people are able to balance on bicycles. We completed the work in September
@@ -31,7 +26,6 @@ comment on this report, e.g. in `IEEE Spectrum`_.
 .. _`The National Science Foundation: Under the Microscope`: https://en.wikipedia.org/wiki/National_Science_Foundation:_Under_the_Microscope
 .. _`IEEE Spectrum`: http://spectrum.ieee.org/automaton/robotics/robotics-software/us-senator-calls-robot-projects-wasteful
 
-{% endmark %}
 
 Then again in 2014, US Assemblyman Lamar Smith (R-TX), the chair of the House's
 Committee on Science, Space, and Technology, `launched an investigation`_ into

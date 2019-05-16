@@ -8,10 +8,7 @@ Teaching Git to 100 CS Undergrads
 :date: 2016-02-01 18:03:00
 :tags: education, software carpentry, git, computer science, uc davis
 
-{% mark image -%}
-{%- endmark %}
 
-{% mark excerpt %}
 
 Last week I taught an introduction to version control with Git to the UCD
 computer science capstone design course. There were about 100 students and I
@@ -22,7 +19,6 @@ group of graduate students.
 
 .. _Software Carpentry: http://software-carpentry.org
 
-{% endmark %}
 
 We used the `SWC Git novice lesson`_. I only went through sections 1 through 9
 as sections 10-12 weren't really relevant to the students in the class and

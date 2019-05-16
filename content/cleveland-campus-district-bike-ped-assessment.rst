@@ -7,16 +7,12 @@ Campus District Assessment
 :date: 2013-08-19 11:07:00
 :tags: bicycle, pedestrian, cleveland
 
-{% mark image -%}
 
-{%- endmark %}
 
-{% mark excerpt %}
 
 I participated in a Cleveland Campus District bicycle and pedestrian assessment
 last Tuesday. Here is a copy of the thoughts I sent to the organizing groups:
 
-{% endmark %}
 
   It was nice to meet you all on the assessment last week. I've been meaning to
   send in my responses before now, but I had too many other things to do. As a

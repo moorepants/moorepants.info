@@ -7,10 +7,7 @@ Building energy efficiency journal club
 :date: 2015-11-05 8:13:00
 :tags: ucd, engineering, mae, building efficiency
 
-{% mark image -%}
-{%- endmark %}
 
-{% mark excerpt %}
 
 Jonathan Woolley and Vinad Narayanan are hosting a building energy efficieny
 journal club next quarter.
@@ -29,7 +26,6 @@ journal club next quarter.
 Here is a `flyer <https://objects-us-east-1.dream.io/moorepants.info/building-efficiency-journal-club-flyer.pdf>`_
 for the course.
 
-{% endmark %}
 
 | TTP 289A-003, CRN #42059, 1 unit, letter graded
 | Friday 3:10-4:00 PM Winter 2016

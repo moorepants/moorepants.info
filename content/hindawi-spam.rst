@@ -8,11 +8,8 @@ Hindawi
 :date: 2013-04-16 10:17:00
 :tags: hindawi, spam, open access
 
-{% mark image -%}
 
-{%- endmark %}
 
-{% mark excerpt %}
 
 I just received an email from `Hindawi Publishers <http://www.hindawi.com/>`_
 inviting me to submit an open access journal article for a topic I no nothing
@@ -20,7 +17,6 @@ about. The email was from fluids@journals.hindawi.com. I've heard that Hindawi
 is legit but these kind of practices make them seem like scammers. Here is the
 email:
 
-{% endmark %}
 
   Dear Dr. Moore,
 

@@ -8,10 +8,7 @@ Teaching Mechanical Design
 :date: 2015-12-14 08:01:00
 :tags: teaching, education, ucd, engineering
 
-{% mark image -%}
-{%- endmark %}
 
-{% mark excerpt %}
 
 My first quarter as a lecturer at UCD ended this past Friday with my final exam
 for my mechanical design course. I think the quarter went really well and that
@@ -23,7 +20,6 @@ expecting a lot from me and had a lot of fun developing and leading the course,
 among the other things that I've been working on. This post will cover the
 educational aspects of this course, what I tried, and what I learned.
 
-{% endmark %}
 
 Course Objectives
 -----------------
@@ -268,6 +264,7 @@ fluctuating stresses in their designs.
 .. image:: https://objects-us-east-1.dream.io/moorepants.info/eme150a-fall-2015/bus-accel-data.png
    :class: img-rounded
    :width: 600px
+   :alt: Time series graph of bus vertical nose acceleration data.
 
 The students worked super hard on the project and every team did an excellent
 job on the final presentations and reports. I was quite proud of their

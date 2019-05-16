@@ -7,10 +7,7 @@ Copyright at Engineering Conferences
 :subtitle: why is it such a pain?
 :tags: copyright, conference, open access
 
-{% mark image -%}
-{%- endmark %}
 
-{% mark excerpt %}
 
 Three of my papers got accepted to `BMD 2013 <http://bmd2013.org>`_ (two oral
 presentations and one poster). I'm very elated about this as I only got a
@@ -19,7 +16,6 @@ to talk about my dissertation work in front of my peers. My intention was to
 submit papers that are reflections/enhancements of work presented in my
 `dissertation <moorepants.github.io/dissertation>`_. The paper titles are:
 
-{% endmark %}
 
 - Identification of manual control employed during bicycling (poster)
 - A review of steer torque measurement in bicycles and motorcycles (oral

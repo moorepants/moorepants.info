@@ -9,15 +9,12 @@ Introducing Resonance
 :date: 2018-03-10 11:00:00
 :tags: education, engineering, python, jupyter, computational thinking
 
-{% mark image %}
-{% endmark %}
 
 **Co-authored by co-instructors Jason K. Moore and Kenneth Lyons.**
 
 Course Description
 ==================
 
-{% mark excerpt %}
 
 `Introduction to Mechanical Vibrations`_ is a 30+ year old upper level elective
 in the mechanical engineering curriculum at the University of California,
@@ -59,7 +56,6 @@ relevant to their future work.
 .. _Introduction to Mechanical Vibrations: https://github.io/moorepants/eng122
 .. _vibrating mechanical systems: https://en.wikipedia.org/wiki/Vibration
 
-{% endmark %}
 
 Why Change?
 ===========

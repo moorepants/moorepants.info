@@ -8,17 +8,11 @@ Freeport Boulevard Road Diet
 :date: 2016-11-20 14:20:00
 :tags: bicycle, advocacy, sacramento, bicycle lane
 
-{% mark image %}
-
 .. figure:: https://objects-us-east-1.dream.io/moorepants.info/sacbee-freeport.jpeg
    :class: img-rounded
    :width: 400px
 
    Photo from the Sacramento Bee article.
-
-{% endmark %}
-
-{% mark excerpt %}
 
 The Sacramento Bee published `an article`_ today showing off the city's work in
 making Freeport Boulevard safer for pedestrians and bicyclists. This makeover
@@ -30,8 +24,6 @@ standards.
 
 .. _an article: http://www.sacbee.com/news/local/transportation/article115956748.html
 .. _viral video: https://www.youtube.com/watch?v=2pD8nujd2Ow
-
-{% endmark %}
 
 Note that there is a bicyclist in an extremely narrow bicycle lane (not
 much wider than the handlebars), there is a bicyclist in the street, almost in

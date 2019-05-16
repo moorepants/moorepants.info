@@ -8,8 +8,6 @@ NeverEnding Tandem
 :date: 2016-06-04 13:57:00
 :tags: bicycle, making, falkor, wedding
 
-{% mark excerpt %}
-
 Yumi and I have two great friends, Aubrey and Kent, and they got hitched in mid
 May. Kent is a `bike minister`_ and when he saw the tandem I'd recently
 acquired he asked if Aubrey and he could ride it as part of their wedding. I
@@ -26,16 +24,10 @@ Charlie.
 .. _bike minister: http://davisbikecollective.org/
 .. _Falkor-shaped bicycle: https://pbs.twimg.com/media/BAFx85ACYAA9-p0.jpg
 
-{% endmark %}
-
-{% mark image %}
-
 .. figure:: https://objects-us-east-1.dream.io/moorepants.info/falkor-00.jpg
    :class: img-rounded
 
    Falkor the Luck Dragon Tandem
-
-{% endmark %}
 
 Build Description
 =================

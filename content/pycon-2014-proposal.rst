@@ -8,18 +8,14 @@ PyCon 2014 Walking Proposal
 :date: 2013-09-16 10:16:00
 :tags: python, pycon
 
-{% mark image -%}
 
-{%- endmark %}
 
-{% mark excerpt %}
 
 I wrote up a last minute PyCon 2014 proposal last night at 11:30 and pressed
 save at 24:00...which was too late. Here are the details so I can save it for
 another time. I did manage to submit a tutorial on PyDy, but I think that has
 a much lower probability to be accepted.
 
-{% endmark %}
 
 Using Python to Understand Human Motion and Control During Walking
 

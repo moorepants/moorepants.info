@@ -8,10 +8,7 @@ My first data paper
 :date: 2015-04-28 10:56:00
 :tags: data, gait, research, publishing
 
-{% mark image -%}
-{%- endmark %}
 
-{% mark excerpt %}
 
 I have been working on a `gait control identification project`_ since I started
 as a post doc at Cleveland State University in July 2013. Last night the `first
@@ -25,7 +22,6 @@ one reason that isn't in the paper.
 .. _first publication: https://peerj.com/articles/918/
 .. _PeerJ: http://peerj.com
 
-{% endmark %}
 
 Ton, my PI at CSU, gave me a starting point for a project when I started work
 in July 2013. This involved collecting data and applying a "simple" direct

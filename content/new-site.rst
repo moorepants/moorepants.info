@@ -8,11 +8,8 @@ A new website is born
 :date: 2013-01-11 02:10:00
 :tags: website, hyde, bootstrap
 
-{% mark image -%}
 
-{%- endmark %}
 
-{% mark excerpt -%}
 
 I've been meaning to catch up on many long lost years of the developments in
 web technologies. This paired with the fact that I need a space to flush my
@@ -23,7 +20,6 @@ and is starting to get antiquated, especially since I never update it (it's not
 that fun to update mainly due it being built with a ten year old version of
 DreamWeaver).
 
-{%- endmark %}
 
 I started learning about website creation in my high school years (1995-2000)
 with the likes of Geocities and Fortunecity and Netscape Navigator. My first

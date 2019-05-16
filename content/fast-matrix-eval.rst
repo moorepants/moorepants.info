@@ -8,10 +8,7 @@ Vectorized Matrix Evaluation
 :date: 2014-08-28 14:11:00
 :tags: sympy, cython, fortran, c, matrices, code generation, python
 
-{% mark image -%}
-{%- endmark %}
 
-{% mark excerpt %}
 
 I'm working on using direct collocation and nonlinear programming for
 system/parameter identification. This requires evaluating a vector of
@@ -21,7 +18,6 @@ evaluated on the order of a million times at each optimization step. I've been
 generating the constraints equations and non-sparse Jacobian entries with SymPy
 and then generating code to evaluate the equations.
 
-{% endmark %}
 
 SymPy has a few facilities for generating fast code:
 
