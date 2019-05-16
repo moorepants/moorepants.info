@@ -4,6 +4,7 @@
 
 :description: Materials for my 2015 faculty application period.
 :date: 2015
+:status: hidden
 
 My interest in mechanical engineering began in my childhood where I spent many
 hours making, tinkering, and discovering how the built environment worked.

@@ -1,10 +1,13 @@
-Teaching Philosophy
-===================
+=======================
+2013 Teaching Statement
+=======================
 
 :description: Materials for my 2013 faculty application period.
-:data: 2013
+:date: 2013
+:status: hidden
 
-.. include:: content/teaching/teaching-statement-2013.rst
+Teaching Philosophy
+===================
 
 I would like to join an educational institution that encourages, sustains, and
 nurtures non-traditional engineering education models. The traditional
