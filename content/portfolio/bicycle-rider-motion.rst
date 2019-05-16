@@ -1,26 +1,20 @@
----
-title: Motion Analysis of a Bicyclist
-subtitle: shake those markers
-description: Description of the bicycling motion capture project.
-startdate: !!timestamp '2008-11-20 00:00:00'
-enddate: !!timestamp '2013-08-21 00:00:00'
----
+==============================
+Motion Analysis of a Bicyclist
+==============================
 
-{% mark image -%}
+:subtitle: shake those markers
+:description: Description of the bicycling motion capture project.
+:startdate: 2008-11-20 00:00:00
+:enddate: 2013-08-21 00:00:00
+
 .. image:: {{ media_url('images/jason-bicycle-mo-cap.jpg') }}
    :class: img-rounded
    :align: center
-{%- endmark %}
-
-
-{% mark excerpt %}
 
 We measured the kinematics of a bicycle and rider during typical riding
 maneuvers on a treadmill using motion capture technologies. Our main findings
 came from analyzing the data using principal component analysis to characterize
 the dominant motions in control.
-
-{% endmark %}
 
 Data
 ====

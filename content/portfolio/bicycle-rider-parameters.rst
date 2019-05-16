@@ -1,19 +1,14 @@
----
-title: Bicycle and Rider Physical Parameters
-subtitle: how accurate can you get
-description:
-startdate: !!timestamp '2006-01-01 00:00:00'
-enddate: !!timestamp '2012-08-21 00:00:00'
----
+=====================================
+Bicycle and Rider Physical Parameters
+=====================================
 
-{% mark image -%}
+:subtitle: how accurate can you get
+:description:
+:startdate: 2006-01-01 00:00:00
+:enddate: 2012-08-21 00:00:00
 
 .. image:: {{ media_url('images/jodi-jason-bike-par-meas.jpg') }}
    :class: img-rounded
-
-{%- endmark %}
-
-{% mark excerpt %}
 
 To accurately model the bicycle and rider system, the basic physical parameters
 of the bicycle and the rider must be measured or estimated. These parameters
@@ -22,8 +17,6 @@ bodies in the system at the most basic level and but may include any other
 constants such as frictional coefficients, damping constants, etc. Starting at
 TU Delft with Jodi Kooijman's tools and methods, I refined a technique for
 measuring both the bicycle and rider's basic parameters.
-
-{% endmark %}
 
 Software
 ========
