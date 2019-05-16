@@ -6,6 +6,7 @@ Langley Full Scale Tunnel
 :description: Work I did at the NASA full scale tunnel.
 :startdate: 2004-06-01 00:00:00
 :enddate: 2005-08-31 00:00:00
+:status: hidden
 
 .. image:: {{ media_url('images/lfst-bwb.jpg') }}
    :class: img-rounded

@@ -3,7 +3,8 @@ Human Power
 ===========
 
 :description: Power your life with your own power.
-:startdate: !!timestamp '2007-06-01 00:00:00'
+:startdate: 2007-06-01 00:00:00
+:status: hidden
 
 .. image:: {{ media_url('images/peanut-sheller.jpg') }}
    :class: img-rounded

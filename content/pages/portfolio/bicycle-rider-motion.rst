@@ -6,6 +6,7 @@ Motion Analysis of a Bicyclist
 :description: Description of the bicycling motion capture project.
 :startdate: 2008-11-20 00:00:00
 :enddate: 2013-08-21 00:00:00
+:status: hidden
 
 .. image:: {{ media_url('images/jason-bicycle-mo-cap.jpg') }}
    :class: img-rounded

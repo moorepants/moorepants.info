@@ -6,6 +6,7 @@ Pedal Desk
 :description: a desk that charges your laptop while you work with human power
 :startdate: 2007-03-01 00:00:00
 :enddate: 2007-12-31 00:00:00
+:status: hidden
 
 .. image:: {{ media_url('images/pedal-desk.jpg') }}
    :class: img-rounded

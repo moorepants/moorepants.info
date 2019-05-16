@@ -6,6 +6,7 @@ Mobile Ministry Unit
 :description: built a custom cargo rickshaw
 :startdate: 2010-09-18 00:00:00
 :enddate: 2012-12-23 00:00:00
+:status: hidden
 
 .. image:: {{ media_url('images/mmu.jpg') }}
    :class: img-rounded

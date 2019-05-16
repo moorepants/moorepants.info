@@ -6,6 +6,7 @@ Bauer Compressors
 :description: Info on projects as an intern at Bauer Compressors
 :startdate: 2003-06-01 00:00:00
 :enddate: 2003-12-31 00:00:00
+:status: hidden
 
 .. image:: {{ media_url('images/bauer-compressor-3d.jpg') }}
    :align: center

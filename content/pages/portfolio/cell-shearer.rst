@@ -6,6 +6,7 @@ Cell Shearer
 :description: a device that applies shear stress to fluids
 :startdate: 2007-08-01 00:00:00
 :enddate: 2009-08-31 00:00:00
+:status: hidden
 
 .. image:: {{ media_url('images/fancy-cell-shearer.png') }}
 

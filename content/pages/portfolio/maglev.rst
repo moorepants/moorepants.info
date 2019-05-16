@@ -6,6 +6,7 @@ ODU Maglev
 :description: solid modeling the frame of the failed ODU maglev train
 :startdate: !!timestamp '2004-05-01 00:00:00'
 :enddate: !!timestamp '2005-01-01 00:00:00'
+:status: hidden
 
 .. image:: {{ media_url('images/maglev.jpg') }}
    :class: img-rounded

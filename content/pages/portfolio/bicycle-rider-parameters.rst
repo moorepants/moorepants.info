@@ -6,6 +6,7 @@ Bicycle and Rider Physical Parameters
 :description:
 :startdate: 2006-01-01 00:00:00
 :enddate: 2012-08-21 00:00:00
+:status: hidden
 
 .. image:: {{ media_url('images/jodi-jason-bike-par-meas.jpg') }}
    :class: img-rounded

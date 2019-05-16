@@ -5,6 +5,7 @@ PyDy
 :subtitle: multibody dynamics with Python
 :description: details about the PyDy project
 :startdate: 2009-01-01 00:00:00
+:status: hidden
 
 .. image:: https://raw.githubusercontent.com/pydy/pydy-tutorial-pycon-2014/master/notebooks/figures/human_balance_diagram.png
    :class: img-rounded

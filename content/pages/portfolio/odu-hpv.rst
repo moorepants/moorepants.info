@@ -6,6 +6,7 @@ ODU Human Powered Vehicle
 :description: We built a racer for the ASME HPV competition
 :startdate: 2003-09-01 10:00:00
 :enddate: 2005-01-01 10:00:00
+:status: hidden
 
 .. image:: {{ media_url('images/odu-hpv.jpg') }}
    :align: center

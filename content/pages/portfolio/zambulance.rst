@@ -2,10 +2,11 @@
 Zambulance
 ==========
 
-;subtitle: a human powered ambulance for Zambia
+:subtitle: a human powered ambulance for Zambia
 :description: Some details on the Zambulance.
 :startdate: 2006-08-01 10:00:00
 :enddate: 2006-09-01 10:00:00
+:status: hidden
 
 .. image:: {{ media_url('images/zambulance.jpg') }}
 

@@ -6,6 +6,7 @@ Yeadon
 :description: Details of the Yeadon software project.
 :startdate: 2011-06-01 00:00:00
 :enddate: 2014-11-30 10:00:00
+:status: hidden
 
 .. image:: {{ media_url('images/yeadon-gui-screenshot.png') }}
    :class: img-rounded
