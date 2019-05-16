@@ -4,6 +4,8 @@ Work Calendar
 
 :subtitle: Busy/Non-Busy
 :description: Calendar showing my busy time at work.
+:date: 1999
+:status: hidden
 
 .. raw:: html
 

@@ -1,6 +1,7 @@
 :title: About
 :subtitle: moorepants
 :description: all the detailed info for the stalkers
+:date: 1999
 
 So you want to know about me. Well, I'll tell you one thing about me. When I
 turned sixteen, I inherited a 1977 Plymouth Arrow from my grandfather, Garland

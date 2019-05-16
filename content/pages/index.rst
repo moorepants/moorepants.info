@@ -5,6 +5,7 @@
 :sortorder: 0
 :front: true
 :description: webspace de moorepants
+:date: 1999
 
 .. image:: {{ media_url('images/headshot.jpg') }}
    :class: img-rounded pull-right

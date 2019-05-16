@@ -2,7 +2,10 @@
 Research Statement
 ==================
 
-:Author: Jason K. Moore
+:authors: Jason K. Moore
+:subtitle: asking the right questions
+:description: moorepants' ponderings
+:date: 1999
 
 If one word can represent the glue that binds my research concepts and
 intentions it would be "human". With a mechanical engineering focus, my
