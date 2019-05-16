@@ -4,11 +4,13 @@ Langley Full Scale Tunnel
 
 :subtitle: behemoth of wind machines
 :description: Work I did at the NASA full scale tunnel.
+:summary-image: https://objects-us-east-1.dream.io/moorepants/lfst-bwb.jpg
+:date: 2004-06-01 00:00:00
 :startdate: 2004-06-01 00:00:00
 :enddate: 2005-08-31 00:00:00
 :status: hidden
 
-.. image:: {{ media_url('images/lfst-bwb.jpg') }}
+.. image:: https://objects-us-east-1.dream.io/moorepants/lfst-bwb.jpg
    :class: img-rounded
    :width: 640
 
@@ -33,7 +35,7 @@ more info about the tunnel: one_, two_.
 .. _one: http://www.nasa.gov/centers/langley/news/factsheets/30X60.html
 .. _two: http://www.nasa.gov/centers/langley/news/factsheets/fst_fs_prt.htm
 
-.. figure:: {{ media_url('images/lfst-car.jpg') }}
+.. figure:: https://objects-us-east-1.dream.io/moorepants/lfst-car.jpg
    :class: img-rounded
    :width: 640
 
@@ -52,7 +54,7 @@ alternative based in the 14' x 22' subsonic tunnel and we proceeded with the
 project and redesigned the balance with slightly fewer force measuring
 capabilities to save money.
 
-.. figure:: {{ media_url('images/lfst-final-balance.jpg') }}
+.. figure:: https://objects-us-east-1.dream.io/moorepants/lfst-final-balance.jpg
    :class: img-rounded
    :width: 640
 
@@ -64,7 +66,7 @@ wrote a detailed stress report for NASA qualification on every critical nut and
 bolt in the assembly using standard stress analyses practices and FEA analysis
 based on ANSYS which was provided with the Inventor software.
 
-.. figure:: {{ media_url('images/lfst-balance-fea.jpg') }}
+.. figure:: https://objects-us-east-1.dream.io/moorepants/lfst-balance-fea.jpg
    :class: img-rounded
    :width: 640
 
@@ -76,7 +78,7 @@ for overload protection. There were two load cells measure lateral force and
 the vertical moment, one load cell measuring drag force, and four load cells
 measure down force at each wheel pad.
 
-.. figure:: {{ media_url('images/R1-00.jpg') }}
+.. figure:: https://objects-us-east-1.dream.io/moorepants/R1-00.jpg
    :class: img-rounded
    :width: 640
 
@@ -90,7 +92,7 @@ drop by in December 2007 and got to see the completed balance. The balance was
 used for testing for some time at the 14' x 22' tunnel, but the competitors
 rolling road balances quickly made our balance obsolete.
 
-.. figure:: {{ media_url('images/lfst-finished-balance.jpg') }}
+.. figure:: https://objects-us-east-1.dream.io/moorepants/lfst-finished-balance.jpg
    :class: img-rounded
    :width: 640
 

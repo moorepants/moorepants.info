@@ -3,10 +3,12 @@ Human Power
 ===========
 
 :description: Power your life with your own power.
+:summary-image: https://objects-us-east-1.dream.io/moorepants/peanut-sheller.jpg
+:date: 2007-06-01 00:00:00
 :startdate: 2007-06-01 00:00:00
 :status: hidden
 
-.. image:: {{ media_url('images/peanut-sheller.jpg') }}
+.. image:: https://objects-us-east-1.dream.io/moorepants/peanut-sheller.jpg
    :class: img-rounded
 
 I have an interest in the appropriate use of human power for various tasks.

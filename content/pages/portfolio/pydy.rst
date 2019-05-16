@@ -4,6 +4,9 @@ PyDy
 
 :subtitle: multibody dynamics with Python
 :description: details about the PyDy project
+:summary-sentence: PyDy is a general tool for mutlibody dynamic analysis written in Python.
+:summary-image: https://raw.githubusercontent.com/pydy/pydy-tutorial-pycon-2014/master/notebooks/figures/human_balance_diagram.png
+:date: 2009-01-01 00:00:00
 :startdate: 2009-01-01 00:00:00
 :status: hidden
 

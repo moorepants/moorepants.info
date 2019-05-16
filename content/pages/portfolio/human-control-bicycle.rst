@@ -4,11 +4,14 @@ Human Control of a Bicycle
 
 :subtitle: what about bears?
 :description: what I studied for my phd degree
+:summary-sentence:
+:summary-image: https://objects-us-east-1.dream.io/moorepants/jason-on-instrumented-bicycle.jpg
+:date: 2009-10-01 00:00:00
 :startdate: 2009-10-01 00:00:00
 :enddate: 2012-08-21 00:00:00
 :status: hidden
 
-.. image:: {{ media_url('images/jason-on-instrumented-bicycle.jpg') }}
+.. image:: https://objects-us-east-1.dream.io/moorepants/jason-on-instrumented-bicycle.jpg
    :class: img-rounded
 
 My graduate work at UC Davis was rounded out with a project that focused on

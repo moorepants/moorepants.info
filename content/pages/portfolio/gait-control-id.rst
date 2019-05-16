@@ -4,6 +4,9 @@ Gait Control Identification
 
 :subtitle: what keeps us from falling?
 :description: Details about my post doc work at Cleveland State University
+:summary-sentence:
+:summary-image: http://www.moorepants.info/presentations/2014/DW2014/img/control-system-detailed.png
+:date: 2013-07-08 00:00:00
 :startdate: 2013-07-08 00:00:00
 :status: hidden
 

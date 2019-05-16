@@ -4,13 +4,14 @@ Cell Shearer
 
 :subtitle: shear your blood
 :description: a device that applies shear stress to fluids
+:summary-sentence: Biomedical blood cell shearing device machine design.
+:summary-image: https://objects-us-east-1.dream.io/moorepants/fancy-cell-shearer.png
+:date: 2007-08-01 00:00:00
 :startdate: 2007-08-01 00:00:00
 :enddate: 2009-08-31 00:00:00
 :status: hidden
 
-.. image:: {{ media_url('images/fancy-cell-shearer.png') }}
-
-Biomedical blood cell shearing device machine design.
+.. image:: https://objects-us-east-1.dream.io/moorepants/fancy-cell-shearer.png
 
 While I was employed at the student machine shop at UC Davis my supervisor
 arranged for me to work on a design project with `Anthony Passerini`_ and his
@@ -29,13 +30,13 @@ The design criteria for the tolerances of the cone/fluid interaction were
 extremely tight and most of the work was spent figuring out ways to ensure the
 relative dimensions of the cone and plate.
 
-.. image:: {{ media_url('images/cone-diagram.png') }}
+.. image:: https://objects-us-east-1.dream.io/moorepants/cone-diagram.png
 
 The principle of operation is based around rotation of a shallow cone in a
 fluid which theoretically generates a linear variation in shear stress with
 respect to the height of the cone.
 
-.. image:: {{ media_url('images/cell-shearer-fea.png') }}
+.. image:: https://objects-us-east-1.dream.io/moorepants/cell-shearer-fea.png
 
 Downloads
 =========

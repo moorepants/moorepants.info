@@ -4,14 +4,15 @@ Mobile Ministry Unit
 
 :subtitle: american cargo rickshaw
 :description: built a custom cargo rickshaw
+:summary-sentence: American made Indian influenced cargo rickshaw.
+:summary-image: https://objects-us-east-1.dream.io/moorepants/mmu.jpg
+:date: 2010-09-18 00:00:00
 :startdate: 2010-09-18 00:00:00
 :enddate: 2012-12-23 00:00:00
 :status: hidden
 
-.. image:: {{ media_url('images/mmu.jpg') }}
+.. image:: https://objects-us-east-1.dream.io/moorepants/mmu.jpg
    :class: img-rounded
-
-American made Indian influenced cargo rickshaw.
 
 The Mobile Ministry Unit is the Davis Bike Collective's mobile tool station
 that is used for publicity, events, and cargo hauling. Ted Buehler created it

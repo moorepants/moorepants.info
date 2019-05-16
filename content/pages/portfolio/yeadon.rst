@@ -4,11 +4,13 @@ Yeadon
 
 :subtitle: body segment parameter estimation
 :description: Details of the Yeadon software project.
+:summary-image: https://objects-us-east-1.dream.io/moorepants/yeadon-gui-screenshot.png
+:date: 2011-06-01 00:00:00
 :startdate: 2011-06-01 00:00:00
 :enddate: 2014-11-30 10:00:00
 :status: hidden
 
-.. image:: {{ media_url('images/yeadon-gui-screenshot.png') }}
+.. image:: https://objects-us-east-1.dream.io/moorepants/yeadon-gui-screenshot.png
    :class: img-rounded
    :align: center
 
@@ -76,10 +78,10 @@ This screencast shows how to use the GUI.
 Screenshots
 -----------
 
-.. image:: {{ media_url('images/haya.png') }}
+.. image:: https://objects-us-east-1.dream.io/moorepants/haya.png
    :class: img-rounded
    :align: center
 
-.. image:: {{ media_url('images/ice-skater-double.png') }}
+.. image:: https://objects-us-east-1.dream.io/moorepants/ice-skater-double.png
    :class: img-rounded
    :align: center

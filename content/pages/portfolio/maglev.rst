@@ -4,14 +4,15 @@ ODU Maglev
 
 :subtitle: the train that never floated
 :description: solid modeling the frame of the failed ODU maglev train
-:startdate: !!timestamp '2004-05-01 00:00:00'
-:enddate: !!timestamp '2005-01-01 00:00:00'
+:summary-sentence: CAD modeling of an innovative Maglev train.
+:summary-image: https://objects-us-east-1.dream.io/moorepants/maglev.jpg
+:date: 2004-05-01 00:00:00
+:startdate: 2004-05-01 00:00:00
+:enddate: 2005-01-01 00:00:00
 :status: hidden
 
-.. image:: {{ media_url('images/maglev.jpg') }}
+.. image:: https://objects-us-east-1.dream.io/moorepants/maglev.jpg
    :class: img-rounded
-
-CAD modeling of an innovative Maglev train.
 
 In the early 2000's Old Dominion University made a deal with some company that
 claimed they had the latest, greatest maglev train technology. They installed a
@@ -23,4 +24,4 @@ below. We used Autodesk's Mechanical Desktop for the modeling and I had to
 measure everything by hand to reverse engineer it because the company that
 built the thing supposedly had no drawings of the machine.
 
-.. image:: {{ media_url('images/maglev-frame.png') }}
+.. image:: https://objects-us-east-1.dream.io/moorepants/maglev-frame.png
