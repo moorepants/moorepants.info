@@ -1,3 +1,10 @@
+=======================
+2015 Teaching Statement
+=======================
+
+:description: Materials for my 2015 faculty application period.
+:date: 2015
+
 My interest in mechanical engineering began in my childhood where I spent many
 hours making, tinkering, and discovering how the built environment worked.
 These hands-on experiences allowed me to develop a desire to discover the

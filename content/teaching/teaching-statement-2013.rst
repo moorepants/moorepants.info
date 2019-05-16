@@ -1,6 +1,11 @@
 Teaching Philosophy
 ===================
 
+:description: Materials for my 2013 faculty application period.
+:data: 2013
+
+.. include:: content/teaching/teaching-statement-2013.rst
+
 I would like to join an educational institution that encourages, sustains, and
 nurtures non-traditional engineering education models. The traditional
 engineering education process is roughly:
