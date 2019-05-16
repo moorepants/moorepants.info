@@ -1,23 +1,16 @@
----
-title: ODU Human Powered Vehicle
-subtitle: Tuscaloosa here we come
-description: We built a racer for the ASME HPV competition
-startdate: !!timestamp '2003-09-01 10:00:00'
-enddate: !!timestamp '2005-01-01 10:00:00'
----
+=========================
+ODU Human Powered Vehicle
+=========================
 
-{% mark image -%}
+:subtitle: Tuscaloosa here we come
+:description: We built a racer for the ASME HPV competition
+:startdate: 2003-09-01 10:00:00
+:enddate: 2005-01-01 10:00:00
 
 .. image:: {{ media_url('images/odu-hpv.jpg') }}
    :align: center
 
-{%- endmark %}
-
-{% mark excerpt %}
-
 ODU human powered vehicle senior design project.
-
-{% endmark %}
 
 For my senior project at `ODU <http://www.odu.edu>`_ my teammates and I
 designed a human powered vehicle to race in the annual `ASME HPV competition

@@ -1,23 +1,16 @@
----
-title: ODU Maglev
-subtitle: the train that never floated
-description: solid modeling the frame of the failed ODU maglev train
-startdate: !!timestamp '2004-05-01 00:00:00'
-enddate: !!timestamp '2005-01-01 00:00:00'
----
+==========
+ODU Maglev
+==========
 
-{% mark image -%}
+:subtitle: the train that never floated
+:description: solid modeling the frame of the failed ODU maglev train
+:startdate: !!timestamp '2004-05-01 00:00:00'
+:enddate: !!timestamp '2005-01-01 00:00:00'
 
 .. image:: {{ media_url('images/maglev.jpg') }}
    :class: img-rounded
 
-{%- endmark %}
-
-{% mark excerpt %}
-
 CAD modeling of an innovative Maglev train.
-
-{% endmark %}
 
 In the early 2000's Old Dominion University made a deal with some company that
 claimed they had the latest, greatest maglev train technology. They installed a

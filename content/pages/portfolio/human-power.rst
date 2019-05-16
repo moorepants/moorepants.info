@@ -1,22 +1,14 @@
----
-title: Human Power
-subtitle: slave drivin'
-description: Power your life with your own power.
-startdate: !!timestamp '2007-06-01 00:00:00'
----
+===========
+Human Power
+===========
 
-{% mark image -%}
+:description: Power your life with your own power.
+:startdate: !!timestamp '2007-06-01 00:00:00'
 
 .. image:: {{ media_url('images/peanut-sheller.jpg') }}
    :class: img-rounded
 
-{%- endmark %}
-
-{% mark excerpt %}
-
 I have an interest in the appropriate use of human power for various tasks.
-
-{% endmark %}
 
 - The presentation I have give several times to the UCD D-Lab on the use
   of human power in the developing world.

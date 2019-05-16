@@ -1,24 +1,17 @@
----
-title: Langley Full Scale Tunnel
-subtitle: behemoth of wind machines
-description: Work I did at the NASA full scale tunnel.
-startdate: !!timestamp '2004-06-01 00:00:00'
-enddate: !!timestamp '2005-08-31 00:00:00'
----
+=========================
+Langley Full Scale Tunnel
+=========================
 
-{% mark image -%}
+:subtitle: behemoth of wind machines
+:description: Work I did at the NASA full scale tunnel.
+:startdate: 2004-06-01 00:00:00
+:enddate: 2005-08-31 00:00:00
 
 .. image:: {{ media_url('images/lfst-bwb.jpg') }}
    :class: img-rounded
    :width: 640
 
-{%- endmark %}
-
-{% mark excerpt %}
-
 Work at the Langley full scale tunnel.
-
-{% endmark %}
 
 My senior design project advisor, Dr. Drew Landman, at Old Dominion University
 offered me a unique internship opportunity at `NASA Langley's Full Scale Tunnel

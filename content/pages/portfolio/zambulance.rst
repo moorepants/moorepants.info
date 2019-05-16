@@ -1,22 +1,15 @@
----
-title: Zambulance
-subtitle: a human powered ambulance for Zambia
-description: Some details on the Zambulance.
-startdate: !!timestamp '2006-08-01 10:00:00'
-enddate: !!timestamp '2006-09-01 10:00:00'
----
+==========
+Zambulance
+==========
 
-{% mark image -%}
+;subtitle: a human powered ambulance for Zambia
+:description: Some details on the Zambulance.
+:startdate: 2006-08-01 10:00:00
+:enddate: 2006-09-01 10:00:00
 
 .. image:: {{ media_url('images/zambulance.jpg') }}
 
-{%- endmark %}
-
-{% mark excerpt %}
-
 Appropriate technologies for the disabled in Zambia.
-
-{% endmark %}
 
 In the winter of 2006 I attended Ralf Hotchkiss's `wheelchair construction
 class`_ at SFSU to prepare for a trip to work with a wheelchair center in

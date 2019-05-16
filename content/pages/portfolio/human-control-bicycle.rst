@@ -1,19 +1,14 @@
----
-title: Human Control of a Bicycle
-subtitle: what about bears?
-description: what I studied for my phd degree
-startdate: !!timestamp '2009-10-01 00:00:00'
-enddate: !!timestamp '2012-08-21 00:00:00'
----
+==========================
+Human Control of a Bicycle
+==========================
 
-{% mark image -%}
+:subtitle: what about bears?
+:description: what I studied for my phd degree
+:startdate: !!timestamp '2009-10-01 00:00:00'
+:enddate: !!timestamp '2012-08-21 00:00:00'
 
 .. image:: {{ media_url('images/jason-on-instrumented-bicycle.jpg') }}
    :class: img-rounded
-
-{%- endmark %}
-
-{% mark excerpt %}
 
 My graduate work at UC Davis was rounded out with a project that focused on
 identifying the control actions employed by a human during simple bicycle
@@ -22,8 +17,6 @@ data during a series of experiments in which the rider attempted to balance a
 bicycle under the influence of lateral perturbations. This data was then used
 to identify both a plant and control model of the underlying system and
 validate our hypotheses about the rider's control structure.
-
-{% endmark %}
 
 Publications
 ============

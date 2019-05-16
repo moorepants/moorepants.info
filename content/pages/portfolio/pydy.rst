@@ -1,23 +1,16 @@
----
-title: PyDy
-subtitle: multibody dynamics with Python
-description: details about the PyDy project
-startdate: !!timestamp '2009-01-01 00:00:00'
----
+====
+PyDy
+====
 
-{% mark image -%}
+:subtitle: multibody dynamics with Python
+:description: details about the PyDy project
+:startdate: 2009-01-01 00:00:00
 
 .. image:: https://raw.githubusercontent.com/pydy/pydy-tutorial-pycon-2014/master/notebooks/figures/human_balance_diagram.png
    :class: img-rounded
    :align: center
 
-{%- endmark %}
-
-{% mark excerpt %}
-
 PyDy is a general tool for mutlibody dynamic analysis written in Python.
-
-{% endmark %}
 
 Links
 =====

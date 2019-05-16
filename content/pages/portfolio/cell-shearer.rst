@@ -1,22 +1,15 @@
----
-title: Cell Shearer
-subtitle: shear your blood
-description: a device that applies shear stress to fluids
-startdate: !!timestamp '2007-08-01 00:00:00'
-enddate: !!timestamp '2009-08-31 00:00:00'
----
+============
+Cell Shearer
+============
 
-{% mark image -%}
+:subtitle: shear your blood
+:description: a device that applies shear stress to fluids
+:startdate: 2007-08-01 00:00:00
+:enddate: 2009-08-31 00:00:00
 
 .. image:: {{ media_url('images/fancy-cell-shearer.png') }}
 
-{%- endmark %}
-
-{% mark excerpt %}
-
 Biomedical blood cell shearing device machine design.
-
-{% endmark %}
 
 While I was employed at the student machine shop at UC Davis my supervisor
 arranged for me to work on a design project with `Anthony Passerini`_ and his
