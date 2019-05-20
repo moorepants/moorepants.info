@@ -234,7 +234,7 @@ Content should default to private when published.
 
 Sandy, one of Ton's grad students, made a sweet prototype of the website design:
 
-.. image:: {{ media_url('images/hmc-prototype.png') }}
+.. image:: https://objects-us-east-1.dream.io/moorepants/hmc-prototype.png
    :class: img-rounded
 
 Data backup
@@ -249,15 +249,15 @@ computers for data analysis. I thought that we may be able to utilize cloud
 data backup. Here's the email I sent out with a workflow idea:
 
   I think this could be a solution for our data backup:
-  
+
   https://www.dropbox.com/business
-  
+
   But it does seem pricey. Basically about 100 bucks per user per year.
-  
+
   I chatted with a sales rep and it has many cool features that we can use.
-  
+
   I imagine this work flow:
-  
+
   1. take data on the offline mocap computer
   2. plug in flash drive to mocap computer and run a simple program that
      synchronizes the flash drive to a folder(s) in the d-flow/mocap computer
@@ -271,23 +271,23 @@ data backup. Here's the email I sent out with a workflow idea:
      is versioned)
   7. Now you go to your computer and select which folders you want to have
      synchronized to your machine on dropbox so you can access the data you need
-  
+
   So all data will be available to anyone with the our account (or we can even
   make files public in dropbox for easy wider sharing).
-  
+
   But I also realized we could skip the drop box thing and do the traditional
   method and just have this server so that we can ssh/ftp into it from anywhere
   to get a copy of data. We'd lose automatic versioning and easy dropbox
   interface, but it should effectively do the same thing.
-  
+
   I was also trying to imagine this workflow where we don't have the server
   mentioned in step 3 and simply bring the flash drive back to your personal
   computer. But we don't want to force our personal computers to have a full copy
   of all the data, we only want the data we want to use on our personal
   computers.
-  
+
   Thoughts?
-  
+
 I could also use our Amazon AWS server and an S3 bucket to run our own server
 backup. And the S3 pricing is much more favorable. Even with the 30% academic
 price reduction, drop box is super expensive.
