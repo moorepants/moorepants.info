@@ -45,6 +45,6 @@ Downloads
 - Working drawings [pdf__]
 - Assembly drawings [pdf__]
 
-__ {{ media_url('docs/DeVerse2010.pdf')}}
-__ {{ media_url('docs/cell-shearer-08-11-12.pdf')}}
-__ {{ media_url('docs/cell-shearer-assembly.pdf')}}
+__ https://objects-us-east-1.dream.io/moorepants/DeVerse2010.pdf
+__ https://objects-us-east-1.dream.io/moorepants/cell-shearer-08-11-12.pdf
+__ https://objects-us-east-1.dream.io/moorepants/cell-shearer-assembly.pdf

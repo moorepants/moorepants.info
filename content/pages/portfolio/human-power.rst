@@ -15,8 +15,8 @@ I have an interest in the appropriate use of human power for various tasks.
 
 - The presentation I have give several times to the UCD D-Lab on the use
   of human power in the developing world.
-  [`Presentation <{{ media_url('docs/hppres.pdf') }}>`_]
-  [`Notes <{{ media_url('docs/hppres-notes.pdf') }}>`_]
+  [`Presentation <https://objects-us-east-1.dream.io/moorepants/hppres.pdf>`_]
+  [`Notes <https://objects-us-east-1.dream.io/moorepants/hppres-notes.pdf>`_]
   [`Source <https://github.com/moorepants/HumanPowerPresentation>`_]
 - Pedal Desk Project
   [`Website <http://moorepants.info/jkm/ped_desk.htm>`_]

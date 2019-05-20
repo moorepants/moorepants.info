@@ -75,7 +75,7 @@ If you would like to meet with me, my free time is shown on `my work calendar
 Resume and C.V.
 ===============
 
-`Curriculum vitae PDF <{{ media_url("docs/JasonMoore_cv.pdf") }}>`_
+`Curriculum vitae PDF <https://moorepants.github.io/resume/resume.pdf>`_
 
 LinkedIn_ Profile:
 

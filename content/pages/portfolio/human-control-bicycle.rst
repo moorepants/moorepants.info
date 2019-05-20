@@ -32,7 +32,7 @@ Jason K. Moore. Human Control of a Bicycle". PhD thesis. Davis, CA: University
 of California, Davis, Aug. 2012.
 
 - `HTML Version <http://moorepants.github.io/dissertation>`_
-- `PDF Version <{{ media_url('docs/Moore2012.pdf') }}>`_
+- `PDF Version <https://objects-us-east-1.dream.io/moorepants/Moore2012.pdf>`_
 - `Sphinx Source <https://github.com/moorepants/dissertation>`_
 
 Journal Papers

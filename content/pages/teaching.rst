@@ -18,8 +18,8 @@ teach.
 Teaching Statements
 ===================
 
-- `2015 Teaching Statement`_ [`pdf <{{ media_url('docs/teaching-statement-2015.pdf') }}>`__]
-- `2013 Teaching Statement`_ [`pdf <{{ media_url('docs/teaching-statement-2013.pdf') }}>`__]
+- `2015 Teaching Statement`_ [`pdf <https://objects-us-east-1.dream.io/moorepants/teaching-statement-2015.pdf>`__]
+- `2013 Teaching Statement`_ [`pdf <https://objects-us-east-1.dream.io/moorepants/teaching-statement-2013.pdf>`__]
 
 .. _2015 Teaching Statement: {{ content_url('teaching/teaching-statement-2015.html') }}
 .. _2013 Teaching Statement: {{ content_url('teaching/teaching-statement-2013.html') }}

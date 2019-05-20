@@ -6,8 +6,9 @@
 :front: true
 :description: webspace de moorepants
 :date: 1999
+:status: hidden
 
-.. image:: {{ media_url('images/headshot.jpg') }}
+.. image:: https://objects-us-east-1.dream.io/moorepants/headshot.jpg
    :class: img-rounded pull-right
 
 moorepants /mʊərpænts/
