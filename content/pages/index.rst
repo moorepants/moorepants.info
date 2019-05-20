@@ -1,6 +1,6 @@
-==========
-moorepants
-==========
+====
+Home
+====
 
 :subtitle: a website
 :url:

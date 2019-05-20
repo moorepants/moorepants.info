@@ -1,6 +1,6 @@
-==================
-Research Statement
-==================
+========
+Research
+========
 
 :authors: Jason K. Moore
 :subtitle: asking the right questions
