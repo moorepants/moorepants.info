@@ -3600,8 +3600,8 @@ Dynamics with Python
    <div class="output_subarea output_pyout output_html rendered_html">
 
    <video width="640" height="480" controls>
-     <source src="{{ media_url('videos/open-loop.ogv') }}" type="video/ogg">
-     <source src="{{ media_url('videos/open-loop.mp4') }}" type="video/mp4">
+     <source src="https://objects-us-east-1.dream.io/moorepants/open-loop.ogv" type="video/ogg">
+     <source src="https://objects-us-east-1.dream.io/moorepants/open-loop.mp4" type="video/mp4">
    Your browser does not support the video tag.
    </video>
 
@@ -4503,8 +4503,8 @@ Dynamics with Python
    <div class="output_subarea output_pyout output_html rendered_html">
 
    <video width="640" height="480" controls>
-     <source src="{{ media_url('videos/closed-loop.ogv') }}" type="video/ogg">
-     <source src="{{ media_url('videos/closed-loop.mp4') }}" type="video/mp4">
+     <source src="https://objects-us-east-1.dream.io/moorepants/closed-loop.ogv" type="video/ogg">
+     <source src="https://objects-us-east-1.dream.io/moorepants/closed-loop.mp4" type="video/mp4">
    Your browser does not support the video tag.
    </video>
 
