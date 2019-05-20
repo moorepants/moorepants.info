@@ -13,7 +13,7 @@ What's your inertia?
 :tags: python, body segment parameters, mayavi, yeadon, inertia
 
 
-.. image:: https://objects-us-east-1.dream.io/moorepants.info/haya.png
+.. image:: https://objects-us-east-1.dream.io/moorepants/haya.png
    :class: img-rounded
    :width: 400px
 

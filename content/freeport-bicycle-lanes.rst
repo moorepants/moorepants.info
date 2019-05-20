@@ -8,7 +8,7 @@ Freeport Boulevard Road Diet
 :date: 2016-11-20 14:20:00
 :tags: bicycle, advocacy, sacramento, bicycle lane
 
-.. figure:: https://objects-us-east-1.dream.io/moorepants.info/sacbee-freeport.jpeg
+.. figure:: https://objects-us-east-1.dream.io/moorepants/sacbee-freeport.jpeg
    :class: img-rounded
    :width: 400px
 

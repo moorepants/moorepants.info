@@ -27,7 +27,7 @@ Newton's Second Law of Motion. These foundational concepts provide insight into
 the design of machines to both minimize undesired vibrations and exploit
 desired vibrations.
 
-.. figure:: https://objects-us-east-1.dream.io/moorepants.info/car.gif
+.. figure:: https://objects-us-east-1.dream.io/moorepants/car.gif
    :align: center
 
    Animation of a car vibration model created with resonance; an example of the
@@ -321,7 +321,7 @@ out to be a great idea for several reasons:
 - We were able to utilize nbgrader_ for distribution, collection, and grading
   of the in-class materials and homework assignments (see more below).
 
-.. figure:: https://objects-us-east-1.dream.io/moorepants.info/eng122-jupyterhub.png
+.. figure:: https://objects-us-east-1.dream.io/moorepants/eng122-jupyterhub.png
    :align: center
    :width: 640
 
@@ -357,7 +357,7 @@ conventions, supplementing the in-class materials. Formatting and overall
 clarity of the submitted homework notebooks seemed to improve significantly by
 the end of the course.
 
-.. figure:: https://objects-us-east-1.dream.io/moorepants.info/eng122-nbgrader.png
+.. figure:: https://objects-us-east-1.dream.io/moorepants/eng122-nbgrader.png
    :align: center
    :width: 640
 

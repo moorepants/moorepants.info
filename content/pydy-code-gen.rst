@@ -312,7 +312,7 @@ this plot:
 
 .. _2D n-link pendulum: npendulum.html
 
-.. image:: https://objects-us-east-1.dream.io/moorepants.info/pydy-code-gen-benchmark-results.png
+.. image:: https://objects-us-east-1.dream.io/moorepants/pydy-code-gen-benchmark-results.png
 
 `The print out`_ shows the exact time values. For 1000 time steps of
 integration over 10 seconds of real time (100 hz) for the 20 link problem, the
@@ -325,7 +325,7 @@ benchmark yourself here:
 
 https://github.com/PythonDynamics/pydy-code-gen/blob/master/misc/benchmark.py
 
-.. _The print out: https://objects-us-east-1.dream.io/moorepants.info/pydy-code-gen-benchmark-results.txt
+.. _The print out: https://objects-us-east-1.dream.io/moorepants/pydy-code-gen-benchmark-results.txt
 
 These are some general observations:
 

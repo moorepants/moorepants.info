@@ -34,7 +34,7 @@ settings for the WPA2 Enterprise. The tech support folks in 1106 Rhoades Tower
 were very helpful with this even though the phone support lady had no idea what
 I should do on Linux.
 
-.. image:: https://objects-us-east-1.dream.io/moorepants.info/csu-wpa2.png
+.. image:: https://objects-us-east-1.dream.io/moorepants/csu-wpa2.png
    :class: img-rounded
 
 The library has access to lots of digital and physical media through `OhioLink

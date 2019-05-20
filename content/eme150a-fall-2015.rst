@@ -261,7 +261,7 @@ compute fatigue failure, but they didn't (at least not early enough). We
 provided them with the acceleration data and they made use of it estimate the
 fluctuating stresses in their designs.
 
-.. image:: https://objects-us-east-1.dream.io/moorepants.info/eme150a-fall-2015/bus-accel-data.png
+.. image:: https://objects-us-east-1.dream.io/moorepants/eme150a-fall-2015/bus-accel-data.png
    :class: img-rounded
    :width: 600px
    :alt: Time series graph of bus vertical nose acceleration data.
@@ -277,30 +277,30 @@ candy from their presentations/reports of the different designs:
    <table>
      <tr>
        <td>
-         <img width="400 px" src=https://objects-us-east-1.dream.io/moorepants.info/eme150a-fall-2015/capscrew.png />
+         <img width="400 px" src=https://objects-us-east-1.dream.io/moorepants/eme150a-fall-2015/capscrew.png />
        </td>
        <td>
-         <img width="400 px" src=https://objects-us-east-1.dream.io/moorepants.info/eme150a-fall-2015/crankshaft.png />
-       </td>
-     </tr>
-     <tr>
-       <td>
-         <img width="400 px" src=https://objects-us-east-1.dream.io/moorepants.info/eme150a-fall-2015/flywheel.png />
-       </td>
-       <td>
-         <img width="400 px" src=https://objects-us-east-1.dream.io/moorepants.info/eme150a-fall-2015/helical-spring.png />
-       </td>
-     <tr>
-       <td>
-         <img width="400 px" src=https://objects-us-east-1.dream.io/moorepants.info/eme150a-fall-2015/planetary-gear.png />
-       </td>
-       <td>
-         <img width="400 px" src=https://objects-us-east-1.dream.io/moorepants.info/eme150a-fall-2015/roller-bearing.png />
+         <img width="400 px" src=https://objects-us-east-1.dream.io/moorepants/eme150a-fall-2015/crankshaft.png />
        </td>
      </tr>
      <tr>
        <td>
-         <img width="400 px" src=https://objects-us-east-1.dream.io/moorepants.info/eme150a-fall-2015/weldment.png />
+         <img width="400 px" src=https://objects-us-east-1.dream.io/moorepants/eme150a-fall-2015/flywheel.png />
+       </td>
+       <td>
+         <img width="400 px" src=https://objects-us-east-1.dream.io/moorepants/eme150a-fall-2015/helical-spring.png />
+       </td>
+     <tr>
+       <td>
+         <img width="400 px" src=https://objects-us-east-1.dream.io/moorepants/eme150a-fall-2015/planetary-gear.png />
+       </td>
+       <td>
+         <img width="400 px" src=https://objects-us-east-1.dream.io/moorepants/eme150a-fall-2015/roller-bearing.png />
+       </td>
+     </tr>
+     <tr>
+       <td>
+         <img width="400 px" src=https://objects-us-east-1.dream.io/moorepants/eme150a-fall-2015/weldment.png />
        </td>
        <td>
        </td>
