@@ -1,4 +1,7 @@
-:title: moorepants
+==========
+moorepants
+==========
+
 :subtitle: a website
 :url:
 :save_as: index.html

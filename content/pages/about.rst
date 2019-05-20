@@ -1,4 +1,7 @@
-:title: About
+=====
+About
+=====
+
 :subtitle: moorepants
 :description: all the detailed info for the stalkers
 :date: 1999
@@ -47,8 +50,8 @@ education.
 .. _Dixie: http://en.wikipedia.org/wiki/Pittsylvania_County,_Virginia
 .. _Bicycle Capital of the World: https://en.wikipedia.org/wiki/Netherlands
 
-You can learn more about what I think about by reading my {{ content_url('blog') }}
-or following me on social media where I post commentary on a variety of things.
+You can learn more about what I think about by reading my blog or following me
+on social media where I post commentary on a variety of things.
 
 Contact
 =======

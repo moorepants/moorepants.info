@@ -21,8 +21,8 @@ Teaching Statements
 - `2015 Teaching Statement`_ [`pdf <https://objects-us-east-1.dream.io/moorepants/teaching-statement-2015.pdf>`__]
 - `2013 Teaching Statement`_ [`pdf <https://objects-us-east-1.dream.io/moorepants/teaching-statement-2013.pdf>`__]
 
-.. _2015 Teaching Statement: {{ content_url('teaching/teaching-statement-2015.html') }}
-.. _2013 Teaching Statement: {{ content_url('teaching/teaching-statement-2013.html') }}
+.. _2015 Teaching Statement: {filename}/pages/teaching-statement-2015.rst
+.. _2013 Teaching Statement: {filename}/pages/teaching-statement-2013.rst
 
 Courses
 =======
