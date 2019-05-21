@@ -1,17 +1,10 @@
----
-title: Notebook Entry
-subtitle: July 17, 2013
-description:
-created: !!timestamp '2013-07-17 18:00:00'
-tags:
-    - notebook
----
+==============
+Notebook Entry
+==============
 
-{% mark image -%}
-
-{%- endmark %}
-
-{% mark excerpt -%}
+:subtitle: July 17, 2013
+:date: 2013-07-17 18:00:00
+:category: notebook
 
 Today's task list:
 
@@ -24,9 +17,6 @@ Today's task list:
 - Reply to Open Science email
 - Review the todo items on the Yeadon paper
 - Work on parsing the walking data
-
-{%- endmark %}
-
 
 Matlab Purchasing Options
 =========================
