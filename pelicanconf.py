@@ -53,17 +53,20 @@ else:
     THEME = config_data['THEME_PATH']
     PLUGIN_PATHS = [config_data['PLUGIN_PATHS']]
 
-# Alchemy (mechmotum branch) theme settings
+# Alchemy theme settings
 SITESUBTITLE = 'a websitee'
 SITEIMAGE = 'https://objects-us-east-1.dream.io/mechmotum.github.io/bear-bicycle-480x480.png'
 DESCRIPTION = ''
+#GOOGLE_ANALYTICS = ''
+#DISQUS_SITENAME = ''
 
+# Alchemy theme settings that are custom to our fork: mechmotum branch
 # If a Twitter username is provided a feed of the tweets will be displayed on
 # the front page of the website.
 ARTICLE_LIST_SUBTITLE = 'Blog'
+# excludes these categories from the main blog list
+EXCLUDED_CATEGORIES = ['notebook']
 TWITTER_USERNAME = 'moorepants'
-#GOOGLE_ANALYTICS = ''
-#DISQUS_SITENAME = ''
 
 ## PLUGINS
 
