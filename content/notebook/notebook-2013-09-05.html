@@ -1,4 +1,3 @@
----
 title: Notebook Entry
 subtitle: September 5, 2013
 description:
@@ -11,7 +10,6 @@ tags:
     - ctypes
     - human body model
     - closed loop system
----
 
 {% mark image -%}
 
@@ -69,7 +67,6 @@ construct a lil_matrix manually and then maybe get some memory reduction. It
 gave the same solution as the dense solver, so that is good.
 
 From Ljung 1999
----------------
 
 There are three basic methods of identifying a plant in a closed loop system,
 according to Ljung 1999 (page 423):
@@ -94,9 +91,7 @@ Ljung's framework like so::
     ---->o--->|controller|--->o-->
         -|    ------------   +|
          |    --------------  |
-         -----|human       |---
            c  |biomechanics|
-              --------------
 
 Here \\(r\\) is the reference signal, i.e. the ideal walking motion (angles,
 rates). \\(u\\) is the error between \\(c\\) and \\(r\\). \\(c\\) are the biomechanic
