@@ -6,9 +6,8 @@ Teaching Mechanical Design
 :subtitle: a first attempt
 :description: Description of what did and didn't work in teaching Mechanical Design.
 :date: 2015-12-14 08:01:00
+:slug: eme150a-fall-2015
 :tags: teaching, education, ucd, engineering
-
-
 
 My first quarter as a lecturer at UCD ended this past Friday with my final exam
 for my mechanical design course. I think the quarter went really well and that
@@ -19,7 +18,6 @@ teaching one new course. But I thrive in environments where others are
 expecting a lot from me and had a lot of fun developing and leading the course,
 among the other things that I've been working on. This post will cover the
 educational aspects of this course, what I tried, and what I learned.
-
 
 Course Objectives
 -----------------

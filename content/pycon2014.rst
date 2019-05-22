@@ -6,10 +6,8 @@ PyCon 2014 Notes
 :subtitle: scribblings from Montreal
 :description: Notes taken during PyCon and some talk recommendations
 :date: 2014-04-17 15:22:00
+:slug: pycon2014
 :tags: pycon, python, pydy, sympy
-
-
-
 
 PyCon 2014 in Montreal was a fabulous conference. I'm blown away by the Python
 community everytime I go to the various flavors of Python conferences. They are
@@ -18,7 +16,6 @@ I love the fact that the last half of the conference is dedicated to people
 working together on common projects. Never have I seen something like that at
 any academic conference. If only I can figure out how to bring that kind of
 community spirit to the academic world...
-
 
 Favorite Talks
 ==============

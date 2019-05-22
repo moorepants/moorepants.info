@@ -6,9 +6,8 @@ Teaching Git to 100 CS Undergrads
 :subtitle: or bad jokes in the etherpad
 :description: Some info about teaching the SWC style git to UCD CS Undergrads.
 :date: 2016-02-01 18:03:00
+:slug: swc-git-for-cs-undergrads
 :tags: education, software carpentry, git, computer science, uc davis
-
-
 
 Last week I taught an introduction to version control with Git to the UCD
 computer science capstone design course. There were about 100 students and I
@@ -18,7 +17,6 @@ tidbits that I learned teaching this to undergraduates instead of the typical
 group of graduate students.
 
 .. _Software Carpentry: http://software-carpentry.org
-
 
 We used the `SWC Git novice lesson`_. I only went through sections 1 through 9
 as sections 10-12 weren't really relevant to the students in the class and

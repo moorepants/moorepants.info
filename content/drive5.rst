@@ -4,10 +4,8 @@ Drive5
 :subtitle: submision for Apps for Vehicles Challenge
 :description: Introduction to our app idea.
 :date: 2013-01-18 15:05:00
+:slug: drive5
 :tags: fuel economy, Drive5, app
-
-
-
 
 My good friend, Tai Stillwater, studied driver feedback for his `PhD work
 <http://pubs.its.ucdavis.edu/download_pdf.php?id=1518>`_ and now as a post doc
@@ -24,8 +22,6 @@ that will help them improve their fuel economy. It has a simple visualization
 of the underlying data so that end-users find it fun and easy to use.
 
 Checkout the screencast below showing how the app will work.
-
-
 
 .. raw:: html
 

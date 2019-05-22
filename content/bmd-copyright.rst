@@ -5,6 +5,7 @@ Copyright at Engineering Conferences
 :date: 2013-08-07 11:19:00
 :description: Details about trying to get favorable copyright conditions for the BMD 2013 conference.
 :subtitle: why is it such a pain?
+:slug: bmd-copyright
 :tags: copyright, conference, open access
 
 

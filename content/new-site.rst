@@ -6,10 +6,8 @@ A new website is born
 :subtitle: and it's not crying
 :description: The first blog post on my new website.
 :date: 2013-01-11 02:10:00
+:slug: new-site
 :tags: website, hyde, bootstrap
-
-
-
 
 I've been meaning to catch up on many long lost years of the developments in
 web technologies. This paired with the fact that I need a space to flush my
@@ -19,7 +17,6 @@ new website. I finally have found some time to create a new personal website.
 and is starting to get antiquated, especially since I never update it (it's not
 that fun to update mainly due it being built with a ten year old version of
 DreamWeaver).
-
 
 I started learning about website creation in my high school years (1995-2000)
 with the likes of Geocities and Fortunecity and Netscape Navigator. My first

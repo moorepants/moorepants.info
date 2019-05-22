@@ -6,16 +6,14 @@ Where to go in the Netherlands
 :subtitle: my tourist recommendations
 :description: NA
 :date: 2015-12-05 16:12:00
+:slug: netherlands-recs
 :tags: netherlands, tourism
-
-
 
 I lived in the Netherlands from August 2008 to August 2009 and many of my
 friends that have visited or moved there since then have asked for my
 recommendations on what to do and see. This post gives a rundown of what I
 thought was the most interesting things there. This is all circa 2008/9 so
 things may not exist anymore. I'll update this as I remember more.
-
 
 I kept a bicycle themed blog back then that may mention some good spots to
 visit: http://moorebicycles.blogspot.com/.

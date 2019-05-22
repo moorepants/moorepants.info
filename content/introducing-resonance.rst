@@ -2,19 +2,18 @@
 Introducing Resonance
 =====================
 
-:authors: Jason K. Moore
+:authors: Jason K. Moore, Kenneth Lyons
 :subtitle: Using computational thinking to teach mechanical vibrations
 :description: Summary of the initial efforts to develop a new approach to
               teaching mechanical vibrations.
 :date: 2018-03-10 11:00:00
+:slug: introducing-resonance
 :tags: education, engineering, python, jupyter, computational thinking
-
 
 **Co-authored by co-instructors Jason K. Moore and Kenneth Lyons.**
 
 Course Description
 ==================
-
 
 `Introduction to Mechanical Vibrations`_ is a 30+ year old upper level elective
 in the mechanical engineering curriculum at the University of California,

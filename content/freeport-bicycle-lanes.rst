@@ -6,6 +6,7 @@ Freeport Boulevard Road Diet
 :subtitle: not nearly as safe as it could be
 :description:
 :date: 2016-11-20 14:20:00
+:slug: freeport-bicycle-lanes
 :tags: bicycle, advocacy, sacramento, bicycle lane
 
 .. figure:: https://objects-us-east-1.dream.io/moorepants/sacbee-freeport.jpeg

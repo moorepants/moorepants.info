@@ -6,6 +6,7 @@ NCSRR Visiting Scholar Wrap Up
 :subtitle: or woodpecker in the window
 :description: NA
 :date: 2014-08-15 09:44:00
+:slug: ncsrr-wrap-up
 :tags: ncsrr, direct collocation, system identification, inverted pendulum
 
 This is my last day here at Stanford's Neuromuscular Biomechanics Lab for the

@@ -5,14 +5,11 @@ Campus District Assessment
 :subtitle: How's the bicycling and walking?
 :description: My thoughts on bicycling and walking in the Cleveland campus district.
 :date: 2013-08-19 11:07:00
+:slug: cleveland-campus-district-bike-ped-assessment
 :tags: bicycle, pedestrian, cleveland
-
-
-
 
 I participated in a Cleveland Campus District bicycle and pedestrian assessment
 last Tuesday. Here is a copy of the thoughts I sent to the organizing groups:
-
 
   It was nice to meet you all on the assessment last week. I've been meaning to
   send in my responses before now, but I had too many other things to do. As a

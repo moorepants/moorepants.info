@@ -6,6 +6,7 @@ Academic Job Search Session Notes
 :subtitle: intimidating
 :description: My notes on the first Case Western academic job search session I went to.
 :date: 2013-10-25 15:32:00
+:slug: case-academic-job-search-notes-01
 :tags: professorship, academic, job search
 
 

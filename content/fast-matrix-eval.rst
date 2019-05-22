@@ -6,9 +6,8 @@ Vectorized Matrix Evaluation
 :subtitle: using SymPy code generators
 :description:
 :date: 2014-08-28 14:11:00
+:slug: fast-matrix-eval
 :tags: sympy, cython, fortran, c, matrices, code generation, python
-
-
 
 I'm working on using direct collocation and nonlinear programming for
 system/parameter identification. This requires evaluating a vector of
@@ -17,7 +16,6 @@ collocation nodes and a fair number of model states the equations need to be
 evaluated on the order of a million times at each optimization step. I've been
 generating the constraints equations and non-sparse Jacobian entries with SymPy
 and then generating code to evaluate the equations.
-
 
 SymPy has a few facilities for generating fast code:
 

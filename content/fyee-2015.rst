@@ -6,9 +6,8 @@ Summary of FYEE 2015
 :subtitle: my first education conference
 :description: Notes taken during FYEE 2015
 :date: 2015-08-09 15:22:00
+:slug: fyee-2015
 :tags: fyee, education
-
-
 
 I recently attended the First-Year Engineering Education Conference in Roanoke,
 VA (FYEE_). I decided to go so I could immerse myself in the engineering
@@ -20,7 +19,6 @@ but it ended up being worth the trip out. This post summarizes my notes on the
 conference.
 
 .. _FYEE: http://fyee.org
-
 
 The conference is an independent small (~200 attendees) meeting that
 focuses specifically on the first year experience of engineering students. The

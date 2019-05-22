@@ -6,9 +6,8 @@ Which topic should launch the UCD Hacker Within?
 :subtitle: scientific computing and data tech at UCD
 :description: Post to solicit suggestions on the first HW topic.
 :date: 2016-01-06 10:25:00
+:slug: ucd-hacker-within-launch
 :tags: software, hacker within, ucd, scientific computing, data science
-
-
 
 I've been yearning for some kind of scientific computing meetup group at UC
 Davis and the spent last quarter searching for some like minded folks that

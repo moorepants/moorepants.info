@@ -6,16 +6,13 @@ PyCon 2014 Walking Proposal
 :subtitle: just a little too late
 :description: I waited too late to try to submit this talk to PyCon 2014.
 :date: 2013-09-16 10:16:00
+:slug: pycon-2014-proposal
 :tags: python, pycon
-
-
-
 
 I wrote up a last minute PyCon 2014 proposal last night at 11:30 and pressed
 save at 24:00...which was too late. Here are the details so I can save it for
 another time. I did manage to submit a tutorial on PyDy, but I think that has
 a much lower probability to be accepted.
-
 
 Using Python to Understand Human Motion and Control During Walking
 

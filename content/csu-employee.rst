@@ -5,10 +5,8 @@ Being New
 :subtitle: notes on starting up at CSU
 :description: Details on IT stuff and such that I need to remember.
 :date: 2013-07-11 16:46:00
+:slug: csu-employee
 :tags: csu, wireless
-
-
-
 
 I started my new job as a Research Associate/Fellow at Cleveland State
 University Monday. I had to fill out some standard paperwork the first morning
@@ -17,7 +15,6 @@ because of the pension system in place, so I had to sign a paper forfeiting my
 social security payments. The other papers were tax forms, ethics and fraud
 reporting, Viking card (employee card), direct deposit for payroll, personal
 data, etc. This took less than an hour and the folks were nice.
-
 
 After that you need to get hooked up to the computer systems. So I called 5050
 to get a temporary internet password and then logged into

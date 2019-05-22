@@ -6,14 +6,12 @@ Ohio City Bicycle Co-op
 :subtitle: a visit to bicycle repair in the cold
 :description: Some comments on the Ohio City Bicycle Co-op
 :date: 2013-04-05 19:13:00
+:slug: ohio-city-bike-coop
 :tags: bicycle collective, Cleveland, bicycle repair
-
 
 .. image:: https://objects-us-east-1.dream.io/moorepants/cleveland-bridge.jpg
    :class: img-rounded
    :width: 400px
-
-
 
 I was at a job interview in Cleveland this week for a professor position at
 Cleveland State University. The first thing Yumi and I did was to get a rental
@@ -24,7 +22,6 @@ bicycle ready for us. We walked a couple miles from the hotel to get down to
 the river bottom where their shop is. The shop was in an old manufacturing
 plant and was huge. Jim unfortunately didn't have much time to talk with me but
 here are a few things I picked up:
-
 
 - They serve 20,000 people a year.
 - The rent for their huge space (really huge!) is only about $2k. Although it

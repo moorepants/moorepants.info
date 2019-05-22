@@ -6,6 +6,7 @@ In Defense of the NSF
 :subtitle: let the scientists be the judge
 :description: A letter to a journalist defending our NSF funded work.
 :date: 2017-03-05 12:07:00
+:slug: nsf-congress
 :tags: national science foundation, bicycle, research, congress
 
 In 2009, Mont Hubbard, Ronald A. Hess, Dale L. Peterson, and I were awarded

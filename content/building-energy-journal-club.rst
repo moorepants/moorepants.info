@@ -5,6 +5,7 @@ Building energy efficiency journal club
 :subtitle: next quarter at UCD
 :description: journal club
 :date: 2015-11-05 8:13:00
+:slug: building-energy-journal-club
 :tags: ucd, engineering, mae, building efficiency
 
 

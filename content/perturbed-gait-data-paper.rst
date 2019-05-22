@@ -6,9 +6,8 @@ My first data paper
 :subtitle: Is it worth it?
 :description: Some thoughts on publishing an open access data paper.
 :date: 2015-04-28 10:56:00
+:slug: perturbed-gait-data-paper
 :tags: data, gait, research, publishing
-
-
 
 I have been working on a `gait control identification project`_ since I started
 as a post doc at Cleveland State University in July 2013. Last night the `first
@@ -21,7 +20,6 @@ one reason that isn't in the paper.
 .. _gait control identification project: <http://hmc.csuohio.edu/projects/gait-control-id>
 .. _first publication: https://peerj.com/articles/918/
 .. _PeerJ: http://peerj.com
-
 
 Ton, my PI at CSU, gave me a starting point for a project when I started work
 in July 2013. This involved collecting data and applying a "simple" direct

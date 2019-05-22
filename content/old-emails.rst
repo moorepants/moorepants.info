@@ -7,10 +7,8 @@ PST2Gmail
 :description: A brief explanation of the process of pushing old emails from an
               Outlook .pst file to Gmail.
 :date: 2013-01-15 15:39:00
+:slug: old-emails
 :tags: email, Outlook, Gmail, pst
-
-
-
 
 I must have started my emailing career sometime in high school. I remember
 having the address jive@gamewood.net from our local internet provider around
@@ -22,7 +20,6 @@ in May of 2005 and backed up all of my previous email in Outlook to a .pst file
 on July 16, 2005. This file has been sitting on a backup CD since that day.
 I've occasionally wished I could search for emails from those years to dig up
 old contacts and such, but never did anything about it.
-
 
 I got inspired this morning and dug up the CD with the .pst file and found this
 nice `post

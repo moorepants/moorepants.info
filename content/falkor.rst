@@ -6,6 +6,7 @@ NeverEnding Tandem
 :subtitle: Falkor flies again
 :description: Build details of Falkor the tandem bicycle.
 :date: 2016-06-04 13:57:00
+:slug: falkor
 :tags: bicycle, making, falkor, wedding
 
 Yumi and I have two great friends, Aubrey and Kent, and they got hitched in mid

@@ -5,6 +5,7 @@ Dynamics with Python
 :subtitle: balancing the five link pendulum
 :description: A post on using the PyDy workflow to control the n-link pendulum.
 :date: 2013-01-27 16:46:00
+:slug: npendulum
 :tags: python, pydy, dynamics, control, animation
 
 .. raw:: html

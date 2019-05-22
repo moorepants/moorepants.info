@@ -6,10 +6,8 @@ PyDy ODE Code Generation
 :subtitle: how fast can it get?
 :description: Testing code generation methods for PyDy.
 :date: 2013-11-01 07:44:00
+:slug: pydy-code-gen
 :tags: pydy, python, code generation, multibody dynamics, ordinary differential equations
-
-
-
 
 I've been working on implementing a walking simulation model that is based on
 and compatible with a model developed by my PI, Ton van den Bogert, in
@@ -22,7 +20,6 @@ these kinds of problems with PyDy, so I did what any idealistic young scientist
 would do and rewrote Ton's model with an open source tool chain. In the
 process, I needed to improve the code generation capabilities we were relying
 on for the PyDy workflow and have a small step in improvements on that front.
-
 
 We are primarily interested in generating numerical code from SymPy's symbolic
 expressions which are stored in two matrices that generalize a set of first

@@ -6,10 +6,8 @@ Teaching Modeling and Simulation with Python
 :subtitle: A SciPy 2017 Birds of a Feather
 :description: Notes from a SciPy BoF
 :date: 2017-07-20 15:15:00
+:slug: scipy-2017-bof
 :tags: teaching, modeling, simulation, jupyter, python, scipy
-
-
-
 
 Many instructors that teach modeling and simulation topics in a variety of
 domains are turning to `computational thinking
@@ -23,7 +21,6 @@ session to connect instructors at the conference to discuss their successes and
 struggles using these new teaching strategies and tools. Below are the notes
 that were written by Kenneth Lyons and collaboratively edited by the session's
 attendees. We hope these will be helpful to the broader community.
-
 
 Overview
 ========

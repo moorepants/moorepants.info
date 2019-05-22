@@ -5,6 +5,7 @@ Negotiating the Academic Job Offer Session Notes
 :subtitle: how much?
 :description: My notes on the third Case Western academic job search session I went to.
 :date: 2013-11-22 12:35:00
+:slug: case-academic-job-search-notes-02
 :tags: professorship, academic, job search, job offer
 
 

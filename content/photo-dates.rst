@@ -6,10 +6,8 @@ Fixin' photo timestamps
 :subtitle: don't forget the travel setting
 :description: Photo timestamp manipulation with Python
 :date: 2013-05-26 02:10:00
+:slug: photo-dates
 :tags: photo, python, timestamp, gexiv2, pytz
-
-
-
 
 Yumi and I just got back from a month long bicycle tour of Japan. We took two
 cameras with us. My Panasonic Lumix stopped autofocusing the first day of the
