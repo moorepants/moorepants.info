@@ -37,7 +37,6 @@ LINKS = ()
 # Social widget
 SOCIAL = ()
 
-
 DEFAULT_PAGINATION = False
 
 # Uncomment following line if you want document-relative URLs when developing
@@ -55,7 +54,7 @@ else:
 
 # Alchemy theme settings
 SITESUBTITLE = 'a websitee'
-SITEIMAGE = 'https://objects-us-east-1.dream.io/mechmotum.github.io/bear-bicycle-480x480.png'
+SITEIMAGE = 'https://objects-us-east-1.dream.io/moorepants/headshot.jpg'
 DESCRIPTION = ''
 #GOOGLE_ANALYTICS = ''
 #DISQUS_SITENAME = ''
