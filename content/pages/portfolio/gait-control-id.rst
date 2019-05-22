@@ -9,6 +9,7 @@ Gait Control Identification
 :date: 2013-07-08 00:00:00
 :startdate: 2013-07-08 00:00:00
 :status: hidden
+:slug: portfolio/gait-control-id
 
 .. image:: http://www.moorepants.info/presentations/2014/DW2014/img/control-system-detailed.png
    :class: img-rounded

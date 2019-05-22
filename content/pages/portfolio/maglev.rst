@@ -10,6 +10,7 @@ ODU Maglev
 :startdate: 2004-05-01 00:00:00
 :enddate: 2005-01-01 00:00:00
 :status: hidden
+:slug: portfolio/maglev
 
 .. image:: https://objects-us-east-1.dream.io/moorepants/maglev.jpg
    :class: img-rounded

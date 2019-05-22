@@ -10,6 +10,7 @@ Bicycle and Rider Physical Parameters
 :startdate: 2006-01-01 00:00:00
 :enddate: 2012-08-21 00:00:00
 :status: hidden
+:slug: portfolio/bicycle-rider-parameters
 
 .. image:: https://objects-us-east-1.dream.io/moorepants/jodi-jason-bike-par-meas.jpg
    :class: img-rounded

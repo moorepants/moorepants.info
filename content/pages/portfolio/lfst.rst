@@ -9,6 +9,7 @@ Langley Full Scale Tunnel
 :startdate: 2004-06-01 00:00:00
 :enddate: 2005-08-31 00:00:00
 :status: hidden
+:slug: portfolio/lfst
 
 .. image:: https://objects-us-east-1.dream.io/moorepants/lfst-bwb.jpg
    :class: img-rounded

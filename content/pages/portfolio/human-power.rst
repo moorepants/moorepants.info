@@ -7,6 +7,7 @@ Human Power
 :date: 2007-06-01 00:00:00
 :startdate: 2007-06-01 00:00:00
 :status: hidden
+:slug: portfolio/human-power
 
 .. image:: https://objects-us-east-1.dream.io/moorepants/peanut-sheller.jpg
    :class: img-rounded

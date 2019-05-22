@@ -9,6 +9,7 @@ Yeadon
 :startdate: 2011-06-01 00:00:00
 :enddate: 2014-11-30 10:00:00
 :status: hidden
+:slug: portfolio/yeadon
 
 .. image:: https://objects-us-east-1.dream.io/moorepants/yeadon-gui-screenshot.png
    :class: img-rounded

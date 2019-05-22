@@ -9,6 +9,7 @@ PyDy
 :date: 2009-01-01 00:00:00
 :startdate: 2009-01-01 00:00:00
 :status: hidden
+:slug: portfolio/pydy
 
 .. image:: https://raw.githubusercontent.com/pydy/pydy-tutorial-pycon-2014/master/notebooks/figures/human_balance_diagram.png
    :class: img-rounded

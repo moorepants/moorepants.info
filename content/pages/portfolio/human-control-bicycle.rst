@@ -10,6 +10,7 @@ Human Control of a Bicycle
 :startdate: 2009-10-01 00:00:00
 :enddate: 2012-08-21 00:00:00
 :status: hidden
+:slug: portfolio/human-control-bicycle
 
 .. image:: https://objects-us-east-1.dream.io/moorepants/jason-on-instrumented-bicycle.jpg
    :class: img-rounded

@@ -11,6 +11,7 @@ Bauer Compressors
 :startdate: 2003-06-01 00:00:00
 :enddate: 2003-12-31 00:00:00
 :status: hidden
+:slug: portfolio/bauer-compressors
 
 .. image:: https://objects-us-east-1.dream.io/moorepants/bauer-compressor-3d.jpg
    :align: center

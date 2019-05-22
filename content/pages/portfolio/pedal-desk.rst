@@ -10,6 +10,7 @@ Pedal Desk
 :startdate: 2007-03-01 00:00:00
 :enddate: 2007-12-31 00:00:00
 :status: hidden
+:slug: portfolio/pedal-desk
 
 .. image:: https://objects-us-east-1.dream.io/moorepants/pedal-desk.jpg
    :class: img-rounded

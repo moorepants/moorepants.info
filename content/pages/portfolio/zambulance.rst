@@ -10,6 +10,7 @@ Zambulance
 :startdate: 2006-08-01 10:00:00
 :enddate: 2006-09-01 10:00:00
 :status: hidden
+:slug: portfolio/zambulance
 
 .. image:: https://objects-us-east-1.dream.io/moorepants/zambulance.jpg
 

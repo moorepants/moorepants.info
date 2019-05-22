@@ -10,6 +10,7 @@ ODU Human Powered Vehicle
 :startdate: 2003-09-01 10:00:00
 :enddate: 2005-01-01 10:00:00
 :status: hidden
+:slug: portfolio/odu-hpv
 
 .. image:: https://objects-us-east-1.dream.io/moorepants/odu-hpv.jpg
    :align: center

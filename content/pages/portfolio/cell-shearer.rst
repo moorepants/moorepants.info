@@ -10,6 +10,7 @@ Cell Shearer
 :startdate: 2007-08-01 00:00:00
 :enddate: 2009-08-31 00:00:00
 :status: hidden
+:slug: portfolio/cell-shearer
 
 .. image:: https://objects-us-east-1.dream.io/moorepants/fancy-cell-shearer.png
 

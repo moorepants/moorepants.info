@@ -10,6 +10,7 @@ Mobile Ministry Unit
 :startdate: 2010-09-18 00:00:00
 :enddate: 2012-12-23 00:00:00
 :status: hidden
+:slug: portfolio/mmu
 
 .. image:: https://objects-us-east-1.dream.io/moorepants/mmu.jpg
    :class: img-rounded

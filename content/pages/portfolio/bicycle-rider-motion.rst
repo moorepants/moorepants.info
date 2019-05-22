@@ -10,6 +10,7 @@ Motion Analysis of a Bicyclist
 :startdate: 2008-11-20 00:00:00
 :enddate: 2013-08-21 00:00:00
 :status: hidden
+:slug: portfolio/bicycle-rider-motion
 
 .. image:: https://objects-us-east-1.dream.io/moorepants/jason-bicycle-mo-cap.jpg
    :class: img-rounded
