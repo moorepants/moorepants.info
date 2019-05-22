@@ -5,6 +5,7 @@ Notebook Entry
 :subtitle: March 25, 2014
 :category: notebook Scipy sparse
 :date: 2014-03-25 09:42:33
+:slug: notebook-2014-03-25
 :tags: notebook, scipy, sparse matrices
 
 

@@ -5,6 +5,7 @@ Notebook Entry
 :subtitle: May 16, 2014
 :category: notebook
 :date: 2014-05-16 13:32:53
+:slug: notebook-2014-05-16
 :tags: notebook, direct collocation, system identification, walking
 
 

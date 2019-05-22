@@ -5,6 +5,7 @@ Notebook Entry
 :subtitle: August 5, 2013
 :category: notebook
 :date: 2013-08-05 09:45:00
+:slug: notebook-2013-08-05
 :tags: notebook, mgview, amazon web services, plone, matlab, structural model identification
 
 

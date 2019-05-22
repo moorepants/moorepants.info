@@ -5,6 +5,7 @@ Notebook Entry
 :subtitle: July 30, 2013
 :category: notebook
 :date: 2013-07-30 11:04:00
+:slug: notebook-2013-07-30
 :tags: notebook, benefits, purchasing
 
 

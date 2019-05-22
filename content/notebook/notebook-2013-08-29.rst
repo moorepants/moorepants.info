@@ -5,6 +5,7 @@ Notebook Entry
 :subtitle: August 29, 2013
 :category: notebook
 :date: 2013-08-29 09:36:28
+:slug: notebook-2013-08-29
 :tags: notebook, plone
 
 

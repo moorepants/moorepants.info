@@ -5,6 +5,7 @@ Notebook Entry
 :subtitle: September 11, 2013
 :category: notebook
 :date: 2013-09-11 10:23:47
+:slug: notebook-2013-09-11
 :tags: notebook, python, bibtex, bmd2013, human body model, cython, c
 
 

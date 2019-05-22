@@ -5,6 +5,7 @@ Notebook Entry
 :subtitle: July 19, 2013
 :category: notebook
 :date: 2013-07-19 09:07:00
+:slug: notebook-2013-07-19
 :tags: notebook, system identification
 
 

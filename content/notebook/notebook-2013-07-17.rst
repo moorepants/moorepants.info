@@ -2,9 +2,9 @@
 Notebook Entry
 ==============
 
-:slug: notebook-2013-07-17
 :subtitle: July 17, 2013
 :date: 2013-07-17 18:00:00
+:slug: notebook-2013-07-17
 :category: notebook
 :tags: matlab
 

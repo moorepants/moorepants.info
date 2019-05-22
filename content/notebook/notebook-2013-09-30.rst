@@ -5,6 +5,7 @@ Notebook Entry
 :subtitle: September 30, 2013
 :category: notebook
 :date: 2013-09-30 18:12:24
+:slug: notebook-2013-09-30
 :tags: notebook, bmd2013, time
 
 

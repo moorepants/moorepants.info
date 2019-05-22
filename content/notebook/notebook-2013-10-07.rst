@@ -5,6 +5,7 @@ Notebook Entry
 :subtitle: October 7, 2013
 :category: notebook
 :date: 2013-10-07 09:38:30
+:slug: notebook-2013-10-07
 :tags: notebook, system identification, walking
 
 

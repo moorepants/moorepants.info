@@ -5,6 +5,7 @@ Notebook Entry
 :subtitle: September 16, 2013
 :category: notebook
 :date: 2013-09-16 14:37:20
+:slug: notebook-2013-09-16
 :tags: notebook, pycon2014, system identification, walking
 
 

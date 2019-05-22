@@ -5,6 +5,7 @@ Notebook Entry
 :subtitle: September 12, 2013
 :category: notebook
 :date: 2013-09-12 17:10:37
+:slug: notebook-2013-09-12
 :tags: notebook, swig, system identification, walking, python
 
 

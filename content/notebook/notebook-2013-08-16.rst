@@ -5,6 +5,7 @@ Notebook Entry
 :subtitle: August 16, 2013
 :category: notebook
 :date: 2013-08-16 09:21:00
+:slug: notebook-2013-08-16
 :tags: notebook, motek, plone
 
 

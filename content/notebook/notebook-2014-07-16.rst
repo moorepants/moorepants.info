@@ -5,6 +5,7 @@ Notebook Entry
 :subtitle: July 16, 2014
 :category: notebook Python and Ipopt
 :date: 2014-07-16 18:45:15
+:slug: notebook-2014-07-16
 :tags: notebook, ncsrr, stanford, opensim, simbody, direct collocation, system identification, plan
 
 

@@ -5,6 +5,7 @@ Notebook Entry
 :subtitle: September 5, 2013
 :category: notebook
 :date: 2013-09-05 13:16:19
+:slug: notebook-2013-09-05
 :tags: notebook, system identification, swig, cython, ctypes, human body model, closed loop system
 
 

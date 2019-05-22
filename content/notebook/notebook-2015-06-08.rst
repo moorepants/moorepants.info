@@ -5,6 +5,7 @@ Notebook Entry
 :subtitle: June 8, 2015
 :category: notebook AIO
 :date: 2015-06-08 09:44:37
+:slug: notebook-2015-06-08
 :tags: notebook, aio
 
 

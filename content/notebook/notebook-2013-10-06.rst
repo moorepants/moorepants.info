@@ -5,6 +5,7 @@ Notebook Entry
 :subtitle: October 6, 2013
 :category: notebook
 :date: 2013-10-06 16:24:08
+:slug: notebook-2013-10-06
 :tags: notebook, plone, system identification, walking
 
 

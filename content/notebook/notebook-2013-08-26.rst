@@ -5,6 +5,7 @@ Notebook Entry
 :subtitle: August 26, 2013
 :category: notebook
 :date: 2013-08-26 09:00:00
+:slug: notebook-2013-08-26
 :tags: notebook, bmd2013, walking, system identification
 
 

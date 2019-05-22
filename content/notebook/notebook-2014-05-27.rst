@@ -5,6 +5,7 @@ Notebook Entry
 :subtitle: May 27, 2014
 :category: notebook
 :date: 2014-05-27 11:19:08
+:slug: notebook-2014-05-27
 :tags: notebook, system identification, prediction, simulation
 
 
