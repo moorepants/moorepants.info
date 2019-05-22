@@ -9,6 +9,7 @@ Introducing Resonance
 :date: 2018-03-10 11:00:00
 :slug: introducing-resonance
 :tags: education, engineering, python, jupyter, computational thinking
+:category: education
 
 **Co-authored by co-instructors Jason K. Moore and Kenneth Lyons.**
 
