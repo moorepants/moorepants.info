@@ -3,7 +3,7 @@ Notebook Entry
 ==============
 
 :subtitle: March 16, 2015
-:category: notebook AIO
+:category: notebook
 :date: 2015-03-16 12:44:45
 :slug: notebook-2015-03-16
 :tags: notebook, aio

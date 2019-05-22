@@ -3,7 +3,7 @@ Notebook Entry
 ==============
 
 :subtitle: October 7, 2014
-:category: notebook AIO
+:category: notebook
 :date: 2014-10-07 09:56:15
 :slug: notebook-2014-10-07
 :tags: notebook, aio
