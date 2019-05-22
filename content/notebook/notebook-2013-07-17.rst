@@ -3,9 +3,9 @@ Notebook Entry
 ==============
 
 :subtitle: July 17, 2013
+:category: notebook
 :date: 2013-07-17 18:00:00
 :slug: notebook-2013-07-17
-:category: notebook
 :tags: matlab
 
 Today's task list:

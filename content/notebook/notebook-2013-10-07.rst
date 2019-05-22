@@ -8,12 +8,12 @@ Notebook Entry
 :slug: notebook-2013-10-07
 :tags: notebook, system identification, walking
 
+Tasks
+=====
 
-  - [x] Validate the identified walking control model on different data
-  - [x] Send out latest walking ID results
-  - [x] Learn C the hard way: Exercise 13
-
-
+- [x] Validate the identified walking control model on different data
+- [x] Send out latest walking ID results
+- [x] Learn C the hard way: Exercise 13
 
 Walking System Identification
 =============================

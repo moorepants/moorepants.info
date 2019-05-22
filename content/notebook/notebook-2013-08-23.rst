@@ -2,10 +2,10 @@
 Notebook Entry
 ==============
 
-:subtitle: August 22, 2013
+:subtitle: August 23, 2013
 :category: notebook
-:date: 2013-08-22 15:00:00
-:slug: notebook-2013-08-22
+:date: 2013-08-23 15:00:00
+:slug: notebook-2013-08-23
 :tags: notebook
 
 

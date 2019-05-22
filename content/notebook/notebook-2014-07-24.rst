@@ -3,7 +3,7 @@ Notebook Entry
 ==============
 
 :subtitle: July 24, 2014
-:category: notebook AOI
+:category: notebook
 :date: 2014-07-24 11:13:02
 :slug: notebook-2014-07-24
 :tags: notebook, aoi, stanford

@@ -3,15 +3,12 @@ Notebook Entry
 ==============
 
 :subtitle: July 29, 2014
-:category: notebook Optimizers
+:category: notebook
 :date: 2014-07-29 16:14:56
 :slug: notebook-2014-07-29
 :tags: notebook, optimizers
 
-
 Some optimizers I found.
-
-
 
 - https://github.com/ifa-ethz/ecos
 - http://www.cvxpy.org/en/latest/
