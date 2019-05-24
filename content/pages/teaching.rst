@@ -26,12 +26,13 @@ Courses
 =======
 
 - `Analysis, Simulation and Design of Mechatronic Systems [EME 171] <https://moorepants.github.io/eme171>`_, Winter 2019
-- `Engineering Graphics in Design [ENG 004] <https://moorepants.github.io/eme171/>`_: Fall 2012
+- `Engineering Graphics in Design [ENG 004] <http://www.moorepants.info/jkm/courses/eng4>`_: Fall 2012
+- `Graduate Seminar [MAE 297] <https://moorepants.github.io/mae297>`_: Spring 2017
 - `Introduction to Mechanical Vibrations [ENG 122] <http://moorepants.github.io/eng122>`_: Fall 2016, Fall 2017, Fall 2019
 - `Mechanical Design [EME 150A] <http://moorepants.github.io/eme150a>`_: Fall 2015, Fall 2016
-- `Mechanical Systems Design Project [EME 185A/B] <http://moorepants.github.io/eme185>`_: Winter/Spring 2016, 2017, 2018, 2019
-- `Multibody System Dynamics [MAE 223] <http://moorepants.github.io/mae223>`_: Fall 2017
-- `Vehicle Stability [EME 134] <http://moorepants.github.io/eme134>`_: Fall 2018
+- `Mechanical Systems Design Project [EME 185A/B] <https://moorepants.github.io/eme185>`_: Winter/Spring 2016, 2017, 2018, 2019
+- `Multibody System Dynamics [MAE 223] <https://moorepants.github.io/mae223>`_: Fall 2017
+- `Vehicle Stability [EME 134] <https://moorepants.github.io/eme134>`_: Fall 2018
 
 Workshops and Tutorials
 =======================
@@ -40,12 +41,13 @@ Workshops and Tutorials
   KEEN National Conference 2019, Dallas, TX, USA, January 5, 2019
 - Squiggly Bicycle Routes: Physics Based Design Evaluation, COSMOS 2018, Davis,
   CA, USA, July 10, 2017
-- Computational Thinking in the Engineering Curriculum, UCD CEE and DSI, Davis,
-  CA, USA, January 10, 2017, https://youtu.be/lfRVRqdYdjM (105 views)
-- Automatic Code Generation With SymPy, SCIPY 2017, Austin, Texas, USA, July
+- Computational Thinking in the Engineering Curriculum (with Allen Downey), UCD
+  CEE and DSI, Davis, CA, USA, January 10, 2017, https://youtu.be/lfRVRqdYdjM
+  (105 views)
+- Automatic Code Generation with SymPy, SCIPY 2017, Austin, Texas, USA, July
   10, 2017, https://youtu.be/5jzIVp6bTy0 (6,186 views)
-- Software Carpentry Workshop, Delta Stewardship Council Sacramento,
-  California, USA, May 18-19, 2017
+- Software Carpentry Workshop (with Jamie Ashander), Delta Stewardship Council
+  Sacramento, California, USA, May 18-19, 2017
 - Software Carpentry Workshop, UCD Center for Education Excellence Davis,
   California, USA, August 25, 2016
 - Software Carpentry Workshop, iHub Nairobi, Kenya June 17-18, 2016
