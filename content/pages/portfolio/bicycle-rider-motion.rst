@@ -21,6 +21,17 @@ maneuvers on a treadmill using motion capture technologies. Our main findings
 came from analyzing the data using principal component analysis to characterize
 the dominant motions in control.
 
+Publications
+============
+
+- Moore, J. K., Human Control of a Bicycle, University of California, Davis,
+  2012.
+- Moore, J. K., Kooijman, J. D. G., Schwab, A. L. & Hubbard, M., Rider motion
+  identification during normal bicycling by means of principal component
+  analysis. Multibody System Dynamics, Springer Netherlands, 2011, 25, 225-244.
+- Moore, J. K., Hubbard, M., Schwab, A. L., Kooijman, J. D. G. & Peterson, D.
+  L. Statistics of bicycle rider motion Procedia Engineering, 2010, 2, 2937-2942.
+
 Data
 ====
 
@@ -47,17 +58,6 @@ The software used to process the data for the publications can be found here:
 https://github.com/moorepants/MotionCapture
 
 It includes Matlab and Python analysis scripts and an interactive Matlab GUI.
-
-Publications
-============
-
-- Moore, J. K., Hubbard, M., Schwab, A. L., Kooijman, J. D. G. & Peterson, D.
-  L. Statistics of bicycle rider motion Procedia Engineering, 2010, 2, 2937-2942.
-- Moore, J. K., Kooijman, J. D. G., Schwab, A. L. & Hubbard, M., Rider motion
-  identification during normal bicycling by means of principal component
-  analysis. Multibody System Dynamics, Springer Netherlands, 2011, 25, 225-244.
-- Moore, J. K., Human Control of a Bicycle, University of California, Davis,
-  2012.
 
 Presentations
 =============

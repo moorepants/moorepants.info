@@ -20,12 +20,13 @@ Bauer Compressors
 I worked at `Bauer Compressors`_ in Norfolk, Virginia as an intern for the good
 part of a year. I mostly spent my time creating solid models of existing parts
 with Autodesk Inventor. At first, I drew hundreds of compressor hose fittings,
-but eventually modeled several full sized compressors. After modeling all these
-things, I got to do some design work making mounting brackets, resizing air
-tank storage containers, and developing a passive oil/air separator. I
-unfortunately lost the screenshots of all of my material from Bauer except
-these two images of the first compressor that I modeled. John Dwyer was my
-immediate supervisor and can vouch for my work there.
+but eventually modeled several full sized compressors to help build the
+company's common CAD parts database. After modeling all these things, I got to
+do some design work making mounting brackets, resizing air tank storage
+containers, and developing a passive oil/air separator. I unfortunately lost
+the screenshots of all of my material from Bauer except these two images of the
+first compressor that I modeled. John Dwyer was my immediate supervisor and can
+vouch for my work there.
 
 .. _Bauer Compressors: http://www.bauercomp.com
 
@@ -33,6 +34,7 @@ immediate supervisor and can vouch for my work there.
 - Sheet metal design and fabrication.
 - V-belt drive designs.
 - Oil filtration system design.
+- Air tank storage redesign.
 - Designed parts and prepared drawings for fabrication.
 
 .. image:: https://objects-us-east-1.dream.io/moorepants/bauer-compressor-2d.jpg
