@@ -4,23 +4,19 @@ Gait Control Identification
 
 :subtitle: what keeps us from falling?
 :description: Details about my post doc work at Cleveland State University
-:summary-sentence:
+:summary-sentence: During my post doc at Cleveland State University, I worked
+                   with Ton van den Bogert and developed methods to identify
+                   the human's controller during gait. We developed both direct
+                   and indirect identification methods and methods for
+                   identifying a gain gait scheduled controller for planar
+                   walking. The motivation was to develop a controller that
+                   could possibly be used in powered lower extremity
+                   prostheses, such as an exoskeleton.
 :summary-image: http://www.moorepants.info/presentations/2014/DW2014/img/control-system-detailed.png
 :date: 2013-07-08 00:00:00
 :startdate: 2013-07-08 00:00:00
 :status: hidden
 :slug: portfolio/gait-control-id
-
-.. image:: http://www.moorepants.info/presentations/2014/DW2014/img/control-system-detailed.png
-   :class: img-rounded
-   :align: center
-
-During my post doc at Cleveland State University, I worked with Ton van den
-Bogert and developed methods to identify the human's controller during gait. We
-developed both direct and indirect identification methods and methods for
-identifying a gain gait scheduled controller for planar walking. The motivation
-was to develop a controller that could possibly be used in powered lower
-extremity prostheses, such as an exoskeleton.
 
 Publications
 ============

@@ -12,9 +12,6 @@ ODU Human Powered Vehicle
 :status: hidden
 :slug: portfolio/odu-hpv
 
-.. image:: https://objects-us-east-1.dream.io/moorepants/odu-hpv.jpg
-   :align: center
-
 For my senior project at `ODU <http://www.odu.edu>`_ my teammates and I
 designed a human powered vehicle to race in the annual `ASME HPV competition
 <http://www.asme.org/events/competitions/human-powered-vehicle-challenge-%28hpvc%29>`_.

@@ -4,7 +4,7 @@ ODU Maglev
 
 :subtitle: the train that never floated
 :description: solid modeling the frame of the failed ODU maglev train
-:summary-sentence: CAD modeling of an innovative Maglev train.
+:summary-sentence: Reverse engineering and CAD modeling of campus Maglev train.
 :summary-image: https://objects-us-east-1.dream.io/moorepants/maglev.jpg
 :date: 2004-05-01 00:00:00
 :startdate: 2004-05-01 00:00:00

@@ -15,10 +15,11 @@ Zambulance
 .. image:: https://objects-us-east-1.dream.io/moorepants/zambulance.jpg
 
 In the winter of 2006 I attended Ralf Hotchkiss's `wheelchair construction
-class`_ at SFSU to prepare for a trip to work with a wheelchair center in
-Lusaka, Zambia. I worked with Kurt Kornbluth, Jessica Vechakul, folks from MIT
-D-Lab and the Disacare team to develop a bicycle ambulance trailer, the
-Zambulance_, and improve wheelchair manufacturing tools in Lusaka, Zambia.
+class`_ at San Francisco State University to prepare for a trip to work with a
+wheelchair center in Lusaka, Zambia. I worked with Kurt Kornbluth, Jessica
+Vechakul, folks from MIT D-Lab and the Disacare team to develop a bicycle
+ambulance trailer, the Zambulance_, and improve wheelchair manufacturing tools
+in Lusaka, Zambia.
 
 .. _wheelchair construction class: http://www.cel.sfsu.edu/courses/degreecredit.cfm?selection=classes&ID=26312&period=20124
 .. _Zambulance: http://cadlab6.mit.edu/bike.ambulance/

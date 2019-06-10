@@ -12,9 +12,6 @@ Mobile Ministry Unit
 :status: hidden
 :slug: portfolio/mmu
 
-.. image:: https://objects-us-east-1.dream.io/moorepants/mmu.jpg
-   :class: img-rounded
-
 The Mobile Ministry Unit is the Davis Bike Collective's mobile tool station
 that is used for publicity, events, and cargo hauling. Ted Buehler created it
 in 2007 as a trailer and `it went through several different forms over the

@@ -4,18 +4,16 @@ Langley Full Scale Tunnel
 
 :subtitle: behemoth of wind machines
 :description: Work I did at the NASA full scale tunnel.
+:summary-sentence: As a design engineer at the Langley Full Scale Tunnel (NASA
+                   Langley's 30' x 60' wind tunnel) I designed a full scale
+                   automotive balance to measure lift and drag forces/moments
+                   as well as other anscilary design and fabrication tasks.
 :summary-image: https://objects-us-east-1.dream.io/moorepants/lfst-bwb.jpg
 :date: 2004-06-01 00:00:00
 :startdate: 2004-06-01 00:00:00
 :enddate: 2005-08-31 00:00:00
 :status: hidden
 :slug: portfolio/lfst
-
-.. image:: https://objects-us-east-1.dream.io/moorepants/lfst-bwb.jpg
-   :class: img-rounded
-   :width: 640
-
-Work at the Langley full scale tunnel.
 
 My senior design project advisor, Dr. Drew Landman, at Old Dominion University
 offered me a unique internship opportunity at `NASA Langley's Full Scale Tunnel

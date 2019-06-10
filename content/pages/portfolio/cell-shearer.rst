@@ -12,8 +12,6 @@ Cell Shearer
 :status: hidden
 :slug: portfolio/cell-shearer
 
-.. image:: https://objects-us-east-1.dream.io/moorepants/fancy-cell-shearer.png
-
 While I was employed at the student machine shop at UC Davis my supervisor
 arranged for me to work on a design project with `Anthony Passerini`_ and his
 students in my "spare" time. This ended up being quite a complex little machine

@@ -4,16 +4,16 @@ Yeadon
 
 :subtitle: body segment parameter estimation
 :description: Details of the Yeadon software project.
+:summary-sentence: yeadon is a software package that implements Fred Yeadon's
+                   popular method for estimating the body segment parameters of
+                   a human. The package can be used as library, as in
+                   BicycleParameters, or as a standalone GUI application.
 :summary-image: https://objects-us-east-1.dream.io/moorepants/yeadon-gui-screenshot.png
 :date: 2011-06-01 00:00:00
 :startdate: 2011-06-01 00:00:00
 :enddate: 2014-11-30 10:00:00
 :status: hidden
 :slug: portfolio/yeadon
-
-.. image:: https://objects-us-east-1.dream.io/moorepants/yeadon-gui-screenshot.png
-   :class: img-rounded
-   :align: center
 
 ``yeadon`` is a software package that implements Fred Yeadon's popular method
 for estimating the body segment parameters of a human. The package can be used
