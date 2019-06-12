@@ -1,0 +1,16 @@
+language: python
+python:
+  - 3.6
+env:
+  global:
+    - secure: "fDsHRf8OLcB8aVjGLuarjXmtk4cH+pF4h/VkIO22Islk+RZMtqWkfb5uctfrkhkOFwHwQLHQ4NMeV27ThBxOK5s4ctKnAThpiQk+J7eYXx2xcNVNHMNIR5s6AaGgP0qdUl73yVV5MgcI77QWRB+IkibDtKaHr7zjM0AI5QJNbs0="
+install:
+  - pip install "pelican<4" doctr beautifulsoup4
+  - git clone --depth=1 --single-branch --branch mechmotum https://github.com/mechmotum/pelican-alchemy.git
+  - git clone --depth=1 https://github.com/getpelican/pelican-plugins.git
+before_script:
+  - pip freeze
+script:
+  - set -e
+  - pelican -D -v -s publishconf.py
+  - doctr deploy --built-docs output/ .
