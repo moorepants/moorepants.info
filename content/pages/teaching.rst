@@ -93,10 +93,3 @@ Workshops, Tutorials, & Short Courses
   9, 2014, https://youtu.be/IoMR-ESzqw8 (2,841 views)
 - Simulation and Control of Biomechanical Systems with Python, MASB 2014,
   Akron, Ohio, USA, March 9, 2014
-
-Videos
-======
-
-I maintain a Youtube playlist with various videos of me teaching.
-
-TODO : Add link
