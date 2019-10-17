@@ -10,9 +10,10 @@ import sys
 sys.path.append(os.curdir)
 from pelicanconf import *
 
-# If your site is available via HTTPS, make sure SITEURL begins with https://
 if os.environ['TRAVIS'] == 'true':
     SITEURL = 'https://moorepants.info.github.io'
+    # NOTE : The theme and plugins are installed alongside this file on the
+    # Travis build.
     THEME = "pelican-alchemy/alchemy"
     PLUGIN_PATHS = "pelican-plugins"
 else:
