@@ -21,7 +21,7 @@ Research Statements
 ===================
 
 - `2018 Research Statement <https://moorepants.github.io/application-materials/2018/generic/research-statement.pdf>`_
-- `2013 Research Statment. <{filename}/pages/research-statement-2015.rst>`_
+- `2013 Research Statment. <{filename}/pages/research-statement-2013.rst>`_
 
 Research Products
 =================
