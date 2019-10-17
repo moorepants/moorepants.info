@@ -20,10 +20,8 @@ Davis.
 Research Statements
 ===================
 
-- 2018 Faculty Search Research Statment.
-- 2017 Faculty Search Research Statment.
-- 2016 Faculty Search Research Statment.
-- 2013 Faculty and Postdoctoral Search Research Statment.
+- `2018 Research Statement <https://moorepants.github.io/application-materials/2018/generic/research-statement.pdf>`_
+- `2013 Research Statment. <{filename}/pages/research-statement-2015.rst>`_
 
 Research Products
 =================
