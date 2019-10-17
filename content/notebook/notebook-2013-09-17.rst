@@ -64,6 +64,7 @@ The resulting plot is:
    :class: img-rounded
    :width: 400px
    :target: https://objects-us-east-1.dream.io/moorepants/butterworth-nyquist.png
+   :alt: Figure show affects of changing the Nyquist frequency
 
 If you choose a larger Nyquist frequency than the signal, then you push the
 passband frequency to a lower value. Luuk may have done this incorrectly in his

@@ -228,6 +228,7 @@ Sandy, one of Ton's grad students, made a sweet prototype of the website design:
 
 .. image:: https://objects-us-east-1.dream.io/moorepants/hmc-prototype.png
    :class: img-rounded
+   :alt: Prototype of website design
 
 Data backup
 ===========

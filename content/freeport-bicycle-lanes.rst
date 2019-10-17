@@ -10,6 +10,7 @@ Freeport Boulevard Road Diet
 :tags: bicycle, advocacy, sacramento, bicycle lane
 
 .. figure:: https://objects-us-east-1.dream.io/moorepants/sacbee-freeport.jpeg
+   :alt: Image of bicyclist on Freeport Blvd in Sacramento
    :class: img-rounded
    :width: 400px
 
@@ -70,6 +71,7 @@ in the 1 to 2 foot wide gutter while dodging debris and drainage grates.
 
 .. figure:: https://lh3.googleusercontent.com/IDysWfEONuRhT_QFuwVQItgqSp-6mcJQ9fVMoYi5LYEnvzEg3hz0wwhsazQZjyS7Lu4MrisVg_Mh7VN3cRCQkWKpqXNGKElxy7dztSWZ7K-ROEMaiC_MC5Ljj5z9XADskechEoajjp8BzK3V4DJcP8PJomlCcfSCYg5NAVOxc5RTEWkzMiarmM9vU08QSzewaTQ1NLsNobCCLz4HNFizJqdk0ITSenAh_hivk1d9_x9nQ2pm5cE0aItrn1hI8Oaz9z6hKvb40M9SD05rwiyNV44ECCUZeKQEnIMWoI2n-UHKVsPpocnGqVfbvVB-FPWggM58wsb5tTqlyKmEIDUhM8KMIU8p6aARcLGH3bMkAhPre6VnrTXTds_oRJWcZP-lD9-Aj4sQd8uolaq2H2BOUH58DO5PDUif2ErFHZ-Z9vtwiQe9xWVCKvQfwWNDI9pLNsAq18eBttxpPHABcO71sXS_vk-ty1bol_4vq3JnwyutmHnhYmkuOhDkykUTOaLR25vFaPIL6EtFlDrVwBhsk9EEA50T2mklF-MmViysirITMwZ7nJZa8k9ZqvlZk144RLZIiwh41R0fuevqoudZ1zbme59vjeZ1CXuYSkqS8xFLoCzZsA=w1560-h878-no
    :width: 600px
+   :alt: Image of showing how much of the bike path is the gutter
 
    This photo taken right in front of McClatchy High School shows and elderly
    gentleman who decides to ride in the 2 foot wide gutter pan to be further
@@ -96,12 +98,14 @@ create a buffered bicycle lane on the northbound side.
 
 .. figure:: https://lh3.googleusercontent.com/gNCm7snkBgojlalhjw6_aL00svlJLJGsSAE1-IORgZxaNiJ6Qk9HJn2zjzCcJ9JdIPxVcOrdgU6C0ZaftXChBONmMxPVFAGKX9db3KK4PzDctmy9rGKUSUAFdfQCVAi9d8ybakm4SF7tGJk-TZ0U-snliL6uCTzbD4uYw9ALau53DIivViluYApiRx5NO6B2f7trwKMp-r3EpPQfampX2BB4fBWtN5pYH8E9utuqH11vpuEh9VWOMh76kOMSW8AuQaYO1yFIs-WAyPFqMh-W5ENsuvAwGfT_t9ZlkQ9QXnG54iEweGfo9iaNwTcmuMbo-437ZpkbeCjzRdZrF1rU1yA1T4dVO4RaxBXHcZJxqVTT6Xi1yz7wGPTw9b1Yi92PjV2j2D3CF4jX4GeN7Lqf9yrsi746RMX99WzX7HMHWybRvmzhrnC7ENfkHPeDkVqpbtvePfG2U4JOYcMyp43H4Uta3GA1PLNdwyLQmhGhegd98Uekx_EA_-XTzVgZvEg9SbyBfkkU4_CKEEDBy-XvlaCXGszj_rWam-eHZ4hGYGGO0Sy3J45Aaywuw9fiODP_MdITLTgGRthpBPjdXr04m4GQoaulMdMh_EJHnCMS3cjSti0_7w=w1560-h878-no
    :width: 600px
+   :alt: Wasted space for a bicycle lane
 
    This photo shows the wasted space on the southbound lane, now that the
    bicyclists are directed to follow the green path.
 
 .. figure:: https://lh3.googleusercontent.com/zOsF3aU28lD_JEs1LaaYUewyS3SRN_3VnUxecl9maAcpgn5YG1n30BhI3hNONqgllKP5f2xOFxhAAGguDcgI3O66R4g73J89E38-U4VL41X_rEcyfTJo-J0_fxHKB_S9O9VfGQvFX0iaCjwPdqVa52o-6WuA7mX8YbCaJFKg6u1VVEYdS6Vm6Z1s-J1SxAXo46TeyFq-cVthCKuUgkJehWQwWU0ejKYig0fH1sm7VcwbhN3sihVK-xxrwlzL8zkHQiZGO5nengOlkmIa3MppJcZ41LR2npKKT7ENaF_V3-TD-mvm7Sf2IIvf2SYDcheR3SYLjgOwU0ugQtpWnBhuw_2U58ozjKWLWchxPx4BZt0iZMp8KFAneU5VtNw0N82dRuO4f1jfgj67-7SszWMhQe-xibT-LUf1tpfzgUKIqkrQ55MZDtXUFzZ2v3Xdae_OE7DLF84p48IZmlfLBy1-cs1hdo8XV6GHezy4uR9i-hENFEfOsClazOsamu7GOO4MlTxSor3NtkNO9D1fYXdIu5IiIL07Sz1NuB-Bt3cCO5XB-MwawuHt1-VcPx8vjnAjIOBX0VOAEEubqrKpxGfjt85TMTQmkdr1hUK6XXFJFjdbjNzb5g=w1311-h983-no
    :width: 600px
+   :alt: Small bicycle lane beside wide car lanes
 
    This photo shows the large 13 foot and 11 foot wide northbound automobile
    lanes and the tiny 2.5 foot bicycle lane (which gets even narrower as it
@@ -146,6 +150,7 @@ need more of these!
 
 .. figure:: https://lh3.googleusercontent.com/wInM7a2CodRBE_tKQ6hyIsxSq6nhvxRgDZ0GazqEd3M-5HdJBhT49za0TV-aB67wlWFQ4yyEWLrsKT3a0-cT3MHvcsL5ttNXhJHIb_RmolIAXQHRhWOlT5z_N3RjNLE29sghemNCcaTluf9jhP_sKFPY6PG7xWorGm-utX_cF9Ha7quUZ_kxdM8IoLNI8YqvfwLnhSG6atpwDMJBHOAMQWBrZs9bJkUpvuX7_PKTpPZPHWoHHZu0Re9zPgoPwCx1rrhAsASzSBQABN7sH-Ejw4qKRCpNFKgUMEpSo7w3yPEkYM48zcY-whjvZtSpx0phXhEb6P7UqqRxO8tQjEAEUUC0xN1HyywiX4t9oN1kCpF3PHnVq9i5Cyw3ZLeeTPBAlP3-zCQIo7VJk9PwdmwVQkR8fEhTWRcyRhoI4Nj25g9ihc1waKremxWZQMA6pyGyw8JyQ_0hCiWqxgcgZ6juGRWebcySMKpq2oDkAXCGI4w1cGfX-nt1TeSawCOtNIybSWsIiNOlsjZNEYvKLjCU_b1E5t3HYsnBnma8Ju_tGb-FJK6LxJjAQ1kqrj-FHmuHPbE8ynFkGxtuZbD96WADeosOkU39nYycmzkbCJPsCSuMgoQaWg=w1311-h983-no
    :width: 600px
+   :alt: Very wide bicycle lane in high speed area
 
    Note that this short span of green bicycle lane is 6 feet wide, which is
    pretty nice, especially since most cars are travelling at 40+ mph through
@@ -165,6 +170,7 @@ came across two vehicles parked in the southbound bicycle lanes:
 
 .. figure:: https://lh3.googleusercontent.com/Cf3vK-FJCVcL1cxZ280IWph7p6VdvWKa-vTMeAZDO-Fv5cverFJmXaLVOmnUnVJZkZGjiMCzcHGZgLoAUIMIA8H7pSuThF3xvDGu1NVQnN1obJdfHbPOtY0QdQQzYbNefUXBO-xw9Y72jWkRafQ4yVVq3F5QYkKbDeKW458YXoksWg-pRQp8ceBclVDv6qoTTDobGuCqIJ5qMGVmhSpJ1cC1MyJATS36vuGG0LEaFxgsREOv7CWhoGljQRDdIoGZhPfapoXzibFaKdta7TPhkMqeuj5Dz0Oy57v2acNA7Gyqdt2it12hQCaJLJVaV4a1rL9dm4X_ZNDktK87ZSkn14h2viWlwUqFIJTrRF32WMlJIUzpkw8MhcMqd2cYIYKAkWVthIPTgCd2T7UxuDIEs-ck146W7G2pQ_iYj-kvtkFEq2Vba0dVDOLdGgOIjoxGiny78_wVv-XFf2463W0kIspWBLEgp8NHpn5o1HP_bzxJKw2412uJukTaa81GotgAGBdRsHLc7a8JIW7iEYmUm_-xuzXUfMkyoANT0Muc7UzmdH9hd65dOchxRuNdv1BDYPsewOWhh5P5rYpHdY1GKsk1zxX1ilAe3owTFiEFYUu_zQkXbQ=w1560-h878-no
    :width: 600px
+   :alt: Cars parked in the new bike lanes
 
    These folks are likley patrons of Dad's or Freeport bakery. They've blocked
    the bicycle lanes and forced the bicyclists into auto traffic with their
@@ -174,6 +180,7 @@ and yard waste blocking the lane:
 
 .. figure:: https://lh3.googleusercontent.com/PSNeOEltBN_a_utMXNeBTD57_5v2Auk_1gkruyVAjLClVcj28uPmpXbXGVXO8v7W3gs9gEw9kxtm_w-xzti2xGX5sT0K-rcoEgGHxXZN9Dr3gpeDb4GC-j9izCV1mjgd7w1PTG0KN-hDSYVyKkU-30PPdHUv_UvvaeEs0HnslRP-qOdUPKc5IPOFtlhvdM1CcbHqXyV7asdWfbRvJsjR3v2AXQHSu4tkhMpWXyImWeOy4_31mhEHsClZ2tUr4zA4_40rNZkbABPdlqnWSJZg50MMeFpNU7N7sglmKnDegJze7ltRVg7jx3ibI1lOFdOeUshqoOVS0p-c4fGWZyIJHT2DRk_9Zu58AJXAgl5pdIqTNdVAvKy0JiTSeh_E3rDbQTljjQUASW-hy6nTU8Hi3XgxdzaS2EUPTow7uV0rvGlJz-DL-cAEjewor5mojdaqZxF7hQFhQ3OTzw9z4a0S9QTkHdHfBIZmKgjD_V_Wk6Kl4RGsfbrY3IFiVD5b9BpiEHG5Pga3bwHJglvpr2ZGy-RpqNtC2a6drKgK4MdvJX1IsuD8e3BLFHyp0JtkBPM6STyuwgbPepIB4j7nc9a3INqCjkCwdVU435Eve4JL2Q9MrD8jgg=w1560-h878-no
    :width: 600px
+   :alt: Leaf piles in the bike lane
 
    This photo shows how residents along Freeport pile leaves in the bicycle
    lane which forces bicyclists into the traffic lane.

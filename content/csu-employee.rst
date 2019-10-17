@@ -33,6 +33,7 @@ I should do on Linux.
 
 .. image:: https://objects-us-east-1.dream.io/moorepants/csu-wpa2.png
    :class: img-rounded
+   :alt: Screenshot of wireless settings
 
 The library has access to lots of digital and physical media through `OhioLink
 <http://www.ohiolink.edu/>`_ which is cool.
