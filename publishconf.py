@@ -10,18 +10,19 @@ import sys
 sys.path.append(os.curdir)
 from pelicanconf import *
 
-if os.environ['TRAVIS'] == 'true':
+try:
+    os.environ['TRAVIS']
+except KeyError:  # not on Travis
+    SITEURL = 'https://moorepants.info'
+    DISQUS_SITENAME = "moorepants"
+    GOOGLE_ANALYTICS = "UA-15966419-6"
+else:
     SITEURL = 'https://moorepants.github.io/moorepants.info'
     # NOTE : The theme and plugins are installed alongside this file on the
     # Travis build.
     THEME = "pelican-alchemy/alchemy"
     PLUGIN_PATHS = "pelican-plugins"
     MENUITEMS = [('Blog', '{}/blog/'.format(SITEURL))]
-
-else:
-    SITEURL = 'https://moorepants.info'
-    DISQUS_SITENAME = "moorepants"
-    GOOGLE_ANALYTICS = "UA-15966419-6"
 
 RELATIVE_URLS = False
 
