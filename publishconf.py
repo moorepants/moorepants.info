@@ -10,6 +10,22 @@ import sys
 sys.path.append(os.curdir)
 from pelicanconf import *
 
+# NOTE : These directories are pushed to the website separately.
+list_of_prohibted_directories = ['eme185-uploads',
+                                 'icsc2017',
+                                 'icsc2017.old',
+                                 'jkm',
+                                 'mech-cap',
+                                 'misc',
+                                 'presentations',
+                                 'zotero']
+
+files_and_dirs = os.listdir('content/pages')
+msg = "{} can't be a directory name because it conflicts with one on the server."
+for f in files_and_dirs:
+    if f in list_of_prohibted_directories:
+        raise ValueError(msg.format(f))
+
 try:
     os.environ['TRAVIS']
 except KeyError:  # not on Travis
