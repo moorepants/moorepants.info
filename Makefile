@@ -11,7 +11,7 @@ PUBLISHCONF=$(BASEDIR)/publishconf.py
 SSH_HOST=moorepants.info
 SSH_PORT=22
 SSH_USER=jasonkmoore
-SSH_TARGET_DIR=/home/jasonkmoore/moorepants.info
+SSH_TARGET_DIR=/home/jasonkmoore/moorepants.info/
 
 GITHUB_PAGES_BRANCH=master
 
@@ -82,6 +82,7 @@ publish:
 
 ssh_upload: publish
 	scp -P $(SSH_PORT) -r $(OUTPUTDIR)/* $(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR)
+	scp -P $(SSH_PORT) -r $(OUTPUTDIR)/.htaccess $(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR)
 
 rsync_upload: publish
 	rsync -e "ssh -p $(SSH_PORT)" -P -rvzc --cvs-exclude --delete $(OUTPUTDIR)/ $(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR)
