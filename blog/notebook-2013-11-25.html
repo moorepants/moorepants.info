@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  Notebook Entry | moorepants
+</title>
+  <link rel="canonical" href="https://moorepants.info.github.io/blog/notebook-2013-11-25.html">
+
+
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/pygments/default.min.css">
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="https://moorepants.info.github.io/feeds/all.atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="Categories Atom Feed"
+        href="https://moorepants.info.github.io/feeds/{slug}.atom.xml">  
+  <meta name="description" content="[x] Get travis testing working on DynamicistToolKit. There are issues with the Cython version, numpy version to build pandas. [x] Clean up and make a release of Dynamicist toolkit [x] Try the HBM.exe file with Wine (it works). [x] Send Alex Clark's quote through to CSU purchasing. [x] Email …">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="https://moorepants.info.github.io/">
+        <img class="img-fluid rounded" src=https://objects-us-east-1.dream.io/moorepants/headshot.jpg alt="moorepants">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="https://moorepants.info.github.io/">moorepants</a></h1>
+      <p class="text-muted">a websitee</p>
+      <ul class="list-inline">
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/about.html">About</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/portfolio.html">Portfolio</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/interests.html">Interests</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/research.html">Research</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/teaching.html">Teaching</a></li>
+          <li class="list-inline-item"><a href="/blog/">Blog</a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  Notebook Entry
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2013-11-25T16:52:06-08:00">
+          <i class="fa fa-clock-o"></i>
+          Mon 25 November 2013
+        </li>
+        <li class="list-inline-item">
+          <i class="fa fa-folder-open-o"></i>
+          <a href="https://moorepants.info.github.io/category/notebook.html">notebook</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fa fa-user-o"></i>
+              <a href="https://moorepants.info.github.io/author/jason-k-moore.html">Jason K. Moore</a>          </li>
+          <li class="list-inline-item">
+            <i class="fa fa-files-o"></i>
+              <a href="https://moorepants.info.github.io/tag/notebook.html">#notebook</a>,               <a href="https://moorepants.info.github.io/tag/biomechanicstoolkit.html">#biomechanicstoolkit</a>,               <a href="https://moorepants.info.github.io/tag/cmake.html">#cmake</a>          </li>
+      </ul>
+    </header>
+
+
+    <div class="content">
+      <ul class="simple">
+<li>[x] Get travis testing working on DynamicistToolKit. There are issues with
+the Cython version, numpy version to build pandas.</li>
+<li>[x] Clean up and make a release of Dynamicist toolkit</li>
+<li>[x] Try the HBM.exe file with Wine (it works).</li>
+<li>[x] Send Alex Clark's quote through to CSU purchasing.</li>
+<li>[x] Email Mounir about teaching reproducible scientific computing course.</li>
+<li>[x] Make a Whipple ID paper presentation</li>
+<li>[x] Make time series plot showing the model outputs compared to the measured</li>
+<li>[x] Make a Rider Control ID poster</li>
+<li>[x] Review Sachins PR 2478</li>
+<li>[x] Convert pydy-code-gen to class structure</li>
+</ul>
+<div class="section" id="installing-btk-on-ubuntu-13-10">
+<h2>Installing BTK on Ubuntu 13.10</h2>
+<pre class="code literal-block">
+# documentation build dependencies
+sudo aptitude install doxygen
+# python wrapper dependencies
+sudo aptitude install swig python-numpy
+# octave wrapper dependencies
+sudo aptitude install swig octave liboctave-dev
+# mokka dependencies
+sudo aptitude install libvtk5-dev libvtk5.8-qt4 libphonon-dev
+
+git clone git&#64;github.com:Biomechanical-ToolKit/BTKCore.git ~/src/BTKCore
+git clone git&#64;github.com:Biomechanical-ToolKit/BTKData.git ~/Data/BTKData
+cd ~/src/BTKCore
+mkdir build
+cd build
+cmake \
+   -DCMAKE_BUILD_TYPE:CHAR=Release \
+   -DBUILD_SHARED_LIBS:BOOL=1 \
+   -DBTK_WRAP_PYTHON:BOOL=1 \
+   -DBTK_WRAP_OCTAVE:BOOL=1 \
+   -DBUILD_TESTING:BOOL=1 \
+   -DBTK_TESTING_DATA_PATH:CHAR=~/Data/BTKData \
+   -DBTK_EXTRA_COMPILER_WARNINGS:BOOL=1 \
+   -DBUILD_DOCUMENTATION:BOOL=1 \
+   -DBUILD_DOCUMENTATION_API:BOOL=1 \
+   -DBUILD_DOCUMENTATION_API_UNSELECTED_MODULES:BOOL=1 \
+   -DBUILD_EXAMPLES:BOOL=1 \
+   -DPYTHON_LIBRARY:CHAR=/usr/lib/x86_64-linux-gnu/libpython2.7.so \
+   -DPYTHON_INCLUDE_DIR:CHAR=/usr/include/python2.7 \
+   -DBTK_USE_VISSUPPORT:BOOL=1 \
+   -DBTK_USE_VTK:BOOL=1 \
+   -DBUILD_TOOLS:BOOL=1 \
+   -DQT_MOC_EXECUTABLE:PATH=/usr/bin/moc \
+   -DQT_UIC_EXECUTABLE:PATH=/usr/bin/uic \
+   -G &quot;Unix Makefiles&quot; ..
+make
+</pre>
+</div>
+
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+      <li class="list-inline-item"><a href="https://moorepants.info.github.io/authors.html">Authors</a></li>
+    <li class="list-inline-item"><a href="https://moorepants.info.github.io/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="https://moorepants.info.github.io/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="https://moorepants.info.github.io/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>
+<div class="row">
+  <div class="col-sm-4 mx-auto text-center text-muted" >
+    <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+      <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+    </a>
+    <br />
+    This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+  </div>
+</div>    </div>
+  </footer>
+</body>
+
+</html>

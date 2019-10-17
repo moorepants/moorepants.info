@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  Notebook Entry | moorepants
+</title>
+  <link rel="canonical" href="https://moorepants.info.github.io/blog/notebook-2014-03-25.html">
+
+
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/pygments/default.min.css">
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="https://moorepants.info.github.io/feeds/all.atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="Categories Atom Feed"
+        href="https://moorepants.info.github.io/feeds/{slug}.atom.xml">  
+  <meta name="description" content="Some on sparse matrix solve speed. The sparse solvers in scipy don't necessarily seem faster but these are tiny matrices. In [1]: from scipy import sparse In [6]: a = sparse.lil_matrix([[1., 0.], [0., 4.]]) In [7]: a Out[7]: <2x2 sparse matrix of type '<type 'numpy.float64'>' with 2 …">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="https://moorepants.info.github.io/">
+        <img class="img-fluid rounded" src=https://objects-us-east-1.dream.io/moorepants/headshot.jpg alt="moorepants">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="https://moorepants.info.github.io/">moorepants</a></h1>
+      <p class="text-muted">a websitee</p>
+      <ul class="list-inline">
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/about.html">About</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/portfolio.html">Portfolio</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/interests.html">Interests</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/research.html">Research</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/teaching.html">Teaching</a></li>
+          <li class="list-inline-item"><a href="/blog/">Blog</a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  Notebook Entry
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2014-03-25T09:42:33-07:00">
+          <i class="fa fa-clock-o"></i>
+          Tue 25 March 2014
+        </li>
+        <li class="list-inline-item">
+          <i class="fa fa-folder-open-o"></i>
+          <a href="https://moorepants.info.github.io/category/notebook.html">notebook</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fa fa-user-o"></i>
+              <a href="https://moorepants.info.github.io/author/jason-k-moore.html">Jason K. Moore</a>          </li>
+          <li class="list-inline-item">
+            <i class="fa fa-files-o"></i>
+              <a href="https://moorepants.info.github.io/tag/notebook.html">#notebook</a>,               <a href="https://moorepants.info.github.io/tag/scipy.html">#scipy</a>,               <a href="https://moorepants.info.github.io/tag/sparse-matrices.html">#sparse matrices</a>          </li>
+      </ul>
+    </header>
+
+
+    <div class="content">
+      <p>Some on sparse matrix solve speed.</p>
+<p>The sparse solvers in scipy don't necessarily seem faster but these are tiny matrices.</p>
+<pre class="literal-block">
+In [1]: from scipy import sparse
+
+In [6]: a = sparse.lil_matrix([[1., 0.], [0., 4.]])
+
+In [7]: a
+Out[7]:
+&lt;2x2 sparse matrix of type '&lt;type 'numpy.float64'&gt;'
+   with 2 stored elements in LInked List format&gt;
+
+In [8]: b = sparse.lil_matrix([[5.], [6.0]])
+
+In [9]: b
+Out[9]:
+&lt;2x1 sparse matrix of type '&lt;type 'numpy.float64'&gt;'
+   with 2 stored elements in LInked List format&gt;
+
+In [10]: from scipy.sparse.linalg import spsolve
+
+In [12]: spsolve(a.tocsr(), b)
+Out[12]: array([ 5. ,  1.5])
+
+In [13]: import numpy
+
+In [14]: A = numpy.array([[1.0, 0.0], [0.0, 4.0]])
+
+In [15]: B = numpy.array([[5.], [6.0]])
+
+In [16]: %timeit numpy.linalg.solve(A, B)
+10000 loops, best of 3: 19.6 µs per loop
+
+In [17]: %timeit spsolve(a, b)
+1000 loops, best of 3: 370 µs per loop
+
+In [18]: from scipy.sparse.linalg import factorized
+
+In [20]: a0 = a.tocsr()
+
+In [21]: %timeit spsolve(a, b)
+1000 loops, best of 3: 370 µs per loop
+
+In [22]: a1 = a.tocsc()
+
+In [23]: %timeit spsolve(a1, b)
+1000 loops, best of 3: 196 µs per loop
+
+In [24]: solve = factorized(a1)
+
+In [29]: b = numpy.array([5., 6.0])
+
+In [30]: solve(b)
+Out[30]: array([ 5. ,  1.5])
+
+In [31]: %timeit solve(b)
+100000 loops, best of 3: 11 µs per loop
+
+In [32]: %timeit solve = factorized(a1); solve(b)
+10000 loops, best of 3: 158 µs per loop
+</pre>
+
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+      <li class="list-inline-item"><a href="https://moorepants.info.github.io/authors.html">Authors</a></li>
+    <li class="list-inline-item"><a href="https://moorepants.info.github.io/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="https://moorepants.info.github.io/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="https://moorepants.info.github.io/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>
+<div class="row">
+  <div class="col-sm-4 mx-auto text-center text-muted" >
+    <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+      <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+    </a>
+    <br />
+    This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+  </div>
+</div>    </div>
+  </footer>
+</body>
+
+</html>

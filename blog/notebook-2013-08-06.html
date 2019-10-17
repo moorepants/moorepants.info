@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  Notebook Entry | moorepants
+</title>
+  <link rel="canonical" href="https://moorepants.info.github.io/blog/notebook-2013-08-06.html">
+
+
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/pygments/default.min.css">
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="https://moorepants.info.github.io/feeds/all.atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="Categories Atom Feed"
+        href="https://moorepants.info.github.io/feeds/{slug}.atom.xml">  
+  <meta name="description" content="Today's task list: [x] Send code for theano and sympy [x] Work on parsing the walking data [~] Figure out the bug I'm getting at the end of page 153 on the plone book [] Work on the website theme [] Figure out what to do about the incorrect budget category for the …">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="https://moorepants.info.github.io/">
+        <img class="img-fluid rounded" src=https://objects-us-east-1.dream.io/moorepants/headshot.jpg alt="moorepants">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="https://moorepants.info.github.io/">moorepants</a></h1>
+      <p class="text-muted">a websitee</p>
+      <ul class="list-inline">
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/about.html">About</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/portfolio.html">Portfolio</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/interests.html">Interests</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/research.html">Research</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/teaching.html">Teaching</a></li>
+          <li class="list-inline-item"><a href="/blog/">Blog</a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  Notebook Entry
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2013-08-06T09:25:00-07:00">
+          <i class="fa fa-clock-o"></i>
+          Tue 06 August 2013
+        </li>
+        <li class="list-inline-item">
+          <i class="fa fa-folder-open-o"></i>
+          <a href="https://moorepants.info.github.io/category/notebook.html">notebook</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fa fa-user-o"></i>
+              <a href="https://moorepants.info.github.io/author/jason-k-moore.html">Jason K. Moore</a>          </li>
+          <li class="list-inline-item">
+            <i class="fa fa-files-o"></i>
+              <a href="https://moorepants.info.github.io/tag/notebook.html">#notebook</a>,               <a href="https://moorepants.info.github.io/tag/code-generation.html">#code generation</a>,               <a href="https://moorepants.info.github.io/tag/sympy.html">#sympy</a>,               <a href="https://moorepants.info.github.io/tag/pydy.html">#pydy</a>,               <a href="https://moorepants.info.github.io/tag/system-identification.html">#system identification</a>,               <a href="https://moorepants.info.github.io/tag/walking.html">#walking</a>          </li>
+      </ul>
+    </header>
+
+
+    <div class="content">
+      <p>Today's task list:</p>
+<ul class="simple">
+<li>[x] Send code for theano and sympy</li>
+<li>[x] Work on parsing the walking data</li>
+<li>[~] Figure out the bug I'm getting at the end of page 153 on the plone book</li>
+<li>[] Work on the website theme</li>
+<li>[] Figure out what to do about the incorrect budget category for the
+computers</li>
+<li>[] Review the TODO items on the Yeadon paper</li>
+<li>[] Do D-Flow/Cortex tutorial (Due August 12)</li>
+</ul>
+<div class="section" id="sympy-code-generation">
+<h2>SymPy Code Generation</h2>
+<p>Another person needing code gen of complex SymPy derived ODEs:
+<a class="reference external" href="https://groups.google.com/forum/#!topic/sympy/VtaxCRNO4sE">https://groups.google.com/forum/#!topic/sympy/VtaxCRNO4sE</a></p>
+<p>Pushed my pydy code gen experiments:
+<a class="reference external" href="https://github.com/PythonDynamics/pydy-code-gen">https://github.com/PythonDynamics/pydy-code-gen</a></p>
+<p>And a patch for the theano stuff in sympy:
+<a class="reference external" href="https://github.com/sympy/sympy/pull/2358">https://github.com/sympy/sympy/pull/2358</a></p>
+<p>Fred speed up my theano implementation a lot:
+<a class="reference external" href="https://github.com/PythonDynamics/pydy-code-gen/pull/1">https://github.com/PythonDynamics/pydy-code-gen/pull/1</a></p>
+</div>
+<div class="section" id="walking-system-identification">
+<h2>Walking System Identification</h2>
+<p>I added a walk module to my DynamicistToolKit:</p>
+<p><a class="reference external" href="https://github.com/moorepants/DynamicistToolKit/blob/master/dtk/walk.py">https://github.com/moorepants/DynamicistToolKit/blob/master/dtk/walk.py</a></p>
+<p>For steady walking we need to derive the average motion (sorta the limit
+cycle). Steps:</p>
+<ol class="arabic simple">
+<li>Use ground reaction force data to find heel strike and toe-off times.</li>
+<li>Splice the joint angle and joint rate data up according to the
+heelstrike/toe-off times. This will give stance phase of each leg, alternating.</li>
+<li>For the whole run average the angle, rate, and force data to get the average
+motion and torques.</li>
+<li>Now list the variables that are potentially feedback variables, $s$ and all of
+the potential control variables (joint torques), $M$.</li>
+</ol>
+<p>Obinna gave me some new data with good ground reaction force measurements. The
+one Ton provided seemed like the person was dragging their left foot. Chris's
+heel strike/toe-off finder worked great for the data. I'm working up the maths
+for the controller solver and will post once I've scribbled enough in my paper
+notebook.</p>
+</div>
+
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+      <li class="list-inline-item"><a href="https://moorepants.info.github.io/authors.html">Authors</a></li>
+    <li class="list-inline-item"><a href="https://moorepants.info.github.io/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="https://moorepants.info.github.io/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="https://moorepants.info.github.io/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>
+<div class="row">
+  <div class="col-sm-4 mx-auto text-center text-muted" >
+    <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+      <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+    </a>
+    <br />
+    This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+  </div>
+</div>    </div>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  Notebook Entry | moorepants
+</title>
+  <link rel="canonical" href="https://moorepants.info.github.io/blog/notebook-2014-07-16.html">
+
+
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/pygments/default.min.css">
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="https://moorepants.info.github.io/feeds/all.atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="Categories Atom Feed"
+        href="https://moorepants.info.github.io/feeds/{slug}.atom.xml">  
+  <meta name="description" content="NCSRR 5 week plan. NCSRR Biweekly Plan Started on Monday July 14 Thursday Jul 17 Prepare and give kickoff talk Setup latest Opensim/Simbody dev environment Read some papers to get an idea of scale limits in NLP problems with IPOPT and/or SNOPT Complete all the orientation stuff for …">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="https://moorepants.info.github.io/">
+        <img class="img-fluid rounded" src=https://objects-us-east-1.dream.io/moorepants/headshot.jpg alt="moorepants">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="https://moorepants.info.github.io/">moorepants</a></h1>
+      <p class="text-muted">a websitee</p>
+      <ul class="list-inline">
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/about.html">About</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/portfolio.html">Portfolio</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/interests.html">Interests</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/research.html">Research</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/teaching.html">Teaching</a></li>
+          <li class="list-inline-item"><a href="/blog/">Blog</a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  Notebook Entry
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2014-07-16T18:45:15-07:00">
+          <i class="fa fa-clock-o"></i>
+          Wed 16 July 2014
+        </li>
+        <li class="list-inline-item">
+          <i class="fa fa-folder-open-o"></i>
+          <a href="https://moorepants.info.github.io/category/notebook.html">notebook</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fa fa-user-o"></i>
+              <a href="https://moorepants.info.github.io/author/jason-k-moore.html">Jason K. Moore</a>          </li>
+          <li class="list-inline-item">
+            <i class="fa fa-files-o"></i>
+              <a href="https://moorepants.info.github.io/tag/notebook.html">#notebook</a>,               <a href="https://moorepants.info.github.io/tag/ncsrr.html">#ncsrr</a>,               <a href="https://moorepants.info.github.io/tag/stanford.html">#stanford</a>,               <a href="https://moorepants.info.github.io/tag/opensim.html">#opensim</a>,               <a href="https://moorepants.info.github.io/tag/simbody.html">#simbody</a>,               <a href="https://moorepants.info.github.io/tag/direct-collocation.html">#direct collocation</a>,               <a href="https://moorepants.info.github.io/tag/system-identification.html">#system identification</a>,               <a href="https://moorepants.info.github.io/tag/plan.html">#plan</a>          </li>
+      </ul>
+    </header>
+
+
+    <div class="content">
+      <p>NCSRR 5 week plan.</p>
+<div class="section" id="ncsrr-biweekly-plan">
+<h2>NCSRR Biweekly Plan</h2>
+<p>Started on Monday July 14</p>
+<p>Thursday Jul 17</p>
+<ul class="simple">
+<li>Prepare and give kickoff talk</li>
+<li>Setup latest Opensim/Simbody dev environment</li>
+<li>Read some papers to get an idea of scale limits in NLP problems with IPOPT
+and/or SNOPT</li>
+<li>Complete all the orientation stuff for Stanford</li>
+<li>Complete initial test run of inverted pendulum on cart problem with 10,000
+nodes in IPOPT</li>
+<li>Talk with Jack Wang about using his existing code (if I can use the code, below
+plans may be altered)</li>
+<li>Discuss direct collocation vs shooting with Ton and others</li>
+</ul>
+<p>Monday Jul 21</p>
+<ul class="simple">
+<li>Test the limits of scaling in the inverted pendulum code, make computational
+speed improvements.</li>
+<li>Build (or obtain) a basic torque driven 9/10 DoF model in Opensim</li>
+</ul>
+<p>Thursday Jul 24</p>
+<ul class="simple">
+<li>Implement gain scheduled black box control structure for the planar walking
+model in Opensim</li>
+</ul>
+<p>Monday Jul 28</p>
+<ul class="simple">
+<li>Start development of direct collocation code in C++ (port stuff from my
+current Python code) using numerical functionality from Simbody</li>
+</ul>
+<p>Thursday Jul 31</p>
+<ul class="simple">
+<li>Complete initial direct collocation implementation</li>
+</ul>
+<p>Monday Aug 4</p>
+<ul class="simple">
+<li>Iterate on direct collocation solutions: testing initial guesses, minimal
+data sets, # discretization nodes, improve computational speed, etc.</li>
+<li>Implement IPOPT + paradiso on an AWS instance</li>
+</ul>
+<p>Thursday Aug 7</p>
+<ul class="simple">
+<li>Either polish things that work or fix things that don't.</li>
+</ul>
+<p>Monday Aug 11</p>
+<ul class="simple">
+<li>Either polish things more that work or fix things that don't.</li>
+</ul>
+<p>Thursday Aug 14</p>
+<ul class="simple">
+<li>Prepare and present results and findings</li>
+</ul>
+</div>
+
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+      <li class="list-inline-item"><a href="https://moorepants.info.github.io/authors.html">Authors</a></li>
+    <li class="list-inline-item"><a href="https://moorepants.info.github.io/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="https://moorepants.info.github.io/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="https://moorepants.info.github.io/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>
+<div class="row">
+  <div class="col-sm-4 mx-auto text-center text-muted" >
+    <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+      <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+    </a>
+    <br />
+    This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+  </div>
+</div>    </div>
+  </footer>
+</body>
+
+</html>

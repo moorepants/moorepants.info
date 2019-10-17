@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  Notebook Entry | moorepants
+</title>
+  <link rel="canonical" href="https://moorepants.info.github.io/blog/notebook-2013-08-12.html">
+
+
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/pygments/default.min.css">
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="https://moorepants.info.github.io/feeds/all.atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="Categories Atom Feed"
+        href="https://moorepants.info.github.io/feeds/{slug}.atom.xml">  
+  <meta name="description" content="Today's task list: [x] Work on parsing the walking data [] Make generic settings on the lab website [] Work on the website theme [] Fix the budgeting and purchasing issues [] Review the TODO items on the Yeadon paper Walking System Identification Load data. Find the heel strike and toe-off for each foot …">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="https://moorepants.info.github.io/">
+        <img class="img-fluid rounded" src=https://objects-us-east-1.dream.io/moorepants/headshot.jpg alt="moorepants">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="https://moorepants.info.github.io/">moorepants</a></h1>
+      <p class="text-muted">a websitee</p>
+      <ul class="list-inline">
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/about.html">About</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/portfolio.html">Portfolio</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/interests.html">Interests</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/research.html">Research</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/teaching.html">Teaching</a></li>
+          <li class="list-inline-item"><a href="/blog/">Blog</a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  Notebook Entry
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2013-08-12T08:40:00-07:00">
+          <i class="fa fa-clock-o"></i>
+          Mon 12 August 2013
+        </li>
+        <li class="list-inline-item">
+          <i class="fa fa-folder-open-o"></i>
+          <a href="https://moorepants.info.github.io/category/notebook.html">notebook</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fa fa-user-o"></i>
+              <a href="https://moorepants.info.github.io/author/jason-k-moore.html">Jason K. Moore</a>          </li>
+          <li class="list-inline-item">
+            <i class="fa fa-files-o"></i>
+              <a href="https://moorepants.info.github.io/tag/notebook.html">#notebook</a>,               <a href="https://moorepants.info.github.io/tag/system-identification.html">#system identification</a>,               <a href="https://moorepants.info.github.io/tag/walking.html">#walking</a>,               <a href="https://moorepants.info.github.io/tag/cleveland-pug.html">#cleveland pug</a>,               <a href="https://moorepants.info.github.io/tag/python.html">#python</a>,               <a href="https://moorepants.info.github.io/tag/d-flow.html">#d-flow</a>          </li>
+      </ul>
+    </header>
+
+
+    <div class="content">
+      <p>Today's task list:</p>
+<ul class="simple">
+<li>[x] Work on parsing the walking data</li>
+<li>[] Make generic settings on the lab website</li>
+<li>[] Work on the website theme</li>
+<li>[] Fix the budgeting and purchasing issues</li>
+<li>[] Review the TODO items on the Yeadon paper</li>
+</ul>
+<div class="section" id="walking-system-identification">
+<h2>Walking System Identification</h2>
+<ol class="arabic simple">
+<li>Load data.</li>
+<li>Find the heel strike and toe-off for each foot for the run.</li>
+<li>Align each foot down section in time with the first one and truncate the
+data for each to have equal length time series for each foot down.</li>
+<li>Segment and truncate the interesting time series to match (rates, angles, etc)</li>
+<li>Specify the number of time steps to retain for the control extraction.</li>
+<li>Store these reduced time series in a 3D array. This can be a pandas Panel
+where each DataFrame in the Panel is one foot down time series. There should
+be one Panel for each leg.</li>
+<li>Find the mean of the time series and store as the limit cycle definition.</li>
+<li>Specify the inputs and outputs to the controller.</li>
+<li>Form Ax=b.</li>
+<li>Call linear least squares to get the gains.</li>
+</ol>
+<p>Software additions</p>
+<p>I move some signal sync functions from BicycleDataProcessor into DTK and
+generalized them. I plan to use it to align and truncate a series of signals
+from walking data.</p>
+<ul class="simple">
+<li><a class="reference external" href="https://github.com/moorepants/DynamicistToolKit/commit/a7f005adef6d0ff8a0047a065eafedc21ec71d00">https://github.com/moorepants/DynamicistToolKit/commit/a7f005adef6d0ff8a0047a065eafedc21ec71d00</a></li>
+<li><a class="reference external" href="https://github.com/moorepants/DynamicistToolKit/commit/ac4aa3cd16c01e392e2ba22bf4aa93eece78f111">https://github.com/moorepants/DynamicistToolKit/commit/ac4aa3cd16c01e392e2ba22bf4aa93eece78f111</a></li>
+</ul>
+</div>
+<div class="section" id="d-flow">
+<h2>D-Flow</h2>
+<p>Sanne is here this week from <a class="reference external" href="http://www.motekmedical.com/">Motek</a> to fix
+some issues with D-Flow and the treadmill system and to also train us in using
+the equipment/software. I asked her a bit about the Lua scripting in D-Flow.
+Sounds like they chose the language because it was easy to learn for wrapping
+<em>some</em> of their API. It is not possible to use D-Flow without manipulating the
+graphical programming they have implemented. In particular access to the data
+sources is not available so you always have to drop in the mocap or other
+modules for a source stream of data.</p>
+<p>D-Flow outputs tab delimited text files when you want to extract the data from
+the system. When they have missing data (i.e. missing markers or force
+measurements) they replace them with a zero in the file. This is very
+problematic because the sensors can also actually output a value of zero.
+Sanne mentioned the unlikelihood of a sensor value to actually be 0.0000... but
+I don't think this is a good argument. Good software like R use NA for missing
+data (Pandas is bound by numpy's implementation and only has NaN, but this will
+be fixed). It is also important to note that NaN is different than NA and is
+the result of a computation than give a Not-A-Number answer. D-Flow may need a
+combination of NA's and NaN' because they also do internal computations (HBM
+for example).</p>
+<p>Bugs</p>
+<ul class="simple">
+<li>Missing values are replaced with a zero value.</li>
+</ul>
+<p>Feature Requests</p>
+<ul class="simple">
+<li>Expand the Lua API such that the user can script the whole program and avoid
+using anything in the GUI, in particular add access to the data sources.</li>
+<li>Allow the user to specify a desired text editor (vim, emacs, notepad++, etc)
+for the scripting environment so that editing a script automatically loads
+the desired text editor.</li>
+<li>Make the C++ API available so that we can use it directly or wrap it with our
+desired programming languages. This will allow us to integrate our software
+with D-Flow. Currently D-Flow seems to be a walled box with only an exit for
+text data after a simulation is run. It would be preferable to be able to
+access realtime data from our own software.</li>
+<li>It seems that D-Flow has limited use if you don't have the hardware that goes
+with it (i.e. treadmill, force plates, video screen, motion capture, etc).
+This makes the D-Flow software a prime candidate for open sourcing. If the
+software were open source then all the above points would not be issues, as
+we could extend the software and use it like we please.</li>
+<li>Make the feature request and bug tracker available to the public (or at least
+the licensed users). It would save time if we can report both of these
+directly to the tacking system, versus calling a support person and asking
+them to submit items.</li>
+<li>Port the software to other operating systems (in particular Linux). If the
+software could run in Linux then we have much better control of the security of
+the software via user permissions. Then we can have the system connected to a
+network which is connected to the internet. This would allow us to pass data
+out from D-Flow without having to download text files to a USB stick. There
+may be a way to solve this in Windows too, but I'm ignorant of that.</li>
+<li>Add an undo button! Right now if you accidently delete something in the
+graphical area you're screwed.</li>
+</ul>
+</div>
+<div class="section" id="cleveland-python-users-group">
+<h2>Cleveland Python Users Group</h2>
+<p>I went to the monthly Cleveland PUG meeting last night. Seemed like a bunch of
+good people. We met at Lean Dog which has a really nice office on a boat by the
+Rock and Roll Hall of Fame. One guy presented his work with Jenkins which looks
+cool. It is an open source continuous integration system that you have full
+control over and can install it on your server. This seems more flexible than the
+Travis-CI system which is just a hosted service, but Jenkins doesn't have as
+nice integration with Github, you have to manually setup some hooks.</p>
+<p>The same guy also is going to give a talk at DjangoCon soon on some interesting
+concepts. But I've forgotten what they were, but definitely interesting.</p>
+<p>There was chatter about the Center for Open Science from PyOhio. Some folks met
+Jeffery and others at the conference.</p>
+<p>I was surprised that everyone wasn't a complete nerd like our LUGOD meetings
+back in Davis. The group seemed very social which is cool.</p>
+<p>I got to show off PyDy and SymPy for a few minutes and folks seemed to dig it.</p>
+<p>Supposedly, next month a person will show off Kivy.</p>
+</div>
+
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+      <li class="list-inline-item"><a href="https://moorepants.info.github.io/authors.html">Authors</a></li>
+    <li class="list-inline-item"><a href="https://moorepants.info.github.io/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="https://moorepants.info.github.io/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="https://moorepants.info.github.io/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>
+<div class="row">
+  <div class="col-sm-4 mx-auto text-center text-muted" >
+    <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+      <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+    </a>
+    <br />
+    This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+  </div>
+</div>    </div>
+  </footer>
+</body>
+
+</html>

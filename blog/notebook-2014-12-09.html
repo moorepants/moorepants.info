@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  Notebook Entry | moorepants
+</title>
+  <link rel="canonical" href="https://moorepants.info.github.io/blog/notebook-2014-12-09.html">
+
+
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/pygments/default.min.css">
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="https://moorepants.info.github.io/feeds/all.atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="Categories Atom Feed"
+        href="https://moorepants.info.github.io/feeds/{slug}.atom.xml">  
+  <meta name="description" content="AIO for December 9, 2014 Last week's accomplishments Perturbed Data Paper [18 hr, Closer to done 14 hr] Finish all remaining issues and prepare the draft for submission. Picked a working title Added in journal styles Create participant and trial tables + source code Add syntax highlighting lib Got all exploratory …">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="https://moorepants.info.github.io/">
+        <img class="img-fluid rounded" src=https://objects-us-east-1.dream.io/moorepants/headshot.jpg alt="moorepants">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="https://moorepants.info.github.io/">moorepants</a></h1>
+      <p class="text-muted">a websitee</p>
+      <ul class="list-inline">
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/about.html">About</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/portfolio.html">Portfolio</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/interests.html">Interests</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/research.html">Research</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/teaching.html">Teaching</a></li>
+          <li class="list-inline-item"><a href="/blog/">Blog</a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  Notebook Entry
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2014-12-09T09:49:08-08:00">
+          <i class="fa fa-clock-o"></i>
+          Tue 09 December 2014
+        </li>
+        <li class="list-inline-item">
+          <i class="fa fa-folder-open-o"></i>
+          <a href="https://moorepants.info.github.io/category/notebook.html">notebook</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fa fa-user-o"></i>
+              <a href="https://moorepants.info.github.io/author/jason-k-moore.html">Jason K. Moore</a>          </li>
+          <li class="list-inline-item">
+            <i class="fa fa-files-o"></i>
+              <a href="https://moorepants.info.github.io/tag/notebook.html">#notebook</a>,               <a href="https://moorepants.info.github.io/tag/aio.html">#aio</a>          </li>
+      </ul>
+    </header>
+
+
+    <div class="content">
+      <p>AIO for December 9, 2014</p>
+<div class="section" id="last-week-s-accomplishments">
+<h2>Last week's accomplishments</h2>
+<p>Perturbed Data Paper</p>
+<ul class="simple">
+<li>[18 hr, Closer to done 14 hr] Finish all remaining issues and prepare the
+draft for submission.<ul>
+<li>Picked a working title</li>
+<li>Added in journal styles</li>
+<li>Create participant and trial tables + source code</li>
+<li>Add syntax highlighting lib</li>
+<li>Got all exploratory code working with GATK 0.1.2</li>
+<li>Found to bugs in GATK and made releases 0.1.1 and 0.1.2</li>
+</ul>
+</li>
+</ul>
+<p>Inverted Pendulum Paper</p>
+<ul class="simple">
+<li>[6 hr, Done 6.5 hr] Try out scaling methods and see if convergence improves.<ul>
+<li>I ended up scaling the parameters to be closer to 0.5 and the optimizer now
+converges nicely, in only ~13 iterations even for long measurement times.</li>
+</ul>
+</li>
+</ul>
+<p>Non-objectives</p>
+<ul class="simple">
+<li>[4.3 hr] Worked with Sabrina on the NAO and came to the conclusion that the
+methods needed to disable the collision protection were no longer available
+in the new version 2 of the API.</li>
+<li>[0.5 hr] Searched for more reviewers for the Yeadon paper.</li>
+</ul>
+</div>
+<div class="section" id="last-week-s-issues">
+<h2>Last week's issues</h2>
+<p>I spent a ton of time applying for a job, cover letter, resume updates, website
+updates, and five interviews. I took Friday off to deal with that.</p>
+<p>Yeadon Paper</p>
+<ul class="simple">
+<li>Can't find reviewers for the Yeadon paper, see
+<a class="reference external" href="https://github.com/chrisdembia/python-yeadon-paper/issues/23">https://github.com/chrisdembia/python-yeadon-paper/issues/23</a>. F1000Research
+requests that you provide names for potential reviewers and we've been
+through close to 20 with only 1 person agreeing to do the review.</li>
+</ul>
+<p>Gait Control Identification</p>
+<ul class="simple">
+<li>[5 hr] Do some thinking and reasoning about the potential discontinuities in
+the scheduled gain controller.<ul>
+<li>I didn't spend any time on this.</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="this-week-s-objectives">
+<h2>This week's objectives</h2>
+<p>Other</p>
+<ul class="simple">
+<li>[3 hr] Fill out termination forms and do whatever I need to do to end my
+position.</li>
+<li>[1 hr] Check in with Ton about contract and get that finished up.</li>
+<li>[1 hr] Clear out books in office to pack this weekend.</li>
+<li>[2 hr] Finish bicycle paper review for VSD.</li>
+</ul>
+<p>Perturbed Data Paper</p>
+<ul class="simple">
+<li>[18 hr] Continue knocking off issues and submit for review.</li>
+</ul>
+<p>Inverted Pendulum Paper</p>
+<ul class="simple">
+<li>[5 hr] Write code for the direct identification.</li>
+<li>[5 hr] Write code for the shooting indirect identification.</li>
+</ul>
+<p>Gait Control Identification</p>
+<ul class="simple">
+<li>[5 hr] Do some thinking and reasoning about the potential discontinuities in
+the scheduled gain controller.</li>
+</ul>
+</div>
+
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+      <li class="list-inline-item"><a href="https://moorepants.info.github.io/authors.html">Authors</a></li>
+    <li class="list-inline-item"><a href="https://moorepants.info.github.io/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="https://moorepants.info.github.io/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="https://moorepants.info.github.io/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>
+<div class="row">
+  <div class="col-sm-4 mx-auto text-center text-muted" >
+    <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+      <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+    </a>
+    <br />
+    This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+  </div>
+</div>    </div>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  PST2Gmail | moorepants
+</title>
+  <link rel="canonical" href="https://moorepants.info.github.io/blog/old-emails.html">
+
+
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/pygments/default.min.css">
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="https://moorepants.info.github.io/feeds/all.atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="Categories Atom Feed"
+        href="https://moorepants.info.github.io/feeds/{slug}.atom.xml">  
+  <meta name="description" content="I must have started my emailing career sometime in high school. I remember having the address jive@gamewood.net from our local internet provider around Danville, VA. I must have erased all of that email during one of the many Windows 95 reformats I did to clean out all the …">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="https://moorepants.info.github.io/">
+        <img class="img-fluid rounded" src=https://objects-us-east-1.dream.io/moorepants/headshot.jpg alt="moorepants">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="https://moorepants.info.github.io/">moorepants</a></h1>
+      <p class="text-muted">a websitee</p>
+      <ul class="list-inline">
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/about.html">About</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/portfolio.html">Portfolio</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/interests.html">Interests</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/research.html">Research</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/teaching.html">Teaching</a></li>
+          <li class="list-inline-item"><a href="/blog/">Blog</a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  PST2Gmail
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2013-01-15T15:39:00-08:00">
+          <i class="fa fa-clock-o"></i>
+          Tue 15 January 2013
+        </li>
+        <li class="list-inline-item">
+          <i class="fa fa-folder-open-o"></i>
+          <a href="https://moorepants.info.github.io/category/misc.html">misc</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fa fa-user-o"></i>
+              <a href="https://moorepants.info.github.io/author/jason-k-moore.html">Jason K. Moore</a>          </li>
+          <li class="list-inline-item">
+            <i class="fa fa-files-o"></i>
+              <a href="https://moorepants.info.github.io/tag/email.html">#email</a>,               <a href="https://moorepants.info.github.io/tag/outlook.html">#Outlook</a>,               <a href="https://moorepants.info.github.io/tag/gmail.html">#Gmail</a>,               <a href="https://moorepants.info.github.io/tag/pst.html">#pst</a>          </li>
+      </ul>
+    </header>
+
+
+    <div class="content">
+      <p>I must have started my emailing career sometime in high school. I remember
+having the address <a class="reference external" href="mailto:jive&#64;gamewood.net">jive&#64;gamewood.net</a> from our local internet provider around
+Danville, VA. I must have erased all of that email during one of the many
+Windows 95 reformats I did to clean out all the computer crustiness. But once I
+got to college in the Fall of 2000, I started curating all of my email from my
+university address <a class="reference external" href="mailto:jmoor024&#64;odu.edu">jmoor024&#64;odu.edu</a> with Microsoft Outlook. I switched to Gmail
+in May of 2005 and backed up all of my previous email in Outlook to a .pst file
+on July 16, 2005. This file has been sitting on a backup CD since that day.
+I've occasionally wished I could search for emails from those years to dig up
+old contacts and such, but never did anything about it.</p>
+<p>I got inspired this morning and dug up the CD with the .pst file and found this
+nice <a class="reference external" href="http://superuser.com/questions/227488/how-can-i-import-a-pst-file-to-gmail">post</a>
+on superuser.com<a class="footnote-reference" href="#id2" id="id1">[1]</a> with a good solution to getting old Outlook email onto
+the Gmail server.</p>
+<p>First you need <a class="reference external" href="http://www.five-ten-sg.com/libpst/">libpst</a> and some
+associated tools. On Ubuntu you can get them with:</p>
+<pre class="literal-block">
+$ aptitude install pst-utils
+</pre>
+<p>This gives your readpst which can convert your .pst file to other formats.</p>
+<pre class="literal-block">
+$ mkdir old-emails
+$ readpst -o old-emails/ backup.pst
+</pre>
+<p>This creates an mbox plain text file type for each of folders in your .pst
+file.</p>
+<pre class="literal-block">
+$ cd old-emails/
+$ ls -l
+total 100316
+-rw-rw-r-- 1 moorepants moorepants   268588 Jan 15 15:09 Bills
+-rw-rw-r-- 1 moorepants moorepants    37924 Jan 15 15:09 Calendar
+-rw-rw-r-- 1 moorepants moorepants  4487790 Jan 15 15:09 Caterpillar
+-rw-rw-r-- 1 moorepants moorepants   271587 Jan 15 15:09 College
+-rw-rw-r-- 1 moorepants moorepants     2108 Jan 15 15:09 Contacts
+-rw-rw-r-- 1 moorepants moorepants  4526958 Jan 15 15:09 Graduate School
+-rw-rw-r-- 1 moorepants moorepants   184027 Jan 15 15:09 Inbox
+-rw-rw-r-- 1 moorepants moorepants  8454804 Jan 15 15:09 India
+-rw-rw-r-- 1 moorepants moorepants   151095 Jan 15 15:09 Jobs
+-rw-rw-r-- 1 moorepants moorepants  2851498 Jan 15 15:09 Junk E-mail
+-rw-rw-r-- 1 moorepants moorepants  2871435 Jan 15 15:09 LFST
+-rw-rw-r-- 1 moorepants moorepants 11234855 Jan 15 15:09 MAGLEV
+-rw-rw-r-- 1 moorepants moorepants 19754204 Jan 15 15:09 ODU HPLV
+-rw-rw-r-- 1 moorepants moorepants    82927 Jan 15 15:09 Purchases
+-rw-rw-r-- 1 moorepants moorepants   215616 Jan 15 15:09 red Love
+-rw-rw-r-- 1 moorepants moorepants 47280735 Jan 15 15:09 Sent Items
+</pre>
+<p>Then I made use of this <a class="reference external" href="http://imap-upload.sourceforge.net/">IMAP script</a>
+that was written specifically with Gmail in mind.</p>
+<pre class="literal-block">
+$ wget http://superb-dca2.dl.sourceforge.net/project/imap-upload/imap-upload/1.2/imap-upload-1.2.zip
+$ unzip imap-upload-1.2.zip
+</pre>
+<p>Now use the script and its gmail flag to send an mbox file to a label in
+Gmail.</p>
+<pre class="literal-block">
+$ python imap-upload-1.2/imap_upload.py --gmail --user=moorepants --box=Caterpillar Caterpillar
+</pre>
+<p>I had to create new labels manually in Gmail before running the previous
+command for it to work correctly.</p>
+<table class="docutils footnote" frame="void" id="id2" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>Side note: why do I have to log in separately to all of Stack
+Exchange's websites, what I a pain. And why the hell do you need 15
+reputation points to vote up an answer? Why not let anonymous accounts
+do this? Stack Exhange would get much more participation if they didn't
+have so many hurdles to participate.</td></tr>
+</tbody>
+</table>
+
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+      <li class="list-inline-item"><a href="https://moorepants.info.github.io/authors.html">Authors</a></li>
+    <li class="list-inline-item"><a href="https://moorepants.info.github.io/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="https://moorepants.info.github.io/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="https://moorepants.info.github.io/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>
+<div class="row">
+  <div class="col-sm-4 mx-auto text-center text-muted" >
+    <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+      <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+    </a>
+    <br />
+    This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+  </div>
+</div>    </div>
+  </footer>
+</body>
+
+</html>

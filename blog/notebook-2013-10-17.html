@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  Notebook Entry | moorepants
+</title>
+  <link rel="canonical" href="https://moorepants.info.github.io/blog/notebook-2013-10-17.html">
+
+
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/pygments/default.min.css">
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="https://moorepants.info.github.io/feeds/all.atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="Categories Atom Feed"
+        href="https://moorepants.info.github.io/feeds/{slug}.atom.xml">  
+  <meta name="description" content="[x] Wrote script to automate my personal machine installation [x] Prepare the gyro bike non-linear and linear models for the senior design group. [x] Send the main bicycle papers to senior design group. [x] Make an information web page for the senior design group. [x] Build simbody and opensim Gyrobike …">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="https://moorepants.info.github.io/">
+        <img class="img-fluid rounded" src=https://objects-us-east-1.dream.io/moorepants/headshot.jpg alt="moorepants">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="https://moorepants.info.github.io/">moorepants</a></h1>
+      <p class="text-muted">a websitee</p>
+      <ul class="list-inline">
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/about.html">About</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/portfolio.html">Portfolio</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/interests.html">Interests</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/research.html">Research</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/teaching.html">Teaching</a></li>
+          <li class="list-inline-item"><a href="/blog/">Blog</a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  Notebook Entry
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2013-10-17T10:07:17-07:00">
+          <i class="fa fa-clock-o"></i>
+          Thu 17 October 2013
+        </li>
+        <li class="list-inline-item">
+          <i class="fa fa-folder-open-o"></i>
+          <a href="https://moorepants.info.github.io/category/notebook.html">notebook</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fa fa-user-o"></i>
+              <a href="https://moorepants.info.github.io/author/jason-k-moore.html">Jason K. Moore</a>          </li>
+          <li class="list-inline-item">
+            <i class="fa fa-files-o"></i>
+              <a href="https://moorepants.info.github.io/tag/notebook.html">#notebook</a>,               <a href="https://moorepants.info.github.io/tag/gyrobike.html">#gyrobike</a>,               <a href="https://moorepants.info.github.io/tag/opensim.html">#opensim</a>,               <a href="https://moorepants.info.github.io/tag/simbody.html">#simbody</a>,               <a href="https://moorepants.info.github.io/tag/python.html">#python</a>          </li>
+      </ul>
+    </header>
+
+
+    <div class="content">
+      <ul class="simple">
+<li>[x] Wrote script to automate my personal machine installation</li>
+<li>[x] Prepare the gyro bike non-linear and linear models for the senior design
+group.</li>
+<li>[x] Send the main bicycle papers to senior design group.</li>
+<li>[x] Make an information web page for the senior design group.</li>
+<li>[x] Build simbody and opensim</li>
+</ul>
+<div class="section" id="gyrobike-model">
+<h2>Gyrobike model</h2>
+<p>I built linear and non-linear models of an extended Whipple model which
+includes an additional flywheel mounted concentricly with the front wheel. This
+was already done in my dissertation, but I converted the models to Matlab for
+the senior design group to remove the requirement to learn a new language and
+match up with what they are learning in their controls course. The models are
+available here:</p>
+<p><a class="reference external" href="https://github.com/moorepants/gyrobike">https://github.com/moorepants/gyrobike</a></p>
+</div>
+<div class="section" id="opensim-simbody">
+<h2>Opensim/Simbody</h2>
+<p>Some notes to install on Ubuntu 13.04 from
+7e06039b0aa4188d2ae63dd5ba36304cb6af467e.</p>
+<p>Simbody</p>
+<p>Here is some step by step instructions for installing on Ubuntu 12.04. I'm not
+sure which version of the software is was:</p>
+<p><a class="reference external" href="http://simtk-confluence.stanford.edu:8080/pages/viewpage.action?pageId=5114489">http://simtk-confluence.stanford.edu:8080/pages/viewpage.action?pageId=5114489</a></p>
+<p>These requirements are already installed in the software dev and blas/lapack
+sections:</p>
+<pre class="literal-block">
+$ sudo aptitude install build-essential cmake cmake-curses-gui
+</pre>
+<p>This will get all the headers for the BLAS/LAPACK versions that are available:</p>
+<pre class="literal-block">
+$ sudo aptitude install libblas-dev libatlas-dev libopenblas-dev liblapack-dev
+</pre>
+<p>Visualizer requires:</p>
+<pre class="literal-block">
+$ sudo aptitude install freeglut3-dev libxmu-dev libxi-dev
+</pre>
+<dl class="docutils">
+<dt>::</dt>
+<dd>$ mkdir ~/src/simbody
+$ cd ~/src/simbody
+$ git clone <a class="reference external" href="mailto:git&#64;github.com">git&#64;github.com</a>:simbody/simbody.git
+$ mkdir build
+$ mkdir build_d
+$ cd build
+$ ccmake ../simbody</dd>
+</dl>
+<p>In ccmake type 'c' for configure, 't' to toggle to advanced mode, edit any
+values, 'c' again for configure, and 'g' for generate.</p>
+<pre class="literal-block">
+$ cd ../build_d
+$ ccmake ../simbody
+</pre>
+<p>In ccmake change <cite>CMAKE_BUILD_TYPE</cite> to <cite>Debug</cite>.</p>
+<dl class="docutils">
+<dt>::</dt>
+<dd>$ make -j2 # -j2 specifies the number of cores you have
+$ make test
+$ ./ExamplePendulum # should show visualization
+$ make doxygen</dd>
+</dl>
+<p>The following puts everything in /usr/local, but it should have went into
+/usr/local/SimTK. See <a class="reference external" href="https://github.com/simbody/simbody/issues/47">https://github.com/simbody/simbody/issues/47</a> for more
+info.</p>
+<pre class="literal-block">
+$ sudo make install
+$ cd ../build
+$ make -j2
+$ make test
+$ sudo make install
+</pre>
+<p>Now try out using the libraries from an arbitrary directory. First, copy the
+raw C++ files for the examples to a new directory to play with:</p>
+<pre class="literal-block">
+$ cp -r ~/src/simbody/simbody/Simbody/examples ~/src/simbody-examples
+$ cd ~/src/simbody-examples
+$ export LD_LIBRARY_PATH=/usr/local/lib/
+$ export SIMBODY_HOME=/usr/local
+</pre>
+<p>Comment out this line in the Makefile because I'm on a 64 bit system:</p>
+<pre class="literal-block">
+M32FLAG = -m32
+</pre>
+<p>I also changed this line to:</p>
+<pre class="literal-block">
+SimTK_HOME=/usr/local
+</pre>
+<p>to reflect where my libs were actually installed. Now try running the example:</p>
+<pre class="literal-block">
+$ make ExamplePendulum
+$ ./ExamplePendulum
+</pre>
+<p>The gui should pop up. You can build all examples with:</p>
+<pre class="literal-block">
+$ make all
+</pre>
+<p>I've read that having to set the LD_LIBRARY_PATH should only be used for
+testing. You shouldn't have to do this for standard installs. So I think the
+Simbody devs should fix this. Also the compiled examples can't find the
+/usr/local/bin directory unless I set SIMBODY_HOME. Otherwise it looks in
+/usr/local/SimTK/bin which doesn't exist. When I originally ran ccmake it
+didn't give me an option to set the installation directory and the default
+seems to have been /usr/local instead of /usr/local/SimTK.</p>
+<p>I need to uninstall and go into the advanced toggle in ccmake and set
+<cite>CMAKE_INSTALL_PREFIX</cite> to <cite>/usr/local/SimTK</cite> and then reinstall.</p>
+<p>I filed these issues:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://github.com/simbody/simbody/issues/48">https://github.com/simbody/simbody/issues/48</a></li>
+<li><a class="reference external" href="https://github.com/simbody/simbody/issues/47">https://github.com/simbody/simbody/issues/47</a></li>
+<li><a class="reference external" href="https://github.com/simbody/simbody/issues/46">https://github.com/simbody/simbody/issues/46</a></li>
+</ul>
+<p>OpenSim</p>
+<pre class="literal-block">
+mkdir ~/src/opensim
+cd ~/src/opensim
+$ svn checkout https://simtk.org/svn/opensim/Trunk
+$ mkdir build
+$ cd build
+$ ccmake ../Trunk
+</pre>
+<p>Type 'c' and add:</p>
+<pre class="literal-block">
+SimTK_INSTALL_DIR=/usr/local
+</pre>
+<p>Type 'c' and then 'g'.</p>
+<pre class="literal-block">
+$ make test
+</pre>
+<p>These tests failed on the trunk:</p>
+<pre class="literal-block">
+32/51 Test #32: testOptimizationExampleRuns ..................***Timeout 1500.03 sec
+      Start 33: testOptimizationExample
+33/51 Test #33: testOptimizationExample ......................***Failed    0.28 sec
+</pre>
+<p>These instructions are here:</p>
+<p><a class="reference external" href="https://github.com/moorepants/bin/blob/master/ubuntu_setup.rst">https://github.com/moorepants/bin/blob/master/ubuntu_setup.rst</a></p>
+<p>and will be updated as I work out the kinks.</p>
+</div>
+
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+      <li class="list-inline-item"><a href="https://moorepants.info.github.io/authors.html">Authors</a></li>
+    <li class="list-inline-item"><a href="https://moorepants.info.github.io/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="https://moorepants.info.github.io/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="https://moorepants.info.github.io/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>
+<div class="row">
+  <div class="col-sm-4 mx-auto text-center text-muted" >
+    <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+      <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+    </a>
+    <br />
+    This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+  </div>
+</div>    </div>
+  </footer>
+</body>
+
+</html>

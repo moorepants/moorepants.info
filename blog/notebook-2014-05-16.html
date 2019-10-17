@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  Notebook Entry | moorepants
+</title>
+  <link rel="canonical" href="https://moorepants.info.github.io/blog/notebook-2014-05-16.html">
+
+
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/pygments/default.min.css">
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="https://moorepants.info.github.io/feeds/all.atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="Categories Atom Feed"
+        href="https://moorepants.info.github.io/feeds/{slug}.atom.xml">  
+  <meta name="description" content="Some thoughts on system identification of planar walking control with direct collocation. The system's equations: \begin{equation*} -gm_t - m_t\dot{v}_t - F_c + F_p = 0 \end{equation*} \begin{equation*} -c\Delta y - gm_f - k\Delta y - m_f\dot{v}_f - F_a - F_o + F_c = 0 \end{equation*} \begin{equation*} c\Delta …">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="https://moorepants.info.github.io/">
+        <img class="img-fluid rounded" src=https://objects-us-east-1.dream.io/moorepants/headshot.jpg alt="moorepants">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="https://moorepants.info.github.io/">moorepants</a></h1>
+      <p class="text-muted">a websitee</p>
+      <ul class="list-inline">
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/about.html">About</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/portfolio.html">Portfolio</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/interests.html">Interests</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/research.html">Research</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/teaching.html">Teaching</a></li>
+          <li class="list-inline-item"><a href="/blog/">Blog</a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  Notebook Entry
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2014-05-16T13:32:53-07:00">
+          <i class="fa fa-clock-o"></i>
+          Fri 16 May 2014
+        </li>
+        <li class="list-inline-item">
+          <i class="fa fa-folder-open-o"></i>
+          <a href="https://moorepants.info.github.io/category/notebook.html">notebook</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fa fa-user-o"></i>
+              <a href="https://moorepants.info.github.io/author/jason-k-moore.html">Jason K. Moore</a>          </li>
+          <li class="list-inline-item">
+            <i class="fa fa-files-o"></i>
+              <a href="https://moorepants.info.github.io/tag/notebook.html">#notebook</a>,               <a href="https://moorepants.info.github.io/tag/direct-collocation.html">#direct collocation</a>,               <a href="https://moorepants.info.github.io/tag/system-identification.html">#system identification</a>,               <a href="https://moorepants.info.github.io/tag/walking.html">#walking</a>          </li>
+      </ul>
+    </header>
+
+
+    <div class="content">
+      <p>Some thoughts on system identification of planar walking control with direct
+collocation.</p>
+<p>The system's equations:</p>
+<div class="math">
+\begin{equation*}
+-gm_t - m_t\dot{v}_t - F_c + F_p = 0
+\end{equation*}
+</div>
+<div class="math">
+\begin{equation*}
+-c\Delta y - gm_f - k\Delta y - m_f\dot{v}_f - F_a - F_o + F_c = 0
+\end{equation*}
+</div>
+<div class="math">
+\begin{equation*}
+c\Delta y - gm_s + k\Delta y - m_s\dot{v}_s + F_a + F_o = 0
+\end{equation*}
+</div>
+<p>Now thinking about the second equation we can measure, or estimate reasonably
+well, these quantities: <span class="math">\(\Delta y, g, m_f, \dot{v}_f, F_c\)</span>. So inverse
+dynamics says we can solve for <span class="math">\(F\)</span> given our measurements:</p>
+<p>Second order Equations of motion for open loop planar walker:</p>
+<div class="math">
+\begin{equation*}
+0 = F_r + F_r^*
+\end{equation*}
+</div>
+<div class="math">
+\begin{equation*}
+0 = f(x(t)) + u(t) + w(t)
+\end{equation*}
+</div>
+<p><span class="math">\(u(t)\)</span> are the joint torques
+<span class="math">\(x(t)\)</span> are the states: joint angles and rates (9 joint DoFs + 3 DoFs for
+global location and orientation)</p>
+<p><span class="math">\(w(t)\)</span> is the external input which should be a force that corresponds to
+the random longitudinal change in belt velocity. This will need to be modeled
+as a specified speed input so the measured belt speed velocity can be used
+directly.</p>
+<p>We also can have some output equations that spit out marker location and ground
+reaction forces (these are the things we actually measure).</p>
+<div class="math">
+\begin{equation*}
+y = g(x(t))
+\end{equation*}
+</div>
+<p>We then assume a controller of the form:</p>
+<div class="math">
+\begin{equation*}
+u(t) = m^*(\varphi) - K(\varphi) x(t)
+\end{equation*}
+</div>
+<p><span class="math">\(\varphi\)</span> is the proportion of the gait cycle time (percent heel strike
+to heel strike)</p>
+<p>This then creates our closed loop system:</p>
+<div class="math">
+\begin{equation*}
+0 = f(x(t)) + m^*(\varphi) - K(\varphi) x(t) + w(t)
+\end{equation*}
+</div>
+<p>Then we discretize <span class="math">\(x(t)\)</span>, <span class="math">\(u(t)\)</span>, and <span class="math">\(w(t)\)</span>. At any instant
+in time the equations of motion must be true.</p>
+<p>Question, how will <span class="math">\(\varphi\)</span> be known during any given interation of the
+solver. Will heel strikes have to be determined for each interation? Or is that
+something that comes from the data, i.e. <span class="math">\(\varphi\)</span> is fixed (i.e. for a
+given time <span class="math">\(t\)</span> in the data recording, <span class="math">\(\varphi\)</span> can be computed).</p>
+<p>The cost function will be designed to minimize energy (sum of square of joint
+torques) and to minimize the difference in measured ground reaction forces and
+the marker positions.</p>
+<p>The free parameters (unknowns) in the optimization problem will be the
+discretized states, the discretized <span class="math">\(w(t)\)</span> input, and the controller
+parameters.</p>
+<p>There are 12 markers with two coordinates each, 4 ground reaction forces, 2
+ground reaction moments, and one measured belt speed. We measure each of these
+at 100 hz over 8 minutes for each trial. So 48000 samples.</p>
+<p>The closed loop model has 9 DoF, 18 states, and 1 input.</p>
+<script type='text/javascript'>if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+      <li class="list-inline-item"><a href="https://moorepants.info.github.io/authors.html">Authors</a></li>
+    <li class="list-inline-item"><a href="https://moorepants.info.github.io/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="https://moorepants.info.github.io/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="https://moorepants.info.github.io/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>
+<div class="row">
+  <div class="col-sm-4 mx-auto text-center text-muted" >
+    <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+      <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+    </a>
+    <br />
+    This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+  </div>
+</div>    </div>
+  </footer>
+</body>
+
+</html>

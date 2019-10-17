@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  Notebook Entry | moorepants
+</title>
+  <link rel="canonical" href="https://moorepants.info.github.io/blog/notebook-2014-10-07.html">
+
+
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/pygments/default.min.css">
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="https://moorepants.info.github.io/feeds/all.atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="Categories Atom Feed"
+        href="https://moorepants.info.github.io/feeds/{slug}.atom.xml">  
+  <meta name="description" content="AIO for October 7, 2014 Last week's accomplishments Objectives from last week: Inverted Pendulum Parameter Estimation Source [4 hr, Done took 6 hr] Implement general time specific constraints, like x(0) = 0. See this commit: https://github.com/csu-hmc/inverted-pendulum-sys-id/commit/7face7257f025fbc8b9f95c6005ceb9f87b1e048 [1 hr, Done took 2 hr] Add Ton's …">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="https://moorepants.info.github.io/">
+        <img class="img-fluid rounded" src=https://objects-us-east-1.dream.io/moorepants/headshot.jpg alt="moorepants">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="https://moorepants.info.github.io/">moorepants</a></h1>
+      <p class="text-muted">a websitee</p>
+      <ul class="list-inline">
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/about.html">About</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/portfolio.html">Portfolio</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/interests.html">Interests</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/research.html">Research</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/teaching.html">Teaching</a></li>
+          <li class="list-inline-item"><a href="/blog/">Blog</a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  Notebook Entry
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2014-10-07T09:56:15-07:00">
+          <i class="fa fa-clock-o"></i>
+          Tue 07 October 2014
+        </li>
+        <li class="list-inline-item">
+          <i class="fa fa-folder-open-o"></i>
+          <a href="https://moorepants.info.github.io/category/notebook.html">notebook</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fa fa-user-o"></i>
+              <a href="https://moorepants.info.github.io/author/jason-k-moore.html">Jason K. Moore</a>          </li>
+          <li class="list-inline-item">
+            <i class="fa fa-files-o"></i>
+              <a href="https://moorepants.info.github.io/tag/notebook.html">#notebook</a>,               <a href="https://moorepants.info.github.io/tag/aio.html">#aio</a>          </li>
+      </ul>
+    </header>
+
+
+    <div class="content">
+      <p>AIO for October 7, 2014</p>
+<div class="section" id="last-week-s-accomplishments">
+<h2>Last week's accomplishments</h2>
+<p>Objectives from last week:</p>
+<p>Inverted Pendulum Parameter Estimation Source</p>
+<ul class="simple">
+<li>[4 hr, Done took 6 hr] Implement general time specific constraints, like x(0) = 0.<ul>
+<li>See this commit: <a class="reference external" href="https://github.com/csu-hmc/inverted-pendulum-sys-id/commit/7face7257f025fbc8b9f95c6005ceb9f87b1e048">https://github.com/csu-hmc/inverted-pendulum-sys-id/commit/7face7257f025fbc8b9f95c6005ceb9f87b1e048</a></li>
+</ul>
+</li>
+<li>[1 hr, Done took 2 hr] Add Ton's pendulum example to the code.<ul>
+<li>The software can now solve general direct collocation problems with minimal
+problem setup and a nice API. This shows how you'd solve the same Problem
+Ton presented during the HMC seminar but with lots less coding:
+<a class="reference external" href="https://github.com/csu-hmc/inverted-pendulum-sys-id/blob/master/pendulum_swing_up.py">https://github.com/csu-hmc/inverted-pendulum-sys-id/blob/master/pendulum_swing_up.py</a></li>
+</ul>
+</li>
+<li>[1 hr, Done took 3 hr] Add the pendulum parameter id example.<ul>
+<li>This example shows a simple parameter identification. Note that the
+backward Euler integration introduces damping in the solution but get's
+near the parameter result. Once I implement the trapezoidal rule, this will
+converge better. See this file for the implementation:
+<a class="reference external" href="https://github.com/csu-hmc/inverted-pendulum-sys-id/blob/master/vyasarayani2011.py">https://github.com/csu-hmc/inverted-pendulum-sys-id/blob/master/vyasarayani2011.py</a></li>
+</ul>
+</li>
+<li>[5 hr, Done took 0.5 hr] Decide what to do about process and measurement
+noise and implement it.<ul>
+<li>See this discussion: <a class="reference external" href="https://github.com/csu-hmc/inverted-pendulum-sys-id/issues/7">https://github.com/csu-hmc/inverted-pendulum-sys-id/issues/7</a>,
+still up in the air.</li>
+</ul>
+</li>
+</ul>
+<p>Perturbed Walking Data Paper</p>
+<ul class="simple">
+<li>[2 hr, Done took 1 hr] Read the Betts paper more thoroughly.<ul>
+<li>This paper implements the parameter id methods that I have done, except in a
+more robust, efficient (except maybe the numerical differences part), and
+general way. So I don't think what we have is fundamentally new, but it may
+be new for the biomechanics world, especially if I can identify the walking
+control.</li>
+</ul>
+</li>
+<li>[3 hr] Decide on what will actually be the processed data and write script to
+produce it from raw to prepare for a Zenodo upload.<ul>
+<li>I think I'm only going to host the raw data along with the
+GaitAnalysisToolkit which can parse it and not host any processed data. I
+wrote a script to package the raw data for zenodo or figshare:
+<a class="reference external" href="https://github.com/moorepants/walking-sys-id/blob/master/src/prep_data_for_zenodo.py">https://github.com/moorepants/walking-sys-id/blob/master/src/prep_data_for_zenodo.py</a></li>
+</ul>
+</li>
+<li>[6 hr, Done took 0 hr] Add in the belt acceleration compensation to GTK.o<ul>
+<li>This is nixed for now. Ton pointed out that since we've done the
+identification on the unperturbed data and get the same results, then this
+is likely inconsequential.</li>
+</ul>
+</li>
+</ul>
+<p>Bicycle Steer Torque Paper</p>
+<ul class="simple">
+<li>[3 hr, Done took 1 hr] Change R plots to a prettier ggplot2 version.</li>
+</ul>
+<p>Bicycle Data Paper</p>
+<ul class="simple">
+<li>[1 hr, Done took 1 hr] Make a figshare data set for the additional trial csv file.<ul>
+<li><a class="reference external" href="http://dx.doi.org/10.6084/m9.figshare.1187092">http://dx.doi.org/10.6084/m9.figshare.1187092</a></li>
+</ul>
+</li>
+</ul>
+<p>IEEE Open Source Code Night</p>
+<ul class="simple">
+<li>[2 hr, Done took 1.5 hr] Prep materials.</li>
+</ul>
+<p>Other stuff I did:</p>
+<ul class="simple">
+<li>[3.5 hr] Gave the second IEEE Open Source Code night tutorial.</li>
+<li>[7 hr] Working on adding the Ackermann et. al 2010 walking open loop
+identification problem as an example to the direct collocation software.</li>
+<li>[1 hr] Updated DTK to work with a range of dep versions and fixed a bug.</li>
+<li>[1 hr] Updated BicycleParameters to work with latest DTK and pinned versions.</li>
+<li>[1.8 hr] Pushed two PRs to sympy to fix issues associated with differentiating the
+walking model.</li>
+<li>[1 hr] Discuss steer torque paper with Mont.</li>
+</ul>
+</div>
+<div class="section" id="last-week-s-issues">
+<h2>Last week's issues</h2>
+<p>Inverted Pendulum Parameter Estimation Paper</p>
+<p>Didn't get to this besides reading the Bett's paper more thoroughly. It will be
+my main reference, I believe.</p>
+<ul class="simple">
+<li>[3 hr] Fluff up the intro with citations in the outline and rewrite it to
+discuss the issues with shooting and the direct approach.</li>
+</ul>
+<p>Still trying to clarify the goals of the inverted pendulum paper and what to
+actually include.</p>
+<p>Bicycle Steer Torque Paper</p>
+<p>I'm working to update the software packages that are used to create the
+matplotlib plots so that I can run everything as a complete pipeline with the
+latest dependencies. So the matplotlib improvements are holding off till then.</p>
+<ul class="simple">
+<li>[2 hr] Improve the matplotlib plots to make them prettier.</li>
+<li>[1 hr] Figure out the best citation for Kageyama's design.</li>
+</ul>
+<p>Bicycle Data Paper</p>
+<p>Didn't get to this.</p>
+<ul class="simple">
+<li>[1 hr] Make a figshare item for the bicycle parameter raw data.</li>
+</ul>
+</div>
+<div class="section" id="this-week-s-objectives">
+<h2>This week's objectives</h2>
+<p>Walking System ID</p>
+<ul class="simple">
+<li>[1 hr] Read Manoj's recent paper.</li>
+</ul>
+<p>Inverted Pendulum Paper</p>
+<ul class="simple">
+<li>[0.25 hr] Email Samin to inquire about co-authorship.</li>
+<li>[1 hr] Discuss paper direction with Ton.</li>
+<li>[1 hr] Rework the outline to reflect Ton and my discussion.</li>
+<li>[1 hr] Implement the first example in the Betts et.al 2003 paper.</li>
+<li>[2 hr] Implement the Kuo standing model for the paper.</li>
+<li>[0.5 hr] Get the numerical values of the human model to match Kuo.</li>
+<li>[0.5 hr] Obtain examples of process noise levels that will produce nominal
+wiggly human motion.</li>
+<li>[4 hr] Implement process noise, measurement noise (both on states and torques), and
+perturbation accelerations.</li>
+<li>[5 hr] Finish implementing the Ackermann 2010 example.</li>
+<li>[3 hr] Get two relevant sympy prs into sympy.</li>
+</ul>
+<p>Walking Data Paper</p>
+<ul class="simple">
+<li>[0.5 hr] Decide what will and will not be published data.</li>
+<li>[1 hr] Describe the GaitAnalysisToolkit DFlow data and it's output.</li>
+<li>[1 hr] Decide on what plots to show that display the nature of the data and
+add to the outline.</li>
+<li>[1 hr] Write a closing paragraph.</li>
+</ul>
+<p>Bicycle Steer Torque Paper</p>
+<ul class="simple">
+<li>[4 hr] Update BicycleParameters to work with the latest Yeadon and
+uncertainties 1 and 2.</li>
+<li>[2 hr] Use seaborn to improve the matplotlib plots.</li>
+<li>[2 hr] Go through Mont's review, fix minor stuff, and prioritize larger
+changes.</li>
+</ul>
+<p>Bicycle Data Paper</p>
+<ul class="simple">
+<li>[3 hr] Update BicycleDataProcessor to work with latest DTK,
+BicycleParameters, and PyTables.</li>
+<li>[0.5 hr] Create a raw data H5 file for upload to Zenodo.</li>
+<li>[1 hr] Create a raw and processed data H5 file (no filtering) for upload to
+Zenodo.</li>
+</ul>
+<p>Other</p>
+<ul class="simple">
+<li>[2 hr] Send ENG 4 teaching materials to Yuri.</li>
+</ul>
+</div>
+
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+      <li class="list-inline-item"><a href="https://moorepants.info.github.io/authors.html">Authors</a></li>
+    <li class="list-inline-item"><a href="https://moorepants.info.github.io/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="https://moorepants.info.github.io/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="https://moorepants.info.github.io/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>
+<div class="row">
+  <div class="col-sm-4 mx-auto text-center text-muted" >
+    <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+      <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+    </a>
+    <br />
+    This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+  </div>
+</div>    </div>
+  </footer>
+</body>
+
+</html>

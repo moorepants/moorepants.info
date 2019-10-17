@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  Notebook Entry | moorepants
+</title>
+  <link rel="canonical" href="https://moorepants.info.github.io/blog/notebook-2014-04-23.html">
+
+
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/pygments/default.min.css">
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="https://moorepants.info.github.io/feeds/all.atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="Categories Atom Feed"
+        href="https://moorepants.info.github.io/feeds/{slug}.atom.xml">  
+  <meta name="description" content="This is potentially a very simple way to think about what we measure and estimate from force plate and motion capture data during gait and how it connects to the active forces we generate from our muscles for control. To avoid non-linearities and keep things simple here is a three …">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="https://moorepants.info.github.io/">
+        <img class="img-fluid rounded" src=https://objects-us-east-1.dream.io/moorepants/headshot.jpg alt="moorepants">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="https://moorepants.info.github.io/">moorepants</a></h1>
+      <p class="text-muted">a websitee</p>
+      <ul class="list-inline">
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/about.html">About</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/portfolio.html">Portfolio</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/interests.html">Interests</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/research.html">Research</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/teaching.html">Teaching</a></li>
+          <li class="list-inline-item"><a href="/blog/">Blog</a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  Notebook Entry
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2014-04-23T17:59:43-07:00">
+          <i class="fa fa-clock-o"></i>
+          Wed 23 April 2014
+        </li>
+        <li class="list-inline-item">
+          <i class="fa fa-folder-open-o"></i>
+          <a href="https://moorepants.info.github.io/category/notebook.html">notebook</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fa fa-user-o"></i>
+              <a href="https://moorepants.info.github.io/author/jason-k-moore.html">Jason K. Moore</a>          </li>
+          <li class="list-inline-item">
+            <i class="fa fa-files-o"></i>
+              <a href="https://moorepants.info.github.io/tag/notebook.html">#notebook</a>,               <a href="https://moorepants.info.github.io/tag/gait.html">#gait</a>,               <a href="https://moorepants.info.github.io/tag/system-identification.html">#system identification</a>,               <a href="https://moorepants.info.github.io/tag/control.html">#control</a>          </li>
+      </ul>
+    </header>
+
+
+    <div class="content">
+      <p>This is potentially a very simple way to think about what we measure and
+estimate from force plate and motion capture data during gait and how it
+connects to the active forces we generate from our muscles for control. To
+avoid non-linearities and keep things simple here is a three particle model:</p>
+<img alt="" src="https://objects-us-east-1.dream.io/moorepants/simplified-gait-model.png" />
+<ul class="simple">
+<li><span class="math">\(m_t\)</span>: the treadmill mass</li>
+<li><span class="math">\(m_f\)</span>: the foot mass</li>
+<li><span class="math">\(m_s\)</span>: the shank mass</li>
+<li><span class="math">\(F_p\)</span>: the force applied to perturb the displacement of the treadmill,
+and thus the whole system</li>
+<li><span class="math">\(F_c\)</span>: the contact force between the foot at the treadmill. There are
+models that can represent contact, but for now I'll just assume that it is
+some kind of force producer. <a class="footnote-reference" href="#id4" id="id1">[1]</a></li>
+<li><span class="math">\(F_0\)</span>, <span class="math">\(F_a\)</span>: Both of these are active forces applied between the
+foot and the shank. This is synonymous to the forces generated by actively
+controlling the muscles that connect the two bodies and can be generalized to
+joint torques for a typical walking model. The reason for having two will be
+explained below.</li>
+<li><span class="math">\(k\)</span>, <span class="math">\(c\)</span>: Coefficients for simple linear stiffness and damping
+force generators that represent the passive portions force generators between
+the foot and the shank.</li>
+<li><span class="math">\(y_t,y_f,y_s\)</span>: The distances of each mass above the ground.</li>
+<li><span class="math">\(\Delta y\)</span>: The distance between the foot and shank, synonymous with a
+joint angle.</li>
+</ul>
+<p>The equations of motion of this system look like this:</p>
+<div class="math">
+\begin{equation*}
+-gm_t - m_t\dot{v}_t - F_c + F_p = 0
+\end{equation*}
+</div>
+<div class="math">
+\begin{equation*}
+-c\Delta y - gm_f - k\Delta y - m_f\dot{v}_f - F_a - F_0 + F_c = 0
+\end{equation*}
+</div>
+<div class="math">
+\begin{equation*}
+c\Delta y - gm_s + k\Delta y - m_s\dot{v}_s + F_a + F_0 = 0
+\end{equation*}
+</div>
+<p>Since I define <span class="math">\(F_c\)</span> as a generic force, the top equation is not coupled
+to the bottom two. Now thinking about the second equation, I can measure, or
+estimate reasonably well, these quantities: <span class="math">\(\Delta y, g, m_f, \dot{v}_f,
+F_c\)</span>. So inverse dynamics says we can solve for <span class="math">\(F\)</span> given our
+measurements:</p>
+<div class="math">
+\begin{equation*}
+F = F_c - m_f(g + \dot{v}_f)
+\end{equation*}
+</div>
+<p><span class="math">\(F\)</span> is synonymous with the joint torques that we estimate from inverse
+dynamics in a typical gait analysis. But <span class="math">\(F\)</span> is also the sum of both the
+passive and active forces in the joint.</p>
+<div class="math">
+\begin{equation*}
+F = c\Delta v + k\Delta y + F_a + F_0
+\end{equation*}
+</div>
+<p>So if we can estimate <span class="math">\(F\)</span> with inverse dynamics then all I need are
+reasonable estimates of the passive portion of the joint forces, i.e.
+<span class="math">\(c\)</span> and <span class="math">\(k\)</span> in this case to compute the active forces.</p>
+<p>Now if there is a real system that can be reasonably modeled by the above I
+could excite it, cause some motion, take the measurements, and compute an
+estimate of the total force acting between the foot and shank, i.e. <span class="math">\(F\)</span>.</p>
+<p>At this point I can define what the active forces, <span class="math">\(F_a,F_0\)</span> are. Gait
+is periodic, so if <span class="math">\(F_p=0\)</span>, :math`F_a=0`, and <span class="math">\(F_0=sin(t)\)</span> are used
+to excite the real system, there will be some steady state periodic motion of
+the system. We call the steady state of <span class="math">\(\Delta y\)</span> and <span class="math">\(\Delta v\)</span>
+<span class="math">\(y_0\)</span> and <span class="math">\(v_0\)</span>, respectively. These two are synonymous with the
+&quot;open loop&quot; joint angles and rates that can drive a gait model for walking.
+This steady state can be thought of as the desired system state, i.e. the state
+trajectories we want to track while the system is being perturbed.</p>
+<p>So now if I perturb this oscillating real system with <span class="math">\(F_p\neq0\)</span>, white
+noise for example, then then <span class="math">\(\Delta y\)</span> and <span class="math">\(\Delta v\)</span> will no
+longer equal <span class="math">\(y_0\)</span> and <span class="math">\(v_0\)</span>. We can then think of <span class="math">\(F_a\)</span> as a
+force that applies some feedback to drive <span class="math">\(\Delta y,\Delta v\)</span> to
+<span class="math">\(y_0,v_0\)</span>. This can be written as so:</p>
+<div class="math">
+\begin{equation*}
+F_a = c_a[v_0 - \Delta v] + k_a[y_0 - \Delta y]
+\end{equation*}
+</div>
+<p>The equation for the joint forces then become:</p>
+<div class="math">
+\begin{equation*}
+F = c\Delta v + k\Delta y + c_a[v_0 - \Delta v] + k_a[y_0 - \Delta y] + F_0
+\end{equation*}
+</div>
+<div class="math">
+\begin{equation*}
+F = [c - c_a]\Delta v + [k - k_a]\Delta y + c_a v_0 + k_a y_0 + F_0
+\end{equation*}
+</div>
+<p>I can measure or estimate only <span class="math">\(F\)</span>, <span class="math">\(\Delta v\)</span>, and <span class="math">\(\Delta
+y\)</span>. The ideal goal is to figure out what <span class="math">\(c_a\)</span> and <span class="math">\(k_a\)</span> are, i.e.
+the active gains in the controller. If <span class="math">\(F_0\)</span> and <span class="math">\(v_0\)</span> are periodic
+and I have enough measurements in time, i.e. from multiple periods, then I
+can get estimates of <span class="math">\(c_t=c-c_a\)</span> and <span class="math">\(k_t=k-k_a\)</span>. These are the
+combined passive and active stiffness and damping coefficients. This
+formulation will also allow the estimation of this periodic term:</p>
+<div class="math">
+\begin{equation*}
+F^* = c_a v_0 + k_a y_0 + F_0
+\end{equation*}
+</div>
+<p>This shows that the best I can do is to estimate &quot;gains&quot; which are combinations
+of the stiffness and damping from passive and active forces.</p>
+<p>But if I collect data when <span class="math">\(F_p=0\)</span> we can possibly get estimates of
+<span class="math">\(v_0\)</span> and <span class="math">\(y_0\)</span> which could allow me to estimate both the active
+and passive gains, independently.</p>
+<p>Other researchers in biomechanics talk about &quot;impedance&quot; and &quot;joint impedance&quot;.
+For example in <a class="citation-reference" href="#rouse2012" id="id2">[Rouse2012]</a> defines impedance in the ankle joint as:</p>
+<div class="math">
+\begin{equation*}
+T_i = I_i \ddot{\theta} + c_i \dot{\theta} + k_i \theta
+\end{equation*}
+</div>
+<p><span class="math">\(T_i\)</span> is the &quot;joint torque&quot; but he doesn't use standard inverse dynamics,
+he neglects the foot mass, so his joint torque estimate is basically the
+measured ground reaction moment. It follows this form:</p>
+<div class="math">
+\begin{equation*}
+T = T_c = I \ddot{\theta} + c \dot{\theta} + k \theta + gm_fl\theta + T_a + T_0
+\end{equation*}
+</div>
+<p>Now if <span class="math">\(T_a\)</span> is a PD controller, as described above, you get:</p>
+<div class="math">
+\begin{equation*}
+T_a = c_a [\dot{\theta}_0 - \dot{\theta}] + k_a [\theta_0 - \theta]
+\end{equation*}
+</div>
+<p>and then:</p>
+<div class="math">
+\begin{equation*}
+T_i = I \ddot{\theta} + c \dot{\theta} + k \theta + gm_fl\theta +
+c_a [\dot{\theta}_0 - \dot{\theta}] + k_a [\theta_0 - \theta] + T_0
+\end{equation*}
+</div>
+<div class="math">
+\begin{equation*}
+T_i = I \ddot{\theta} + (c - c_a) \dot{\theta} + (k - k_a + gm_fl) \theta
+c_a \dot{\theta}_0 + k_a \theta_0 + T_0
+\end{equation*}
+</div>
+<p>In his experiments, he collects data during the stance phase for one foot over
+and over again (something like 400 steps per subject) with one of four
+perturbations applied during each step. He measures or estimates the &quot;joint
+torque&quot; <a class="footnote-reference" href="#id5" id="id3">[2]</a>, <span class="math">\(T_i\)</span>, and the ankle angle, <span class="math">\(\theta\)</span>
+(<span class="math">\(\ddot{\theta}\)</span> and <span class="math">\(\dot{\theta}\)</span> are computed by numerical
+differentiation). A simple linear least squares is then used to estimate
+<span class="math">\(I_i,c_i\)</span>, and <span class="math">\(k_i\)</span>. He assumes that these parameters are time
+invariant (at least for the stance phase).</p>
+<p>If we compare his &quot;impedance&quot; model to my formulation we see:</p>
+<div class="math">
+\begin{equation*}
+I_i = I
+\end{equation*}
+</div>
+<div class="math">
+\begin{equation*}
+c_i = c - c_a
+\end{equation*}
+</div>
+<div class="math">
+\begin{equation*}
+k_i = k - k_a + gm_fl
+\end{equation*}
+</div>
+<div class="math">
+\begin{equation*}
+0 = c_a \dot{\theta}_0 + k_a \theta_0 + T_0 = T^*
+\end{equation*}
+</div>
+<p>So his estimated parameters are not only a lumping of active and passive torque
+coefficients, but also gravitational terms. And he completely neglects the
+terms I call <span class="math">\(F^*\)</span> above (here we can use <span class="math">\(T^*\)</span> for the last
+equations). But he is able to find impedance parameters such that his model
+fits the data he collected, even when neglecting this constant term. It likely
+gets lumped into the output error of the linear least squares fit and may be
+small.</p>
+<table class="docutils citation" frame="void" id="rouse2012" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id2">[Rouse2012]</a></td><td>Rouse et al., “Estimation of Human Ankle Impedance during
+Walking Using the Perturberator Robot.”</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id4" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>Note that this ignores the fact that forces plates measure the forces
+between two masses. Inertial effects has to be accounted for when moving the
+force plate, but the following analysis assumes we can measure the force at
+the surface (not at the load cells).</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id5" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id3">[2]</a></td><td>This is not the traditional joint torque because it includes inertial
+and gravitational effects in addition to passive and active joint torques.</td></tr>
+</tbody>
+</table>
+<script type='text/javascript'>if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+      <li class="list-inline-item"><a href="https://moorepants.info.github.io/authors.html">Authors</a></li>
+    <li class="list-inline-item"><a href="https://moorepants.info.github.io/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="https://moorepants.info.github.io/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="https://moorepants.info.github.io/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>
+<div class="row">
+  <div class="col-sm-4 mx-auto text-center text-muted" >
+    <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+      <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+    </a>
+    <br />
+    This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+  </div>
+</div>    </div>
+  </footer>
+</body>
+
+</html>

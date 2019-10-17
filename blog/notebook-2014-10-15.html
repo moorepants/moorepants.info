@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  Notebook Entry | moorepants
+</title>
+  <link rel="canonical" href="https://moorepants.info.github.io/blog/notebook-2014-10-15.html">
+
+
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/pygments/default.min.css">
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="https://moorepants.info.github.io/feeds/all.atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="Categories Atom Feed"
+        href="https://moorepants.info.github.io/feeds/{slug}.atom.xml">  
+  <meta name="description" content="A few notes on the Matlab and Python ODE integrators. Matlab Integrators Non-stiff ode45 : Runge-Kutta (4, 5), Dormand-Prince pair | dopri5 ode23 : Runge-Kutta (2,3) pair of Bogacki and Shampine ode113 : variable order Adams-Bashforth-Moulton PECE Stiff ode15s : variable order based on numerical differentation formulas (optionally use BDF backward diff formula) ode23s …">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="https://moorepants.info.github.io/">
+        <img class="img-fluid rounded" src=https://objects-us-east-1.dream.io/moorepants/headshot.jpg alt="moorepants">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="https://moorepants.info.github.io/">moorepants</a></h1>
+      <p class="text-muted">a websitee</p>
+      <ul class="list-inline">
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/about.html">About</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/portfolio.html">Portfolio</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/interests.html">Interests</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/research.html">Research</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/teaching.html">Teaching</a></li>
+          <li class="list-inline-item"><a href="/blog/">Blog</a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  Notebook Entry
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2014-10-15T14:48:46-07:00">
+          <i class="fa fa-clock-o"></i>
+          Wed 15 October 2014
+        </li>
+        <li class="list-inline-item">
+          <i class="fa fa-folder-open-o"></i>
+          <a href="https://moorepants.info.github.io/category/notebook.html">notebook</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fa fa-user-o"></i>
+              <a href="https://moorepants.info.github.io/author/jason-k-moore.html">Jason K. Moore</a>          </li>
+          <li class="list-inline-item">
+            <i class="fa fa-files-o"></i>
+              <a href="https://moorepants.info.github.io/tag/notebook.html">#notebook</a>,               <a href="https://moorepants.info.github.io/tag/ordinary-differential-equations.html">#ordinary differential equations</a>,               <a href="https://moorepants.info.github.io/tag/integration.html">#integration</a>,               <a href="https://moorepants.info.github.io/tag/matlab.html">#matlab</a>,               <a href="https://moorepants.info.github.io/tag/scipy.html">#scipy</a>,               <a href="https://moorepants.info.github.io/tag/python.html">#python</a>          </li>
+      </ul>
+    </header>
+
+
+    <div class="content">
+      <p>A few notes on the Matlab and Python ODE integrators.</p>
+<div class="section" id="matlab-integrators">
+<h2>Matlab Integrators</h2>
+<p>Non-stiff</p>
+<ul class="simple">
+<li>ode45 : Runge-Kutta (4, 5), Dormand-Prince pair | dopri5</li>
+<li>ode23 : Runge-Kutta (2,3) pair of Bogacki and Shampine</li>
+<li>ode113 : variable order Adams-Bashforth-Moulton PECE</li>
+</ul>
+<p>Stiff</p>
+<ul class="simple">
+<li>ode15s : variable order based on numerical differentation formulas (optionally use BDF backward diff formula)</li>
+<li>ode23s : modified Rosenbrock formula of order 2, one step solver</li>
+<li>ode23t : trapezoidal rule usnig a &quot;free&quot; interpolant</li>
+<li>ode23tb : TR-BDF2, implicit Runge-Kutta (first stage: trapezoidal, second stage: backward diffierentiation of order two)</li>
+<li>ode15i : variable order, fully implicit differential equations</li>
+</ul>
+</div>
+<div class="section" id="scipy-integrators">
+<h2>SciPy Integrators</h2>
+<p>scipy.integrate.odeint uses lsoda which switching between Adams for non-stiff
+and BDF for stiff. This would be similar to a combination of ode113 and ode15s.</p>
+<p>scipy.integrate.ode provides these:</p>
+<ul class="simple">
+<li>vode: This is similar to lsoda as it uses a combination of Adams and BDF
+methods. In fact, the docs sound identical to lsoda.</li>
+<li>lsoda</li>
+<li>dopri5: explicit Runge-Kutta of order (4)5 due to Dormand and Prince. (so
+same as ode45)</li>
+<li>dopri853: explicit Runge-Kutta 8(5,3) due to Dormand and Prince.</li>
+</ul>
+<p><a class="reference external" href="http://people.sc.fsu.edu/~jburkardt/f77_src/odepack/odepack.html">http://people.sc.fsu.edu/~jburkardt/f77_src/odepack/odepack.html</a></p>
+<p>It'd be nice to have LSODI and its variants available for multibody dynamic
+systems so the mass matrix and forcing vector can be passed in in that linearly
+implicit form. Looks like scikits.odes includes a wrapper to LSODI:
+<a class="reference external" href="https://pypi.python.org/pypi/scikits.odes">https://pypi.python.org/pypi/scikits.odes</a></p>
+</div>
+
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+      <li class="list-inline-item"><a href="https://moorepants.info.github.io/authors.html">Authors</a></li>
+    <li class="list-inline-item"><a href="https://moorepants.info.github.io/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="https://moorepants.info.github.io/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="https://moorepants.info.github.io/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>
+<div class="row">
+  <div class="col-sm-4 mx-auto text-center text-muted" >
+    <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+      <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+    </a>
+    <br />
+    This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+  </div>
+</div>    </div>
+  </footer>
+</body>
+
+</html>

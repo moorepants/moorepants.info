@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  Notebook Entry | moorepants
+</title>
+  <link rel="canonical" href="https://moorepants.info.github.io/blog/notebook-2015-02-09.html">
+
+
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/pygments/default.min.css">
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="https://moorepants.info.github.io/feeds/all.atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="Categories Atom Feed"
+        href="https://moorepants.info.github.io/feeds/{slug}.atom.xml">  
+  <meta name="description" content="AIO for February 9, 2015 Last week(s)'s accomplishments I didn't do an AIO for a while, so this is stuff since the last one. Rando Completed everything to be a SWC instructor and am now officially an instructor. I'm going to teach a workshop at UC Irvine in …">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="https://moorepants.info.github.io/">
+        <img class="img-fluid rounded" src=https://objects-us-east-1.dream.io/moorepants/headshot.jpg alt="moorepants">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="https://moorepants.info.github.io/">moorepants</a></h1>
+      <p class="text-muted">a websitee</p>
+      <ul class="list-inline">
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/about.html">About</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/portfolio.html">Portfolio</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/interests.html">Interests</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/research.html">Research</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/teaching.html">Teaching</a></li>
+          <li class="list-inline-item"><a href="/blog/">Blog</a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  Notebook Entry
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2015-02-09T10:30:05-08:00">
+          <i class="fa fa-clock-o"></i>
+          Mon 09 February 2015
+        </li>
+        <li class="list-inline-item">
+          <i class="fa fa-folder-open-o"></i>
+          <a href="https://moorepants.info.github.io/category/notebook.html">notebook</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fa fa-user-o"></i>
+              <a href="https://moorepants.info.github.io/author/jason-k-moore.html">Jason K. Moore</a>          </li>
+          <li class="list-inline-item">
+            <i class="fa fa-files-o"></i>
+              <a href="https://moorepants.info.github.io/tag/notebook.html">#notebook</a>,               <a href="https://moorepants.info.github.io/tag/aio.html">#aio</a>          </li>
+      </ul>
+    </header>
+
+
+    <div class="content">
+      <p>AIO for February 9, 2015</p>
+<div class="section" id="last-week-s-s-accomplishments">
+<h2>Last week(s)'s accomplishments</h2>
+<p>I didn't do an AIO for a while, so this is stuff since the last one.</p>
+<p>Rando</p>
+<ul class="simple">
+<li>Completed everything to be a SWC instructor and am now officially an
+instructor. I'm going to teach a workshop at UC Irvine in late February.</li>
+<li>Had a PyDy sprint last weekend with 7 people to get the website and
+documentation cleaned up and digestible for newcomers.</li>
+<li>Interviewed for an awesome robotics/machine learning job.</li>
+</ul>
+<p>Yeadon Paper</p>
+<ul class="simple">
+<li>Final review came in. The paper is accepted for indexing. We are going to
+submit a revision to address both reviewers' comments.</li>
+</ul>
+<p>Perturbed Data Paper</p>
+<ul class="simple">
+<li>[1 hr, Done 1.7] Create a web page on hmc.csuohio.edu for the paper.<ul>
+<li>Created a basic project page and added youtube hosted videos:
+<a class="reference external" href="http://hmc.csuohio.edu/projects/gait-control-id">http://hmc.csuohio.edu/projects/gait-control-id</a></li>
+</ul>
+</li>
+<li>Reviews came in. The paper is accepted with minor revisions.</li>
+</ul>
+<p>Gait Direct Identification Paper</p>
+<ul class="simple">
+<li>[1 hr, Not done] Setup a repository</li>
+<li>[2 hr, Not done] Draft an outline</li>
+</ul>
+<p>Quiet Standing Identification Paper</p>
+<ul class="simple">
+<li>[5 hr, Done (too many hours)] Work on the ODE eval speed up for the shooting
+implementation.</li>
+<li>[10 hr, Done] Write the code for running a single shooting method.</li>
+<li>Sped up the integration significantly. For example a 10 second integration
+with 5000 requested time points runs in about 1.5s. I had to write an
+efficient interpolation method in Cython and I also tweaked PyDy's code
+generation stuff to gain some speed ups. This makes the data generation and
+shooting less time consuming.</li>
+<li>All three methods now run: direct identification, indirect with direct
+collocation and shooting. For shooting, I can use any algorithm provided in
+scipy.optimize and additionally I have a parallelized CMAES implementation.
+Indirect with dc and CMAES can find a solution from an initial guess of zero
+for the gains. Other shooting algs are picky about the initial guess. DC is
+fast (5 s) and CMAES takes in the hour(s) ranges. Haven't gotten all the
+timings yet. SQLSP doesn't take long (several minutes) if you give it a
+pretty much perfect guess.</li>
+<li>Some work on the bias from direct and indirect has been done
+(<a class="reference external" href="https://github.com/csu-hmc/inverted-pendulum-sys-id-paper/issues/1">https://github.com/csu-hmc/inverted-pendulum-sys-id-paper/issues/1</a>). I just
+need to run the indirect methods so I can compare.</li>
+<li>I have a data generation routine setup that makes generating lots of data
+relatively easy.</li>
+</ul>
+</div>
+<div class="section" id="last-week-s-issues">
+<h2>Last week's issues</h2>
+<ul class="simple">
+<li>Still can't focus and get 40+ hrs of work done on research. I miss having to
+actually go to work.</li>
+</ul>
+</div>
+<div class="section" id="this-week-s-objectives">
+<h2>This week's objectives</h2>
+<p>Yeadon Paper</p>
+<ul class="simple">
+<li>[30 min] Email authors to start the second revision process and open some new
+Github issues.</li>
+</ul>
+<p>Perturbed Data Paper</p>
+<ul class="simple">
+<li>[1 hr] Create issues in the repository for all the fixes.</li>
+<li>[30 min] Email co-authors with tasks and deadline.</li>
+<li>[2 hr] Write draft of response in the github repo.</li>
+</ul>
+<p>Quiet Standing Identification Paper</p>
+<ul class="simple">
+<li>[6 hr] Finish direct/indirection bias comparison plot.</li>
+<li>[5 hr] Finish computation speed results.</li>
+<li>[5 hr] Make a gain accuracy vs duration of simulation plot.</li>
+<li>[5 hr ] Try a set of initial conditions with each method and compare which ones
+converge and which don't.</li>
+</ul>
+<p>Gait Control Direct ID Paper</p>
+<ul class="simple">
+<li>[1 hr, Not done] Setup a repository (convert the walking-sys-id repo and move
+to csu-hmc org.</li>
+<li>[2 hr, Not done] Draft an outline and what figures tables should be present.</li>
+</ul>
+</div>
+
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+      <li class="list-inline-item"><a href="https://moorepants.info.github.io/authors.html">Authors</a></li>
+    <li class="list-inline-item"><a href="https://moorepants.info.github.io/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="https://moorepants.info.github.io/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="https://moorepants.info.github.io/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>
+<div class="row">
+  <div class="col-sm-4 mx-auto text-center text-muted" >
+    <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+      <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+    </a>
+    <br />
+    This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+  </div>
+</div>    </div>
+  </footer>
+</body>
+
+</html>

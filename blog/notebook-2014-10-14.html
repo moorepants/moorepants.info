@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  Notebook Entry | moorepants
+</title>
+  <link rel="canonical" href="https://moorepants.info.github.io/blog/notebook-2014-10-14.html">
+
+
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/pygments/default.min.css">
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="https://moorepants.info.github.io/feeds/all.atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="Categories Atom Feed"
+        href="https://moorepants.info.github.io/feeds/{slug}.atom.xml">  
+  <meta name="description" content="AIO for October 14, 2014 Last week's accomplishments Objectives from last week: Walking System ID [1 hr, Done 0.7 hr] Read Manoj's recent paper. The paper was ok, nothing revolutionary. They basically found linear correlatiosn between the current state of the hip and the next placement of the foot …">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="https://moorepants.info.github.io/">
+        <img class="img-fluid rounded" src=https://objects-us-east-1.dream.io/moorepants/headshot.jpg alt="moorepants">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="https://moorepants.info.github.io/">moorepants</a></h1>
+      <p class="text-muted">a websitee</p>
+      <ul class="list-inline">
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/about.html">About</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/portfolio.html">Portfolio</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/interests.html">Interests</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/research.html">Research</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/teaching.html">Teaching</a></li>
+          <li class="list-inline-item"><a href="/blog/">Blog</a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  Notebook Entry
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2014-10-14T10:25:21-07:00">
+          <i class="fa fa-clock-o"></i>
+          Tue 14 October 2014
+        </li>
+        <li class="list-inline-item">
+          <i class="fa fa-folder-open-o"></i>
+          <a href="https://moorepants.info.github.io/category/notebook.html">notebook</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fa fa-user-o"></i>
+              <a href="https://moorepants.info.github.io/author/jason-k-moore.html">Jason K. Moore</a>          </li>
+          <li class="list-inline-item">
+            <i class="fa fa-files-o"></i>
+              <a href="https://moorepants.info.github.io/tag/notebook.html">#notebook</a>,               <a href="https://moorepants.info.github.io/tag/aio.html">#aio</a>          </li>
+      </ul>
+    </header>
+
+
+    <div class="content">
+      <p>AIO for October 14, 2014</p>
+<div class="section" id="last-week-s-accomplishments">
+<h2>Last week's accomplishments</h2>
+<p>Objectives from last week:</p>
+<p>Walking System ID</p>
+<ul class="simple">
+<li>[1 hr, Done 0.7 hr] Read Manoj's recent paper.<ul>
+<li>The paper was ok, nothing revolutionary. They basically found linear
+correlatiosn between the current state of the hip and the next placement of
+the foot to try to suppor the theory that we balance by placing our foot
+based on feedback.</li>
+</ul>
+</li>
+</ul>
+<p>Inverted Pendulum Paper</p>
+<ul class="simple">
+<li>[1 hr, Done 1.2 hr] Discuss paper direction with Ton.<ul>
+<li>Going to move the paper premise to a direct approach comparison to the
+indirect approach using direct collocation.</li>
+</ul>
+</li>
+<li>[1 hr, Done 0.8 hr] Implement the first example in the Betts et.al 2003 paper.<ul>
+<li>I had to do a little &quot;hack&quot; to deal with the explicit time and it doesn't
+handle the difference in nodes vs measurement samples as elegantly as Betts
+et. al but it works fine with the backwards Euler integration. See:
+<a class="reference external" href="https://github.com/csu-hmc/inverted-pendulum-sys-id/blob/master/betts2003.py">betts2003.py</a>.</li>
+</ul>
+</li>
+<li>[2 hr, Done 5 hr] Implement the Kuo standing model for the paper.<ul>
+<li>See <a class="reference external" href="https://github.com/csu-hmc/inverted-pendulum-sys-id/blob/master/park2004.py">park2004.py</a>. Park et. al don't explain their model in detail enough to
+reproduce it exactly, so I made it similar. It is basically a two link
+version of the PyDy tutorial with base acceleration as an input.</li>
+</ul>
+</li>
+<li>[0.5 hr, Done 1.3 hr] Get the numerical values of the human model to match Kuo.<ul>
+<li>Park et. al don't seem to provide the numerical values of the body segment
+parameters in their paper, so I am making use of the output from my yeadon
+software with measurements from my body.</li>
+</ul>
+</li>
+<li>[3 hr, Done-ish 3.3] Get two relevant sympy prs into sympy.<ul>
+<li><a class="reference external" href="https://github.com/sympy/sympy/pull/8199">PR #8199</a> is in and <a class="reference external" href="https://github.com/sympy/sympy/pull/8200">PR #8200</a> is mostly complete.</li>
+</ul>
+</li>
+</ul>
+<p>Walking Data Paper</p>
+<ul class="simple">
+<li>[0.5 hr, Done 0.1 hr] Decide what will and will not be published data.<ul>
+<li>I'm only going to share the &quot;raw&quot; data and the GATK software but include
+plots of processed data in the paper. See this <a class="reference external" href="https://github.com/csu-hmc/perturbed-data-paper/issues/2">Issue #2</a>.</li>
+</ul>
+</li>
+</ul>
+<p>Bicycle Steer Torque Paper</p>
+<ul class="simple">
+<li>[4 hr, Done 7.4 hr] Update BicycleParameters to work with the latest Yeadon
+and uncertainties 2+.<ul>
+<li><a class="reference external" href="https://pypi.python.org/pypi/BicycleParameters/0.2.0">BicycleParameters</a> 0.2.0 was released and now works with pinned
+dependencies and supports the newer versions of Yeadon and uncertainties.</li>
+<li>A <a class="reference external" href="http://dx.doi.org/10.6084/m9.figshare.1198429">sample raw data set</a> that can be used with BicycleParameters was
+prepared and released to Figshare.</li>
+</ul>
+</li>
+<li>[2 hr, Done 2.6 hr] Go through Mont's review, fix minor stuff, and prioritize
+larger changes.<ul>
+<li>Mont revised the paper and raised some issues. I spoke with him,took notes,
+and merged in his changes. See the <a class="reference external" href="https://github.com/moorepants/steer-torque-manuscript">steer torque manuscript</a> repository
+for details.</li>
+</ul>
+</li>
+</ul>
+<p>Bicycle Data Paper</p>
+<ul class="simple">
+<li>[3 hr, Done 3 hr] Update BicycleDataProcessor to work with latest DTK,
+BicycleParameters, and PyTables.<ul>
+<li>I made the first release (0.1.0) of the <a class="reference external" href="https://pypi.python.org/pypi/BicycleDataProcessor/0.1.0">BicycleDataProcessor</a> along with
+instructions to use it with the datasets shared on Figshare. See below.</li>
+</ul>
+</li>
+<li>[0.5 hr, Done 6 hr] Create a raw data H5 file for upload to Zenodo.<ul>
+<li>This ended up taking longer than expected, but I packaged all of the
+necessary raw data from the bicycle system id experiements and it is now
+available on Figshare. [<a class="reference external" href="http://dx.doi.org/10.6084/m9.figshare.1164632">Dataset 1</a>], [<a class="reference external" href="http://dx.doi.org/10.6084/m9.figshare.1164630">Dataset 2</a>], [<a class="reference external" href="http://dx.doi.org/10.6084/m9.figshare.1187092">Dataset 3</a>], and
+[<cite>Dataset 4</cite>].</li>
+</ul>
+</li>
+<li>[1 hr, 1.4 hr] Create a raw and processed data H5 file (no filtering) for
+upload to Zenodo.<ul>
+<li>I prepared this file which ended up being 550 mb (compressed with bzip2)
+and it is too large to upload to Figshare (limit is 500 mb). Zenodo will
+accept it but they have a bug in their upload system and are looking into
+it.</li>
+</ul>
+</li>
+</ul>
+<p>Other stuff I did:</p>
+<ul class="simple">
+<li>[1.5 hr] Watched an excellent talk by Gentry Lee at the Clinic.</li>
+<li>[2.7 hr] Attende both of Jeff Speck's talks at CSU, which were also
+excellent.</li>
+<li>[0.5 hr] Delt with trying to get the data from our old biosport website.</li>
+<li>[0.5 hr] Wrote a SymPy wiki <a class="reference external" href="https://github.com/sympy/sympy/wiki/introduction-to-contributing">page</a> for new contributors.</li>
+</ul>
+</div>
+<div class="section" id="last-week-s-issues">
+<h2>Last week's issues</h2>
+<p>I spent too much time on getting the bicycle data and software finalized and
+neglected some of my other objectives. The following objectices were not
+completed due to poor time management.</p>
+<p>Inverted Pendulum Paper</p>
+<ul class="simple">
+<li>[5 hr] Finish implementing the Ackermann 2010 example.</li>
+<li>[4 hr] Implement process noise, measurement noise (both on states and torques), and
+perturbation accelerations.</li>
+<li>[0.25 hr] Email Samin to inquire about co-authorship.</li>
+<li>[1 hr] Rework the outline to reflect Ton and my discussion.</li>
+<li>[0.5 hr] Obtain examples of process noise levels that will produce nominal
+wiggly human motion.</li>
+<li>I'm having an issue with class attributes that are mutable with super and
+subclasses in my SymPy PR for dealing with reserved words in the C language.</li>
+<li>The symbolic derivatives for the walking model are currently given real and
+imaginary parts. I need to investigate that more, it may be as simple as
+setting some variables to be real and/or positive.</li>
+</ul>
+<p>Walking Data Paper</p>
+<ul class="simple">
+<li>[1 hr] Describe the GaitAnalysisToolkit DFlow data and it's output.</li>
+<li>[1 hr] Write a closing paragraph.</li>
+<li>[1 hr] Decide on what plots to show that display the nature of the data and
+add to the outline.</li>
+</ul>
+<p>Bicycle Steer Torque Paper</p>
+<ul class="simple">
+<li>[2 hr] Use seaborn to improve the matplotlib plots.</li>
+</ul>
+<p>Bicycle Data Paper</p>
+<ul class="simple">
+<li>Zenodo has a bug and it will not let you upload large files. Their limit for
+file size is supposedly 2 GB per file. Their developers are looking in to it.
+I may be able to upload all of the walking data to Zenodo in one file if
+their limit is actually 2 GB, otherwise I've written a script to package the
+data into multiple files.</li>
+</ul>
+<p>Other</p>
+<ul class="simple">
+<li>[2 hr] Send ENG 4 teaching materials to Yuri.</li>
+</ul>
+</div>
+<div class="section" id="this-week-s-objectives">
+<h2>This week's objectives</h2>
+<p>Inverted Pendulum Paper</p>
+<ul class="simple">
+<li>[1 hr] Finish SymPy reserved words PR.</li>
+<li>[5 hr] Implement simulation with process noise, measurement noise (both on
+states and torques), and perturbation accelerations.</li>
+<li>[1 hr] Rework the outline to reflect Ton and my discussion.</li>
+<li>[5 hr] Finish implementing the Ackermann 2010 example.</li>
+<li>[0.25 hr] Email Samin to inquire about co-authorship.</li>
+<li>[1 hr] Decide on specific figures to include.</li>
+</ul>
+<p>Walking Data Paper</p>
+<ul class="simple">
+<li>[1 hr] Describe the GaitAnalysisToolkit DFlow data and it's output.</li>
+<li>[1 hr] Write a closing paragraph.</li>
+<li>[1 hr] Decide on what plots to show that display the nature of the data and
+add to the outline.</li>
+<li>[4 hr] Create the plots for the paper.</li>
+</ul>
+<p>Bicycle Steer Torque Paper</p>
+<ul class="simple">
+<li>[5 hr] Go over Mont's commments and fix them.</li>
+<li>[2 hr] Use seaborn to improve the matplotlib histogram plots.</li>
+</ul>
+<p>Bicycle Data Paper</p>
+<ul class="simple">
+<li>[2 hr] Write section describing the instrumentation.</li>
+<li>[2 hr] Write section describing the experiments.</li>
+<li>[1 hr] Decide on figures in the paper.</li>
+</ul>
+<p>Other</p>
+<ul class="simple">
+<li>[2 hr] Send ENG 4 teaching materials to Yuri.</li>
+<li>[2 hr] Setup my old website so the pedal desk students can access the
+information.</li>
+</ul>
+</div>
+
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+      <li class="list-inline-item"><a href="https://moorepants.info.github.io/authors.html">Authors</a></li>
+    <li class="list-inline-item"><a href="https://moorepants.info.github.io/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="https://moorepants.info.github.io/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="https://moorepants.info.github.io/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>
+<div class="row">
+  <div class="col-sm-4 mx-auto text-center text-muted" >
+    <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+      <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+    </a>
+    <br />
+    This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+  </div>
+</div>    </div>
+  </footer>
+</body>
+
+</html>

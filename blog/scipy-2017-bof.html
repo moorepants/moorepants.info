@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  Teaching Modeling and Simulation with Python | moorepants
+</title>
+  <link rel="canonical" href="https://moorepants.info.github.io/blog/scipy-2017-bof.html">
+
+
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/pygments/default.min.css">
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="https://moorepants.info.github.io/feeds/all.atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="Categories Atom Feed"
+        href="https://moorepants.info.github.io/feeds/{slug}.atom.xml">  
+  <meta name="description" content="Many instructors that teach modeling and simulation topics in a variety of domains are turning to computational thinking and active learning in their classrooms. In particular, the Jupyter Notebook platform is being rapidly adopted by instructors worldwide to deliver interactive instructional content to students. The Jupyter Notebook arose from the …">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="https://moorepants.info.github.io/">
+        <img class="img-fluid rounded" src=https://objects-us-east-1.dream.io/moorepants/headshot.jpg alt="moorepants">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="https://moorepants.info.github.io/">moorepants</a></h1>
+      <p class="text-muted">a websitee</p>
+      <ul class="list-inline">
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/about.html">About</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/portfolio.html">Portfolio</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/interests.html">Interests</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/research.html">Research</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/teaching.html">Teaching</a></li>
+          <li class="list-inline-item"><a href="/blog/">Blog</a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  Teaching Modeling and Simulation with Python
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2017-07-20T15:15:00-07:00">
+          <i class="fa fa-clock-o"></i>
+          Thu 20 July 2017
+        </li>
+        <li class="list-inline-item">
+          <i class="fa fa-folder-open-o"></i>
+          <a href="https://moorepants.info.github.io/category/misc.html">misc</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fa fa-user-o"></i>
+              <a href="https://moorepants.info.github.io/author/jason-k-moore.html">Jason K. Moore</a>          </li>
+          <li class="list-inline-item">
+            <i class="fa fa-files-o"></i>
+              <a href="https://moorepants.info.github.io/tag/teaching.html">#teaching</a>,               <a href="https://moorepants.info.github.io/tag/modeling.html">#modeling</a>,               <a href="https://moorepants.info.github.io/tag/simulation.html">#simulation</a>,               <a href="https://moorepants.info.github.io/tag/jupyter.html">#jupyter</a>,               <a href="https://moorepants.info.github.io/tag/python.html">#python</a>,               <a href="https://moorepants.info.github.io/tag/scipy.html">#scipy</a>          </li>
+      </ul>
+    </header>
+
+
+    <div class="content">
+      <p>Many instructors that teach modeling and simulation topics in a variety of
+domains are turning to <a class="reference external" href="http://lorenabarba.com/blog/computational-thinking-i-do-not-think-it-means-what-you-think-it-means/">computational thinking</a>
+and active learning in their classrooms. In particular, the <a class="reference external" href="http://jupyter.org/">Jupyter Notebook</a> platform is being rapidly adopted by instructors
+worldwide to deliver interactive instructional content to students. The Jupyter
+Notebook arose from the scientific python community and at this year's <a class="reference external" href="https://scipy2017.scipy.org">SciPy
+conference</a> we lead a &quot;Birds of Feather&quot;
+session to connect instructors at the conference to discuss their successes and
+struggles using these new teaching strategies and tools. Below are the notes
+that were written by Kenneth Lyons and collaboratively edited by the session's
+attendees. We hope these will be helpful to the broader community.</p>
+<div class="section" id="overview">
+<h2>Overview</h2>
+<p>This document was initialized as a set of notes taken during the
+birds-of-a-feather (BoF) session on July 14, 2017 at the SciPy conference in
+Austin, Texas. We started with an overview of some potential discussion topics,
+then went around the table for introductions, and spent the remaining time
+discussing various issues and ideas related to teaching modeling and simulation
+with Python.</p>
+</div>
+<div class="section" id="attendees">
+<h2>Attendees</h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="37%" />
+<col width="63%" />
+</colgroup>
+<tbody valign="top">
+<tr><td>Jason Moore (Organizer)</td>
+<td>Mechanical and Aerospace Engineering, UC Davis</td>
+</tr>
+<tr><td>Kenneth Lyons (Organizer)</td>
+<td>Mechanical and Aerospace Engineering, UC Davis</td>
+</tr>
+<tr><td>Charles Weiss</td>
+<td>Chemistry, Wabash College</td>
+</tr>
+<tr><td>Philip Robinson</td>
+<td>Oregon Health and Science University</td>
+</tr>
+<tr><td>Peter Storm</td>
+<td>Oklahoma State University</td>
+</tr>
+<tr><td>John Conery</td>
+<td>University of Oregon</td>
+</tr>
+<tr><td>Michael Lange</td>
+<td>Imperial College</td>
+</tr>
+<tr><td>Carl Savage</td>
+<td>High School in BC Canada</td>
+</tr>
+<tr><td>Blaise Thompson</td>
+<td>University of Wisconsin</td>
+</tr>
+<tr><td>Natalia (Naty) Clementi</td>
+<td>George Washington University</td>
+</tr>
+<tr><td>Nicholas (Nick) Murphy</td>
+<td>Harvard-Smithsonian Center for Astrophysics</td>
+</tr>
+<tr><td>Geoffrey (Geoff) Poore</td>
+<td>Physics, University in Tennessee</td>
+</tr>
+<tr><td>Kyle Sunden</td>
+<td>University of Wisconsin</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="potential-topics-to-discuss">
+<h2>Potential Topics to Discuss</h2>
+<p>The following list of topics are a combination of those brought by the
+organizers and the ones proposed during the introductions from each
+participant.</p>
+<ul class="simple">
+<li>Success stories</li>
+<li>Struggles</li>
+<li>Teaching methods</li>
+<li>Grading/submission</li>
+<li>Active learning</li>
+<li>Collaboration among Universities and instructors</li>
+<li>Project based versus individual</li>
+<li>Students producing notebooks from scratch or from templates</li>
+<li>How polished should students' notebooks be?</li>
+<li>How to ensure domain principles are learned effectively with
+computation</li>
+<li>Spread of student abilities</li>
+<li>What is important to teach?</li>
+<li>What can be taught if students do not have calculus yet?</li>
+<li>Engineering students being scared of programming.</li>
+<li>Matlab vs Python battle in departments</li>
+<li>What prerequisites are necessary?</li>
+</ul>
+</div>
+<div class="section" id="teaching-challenges">
+<h2>Teaching Challenges</h2>
+<p>Students come in with a wide range of programming skills and knowledge
+(different languages, different general computer literacy). How do we make sure
+students have prerequisites, whether they are explicit or not?</p>
+<p>Students feel they spend too much time on programming concepts rather than the
+science, theory, etc.</p>
+<p>Existing classes teach, for example, C -- students dislike programming by the
+time they take a domain-specific class.</p>
+<p>Student retention.  Can set up tutoring lab hours, several hours/day all week.
+Restrictions like the tutor can't touch their keyboard. Don't let the tutor see
+the code, student has to describe it.  Have the student move to the whiteboard
+to explain the issue. Could also come to tutoring session with printed code
+rather than their computer.</p>
+<p>Doing everything openly presents the opportunity for students to copy off each
+other or previous instantiations of the class.</p>
+<p>Don't teach object oriented things (no classes etc). It is too much overhead.
+John suggested not even teaching functions for a similar reason. The students
+can likely use objects though without knowing what OO is.</p>
+<p>Tab completion in the Jupyter notebook brings in the magics. This is confusing,
+you should disable them.</p>
+</div>
+<div class="section" id="successes">
+<h2>Successes</h2>
+<p>Jupyter notebooks are great for active learning. Students can fill in notebooks
+together with the instructor, plus in-class group work. A computer lab is
+helpful for avoiding installation issues and such.  (Ana)conda is very good for
+simple installation, however. JupyterHub could be a nice solution for ensuring
+the environment is consistent and up-to-date for all students, but it involves
+a lot of setup.</p>
+<p>Pair programming is helpful. Pair together strong and weak students. With
+Jupyterhub, you can tell who's submitting notebooks, but you can't control
+copying off one another. Mix up pairs regularly (e.g. weekly).</p>
+<p>Have students go find a package or module and teach it to the class. They get
+very excited by that. Overview of it, what it does, etc.</p>
+<p>Scope and sequence is very import as it aids in retention of concepts. Here is
+an example from Carl Savage's Physics 12 course. It should be noted that the
+students have had 3 Python tutorials in Jupyter Notebooks - Basic Coding, Numpy
+and Matplotlib:</p>
+<p>Hooke's Law Lab (Second lab of course, first lab is traditional to provide me
+with information on students strengthens and weakness)</p>
+<ol class="arabic simple">
+<li>Start with traditional lesson on the theory</li>
+<li>Traditional problem set to reinforce physical concepts.</li>
+<li>Jupyter Notebook on modelling data with a review on arrays, splicing
+data, graphing plus the new concept regression modelling. This is
+done through a guided in class lesson (30 min).</li>
+<li>Collect data in traditional manner.</li>
+<li>Model data and lab write up in Jupyter Notebook.</li>
+<li>Review concepts both concept and coding.</li>
+</ol>
+<p>This only adds about one hour to instructional classroom time but is the
+foundation of all other labs that they will be doing in the course.  Other labs
+the students do this way are: Friction on Inclined Planes, Circular Motion,
+Work energy theorem and Electric Circuits.</p>
+</div>
+<div class="section" id="projects-and-other-ideas">
+<h2>Projects and Other Ideas</h2>
+<p>Natalia is working on an engineering programming course. Engineering-focused
+intro programming courses are often lacking.</p>
+<p>What if students were self-paced? Let them work (in a long session?) and then
+ask for a quiz/exam when they feel ready.</p>
+<p>Have an interpreter open that can facilitate tinkering. Students may be
+confused by adding a &quot;sandbox&quot; cell.</p>
+<p>Question: for domain-specific classes, do you have an explicit module on basic
+Python / NumPy / matplotlib module? Natalia's approach: give them a notebook on
+basic concepts, let them get up to speed if needed. Works for grad-level but
+not really undergrad? Teach basic concepts but not too abstractly. Do not try
+to teach OOP. Have a set of notebooks on basic concepts, let students get
+through them self-paced (works at high school level) -- don't assume they
+totally understand everything you give them.</p>
+<p>Would be great if we could have intro notebooks collaboratively edited or
+centrally available.</p>
+<p>Can show them nested for loop approach then show them vectorized operations.
+Good idea to reinforce concepts with multiple approaches to a problem. Could be
+overwhelming in some cases?</p>
+<p>Definitely encourage students to make use of the internet to see documentation,
+stack overflow, etc. Force writing of docstrings when they write functions.</p>
+<p>How to make sure they learn the physical concepts and not just programming.
+Spark device streams data over wifi so students can grab data on their phone.
+Have a shared lab apparatus. Sabotage the device to see if they can figure out
+what's wrong.</p>
+<p>To check whether students understand the physical principles, ask them
+questions about the concepts using something like Socratic and you can see how
+many people answered which questions correctly. Then after than have them use
+the computation in the notebook to verify their answer, for example using a
+parameter sweep.</p>
+<p>Three P's: problem posing, problem solving, peer persuasion. Starting even
+further back, start with a real system, have them generate a model. The
+students need to examine a physical thing and try to create the model of the
+phenomena themselves.</p>
+<p>MIT or BSD 3-clause for code, CC-BY for written materials. Two sections in
+LICENSE file.</p>
+</div>
+<div class="section" id="resources">
+<h2>Resources</h2>
+<ul class="simple">
+<li>Allen Downey's work-in-progress textbook on modeling and simulation with
+Python: <a class="reference external" href="https://www.google.com/url?q=http://greenteapress.com/wp/modsimpy/&amp;sa=D&amp;ust=1500342535521000&amp;usg=AFQjCNG1pgUuiWQHOVe5x5rK6aYlbBAnSQ">http://greenteapress.com/wp/modsimpy/</a>,
+(slides: <a class="reference external" href="https://www.google.com/url?q=http://tinyurl.com/yamfnlpb&amp;sa=D&amp;ust=1500342535522000&amp;usg=AFQjCNFh3IU4DBEs2pbIwJBZlYNC07I0tA">http://tinyurl.com/yamfnlpb</a>)</li>
+<li>John Conery's book &quot;Explorations in Computing&quot;:
+<a class="reference external" href="https://www.google.com/url?q=http://ix.cs.uoregon.edu/~conery/eic/&amp;sa=D&amp;ust=1500342535522000&amp;usg=AFQjCNEOtEmG8QPdu-N9JDY_ZHrsQ1B1bg">http://ix.cs.uoregon.edu/~conery/eic/</a></li>
+<li>Michael uses SymPy for finite difference methods:
+<a class="reference external" href="https://www.google.com/url?q=https://github.com/opesci/devito&amp;sa=D&amp;ust=1500342535522000&amp;usg=AFQjCNE6CqM9eSnDatNw56g-1SA9fzh0KQ">https://github.com/opesci/devito</a></li>
+<li>Journal of Open Source Education (JOSE):
+<a class="reference external" href="https://www.google.com/url?q=https://github.com/openjournals/jose&amp;sa=D&amp;ust=1500342535523000&amp;usg=AFQjCNHrMFAc8TFs03CafLXsKbGqmZ93Vg">https://github.com/openjournals/jose</a></li>
+<li>Coursera course on modeling and simulation using Python (starts July 25,
+2017): <a class="reference external" href="https://www.google.com/url?q=https://www.coursera.org/learn/modeling-simulation-natural-processes&amp;sa=D&amp;ust=1500342535523000&amp;usg=AFQjCNGVuITx4Cdavotb34tHzQGZxx9xcg">https://www.coursera.org/learn/modeling-simulation-natural-processes</a></li>
+<li>App to broadcast live data from experiment to students:
+<a class="reference external" href="https://www.google.com/url?q=https://www.pasco.com/sparkvue/&amp;sa=D&amp;ust=1500342535524000&amp;usg=AFQjCNGuGnFbjxRrOTeYeFj0zb5S-sMkuQ">https://www.pasco.com/sparkvue/</a></li>
+</ul>
+</div>
+<div class="section" id="acknowledgements">
+<h2>Acknowledgements</h2>
+<p>This blog post was made possible by the Undergraduate Instructional Innovation
+Program at the <a class="reference external" href="https://cee.ucdavis.edu/">Center for Educational Effectiveness</a> at the University of
+California, Davis. The funding proposal can be viewed on <a class="reference external" href="https://doi.org/10.6084/m9.figshare.5229886.v1">Figshare</a>.</p>
+</div>
+
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+      <li class="list-inline-item"><a href="https://moorepants.info.github.io/authors.html">Authors</a></li>
+    <li class="list-inline-item"><a href="https://moorepants.info.github.io/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="https://moorepants.info.github.io/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="https://moorepants.info.github.io/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>
+<div class="row">
+  <div class="col-sm-4 mx-auto text-center text-muted" >
+    <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+      <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+    </a>
+    <br />
+    This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+  </div>
+</div>    </div>
+  </footer>
+</body>
+
+</html>

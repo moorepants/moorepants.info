@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  Notebook Entry | moorepants
+</title>
+  <link rel="canonical" href="https://moorepants.info.github.io/blog/notebook-2013-08-29.html">
+
+
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/pygments/default.min.css">
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="https://moorepants.info.github.io/feeds/all.atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="Categories Atom Feed"
+        href="https://moorepants.info.github.io/feeds/{slug}.atom.xml">  
+  <meta name="description" content="Today's task list: [x] Email HR about other post docs [x] Email HR about shower facilities [x] Setup a data backup for the website [] Duplicate website backups on a S3 bucket [x] Work on the website theme [x] Setup our new computers and monitors [] Order Matlab [] Work on parsing the …">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="https://moorepants.info.github.io/">
+        <img class="img-fluid rounded" src=https://objects-us-east-1.dream.io/moorepants/headshot.jpg alt="moorepants">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="https://moorepants.info.github.io/">moorepants</a></h1>
+      <p class="text-muted">a websitee</p>
+      <ul class="list-inline">
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/about.html">About</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/portfolio.html">Portfolio</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/interests.html">Interests</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/research.html">Research</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/teaching.html">Teaching</a></li>
+          <li class="list-inline-item"><a href="/blog/">Blog</a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  Notebook Entry
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2013-08-29T09:36:28-07:00">
+          <i class="fa fa-clock-o"></i>
+          Thu 29 August 2013
+        </li>
+        <li class="list-inline-item">
+          <i class="fa fa-folder-open-o"></i>
+          <a href="https://moorepants.info.github.io/category/notebook.html">notebook</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fa fa-user-o"></i>
+              <a href="https://moorepants.info.github.io/author/jason-k-moore.html">Jason K. Moore</a>          </li>
+          <li class="list-inline-item">
+            <i class="fa fa-files-o"></i>
+              <a href="https://moorepants.info.github.io/tag/notebook.html">#notebook</a>,               <a href="https://moorepants.info.github.io/tag/plone.html">#plone</a>          </li>
+      </ul>
+    </header>
+
+
+    <div class="content">
+      <p>Today's task list:</p>
+<ul class="simple">
+<li>[x] Email HR about other post docs</li>
+<li>[x] Email HR about shower facilities</li>
+<li>[x] Setup a data backup for the website</li>
+<li>[] Duplicate website backups on a S3 bucket</li>
+<li>[x] Work on the website theme</li>
+<li>[x] Setup our new computers and monitors</li>
+<li>[] Order Matlab</li>
+<li>[] Work on parsing the walking data</li>
+<li>[] Make generic settings on the lab website</li>
+<li>[] Review the TODO items on the Yeadon paper</li>
+<li>[] Work on BMD papers</li>
+<li>[] Book hotel for BMD</li>
+<li>[] Post update about BMD copyright</li>
+<li>[] Finish reading the van der kooij paper</li>
+<li>[] Make course idea descriptions</li>
+<li>[] See if our controller can drive an OpenSim model</li>
+<li>[] Sit down with Ton to learn how to wrap the HBM</li>
+</ul>
+<div class="section" id="plone-4-3-backup">
+<h2>Plone 4.3 Backup</h2>
+<p>I ended up using the backup script that is included in the UnifiedInstaller to
+backup the Data.fs and the blob storage. It is a nice wrapper to the repozo
+script and does a little more. I also added this <cite>nice utility
+&lt;https://pypi.python.org/pypi/collective.recipe.backup&gt;</cite> to my production
+buildout file to add the script to cron:</p>
+<pre class="literal-block">
+############################################
+# Runs the backup scripts only on the server
+[backupcronjob]
+recipe = z3c.recipe.usercrontab
+times = 1 3 1,16 * *
+command = ${buildout:directory}/bin/backup
+</pre>
+<p>The <tt class="docutils literal">backupcronjob</tt> must also be added to the <tt class="docutils literal">parts</tt> list in the
+<tt class="docutils literal">[buildout]</tt> section. It worked like a charm.</p>
+<p>The next step is to make some copies to an S3 bucket so we have a dual backup.
+This tool <a class="reference external" href="http://s3tools.org/s3cmd">http://s3tools.org/s3cmd</a> looks like a nice option to make that easy.</p>
+<p>Info on basic Plone backups are here:</p>
+<p><a class="reference external" href="http://plone.org/documentation/kb/backup-plone">http://plone.org/documentation/kb/backup-plone</a></p>
+</div>
+<div class="section" id="plone-theming">
+<h2>Plone Theming</h2>
+<p>We figured out how to use the new Plone theme editor and started learning how
+to apply Diazo rules. It seems to be simple but making sure you map everything
+that is needed will take some time. We wasted a lot of time trying rules with
+no result in the inspectors until we realized you had to press &quot;Preview Theme&quot;
+to see the result of the rules.</p>
+<p>I also refactored the theme into a Plone product:</p>
+<p><a class="reference external" href="https://github.com/csu-hmc/hmc.theme">https://github.com/csu-hmc/hmc.theme</a></p>
+<p>Still some work to do there to clean up all the links in index.html.</p>
+</div>
+
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+      <li class="list-inline-item"><a href="https://moorepants.info.github.io/authors.html">Authors</a></li>
+    <li class="list-inline-item"><a href="https://moorepants.info.github.io/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="https://moorepants.info.github.io/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="https://moorepants.info.github.io/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>
+<div class="row">
+  <div class="col-sm-4 mx-auto text-center text-muted" >
+    <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+      <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+    </a>
+    <br />
+    This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+  </div>
+</div>    </div>
+  </footer>
+</body>
+
+</html>

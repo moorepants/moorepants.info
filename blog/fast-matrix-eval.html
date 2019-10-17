@@ -1,0 +1,469 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  Vectorized Matrix Evaluation | moorepants
+</title>
+  <link rel="canonical" href="https://moorepants.info.github.io/blog/fast-matrix-eval.html">
+
+
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/pygments/default.min.css">
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="https://moorepants.info.github.io/feeds/all.atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="Categories Atom Feed"
+        href="https://moorepants.info.github.io/feeds/{slug}.atom.xml">  
+  <meta name="description" content="I'm working on using direct collocation and nonlinear programming for system/parameter identification. This requires evaluating a vector of constraint equations and it's sparse Jacobian. When there are thousands of collocation nodes and a fair number of model states the equations need to be evaluated on the order of a …">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="https://moorepants.info.github.io/">
+        <img class="img-fluid rounded" src=https://objects-us-east-1.dream.io/moorepants/headshot.jpg alt="moorepants">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="https://moorepants.info.github.io/">moorepants</a></h1>
+      <p class="text-muted">a websitee</p>
+      <ul class="list-inline">
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/about.html">About</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/portfolio.html">Portfolio</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/interests.html">Interests</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/research.html">Research</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/teaching.html">Teaching</a></li>
+          <li class="list-inline-item"><a href="/blog/">Blog</a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  Vectorized Matrix Evaluation
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2014-08-28T14:11:00-07:00">
+          <i class="fa fa-clock-o"></i>
+          Thu 28 August 2014
+        </li>
+        <li class="list-inline-item">
+          <i class="fa fa-folder-open-o"></i>
+          <a href="https://moorepants.info.github.io/category/misc.html">misc</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fa fa-user-o"></i>
+              <a href="https://moorepants.info.github.io/author/jason-k-moore.html">Jason K. Moore</a>          </li>
+          <li class="list-inline-item">
+            <i class="fa fa-files-o"></i>
+              <a href="https://moorepants.info.github.io/tag/sympy.html">#sympy</a>,               <a href="https://moorepants.info.github.io/tag/cython.html">#cython</a>,               <a href="https://moorepants.info.github.io/tag/fortran.html">#fortran</a>,               <a href="https://moorepants.info.github.io/tag/c.html">#c</a>,               <a href="https://moorepants.info.github.io/tag/matrices.html">#matrices</a>,               <a href="https://moorepants.info.github.io/tag/code-generation.html">#code generation</a>,               <a href="https://moorepants.info.github.io/tag/python.html">#python</a>          </li>
+      </ul>
+    </header>
+
+
+    <div class="content">
+      <p>I'm working on using direct collocation and nonlinear programming for
+system/parameter identification. This requires evaluating a vector of
+constraint equations and it's sparse Jacobian. When there are thousands of
+collocation nodes and a fair number of model states the equations need to be
+evaluated on the order of a million times at each optimization step. I've been
+generating the constraints equations and non-sparse Jacobian entries with SymPy
+and then generating code to evaluate the equations.</p>
+<p>SymPy has a few facilities for generating fast code:</p>
+<ol class="arabic simple">
+<li><tt class="docutils literal">lambdify</tt>: generates Python code and can utilize NumPy</li>
+<li><tt class="docutils literal">autowrap/codegen</tt>: generates and wraps Fortran 95 and C code</li>
+<li><tt class="docutils literal">ufuncify</tt>: same as <tt class="docutils literal">autowrap</tt> but &quot;vectorizes&quot; in the inputs and outputs</li>
+</ol>
+<p>First I create the symbolic form of some sample expressions (these are much
+shorter than my real problems).</p>
+<div class="highlight"><pre><span></span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;a, b, c&#39;</span><span class="p">)</span>
+
+<span class="n">expr_00</span> <span class="o">=</span> <span class="n">a</span><span class="o">**</span><span class="mi">2</span> <span class="o">*</span> <span class="n">sp</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">b</span><span class="p">)</span><span class="o">**</span><span class="n">c</span>
+<span class="n">expr_01</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">tan</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="o">/</span> <span class="n">sp</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span> <span class="o">+</span> <span class="n">c</span><span class="o">**</span><span class="mi">4</span>
+<span class="n">expr_10</span> <span class="o">=</span> <span class="n">a</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">b</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="n">sp</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+<span class="n">expr_11</span> <span class="o">=</span> <span class="p">((</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span> <span class="o">+</span> <span class="n">c</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">))</span> <span class="o">/</span> <span class="n">a</span> <span class="o">*</span> <span class="n">sp</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+
+<span class="n">sym_mat</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">ImmutableDenseMatrix</span><span class="p">([[</span><span class="n">expr_00</span><span class="p">,</span> <span class="n">expr_01</span><span class="p">],</span>
+                                   <span class="p">[</span><span class="n">expr_10</span><span class="p">,</span> <span class="n">expr_11</span><span class="p">]])</span>
+</pre></div>
+<p>Then simply set up some large one dimensional arrays that will be used in the
+expression evaluation.</p>
+<div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">10000</span>
+
+<span class="n">a_vals</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="n">b_vals</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="n">c_vals</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+</pre></div>
+<p>The mathematical expressions are generally generated symbolically with SymPy.
+The easiest method available in SymPy is to use the lambdify function to
+generate a NumPy backed numerical function.</p>
+<p>I'll try two methods:</p>
+<ol class="arabic simple">
+<li>lambdify the matrix and rely on numpy's underlying broadcasting</li>
+<li>lambdify each expression individually</li>
+</ol>
+<div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">lambdify</span><span class="p">((</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">),</span> <span class="n">sym_mat</span><span class="p">,</span> <span class="n">modules</span><span class="o">=</span><span class="s1">&#39;numpy&#39;</span><span class="p">,</span> <span class="n">default_array</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+
+<span class="n">f00</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">lambdify</span><span class="p">((</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">),</span> <span class="n">expr_00</span><span class="p">,</span> <span class="n">modules</span><span class="o">=</span><span class="s1">&#39;numpy&#39;</span><span class="p">,</span> <span class="n">default_array</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">f01</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">lambdify</span><span class="p">((</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">),</span> <span class="n">expr_01</span><span class="p">,</span> <span class="n">modules</span><span class="o">=</span><span class="s1">&#39;numpy&#39;</span><span class="p">,</span> <span class="n">default_array</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">f10</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">lambdify</span><span class="p">((</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">),</span> <span class="n">expr_10</span><span class="p">,</span> <span class="n">modules</span><span class="o">=</span><span class="s1">&#39;numpy&#39;</span><span class="p">,</span> <span class="n">default_array</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">f11</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">lambdify</span><span class="p">((</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">),</span> <span class="n">expr_11</span><span class="p">,</span> <span class="n">modules</span><span class="o">=</span><span class="s1">&#39;numpy&#39;</span><span class="p">,</span> <span class="n">default_array</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">eval_matrix_loop_lambdify</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;This evaluates the lambdified matrix of expressions all in one</span>
+<span class="sd">    shot.&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="n">a_vals</span><span class="p">,</span> <span class="n">b_vals</span><span class="p">,</span> <span class="n">c_vals</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">eval_matrix_loop_lambdify_individual</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;This allocates a 3D array inserts the evaluated lambdified</span>
+<span class="sd">    expressions in the correct entries.&quot;&quot;&quot;</span>
+
+    <span class="n">result</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">((</span><span class="n">n</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+
+    <span class="n">result</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">f00</span><span class="p">(</span><span class="n">a_vals</span><span class="p">,</span> <span class="n">b_vals</span><span class="p">,</span> <span class="n">c_vals</span><span class="p">)</span>
+    <span class="n">result</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">f01</span><span class="p">(</span><span class="n">a_vals</span><span class="p">,</span> <span class="n">b_vals</span><span class="p">,</span> <span class="n">c_vals</span><span class="p">)</span>
+    <span class="n">result</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">f10</span><span class="p">(</span><span class="n">a_vals</span><span class="p">,</span> <span class="n">b_vals</span><span class="p">,</span> <span class="n">c_vals</span><span class="p">)</span>
+    <span class="n">result</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">f11</span><span class="p">(</span><span class="n">a_vals</span><span class="p">,</span> <span class="n">b_vals</span><span class="p">,</span> <span class="n">c_vals</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">result</span>
+</pre></div>
+<p>These two methods are explicit Python functions that use NumPy to do
+exactly what lambdify does under the hood.</p>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">eval_matrix_loop_numpy_broadcast</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;This is the same thing as lambdifying the SymPy matrix.&quot;&quot;&quot;</span>
+
+    <span class="n">result</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span>
+        <span class="p">[[</span><span class="n">a_vals</span><span class="o">**</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">b_vals</span><span class="p">)</span><span class="o">**</span><span class="n">c_vals</span><span class="p">,</span>
+          <span class="n">np</span><span class="o">.</span><span class="n">tan</span><span class="p">(</span><span class="n">b_vals</span><span class="p">)</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">a_vals</span> <span class="o">+</span> <span class="n">b_vals</span><span class="p">)</span> <span class="o">+</span> <span class="n">c_vals</span><span class="o">**</span><span class="mi">4</span><span class="p">],</span>
+         <span class="p">[</span><span class="n">a_vals</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">b_vals</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">c_vals</span><span class="p">),</span>
+          <span class="p">((</span><span class="n">a_vals</span> <span class="o">+</span> <span class="n">b_vals</span> <span class="o">+</span> <span class="n">c_vals</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">a_vals</span> <span class="o">+</span> <span class="n">b_vals</span><span class="p">))</span> <span class="o">/</span> <span class="n">a_vals</span> <span class="o">*</span>
+          <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">b_vals</span><span class="p">)]])</span>
+
+    <span class="k">return</span> <span class="n">result</span>
+
+
+<span class="k">def</span> <span class="nf">eval_matrix_loop_numpy</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;Since the number of matrix elements are typically much smaller than</span>
+<span class="sd">    the number of evaluations, NumPy can be used to compute each of the</span>
+<span class="sd">    Matrix expressions. This is equivalent to the individual lambdified</span>
+<span class="sd">    expressions above.&quot;&quot;&quot;</span>
+
+    <span class="n">result</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">((</span><span class="n">n</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+
+    <span class="n">result</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">a_vals</span><span class="o">**</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">b_vals</span><span class="p">)</span><span class="o">**</span><span class="n">c_vals</span>
+    <span class="n">result</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">tan</span><span class="p">(</span><span class="n">b_vals</span><span class="p">)</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">a_vals</span> <span class="o">+</span> <span class="n">b_vals</span><span class="p">)</span> <span class="o">+</span> <span class="n">c_vals</span><span class="o">**</span><span class="mi">4</span>
+    <span class="n">result</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">a_vals</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">b_vals</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">c_vals</span><span class="p">)</span>
+    <span class="n">result</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">(((</span><span class="n">a_vals</span> <span class="o">+</span> <span class="n">b_vals</span> <span class="o">+</span> <span class="n">c_vals</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">a_vals</span> <span class="o">+</span> <span class="n">b_vals</span><span class="p">))</span> <span class="o">/</span>
+                       <span class="n">a_vals</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">b_vals</span><span class="p">))</span>
+
+    <span class="k">return</span> <span class="n">result</span>
+</pre></div>
+<p>The most basic method of building the result array is a simple loop in
+Python. But this will definitely be the slowest due to Python's overhead.
+But this is what we ultimately want to improve with all these methods that
+rely on fast low level code for the loop (vectorizing). This is the speed
+benchmark. All other method will be compared against it.</p>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">eval_matrix_loop_python</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;This is the standard Python method, i.e. loop through each array and</span>
+<span class="sd">    compute the four matrix entries.&quot;&quot;&quot;</span>
+
+    <span class="n">result</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">((</span><span class="n">n</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="n">result</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">a_vals</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">b_vals</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="o">**</span><span class="n">c_vals</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="n">result</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">tan</span><span class="p">(</span><span class="n">b_vals</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">/</span> <span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">a_vals</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span>
+                           <span class="n">b_vals</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">+</span> <span class="n">c_vals</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">**</span><span class="mi">4</span><span class="p">)</span>
+        <span class="n">result</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">a_vals</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">b_vals</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">c_vals</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+        <span class="n">result</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">(((</span><span class="n">a_vals</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">b_vals</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">c_vals</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">*</span> <span class="p">(</span><span class="n">a_vals</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+                           <span class="o">+</span> <span class="n">b_vals</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span> <span class="o">/</span> <span class="n">a_vals</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">b_vals</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span>
+
+    <span class="k">return</span> <span class="n">result</span>
+</pre></div>
+<p>The next methods utilized hand written C functions and some Cython
+wrappers. I have two flavors. In the Cython one the loop is in Cython and
+the expression eval is in C. In the second one, _c, both the loop and the
+expression evals are in C, with just a light Cython wrapper.</p>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">eval_matrix_loop_cython</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;This is equivalent to the naive Python loop but is implemented in a</span>
+<span class="sd">    lower level as a combination of Cython and C. The loop is in Cython and</span>
+<span class="sd">    the expression eval is in C.&quot;&quot;&quot;</span>
+
+    <span class="n">result</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">((</span><span class="n">n</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+
+    <span class="k">return</span> <span class="n">cython_loop</span><span class="p">(</span><span class="n">a_vals</span><span class="p">,</span> <span class="n">b_vals</span><span class="p">,</span> <span class="n">c_vals</span><span class="p">,</span> <span class="n">result</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">eval_matrix_loop_c</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;This is equivalent to the naive Python loop but is implemented in a</span>
+<span class="sd">    lower level as a combination of Cython and C. The loop and expression</span>
+<span class="sd">    evals are all in C.&quot;&quot;&quot;</span>
+
+    <span class="n">result</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">((</span><span class="n">n</span> <span class="o">*</span> <span class="mi">4</span><span class="p">))</span>
+
+    <span class="k">return</span> <span class="n">c_loop</span><span class="p">(</span><span class="n">a_vals</span><span class="p">,</span> <span class="n">b_vals</span><span class="p">,</span> <span class="n">c_vals</span><span class="p">,</span> <span class="n">result</span><span class="p">)</span>
+</pre></div>
+<p><tt class="docutils literal">sympy.utilities.ufuncify</tt> automatically generates the broadcasting loop in
+the low level. The default settings use Fortran and f2py. Currently, ufuncify
+only supports scalar expressions and an array for the first argument. But I've
+included a modified version in multiindex.py that requires all of the arguments
+to the function to be arrays of equal length.  ufuncify currently doesn't
+support a list of expressions (or sympy matrices) so I ufuncify each
+expression. If all of the expressions were in the low level loop then things
+will likely be faster especially if cse is used and other optimizations.</p>
+<div class="highlight"><pre><span></span><span class="n">g00</span> <span class="o">=</span> <span class="n">ufuncify</span><span class="p">((</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">),</span> <span class="n">expr_00</span><span class="p">,</span> <span class="n">language</span><span class="o">=</span><span class="s1">&#39;F95&#39;</span><span class="p">,</span> <span class="n">backend</span><span class="o">=</span><span class="s1">&#39;f2py&#39;</span><span class="p">,</span>
+               <span class="n">tempdir</span><span class="o">=</span><span class="s1">&#39;ufunc-fortran-code&#39;</span><span class="p">)</span>
+<span class="n">g01</span> <span class="o">=</span> <span class="n">ufuncify</span><span class="p">((</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">),</span> <span class="n">expr_01</span><span class="p">,</span> <span class="n">language</span><span class="o">=</span><span class="s1">&#39;F95&#39;</span><span class="p">,</span> <span class="n">backend</span><span class="o">=</span><span class="s1">&#39;f2py&#39;</span><span class="p">)</span>
+<span class="n">g10</span> <span class="o">=</span> <span class="n">ufuncify</span><span class="p">((</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">),</span> <span class="n">expr_10</span><span class="p">,</span> <span class="n">language</span><span class="o">=</span><span class="s1">&#39;F95&#39;</span><span class="p">,</span> <span class="n">backend</span><span class="o">=</span><span class="s1">&#39;f2py&#39;</span><span class="p">)</span>
+<span class="n">g11</span> <span class="o">=</span> <span class="n">ufuncify</span><span class="p">((</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">),</span> <span class="n">expr_11</span><span class="p">,</span> <span class="n">language</span><span class="o">=</span><span class="s1">&#39;F95&#39;</span><span class="p">,</span> <span class="n">backend</span><span class="o">=</span><span class="s1">&#39;f2py&#39;</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">eval_matrix_loop_ufuncify_f2py</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;This creates the result using the Fortran backend.&quot;&quot;&quot;</span>
+
+    <span class="n">result</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">((</span><span class="n">n</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+
+    <span class="n">result</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">g00</span><span class="p">(</span><span class="n">a_vals</span><span class="p">,</span> <span class="n">b_vals</span><span class="p">,</span> <span class="n">c_vals</span><span class="p">)</span>
+    <span class="n">result</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">g01</span><span class="p">(</span><span class="n">a_vals</span><span class="p">,</span> <span class="n">b_vals</span><span class="p">,</span> <span class="n">c_vals</span><span class="p">)</span>
+    <span class="n">result</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">g10</span><span class="p">(</span><span class="n">a_vals</span><span class="p">,</span> <span class="n">b_vals</span><span class="p">,</span> <span class="n">c_vals</span><span class="p">)</span>
+    <span class="n">result</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">g11</span><span class="p">(</span><span class="n">a_vals</span><span class="p">,</span> <span class="n">b_vals</span><span class="p">,</span> <span class="n">c_vals</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">result</span>
+
+<span class="n">h00</span> <span class="o">=</span> <span class="n">ufuncify</span><span class="p">((</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">),</span> <span class="n">expr_00</span><span class="p">,</span> <span class="n">language</span><span class="o">=</span><span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="n">backend</span><span class="o">=</span><span class="s1">&#39;Cython&#39;</span><span class="p">,</span>
+               <span class="n">tempdir</span><span class="o">=</span><span class="s1">&#39;ufunc-cython-code&#39;</span><span class="p">)</span>
+<span class="n">h01</span> <span class="o">=</span> <span class="n">ufuncify</span><span class="p">((</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">),</span> <span class="n">expr_01</span><span class="p">,</span> <span class="n">language</span><span class="o">=</span><span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="n">backend</span><span class="o">=</span><span class="s1">&#39;Cython&#39;</span><span class="p">)</span>
+<span class="n">h10</span> <span class="o">=</span> <span class="n">ufuncify</span><span class="p">((</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">),</span> <span class="n">expr_10</span><span class="p">,</span> <span class="n">language</span><span class="o">=</span><span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="n">backend</span><span class="o">=</span><span class="s1">&#39;Cython&#39;</span><span class="p">)</span>
+<span class="n">h11</span> <span class="o">=</span> <span class="n">ufuncify</span><span class="p">((</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">),</span> <span class="n">expr_11</span><span class="p">,</span> <span class="n">language</span><span class="o">=</span><span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="n">backend</span><span class="o">=</span><span class="s1">&#39;Cython&#39;</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">eval_matrix_loop_ufuncify_cython</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;This creates the result using the C/Cython backend.&quot;&quot;&quot;</span>
+
+    <span class="n">result</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">((</span><span class="n">n</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+
+    <span class="n">result</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">h00</span><span class="p">(</span><span class="n">a_vals</span><span class="p">,</span> <span class="n">b_vals</span><span class="p">,</span> <span class="n">c_vals</span><span class="p">)</span>
+    <span class="n">result</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">h01</span><span class="p">(</span><span class="n">a_vals</span><span class="p">,</span> <span class="n">b_vals</span><span class="p">,</span> <span class="n">c_vals</span><span class="p">)</span>
+    <span class="n">result</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">h10</span><span class="p">(</span><span class="n">a_vals</span><span class="p">,</span> <span class="n">b_vals</span><span class="p">,</span> <span class="n">c_vals</span><span class="p">)</span>
+    <span class="n">result</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">h11</span><span class="p">(</span><span class="n">a_vals</span><span class="p">,</span> <span class="n">b_vals</span><span class="p">,</span> <span class="n">c_vals</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">result</span>
+</pre></div>
+<p>So these the program is run as so:</p>
+<pre class="literal-block">
+$ python test_eval_matrix.py
+</pre>
+<p>And it prints these results (example timings on my machine):</p>
+<pre class="literal-block">
+Testing results.
+
+Timing the functions.
+
+Timing: cython
+cython time: 0.00300521969795 s
+
+Timing: numpy_broadcast
+numpy_broadcast time: 0.00657413101196 s
+
+Timing: lambdify_individual
+lambdify_individual time: 0.00323091069857 s
+
+Timing: ufuncify_f2py
+ufuncify_f2py time: 0.0021202070713 s
+
+Timing: python
+python time: 0.136805589199 s
+
+Timing: ufuncify_cython
+ufuncify_cython time: 0.00302646199862 s
+
+Timing: numpy
+numpy time: 0.00317755591869 s
+
+Timing: c
+c time: 0.00297607461611 s
+
+Timing: lambdify
+lambdify time: 0.00649729514122 s
+
+Benchmark time: 0.136805589199 s
+
+Ratios of the timings to the benchmark time:
+--------------------------------------------
+
+ufuncify_f2py ratio: 64.5246358484
+c ratio: 45.9684674767
+cython ratio: 45.5226582244
+ufuncify_cython ratio: 45.2031412459
+numpy ratio: 43.0537157172
+lambdify_individual ratio: 42.3427330441
+lambdify ratio: 21.0557757075
+numpy_broadcast ratio: 20.8096840404
+</pre>
+<p>I'm actually using the <tt class="docutils literal">python</tt> loop in my Jacobian evaluation currently so I
+can get ~60X speedup using <cite>ufuncify</cite> with Fortran 95 code. And I can get a 3X
+speedup on my lambify code for the constraints.</p>
+<p>Other notes of interest:</p>
+<ul class="simple">
+<li>Assuming the number of expressions is much greater than the number of
+evaluations, the loop on the expressions with NumPy expression evaluations,
+<tt class="docutils literal">numpy</tt>, is pretty fast and is 2X faster than the default lambdify method.
+You can even speed up lambdify by simply computing each expression in the
+matrix seperately.</li>
+<li>The three Cython/C based methods all give about the same speed.</li>
+<li>I don't know why the Fortran backend is faster. But I've seen a number of
+other benchmarks that show Fortran is generally faster than C for these kinds
+of things.</li>
+<li>I'd like to get the ufuncify_f2py version working for evaluating all the
+matrix entries in the same loop. Common sub expressions may help there too
+depending on whether the Fortran compiler does this or not.</li>
+</ul>
+<p>The working code is avaiable in this gist:</p>
+<p><a class="reference external" href="https://gist.github.com/moorepants/6ef8ab450252789a1411">https://gist.github.com/moorepants/6ef8ab450252789a1411</a></p>
+<div class="section" id="update-september-11-2014">
+<h2>Update (September 11, 2014)</h2>
+<p>My PI was curious how these speeds compare to Matlab, so I wrote two Matlab
+functions that mirror <tt class="docutils literal">eval_matrix_loop_python</tt> and
+<tt class="docutils literal">eval_matrix_loop_numpy</tt>. The code is in the gist and these are the results:</p>
+<pre class="literal-block">
+&gt;&gt; version
+
+ans =
+
+8.3.0.532 (R2014a)
+
+&gt;&gt; test_matrix_eval
+------------------------------------
+Mean time to evaluate the loop 0.1158 s
+Ratio to the Python loop benchmark time is 1.18
+Ratio to the Python vectorized time is 0.03
+------------------------------------
+Mean time to evaluate the vectorized loop 0.0026 s
+Ratio to the Python loop benchmark time is 53.60
+Ratio to the Python vectorized time is 1.24
+------------------------------------
+</pre>
+<p>Matlab beats Python on both functions in this case but not by leaps and bounds.
+Matlab as a JIT since version 6.5 that helps speed up loops and Pure python
+doesn't. There are several JITs for Python (pypy, numba, parakeet, etc). I
+tried a version that grows lists in Python and PyPy and get these results:</p>
+<pre class="literal-block">
+$ python -mtimeit -s &quot;import test_pypy&quot; &quot;test_pypy.eval_matrix_loop_pypy()&quot;
+10 loops, best of 3: 36.2 msec per loop
+
+$ pypy -mtimeit -s &quot;import test_pypy&quot; &quot;test_pypy.eval_matrix_loop_pypy()&quot;
+100 loops, best of 3: 7.2 msec per loop
+</pre>
+<p>This gives an improvement but Matlab still beats PyPy. This isn't a good
+comparison though, as the arrays are preallocated in Matlab and not in the PyPy
+version.</p>
+<p>Matlab's vectorized version is closer in speed to my generated Fortran code.</p>
+<p>Also I created a basic function that ufuncifies a SymPy matrix all in one shot.
+It even uses CSE to improve things. It automatically creates what I did
+manually for the Cython files. New timings show the obvious, that it gives the
+same results and the manual one. But for large matrices, the compile times are
+significantly reduced. Now I need to make that function generate Fortran code
+and I think that will be the fastest option.</p>
+<pre class="literal-block">
+Testing results.
+
+Timing the functions.
+
+Timing: cython
+cython time: 0.00288254904747 s
+
+Timing: numpy_broadcast
+numpy_broadcast time: 0.00597401690483 s
+
+Timing: lambdify_individual
+lambdify_individual time: 0.00303873364131 s
+
+Timing: ufuncify_f2py
+ufuncify_f2py time: 0.00201614236832 s
+
+Timing: python
+python time: 0.119000189304 s
+
+Timing: ufuncify_cython
+ufuncify_cython time: 0.00293522365888 s
+
+Timing: numpy
+numpy time: 0.00303197193146 s
+
+Timing: c
+c time: 0.0029081483682 s
+
+Timing: lambdify
+lambdify time: 0.00599523711205 s
+
+Timing: ufuncify_matrix_cython
+ufuncify_matrix_cython time: 0.00292766968409 s
+
+Benchmark time: 0.119000189304 s
+
+Ratios of the timings to the benchmark time:
+--------------------------------------------
+
+ufuncify_f2py ratio: 59.0237034717
+cython ratio: 41.2829711983
+c ratio: 40.9195729508
+ufuncify_matrix_cython ratio: 40.6467266273
+ufuncify_cython ratio: 40.5421198294
+numpy ratio: 39.2484468836
+lambdify_individual ratio: 39.1611122761
+numpy_broadcast ratio: 19.9196271454
+lambdify ratio: 19.8491214076
+</pre>
+<p>After all this, I'm not sure this is the best benchmark. I really need a
+benchmark that includes varying the size of the matrices and the expression
+length and complexity to find the best solution.</p>
+</div>
+
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+      <li class="list-inline-item"><a href="https://moorepants.info.github.io/authors.html">Authors</a></li>
+    <li class="list-inline-item"><a href="https://moorepants.info.github.io/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="https://moorepants.info.github.io/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="https://moorepants.info.github.io/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>
+<div class="row">
+  <div class="col-sm-4 mx-auto text-center text-muted" >
+    <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+      <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+    </a>
+    <br />
+    This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+  </div>
+</div>    </div>
+  </footer>
+</body>
+
+</html>

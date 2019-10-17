@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  Notebook Entry | moorepants
+</title>
+  <link rel="canonical" href="https://moorepants.info.github.io/blog/notebook-2013-08-22.html">
+
+
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/pygments/default.min.css">
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="https://moorepants.info.github.io/feeds/all.atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="Categories Atom Feed"
+        href="https://moorepants.info.github.io/feeds/{slug}.atom.xml">  
+  <meta name="description" content="Today's task list: [x] Work on parsing the walking data [x] SymPy dev [x] Review Tarun's code [x] Meet with Tarun [x] Get pydy_viz js tests working with Travis [x] Go over walking controller with Sandy [] Make generic settings on the lab website [] Work on the website theme [] Setup a …">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="https://moorepants.info.github.io/">
+        <img class="img-fluid rounded" src=https://objects-us-east-1.dream.io/moorepants/headshot.jpg alt="moorepants">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="https://moorepants.info.github.io/">moorepants</a></h1>
+      <p class="text-muted">a websitee</p>
+      <ul class="list-inline">
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/about.html">About</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/portfolio.html">Portfolio</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/interests.html">Interests</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/research.html">Research</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/teaching.html">Teaching</a></li>
+          <li class="list-inline-item"><a href="/blog/">Blog</a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  Notebook Entry
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2013-08-22T15:00:00-07:00">
+          <i class="fa fa-clock-o"></i>
+          Thu 22 August 2013
+        </li>
+        <li class="list-inline-item">
+          <i class="fa fa-folder-open-o"></i>
+          <a href="https://moorepants.info.github.io/category/notebook.html">notebook</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fa fa-user-o"></i>
+              <a href="https://moorepants.info.github.io/author/jason-k-moore.html">Jason K. Moore</a>          </li>
+          <li class="list-inline-item">
+            <i class="fa fa-files-o"></i>
+              <a href="https://moorepants.info.github.io/tag/notebook.html">#notebook</a>,               <a href="https://moorepants.info.github.io/tag/system-identification.html">#system identification</a>,               <a href="https://moorepants.info.github.io/tag/walking.html">#walking</a>,               <a href="https://moorepants.info.github.io/tag/gsoc.html">#gsoc</a>,               <a href="https://moorepants.info.github.io/tag/sympy.html">#sympy</a>,               <a href="https://moorepants.info.github.io/tag/bmd2013.html">#bmd2013</a>          </li>
+      </ul>
+    </header>
+
+
+    <div class="content">
+      <p>Today's task list:</p>
+<ul class="simple">
+<li>[x] Work on parsing the walking data</li>
+<li>[x] SymPy dev</li>
+<li>[x] Review Tarun's code</li>
+<li>[x] Meet with Tarun</li>
+<li>[x] Get pydy_viz js tests working with Travis</li>
+<li>[x] Go over walking controller with Sandy</li>
+<li>[] Make generic settings on the lab website</li>
+<li>[] Work on the website theme</li>
+<li>[] Setup a data backup for the website</li>
+<li>[] Review the TODO items on the Yeadon paper</li>
+<li>[] Run variations in guesses for structural id</li>
+<li>[x] Work on BMD papers</li>
+<li>[] Book flight for BMD</li>
+<li>[] Book hotel for BMD</li>
+<li>[] Post update about BMD copyright</li>
+</ul>
+<div class="section" id="walking-system-id">
+<h2>Walking System ID</h2>
+<p>Latest maths notebook: <a class="reference external" href="http://nbviewer.ipython.org/6226636">http://nbviewer.ipython.org/6226636</a>
+Latest data analysis notebook: <a class="reference external" href="http://nbviewer.ipython.org/6311280">http://nbviewer.ipython.org/6311280</a></p>
+<p>The sparse methods for linear least squares in scipy are significantly slower
+than the normal method and only give approximate solutions. The lsqr method
+took 5 minutes as opposed to 30 seconds for the example data set. My A matrix
+is very sparse, so I thought the sparse methods would be faster. I probably
+need to construct the A matrix as a sparse matrix data type:</p>
+<p><a class="reference external" href="http://docs.scipy.org/doc/scipy/reference/sparse.html">http://docs.scipy.org/doc/scipy/reference/sparse.html</a></p>
+<p>For the sparse algorithms to work.</p>
+<p>I went over the project with Sandy and she's going to start thinking about how
+to excite the subject with lateral random motions while they are walking so we
+can obtain richer datasets.</p>
+</div>
+<div class="section" id="bmd-papers">
+<h2>BMD Papers</h2>
+<p>Work has started on the Whipple ID paper:</p>
+<p><a class="reference external" href="https://github.com/moorepants/BMD2013/blob/master/whipple-system-id/paper/moore-hubbard-2013-whipple-id-bmd-2013.tex">https://github.com/moorepants/BMD2013/blob/master/whipple-system-id/paper/moore-hubbard-2013-whipple-id-bmd-2013.tex</a></p>
+</div>
+<div class="section" id="sympy-dev">
+<h2>SymPy Dev</h2>
+<p>We've about got tests runing on the NiPy buildbot for slow, no cache, and
+external dependencies. If we can figure out how to run them on each pull
+request commit, then we can remove the slow downs from Travis (they have a 50
+minute time limit). But the solution may still be to break up the test suite.</p>
+<p>Test script for buildbot:</p>
+<p><a class="reference external" href="https://github.com/sympy/sympy/pull/2403">https://github.com/sympy/sympy/pull/2403</a></p>
+<p>Trying to reduce the time on Travis with matplotlib deps:</p>
+<p><a class="reference external" href="https://github.com/sympy/sympy/pull/2401">https://github.com/sympy/sympy/pull/2401</a></p>
+</div>
+<div class="section" id="gsoc">
+<h2>GSoC</h2>
+<p>Tarun's going to start writing the javascript source for his single Canvas
+class. Everything looks pretty good and we got jasmine test mostly running on
+Travis:</p>
+<p><a class="reference external" href="https://github.com/PythonDynamics/pydy-viz/pull/31">https://github.com/PythonDynamics/pydy-viz/pull/31</a></p>
+</div>
+
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+      <li class="list-inline-item"><a href="https://moorepants.info.github.io/authors.html">Authors</a></li>
+    <li class="list-inline-item"><a href="https://moorepants.info.github.io/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="https://moorepants.info.github.io/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="https://moorepants.info.github.io/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>
+<div class="row">
+  <div class="col-sm-4 mx-auto text-center text-muted" >
+    <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+      <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+    </a>
+    <br />
+    This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+  </div>
+</div>    </div>
+  </footer>
+</body>
+
+</html>

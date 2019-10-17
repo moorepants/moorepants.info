@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  Notebook Entry | moorepants
+</title>
+  <link rel="canonical" href="https://moorepants.info.github.io/blog/notebook-2013-09-12.html">
+
+
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/pygments/default.min.css">
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="https://moorepants.info.github.io/feeds/all.atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="Categories Atom Feed"
+        href="https://moorepants.info.github.io/feeds/{slug}.atom.xml">  
+  <meta name="description" content="Today's task list: [] Work on BMD papers [~] Do CITI course [x] Work on parsing the walking data [x] Working on wrapping Ton's walking models [] Book hotel for BMD [] Post update about BMD copyright [] Finish reading the van der Kooij paper [] See if our controller can drive an OpenSim model or …">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="https://moorepants.info.github.io/">
+        <img class="img-fluid rounded" src=https://objects-us-east-1.dream.io/moorepants/headshot.jpg alt="moorepants">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="https://moorepants.info.github.io/">moorepants</a></h1>
+      <p class="text-muted">a websitee</p>
+      <ul class="list-inline">
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/about.html">About</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/portfolio.html">Portfolio</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/interests.html">Interests</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/research.html">Research</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/teaching.html">Teaching</a></li>
+          <li class="list-inline-item"><a href="/blog/">Blog</a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  Notebook Entry
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2013-09-12T17:10:37-07:00">
+          <i class="fa fa-clock-o"></i>
+          Thu 12 September 2013
+        </li>
+        <li class="list-inline-item">
+          <i class="fa fa-folder-open-o"></i>
+          <a href="https://moorepants.info.github.io/category/notebook.html">notebook</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fa fa-user-o"></i>
+              <a href="https://moorepants.info.github.io/author/jason-k-moore.html">Jason K. Moore</a>          </li>
+          <li class="list-inline-item">
+            <i class="fa fa-files-o"></i>
+              <a href="https://moorepants.info.github.io/tag/notebook.html">#notebook</a>,               <a href="https://moorepants.info.github.io/tag/swig.html">#swig</a>,               <a href="https://moorepants.info.github.io/tag/system-identification.html">#system identification</a>,               <a href="https://moorepants.info.github.io/tag/walking.html">#walking</a>,               <a href="https://moorepants.info.github.io/tag/python.html">#python</a>          </li>
+      </ul>
+    </header>
+
+
+    <div class="content">
+      <p>Today's task list:</p>
+<ul class="simple">
+<li>[] Work on BMD papers</li>
+<li>[~] Do CITI course</li>
+<li>[x] Work on parsing the walking data</li>
+<li>[x] Working on wrapping Ton's walking models</li>
+<li>[] Book hotel for BMD</li>
+<li>[] Post update about BMD copyright</li>
+<li>[] Finish reading the van der Kooij paper</li>
+<li>[] See if our controller can drive an OpenSim model or Ton's 2D model</li>
+<li>[] Wrap the HBM C code</li>
+<li>[] Duplicate website backups on a S3 bucket</li>
+<li>[] Work on the website theme</li>
+<li>[] Make generic settings on the lab website</li>
+<li>[] Review the TODO items on the Yeadon paper</li>
+<li>[] Do FERPA course</li>
+<li>[] Write up database proposal</li>
+<li>[] Try out CSympy with some mechanics problems</li>
+<li>[] Email Mounir about teaching</li>
+</ul>
+<div class="section" id="walking-system-id">
+<h2>Walking System ID</h2>
+<p>I got Ljung's 1999 book in the mail last night and started reading it. After
+some bits on linear regression with multiple prediction variables I thought I
+could rewrite my code to generate the design matrix in the normal equations
+more generally. But I didn't really work out, here's some math about it.</p>
+<p>There is another way to formulate this problem which is described in Ljung 1999
+on page 561 for the same set of regressors for each predictor variable. If we
+define the \( q \) predictors, \( y(t) \), as linear functions of the
+unknowns, \( \theta \), and the regressors, \( \varphi \) then we get an
+equation that looks like this:</p>
+\[
+  y(t) = \mathbf{\theta}^T\varphi(t)
+\]<p>where \( y(t) \) is a \( q \times 1 \) vector, \( \mathbf{\theta} \) is a
+\( p+1 \times q \) matrix of the unknown parameters, and \( \varphi \) are
+the regressors which are a vector \( p+1 \times 1 \). Using our previous
+variables for the controls and sensors these look like:</p>
+\[
+y(t) =
+\begin{bmatrix}
+  m_{m1} \\\\
+  \vdots \\\\
+  m_{mq}
+\end{bmatrix}
+\]\[
+\mathbf{\theta}^T=
+  \begin{bmatrix}
+    k_{11} & k_{12} & \ldots & k_{1p} & m^*_1 \\\\
+    \vdots &        & \vdots &        &       \\\\
+    k_{q1} & k_{q2} & \ldots & k_{qp} & m^*_q
+  \end{bmatrix}
+\]\[
+  \varphi(t)=
+  \begin{bmatrix}
+    s_0 \\\\
+    s_1 \\\\
+    \vdots \\\\
+    s_{p-1} \\\\
+    1
+  \end{bmatrix}
+\]</div>
+<div class="section" id="gait-2d">
+<h2>Gait 2D</h2>
+<p>Ton shared a 2D walking model with us. Obinna's been using it for his project
+and needed to recompile the mex files for his OS instead of Win32. Ton sent us
+the source for the project which is based some some Autolev generated models,
+the C code generated from Autolev, and the mex wrapper for Matlab. We started
+trying to wrap the code with SWIG so we could use it in other languages and it
+wasn't too hard. First we created a <cite>.i</cite> file for SWIG which basically
+contains a copy of the header file:</p>
+<pre class="literal-block">
+/* gait2d.i */
+%module gait2d
+%{
+#define NDOF 9
+#define NMOM 6
+#define NSTICK 10
+
+typedef struct {
+
+  double TrunkMass, TrunkInertia, TrunkCMy;
+  double ThighMass, ThighInertia, ThighCMy, ThighLen;
+  double ShankMass, ShankInertia, ShankCMy, ShankLen;
+  double FootMass, FootInertia, FootCMx, FootCMy;
+
+  double ContactY;
+  double ContactHeelX, ContactToeX;
+  double ContactStiff, ContactDamp, ContactY0, ContactV0, ContactFric;
+
+  double MinAngle[NMOM], MaxAngle[NMOM];
+  double JointK[NMOM], JointD0[NMOM], JointB[NMOM];
+  double HillA;
+  double Gmax;
+
+} param_struct;
+
+void gait2d_dyn(param_struct* par,
+  double q[NDOF],
+  double qd[NDOF],
+  double qdd[NDOF],
+  double mom[NMOM],
+  double Zero[NDOF],
+  double dz_dq[NDOF][NDOF],
+  double dz_dqd[NDOF][NDOF],
+  double dz_dqdd[NDOF][NDOF],
+  double dz_dmom[NDOF][NMOM],
+  double GRF[4],
+  double dGRF_dq[4][NDOF],
+  double dGRF_dqd[4][NDOF],
+  double Stick[NSTICK][2], double tmp[16]);
+
+void gait2d_acc(param_struct* par,
+  double q[NDOF],
+  double qd[NDOF],
+  double qdd[NDOF],
+  double acc[42],
+  double dacc_dq[42][NDOF],
+  double dacc_dqd[42][NDOF],
+  double dacc_dqdd[42][NDOF]);
+%}
+
+#define NDOF 9
+#define NMOM 6
+#define NSTICK 10
+
+typedef struct {
+
+  double TrunkMass, TrunkInertia, TrunkCMy;
+  double ThighMass, ThighInertia, ThighCMy, ThighLen;
+  double ShankMass, ShankInertia, ShankCMy, ShankLen;
+  double FootMass, FootInertia, FootCMx, FootCMy;
+
+  double ContactY;
+  double ContactHeelX, ContactToeX;
+  double ContactStiff, ContactDamp, ContactY0, ContactV0, ContactFric;
+
+  double MinAngle[NMOM], MaxAngle[NMOM];
+  double JointK[NMOM], JointD0[NMOM], JointB[NMOM];
+  double HillA;
+  double Gmax;
+
+} param_struct;
+
+void gait2d_dyn(param_struct* par,
+  double q[NDOF],
+  double qd[NDOF],
+  double qdd[NDOF],
+  double mom[NMOM],
+  double Zero[NDOF],
+  double dz_dq[NDOF][NDOF],
+  double dz_dqd[NDOF][NDOF],
+  double dz_dqdd[NDOF][NDOF],
+  double dz_dmom[NDOF][NMOM],
+  double GRF[4],
+  double dGRF_dq[4][NDOF],
+  double dGRF_dqd[4][NDOF],
+  double Stick[NSTICK][2], double tmp[16]);
+
+void gait2d_acc(param_struct* par,
+  double q[NDOF],
+  double qd[NDOF],
+  double qdd[NDOF],
+  double acc[42],
+  double dacc_dq[42][NDOF],
+  double dacc_dqd[42][NDOF],
+  double dacc_dqdd[42][NDOF]);
+</pre>
+<p>Then I run these commands:</p>
+<pre class="literal-block">
+swig -python gait2d.i
+gcc -fPIC -c gait2d_acc.c -c gait2d_dyn.c -c gait2d_wrap.c -I /usr/include/python2.7
+ld -shared gait2d_acc.o gait2d_dyn.o gait2d_wrap.o -o _gait2d.so
+</pre>
+<p>Then in Python you can import the autogenerated module with:</p>
+<pre class="literal-block">
+&gt;&gt;&gt; import gait2d
+</pre>
+<p>The two functions require many arguments but only some are acutually inputs. The
+others are technically outputs. I'm not sure how to deal with that yet. Maybe I
+need to pass in empty arrays.</p>
+<p>Looks like using the numpy.i can help make mappings from Python data types to
+the ones that the c code expects:</p>
+<p><a class="reference external" href="http://docs.scipy.org/doc/numpy/reference/swig.interface-file.html">http://docs.scipy.org/doc/numpy/reference/swig.interface-file.html</a></p>
+<p>I also started going through this book:</p>
+<p><a class="reference external" href="http://c.learncodethehardway.org/book/">http://c.learncodethehardway.org/book/</a></p>
+<p>to bring back memories of my CS 101 class in undergrad. I'm managed to avoid C
+since then, but now's a good as time as any to get back into it.</p>
+</div>
+
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+      <li class="list-inline-item"><a href="https://moorepants.info.github.io/authors.html">Authors</a></li>
+    <li class="list-inline-item"><a href="https://moorepants.info.github.io/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="https://moorepants.info.github.io/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="https://moorepants.info.github.io/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>
+<div class="row">
+  <div class="col-sm-4 mx-auto text-center text-muted" >
+    <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+      <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+    </a>
+    <br />
+    This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+  </div>
+</div>    </div>
+  </footer>
+</body>
+
+</html>

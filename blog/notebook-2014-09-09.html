@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  Notebook Entry | moorepants
+</title>
+  <link rel="canonical" href="https://moorepants.info.github.io/blog/notebook-2014-09-09.html">
+
+
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/pygments/default.min.css">
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="https://moorepants.info.github.io/feeds/all.atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="Categories Atom Feed"
+        href="https://moorepants.info.github.io/feeds/{slug}.atom.xml">  
+  <meta name="description" content="AIO for September 9, 2014 Last week's accomplishments Objectives from last week: Fix the permissions issues for offline backups for the HMC website. -- Done, the backups are now collecting on my server twice a month. See https://github.com/csu-hmc/hmc.csuohio.edu#backup for details of the implementation. Implement …">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="https://moorepants.info.github.io/">
+        <img class="img-fluid rounded" src=https://objects-us-east-1.dream.io/moorepants/headshot.jpg alt="moorepants">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="https://moorepants.info.github.io/">moorepants</a></h1>
+      <p class="text-muted">a websitee</p>
+      <ul class="list-inline">
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/about.html">About</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/portfolio.html">Portfolio</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/interests.html">Interests</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/research.html">Research</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/teaching.html">Teaching</a></li>
+          <li class="list-inline-item"><a href="/blog/">Blog</a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  Notebook Entry
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2014-09-09T09:48:30-07:00">
+          <i class="fa fa-clock-o"></i>
+          Tue 09 September 2014
+        </li>
+        <li class="list-inline-item">
+          <i class="fa fa-folder-open-o"></i>
+          <a href="https://moorepants.info.github.io/category/notebook.html">notebook</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fa fa-user-o"></i>
+              <a href="https://moorepants.info.github.io/author/jason-k-moore.html">Jason K. Moore</a>          </li>
+          <li class="list-inline-item">
+            <i class="fa fa-files-o"></i>
+              <a href="https://moorepants.info.github.io/tag/notebook.html">#notebook</a>,               <a href="https://moorepants.info.github.io/tag/aio.html">#aio</a>          </li>
+      </ul>
+    </header>
+
+
+    <div class="content">
+      <p>AIO for September 9, 2014</p>
+<div class="section" id="last-week-s-accomplishments">
+<h2>Last week's accomplishments</h2>
+<p>Objectives from last week:</p>
+<ul class="simple">
+<li>Fix the permissions issues for offline backups for the HMC website. -- Done,
+the backups are now collecting on my server twice a month. See
+<a class="reference external" href="https://github.com/csu-hmc/hmc.csuohio.edu#backup">https://github.com/csu-hmc/hmc.csuohio.edu#backup</a> for details of the
+implementation.</li>
+<li>Implement the 50X faster constraints Jacobian evaluation for the pendulum id
+problem. -- Done, didn't quite get 50x increase, but iterations for 6000
+nodes are down to 1 second an iteration. Now IPOPT is the slow part and the
+function evaluations are in general faster. There is an interesting thread at
+<a class="reference external" href="http://list.coin-or.org/pipermail/ipopt/2014-September/003817.html">http://list.coin-or.org/pipermail/ipopt/2014-September/003817.html</a> discussing
+how to improve the IPOPT speed.</li>
+<li>Write the draft of the raw data section in the perturbed data paper. -- Done,
+see <a class="reference external" href="https://github.com/csu-hmc/perturbed-data-paper/blob/master/paper.tex">https://github.com/csu-hmc/perturbed-data-paper/blob/master/paper.tex</a>.</li>
+<li>Add more detail to direct collocation id outline. -- Done,
+<a class="reference external" href="https://github.com/csu-hmc/inverted-pendulum-sys-id-paper">https://github.com/csu-hmc/inverted-pendulum-sys-id-paper</a>.</li>
+<li>Write an introduction to the direct collocation id paper. -- Done,
+<a class="reference external" href="https://github.com/csu-hmc/inverted-pendulum-sys-id-paper/blob/master/paper.tex">https://github.com/csu-hmc/inverted-pendulum-sys-id-paper/blob/master/paper.tex</a>.</li>
+<li>Fix all remaining issues on the yeadon paper and submit to F1000Research. --
+Done, see <a class="reference external" href="https://github.com/chrisdembia/python-yeadon-paper/pull/30">https://github.com/chrisdembia/python-yeadon-paper/pull/30</a>.</li>
+<li>Create a figshare item for the raw bicycle data. -- Done, I've created a
+fileset for each the trial data and the calibration data.</li>
+<li>Touch base with Luke on visiting scholar idea. -- Done, sent him an email,
+but no response.</li>
+<li>Think of the exercises I will use for teaching git/github in the open source
+software night. -- Done, developed the teaching plans more in the google doc.</li>
+<li>Advertise for open source software night. -- Done, sent emails to ME profs
+and the CS department plus posted flyers on the ME floor in Stillwell.</li>
+</ul>
+<p>Other things I did:</p>
+<ul class="simple">
+<li>Submitted a patch to SymPy about the Fortran printers:
+<a class="reference external" href="https://github.com/sympy/sympy/pull/7968">https://github.com/sympy/sympy/pull/7968</a></li>
+<li>Helped Ton with Git/Github.</li>
+<li>Sat in on Ton's class.</li>
+<li>Submitted a PR to yeadon so you can load config files:
+<a class="reference external" href="https://github.com/chrisdembia/yeadon/pull/105">https://github.com/chrisdembia/yeadon/pull/105</a></li>
+<li>Move direct collocation system id code into its on repository:
+<a class="reference external" href="https://github.com/csu-hmc/inverted-pendulum-sys-id">https://github.com/csu-hmc/inverted-pendulum-sys-id</a>. I used this method:
+<a class="reference external" href="http://stackoverflow.com/a/359759/467314">http://stackoverflow.com/a/359759/467314</a>, as the simpler looking filter
+branch methods seemed to leave all the history in the new repo instead of
+just the commits related to the files in the repo.</li>
+</ul>
+</div>
+<div class="section" id="last-week-s-issues">
+<h2>Last week's issues</h2>
+<ul class="simple">
+<li>Finish table in the steer torque paper. Update the spreadsheet and insert
+into the latex doc. -- Did not get to this, but will be priority for this
+week.</li>
+<li>Add in torque wrench section into the steer torque paper. -- Same as above.</li>
+</ul>
+</div>
+<div class="section" id="this-week-s-objectives">
+<h2>This week's objectives</h2>
+<ul class="simple">
+<li>[1 hour] Make a blog post explaining how I setup the Plone offsite backups.</li>
+<li>[0.5 hour] Make sure that the hmc.csuohio.edu offsite backup can be restored.</li>
+<li>[3 hours] Finish table in the steer torque paper. Update the spreadsheet and
+insert into the latex doc.</li>
+<li>[2 hours] Add in torque wrench section into the steer torque paper.</li>
+<li>[0.5 hour] Make a figshare dataset for the torque wrench experiments csv
+file.</li>
+<li>[4 hours] Send Mont a first draft of the steer torque paper for review (by
+Saturday).</li>
+<li>[0.5 hour] Try to upload the davis instrumented bicycle h5 file (with raw and
+processed data) to Figshare.</li>
+<li>[1 hour] Write and introduction to the bicycle data paper.</li>
+<li>[1 hour] Write a section about the raw data in the bicycle data paper.</li>
+<li>[2 hours] Add README's and any other needed data to the davis instrumented
+bicycle raw data sets and make public.</li>
+<li>[4 hours] Prepare materials for the IEEE open source night (by Friday).</li>
+<li>[0.5 hour] Send out installation instructions for IEEE open source night (by
+Thursday).</li>
+<li>[2 hours] Pick a talk topic for the seminar and draft an outline of the talk.</li>
+<li>[1 hour] Write system description section in the inverted pendulum paper.</li>
+<li>[5 hours] Implement a ufuncify for vectorized matrix evaluations for the
+inverted pendulum direct id code. The compile times currently are prohibitive
+for more than two links.</li>
+<li>[1 hour] Write meta data description in perturbed walking data paper.</li>
+<li>[2 hours] Draft a plan/outline for a new research statement for prof
+applications.</li>
+</ul>
+</div>
+
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+      <li class="list-inline-item"><a href="https://moorepants.info.github.io/authors.html">Authors</a></li>
+    <li class="list-inline-item"><a href="https://moorepants.info.github.io/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="https://moorepants.info.github.io/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="https://moorepants.info.github.io/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>
+<div class="row">
+  <div class="col-sm-4 mx-auto text-center text-muted" >
+    <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+      <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+    </a>
+    <br />
+    This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+  </div>
+</div>    </div>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  Notebook Entry | moorepants
+</title>
+  <link rel="canonical" href="https://moorepants.info.github.io/blog/notebook-2013-09-16.html">
+
+
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/pygments/default.min.css">
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="https://moorepants.info.github.io/feeds/all.atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="Categories Atom Feed"
+        href="https://moorepants.info.github.io/feeds/{slug}.atom.xml">  
+  <meta name="description" content="Today's task list: [x] Review Tarun's and Sachin's PRs [x] Work on the website content and structure [] Work on BMD papers [~] Do CITI course [x] Work on parsing the walking data [x] Submit PyCon proposals [] Working on wrapping Ton's walking models [] Book hotel for BMD [] Post update about BMD copyright …">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="https://moorepants.info.github.io/">
+        <img class="img-fluid rounded" src=https://objects-us-east-1.dream.io/moorepants/headshot.jpg alt="moorepants">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="https://moorepants.info.github.io/">moorepants</a></h1>
+      <p class="text-muted">a websitee</p>
+      <ul class="list-inline">
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/about.html">About</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/portfolio.html">Portfolio</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/interests.html">Interests</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/research.html">Research</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/teaching.html">Teaching</a></li>
+          <li class="list-inline-item"><a href="/blog/">Blog</a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  Notebook Entry
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2013-09-16T14:37:20-07:00">
+          <i class="fa fa-clock-o"></i>
+          Mon 16 September 2013
+        </li>
+        <li class="list-inline-item">
+          <i class="fa fa-folder-open-o"></i>
+          <a href="https://moorepants.info.github.io/category/notebook.html">notebook</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fa fa-user-o"></i>
+              <a href="https://moorepants.info.github.io/author/jason-k-moore.html">Jason K. Moore</a>          </li>
+          <li class="list-inline-item">
+            <i class="fa fa-files-o"></i>
+              <a href="https://moorepants.info.github.io/tag/notebook.html">#notebook</a>,               <a href="https://moorepants.info.github.io/tag/pycon2014.html">#pycon2014</a>,               <a href="https://moorepants.info.github.io/tag/system-identification.html">#system identification</a>,               <a href="https://moorepants.info.github.io/tag/walking.html">#walking</a>          </li>
+      </ul>
+    </header>
+
+
+    <div class="content">
+      <p>Today's task list:</p>
+<ul class="simple">
+<li>[x] Review Tarun's and Sachin's PRs</li>
+<li>[x] Work on the website content and structure</li>
+<li>[] Work on BMD papers</li>
+<li>[~] Do CITI course</li>
+<li>[x] Work on parsing the walking data</li>
+<li>[x] Submit PyCon proposals</li>
+<li>[] Working on wrapping Ton's walking models</li>
+<li>[] Book hotel for BMD</li>
+<li>[] Post update about BMD copyright</li>
+<li>[] Finish reading the van der Kooij paper</li>
+<li>[] See if our controller can drive an OpenSim model or Ton's 2D model</li>
+<li>[] Wrap the HBM C code</li>
+<li>[] Duplicate website backups on a S3 bucket</li>
+<li>[] Work on the website theme</li>
+<li>[] Make generic settings on the lab website</li>
+<li>[] Review the TODO items on the Yeadon paper</li>
+<li>[] Do FERPA course, due Sept 20</li>
+<li>[] Write up database proposal</li>
+<li>[] Try out CSympy with some mechanics problems</li>
+<li>[] Email Mounir about teaching</li>
+</ul>
+<div class="section" id="system-identification">
+<h2>System Identification</h2>
+<p>I've been using sys id for a long time now and learnt it on my own for my
+dissertation work, but I've hit enough walls in just being a user that I really
+need to start understanding what the hell is going on. I like Ljung's book
+&quot;System Identification: Theory for the User&quot;, but it think the title would
+better be &quot;System Identification: Theory for the Theorist&quot; because he doesn't
+show you how to actually implement things computationally, which is what a
+&quot;user&quot; really needs. So I'm going to work through his book from page one and
+come up with the computations for the main methods in a series of IPython
+notebooks. I hope that my knowledge will then be sufficient to design a general
+system id package in Python and actually be readable (unlike the system id
+toolbox in Matlab).</p>
+<p>The repo is at:</p>
+<p><a class="reference external" href="https://github.com/moorepants/ljung1999">https://github.com/moorepants/ljung1999</a></p>
+<p>And the computations for Chapter 1 have been started here:</p>
+<p><a class="reference external" href="http://nbviewer.ipython.org/urls/raw.github.com/moorepants/ljung1999/master/Chapter_01.ipynb">http://nbviewer.ipython.org/urls/raw.github.com/moorepants/ljung1999/master/Chapter_01.ipynb</a></p>
+</div>
+<div class="section" id="walking-system-identification">
+<h2>Walking System Identification</h2>
+<p>Over the weekend I implemented a method to zero out the identification of
+particular gains in the gain matrix (closing issue
+<a class="reference external" href="https://github.com/moorepants/DynamicistToolKit/issues/5">https://github.com/moorepants/DynamicistToolKit/issues/5</a>).</p>
+<p>The results are here for the example data:</p>
+<p><a class="reference external" href="http://nbviewer.ipython.org/urls/raw.github.com/moorepants/walking-sys-id/cfc1143c684ce0e6d1cc4daed0d96f3bc6a5f3d5/src/control_solver_example.ipynb">http://nbviewer.ipython.org/urls/raw.github.com/moorepants/walking-sys-id/cfc1143c684ce0e6d1cc4daed0d96f3bc6a5f3d5/src/control_solver_example.ipynb</a></p>
+<p>I'm not sure why the sum of the residuals is being returned as zero from
+numpu.linalg.lstsq. It seems like the A matrix becomes rank deficient once I
+delete columns which correspond to different feedback loops. It also seems like
+the gains that I don't zero out have similar profiles to the previous full gain
+matrix calculations.</p>
+<p>I also found some bugs and spent a long time working on it today. Will report
+more tomorrow.</p>
+</div>
+<div class="section" id="pycon-2014">
+<h2>PYCON 2014</h2>
+<p>I submitted a PyDy tutorial and a python for human walking data analysis for
+PyCon 2014 in Montreal. We'll see what happens...</p>
+</div>
+
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+      <li class="list-inline-item"><a href="https://moorepants.info.github.io/authors.html">Authors</a></li>
+    <li class="list-inline-item"><a href="https://moorepants.info.github.io/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="https://moorepants.info.github.io/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="https://moorepants.info.github.io/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>
+<div class="row">
+  <div class="col-sm-4 mx-auto text-center text-muted" >
+    <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+      <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+    </a>
+    <br />
+    This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+  </div>
+</div>    </div>
+  </footer>
+</body>
+
+</html>

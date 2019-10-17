@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  Notebook Entry | moorepants
+</title>
+  <link rel="canonical" href="https://moorepants.info.github.io/blog/notebook-2014-08-07.html">
+
+
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/pygments/default.min.css">
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="https://moorepants.info.github.io/feeds/all.atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="Categories Atom Feed"
+        href="https://moorepants.info.github.io/feeds/{slug}.atom.xml">  
+  <meta name="description" content="AOI for July 31 to August 7 A Read and organized Tim/Jack's predictive sim code. Completed an opensim planar walking model that matches Gait2D. Discussed dynamics software with Sherm. Mentored GSoC students and prepared for final two weeks. Contributed to a System class to help Tarun move forward. Met …">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="https://moorepants.info.github.io/">
+        <img class="img-fluid rounded" src=https://objects-us-east-1.dream.io/moorepants/headshot.jpg alt="moorepants">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="https://moorepants.info.github.io/">moorepants</a></h1>
+      <p class="text-muted">a websitee</p>
+      <ul class="list-inline">
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/about.html">About</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/portfolio.html">Portfolio</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/interests.html">Interests</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/research.html">Research</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/teaching.html">Teaching</a></li>
+          <li class="list-inline-item"><a href="/blog/">Blog</a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  Notebook Entry
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2014-08-07T08:45:28-07:00">
+          <i class="fa fa-clock-o"></i>
+          Thu 07 August 2014
+        </li>
+        <li class="list-inline-item">
+          <i class="fa fa-folder-open-o"></i>
+          <a href="https://moorepants.info.github.io/category/notebook.html">notebook</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fa fa-user-o"></i>
+              <a href="https://moorepants.info.github.io/author/jason-k-moore.html">Jason K. Moore</a>          </li>
+          <li class="list-inline-item">
+            <i class="fa fa-files-o"></i>
+              <a href="https://moorepants.info.github.io/tag/notebook.html">#notebook</a>,               <a href="https://moorepants.info.github.io/tag/aoi.html">#aoi</a>,               <a href="https://moorepants.info.github.io/tag/stanford.html">#stanford</a>          </li>
+      </ul>
+    </header>
+
+
+    <div class="content">
+      <p>AOI for July 31 to August 7</p>
+<div class="section" id="a">
+<h2>A</h2>
+<ul class="simple">
+<li>Read and organized Tim/Jack's predictive sim code.</li>
+<li>Completed an opensim planar walking model that matches Gait2D.</li>
+<li>Discussed dynamics software with Sherm.</li>
+<li>Mentored GSoC students and prepared for final two weeks. Contributed to a
+System class to help Tarun move forward.</li>
+<li>Met twice with Jack Wang and once with Ajay about utilizing Jack's work along
+with my data. Less clear now if there is anything worth doing there.</li>
+<li>Read Tim, Jack et al's preprint.</li>
+<li>Hashed out an opensim computational plan for direct collocation system id on
+a planar walking model with gait gain scheduled full state feedback torque
+control. Got Ajay's advice on this.</li>
+<li>Learned the basics of using the eigen C++ lib.</li>
+<li>Built a simbody conda package.</li>
+</ul>
+</div>
+<div class="section" id="o">
+<h2>O</h2>
+<ul class="simple">
+<li>Run extensive tests on the inverted pendulum system id system and summarize
+the method's abilities to identify the controller for a variety of # of
+degrees of freedom, initial guesses, measurement noise, discretization
+intervals and simulation durations. The idea is to make sure that the scale
+of the gait control id problem can be solved.</li>
+<li>Complete the controller implementation in opensim.</li>
+<li>Start on the direct collocation code: data loading, objective func, etc.</li>
+<li>Learn some about O(n) multibody dynamics with Sherm.</li>
+</ul>
+</div>
+<div class="section" id="i">
+<h2>I</h2>
+<ul class="simple">
+<li>Still haven't successfully compiled Opensim with working Python bindings. The
+SWIG stuff eats up about all the memory on my machine so it is painful to
+compile it. Started work on binary installers for simbody and opensim for the
+conda package manager with Chris to address this (for others at least).</li>
+<li>Floundered around in idea space and didn't make much progress on implementing
+an opensim system id approach.</li>
+<li>Slow movement in C++ development.</li>
+</ul>
+</div>
+<div class="section" id="ajay-s-comments">
+<h2>Ajay's Comments</h2>
+<p>jen taro taga in the 80s had a CPG for a walking model, global lean angle,
+phase of legs with respect to global angle, simulation, big paper in 1995</p>
+<p>idea: think about having an indirect method working and then having varying in
+complexity plant so you can keep adding complexity to the plant and keep
+identifying the different controllers where you can find different controllers
+given different complexity plants. With the most complex plant you might
+identify the neuro stuff that there is no model for.</p>
+<p>Once you have an indirect identification method working that has a plant and
+controller model in place for the &quot;simplest&quot; plant model (i.e. joint torque
+controlled low DoF, simplest contact) you will be able to identify this lumped
+&quot;controller&quot; which has everything in the dynamics that isn't modeled by your
+plant (and measurement noise). At first this lumped controller includes muscle
+dynamics, neuro stuff, passive joint dynamics, etc. Then you can imagine adding
+things to the plant model, like muscles, and running the id again, then you get
+a &quot;controller&quot; that lumps fewer things. Maybe you can tease apart unkown and
+known dynamics, where the &quot;controller&quot; holds all the unknowns.</p>
+<p>Ajay also had the idea that we can simulate Jack's walking model and then
+change specific things in it, like time delays, and then see if the
+identification results show these changes. i.e. can you detect the explicit
+model changes in the identified high space controller.</p>
+</div>
+<div class="section" id="o-n-lecture-by-sherm">
+<h2>O(n) Lecture by Sherm</h2>
+<p>Autolev: for forward dynamicists so they can see the code</p>
+<p>SD Fast</p>
+<p>Symbolics: big problems will not fit in cache</p>
+<p>Kane style: generated code is n cubed, order n though witll not have the cache
+problem as soon.</p>
+<p>Just as easy to do the symbolic version as a numeric version.</p>
+<p>Symbolic: a code generator of some sense</p>
+<p>Somewhere around 10 bodies the O(n) is faster. SD/Fast had a switch for O(n) or
+O(n^3). 20 bodies were definitely faster with O(n).</p>
+<p>1991 Abhi Jains' paper proves all O(n) methods are the same.</p>
+<p>Featherstone: discusses it better.
+Jain: Better presentation in papers.</p>
+<p>Featherstone: Chatper 1 is plucker vectors: but it isn't that important. Jain
+spends only a paragraph on Featherstones chapter 1.</p>
+<p>THe Jain papers have better notation than Jains book.</p>
+<p>Sherm learned from Charles Schwiter's paper. (molecule stuff)</p>
+<p>Jain: counts the bodies from the out in which seems odd and becomes annoying to
+keep track of things.</p>
+<p>Simbody's numbering is ground out numbering but Jain's alg.</p>
+<p>Mobilezers: start by thinking of bodies fixed then mobilizing DoFs, instead of
+bodeis with full motion and removing dof with constraints. internal coordinate
+joint that doesn't involve a constraint.</p>
+<p>Constraints are restrictions on mobilities.</p>
+<ul class="simple">
+<li>Good abstractions make good code. Code can't be any better than your abstractions.</li>
+<li>Make your data structures so that you can write the alg in the code just like
+Jains printed alg.</li>
+<li>Spatial notation: spatial combines rot and trans</li>
+</ul>
+<p>APL language required a special keyboard.</p>
+<pre class="literal-block">
+Spatial M;
+Spatial V;
+
+SpatialVec P = M * V; // spatial momentum
+
+Real ke = ~V * M V / 2; // kinetic
+</pre>
+<dl class="docutils">
+<dt>Jain: greatest contribution, computes everything in the ground frame (as soon as</dt>
+<dd>you possibly can). You never want to rotate an articulated body inertia!</dd>
+<dt>SD/FAST started by defining the base frame to the CoM which was bad. So start</dt>
+<dd>with a frame that is just attached at an arbitrary point on the body.</dd>
+</dl>
+<p>Sherm recommends using a notation that maps to the mathematics really well so
+you can spot errors when comparing to the main Jain algorithm.</p>
+<p>Seth et al Nonlinear dynamics 62, 2010 shows mobilities.</p>
+<p>It is advantageous to create a ground body as a default parent body. We may
+need that in pydy.</p>
+<p>Articulated body algs in simbody:</p>
+<p>realizeArticulatdBodyInertiasInward.cpp
+everything is in ground frame
+Phi: shift op that shifts forces for example to different points</p>
+<ul class="simple">
+<li>artic body inertia is a 6x6 same flavor of spatial inertia: linear realtion
+with three forces and three torques and the spatial accel</li>
+<li>PPlus is P shifted across the joint</li>
+<li>Projecton of art inertia on the null space of the joint. Sucks out the effect
+of the joint. AlG 6.1 in jain's book.</li>
+</ul>
+<p>Articulated inertia is known for terminal bodies: it is spatial inertia of that
+body.</p>
+</div>
+
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+      <li class="list-inline-item"><a href="https://moorepants.info.github.io/authors.html">Authors</a></li>
+    <li class="list-inline-item"><a href="https://moorepants.info.github.io/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="https://moorepants.info.github.io/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="https://moorepants.info.github.io/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>
+<div class="row">
+  <div class="col-sm-4 mx-auto text-center text-muted" >
+    <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+      <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+    </a>
+    <br />
+    This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+  </div>
+</div>    </div>
+  </footer>
+</body>
+
+</html>

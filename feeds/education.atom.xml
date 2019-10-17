@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>moorepants - education</title><link href="https://moorepants.info.github.io/" rel="alternate"></link><link href="https://moorepants.info.github.io/feeds/education.atom.xml" rel="self"></link><id>https://moorepants.info.github.io/</id><updated>2018-03-10T11:00:00-08:00</updated><subtitle>a websitee</subtitle><entry><title>Introducing Resonance</title><link href="https://moorepants.info.github.io/blog/introducing-resonance.html" rel="alternate"></link><published>2018-03-10T11:00:00-08:00</published><updated>2018-03-10T11:00:00-08:00</updated><author><name>Jason K. Moore</name></author><id>tag:moorepants.info.github.io,2018-03-10:/blog/introducing-resonance.html</id><summary type="html">&lt;p&gt;&lt;strong&gt;Co-authored by co-instructors Jason K. Moore and Kenneth Lyons.&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="section" id="course-description"&gt;
+&lt;h2&gt;Course Description&lt;/h2&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://github.io/moorepants/eng122"&gt;Introduction to Mechanical Vibrations&lt;/a&gt; is a 30+ year old upper level elective
+in the mechanical engineering curriculum at the University of California,
+Davis. It is a classic mechanical engineering course that stems from the
+courses and books of Timoshenko …&lt;/p&gt;&lt;/div&gt;</summary><content type="html">&lt;p&gt;&lt;strong&gt;Co-authored by co-instructors Jason K. Moore and Kenneth Lyons.&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="section" id="course-description"&gt;
+&lt;h2&gt;Course Description&lt;/h2&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://github.io/moorepants/eng122"&gt;Introduction to Mechanical Vibrations&lt;/a&gt; is a 30+ year old upper level elective
+in the mechanical engineering curriculum at the University of California,
+Davis. It is a classic mechanical engineering course that stems from the
+courses and books of Timoshenko and Den Hartog from the early 20th century. The
+course advances students' understanding of &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Vibration"&gt;vibrating mechanical systems&lt;/a&gt;,
+that has a foundation is the theory of small periodic motions resulting from
+the mathematical analysis of linear differential equations derived from
+Newton's Second Law of Motion. These foundational concepts provide insight into
+the design of machines to both minimize undesired vibrations and exploit
+desired vibrations.&lt;/p&gt;
+&lt;div class="figure align-center"&gt;
+&lt;img alt="" src="https://objects-us-east-1.dream.io/moorepants/car.gif" /&gt;
+&lt;p class="caption"&gt;Animation of a car vibration model created with resonance; an example of the
+type of systems students analyze and design in the course.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Most mechanical vibration courses have been presented primarily from a
+theoretical perspective which was tied to the early analytic tools. There have
+also been some courses with accompanying laboratories to experiment with real
+vibrating systems, but those are fewer and far between. Also, since the late
+80s, mechanical vibrations courses have often been enhanced with computational
+tools, such as Matlab, to solve problems that are difficult or unwieldy to
+solve by hand.&lt;/p&gt;
+&lt;p&gt;These courses typically have the standard engineering course format, i.e. the
+professor lectures in class by deriving mathematical theory on the board and
+does example problems to accompany the theory, the students are assigned
+homework problems each week for practice at applying and understanding the
+theory, and exams are given that are similar to homework problems to assess
+student learning.&lt;/p&gt;
+&lt;p&gt;This format has served the engineering profession well for a century or more,
+but there are a number of reasons to believe that this course could be changed
+to both improve learning and provide students with skills that are more
+relevant to their future work.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="why-change"&gt;
+&lt;h2&gt;Why Change?&lt;/h2&gt;
+&lt;p&gt;The main reasons that we wanted to change the course are that:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;This type of course has likely only changed in one significant way in the
+past century with addition of accessible computational tools in the 80s.
+Although it is true that the foundational theory has not changed much in that
+time, much of the traditional material may not be directly relevant to
+solving modern vibration related problems and thus could be removed.&lt;/li&gt;
+&lt;li&gt;Traditional engineering textbooks are becoming antiquated due to their high
+cost to the students, their scope not being well-suited to the courses they
+are designed for, the fact that they are closed access, and that they do not
+utilize the power of the world wide web to optimally enhance the materials.
+Additionally, there is a long list of mechanical vibrations textbooks and
+editions from the past 100 years that more-or-less provide the same
+materials.&lt;/li&gt;
+&lt;li&gt;There is evidence that methods other than the traditional lecture style of
+typical engineering classes are more effective for student learning. Many of
+these &amp;quot;learn by doing&amp;quot; methods align extremely well with engineering.&lt;/li&gt;
+&lt;li&gt;We would like to increase the likelihood that students utilize
+&amp;quot;computational thinking&amp;quot; and the related tools to solve engineering
+problems when they leave our bachelor's program.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="computational-thinking"&gt;
+&lt;h2&gt;Computational Thinking&lt;/h2&gt;
+&lt;p&gt;The last point above requires some elaboration, as it is a central tenant to
+the course redesign. Engineering courses often have computational components,
+but students may or may not learn to &amp;quot;think computationally.&amp;quot;&lt;/p&gt;
+&lt;p&gt;An engineer's primary goal is to solve problems, using the knowledge and tools
+at hand. Solving each problem requires some understanding of how the world
+works. Engineers perform experiments and develop mathematical models of the
+phenomena they observe in order to make predictions about similar phenomena.
+Thus, it is well known that if one could reason about the world using
+mathematical language, one could gain great power to change it. With the advent
+of computers, computation has typically been used to enhance the mathematics so
+that mathematical problems could be solved more efficiently. Mostly, math is
+&lt;em&gt;translated&lt;/em&gt; into computer code. The steps are something along the lines of:&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Observe phenomena&lt;/li&gt;
+&lt;li&gt;Optionally, perform a controlled physical experiment to learn specifically
+about the phenomena&lt;/li&gt;
+&lt;li&gt;Develop a mathematical, causal relationship that predicts the phenomena&lt;/li&gt;
+&lt;li&gt;Implement the mathematical model computationally&lt;/li&gt;
+&lt;li&gt;Use the computational model to make predictions and solve problems&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;This is a powerful and invaluable process, but it is also interesting that,
+taken to an extreme, one may be able to remove step 3 and reason about the
+world in the language of computation directly.&lt;/p&gt;
+&lt;div class="section" id="an-example"&gt;
+&lt;h3&gt;An example&lt;/h3&gt;
+&lt;p&gt;Calculating probabilities offers simple examples that can highlight what we
+mean. For example, if you want to answer:&lt;/p&gt;
+&lt;blockquote&gt;
+What is the probability of rolling at least two 3's if you roll a 6-sided
+die 10 times?&lt;/blockquote&gt;
+&lt;p&gt;A mathematician or statistician is likely to formulate the following equation
+using probability theory:&lt;/p&gt;
+&lt;div class="math"&gt;
+\begin{equation*}
+P(A) = \sum_{i=2}^{10} \binom{10}{i} \left(\frac{1}{6}\right)^i \left(\frac{5}{6}\right)^{10-i}
+\end{equation*}
+&lt;/div&gt;
+&lt;p&gt;and when you complete the numerical calculation you will find the probability
+is about 52 in a 100. To be able to do this you need to be well versed in a
+number of mathematical concepts that are often abstract relative to the primary
+question such as &lt;a class="reference external" href="TODO"&gt;probability distributions&lt;/a&gt;, &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Conditional_probability"&gt;conditional probability&lt;/a&gt;, the
+&lt;a class="reference external" href="https://en.wikipedia.org/wiki/Binomial_theorem"&gt;binomial theorem&lt;/a&gt;, &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Factorial"&gt;factorials&lt;/a&gt;, etc.&lt;/p&gt;
+&lt;p&gt;From an experimentalist's perspective, you can also literally roll 10 dice many
+many times and tally how many of the sets of rolls met the criteria. Thinking
+about this experiment is much easier than reasoning about probabilities, and
+many of the abstractions are removed. However, you'd have to roll the ten dice
+upwards of 10000 times to get an accurate estimate of the probability.
+Fortunately, this is something a computer is good at. Being able to reason
+about this problem and, for example, write the following Python code, you will
+get the same answer as reasoning through probability theory. In this case,
+computational reasoning is likely vastly simpler than what is needed for the
+mathematical reasoning if you have basic programming concepts in your toolbox.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;random&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;choice&lt;/span&gt;
+&lt;span class="n"&gt;num_trials&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;10000&lt;/span&gt;
+&lt;span class="n"&gt;dice_sides&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="n"&gt;count&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;trial&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;num_trials&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;ten_rolls&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;choice&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;dice_sides&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;roll&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;)]&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;ten_rolls&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;count&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+         &lt;span class="n"&gt;count&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;count&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="n"&gt;num_trials&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;The required knowledge here spans variables, data structures, loops, and flow
+control but it has the advantage that it maps directly to the experimental
+process with very little abstraction. Additionally, this knowledge is used in
+every computational problem, not just ones about probability.&lt;/p&gt;
+&lt;p&gt;This ability to reason about the world through computational language is a
+prime of example &amp;quot;computational thinking.&amp;quot; Computational thinking adds a
+complementary mode of reasoning to experimentation and mathematical modeling.
+In some cases, it may even be used as a replacement for one, the other, or
+both.&lt;/p&gt;
+&lt;p&gt;So this raises the question: &amp;quot;If we drastically increase the focus on
+computational thinking to learn about mechanical vibrations, will students be
+better equipped to solve real vibration problems when they leave the class?&amp;quot; We
+believe they will, but there are a number of aspects that needed to be changed
+in the course to do test this.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="what-we-did"&gt;
+&lt;h2&gt;What We Did&lt;/h2&gt;
+&lt;p&gt;The course redesign required quite a number of changes in order to structure
+the learning around computational thinking and meet the other goals. The
+following presents summaries of the various changes and activities we did to
+bring this to fruition:&lt;/p&gt;
+&lt;div class="section" id="interactive-open-access-digital-textbook"&gt;
+&lt;h3&gt;Interactive Open Access Digital Textbook&lt;/h3&gt;
+&lt;p&gt;We wrote a &lt;a class="reference external" href="https://moorepants.github.io/resonance/"&gt;series of 14 modules&lt;/a&gt; in the form of &lt;a class="reference external" href="http://jupyter.org"&gt;Jupyter&lt;/a&gt; notebooks that serve
+as the core learning resources for the course. We consider these notebooks,
+taken together, as a textbook that replaces the need for a traditional static,
+paper text. The design of this text has these features:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Approximately 1 notebook for each of the 20 two hour lecture periods, i.e.
+just the right length for the 10 week course.&lt;/li&gt;
+&lt;li&gt;The notebooks mix written text, mathematical equations, static figures,
+videos, and live Python code that can be executed to create interactive
+figures.&lt;/li&gt;
+&lt;li&gt;Each notebook introduces a new real (and hopefully interesting) vibrating
+mechanical system as a motivation for learning the subsequent concepts.&lt;/li&gt;
+&lt;li&gt;Computational thinking approaches are utilized if possible.&lt;/li&gt;
+&lt;li&gt;The notebooks are licensed under the Creative Commons Attribution license to
+maximize reuse potential.&lt;/li&gt;
+&lt;li&gt;The notebooks are intended to be used live in class with embedded interactive
+exercises.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Below is a static version of one of the notebooks:&lt;/p&gt;
+&lt;div align="center"&gt;
+  &lt;iframe
+    width="800"
+    height="400"
+    src="https://moorepants.github.io/resonance/03/03_bicycle_wheel_inertia.html"
+    frameborder="0"&gt;
+  &lt;/iframe&gt;
+&lt;/div&gt;&lt;p&gt;You can execute the notebooks if you &lt;a class="reference external" href="TODO"&gt;load them using Binder&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="software-library"&gt;
+&lt;h3&gt;Software Library&lt;/h3&gt;
+&lt;p&gt;The text book is accompanied by a custom Python software library called
+&amp;quot;&lt;a class="reference external" href="https://github.com/moorepants/resonance/"&gt;resonance&lt;/a&gt;&amp;quot;. We decided to create this library so that we could carefully
+design the application programming interface (API) and build up exposure to the
+concepts we introduced in the text. The library was designed with these
+features in mind:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Provide a framework for learning mechanical vibration concepts.&lt;/li&gt;
+&lt;li&gt;Allow students to construct, simulate, analyze, and visualize vibrating
+systems with a simple API.&lt;/li&gt;
+&lt;li&gt;Hide some Python programming details up front, but allow them to be exposed
+through scaffolding as the course progresses.&lt;/li&gt;
+&lt;li&gt;Hide object oriented class construction completely.&lt;/li&gt;
+&lt;li&gt;Include many and appropriately informative error messages.&lt;/li&gt;
+&lt;li&gt;Performance is secondary to usability and learning.&lt;/li&gt;
+&lt;li&gt;Structured around &amp;quot;system&amp;quot; objects that have similarities to real vibrating
+mechanical systems and can be experimented with similarly to how one would
+experiment with a physical apparatus in a lab.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Below shows a quick example of how the library would be used to construct and
+simulate a linear model of simple pendulum:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;resonance.linear_systems&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;SingleDoFLinearSystem&lt;/span&gt;
+
+&lt;span class="c1"&gt;# create a system&lt;/span&gt;
+&lt;span class="n"&gt;sys&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;SingleDoFLinearSystem&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+&lt;span class="c1"&gt;# define the constant parameters&lt;/span&gt;
+&lt;span class="n"&gt;sys&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;constants&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;length&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mf"&gt;1.0&lt;/span&gt;  &lt;span class="c1"&gt;# m&lt;/span&gt;
+&lt;span class="n"&gt;sys&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;constants&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;grav_acc&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mf"&gt;9.8&lt;/span&gt;  &lt;span class="c1"&gt;# m/s&lt;/span&gt;
+
+&lt;span class="c1"&gt;# define the coordinate and its derivatives&lt;/span&gt;
+&lt;span class="n"&gt;sys&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;coordinates&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;angle&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mf"&gt;0.1&lt;/span&gt;  &lt;span class="c1"&gt;# rad&lt;/span&gt;
+&lt;span class="n"&gt;sys&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;speeds&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;ang_rate&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mf"&gt;0.0&lt;/span&gt;  &lt;span class="c1"&gt;# rad/s&lt;/span&gt;
+
+&lt;span class="c1"&gt;# define a function that returns the coefficients of the canonical&lt;/span&gt;
+&lt;span class="c1"&gt;# differential equation: m x&amp;#39;&amp;#39; + c x&amp;#39; + k x = 0&lt;/span&gt;
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;coeff_func&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;length&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;grav_acc&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;Returns m, c, k.&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mf"&gt;1.0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;0.0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;grav_acc&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="n"&gt;length&lt;/span&gt;
+
+&lt;span class="n"&gt;sys&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;coeff_func&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;coeff_func&lt;/span&gt;
+
+&lt;span class="c1"&gt;# simulate the system for 5 seconds given the initial values&lt;/span&gt;
+&lt;span class="n"&gt;traj&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;sys&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;free_response&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mf"&gt;5.0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="c1"&gt;# print the array of angle values&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;traj&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;angle&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="active-computing-in-class"&gt;
+&lt;h3&gt;Active Computing In Class&lt;/h3&gt;
+&lt;p&gt;The notebooks were presented live in class and followed a similar style to the
+&lt;a class="reference external" href="http://software-carpentry.org"&gt;Software Carpentry&lt;/a&gt; method of teaching computational skills. Each student
+downloaded the notebook at the beginning of the class period for use on their
+laptop. The instructor led the students through the notebooks by offering
+verbal summaries and addenda to the written text via &amp;quot;board work.&amp;quot; The
+instructor executed the code cells to produce various figures and then
+discussed them, often live coding answers to questions. Each notebook included
+short exercises (about 5-8 per 2 hr period) interspersed throughout the text
+that were geared to assessing students on the prior 10 minutes of instruction
+and reading. These exercises had easily accessible solutions to ensure students
+could move forward even if the solution was not obtained in the allocated time.
+We attempted to pace the exercises such that the vast majority of the class
+completed them before moving forward. The students were encouraged to work
+together and the instructors were present to answer questions during the
+exercises. The notebooks were submitted at the end of the class for
+participation credit.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="jupyterhub-service"&gt;
+&lt;h3&gt;JupyterHub Service&lt;/h3&gt;
+&lt;p&gt;We purchased a server and installed the cloud computing service &lt;a class="reference external" href="https://jupyterhub.readthedocs.io/en/latest/"&gt;JupyterHub&lt;/a&gt; for
+the students to use both in and out of class for their course work. This turned
+out to be a great idea for several reasons:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Students did not have to install any software; we fully controlled the
+computation environment to ensure everything worked as desired and all
+students had access to this common environment without following a complex
+installation process.&lt;/li&gt;
+&lt;li&gt;We were able to update the custom software library at any time. This allowed
+us to write the library incrementally as we created the course content. At
+one point, Kenny fixed a library bug live in class as soon as we uncovered
+it.&lt;/li&gt;
+&lt;li&gt;We were able to utilize &lt;a class="reference external" href="https://nbgrader.readthedocs.io/en/stable/"&gt;nbgrader&lt;/a&gt; for distribution, collection, and grading
+of the in-class materials and homework assignments (see more below).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="figure align-center"&gt;
+&lt;img alt="" src="https://objects-us-east-1.dream.io/moorepants/eng122-jupyterhub.png" style="width: 640px;" /&gt;
+&lt;p class="caption"&gt;A screenshot of the Jupyterhub nbgrader interface that lets students fetch
+and submit assignments.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="computational-homeworks"&gt;
+&lt;h3&gt;Computational Homeworks&lt;/h3&gt;
+&lt;p&gt;We developed 8 homework sets to supplement classwork and to assess the
+students' ability to apply in-class materials to different problems. These were
+all implemented as Jupyter notebooks and were distributed, collected, and
+graded using &lt;a class="reference external" href="https://nbgrader.readthedocs.io/en/stable/"&gt;nbgrader&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The first 3 homework notebooks were fully-formatted notebooks in which students
+supplied code, text, figures, and equations to predetermined sub-problems
+(think &amp;quot;fill-in-the-blanks&amp;quot;). One issue with this style of assessment is that
+it provides too much structure and emphasizes details of one approach to the
+problem. Since we also wanted students to be able to reason about systems at
+a high level of abstraction and formulate computational experiments to answer
+questions about them, we switched to a more open-ended format where each
+homework assignment included 3 or 4 problem statements and students were
+expected to populate the notebooks with as many cells as needed to answer the
+problems. This had the added benefit of giving students practice communicating
+their reasoning, computations, and interpretations of results.&lt;/p&gt;
+&lt;p&gt;Students were given individual feedback on their homework notebooks, and we
+created homework solutions to demonstrate exemplary formatting and style
+conventions, supplementing the in-class materials. Formatting and overall
+clarity of the submitted homework notebooks seemed to improve significantly by
+the end of the course.&lt;/p&gt;
+&lt;div class="figure align-center"&gt;
+&lt;img alt="" src="https://objects-us-east-1.dream.io/moorepants/eng122-nbgrader.png" style="width: 640px;" /&gt;
+&lt;p class="caption"&gt;A screenshot of the nbgrader grading interface for a single homework
+problem.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="project-instead-of-exams"&gt;
+&lt;h3&gt;Project Instead of Exams&lt;/h3&gt;
+&lt;p&gt;The previous course design had two in-class pen-and-paper exams. We added an
+individual course project to more effectively assess the course learning
+objectives and provide a realistic engineering exercise.&lt;/p&gt;
+&lt;p&gt;We originally intended to have a midterm, a final, and a course project but we
+dropped the final exam due to two reasons:&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Two exams and a project was simply too much work in a 10-week course.&lt;/li&gt;
+&lt;li&gt;We gave a midterm that required live coding to solve the problems, and this
+did not effectively assess what the students had learned, due to students
+getting caught on programming issues more than anticipated.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Next year, we will likely remove the midterm and break the project into two
+phases. The projects proved to be a much more effective method for students to
+demonstrate what they had learned.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="scipy-bof"&gt;
+&lt;h3&gt;SciPy BoF&lt;/h3&gt;
+&lt;p&gt;We led a &amp;quot;Birds of a Feather&amp;quot; session on teaching modeling and simulation at
+SciPy 2017 in Austin, Texas. There were 13 participants from a variety of
+disciplines and schools. Notes from this session can be found in a &lt;a class="reference external" href="http://www.moorepants.info/blog/scipy-2017-bof.html"&gt;separate
+blog post&lt;/a&gt;. This BoF introduced a large number best practices for teaching
+these types of courses and established a network of potential collaborators.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="computational-thinking-workshop-and-seminar"&gt;
+&lt;h3&gt;Computational Thinking Workshop and Seminar&lt;/h3&gt;
+&lt;p&gt;We also wanted to share these methods with the STEM faculty at UC Davis. To do
+so, &lt;a class="reference external" href="http://www.allendowney.com"&gt;Allen Downey&lt;/a&gt; of Olin College and we held a workshop titled
+&amp;quot;Computational Thinking in the Engineering and Sciences Curriculum&amp;quot; at the UCD
+Data Science Institute on January 5th for about 20 faculty, staff, and graduate
+students from a variety of disciplines around campus. We proposed seven methods
+of utilizing computation to learn domain-specific concepts, and the attendees
+developed a variety of examples from courses they have taught or would like to
+teach. The abstract read:&lt;/p&gt;
+&lt;blockquote&gt;
+This workshop invites faculty to think about computation in the context of
+engineering education and to design classroom experiences that develop
+programming skills and apply them to engineering topics. Starting from
+examples in signal processing and mechanics, participants will identify
+topics that might benefit from a computational approach and design course
+materials to deploy in their classes. Although our examples come from
+engineering, this workshop may also be of interest to faculty in the natural
+and social sciences as well as mathematics.&lt;/blockquote&gt;
+&lt;p&gt;The workshop was recorded:&lt;/p&gt;
+&lt;div align="center"&gt;
+&lt;iframe
+  width="560"
+  height="315"
+  src="https://www.youtube.com/embed/lfRVRqdYdjM"
+  frameborder="0"
+  allow="autoplay; encrypted-media"
+  allowfullscreen&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;&lt;p&gt;and the accompanying slides are available here:&lt;/p&gt;
+&lt;div align="center"&gt;
+&lt;iframe
+  src="https://docs.google.com/presentation/d/e/2PACX-1vTCq_A4DKcigYd8JZBTFV5YCtX_OVbKaOz_y3dgq-836_jQ4uHRP1javXpXCkE4pj5Una21Lttvkg3a/embed?start=false&amp;loop=false&amp;delayms=3000"
+  frameborder="0"
+  width="560"
+  height="315"
+  align="center"
+  allowfullscreen="true"
+  mozallowfullscreen="true"
+  webkitallowfullscreen="true"&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;&lt;p&gt;In addition to the workshop, Allen gave a more general seminar on &amp;quot;Programming
+as a Way of Thinking&amp;quot;, which can be viewed below:&lt;/p&gt;
+&lt;div align="center"&gt;
+&lt;iframe
+  width="560"
+  height="315"
+  align="center"
+  src="https://www.youtube.com/embed/6noFqh7JIR0"
+  frameborder="0"
+  allow="autoplay; encrypted-media"
+  allowfullscreen&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;&lt;p&gt;along with the slides:&lt;/p&gt;
+&lt;div align="center"&gt;
+&lt;iframe
+  src="https://docs.google.com/presentation/d/1Easj80-qMhwIqL4e6SEBQglQcTQAXLKrxBbiW3aZzVk/embed?start=false&amp;loop=false&amp;delayms=3000"
+  frameborder="0"
+  width="560"
+  height="315"
+  align="center"
+  allowfullscreen="true"
+  mozallowfullscreen="true"
+  webkitallowfullscreen="true"&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;&lt;p&gt;Also see &lt;a class="reference external" href="http://allendowney.blogspot.com/2018/01/computation-in-stem-workshop.html"&gt;Allen's blog post&lt;/a&gt; on the workshop and seminar.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="what-to-improve"&gt;
+&lt;h2&gt;What To Improve&lt;/h2&gt;
+&lt;p&gt;Over the course of developing and teaching the class, we noted a number of
+things to adjust for a second offering. These are tracked in &lt;a class="reference external" href="https://github.com/moorepants/resonance/issues"&gt;resonance's issue
+tracker&lt;/a&gt;. We've also had focus groups with a few students in the course to get
+more critical feedback of the materials and methods, which can also be found in
+the issue tracker. The following list provides some of the more important
+changes we plan to make:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;The programming skills necessary to solve the vibration problems need to ramp
+up more gradually. Fixing this will involve hiding more details in the
+software library and pacing the exposure of these details more linearly
+through the notebook progression.&lt;/li&gt;
+&lt;li&gt;Some of the notebooks are too long and complicated. The notebooks need to be
+divided into smaller chunks that map to about 40 in-class learning sessions.&lt;/li&gt;
+&lt;li&gt;The textbook needs to be completed such that each notebook has sufficient
+text to explain the lesson without the instructor explaining it.&lt;/li&gt;
+&lt;li&gt;More of the analytical methods need to be introduced after the computational
+methods, especially for the concepts where the analytical methods prove to be
+a superior tool.&lt;/li&gt;
+&lt;li&gt;Students balancing a laptop and notebook on a standard desk is difficult. We
+need a classroom that is appropriate for the class activities (i.e. need
+tables!).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="conclusion"&gt;
+&lt;h2&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;After the first delivery of the course, a good question to ask may be &amp;quot;Can
+students solve problems related to mechanical vibrations better than if they
+were to have taken a different course?&amp;quot;, as that is our primary objective. It
+was evident from their final projects that they could, but the project problem
+was designed by us to be solvable with the things we knew (or hoped) they'd
+learned. This question is difficult to answer without a properly designed and
+executed experiment, which may be something that should be done in the future.
+We have received a mix of feedback on the course that encompassed students
+enjoying it thoroughly to students that struggled getting past the programming
+requirements. It was quite fun to teach and really impressive to see the skills
+the students developed over the course both in vibrations and computational
+thinking with Python. Overall, we feel good about the course direction and will
+continue to improve it.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="acknowledgements"&gt;
+&lt;h2&gt;Acknowledgements&lt;/h2&gt;
+&lt;p&gt;This effort was supported with funding from the Undergraduate Instructional
+Innovation Program, which is backed by the Association of American Universities
+(AAU) and Google, and administered by UC Davis's &lt;a class="reference external" href="https://cee.ucdavis.edu/"&gt;Center for Educational
+Effectiveness&lt;/a&gt;. The &lt;a class="reference external" href="https://doi.org/10.6084/m9.figshare.5229886.v1"&gt;funding proposal&lt;/a&gt; can be viewed on Figshare.&lt;/p&gt;
+&lt;p&gt;We thank Allen Downey from Olin College for visiting and teaching us, Pamela
+Reynolds at the UC Davis Data Science Initiative for hosting the workshop, Luiz
+Irber for filming and editing the videos, MAE staff for the seminar setup,
+Kenneth Lyons and Benjamin Margolis for help with organizing the workshop, and
+all of the ENG 122 students that have taken the class and evaluated the
+materials.&lt;/p&gt;
+&lt;/div&gt;
+&lt;script type='text/javascript'&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="education"></category><category term="engineering"></category><category term="python"></category><category term="jupyter"></category><category term="computational thinking"></category></entry></feed>

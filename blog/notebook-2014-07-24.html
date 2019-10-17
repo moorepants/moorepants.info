@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  Notebook Entry | moorepants
+</title>
+  <link rel="canonical" href="https://moorepants.info.github.io/blog/notebook-2014-07-24.html">
+
+
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/pygments/default.min.css">
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="https://moorepants.info.github.io/feeds/all.atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="Categories Atom Feed"
+        href="https://moorepants.info.github.io/feeds/{slug}.atom.xml">  
+  <meta name="description" content="A NMBL AOI for my first week or so. AOI Accomplishments Prepared and gave a NCSRR visiting scholar kickoff talk. Met with Jen, Ajay, and Jimmy about 5 week goals. Completed most of the orientation here at Stanford. Setup a new opensim dev env on linux based on the new …">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="https://moorepants.info.github.io/">
+        <img class="img-fluid rounded" src=https://objects-us-east-1.dream.io/moorepants/headshot.jpg alt="moorepants">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="https://moorepants.info.github.io/">moorepants</a></h1>
+      <p class="text-muted">a websitee</p>
+      <ul class="list-inline">
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/about.html">About</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/portfolio.html">Portfolio</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/interests.html">Interests</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/research.html">Research</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/teaching.html">Teaching</a></li>
+          <li class="list-inline-item"><a href="/blog/">Blog</a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  Notebook Entry
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2014-07-24T11:13:02-07:00">
+          <i class="fa fa-clock-o"></i>
+          Thu 24 July 2014
+        </li>
+        <li class="list-inline-item">
+          <i class="fa fa-folder-open-o"></i>
+          <a href="https://moorepants.info.github.io/category/notebook.html">notebook</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fa fa-user-o"></i>
+              <a href="https://moorepants.info.github.io/author/jason-k-moore.html">Jason K. Moore</a>          </li>
+          <li class="list-inline-item">
+            <i class="fa fa-files-o"></i>
+              <a href="https://moorepants.info.github.io/tag/notebook.html">#notebook</a>,               <a href="https://moorepants.info.github.io/tag/aoi.html">#aoi</a>,               <a href="https://moorepants.info.github.io/tag/stanford.html">#stanford</a>          </li>
+      </ul>
+    </header>
+
+
+    <div class="content">
+      <p>A NMBL AOI for my first week or so.</p>
+<div class="section" id="aoi">
+<h2>AOI</h2>
+<p>Accomplishments</p>
+<ul class="simple">
+<li>Prepared and gave a NCSRR visiting scholar kickoff talk.</li>
+<li>Met with Jen, Ajay, and Jimmy about 5 week goals.</li>
+<li>Completed most of the orientation here at Stanford.</li>
+<li>Setup a new opensim dev env on linux based on the new git repos.</li>
+<li>Emailed with Jack Wang about modifying the planar walker code and he agreed
+to let me build of his current work.</li>
+<li>I was introduced to the Wang et. al walker code base by Chris. The code
+compiles and runs on my machine and I got a copy of the AWS ami to use with my
+account.</li>
+<li>Read some papers on homotopy and discussed it along with direct collocation
+with Tom.</li>
+<li>Met with Soha to discuss her work.</li>
+<li>Read some papers to get an idea of scale limits in NLP problems with IPOPT.</li>
+<li>Built most of the rigid body portion of my unactuated planar gait model in
+Opensim.</li>
+<li>Completed the code for the inverted pendulum on a cart direct collocation
+problem and tested with IPOPT...but still tracking bugs.</li>
+<li>Many email discussions with Ton back in Cleveland which included a basic
+parameter id with direct collocation based on one of Tom's homotopy example
+problems that showed DC can work for parameter id with 5000 nodes (solves in
+23s on desktop machine but sensitive to initial guess in parameters). See
+<a class="reference external" href="https://gist.github.com/moorepants/3f122bbad42ca7e910f8">https://gist.github.com/moorepants/3f122bbad42ca7e910f8</a> for code.</li>
+<li>Mentored the SymPy/PyDy google summer of code students on various issues:
+vector calculus, code generation, and visualization.</li>
+<li>Worked on revising my research statement for a prof application.</li>
+<li>Worked on a lingering software paper with Chris to finalize and send it to
+F1000Research.</li>
+</ul>
+<p>Objectives</p>
+<ul class="simple">
+<li>Read and understand Jack and Tim's code focusing on the objective function
+evaluation. Make a plan to implement the tracking objective.</li>
+<li>Sniff out the errors in the inverted pendulum dc problem and get it running
+for a large number of nodes. Implement an implicit backward Euler integrator
+for the simulation to match the DC discretization I'm using.</li>
+<li>Complete the 2D gait opensim model and compare it's output to the custom
+models I have.</li>
+<li>Design a gain scheduled full state feedback controller in opensim for the 2D
+gait model that matches the one used in the direct approach system id method.</li>
+</ul>
+<p>Issues</p>
+<ul class="simple">
+<li>I still have a bug preventing the inverted pendulum direct collocation
+problem from converging. I think I've narrowed it down to the differences in
+integration routine (LSODA: Adams + BDF) for the simulation and the
+discretization method (backward Euler) for the direct collocation.</li>
+<li>Never got all the paperwork and stuff together to get a building key.
+Abandoned...</li>
+<li>I'm already a half a week or so behind what I proposed for the 5 week period
+here.</li>
+</ul>
+</div>
+
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+      <li class="list-inline-item"><a href="https://moorepants.info.github.io/authors.html">Authors</a></li>
+    <li class="list-inline-item"><a href="https://moorepants.info.github.io/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="https://moorepants.info.github.io/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="https://moorepants.info.github.io/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>
+<div class="row">
+  <div class="col-sm-4 mx-auto text-center text-muted" >
+    <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+      <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+    </a>
+    <br />
+    This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+  </div>
+</div>    </div>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  Notebook Entry | moorepants
+</title>
+  <link rel="canonical" href="https://moorepants.info.github.io/blog/notebook-2013-09-05.html">
+
+
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/pygments/default.min.css">
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="https://moorepants.info.github.io/feeds/all.atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="Categories Atom Feed"
+        href="https://moorepants.info.github.io/feeds/{slug}.atom.xml">  
+  <meta name="description" content="Today's task list: [x] Work on parsing the walking data [] Work on BMD papers [] Book hotel for BMD [] Post update about BMD copyright [?] Finish reading the van der Kooij paper [] See if our controller can drive an OpenSim model or Ton's 2D model [x] Wrap the HBM C code [] Duplicate …">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="https://moorepants.info.github.io/">
+        <img class="img-fluid rounded" src=https://objects-us-east-1.dream.io/moorepants/headshot.jpg alt="moorepants">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="https://moorepants.info.github.io/">moorepants</a></h1>
+      <p class="text-muted">a websitee</p>
+      <ul class="list-inline">
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/about.html">About</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/portfolio.html">Portfolio</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/interests.html">Interests</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/research.html">Research</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/teaching.html">Teaching</a></li>
+          <li class="list-inline-item"><a href="/blog/">Blog</a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  Notebook Entry
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2013-09-05T13:16:19-07:00">
+          <i class="fa fa-clock-o"></i>
+          Thu 05 September 2013
+        </li>
+        <li class="list-inline-item">
+          <i class="fa fa-folder-open-o"></i>
+          <a href="https://moorepants.info.github.io/category/notebook.html">notebook</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fa fa-user-o"></i>
+              <a href="https://moorepants.info.github.io/author/jason-k-moore.html">Jason K. Moore</a>          </li>
+          <li class="list-inline-item">
+            <i class="fa fa-files-o"></i>
+              <a href="https://moorepants.info.github.io/tag/notebook.html">#notebook</a>,               <a href="https://moorepants.info.github.io/tag/system-identification.html">#system identification</a>,               <a href="https://moorepants.info.github.io/tag/swig.html">#swig</a>,               <a href="https://moorepants.info.github.io/tag/cython.html">#cython</a>,               <a href="https://moorepants.info.github.io/tag/ctypes.html">#ctypes</a>,               <a href="https://moorepants.info.github.io/tag/human-body-model.html">#human body model</a>,               <a href="https://moorepants.info.github.io/tag/closed-loop-system.html">#closed loop system</a>          </li>
+      </ul>
+    </header>
+
+
+    <div class="content">
+      <p>Today's task list:</p>
+<ul class="simple">
+<li>[x] Work on parsing the walking data</li>
+<li>[] Work on BMD papers</li>
+<li>[] Book hotel for BMD</li>
+<li>[] Post update about BMD copyright</li>
+<li>[?] Finish reading the van der Kooij paper</li>
+<li>[] See if our controller can drive an OpenSim model or Ton's 2D model</li>
+<li>[x] Wrap the HBM C code</li>
+<li>[] Duplicate website backups on a S3 bucket</li>
+<li>[] Work on the website theme</li>
+<li>[] Make generic settings on the lab website</li>
+<li>[] Review the TODO items on the Yeadon paper</li>
+<li>[] Do CITI course</li>
+<li>[] Do FERPA course</li>
+<li>[] Write up database proposal</li>
+<li>[] Try out CSympy with some mechanics problems</li>
+<li>[] Email Mounir about teaching</li>
+</ul>
+<div class="section" id="wrapping-hmb">
+<h2>Wrapping HMB</h2>
+<p>I read about SWIG, Cython, and ctypes last night for wrapping the HBM code in
+Python. SWIG is cool because you can wrap C code by writing a seemingly simple
+<tt class="docutils literal">*.i</tt> file that declares function calls in the C header and then SWIG it to
+create code for a variety of languages including Python, R, and Octave. Cython
+seems similar. You have to create a <tt class="docutils literal">*.pyx</tt> file declaring some mappings to
+your C header file function calls. Then you run Cython and it generates some C
+code and compiles it. Both systems integrate with docutils for auto building
+when you run <tt class="docutils literal">python setup.py install</tt>. Cython also supports NumPy and most
+numeric folks use it because of this. Finally, you can also write a python file
+and use ctypes to connect to functions in your header files, which seems ideal
+but there were many warnings about using it because it isn't flexible in the
+long run.</p>
+</div>
+<div class="section" id="walking-system-identification">
+<h2>Walking System Identification</h2>
+<p>I updated the simple control solver to convert the dense A matrix to a
+scipy.sparse.csr_matrix and then to use scipy.sparse.linalg.lsqr to solve the
+sparse system (A is mostly zeros which has a thick diagonal). I thought it
+would be faster that solving the dense linear least square problem, but it
+wasn't. And I'm probably not saving any memory because I'm constructing the
+matrix as a dense matrix and then converting it. I need to change the code to
+construct a lil_matrix manually and then maybe get some memory reduction. It
+gave the same solution as the dense solver, so that is good.</p>
+<p>From Ljung 1999</p>
+<p>There are three basic methods of identifying a plant in a closed loop system,
+according to Ljung 1999 (page 423):</p>
+<p>1. The Direct Approach: apply prediction error method to the output of the
+plant, \(y\), and the input to the plant, \(u\). Ignore feedback and the
+reference signal.</p>
+<p>2. The Indirect Approach: Identify the full closed loop system from reference
+input, \(r\), to plant output, \(y\). If the controller is known, and you have
+the closed loop transfer function, you can then compute the plant.</p>
+<p>3. The Joint Input-Output Approach: Consider the plant outputs and inputs,
+\(y\) and \(u\) as the outputs to a system that is driven by the reference
+signal \(r\).</p>
+<p>Our human walking control system identification problem can be framed to match
+Ljung's framework like so:</p>
+<pre class="literal-block">
+                          m
+r   +  u  ------------ d  |+ y
+----&gt;o---&gt;|controller|---&gt;o--&gt;
+    -|    ------------   +|
+     |    --------------  |
+       c  |biomechanics|
+</pre>
+<p>Here \(r\) is the reference signal, i.e. the ideal walking motion (angles,
+rates). \(u\) is the error between \(c\) and \(r\). \(c\) are the biomechanic
+model outputs, i.e.  joint angles, joint rates, etc. \(d\) is the controller
+output, i.e. the joint torque additions. \(m\) is the nominal joint torques to
+keep the standard motion \(r\) and \(y\) is the sum of \(d\) and \(m\) which is
+fed back through the regulator, i.e. human bio model.</p>
+<p>We measure \(c\) from motion capture. These are pretty much direct
+measurements. We can also use inverse dynamics with a biomechanical model to
+get good estimates of \(y\).</p>
+<p>With that in mind, the direct approach doesn't seem feasible because we don't
+have a measurement or estimate of \(u\). The direct approach for closed loop
+systems also requires that you have a noise model which is close to the true
+noise model, otherwise bias is introduced in the identification.</p>
+<p>For the indirect approach we do have a regulator model (i.e. the human
+biomechanical model) which is required, and we &quot;measure&quot; \(y\) but we don't
+measure or have an estimate of \(r\).</p>
+<p>And thirdly, the Joint Input-Output approach requires \(y\), \(u\), and \(r\),
+of which only \(y\) is available.</p>
+<p>So all three of these methods don't seem applicable as stated. But the &quot;direct&quot;
+measurements of \(c\) must be able to be used in the identification. This
+doesn't seem to be regarded in the framework presented in Ljung's book.</p>
+</div>
+
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+      <li class="list-inline-item"><a href="https://moorepants.info.github.io/authors.html">Authors</a></li>
+    <li class="list-inline-item"><a href="https://moorepants.info.github.io/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="https://moorepants.info.github.io/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="https://moorepants.info.github.io/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>
+<div class="row">
+  <div class="col-sm-4 mx-auto text-center text-muted" >
+    <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+      <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+    </a>
+    <br />
+    This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+  </div>
+</div>    </div>
+  </footer>
+</body>
+
+</html>

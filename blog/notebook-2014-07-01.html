@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  Notebook Entry | moorepants
+</title>
+  <link rel="canonical" href="https://moorepants.info.github.io/blog/notebook-2014-07-01.html">
+
+
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/pygments/default.min.css">
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="https://moorepants.info.github.io/feeds/all.atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="Categories Atom Feed"
+        href="https://moorepants.info.github.io/feeds/{slug}.atom.xml">  
+  <meta name="description" content="uh, trying to use IPopt in Python. Ipopt installation I tried to install from the Ubuntu repos, but had trouble linking to it or running the example: $ sudo aptitude install coinor-libipopt1 coinor-libipopt-dev coinor-libipopt-doc So then I removed it: $ sudo aptitude remove coinor-libipopt1 coinor-libipopt-dev coinor-libipopt-doc The Ipopt documentation gives very nice …">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="https://moorepants.info.github.io/">
+        <img class="img-fluid rounded" src=https://objects-us-east-1.dream.io/moorepants/headshot.jpg alt="moorepants">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="https://moorepants.info.github.io/">moorepants</a></h1>
+      <p class="text-muted">a websitee</p>
+      <ul class="list-inline">
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/about.html">About</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/portfolio.html">Portfolio</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/interests.html">Interests</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/research.html">Research</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/teaching.html">Teaching</a></li>
+          <li class="list-inline-item"><a href="/blog/">Blog</a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  Notebook Entry
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2014-07-01T17:15:38-07:00">
+          <i class="fa fa-clock-o"></i>
+          Tue 01 July 2014
+        </li>
+        <li class="list-inline-item">
+          <i class="fa fa-folder-open-o"></i>
+          <a href="https://moorepants.info.github.io/category/notebook.html">notebook</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fa fa-user-o"></i>
+              <a href="https://moorepants.info.github.io/author/jason-k-moore.html">Jason K. Moore</a>          </li>
+          <li class="list-inline-item">
+            <i class="fa fa-files-o"></i>
+              <a href="https://moorepants.info.github.io/tag/notebook.html">#notebook</a>,               <a href="https://moorepants.info.github.io/tag/ipopt.html">#ipopt</a>,               <a href="https://moorepants.info.github.io/tag/python.html">#python</a>          </li>
+      </ul>
+    </header>
+
+
+    <div class="content">
+      <p>uh, trying to use IPopt in Python.</p>
+<div class="section" id="ipopt-installation">
+<h2>Ipopt installation</h2>
+<p>I tried to install from the Ubuntu repos, but had trouble linking to it or
+running the example:</p>
+<pre class="literal-block">
+$ sudo aptitude install coinor-libipopt1 coinor-libipopt-dev coinor-libipopt-doc
+</pre>
+<p>So then I removed it:</p>
+<pre class="literal-block">
+$ sudo aptitude remove coinor-libipopt1 coinor-libipopt-dev coinor-libipopt-doc
+</pre>
+<p>The Ipopt <a class="reference external" href="https://projects.coin-or.org/Ipopt/browser/stable/3.11/Ipopt/doc/documentation.pdf">documentation</a> gives very nice instructions for installing it from
+source, which basically goes like this:</p>
+<pre class="literal-block">
+$ cd ~/src
+$ svn co https://projects.coin-or.org/svn/Ipopt/stable/3.11 CoinIpopt
+$ cd CoinIpopt/ThirdParty/Blas
+$ ./get.Blas
+$ cd ../Lapack
+$ ./get.Lapack
+$ cd ../ASL
+$ ./get.ASL
+$ cd ../Mumps
+$ ./get.Mumps
+$ cd ../Metis
+$ ./get.Metis
+</pre>
+<p>This downloads the BLAS and LAPACK reference implementations, but I think the
+compilation process looks in the system for the system installed
+implementations and uses them if you have them.</p>
+<p>It is a good idea to get the HSL code (but not necessarily required because
+Mumps can be used) and drop it in the ThirdParty/HSL directory. You have to get
+the free academic license 2011 code and sign a form to use it. It also takes a
+day to get the download link by email. (Note that this can be linked as a
+shared lib after compiling ipopt, so recompiling is required, but it may be
+easier to just recompile).</p>
+<p>I compiled without HSL because I'm waiting for the download link.</p>
+<p>First change into the build directory:</p>
+<pre class="literal-block">
+$ cd ../../build
+</pre>
+<p>And run configure:</p>
+<pre class="literal-block">
+$ ./configure
+</pre>
+<p>These are some potential options I may want to set in the future:</p>
+<pre class="literal-block">
+--prefix /usr/local  # for system install
+--with-blas=&quot;-L$HOME/lib -lmyblas&quot;  # link to better blas implementations
+</pre>
+<p>Now compile, test, and install:</p>
+<pre class="literal-block">
+$ make -j5
+$ make test
+$ make install  # sudo if system install
+</pre>
+<p>This ended up putting everything in <tt class="docutils literal">~/src/CoinIpopt/</tt> like
+<tt class="docutils literal">~/src/CoinIpopt/include</tt>, <tt class="docutils literal">~/src/CoinIpopt/lib</tt>, etc. So I did something
+wrong, as I thought it should have ended up in <tt class="docutils literal">~src/CoinIpopt/build/</tt>.</p>
+</div>
+<div class="section" id="cyipopt">
+<h2>cyipopt</h2>
+<p>I'm hoping to use Ipopt through a Python wrapper. Seems like there are two
+existing standalone wrappers <a class="reference external" href="https://github.com/xuy/pyipopt">pyipopt</a> and <a class="reference external" href="https://bitbucket.org/amitibo/cyipopt">cyipopt</a>. I like cython and cyipopt
+was newer, so I gave it a shot.</p>
+<p>I first created a conda Python 2.7 environment:</p>
+<pre class="literal-block">
+$ conda create -n cyipopt numpy scipy cython matplotlib sphinx
+$ source activate cyipopt
+</pre>
+<p>Then got the source code from bitbucket:</p>
+<pre class="literal-block">
+$ cd ~/src
+$ hg clone https://bitbucket.org/amitibo/cyipopt
+$ cd cyipopt
+</pre>
+<p>I installed on Ubuntu 14.04 so I had to do some pruning in the setup.py file.
+Basically just remove some odd stuff from <tt class="docutils literal">main_unix()</tt> so it looks like
+this:</p>
+<pre class="literal-block">
+def main_unix():
+
+    setup(
+        name=PACKAGE_NAME,
+        version=VERSION,
+        description=DESCRIPTION,
+        author=AUTHOR,
+        author_email=EMAIL,
+        url=URL,
+        packages=[PACKAGE_NAME],
+        cmdclass={'build_ext': build_ext},
+        ext_modules=[
+            Extension(
+                PACKAGE_NAME + '.' + 'cyipopt',
+                ['src/cyipopt.pyx'],
+                **pkgconfig('ipopt')
+            )
+        ],
+    )
+</pre>
+<p>Since I didn't install IPopt system wide I needed to export these two
+environment variables to get things to work:</p>
+<pre class="literal-block">
+$ export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:~/src/CoinIpopt/lib/pkgconfig
+$ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:~/src/CoinIpopt/lib
+</pre>
+<p>And finally:</p>
+<pre class="literal-block">
+$ python setup.py install
+$ python test/examplehs071.py
+$ python test/lasso.py
+</pre>
+<p>And it worked.</p>
+</div>
+<div class="section" id="other-things">
+<h2>Other Things</h2>
+<p>Here are a bunch of other notes about things I found today:</p>
+<ul class="simple">
+<li>A list of Python optimization tools: <a class="reference external" href="https://software.sandia.gov/trac/coopr/wiki/Documentation/RelatedProjects">https://software.sandia.gov/trac/coopr/wiki/Documentation/RelatedProjects</a></li>
+<li>Casadi is a symbolic framework for numerica optimization with automatic
+differentiation, has python bindings and includes Ipopt: <a class="reference external" href="https://github.com/casadi/casadi/">https://github.com/casadi/casadi/</a></li>
+<li>NLOPT: has a bunch of optimizers plus python bindings: <a class="reference external" href="http://ab-initio.mit.edu/wiki/index.php/NLopt">http://ab-initio.mit.edu/wiki/index.php/NLopt</a></li>
+<li>Most all of the large scale NLP optimizers seem to be guarded behind close
+source licenses.</li>
+<li>pagmo: parallel optimization includes python bindings and has SciPy, SNOPT,
+and IPOPT connections <a class="reference external" href="https://github.com/esa/pagmo">https://github.com/esa/pagmo</a></li>
+<li>nlpy: large scale optimization with python <a class="reference external" href="https://github.com/dpo/nlpy">https://github.com/dpo/nlpy</a></li>
+<li>Nice SO question on NLP in Python: <a class="reference external" href="http://scicomp.stackexchange.com/questions/83/is-there-a-high-quality-nonlinear-programming-solver-for-python">http://scicomp.stackexchange.com/questions/83/is-there-a-high-quality-nonlinear-programming-solver-for-python</a></li>
+<li>The paper that explains SNOPT's algorithm: <a class="reference external" href="http://www-leland.stanford.edu/group/SOL/reports/snopt.pdf">http://www-leland.stanford.edu/group/SOL/reports/snopt.pdf</a></li>
+<li>JSModelica seems to have some Pyton interfaces to things.</li>
+<li>PyOpt interfaces lots of code, but mostly commercial code.</li>
+<li>OpenMDAO uses PyOpt.</li>
+<li>My old labmate Gilbert has a Python Optimal Control package
+<a class="reference external" href="https://github.com/gilbertgede/PyOCP">https://github.com/gilbertgede/PyOCP</a> and an interior point optimizer
+<a class="reference external" href="https://github.com/gilbertgede/PyIntropt">https://github.com/gilbertgede/PyIntropt</a></li>
+</ul>
+</div>
+
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+      <li class="list-inline-item"><a href="https://moorepants.info.github.io/authors.html">Authors</a></li>
+    <li class="list-inline-item"><a href="https://moorepants.info.github.io/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="https://moorepants.info.github.io/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="https://moorepants.info.github.io/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>
+<div class="row">
+  <div class="col-sm-4 mx-auto text-center text-muted" >
+    <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+      <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+    </a>
+    <br />
+    This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+  </div>
+</div>    </div>
+  </footer>
+</body>
+
+</html>

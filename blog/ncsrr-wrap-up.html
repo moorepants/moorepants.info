@@ -1,0 +1,931 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  NCSRR Visiting Scholar Wrap Up | moorepants
+</title>
+  <link rel="canonical" href="https://moorepants.info.github.io/blog/ncsrr-wrap-up.html">
+
+
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/pygments/default.min.css">
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="https://moorepants.info.github.io/feeds/all.atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="Categories Atom Feed"
+        href="https://moorepants.info.github.io/feeds/{slug}.atom.xml">  
+  <meta name="description" content="This is my last day here at Stanford's Neuromuscular Biomechanics Lab for the NCSRR visiting scholar program. This blog post summarizes what I've done while being here over the last five weeks. I reviewed the proposal I wrote almost 7 months ago for this visiting position. My main goals were …">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="https://moorepants.info.github.io/">
+        <img class="img-fluid rounded" src=https://objects-us-east-1.dream.io/moorepants/headshot.jpg alt="moorepants">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="https://moorepants.info.github.io/">moorepants</a></h1>
+      <p class="text-muted">a websitee</p>
+      <ul class="list-inline">
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/about.html">About</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/portfolio.html">Portfolio</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/interests.html">Interests</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/research.html">Research</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/teaching.html">Teaching</a></li>
+          <li class="list-inline-item"><a href="/blog/">Blog</a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  NCSRR Visiting Scholar Wrap Up
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2014-08-15T09:44:00-07:00">
+          <i class="fa fa-clock-o"></i>
+          Fri 15 August 2014
+        </li>
+        <li class="list-inline-item">
+          <i class="fa fa-folder-open-o"></i>
+          <a href="https://moorepants.info.github.io/category/misc.html">misc</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fa fa-user-o"></i>
+              <a href="https://moorepants.info.github.io/author/jason-k-moore.html">Jason K. Moore</a>          </li>
+          <li class="list-inline-item">
+            <i class="fa fa-files-o"></i>
+              <a href="https://moorepants.info.github.io/tag/ncsrr.html">#ncsrr</a>,               <a href="https://moorepants.info.github.io/tag/direct-collocation.html">#direct collocation</a>,               <a href="https://moorepants.info.github.io/tag/system-identification.html">#system identification</a>,               <a href="https://moorepants.info.github.io/tag/inverted-pendulum.html">#inverted pendulum</a>          </li>
+      </ul>
+    </header>
+
+
+    <div class="content">
+      <p>This is my last day here at Stanford's Neuromuscular Biomechanics Lab for the
+NCSRR visiting scholar program. This blog post summarizes what I've done while
+being here over the last five weeks.</p>
+<p>I reviewed the <a class="reference external" href="http://dx.doi.org/10.6084/m9.figshare.1137192">proposal</a> I wrote almost 7 months ago for this visiting
+position. My main goals were to:</p>
+<ol class="arabic simple">
+<li>Implement a closed loop muscle driven gait simulation in Opensim that would
+simulate significantly faster than the one in <a class="citation-reference" href="#wang2012" id="id1">[Wang2012]</a> and also include
+longitudinal and lateral perturbation inputs at the ground surface.</li>
+<li>Run a shooting optimization in the same fashion as <a class="citation-reference" href="#wang2012" id="id2">[Wang2012]</a> that would
+discover the control parameters in the closed loop model by minimizing the
+error in the model's outputs and the gait measurements from subjects being
+perturbed by walking.</li>
+</ol>
+<p>I didn't accomplish either of these goals. During the 6 months between writing
+the proposal and coming to work here at Stanford Sandy and I collected all of
+the necessary data and I worked on a computationally simple direct
+identification technique to identify a control mechanism during walking. The
+direct identification method &quot;worked&quot; except that I had no way to validate that
+the gain scheduled controller can actually control something. So an indirect
+method became more and more appealing than it was when I first wrote the
+proposal.</p>
+<p>I started thinking about the indirect method I'd proposed more deeply and came
+to realize that the computational costs for the indirect identification
+technique via shooting that I'd proposed was going to put computation time into
+number of weeks instead of number of hours, likely regardless of how fast I
+could make things run. So I started working on understanding the direct
+collocation techniques that Ton had been using <a class="citation-reference" href="#ackermann2010" id="id3">[Ackermann2010]</a> to find optimal
+open loop control inputs to walking models. This became much more appealing, so
+over the month before I came out to Stanford I began implementing an
+identification example for a simpler, known system. I arrived at Stanford with
+this example close to complete and spent the first couple of weeks getting that
+to work hoping that it would be suitable for the gait identification problem.
+It ended up working and seemed promising so I ultimately decided to implement
+the gait id problem using IPOPT and Opensim. I made strong headway on
+implementing this but there is still work to be done to see if this method will
+work on a gait problem. My main accomplishments over the five weeks were:</p>
+<ol class="arabic simple">
+<li>Completed a direct collocation identification for a simple inverted pendulum
+system with promising results.</li>
+<li>Created a joint torque driven planar gait model with prescribed perturbation
+inputs in Opensim that matches our other Gait2D model implementations.</li>
+<li>Developed a gain scheduled controller that works with the Opensim plant
+model.</li>
+<li>Developed a skeleton structure for the code to run the direct collocation
+system id with the closed loop Opensim model. (i.e. idea is in place but
+implementation still is not complete)</li>
+<li>Learned how to develop with the Opensim API.</li>
+<li>Had lots of fruitful conversations with the other researchers in the NMBL.</li>
+</ol>
+<p>Things diverted a bit from my original proposal and I didn't get nearly done
+the amount I'd proposed. This diversion was the result of finding promising
+results with the direct collocation approach and finding out that Jack and
+others had already implemented a 2D gait model which ran even slower than his
+original 3D model, making shooting based optimization even less appealing.</p>
+<div class="section" id="system-identification-with-direct-collocation">
+<h2>System Identification with Direct Collocation</h2>
+<p>System identification is the process of discovering a mathematical model of a
+dynamic system from measurements of that system. In my case I'm interested in
+identifying a mathematical model that shows the relationship between what a
+human senses during walking and the low level actuations of the human's body to
+produce stable and robust walking using those sensors and actuators that could
+be realized on an assistive powered prosthetic.</p>
+<p>System identification starts with the data. At CSU we've collected typical gait
+lab data (full body motion capture and ground reaction forces) of several
+subjects walking for 8 minutes while being longitudinally perturbed with random
+disturbances at the feet during each stance phase. We believe that this data is
+rich enough that we can use it to expose a mathematical model of the feedback
+mechanism used in control during walking.</p>
+<p>The objective in system identification is relatively simple. We typically want
+to minimize the difference in the measurements of a real system and the outputs
+of a model that represents that system. This is also referred to &quot;tracking&quot; in
+optimal control jargon. The measurements <span class="math">\(y_m\)</span> are noisy and the model is
+a mathematical simplification of reality. For discrete measurements,
+<span class="math">\(y_{mi}\)</span>, taken at a sampling interval <span class="math">\(h\)</span> the cost function that
+needs to be minimized can take this form:</p>
+<div class="math">
+\begin{equation*}
+J(\theta) = h \sum_{i=1}^N \left[y_{mi} - y_i(\theta)\right]^2
+\end{equation*}
+</div>
+<p>which is an approximation of the continuous form:</p>
+<div class="math">
+\begin{equation*}
+J(\theta) = \int_{t_i}^{t_f} [y_m(t) - y(\theta, t)]^2 dt
+\end{equation*}
+</div>
+<p><span class="math">\(y\)</span> can be determined by forward simulation of the ODE's that govern the
+dynamical system given the free system parameters, <span class="math">\(\theta\)</span>. But forward
+simulation of complex dynamical systems, especially stiff ones, can take
+significant computational time, i.e. often more time than the real motion took.
+This means that every step in an optimization procedure would have to simulate
+the system through the entire time period and, for thousands of optimization
+iterations, this becomes prohibitively computationally expensive. The
+computational cost is especially high for a system identification problems
+because they rely on longer measurements to ensure accurate prediction.</p>
+<p>But direct collocation formulations and nonlinear programming can potentially
+speed up the optimization iterations significantly by pushing the evaluation of
+the equations of motion to nonlinear constraints as opposed to using them for
+simulation.</p>
+<p>A basic nonlinear programming problem with equality constraints then takes this
+form:</p>
+<div class="math">
+\begin{equation*}
+\min_{\theta \in \Re^{n}}  J(\theta)
+\end{equation*}
+</div>
+<div class="math">
+\begin{equation*}
+c(\theta) = 0
+\end{equation*}
+</div>
+<div class="math">
+\begin{equation*}
+\theta^L \leq \theta \leq \theta^U
+\end{equation*}
+</div>
+<p>where the cost function, <span class="math">\(J\)</span> is minimized while the free parameters are
+bounded by <span class="math">\(\theta^L\)</span> and <span class="math">\(\theta^U\)</span> and the equality constraints
+<span class="math">\(c(\theta)\)</span> are satisfied.</p>
+<p>With the cost function specified as shown above, the constraints can be
+introduced that enforce that <span class="math">\(F=ma\)</span> holds at each collocation node, i.e.
+<span class="math">\(c(\theta) = F - ma = 0\)</span>.</p>
+<p>For a typical dynamical system that has a feedback controller that closes the
+loop, we can describe the system by a set of ordinary differential equations.</p>
+<p>First, a structure for the open loop dynamics and the controller are assumed.
+The open loop dynamics are generally described by a set of ordinary
+differential equations:</p>
+<div class="math">
+\begin{equation*}
+0 = f^{open}(\dot{x}, x, u^{con}, u^{ext}, p^{open}, t)
+\end{equation*}
+</div>
+<p>where:</p>
+<ul>
+<li><p class="first"><span class="math">\(x\)</span>: system state, depends on time</p>
+</li>
+<li><p class="first"><span class="math">\(u\)</span>: system inputs (composed of those to control and external inputs),
+depends on time</p>
+<blockquote>
+<ul class="simple">
+<li><span class="math">\(u^{con}\)</span> : inputs which will be control inputs</li>
+<li><span class="math">\(u^{ext}\)</span> : disturbance inputs</li>
+</ul>
+</blockquote>
+</li>
+<li><p class="first"><span class="math">\(p\)</span>: system parameters which are constant with respect to time</p>
+</li>
+<li><p class="first"><span class="math">\(t\)</span>: time</p>
+</li>
+</ul>
+<p>A variety of outputs, <span class="math">\(y\)</span>, can be measured from the system. These are
+generally a function of the state, the inputs, and time, but more likely just a
+function of state and time.</p>
+<div class="math">
+\begin{equation*}
+y = g(x, t)
+\end{equation*}
+</div>
+<p>The simplest controllers that don't introduce any new states to the system can
+be described as a function of the outputs and new control parameters
+<span class="math">\(p^{closed}\)</span>, often gains. State feedback controllers, as will be used
+below, fit this model.</p>
+<div class="math">
+\begin{equation*}
+u^{con} = h(y, p^{closed}, t)
+\end{equation*}
+</div>
+<p>State feedback would follow this pattern:</p>
+<div class="math">
+\begin{equation*}
+u^{con} = \mathbf{K} (x_{eq} - x)
+\end{equation*}
+</div>
+<p>These functions for the controlled inputs can be substituted into the open loop
+differential equations to get the closed loop dynamics:</p>
+<div class="math">
+\begin{equation*}
+0 = f^{closed}(\dot{x}, x, u_{ext}, p^{open}, p^{closed}, t)
+\end{equation*}
+</div>
+<p>These closed loop equations that describe the evolution of the system's states
+must hold true at any point in time. To transform this continuous equation into
+a set of constraints for the non-linear programming problem, we first have to
+make some assumption on the discrete relationship between <span class="math">\(\dot{x}\)</span> and
+<span class="math">\(f\)</span>. There are many different integration approximation methods that could
+be utilized. Ton has had good luck with backward Euler which is an implicit
+method and robust for stiff systems. For an integration step size of <span class="math">\(h\)</span>,
+backward Euler integration is:</p>
+<div class="math">
+\begin{equation*}
+x_{i+1} = x_i + h f(t_{i+1}, x_{i+1})
+\end{equation*}
+</div>
+<p>So <span class="math">\(\dot{x}\)</span> can be approximated by:</p>
+<div class="math">
+\begin{equation*}
+\frac{x_{i+1} - x_i}{h} =  f(t_{i+1}, x_{i+1})
+\end{equation*}
+</div>
+<p>or</p>
+<div class="math">
+\begin{equation*}
+\frac{x_i - x_{i-1}}{h} =  f(t_i, x_i)
+\end{equation*}
+</div>
+<p>With this assumption the closed loop equations of motion can be discretized and
+now fit this form:</p>
+<div class="math">
+\begin{equation*}
+0 = f^{closed}_i(x_{i}, x_{i-1}, u^{ext}_i, p^{open}, p^{closed}, h)
+\end{equation*}
+</div>
+<p>So for <span class="math">\(i=1 \ldots N\)</span> collocation nodes, this equation must hold.</p>
+<p>The free parameters in the optimization problem always include the state values
+at the collocation nodes and can include the parameters for the open and closed
+loop system and the remaining input trajectories (if not known).</p>
+<div class="math">
+\begin{equation*}
+\theta = [x_{i}, u^{ext}, p^{open}, p^{closed}]
+\end{equation*}
+</div>
+<p>For a control parameter identification problem with measured external inputs,
+<span class="math">\(\theta\)</span> is:</p>
+<div class="math">
+\begin{equation*}
+\theta = [x_{k}, p^{closed}]
+\end{equation*}
+</div>
+<p>The remaining tricky parts are computing the gradient of the objective function
+and the Jacobian of the constraints, as these are necessary for the gradient
+based optimization algorithms employed in NLP solvers.</p>
+</div>
+<div class="section" id="example-known-system-laterally-perturbed-n-link-pendulum-on-a-cart">
+<h2>Example Known System: Laterally Perturbed N-Link Pendulum on a Cart</h2>
+<p>An inverted pendulum is a common system used to model a variety of things about
+human motion. I decided to start with this simple system to see if the direct
+collocation method would be successful. The inverted pendulum on a cart is easy
+to control and the system has well known solutions. The cart with mass
+<span class="math">\(m_0\)</span> is attached to the origin via a linear spring and damper. It can
+move laterally along the <span class="math">\(\hat{i}_x\)</span> axis. Attached to the cart are a
+series of massless links with a mass at each joint. There are actuators at each
+pin joint that apply a torque between the connected bodies. An external force
+can be applied to the cart base to perturb the system.</p>
+<img alt="" class="align-center" src="https://objects-us-east-1.dream.io/moorepants/n-pendulum-with-cart.png" />
+<p>The source code for the following example can be found here:</p>
+<p><a class="reference external" href="https://github.com/csu-hmc/inverted-pendulum-sys-id">https://github.com/csu-hmc/inverted-pendulum-sys-id</a></p>
+<p>The first step is to derive the equations for the system. The following gives
+the open loop equations for a one link system for brevity, but the code
+supports any number of links:</p>
+<div class="math">
+\begin{equation*}
+\begin{bmatrix}
+  0 \\ 0 \\ 0 \\ 0
+\end{bmatrix}
+=
+\begin{bmatrix}
+  \dot{q}_{0} - u_{0} \\
+  \dot{q}_{1} - u_{1} \\ c u_{0} + k q_{0} + l_{0} m_{1} u^{2}_{1}
+  \operatorname{sin}\left(q_{1}\right) - l_{0} m_{1}
+  \operatorname{cos}\left(q_{1}\right) \dot{u}_{1} + \left(m_{0} +
+  m_{1}\right) \dot{u}_{0} - F \\
+  -g l_{0} m_{1} \operatorname{sin}\left(q_{1}\right) + l_{0}^{2} m_{1} \dot{u}_{1} - l_{0} m_{1} \operatorname{cos}\left(q_{1}\right) \dot{u}_{0} - T_{1}
+\end{bmatrix}
+\end{equation*}
+</div>
+<p>The states are:</p>
+<div class="math">
+\begin{equation*}
+x = [q_0, q_1, u_0, u_1]
+\end{equation*}
+</div>
+<p>And we will assume the output are simply the coordinates:</p>
+<div class="math">
+\begin{equation*}
+y = [q_0, q_1]
+\end{equation*}
+</div>
+<p>Define a state feedback controller symbolically where <span class="math">\(x_{eq} = 0\)</span>:</p>
+<div class="math">
+\begin{equation*}
+u^{con} = \mathbf{K} (x_{eq} - x)
+\end{equation*}
+</div>
+<div class="math">
+\begin{equation*}
+u^{con} = T_{1} = -k_{00} q_0 - k_{01} q_1 - k_{02} u_0 - k_{03} u_1
+\end{equation*}
+</div>
+<p>This control law can then be substituted into the open loop equations of motion
+and the system can be simulated under the influence of cart perturbations (sum
+of sines):</p>
+<div class="math">
+\begin{equation*}
+u^{ext} = F(t) = \sum m_j \sin(\omega_j t)
+\end{equation*}
+</div>
+<p>The numerical values of the controller can easily be found by solving an LQR
+control problem once the numerical values are chosen for the open loop model
+parameters. An example simulation is shown below:</p>
+<img alt="" src="https://objects-us-east-1.dream.io/moorepants/one-link-pendulum-trajectory.png" />
+<video width="640" height="480" controls>
+  <source src=https://objects-us-east-1.dream.io/moorepants/one-link.mp4 type="video/mp4">
+  <source src=https://objects-us-east-1.dream.io/moorepants/one-link.ogg type="video/ogg">
+Your browser does not support the video tag.
+</video><p>The objective function is simply:</p>
+<div class="math">
+\begin{equation*}
+J(\theta) = \sum_{i=1}^N (y_{mi} - y_i)^2
+\end{equation*}
+</div>
+<p>where <span class="math">\(y_i\)</span> is a subset of <span class="math">\(\theta\)</span>, i.e. just the generalized
+coordinates. The measurements will have some additive noise:</p>
+<div class="math">
+\begin{equation*}
+y_m = [q_0, q_1] + [e_0, e_1]
+\end{equation*}
+</div>
+<p>The gradient of the objective function with respect to <span class="math">\(\theta\)</span> is then:</p>
+<div class="math">
+\begin{equation*}
+\frac{dJ}{d \theta} = [2 (y_{mi} - y_i) \qquad \mathbf{0}]
+\end{equation*}
+</div>
+<p>The closed loop discretized form of the equations of motion look like:</p>
+<div class="math">
+\begin{equation*}
+\begin{bmatrix}
+0 \\ 0\\ 0\\ 0
+\end{bmatrix}
+=
+\begin{bmatrix}
+- u_{0i} + \frac{1}{h} \left(q_{0i} - q_{0_{i-1}}\right)\\
+  - u_{1i} + \frac{1}{h} \left(q_{1i} - q_{1_{i-1}}\right)\\
+  - F_i + c u_{0i} + k q_{0i} + l_{0} m_{1} u_{1i}^{2} \sin{\left (q_{1i} \right )} -
+  \frac{l_{0} m_{1}}{h} \left(u_{1i} - u_{1_{i-1}}\right) \cos{\left (q_{1i} \right )} +
+  \frac{1}{h} \left(m_{0} + m_{1}\right) \left(u_{0i} - u_{0_{i-1}}\right)\\\\
+  - g l_{0} m_{1} \sin{\left (q_{1i} \right )} + k_{00} q_{0i} + k_{01} q_{1i} + k_{02}
+  u_{0i} + k_{03} u_{1i} + \frac{l_{0}^{2} m_{1}}{h} \left(u_{1i} - u_{1_{i-1}}\right) -
+  \frac{l_{0} m_{1}}{h} \left(u_{0i} - u_{0_{i-1}}\right) \cos{\left (q_{1i} \right )}
+\end{bmatrix}
+\end{equation*}
+</div>
+<p>The constraints are evaluated at N-1 collocation nodes (skippin N=1). And
+given <span class="math">\(\theta\)</span>, the ith and (i-1)th states are used along with the
+controller parameters to compute the right hand side of the system dynamics.</p>
+<div class="math">
+\begin{equation*}
+c_i(\theta) = f_i(x_i, x_{i-1}, u_i, k) = 0
+\end{equation*}
+</div>
+<p>The Jacobian of the constraints is mostly a sparse banded matrix. The
+parameters, <span class="math">\(k\)</span> don't show up in the kinematic equations so all of those
+entries are zero. The only other non-zero entries are two values per state for
+each constraint and values for each dynamic equation constraint (not kinematic)
+for each of the parameters.</p>
+<p>The only partial derivatives we need for evaluating the Jacobian can be found
+by taking the derivative of <span class="math">\(f_i\)</span> with respect to these variables:</p>
+<div class="math">
+\begin{equation*}
+[q_{0i}, q_{1i}, u_{0i}, u_{1i}, q_{0_{i-1}}, q_{1_{i-1}}, u_{0_{i-1}},
+u_{1_{i-1}}, k_{00}, k_{01}, k_{02}, k_{03}]
+\end{equation*}
+</div>
+<p>and you get:</p>
+<div class="math">
+\begin{equation*}
+\begin{bmatrix}
+  \frac{1}{h} &amp; 0 &amp; -1 &amp; 0 &amp; - \frac{1}{h} &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0\\
+  0 &amp; \frac{1}{h} &amp; 0 &amp; -1 &amp; 0 &amp; - \frac{1}{h} &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0\\
+  k &amp; l_{0} m_{1} u_{1i}^{2} \cos{\left (q_{1i} \right )} + \frac{l_{0} m_{1}}{h}
+  \left(u_{1i} - u_{1_{i-1}}\right) \sin{\left (q_{1i} \right )} &amp; c + \frac{1}{h}
+  \left(m_{0} + m_{1}\right) &amp; 2 l_{0} m_{1} u_{1i} \sin{\left (q_{1i} \right )} -
+  \frac{l_{0} m_{1}}{h} \cos{\left (q_{1i} \right )} &amp; 0 &amp; 0 &amp; - \frac{1}{h}
+  \left(m_{0} + m_{1}\right) &amp; \frac{l_{0} m_{1}}{h} \cos{\left (q_{1i} \right )}
+  &amp; 0 &amp; 0 &amp; 0 &amp; 0\\
+  k_{00} &amp; - g l_{0} m_{1} \cos{\left (q_{1i} \right )} + k_{01} + \frac{l_{0}
+  m_{1}}{h} \left(u_{0i} - u_{0_{i-1}}\right) \sin{\left (q_{1i} \right )} &amp; k_{02} -
+  \frac{l_{0} m_{1}}{h} \cos{\left (q_{1i} \right )} &amp; k_{03} + \frac{l_{0}^{2}
+  m_{1}}{h} &amp; 0 &amp; 0 &amp; \frac{l_{0} m_{1}}{h} \cos{\left (q_{1i} \right )} &amp; -
+  \frac{l_{0}^{2} m_{1}}{h} &amp; q_{0i} &amp; q_{1i} &amp; u_{0i} &amp; u_{1i}
+\end{bmatrix}
+\end{equation*}
+</div>
+<p>These partial derivatives can then be used to build the sparse Jacobian of the
+constraints. Each row of the constraint Jacobian corresponds to the n state
+equations at each of the <span class="math">\(N-1\)</span> collocation nodes and the columns
+correspond to the free parameters, i.e. states at each node and the unknown
+gains in this case.</p>
+<p>I set the rows to follow this convention:</p>
+<div class="math">
+\begin{equation*}
+[\frac{\partial c_{21}}{\partial \theta},
+\ldots,
+\frac{\partial c_{N1}}{\partial \theta},
+\frac{\partial c_{22}}{\partial \theta},
+\ldots,
+\frac{\partial c_{N2}}{\partial \theta},
+\frac{\partial c_{23}}{\partial \theta},
+\ldots,
+\frac{\partial c_{N3}}{\partial \theta},
+\frac{\partial c_{24}}{\partial \theta},
+\ldots,
+\frac{\partial c_{N4}}{\partial \theta}]
+\end{equation*}
+</div>
+<p>I set the columns to follow this convention:</p>
+<div class="math">
+\begin{equation*}
+\theta =
+[q_{01}, q_{02}, \ldots, q_{0_{i-1}}, q_{0i}, \ldots, x_{N_{i-1}}, x_{1N},
+ q_{11}, q_{12}, \ldots, q_{1_{i-1}}, q_{1i}, \ldots, q_{1_{N-1}}, x_{2N},
+ u_{01}, u_{03}, \ldots, u_{0_{i-1}}, u_{0i}, \ldots, u_{0_{N-1}}, x_{3N},
+ u_{11}, u_{12}, \ldots, u_{1_{i-1}}, u_{1i}, \ldots, u_{1_{N-1}}, x_{4N},
+ k_{00}, k_{01}, k_{02}, k_{03}]
+\end{equation*}
+</div>
+<p>The sparse entries of the Jacobian can then be computed for each row.</p>
+<p>The source code builds functions that evaluates the constraints and the
+Jacobian of the constraints given <span class="math">\(\theta\)</span> automatically from the
+symbolic equations of motion. The objective function and gradient are also
+built, but not yet as automated as the constraints.</p>
+<p>To run the pendulum example there is a basic command line interface:</p>
+<pre class="literal-block">
+python pendulum.py -h
+usage: pendulum.py [-h] [-n NUMLINKS] [-d DURATION] [-s SAMPLERATE]
+                   [-i INITIALCONDITIONS] [-r] [-a] [-p]
+
+Run N-Link System ID
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -n NUMLINKS, --numlinks NUMLINKS
+                        The number of links in the pendulum.
+  -d DURATION, --duration DURATION
+                        The duration of the simulation in seconds.
+  -s SAMPLERATE, --samplerate SAMPLERATE
+                        The sample rate of the discretization.
+  -i INITIALCONDITIONS, --initialconditions INITIALCONDITIONS
+                        The type of initial conditions.
+  -r, --sensornoise     Add noise to sensor data.
+  -a, --animate         Show the pendulum animation.
+  -p, --plot            Show result plots.
+</pre>
+<p>Running this program does these following steps:</p>
+<ol class="arabic simple">
+<li>Constructs the symbolic equations of motion for the open loop system.</li>
+<li>Finds an optimal controller.</li>
+<li>Simulates the closed loop system to generate noisy measurement data.</li>
+<li>Constructs the symbolic closed loop backward Euler discretized constraint
+equation.</li>
+<li>Constructs the symbolic sparse constraint Jacobian matrix.</li>
+<li>Defines numerical functions that evaluate the objective and it's gradient.</li>
+<li>Defines an IPOPT problem with the above.</li>
+<li>Constructs and initial guess for the solution.</li>
+<li>Runs IPOPT to solve for the free parameters.</li>
+<li>Saves results in a database.</li>
+<li>Makes plots and such.</li>
+</ol>
+<p>So for example with a 1 link pendulum (4 unknown gains), a simulation duration
+of 120 seconds, discretized at 0.01 s (100 Hz), and random initial guess for
+the gains the problem will be constructed and IPOPT will try to solve it.</p>
+<p>The initial guess for the system are the estimated state trajectories and some
+&quot;close&quot; random values for the gains. The command is:</p>
+<pre class="literal-block">
+pendulum.py -n 1 -d 60.0 -r -p -a -s 100.0 -i close
+</pre>
+<ul class="simple">
+<li>N = 6,000 (h = 0.01 s (100 hz) over 1 minutes, 60 seconds)</li>
+<li>Number of free variables = 24,008</li>
+<li>Number of non-zero's in the constraint Jacobian = 132,000</li>
+</ul>
+<p>IPOPT Results:</p>
+<pre class="literal-block">
+197  3.4918824e-03 1.56e-10 7.95e-09 -11.0 1.94e-04    -  1.00e+00 1.00e+00h  1
+
+Number of Iterations....: 197
+
+                                   (scaled)                 (unscaled)
+Objective...............:   3.4918824191332988e-03    3.4918824191332988e-03
+Dual infeasibility......:   7.9471792187856150e-09    7.9471792187856150e-09
+Constraint violation....:   1.4589055009873315e-10    1.5641832273871614e-10
+Complementarity.........:   0.0000000000000000e+00    0.0000000000000000e+00
+Overall NLP error.......:   7.9471792187856150e-09    7.9471792187856150e-09
+
+
+Number of objective function evaluations             = 746
+Number of objective gradient evaluations             = 198
+Number of equality constraint evaluations            = 757
+Number of inequality constraint evaluations          = 0
+Number of equality constraint Jacobian evaluations   = 198
+Number of inequality constraint Jacobian evaluations = 0
+Number of Lagrangian Hessian evaluations             = 0
+Total CPU secs in IPOPT (w/o function evaluations)   =     94.770
+Total CPU secs in NLP function evaluations           =    353.544
+
+EXIT: Optimal Solution Found.
+Initial gain guess: [ 107.21621286 14.48140057  37.61288637  -76.37491515]
+Known gains:        [  -4.71764346 19.67083668  -3.69402157    5.57114809]
+Identified gains:   [  -3.45783597 17.0274554   -3.27007286    5.24318706]
+Adding run 36033e34d60ef96463e1b16277e8a4a3fcec9370 to the database.
+</pre>
+<p>The total computation time on a laptop PC was ~7.5 minutes. Where as a shooting
+may have taken 1.5 hours for the same number of iterations and needed a large
+multi-core machine. This is with a relatively naive implementation and lots of
+time unnecessary time spent in the function calls.</p>
+<p>The constraint violations after finding the optimum look like:</p>
+<img alt="" src="https://objects-us-east-1.dream.io/moorepants/one-link-pendulum-constraint-violation.png" />
+<p>And you can see that the predicted trajectories are tightly aligned with the
+measurements:</p>
+<img alt="" src="https://objects-us-east-1.dream.io/moorepants/one-link-pendulum-trajectory-comparison.png" />
+<div class="section" id="four-link-pendulum">
+<h3>Four Link Pendulum</h3>
+<p>Here are the basic results from four link pendulum solved with very close
+initial guesses for the 40 gains.</p>
+<video width="640" height="480" controls>
+  <source src=https://objects-us-east-1.dream.io/moorepants/four-link.mp4 type="video/mp4">
+  <source src=https://objects-us-east-1.dream.io/moorepants/four-link.ogg type="video/ogg">
+Your browser does not support the video tag.
+</video><img alt="" src="https://objects-us-east-1.dream.io/moorepants/four-link-pendulum-trajectory.png" />
+<p>The constraint violations given the known gains:</p>
+<img alt="" src="https://objects-us-east-1.dream.io/moorepants/four-link-pendulum-constraint-violation-from-initial-guess.png" />
+<p>The constraint violations given the optimal gains:</p>
+<img alt="" src="https://objects-us-east-1.dream.io/moorepants/four-link-pendulum-constraint-violation-from-optimal-solution.png" />
+<p>The trajectory comparison:</p>
+<img alt="" src="https://objects-us-east-1.dream.io/moorepants/four-link-pendulum-trajectory-comparison.png" style="width: 800px;" />
+</div>
+</div>
+<div class="section" id="planar-gait-system-id">
+<h2>Planar Gait System ID</h2>
+<div class="section" id="plant">
+<h3>Plant</h3>
+<p>The next step is to implement this for a data collected from perturbed
+walking. A plant model and controller structure are required. I constructed a
+planar gait model:</p>
+<ul class="simple">
+<li>7 rigid bodies: trunk, thighs, shanks, feet</li>
+<li>9 DoF, 18 states</li>
+<li>Compliant heel and toe contact spheres</li>
+<li>Longitudinally translatable floor with prescribed motion input</li>
+<li>Joint torque coordinate actuators: hip, knee, ankle</li>
+<li>Physical parameters from Winters, stored in yaml files</li>
+<li>Still needs subject specific scaling</li>
+<li>Constructed with the Opensim C++ API</li>
+</ul>
+<img alt="" src="https://objects-us-east-1.dream.io/moorepants/osgait2d.png" />
+</div>
+<div class="section" id="controller">
+<h3>Controller</h3>
+<img alt="" src="https://objects-us-east-1.dream.io/moorepants/gait-gain-scheduled-controller.png" />
+<p>A gain gait cycle scheduled joint angle/rate feedback controller was
+implemented by sub-classing <tt class="docutils literal"><span class="pre">OpenSim::Controller</span></tt>. It follows this control
+law:</p>
+<div class="math">
+\begin{equation*}
+T(t) = T_0(\varphi) + \mathbf{K}(\varphi)[s_0(\phi) - s(t)]
+\end{equation*}
+</div>
+<div class="math">
+\begin{equation*}
+T(t) = T^*(\varphi) - \mathbf{K}(\varphi) s(t)
+\end{equation*}
+</div>
+<ul class="simple">
+<li><span class="math">\(T\)</span> is the 6 x 1 vector of applied joint torques.</li>
+<li><span class="math">\(T^*\)</span> is a vector of 6 torques scheduled over the gait cycle at P
+points.</li>
+<li><span class="math">\(\mathbf{K}\)</span> is a partial state feedback matrix (6 x 12) scheduled over
+the gait cycle at P points.</li>
+<li><span class="math">\(s\)</span> is the 12 x 1 vector of joint angles and angular rates.</li>
+</ul>
+<p>The computation uses pre-known heel strike times from the data to compute
+percent gait cycle for a given time in the simulation. Once the percent gait
+cycle is known it interpolates from the scheduled <span class="math">\(T^*\)</span> and
+<span class="math">\(\mathbf{K}\)</span> to get the gains used at the given percentage gait cycle.</p>
+</div>
+<div class="section" id="data">
+<h3>Data</h3>
+<p>The raw data is processed by our gait analysis toolkit. That software outputs
+csv text files for 8 minute trials sampled at 100 hz that contain columns for:</p>
+<ul class="simple">
+<li>ankle, knee, hip joint angles and joint angular rates from inverse kinematics</li>
+<li>spacial trunk location and orientation</li>
+<li>belt position over time</li>
+<li>right and left heelstrike times</li>
+</ul>
+<p>These data files are parsed and stored in memory in <tt class="docutils literal"><span class="pre">SimTK::Matrix</span></tt> objects.</p>
+<p>The toolkit also computes <span class="math">\(T^*(\varphi)\)</span> and <span class="math">\(\mathbf{K}(\varphi)\)</span>
+using the direct id method and outputs these to disk. These data files are
+parsed in C++ to construct std::vectors of SimTK::Vectors/SimTK::Matrices.</p>
+</div>
+<div class="section" id="optimize">
+<h3>Optimize</h3>
+<p>IPOPT will be used to solve the problem as in the above. It requires a set of
+information to fully describe the problem.</p>
+<p>Variables:</p>
+<ul class="simple">
+<li><span class="math">\(N\)</span> : number of collocation nodes</li>
+<li><span class="math">\(M\)</span> : number of measured time samples</li>
+<li><span class="math">\(P\)</span> : Number of gait cycle discretization points</li>
+<li><span class="math">\(n\)</span> : number of states</li>
+<li><span class="math">\(o\)</span> : number of model outputs</li>
+<li><span class="math">\(p\)</span> : total number of model constants</li>
+<li><span class="math">\(q\)</span> : number of free model constants</li>
+<li><span class="math">\(r\)</span> : number of free specified inputs</li>
+</ul>
+<p>Free parameters:</p>
+<ul class="simple">
+<li><span class="math">\(x\)</span>: 18 x N</li>
+<li><span class="math">\(T^*\)</span>: 6 x P</li>
+<li><span class="math">\(\mathbf{K}\)</span> : 6 x 12 x P</li>
+</ul>
+<p>I start by using 3/4 of the data (6 minutes) from each trial for the
+identification. The remaining 1/4 of data from each trial will be used to
+validate the identified model. So if If N = 36,000 and n = 18 then the length
+of <span class="math">\(\theta=648,780\)</span> where there are 780 controller parameters.</p>
+<p>The initial guess for the free parameters will be constructed from the
+estimated state trajectories computed from inverse kinematics and the gains
+computed from the direct identification approach.</p>
+<p>The cost function and it's gradient are defined as they were in the pendulum
+problem and only the joint coordinates are tracked:</p>
+<div class="math">
+\begin{equation*}
+J(\theta) = \sum_{i=1}^N (y^m_i - y_i)^2
+\end{equation*}
+</div>
+<div class="math">
+\begin{equation*}
+\frac{dJ}{d \theta} = [2 (y^m_i - y_i) \qquad \mathbf{0}]
+\end{equation*}
+</div>
+<p>As will the constraints and the Jacobian of the constraints. I will enforce the
+equation of motion constraints at N - 1 nodes (skip the first node). This is a
+vector function equal to the number of states:</p>
+<div class="math">
+\begin{equation*}
+c_i(\theta) = 0 = f_i(x_i, x_{i-1}, T*_i, K_i, h)
+\end{equation*}
+</div>
+<p>There are two non zeros per row per state + a nonzero for each free
+parameter in the dynamic equations (i.e. parameter derivatives are zero in the
+kinematic equations) giving</p>
+<div class="math">
+\begin{equation*}
+(2 * 18) * 647982 + 780 * 647982 / 2 = 276,040,332
+\end{equation*}
+</div>
+<p>The non-zero entries in the Jacobian matrix will be computed via numerical
+differentiation and stored in a sparse triplet format. So the evaluation of
+<span class="math">\(c_i\)</span> should be as fast as possible to minimize computation time a this
+step.</p>
+<p>Use IPOPT's limited memory Hessian approximation instead of computing it
+explicitly.</p>
+<p>Solve!</p>
+</div>
+</div>
+<div class="section" id="lessons-learned">
+<h2>Lessons Learned</h2>
+<p>The experience at Stanford was very rewarding. Here are some of the highlights:</p>
+<p>AOIs were interesting. Each week every person in the lab sends out
+accomplishments, objectives and issues. The objectives should be concrete goals
+for the upcoming week. The accomplishments section should list what objectives
+you completed (and didn't complete) from the previous week. And the issues
+should detail anything that prevented you from reaching your objectives for
+that past week. I wasn't using this properly for the first 4 weeks because we
+weren't given the correct instructions, just told to copy others and it turns
+out others were not using it correctly either. I've tried this kind of thing
+for myself in the past, but it has always broken down. In the past, it failed
+both because there was no one to hold me accountable (I even post them to my
+lab notebook, but no one actually reads that) and I didn't always write down
+concrete goals that were within a week's scope.</p>
+<p>The AOIs are, in general, a good idea. But there are some things I'd do
+differently.</p>
+<ol class="arabic">
+<li><p class="first">People rarely use the issues. My hunch is that, in a group, people want to
+seem like they are accomplishing a lot and have little trouble doing so.
+That could be especially true in a place like Stanford. I have a feeling
+that there are more issues in the week that aren't shown. I think this is
+typical in science in general. We show our best results in the paper, i.e.
+the results that we just barely got to work, yet don't show the faults of
+the method or the difficulties. I wonder if naming this section something
+different could help people be more willing to share their issues. It may be
+nice to come up with a word that invokes a positiveness to the topic
+&quot;Looking back on the week, what would have helped you meet you objectives?&quot;,
+or &quot;What would have helped you meet your objectives faster?&quot;, or &quot;What
+information/knowledge/etc is needed to make a big stride towards your
+objective?&quot;, &quot;What during the past week came up that you wish you had a
+teammate to collectively solve the problem with?&quot;.</p>
+</li>
+<li><p class="first">I felt the need to write a lot in my accomplishments so that I didn't look
+like I'm doing less than other people (which I generally felt). Competition
+is probably good, it helps me improve my performance and be more efficient
+but it can also be a drain. Others may not feel like the accomplishments are
+competitive but it may be good to think about how to make it feel like a
+healthy competition. I'm at the point in my career where I'm finally getting
+tired of working late into the night and 60+ hours a week and I often choose
+to sleep or not work to keep those hours of work more sane. This article
+made me think about being more real with myself about the # of hours I want
+to work:</p>
+<p><a class="reference external" href="http://blogs.scientificamerican.com/guest-blog/2013/07/21/the-awesomest-7-year-postdoc-or-how-i-learned-to-stop-worrying-and-love-the-tenure-track-faculty-life/">http://blogs.scientificamerican.com/guest-blog/2013/07/21/the-awesomest-7-year-postdoc-or-how-i-learned-to-stop-worrying-and-love-the-tenure-track-faculty-life/</a></p>
+</li>
+</ol>
+<p>It was refreshing to be in an environment where lots of people can help answer
+questions that you have. The lab was structured with quite a few &quot;permanent&quot; PhD
+level researchers that essentially ran the Opensim project and assisted
+students in their research objectives. This was infinitely better than it is at
+CSU where I seem to be the only post doc in existence. Everyone seemed to
+collaborate pretty well too. One student said he didn't think anyone actually
+collaborated on individual research projects, but there was solid collaboration
+on the Opensim development and they'd just started really utilizing Github with
+PR's and issues. I suspect research labs could be much more efficient if they
+could support a fair number of permanent high level researcher positions. But
+things were still centered around very individual research projects for each
+student.</p>
+<p>Ok, closing this one off. It's already too long. Thanks for the opportunity to
+hang out and work in the NMBL!</p>
+</div>
+<div class="section" id="references">
+<h2>References</h2>
+<table class="docutils citation" frame="void" id="wang2012" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Wang2012]</td><td><em>(<a class="fn-backref" href="#id1">1</a>, <a class="fn-backref" href="#id2">2</a>)</em> Wang, Jack M., Samuel R. Hamner, Scott L. Delp, and Vladlen
+Koltun. “Optimizing Locomotion Controllers Using Biologically-Based
+Actuators and Objectives.” ACM Transactions on Graphics (TOG) 31, no. 4 (2012):
+25.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="ackermann2010" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id3">[Ackermann2010]</a></td><td>Ackermann, Marko, and Antonie J. van den Bogert.
+“Optimality Principles for Model-Based Prediction of Human Gait.” Journal of
+Biomechanics 43, no. 6 (April 19, 2010): 1055–60.
+doi:10.1016/j.jbiomech.2009.12.012.</td></tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="notes">
+<h2>Notes</h2>
+<p>These are just some notes I took from the comments after I presented this:</p>
+<ul class="simple">
+<li>Look up OpenMP for parallel stuff.</li>
+<li>Mombaur, Katja Daniela supposedly does open loop direct collocation for
+walking.</li>
+<li>Parallelize the jacobian evaluation because you only need certain parameters
+for each row in the jacobian.</li>
+<li>Think about using different integrator assumptions so you can increase h.</li>
+<li>Add the plant controller diagram before the system id explanation.</li>
+<li>Boyd Convex Optimization</li>
+</ul>
+<p>Constrained multibody dynamics problems:</p>
+<p>Basic form with lagrange multipliers:</p>
+<p>M u' = f - G^T lam
+Gu' = 0</p>
+<p>G u' + G M^-1 G^T lam = G M^-1 f
+G M^-1 G^T lam = G M^-1 f</p>
+<p>G M^-1 G^T lam = u_o</p>
+</div>
+<script type='text/javascript'>if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+      <li class="list-inline-item"><a href="https://moorepants.info.github.io/authors.html">Authors</a></li>
+    <li class="list-inline-item"><a href="https://moorepants.info.github.io/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="https://moorepants.info.github.io/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="https://moorepants.info.github.io/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>
+<div class="row">
+  <div class="col-sm-4 mx-auto text-center text-muted" >
+    <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+      <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+    </a>
+    <br />
+    This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+  </div>
+</div>    </div>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,467 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  PyDy ODE Code Generation | moorepants
+</title>
+  <link rel="canonical" href="https://moorepants.info.github.io/blog/pydy-code-gen.html">
+
+
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/pygments/default.min.css">
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="https://moorepants.info.github.io/feeds/all.atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="Categories Atom Feed"
+        href="https://moorepants.info.github.io/feeds/{slug}.atom.xml">  
+  <meta name="description" content="I've been working on implementing a walking simulation model that is based on and compatible with a model developed by my PI, Ton van den Bogert, in http://dx.doi.org/10.1016/j.jbiomech.2009.12.012. Ton provided me with source code that that derives the equations of …">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="https://moorepants.info.github.io/">
+        <img class="img-fluid rounded" src=https://objects-us-east-1.dream.io/moorepants/headshot.jpg alt="moorepants">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="https://moorepants.info.github.io/">moorepants</a></h1>
+      <p class="text-muted">a websitee</p>
+      <ul class="list-inline">
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/about.html">About</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/portfolio.html">Portfolio</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/interests.html">Interests</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/research.html">Research</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/teaching.html">Teaching</a></li>
+          <li class="list-inline-item"><a href="/blog/">Blog</a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  PyDy ODE Code Generation
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2013-11-01T07:44:00-07:00">
+          <i class="fa fa-clock-o"></i>
+          Fri 01 November 2013
+        </li>
+        <li class="list-inline-item">
+          <i class="fa fa-folder-open-o"></i>
+          <a href="https://moorepants.info.github.io/category/misc.html">misc</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fa fa-user-o"></i>
+              <a href="https://moorepants.info.github.io/author/jason-k-moore.html">Jason K. Moore</a>          </li>
+          <li class="list-inline-item">
+            <i class="fa fa-files-o"></i>
+              <a href="https://moorepants.info.github.io/tag/pydy.html">#pydy</a>,               <a href="https://moorepants.info.github.io/tag/python.html">#python</a>,               <a href="https://moorepants.info.github.io/tag/code-generation.html">#code generation</a>,               <a href="https://moorepants.info.github.io/tag/multibody-dynamics.html">#multibody dynamics</a>,               <a href="https://moorepants.info.github.io/tag/ordinary-differential-equations.html">#ordinary differential equations</a>          </li>
+      </ul>
+    </header>
+
+
+    <div class="content">
+      <p>I've been working on implementing a walking simulation model that is based on
+and compatible with a model developed by my PI, Ton van den Bogert, in
+<a class="reference external" href="http://dx.doi.org/10.1016/j.jbiomech.2009.12.012">http://dx.doi.org/10.1016/j.jbiomech.2009.12.012</a>. Ton provided me with source
+code that that derives the equations of motion for the 2D walker, which I will
+be making publicly available soon. His tool chain is primarily based on closed
+proprietary software, i.e. Autolev and Matlab. I didn't have it in me to use
+those tools since we've spent so much time and effort developing a workflow for
+these kinds of problems with PyDy, so I did what any idealistic young scientist
+would do and rewrote Ton's model with an open source tool chain. In the
+process, I needed to improve the code generation capabilities we were relying
+on for the PyDy workflow and have a small step in improvements on that front.</p>
+<p>We are primarily interested in generating numerical code from SymPy's symbolic
+expressions which are stored in two matrices that generalize a set of first
+order coupled differential equations. The <a class="reference external" href="http://docs.sympy.org/latest/modules/physics/mechanics/api/kane.html#module-sympy.physics.mechanics.lagrange">LagrangesMethod</a> and <a class="reference external" href="http://docs.sympy.org/latest/modules/physics/mechanics/api/kane.html#module-sympy.physics.mechanics.kane">KanesMethod</a>
+classes in the mechanics package generate symbolic ordinary differential
+equations for multibody systems in this form:</p>
+<div class="math">
+\begin{equation*}
+M \dot{x} = F
+\end{equation*}
+</div>
+<p>where <span class="math">\(x\)</span> is a vector of the system states, <span class="math">\(M\)</span> is the mass matrix,
+which may or may not be identity, and <span class="math">\(F\)</span> is a forcing vector. The
+mathematical expressions in <span class="math">\(M\)</span> and <span class="math">\(F\)</span> are non-linear functions
+which generally consist of common operations: addition, multiplication,
+trigonometric functions, absolute values, exponentiation, piecewise functions,
+etc. For complex systems, the expressions that make up the entries of <span class="math">\(M\)</span>
+and <span class="math">\(F\)</span> can be thousands of operations long.</p>
+<p>Most numerical ODE integration routines require that the ODE's are in first
+order form and are explicit in <span class="math">\(\dot{x}\)</span>. There are generally two major
+computational steps in the integration process for our systems:</p>
+<ol class="arabic simple">
+<li>Evaluation of the expressions contained in <span class="math">\(M\)</span> and <span class="math">\(F\)</span>.</li>
+<li>Solving for <span class="math">\(\dot{x}\)</span>.</li>
+</ol>
+<p>For systems without velocity constraints, <span class="math">\(M\)</span> is <span class="math">\(2n\times2n\)</span>
+matrix where <span class="math">\(n\)</span> is the number of degrees of freedom of the system. The
+complexity of the entries of <span class="math">\(M\)</span> and <span class="math">\(F\)</span> are a function of the
+system complexity: number of bodies/particles, number and types of forces,
+number of physical parameters, etc. Whether or not step 1 or 2 is more
+computationally intensive depends on the problem, so in general we need to make
+both as fast as possible to achieve at least real time simulation speeds.</p>
+<p>For step 2, we rely on canned numerical linear system solvers. In general LU
+decomposition, i.e Gaussian elimination, is used but Cholesky Decomposition can
+be used for certain classes of systems. Gaussian elimination has a
+computational complexity of <span class="math">\(O((2n)^3)\)</span> for our systems without velocity
+constraints where there are <span class="math">\(n\)</span> dynamical differential equations and
+<span class="math">\(n\)</span> kinematical differential equations. In many cases, <span class="math">\(M\)</span> is
+symmetric positive definite and can be solved with Cholesky decomposition for
+half the computational cost of Gaussian elimination.</p>
+<p>In general, we rely on software such as LAPACK for these routines which offer
+good computational speed. But the evaluation of the symbolic expressions is a
+different story. The three things we are most concerned with respect to the
+long expression evaluation are:</p>
+<ol class="arabic simple">
+<li>Simplification</li>
+<li>Common sub expressions</li>
+<li>Speed evaluation of long expressions</li>
+</ol>
+<div class="section" id="simplification">
+<h2>Simplification</h2>
+<p>Simplification, in particular trigonometric simplification, can reduce the
+resulting expressions significantly. We'd love to use simplification routines
+extensively but the issue with this is that symbolic simplification is a
+difficult problem for large expressions. The algorithms don't offer
+computational speed that allows a for real time workflow. SymPy recently
+implement <a class="reference external" href="https://github.com/sympy/sympy/blob/master/sympy/simplify/fu.py">Fu</a>'s trigonometric simplification method, but it still hangs, in
+terms of speed, on many of our large expressions.</p>
+</div>
+<div class="section" id="common-sub-expressions">
+<h2>Common sub expressions</h2>
+<p>We've typically concerned ourselves with finding common sub expressions in our
+large expressions. For example, if we compute <span class="math">\(cos(q(t))\)</span> 1000 times,
+then we should compute it once and store the result in a variable:</p>
+<pre class="literal-block">
+z_0 = cos(q)
+expression = z_0 * z_0 + z_0 + z_0 ** 2
+</pre>
+<p>This generally seems like a good idea, but it may be fruitless for compiled
+languages because compilers are optimized to do this sort of thing anyways. But
+it may be useful for high level code generation. SymPy s <tt class="docutils literal">cse()</tt> function
+recently got a speed boost, but there is still work to be done on creating sub
+expressions of combinations of sub expressions that could reduce the
+computational time.</p>
+</div>
+<div class="section" id="speed">
+<h2>Speed</h2>
+<p>Fast evaluation of long expressions generally requires getting closer metal. C
+and Fortran are likely the best options for speedy numerical evaluation of
+these expressions. The best solution will likely rely on low level code and
+compilation.</p>
+<div class="section" id="the-package">
+<h3>The package</h3>
+<p><a class="reference external" href="http://github.com/PythonDynamics/pydy-code-gen">The package</a> I'm tinkering with explores some options for these methods.
+Currently, it generates code to evaluate <span class="math">\(M\)</span> and :math`F` with three
+methods: <tt class="docutils literal">sympy.utilities.lambdify.lambdify</tt>,
+<tt class="docutils literal">sympy.printing.theancode.theano_function</tt>, and <tt class="docutils literal">sympy.printing.ccode</tt> +
+Cython.</p>
+</div>
+</div>
+<div class="section" id="lambdify">
+<h2>lambdify</h2>
+<p>SymPy's <tt class="docutils literal">lambdify</tt> prints the expression tree to a python lambda function.
+This has very fast code generation times, but numerical evaluation is extremely
+slow for long expressions.</p>
+</div>
+<div class="section" id="theano">
+<h2>Theano</h2>
+<p><a class="reference external" href="http://deeplearning.net/software/theano/">Theano</a> is a python symbolic to numerical code generator. Theano can output
+code to run on the CPU or GPU and can generate code that includes numerical
+operations such as solving linear systems. Matthew Rocklin created a bridge
+from SymPy expression trees to Theano expression trees to allow easy code gen
+with Theano from SymPy, <a class="reference external" href="https://github.com/sympy/sympy/blob/master/sympy/printing/theanocode.py">1</a>.</p>
+</div>
+<div class="section" id="c">
+<h2>C</h2>
+<p>Finally, SymPy offers expression to C code printing, <tt class="docutils literal">sympy.printing.ccode</tt>,
+that is useful to writing custom code generators in C. Their <tt class="docutils literal">codegen</tt> module
+makes use of the printer to make compilable functions and the <tt class="docutils literal">autowrap</tt>
+module allows easy wrapping for use in Python, but these do not support Matrix
+evaluations, yet.  So I wrote a custom C code generator and auto generated
+Cython wrapper for the matrix/vector evaluations we need. It works like this:</p>
+<ol class="arabic simple">
+<li>Generate a custom C function which computes the mass matrix and forcing
+vector</li>
+<li>Wrap it with Cython using NumPy types.</li>
+<li>Compile the code.</li>
+<li>Evaluate the <span class="math">\(M\)</span> and <span class="math">\(F\)</span> functions numerically.</li>
+<li>Solve for <span class="math">\(\dot{x}\)</span> using numpy.linalg.solve.</li>
+</ol>
+<p>These are the resources I used to learn about Cython and NumPy use:</p>
+<ul class="simple">
+<li>Nice example on Stack Overflow:
+<a class="reference external" href="http://stackoverflow.com/questions/3046305/simple-wrapping-of-c-code-with-cython">http://stackoverflow.com/questions/3046305/simple-wrapping-of-c-code-with-cython</a></li>
+<li>Cython docs: <a class="reference external" href="http://docs.cython.org/src/tutorial/numpy.html">http://docs.cython.org/src/tutorial/numpy.html</a> and
+<a class="reference external" href="http://docs.cython.org/src/userguide/numpy_tutorial.html">http://docs.cython.org/src/userguide/numpy_tutorial.html</a></li>
+<li>The SciPy lecture notes on interfacing with C:
+<a class="reference external" href="http://scipy-lectures.github.io/advanced/interfacing_with_c/interfacing_with_c.html">http://scipy-lectures.github.io/advanced/interfacing_with_c/interfacing_with_c.html</a></li>
+<li>Travis Oliphant's blog post comparing Cython, Weave, and NumPy:
+<a class="reference external" href="http://technicaldiscovery.blogspot.com/2011/06/speeding-up-python-numpy-cython-and.html">http://technicaldiscovery.blogspot.com/2011/06/speeding-up-python-numpy-cython-and.html</a></li>
+</ul>
+<div class="section" id="cython-code">
+<h3>Cython Code</h3>
+<p>Here is the example C code and the Cython wrapping for a simple 1 DoF mass,
+spring, damper system under the influence of gravity and an external force.
+First the C code, <tt class="docutils literal">mass_forcing_c.c</tt> (make sure to name this different than
+you desired Cython module name or it will be overwritten), and the header file,
+<tt class="docutils literal">mass_forcing_c.h</tt>:</p>
+<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;math.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;mass_forcing_c.h&quot;</span><span class="cp"></span>
+
+<span class="kt">void</span> <span class="nf">mass_forcing</span><span class="p">(</span><span class="kt">double</span> <span class="n">constants</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="c1">// constants = [m, k, c, g]</span>
+                  <span class="kt">double</span> <span class="n">coordinates</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="c1">// generalized_coordinates = [x]</span>
+                  <span class="kt">double</span> <span class="n">speeds</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="c1">// generalized_speeds = [v]</span>
+                  <span class="kt">double</span> <span class="n">specified</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="c1">// external = [F]</span>
+                  <span class="kt">double</span> <span class="n">mass_matrix</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="c1">// computed</span>
+                  <span class="kt">double</span> <span class="n">forcing_vector</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span> <span class="c1">// computed</span>
+<span class="p">{</span>
+    <span class="c1">// common subexpressions</span>
+    <span class="kt">double</span> <span class="n">z_0</span> <span class="o">=</span> <span class="n">speeds</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+
+    <span class="c1">// mass matrix</span>
+    <span class="n">mass_matrix</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="n">mass_matrix</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">mass_matrix</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">mass_matrix</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="n">constants</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+
+    <span class="c1">// forcing vector</span>
+    <span class="n">forcing_vector</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">z_0</span><span class="p">;</span>
+    <span class="n">forcing_vector</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="n">constants</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">*</span><span class="n">z_0</span> <span class="o">+</span> <span class="n">constants</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">*</span><span class="n">constants</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">constants</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">coordinates</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">specified</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+<span class="p">}</span>
+</pre></div>
+<div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">mass_forcing</span><span class="p">(</span><span class="kt">double</span> <span class="n">constants</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="c1">// constants = [m, k, c, g]</span>
+                  <span class="kt">double</span> <span class="n">coordinates</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="c1">// generalized_coordinates = [x]</span>
+                  <span class="kt">double</span> <span class="n">speeds</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="c1">// generalized_speeds = [v]</span>
+                  <span class="kt">double</span> <span class="n">specified</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="c1">// external = [F]</span>
+                  <span class="kt">double</span> <span class="n">mass_matrix</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="c1">// computed</span>
+                  <span class="kt">double</span> <span class="n">forcing_vector</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span> <span class="c1">// computed</span>
+</pre></div>
+<p>I simply stored <span class="math">\(M\)</span> as a flat array. It may be better to stored it as a
+2D array so that I don't need a <tt class="docutils literal">reshape()</tt> call in the Cython wrapper. I
+also store all of the inputs as arrays. It could make sense to stored the
+some or all of them in structs so that we could access them be name instead of
+indice.</p>
+<p>The <tt class="docutils literal">mass_forcing.pyx</tt> file declares the contents of the header file and
+defines a function for easy use in Python. The types are pinned to the NumPy C
+API definitions for 1D continous arrays. I could potentially avoid defining
+arrays of zeros for initialization by passing in empty or zero arrays and the
+reshaping step on the output. Both of those could potentially speed things up.</p>
+<div class="highlight"><pre><span></span><span class="k">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="k">cimport</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="k">cdef</span> <span class="kr">extern</span> <span class="k">from</span> <span class="s">&quot;mass_forcing.h&quot;</span><span class="p">:</span>
+    <span class="n">void</span> <span class="n">mass_forcing</span><span class="p">(</span><span class="n">double</span> <span class="n">constants</span><span class="p">[</span><span class="mf">4</span><span class="p">],</span>
+                      <span class="n">double</span> <span class="n">coordinates</span><span class="p">[</span><span class="mf">1</span><span class="p">],</span>
+                      <span class="n">double</span> <span class="n">speeds</span><span class="p">[</span><span class="mf">1</span><span class="p">],</span>
+                      <span class="n">double</span> <span class="n">specified</span><span class="p">[</span><span class="mf">1</span><span class="p">],</span>
+                      <span class="n">double</span> <span class="n">mass_matrix</span><span class="p">[</span><span class="mf">4</span><span class="p">],</span>
+                      <span class="n">double</span> <span class="n">forcing_vector</span><span class="p">[</span><span class="mf">2</span><span class="p">])</span>
+
+
+<span class="k">def</span> <span class="nf">mass_forcing_matrices</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">double_t</span><span class="p">,</span> <span class="n">ndim</span><span class="o">=</span><span class="mf">1</span><span class="p">]</span> <span class="n">constants</span><span class="p">,</span>
+                          <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">double_t</span><span class="p">,</span> <span class="n">ndim</span><span class="o">=</span><span class="mf">1</span><span class="p">]</span> <span class="n">coordinates</span><span class="p">,</span>
+                          <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">double_t</span><span class="p">,</span> <span class="n">ndim</span><span class="o">=</span><span class="mf">1</span><span class="p">]</span> <span class="n">speeds</span><span class="p">,</span>
+                          <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">double_t</span><span class="p">,</span> <span class="n">ndim</span><span class="o">=</span><span class="mf">1</span><span class="p">]</span> <span class="n">specified</span><span class="p">):</span>
+
+    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">constants</span><span class="p">)</span> <span class="o">==</span> <span class="mf">4</span>
+    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">coordinates</span><span class="p">)</span> <span class="o">==</span> <span class="mf">1</span>
+    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">speeds</span><span class="p">)</span> <span class="o">==</span> <span class="mf">1</span>
+
+    <span class="k">cdef</span> <span class="kt">np</span>.<span class="kt">ndarray</span>[<span class="kt">np</span>.<span class="nf">double_t</span><span class="p">,</span> <span class="nf">ndim</span><span class="o">=</span><span class="mf">1</span><span class="p">]</span> <span class="n">mass_matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mf">4</span><span class="p">)</span>
+    <span class="k">cdef</span> <span class="kt">np</span>.<span class="kt">ndarray</span>[<span class="kt">np</span>.<span class="nf">double_t</span><span class="p">,</span> <span class="nf">ndim</span><span class="o">=</span><span class="mf">1</span><span class="p">]</span> <span class="n">forcing_vector</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mf">2</span><span class="p">)</span>
+
+    <span class="n">mass_forcing</span><span class="p">(</span><span class="o">&lt;</span><span class="n">double</span><span class="o">*&gt;</span> <span class="n">constants</span><span class="o">.</span><span class="n">data</span><span class="p">,</span>
+                 <span class="o">&lt;</span><span class="n">double</span><span class="o">*&gt;</span> <span class="n">coordinates</span><span class="o">.</span><span class="n">data</span><span class="p">,</span>
+                 <span class="o">&lt;</span><span class="n">double</span><span class="o">*&gt;</span> <span class="n">speeds</span><span class="o">.</span><span class="n">data</span><span class="p">,</span>
+                 <span class="o">&lt;</span><span class="n">double</span><span class="o">*&gt;</span> <span class="n">specified</span><span class="o">.</span><span class="n">data</span><span class="p">,</span>
+                 <span class="o">&lt;</span><span class="n">double</span><span class="o">*&gt;</span> <span class="n">mass_matrix</span><span class="o">.</span><span class="n">data</span><span class="p">,</span>
+                 <span class="o">&lt;</span><span class="n">double</span><span class="o">*&gt;</span> <span class="n">forcing_vector</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">mass_matrix</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mf">4</span><span class="p">,</span> <span class="mf">1</span><span class="p">),</span> <span class="n">forcing_vector</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mf">2</span><span class="p">,</span> <span class="mf">1</span><span class="p">)</span>
+</pre></div>
+<p>Finally, I use the disutils method of building the shared object file which can
+be imported into Python. Here is the <tt class="docutils literal">mass_forcing_setup.py</tt> file:</p>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span>
+<span class="kn">from</span> <span class="nn">distutils.core</span> <span class="kn">import</span> <span class="n">setup</span>
+<span class="kn">from</span> <span class="nn">distutils.extension</span> <span class="kn">import</span> <span class="n">Extension</span>
+<span class="kn">from</span> <span class="nn">Cython.Distutils</span> <span class="kn">import</span> <span class="n">build_ext</span>
+
+<span class="n">ext_modules</span> <span class="o">=</span> <span class="p">[</span><span class="n">Extension</span><span class="p">(</span>
+                <span class="n">name</span><span class="o">=</span><span class="s2">&quot;mass_forcing&quot;</span><span class="p">,</span>
+                <span class="n">sources</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;mass_forcing.pyx&quot;</span><span class="p">,</span> <span class="s2">&quot;mass_forcing.c&quot;</span><span class="p">],</span>
+                <span class="n">include_dirs</span><span class="o">=</span><span class="p">[</span><span class="n">numpy</span><span class="o">.</span><span class="n">get_include</span><span class="p">()],</span>
+                <span class="p">)]</span>
+
+<span class="n">setup</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;mass_forcing&quot;</span><span class="p">,</span>
+    <span class="n">cmdclass</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;build_ext&#39;</span><span class="p">:</span> <span class="n">build_ext</span><span class="p">},</span>
+    <span class="n">ext_modules</span> <span class="o">=</span> <span class="n">ext_modules</span><span class="p">,</span>
+<span class="p">)</span>
+</pre></div>
+<p>To buid the extension simple type:</p>
+<pre class="literal-block">
+$ python mass_forcing_setup.py build_ext --inplace
+</pre>
+<p>And you can import and use the function:</p>
+<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">mass_forcing</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">numpy.random</span> <span class="kn">import</span> <span class="n">random</span> <span class="k">as</span> <span class="n">r</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mass_matrix</span><span class="p">,</span> <span class="n">forcing_vector</span> <span class="o">=</span> <span class="n">mass_forcing</span><span class="o">.</span><span class="n">mass_forcing_matrices</span><span class="p">(</span><span class="n">r</span><span class="p">(</span><span class="mi">4</span><span class="p">),</span> <span class="n">r</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="n">r</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="n">r</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="section" id="benchmark-problem">
+<h3>Benchmark Problem</h3>
+<p>Once I got this all working, I used the <a class="reference external" href="npendulum.html">2D n-link pendulum</a> as a benchmark
+problem to test the three methods. Each link adds a degree of freedom to the
+system and it doesn't take long for the equations to get real hairy. The
+benchmark times the derivation of the symbolic equations of motion and for each
+of the backends it times both the code generation and the integration steps.
+The results from my computer for 1 to 20 links in the pendulum are shown in
+this plot:</p>
+<img alt="" src="https://objects-us-east-1.dream.io/moorepants/pydy-code-gen-benchmark-results.png" />
+<p><a class="reference external" href="https://objects-us-east-1.dream.io/moorepants/pydy-code-gen-benchmark-results.txt">The print out</a> shows the exact time values. For 1000 time steps of
+integration over 10 seconds of real time (100 hz) for the 20 link problem, the
+Cython method wins out at 39 seconds. Theano took 914 seconds (23x slower) and
+lambdify took 2374 seconds (60x slower). Cython was able to integrate the
+equations of motion for up to 17 links at real time speeds (9.5 seconds) for
+100hz throughput. The timing was dependent on my system processes, so there are
+some blips. It'd be nice to get an average of this computation. You can run the
+benchmark yourself here:</p>
+<p><a class="reference external" href="https://github.com/PythonDynamics/pydy-code-gen/blob/master/misc/benchmark.py">https://github.com/PythonDynamics/pydy-code-gen/blob/master/misc/benchmark.py</a></p>
+<p>These are some general observations:</p>
+<ul class="simple">
+<li>Lambdify generates the code very fast.</li>
+<li>Theano takes more time to generate code than lambdify, but is significantly
+faster at evaluation in the integration step.</li>
+<li>The Cython wrapped C code evaluates extremely faster than both methods and
+doesn't take to long to generate the code.</li>
+<li>The derivations are pretty fast, with the 20 link pendulum taking 88 seconds.
+I'm looking forward to trying out Ondřej's csympy implementation for this,
+which could get derivations down to second speeds.</li>
+</ul>
+<p>The package and benchmark code are hosted here:</p>
+<p><a class="reference external" href="https://github.com/PythonDynamics/pydy-code-gen">https://github.com/PythonDynamics/pydy-code-gen</a></p>
+</div>
+<div class="section" id="conclusion">
+<h3>Conclusion</h3>
+<p>There is a great deal of improvement needed for this package, but I think it
+demonstrates a proof of concept that we can generate fast code that can still
+be used at the high level. We'd ideally like the derivation + simulation time
+to take no more than 20 seconds for relatively complex problems to expect this
+to be used for any kind of backend to a GUI based model builder. That may be
+too much to expect though, as purely numerical <span class="math">\(O(n)\)</span> methods for
+multibody dynamics are still superior for this.</p>
+</div>
+</div>
+<script type='text/javascript'>if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+      <li class="list-inline-item"><a href="https://moorepants.info.github.io/authors.html">Authors</a></li>
+    <li class="list-inline-item"><a href="https://moorepants.info.github.io/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="https://moorepants.info.github.io/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="https://moorepants.info.github.io/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>
+<div class="row">
+  <div class="col-sm-4 mx-auto text-center text-muted" >
+    <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+      <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+    </a>
+    <br />
+    This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+  </div>
+</div>    </div>
+  </footer>
+</body>
+
+</html>

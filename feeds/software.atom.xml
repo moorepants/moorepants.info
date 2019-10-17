@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>moorepants - software</title><link href="https://moorepants.info.github.io/" rel="alternate"></link><link href="https://moorepants.info.github.io/feeds/software.atom.xml" rel="self"></link><id>https://moorepants.info.github.io/</id><updated>2013-07-08T18:00:00-07:00</updated><subtitle>a websitee</subtitle><entry><title>What's your inertia?</title><link href="https://moorepants.info.github.io/blog/yeadon.html" rel="alternate"></link><published>2013-07-08T18:00:00-07:00</published><updated>2013-07-08T18:00:00-07:00</updated><author><name>Jason K. Moore</name></author><id>tag:moorepants.info.github.io,2013-07-08:/blog/yeadon.html</id><summary type="html">&lt;p class="first last"&gt;Blog post on creating a new interface to test different controller
+designs for the Double Pendulum Robot.&lt;/p&gt;
+</summary><content type="html">&lt;img alt="" class="img-rounded" src="https://objects-us-east-1.dream.io/moorepants/haya.png" style="width: 400px;" /&gt;
+&lt;p&gt;I recently attended &lt;a class="reference external" href="http://conference.scipy.org/scipy2013"&gt;SciPy 2013&lt;/a&gt; where I gave a couple of talks. The second
+talk was our first public showing of Yeadon, our Python package which
+implements Fred Yeadon's popular method of estimating the body segment
+parameters (mass, center of mass, and inertia) of a human. Chris visited our
+lab as an intern in the summer of 2011 and spent part of his time writing this
+package which I then used to estimate the inertia of a bicycle rider in my
+&lt;a class="reference external" href="http://moorepants.github.io/dissertation"&gt;dissertation&lt;/a&gt; work. Over the past couple of years we've worked on the software
+here and there and now have a really nice little package. We released the 1.0
+version just in time for the conference.&lt;/p&gt;
+&lt;p&gt;The video of the conference talk is below:&lt;/p&gt;
+&lt;iframe width="640" height="360" src="//www.youtube.com/embed/H9AK65ZY-Vw"
+ frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;&lt;p&gt;You can get the software and learn how to use it from the standard places:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://pypi.python.org/pypi/yeadon/"&gt;download&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://pythonhosted.org/yeadon/"&gt;documentation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/fitze/yeadon"&gt;source code&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;And there is also a screencast on using the GUI that Chris put together for the
+1.0 release:&lt;/p&gt;
+&lt;iframe width="480" height="360" src="//www.youtube.com/embed/o-5Ss6YLY0I"
+ frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</content><category term="python"></category><category term="body segment parameters"></category><category term="mayavi"></category><category term="yeadon"></category><category term="inertia"></category></entry></feed>

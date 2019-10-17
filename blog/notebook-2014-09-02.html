@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  Notebook Entry | moorepants
+</title>
+  <link rel="canonical" href="https://moorepants.info.github.io/blog/notebook-2014-09-02.html">
+
+
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/pygments/default.min.css">
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="https://moorepants.info.github.io/feeds/all.atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="Categories Atom Feed"
+        href="https://moorepants.info.github.io/feeds/{slug}.atom.xml">  
+  <meta name="description" content="AIO for September 2, 2014 Last week's accomplishments Objectives from last week: Finish implementing a tight matrix eval broadcasted loop to speed up the inverted pendulum direct collocation. -- Partially done: Speed benchmarks are done with C with Cython and Fortran 95 with f2py. The constraint eval computation speed was doubled …">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="https://moorepants.info.github.io/">
+        <img class="img-fluid rounded" src=https://objects-us-east-1.dream.io/moorepants/headshot.jpg alt="moorepants">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="https://moorepants.info.github.io/">moorepants</a></h1>
+      <p class="text-muted">a websitee</p>
+      <ul class="list-inline">
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/about.html">About</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/portfolio.html">Portfolio</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/interests.html">Interests</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/research.html">Research</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/teaching.html">Teaching</a></li>
+          <li class="list-inline-item"><a href="/blog/">Blog</a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  Notebook Entry
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2014-09-02T10:01:26-07:00">
+          <i class="fa fa-clock-o"></i>
+          Tue 02 September 2014
+        </li>
+        <li class="list-inline-item">
+          <i class="fa fa-folder-open-o"></i>
+          <a href="https://moorepants.info.github.io/category/notebook.html">notebook</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fa fa-user-o"></i>
+              <a href="https://moorepants.info.github.io/author/jason-k-moore.html">Jason K. Moore</a>          </li>
+          <li class="list-inline-item">
+            <i class="fa fa-files-o"></i>
+              <a href="https://moorepants.info.github.io/tag/notebook.html">#notebook</a>,               <a href="https://moorepants.info.github.io/tag/aio.html">#aio</a>          </li>
+      </ul>
+    </header>
+
+
+    <div class="content">
+      <p>AIO for September 2, 2014</p>
+<div class="section" id="last-week-s-accomplishments">
+<h2>Last week's accomplishments</h2>
+<p>Objectives from last week:</p>
+<ul class="simple">
+<li>Finish implementing a tight matrix eval broadcasted loop to speed up the
+inverted pendulum direct collocation. -- Partially done: Speed benchmarks are
+done with C with Cython and Fortran 95 with f2py. The constraint eval
+computation speed was doubled and there is a projected 50X speed increase for
+the constraint Jacobian eval speed, but that still needs to be implemented.
+See this blog post for details:
+<a class="reference external" href="http://www.moorepants.info/blog/fast-matrix-eval.html">http://www.moorepants.info/blog/fast-matrix-eval.html</a>.</li>
+<li>Meet with Brad to discuss implementing direct collocation in Opensim on
+Wednesday. -- Done: I gave Brad an intro to Ton's direct collocation methods
+and we discussed what an Opensim direct collocation tool would look like.</li>
+<li>Write outline for direct collocation system id paper. -- Done:
+<a class="reference external" href="https://github.com/csu-hmc/inverted-pendulum-sys-id-paper">https://github.com/csu-hmc/inverted-pendulum-sys-id-paper</a></li>
+<li>Write two sections for the perturbed walking paper. -- Done: abstract, intro
+and start of &quot;raw data&quot; sections are drafted,
+<a class="reference external" href="https://github.com/csu-hmc/perturbed-data-paper/blob/master/paper.tex">https://github.com/csu-hmc/perturbed-data-paper/blob/master/paper.tex</a>.</li>
+<li>Figure out the basic topics and time allotments for the topics at the IEEE
+open source hack night. -- Done: Event is set for Friday September 12 and
+flyers have been made.</li>
+<li>Email RUG, PUG, and NASA Python guys about the SWC workshop and cc Ahmet. --
+Done: Tristan from NASA is asking around there about the interest level.</li>
+<li>Write outline for a bicycle data paper. -- Done :
+<a class="reference external" href="https://github.com/moorepants/bicycle-data-paper">https://github.com/moorepants/bicycle-data-paper</a></li>
+</ul>
+<p>Other things I did:</p>
+<ul class="simple">
+<li>Discussed visiting scholar project with Ton. We are thinking of creating a DC
+tool that will allow the user to supply system dynamics, additional
+constraints, and desired unknowns. It should be able to solve Ton's previous
+gait problems, my system id problems, and other general test cases. Ton likes
+the GPOPS API in Matlab which could copied for the Matlab wrapper. The tool
+would likely be implemented in C++ and wrapped for Python and Matlab use.</li>
+</ul>
+</div>
+<div class="section" id="last-week-s-issues">
+<h2>Last week's issues</h2>
+<ul class="simple">
+<li>Setup offline backups for the HMC website -- Still 90% done. I didn't work on
+this last week, overestimated time.</li>
+<li>Run more example optimizations on the inverted pendulum (after speed up is
+implemented). -- Haven't finished the speed optimizations, plus goal is too
+broad. Breaking this one up more below.</li>
+<li>Finish table in the steer torque paper. -- Overestimated time in the holiday
+week.</li>
+<li>Add in torque wrench section into the steer torque paper. -- Same as above.</li>
+<li>Go through the next two chapters in Accelerated C++. Overestimated time.
+Removing this one for now, till I get back to some C++.</li>
+</ul>
+</div>
+<div class="section" id="this-week-s-objectives">
+<h2>This week's objectives</h2>
+<ul class="simple">
+<li>Fix the permissions issues for offline backups for the HMC website.</li>
+<li>Implement the 50X faster constraints Jacobian evaluation for the pendulum id
+problem.</li>
+<li>Finish table in the steer torque paper. Update the spreadsheet and insert
+into the latex doc.</li>
+<li>Add in torque wrench section into the steer torque paper.</li>
+<li>Write the draft of the raw data section in the perturbed data paper.</li>
+<li>Add more detail to direct collocation id outline.</li>
+<li>Write an introduction to the direct collocation id paper.</li>
+<li>Fix all remaining issues on the yeadon paper and submit to F1000Research.</li>
+<li>Create a figshare item for the raw bicycle data.</li>
+<li>Touch base with Luke on visiting scholar idea.</li>
+<li>Think of the exercises I will use for teaching git/github in the open source
+software night.</li>
+<li>Advertise for open source software night.</li>
+</ul>
+</div>
+
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+      <li class="list-inline-item"><a href="https://moorepants.info.github.io/authors.html">Authors</a></li>
+    <li class="list-inline-item"><a href="https://moorepants.info.github.io/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="https://moorepants.info.github.io/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="https://moorepants.info.github.io/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>
+<div class="row">
+  <div class="col-sm-4 mx-auto text-center text-muted" >
+    <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+      <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+    </a>
+    <br />
+    This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+  </div>
+</div>    </div>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  Notebook Entry | moorepants
+</title>
+  <link rel="canonical" href="https://moorepants.info.github.io/blog/notebook-2013-09-17.html">
+
+
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/pygments/default.min.css">
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="https://moorepants.info.github.io/feeds/all.atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="Categories Atom Feed"
+        href="https://moorepants.info.github.io/feeds/{slug}.atom.xml">  
+  <meta name="description" content="Today's task list: [x] Review Tarun's PRs [x] Work on the website content and structure [x] Do CITI course [x] Lab meeting [x] investigate displaying publications on the website [] Work on BMD papers [] Work on parsing the walking data [] Working on wrapping Ton's walking models [] Book hotel for BMD [] Post …">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="https://moorepants.info.github.io/">
+        <img class="img-fluid rounded" src=https://objects-us-east-1.dream.io/moorepants/headshot.jpg alt="moorepants">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="https://moorepants.info.github.io/">moorepants</a></h1>
+      <p class="text-muted">a websitee</p>
+      <ul class="list-inline">
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/about.html">About</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/portfolio.html">Portfolio</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/interests.html">Interests</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/research.html">Research</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/teaching.html">Teaching</a></li>
+          <li class="list-inline-item"><a href="/blog/">Blog</a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  Notebook Entry
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2013-09-17T17:20:17-07:00">
+          <i class="fa fa-clock-o"></i>
+          Tue 17 September 2013
+        </li>
+        <li class="list-inline-item">
+          <i class="fa fa-folder-open-o"></i>
+          <a href="https://moorepants.info.github.io/category/notebook.html">notebook</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fa fa-user-o"></i>
+              <a href="https://moorepants.info.github.io/author/jason-k-moore.html">Jason K. Moore</a>          </li>
+          <li class="list-inline-item">
+            <i class="fa fa-files-o"></i>
+              <a href="https://moorepants.info.github.io/tag/notebook.html">#notebook</a>,               <a href="https://moorepants.info.github.io/tag/filtering.html">#filtering</a>,               <a href="https://moorepants.info.github.io/tag/zotero.html">#zotero</a>,               <a href="https://moorepants.info.github.io/tag/plone.html">#plone</a>          </li>
+      </ul>
+    </header>
+
+
+    <div class="content">
+      <p>Today's task list:</p>
+<ul class="simple">
+<li>[x] Review Tarun's PRs</li>
+<li>[x] Work on the website content and structure</li>
+<li>[x] Do CITI course</li>
+<li>[x] Lab meeting</li>
+<li>[x] investigate displaying publications on the website</li>
+<li>[] Work on BMD papers</li>
+<li>[] Work on parsing the walking data</li>
+<li>[] Working on wrapping Ton's walking models</li>
+<li>[] Book hotel for BMD</li>
+<li>[] Post update about BMD copyright</li>
+<li>[] Finish reading the van der Kooij paper</li>
+<li>[] See if our controller can drive an OpenSim model or Ton's 2D model</li>
+<li>[] Wrap the HBM C code</li>
+<li>[] Duplicate website backups on a S3 bucket</li>
+<li>[] Work on the website theme</li>
+<li>[] Make generic settings on the lab website</li>
+<li>[] Setup workflow for website for public documents</li>
+<li>[] Investigate ways to display publication lists on the website</li>
+<li>[] Embed the google calendar on the website</li>
+<li>[] Review the TODO items on the Yeadon paper</li>
+<li>[] Do FERPA course, due Sept 20</li>
+<li>[] Write up database proposal</li>
+<li>[] Try out CSympy with some mechanics problems</li>
+<li>[] Email Mounir about teaching</li>
+</ul>
+<div class="section" id="butterworth-filters">
+<h2>Butterworth Filters</h2>
+<p>Sandy noticed that Luuk may not have been setting the crossover frequency
+correctly in his report. In the Matlab style digital Butterworth filter design
+you typically set the wn argument to:</p>
+<pre class="literal-block">
+desired filter cutoff frequency
+nyquist frequency of the signal
+</pre>
+<p>This is a normalized cutoff frequency. Our system samples at 100 hz max due to
+the motion capture data limits. You can pull in data at higher sample rates but
+then you get repeated values for the mocap signals.</p>
+<p>I wrote this little script to show what happens if you select a nyquist
+frequency other than the actual sample rate of the signal you want to filter:</p>
+<p><a class="reference external" href="https://gist.github.com/moorepants/6597067">https://gist.github.com/moorepants/6597067</a></p>
+<p>The resulting plot is:</p>
+<a class="reference external image-reference" href="https://objects-us-east-1.dream.io/moorepants/butterworth-nyquist.png"><img alt="Figure show affects of changing the Nyquist frequency" class="img-rounded" src="https://objects-us-east-1.dream.io/moorepants/butterworth-nyquist.png" style="width: 400px;" /></a>
+<p>If you choose a larger Nyquist frequency than the signal, then you push the
+passband frequency to a lower value. Luuk may have done this incorrectly in his
+report.</p>
+</div>
+<div class="section" id="citi-test">
+<h2>CITI Test</h2>
+<p>Woohoo, finished the IRB and ethical research tests. They were long but
+informative. Some seemed really outdated. I posted some details to my G+
+account about passages that I thought weren't true.</p>
+</div>
+<div class="section" id="plone-bibliography-support">
+<h2>Plone Bibliography Support</h2>
+<p>Three options that I'm looking into:</p>
+<ol class="arabic simple">
+<li>Install Products.CMFBibliographyAT and users can create bibliography folders
+and manually add items.</li>
+<li>Create a custom content type that pulls in HTML from a public Zotero group
+and displays it.</li>
+<li>Create a button on the TinyMCE editor which, when clicked, prompts the user
+for a public zotero group and collection id, and embeds the content from the
+resulting zotero api call into the page.</li>
+</ol>
+<p>I could setup some super simple pages that display stuff served up by pyzotero
+on our server outside of plone, and them iframe it into a plone page. But that
+wouldn't have styling and would probably suck.</p>
+<p>Zotero gives atom and xhtml standard api calls:</p>
+<p><a class="reference external" href="http://www.zotero.org/support/dev/server_api/v2/read_requests#example_requests_and_responses">http://www.zotero.org/support/dev/server_api/v2/read_requests#example_requests_and_responses</a></p>
+<p>The atom feed can be read in any feed reader (i.e. a Plone portlet).</p>
+<p>If I need to do the zotero api calls from Python in Plone there is this lib:</p>
+<p><a class="reference external" href="https://github.com/urschrei/pyzotero">https://github.com/urschrei/pyzotero</a></p>
+<p>Here is an API call to a public Zotero group I set up:</p>
+<p><a class="reference external" href="https://api.zotero.org/groups/212385/collections/JWGBWM9P/items?format=bib">https://api.zotero.org/groups/212385/collections/JWGBWM9P/items?format=bib</a></p>
+<p>It sends back some simple xhtml.</p>
+<p>How to add plugins to TinyMCE:</p>
+<p><a class="reference external" href="http://www.tinymce.com/wiki.php/TinyMCE3x:Creating_a_plugin">http://www.tinymce.com/wiki.php/TinyMCE3x:Creating_a_plugin</a></p>
+<p>Plone products that have TinyMce plugins:</p>
+<p><a class="reference external" href="https://pypi.python.org/pypi?%3Aaction=search&amp;term=collective.tinymce&amp;submit=search">https://pypi.python.org/pypi?%3Aaction=search&amp;term=collective.tinymce&amp;submit=search</a></p>
+<p>Very simple view of zotero data in Plone:</p>
+<p><a class="reference external" href="https://github.com/collective/collective.pece/blob/master/collective/pece/browser/zotero_view.py">https://github.com/collective/collective.pece/blob/master/collective/pece/browser/zotero_view.py</a></p>
+</div>
+
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+      <li class="list-inline-item"><a href="https://moorepants.info.github.io/authors.html">Authors</a></li>
+    <li class="list-inline-item"><a href="https://moorepants.info.github.io/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="https://moorepants.info.github.io/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="https://moorepants.info.github.io/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>
+<div class="row">
+  <div class="col-sm-4 mx-auto text-center text-muted" >
+    <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+      <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+    </a>
+    <br />
+    This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+  </div>
+</div>    </div>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  Notebook Entry | moorepants
+</title>
+  <link rel="canonical" href="https://moorepants.info.github.io/blog/notebook-2013-10-06.html">
+
+
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/pygments/default.min.css">
+  <link rel="stylesheet" href="https://moorepants.info.github.io/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="https://moorepants.info.github.io/feeds/all.atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="Categories Atom Feed"
+        href="https://moorepants.info.github.io/feeds/{slug}.atom.xml">  
+  <meta name="description" content="Make control contribution plots by taking average of sensors Started a people page on the website Final evaluation for Tarun [September 27] Request quotes from Plone dev to do all this stuff. Got my work computer finally. Brought the gyrobike to the lab. Walking System Identification I've added a few …">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="https://moorepants.info.github.io/">
+        <img class="img-fluid rounded" src=https://objects-us-east-1.dream.io/moorepants/headshot.jpg alt="moorepants">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="https://moorepants.info.github.io/">moorepants</a></h1>
+      <p class="text-muted">a websitee</p>
+      <ul class="list-inline">
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/about.html">About</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/portfolio.html">Portfolio</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/interests.html">Interests</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/research.html">Research</a></li>
+            <li class="list-inline-item"><a href="https://moorepants.info.github.io/teaching.html">Teaching</a></li>
+          <li class="list-inline-item"><a href="/blog/">Blog</a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  Notebook Entry
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2013-10-06T16:24:08-07:00">
+          <i class="fa fa-clock-o"></i>
+          Sun 06 October 2013
+        </li>
+        <li class="list-inline-item">
+          <i class="fa fa-folder-open-o"></i>
+          <a href="https://moorepants.info.github.io/category/notebook.html">notebook</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fa fa-user-o"></i>
+              <a href="https://moorepants.info.github.io/author/jason-k-moore.html">Jason K. Moore</a>          </li>
+          <li class="list-inline-item">
+            <i class="fa fa-files-o"></i>
+              <a href="https://moorepants.info.github.io/tag/notebook.html">#notebook</a>,               <a href="https://moorepants.info.github.io/tag/plone.html">#plone</a>,               <a href="https://moorepants.info.github.io/tag/system-identification.html">#system identification</a>,               <a href="https://moorepants.info.github.io/tag/walking.html">#walking</a>          </li>
+      </ul>
+    </header>
+
+
+    <div class="content">
+      <ul class="simple">
+<li>Make control contribution plots by taking average of sensors</li>
+<li>Started a people page on the website</li>
+<li>Final evaluation for Tarun [September 27]</li>
+<li>Request quotes from Plone dev to do all this stuff.</li>
+<li>Got my work computer finally.</li>
+<li>Brought the gyrobike to the lab.</li>
+</ul>
+<div class="section" id="walking-system-identification">
+<h2>Walking System Identification</h2>
+<p>I've added a few things to the analysis and fixed some bugs (see
+<a class="reference external" href="https://github.com/moorepants/DynamicistToolKit/issues?page=1&amp;state=closedfor">https://github.com/moorepants/DynamicistToolKit/issues?page=1&amp;state=closedfor</a>
+closed issues.</p>
+<p>I have a nicer plot for the model quality comparison which gives the VAF and
+the RMS of the residuals. This still is validating against the data used to
+identify the model. My next step is to validate against different data.</p>
+<p>I also spent a bunch of time trying to plot the moment contributions due to the
+error in each sensor and the corresponding gain. To do this, I made the
+assumption that the commanded sensors during the gait cycle are the mean of the
+sensors over all cycles. This shows that most of the measured moments are due
+to the nominal walking moment and the controller contributes to the small
+deviations away from the nominal motion. If we had perturbed data then the
+contributions from the controller would be higher and maybe the gains be more
+certain. These plots didn't really give the kind of insight I was after.</p>
+<p>I've limited the sensors and controls to something one may find on a simple
+exoskeleton design.</p>
+<p>The gain plots don't really show any discernible patterns. But removing the left
+to right side coupling between sensors and controls with the gain omission
+matrix shows that the quality of the fit doesn't decrease.</p>
+<p>The latest IPython notebook with the results is here:</p>
+<p><a class="reference external" href="http://nbviewer.ipython.org/urls/raw.github.com/moorepants/walking-sys-id/bd7b6d335d46be04579c085833f76103e8b4ab41/src/control_solver_example.ipynb">http://nbviewer.ipython.org/urls/raw.github.com/moorepants/walking-sys-id/bd7b6d335d46be04579c085833f76103e8b4ab41/src/control_solver_example.ipynb</a></p>
+<p>Bugs fixed:</p>
+<ul class="simple">
+<li>Signs of Ax and b have been made consistent and correct in the derivation,
+tests, and source.</li>
+<li>The estimated controls and plots are now correct.</li>
+<li>Fixed the variance solution for the gains when a gain omission matrix is
+present.</li>
+</ul>
+</div>
+<div class="section" id="plone">
+<h2>Plone</h2>
+<p>Got a bunch of offers to work on the website. Looks like prices are going to be
+between 90-165 an hour. The snazzy folks are steeper priced but probably more
+guaranteed to make something cool. I'm not sure this is worth it though as I
+can tinker with it for 3-5 times less cost but of course more time. I'll see
+what some of the other quotes come out to be before deciding.</p>
+</div>
+
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+      <li class="list-inline-item"><a href="https://moorepants.info.github.io/authors.html">Authors</a></li>
+    <li class="list-inline-item"><a href="https://moorepants.info.github.io/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="https://moorepants.info.github.io/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="https://moorepants.info.github.io/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>
+<div class="row">
+  <div class="col-sm-4 mx-auto text-center text-muted" >
+    <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+      <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+    </a>
+    <br />
+    This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+  </div>
+</div>    </div>
+  </footer>
+</body>
+
+</html>
