@@ -16,9 +16,11 @@ teach.
 Teaching Statements
 ===================
 
-- `2015 Teaching Statement`_ [`pdf <https://objects-us-east-1.dream.io/moorepants/teaching-statement-2015.pdf>`__]
-- `2013 Teaching Statement`_ [`pdf <https://objects-us-east-1.dream.io/moorepants/teaching-statement-2013.pdf>`__]
+- `2018 Teaching Statement`_
+- `2015 Teaching Statement`_
+- `2013 Teaching Statement`_
 
+.. _2018 Teaching Statement: https://moorepants.github.io/application-materials/2018/generic/teaching-statement.pdf
 .. _2015 Teaching Statement: {filename}/pages/teaching-statement-2015.rst
 .. _2013 Teaching Statement: {filename}/pages/teaching-statement-2013.rst
 
