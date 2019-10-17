@@ -1,0 +1,26 @@
+==============
+Notebook Entry
+==============
+
+:subtitle: November 4, 2013
+:category: notebook
+:date: 2013-11-04 10:11:58
+:slug: notebook-2013-11-04
+:tags: notebook
+
+
+
+- [x] Setup new computer and write a script that fully installs the system.
+- [x] Select a quote and start working with the consultant.
+- [x] Enable intranet/external workflow.
+- [x] Check on and order stuff from Newegg.
+- [x] Turn in Newegg reimbursement.
+- [x] Check on docking stations.
+- [x] Order Matlab DSP toolbox for Sandy.
+- [x] Check on the charger for the gyrobike.
+- [x] Bring in the make magazine with the microcontroller review
+- [x] Implement a proof-of-concept code generator
+- [x] Try simple Cython wrapping
+- [x] Install git on AWS server
+- [x] Book hotel for BMD
+

@@ -1,0 +1,69 @@
+==============
+Notebook Entry
+==============
+
+:subtitle: May 27, 2014
+:category: notebook
+:date: 2014-05-27 11:19:08
+:slug: notebook-2014-05-27
+:tags: notebook, system identification, prediction, simulation
+
+
+I didn't really understand the difference in prediction and simulation in the
+system id book. These are some notes that help clarify it.
+
+
+
+This is from Ljung:
+
+  We shall generally work with k-step ahead model predictions
+  :math:`\hat{y}_k(t|m)` as the basis of the comparisons. By that we mean that
+  :math:`\hat{y}_k(t|m)` is computed from past data
+
+  .. math::
+
+     u(t-1),\ldots,u(1), y(t-k),\ldots,y(1)
+
+  using the model :math:`m`. The case when :math:`k` equals :math:`\infty`
+  corresponds to the use of past inputs only, i.e., a pure simulation. [m1]_
+
+Matlab documentation:
+
+  Simulation provides a better validation test for the model than prediction.
+  However, how you validate the model output should match how you plan to use the
+  model. For example, if you plan to use your model for control design, you can
+  validate the model by predicting its response over a time horizon that
+  represents the dominating time constants of the model. [m2]_
+
+Random notes found online:
+
+  Minimizing the one-step ahead prediction error of an output error model is
+  the same as minimizing infinite-step ahead prediction errors. [m3]_
+
+I tried a Matlab OE model on the belt acceleration and velocity data and it
+gets a much better fit of about 50% (simuluation and predicition are the same
+with OE)::
+
+   >> model
+
+   model =
+   Discrete-time OE model:  y(t) = [B(z)/F(z)]u(t) + e(t)
+     B(z) = 4.775 - 4.545 z^-1 + 1.714 z^-2
+
+     F(z) = 1 - 0.9197 z^-1 + 0.6324 z^-2
+
+   Sample time: 0.01 seconds
+
+   Parameterization:
+      Polynomial orders:   nb=3   nf=2   nk=0
+      Number of free coefficients: 5
+      Use "polydata", "getpvec", "getcov" for parameters and their uncertainties.
+
+   Status:
+   Estimated using OE on time domain data "data".
+   Fit to estimation data: 50.09% (simulation focus)
+   FPE: 1.552, MSE: 1.551
+
+.. [m1] Ljung 1999 page 499
+.. [m2] http://www.mathworks.com/help/ident/ug/simulating-and-predicting-model-output.html
+.. [m3] http://arunkt.yolasite.com/resources/ch5230/lectures/predictions.pdf

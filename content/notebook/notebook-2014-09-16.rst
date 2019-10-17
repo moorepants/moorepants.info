@@ -1,0 +1,168 @@
+==============
+Notebook Entry
+==============
+
+:subtitle: September 16, 2014
+:category: notebook
+:date: 2014-09-16 09:34:26
+:slug: notebook-2014-09-16
+:tags: notebook, aio
+
+
+AIO for September 16, 2014
+
+
+
+Last week's accomplishments
+===========================
+
+Objectives from last week
+
+I spent 12.2 hours on the steer torque paper work instead of the 9.5 I
+projected.
+
+- [3 hours] Finish table in the steer torque paper. Update the spreadsheet and
+  insert into the latex doc. -- Done:
+  https://github.com/moorepants/steer-torque-manuscript/commit/24b2d4419cf5d052706c944a12f54fbc91eea9be,
+  https://docs.google.com/spreadsheets/d/1XDN2wXa7abgd_W1jIejA62ITD0qSIUIqmqNJnC0qpbQ/pubhtml
+- [2 hours] Add in torque wrench section into the steer torque paper. -- Done:
+  https://github.com/moorepants/steer-torque-manuscript
+- [0.5 hour] Make a figshare dataset for the torque wrench experiments csv
+  file. -- Done: http://dx.doi.org/10.6084/m9.figshare.1167497
+- [4 hours] Send Mont a first draft of the steer torque paper for review (by
+  Saturday). -- Done:
+  https://github.com/moorepants/steer-torque-manuscript/releases/tag/first-draft
+
+I spent 3.6 hours on the bicycle data paper which was under the 4 I projected.
+I didn't do very complete jobs of these tasks though.
+
+- [1 hour] Write and introduction to the bicycle data paper. -- Done:
+  https://github.com/moorepants/bicycle-data-paper
+- [1 hour] Write a section about the raw data in the bicycle data paper. --
+  Started: https://github.com/moorepants/bicycle-data-paper
+- [2 hours] Add README's and any other needed data to the davis instrumented
+  bicycle raw data sets and make public. -- 80% done: created an rst file with
+  the trial data info, need to add calibration data info.
+
+Planning took 5 hours instead of 4.5, but I also spent 3.4 hours giving the
+tutorial and following up with a recap.
+
+- [4 hours] Prepare materials for the IEEE open source night (by Friday). --
+  Done: https://github.com/moorepants/intro-to-open-source and
+  https://github.com/moorepants/ieee-tic-tac-toe.
+- [0.5 hour] Send out installation instructions for IEEE open source night (by
+  Thursday). -- Done: see https://github.com/moorepants/intro-to-open-source
+  for installation instructions.
+
+This only took 0.6 hrs instead of 2.
+
+- [2 hours] Pick a talk topic for the seminar and draft an outline of the talk.
+  -- Done: https://github.com/moorepants/csu-fall-hmc-seminar
+
+I spent 1.8 hrs on writing, a bit over 1.
+
+- [1 hour] Write system description section in the inverted pendulum paper. --
+  Done: see https://github.com/csu-hmc/inverted-pendulum-sys-id-paper
+
+I spent 8.4 hours writing this code and instead of 5.
+
+- [5 hours] Implement a ufuncify for vectorized matrix evaluations for the
+  inverted pendulum direct id code. The compile times currently are prohibitive
+  for more than two links. -- Done:
+  https://github.com/csu-hmc/inverted-pendulum-sys-id/commit/000f2c7c860627c8ab4e24816fb13820c2fe16bc
+
+This took 1.5 hours instead of 1.
+
+- [1 hour] Write meta data description in perturbed walking data paper. --
+  Done: https://github.com/csu-hmc/perturbed-data-paper/commit/2b87b4867318d966afd34993476bc0c294f6c8fb
+
+It looks like I spent 33.1 hours on an estimated 27.0 hours of work, so I
+underestimated by about 18% of the actual time. The more interesting thing is
+that I worked 14.7 more hours on things that were not on the objectives list.
+So I spent an extra 45% of the actual objectives time doing other stuff.
+
+Other things I did
+
+- Github: 35 commits, 3 merged pull requests, 11 issues added.
+- [3.4 hours] Led a tutorial for ~30 students on collaborative software development and
+  open source and wrote a recap at https://github.com/moorepants/intro-to-open-source/issues/1.
+- Got myself into a bet with Dr. Rashidi about what makes a rattleback reverse.
+- Discussed Ton's and my idea about a direct collocation tool with Luke to see
+  if he wants to come out to work on it.
+
+My time graph for the past week
+
+.. image:: https://objects-us-east-1.dream.io/moorepants/aio-2014-09-16.png
+   :width: 800px
+
+Last week's issues
+==================
+
+- [1 hour] Make a blog post explaining how I setup the Plone offsite backups.
+  -- Ran out of time, will skip this unless I find myself with some time.
+- [0.5 hour] Make sure that the hmc.csuohio.edu offsite backup can be restored.
+  -- Ran out of time, will check this week.
+- [0.5 hour] Try to upload the davis instrumented bicycle h5 file (with raw and
+  processed data) to Figshare. -- Done, ran our of time, will do this week.
+- [2 hours] Draft a plan/outline for a new research statement for prof
+  applications. -- Too low on the priority list, will do this week.
+
+This week's objectives
+======================
+
+I'm taking off Friday and will in Louisville for the weekend, so I'm probably
+overestimating what I can do this week. The estimate is about ~23 hrs, so
+according to last week it will take me ~27 hrs to to the work and I'll spend 11
+more hours doing other stuff, putting me at ~38 hrs of actual work time.
+
+Lab Stuff
+
+- [0.5 hr] Make sure that the hmc.csuohio.edu offsite backup can be restored.
+- [6 hr] Create a presentation for the lab seminar on the 17th.
+
+Perturbed Walking Data Paper
+
+- [1 hr] Write draft of data processing software section.
+
+Parameter Identification with Direct Collocation Paper
+
+- [1 hr] Add a section about how the direct collocation is implemented with a
+  backward Euler integration assumption.
+
+Parameter Identification with Direct Collocation Source Code
+
+- [2 hr] Add the ability to specify constants and arrays explicitly in
+  ufuncify_matrix to avoid creating arrays of constants in the jacobian
+  evaluation function.
+- [1 hr] Move the indice computation out of the jacobian evaluation
+  computation.
+
+Bicycle Data Paper
+
+- [1 hr] Finish raw data README.
+- [2 hr] Create calibration data README.
+- [0.5 hr] Try to upload the davis instrumented bicycle h5 file (with raw and
+  processed data) to Figshare.
+
+Bicycle Steer Torque Paper
+
+- [1 hr] Change R plots to a prettier ggplot2 version.
+- [1 hr] Improve the matplotlib plots to make them prettier.
+- [0.5 hr] Add in a good photo of the actual steer torque design to go along
+  with the CAD model.
+- [0.5 hr] Figure out the best citation for Kageyama's design.
+
+Yeadon Paper
+
+- [0.25 hr] Commit latest draft from the journal to Git.
+
+Software Carpentry
+
+- [1 hr] Respond to Nick Hermez.
+- [1 hr] Decide on a date, confer with Ahmet, and let Software Carpentry know.
+- [0.5 hr] Make a list of tasks that need to be done so I can divvy them up.
+
+Job Search
+
+- [2 hours] Draft a plan/outline for a new research statement for prof
+  applications.

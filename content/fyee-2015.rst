@@ -1,0 +1,160 @@
+====================
+Summary of FYEE 2015
+====================
+
+:authors: Jason K. Moore
+:subtitle: my first education conference
+:description: Notes taken during FYEE 2015
+:date: 2015-08-09 15:22:00
+:slug: fyee-2015
+:tags: fyee, education
+
+I recently attended the First-Year Engineering Education Conference in Roanoke,
+VA (FYEE_). I decided to go so I could immerse myself in the engineering
+education community for both inspiration and preparation for my new lecturer
+position at UC Davis. The conference was also very close to my hometown so I
+got to visit my family for a few days too. I was worried that the conference
+may not be any good because I heard about it from a random email solicitation,
+but it ended up being worth the trip out. This post summarizes my notes on the
+conference.
+
+.. _FYEE: http://fyee.org
+
+The conference is an independent small (~200 attendees) meeting that
+focuses specifically on the first year experience of engineering students. The
+attendees were mostly faculty, advising staff, and folks from the few
+engineering education departments that exist. The demographics of the attendees
+was mind blowing for an engineering conference. There may have been more women
+than men and there were many other minority groups that were strongly
+represented. The conference had two keynotes, several half day workshops,
+various talks, and some tours of Virginia Tech's facilities.
+
+The first keynote was from Miray Pereira, a program manager from DuPont. In my
+opinion, her keynote wasn't that noteworthy but there were a few nuggets hidden
+in her weird flowchart slides. She gave us some perspective on what skills an
+attributes a big corporation would like to see in new engineering hires. She
+pointed out that STEM hires are very poor at working in teams and communicating
+compared to non-STEM hires. She also said that her engineers were more focused
+on activity that impact. She has trouble getting her engineers to accept a
+"No" as an invitation to improve their work and often sees young engineers too
+focused on having their idea win than on collaboratively developing the
+best idea for the company.
+
+The second keynote was from a young professor at ASU, Shawn Jordan. Shawn has
+an engineering education degree and has some grants that focus on connecting
+the maker movement and engineering education. His talk was quite inspirational
+and ultimately had the audience try to define the terms "maker" and "engineer",
+seeing if there were commonalities and differences. I was surprised that some
+of the professors at my table didn't even know what the maker movement was. I'd
+wrongly assumed that all engineers would have probably heard of it. Shawn
+showed that many makers don't identify as engineers, and that engineering is
+essentially a non-hip profession/activity. But he thinks that we should be
+figuring out how to persuade "makers" into becoming engineers. Notes from his
+talk:
+
+- I-Corp for learning
+- RED Grant
+- "failure is a badge of honor in the maker community"
+- We need to bring the kind of sharing makers have into the engineering
+  community.
+- IP prohibits sharing (makers share, companies hide)
+- Grade on process instead of the product.
+- Laser cutting cardboard is much more efficient than having students 3D
+  printing prototypes.
+
+There were other folks at the conference thinking about the maker movement.
+Virginia Tech has a maker space for their freshman to hang out in and they also
+have a maker space in an honors dormitory. The first one is setup so that all
+1800 freshman engineers come through for a ~4 hr session at creating some
+things with 3D printers, engravers, etc. It was still quite the infant though
+and our tour guides were undergraduates that were focused on telling us about
+the specific machines instead of how the educational program worked.
+
+I participated in two workshops, one on coaching and another on assessment.
+Both of the workshops were really good. First of all, it was nice being taught by
+engineering teachers that think hard about good teaching. Both workshops did
+pretty good at active learning and I came away with many new things. The
+coaching workshop by Jennifor Groh showed how coaching can be used to help your
+students get through tough issues. We were able to practice asking powerful
+questions that encouraged the students to self-discover their path forward and
+how to be held accountable for the goals they set for themselves. The assessment
+workshop had us brainstorming all kinds of assessment methods and working
+through the design of some specific assessments for real situations. The main
+design issues were:
+
+- setting learning objectives, course context, and who you are trying to
+  convince with the evidence
+- the actual learning experience
+- the assessment implementation plan
+- how the assessment data will be used
+
+An aside, during that workshop I heard a lot of high praise for the CATME_
+software for teamwork assessment.
+
+.. _CATME: http://info.catme.org
+
+I also met some interesting people. I met a woman from UCI that runs a first
+year engineering course there. She has the students construct a quadcopter from
+scratch that has to do various tasks like carry a specific payload. I also had
+long conversations with the coordinators of the minority programs at Purdue and
+UT Austin.
+
+I was disappointed in the scientific rigor of many of the talks. The good
+scientists could run a pairwise T-test or maybe an ANOVA and the poor ones
+didn't have any science at all. One woman said to me "the last talk was all
+about simulation, you didn't miss anything". That's in the eye of the beholder
+I suppose. One of the talks I went to was appalling and I can't believe the
+author even got accepted. He asked a single women student why she choose
+engineering and then went on to make bold claims about why women choose
+engineering and what we should do to get more women engineers. He might as well
+have been a used car salesman.
+
+I went to quite a few of the talks on minorities in engineering. Barring the
+previously mentioned one, all were enlightening in different ways. I learned how
+Chinese and Indian students are likely to fit best in hierarchical
+student/professor relationships, which explains why I have more trouble getting
+my Indian GSoC students to work as equals. I also learned that there is a
+strong correlation between the number of women in the medicine and law TV shows
+of the 80s/90s to the number of women doctors and lawyers of today. We need a
+women MacGyver!
+
+I also watched several talks on flipping the classroom. It seemed to me that
+many people are interested in trying flipped or "blended" models but that most
+of the speakers were not able to show significant improvements in learning from
+their assessments. But most felt that the key was getting students to learn to
+learn and for them to "do" to learn, which I agree with and the research
+supports. The chair of the session said "we need to teach students like the
+residence halls feed them" (i.e. with many choices of the type of learning you
+want to do).
+
+Lastly, I watched one talk on a "faculty in residence" program and Boise State.
+I'd never heard of such a thing, but this prof lived in the dorms with a cohort
+of freshman (along with his wife and child). He was a normal prof but spent
+extra time leading extracurricular activities with the students and helping
+them with their homework and projects. He was very focused on building a strong
+community among the students and giving them a supportive around-the-clock
+environment. I was very impressed by the program. He said that all the colleges
+had one and it'd been going on for a long time.
+
+I have some criticisms and suggestions for improvement of the conference. The
+conference booklet was poorly organized and it was very difficult to arrange
+which talks to attend in the different sessions. All they needed to do was to
+make a full table of the talks that had all the talks at any given time across
+a row, broken up by sessions in columns. There were also too many simultaneous
+tracks. I'd much rather have a single track conference that does one or more of
+these:
+
+- Utilized lightning talks. Most people don't need a full 20 minutes to blab
+  about their stuff. We could get way more information with 5 minute lightning
+  talks.
+- Be more selective in the talks. Many of the talks were marginal at best.
+- Video the talks and post them online so we can watch the ones we missed.
+
+Also, the circular tables were bad for the talks good for the workshops. And
+finally, my pet peeve, was that there were no vegetarian items at the second
+lunch even though dietary needs were collected at registration.
+
+Overall the conference was worth attending and I came home with a head full of
+ideas and some new connections around the country. I'm not sure I'll get to
+work with freshman engineering at first in my new job but I hope to as time
+goes on.

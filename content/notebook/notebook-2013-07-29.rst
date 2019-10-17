@@ -1,0 +1,138 @@
+==============
+Notebook Entry
+==============
+
+:subtitle: July 29, 2013
+:category: notebook
+:date: 2013-07-29 09:16:00
+:slug: notebook-2013-07-29
+:tags: notebook
+
+
+
+Today's task list:
+
+- [x] Ask Patsy about Amazon payments
+- [x] Post lab grand opening photos
+- [~] Call HR to discuss retirement options (left message)
+- [x] GSoC Midterm Evaluations (Due July 31st)
+- [x] Get reimbursed for moving expenses
+- [x] Load drivers for printer in lab
+- [x] Push code and data for structural id work that was finished over last week.
+- Finish computer purchase paperwork and send it in
+- Order electronic workbench stuff
+- Read and do exercises in Chapter of Professional Plone Development
+- Reply to Open Science email
+- Review the todo items on the Yeadon paper
+- Work on parsing the walking data
+- Do D-Flow/Cortex tutorial
+- Choose benefits packages (Due August 8)
+
+
+
+Paying for Amazon Web Services at CSU
+=====================================
+
+Patsy said there is some kind of continuing payment form she can fill out for
+our AWS purchase and she will do that today.
+
+Update: We need Jin in the dean's office to help us with this but she's not
+back till Wednesday. Website will have to wait...
+
+Grand Opening
+=============
+
+We had our lab Grand Opening on July 19th and it was a great success. The
+President of CSU, the Dean of Fenn Engineering College, our department chair,
+and the VP of Research at Parker Hannifin were all there and most spoke. Ton
+gave a nice speech and iterated the importance of academic freedom in the
+relationship with Parker Hannifin, which was a nice touch. After the speeches
+and ribbon cutting Ton, Sandy, and Obinna gave a nice demo to the crowd of our
+lab's capabilities. I really enjoyed the demo of treadmill feedback control
+based on moving a marker around in the motion capture space. It was like a
+wizard of oz moment with Ton commanding the powers of nature. We then had a
+nice reception down in the lobby with free booze and food (the veg options were
+ok but the stacked all the sausage together with the cheeses which was sorta
+gross). Photos of the event are here:
+
+https://plus.google.com/photos/110966557175293116547/albums/5906047607418526609
+
+Benefits
+========
+
+I think I'll go with Metrohealth select because I don't go to the doctor much.
+But the locations don't seem to be to convenient to where I live. It is a 9.9
+mile bike ride to the main medical center, but the Buckeye center is probably
+only 2.5 miles and they have an allergy department which I may want to use.
+
+Still wondering whether I should chose the Ohio state retirement deal or choose
+something on my own that isn't tied to the pension system in Ohio. Waiting on a
+call back from Angela Moss to discuss.
+
+Moving Expenses
+===============
+
+Yumi and I spent about $2,950 bucks to move from Davis to Cleveland. The Amtrak
+tickets (sleeper car from Davis to Chicago, coach Chicago to Cleveland) were
+$1150, shipping about 2300 lbs of boxes via Amtrak was about $1400, we rented a
+truck for about $100 on the Davis side to take our boxes to the train station,
+and I gave my brother $200 for driving up from Danville with his jeep to help
+us move the boxes on the Cleveland side, and the rest was some packing
+materials. I asked for moving assistance when I got hired and Ton agreed to pay
+$2k, so I guess we came out all right. The Amtrak trip was super fun (barring
+the Sacramento station fiasco, which I'll write about later).
+
+These were submitted and are waiting the return of Jenny on Wednesday to get
+the account numbers for the reimbursement.
+
+Lab Printer
+===========
+
+I downloaded the CUPS drivers for our Xerox 6280N printer from here:
+
+http://ftp.xerox.com/support/phaser-6280/downloads/enus.html?operatingSystem=linux&fileLanguage=en
+
+Extract the tar file, then the rpm, and then dig into the folders to get
+Xerox_Phaser_6280N.ppd.gz and ungzip it.
+
+We have a two tray setup with 256mb of memory (I think). Not sure if there is a
+duplexer.
+
+Structural Model Identification
+===============================
+
+I worked on the structural model id last week. The due date for the conference
+paper is the 31st of July. I updated the code to deal with multiple runs per
+plant and it now saves a csv file with the meta results of the identifications.
+One major problem was that I wiped my computer and reinstalled everything. This
+was great except I no longer had a working copy of Matlab 2010a. I managed to
+get a copy of the 2013a to work with but the System ID toolbox had a major
+revision and were were now getting different results. The noise estimations
+were no longer converging for the simple plants and the results just didn't
+match what I got when running the code on 2010a. WTF!? This is why working with
+closed source crap like Matlab is a nightmare. Why would the results change
+from one version to the next? Do they not use unit tests!! Probably not, since
+the unit test framework was only added in the 2013a version. Anyhow, Ron took
+the results and finished up the paper. There is no way to verify this either if
+you don't own multiple versions of Matlab.
+
+I've realized that lumping the plant into the closed loop A matrix was a bad
+idea for the noise estimation. In our case we know the plant because it is
+generated by our simulink code, we need K=0 for anything to do with the plant.
+We also know the input (error in the signal) and the output (stick control) for
+each run. I should be ID'ing just on that data. Ron asked me why I wasn't doing
+that a long time ago and it didn't dawn on me. The same goes for my
+`dissertation work on the bicycle <http://moorepants.github.io/dissertation>`_,
+I should redo that analysis too and maybe get some decent noise estimations.
+
+Here is the updated code, data, and paper:
+
+- Source code: https://github.com/moorepants/structuralid
+- Data: http://figshare.com/articles/SISO_Human_Operator_Tracking_Tasks/96176
+- `Paper <https://objects-us-east-1.dream.io/moorepants/hess-moore-mst-final.pdf>`_
+
+In my opinion, this still needs some major work. I haven't really been happy
+with the results but Ron seems to think it is ok. Maybe I can rethink it all
+and turn it into something better. We really wanted to id the transition in
+control gains over time given a switch to a different plant but haven't had much
+success with that yet.

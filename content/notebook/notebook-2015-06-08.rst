@@ -1,0 +1,100 @@
+==============
+Notebook Entry
+==============
+
+:subtitle: June 8, 2015
+:category: notebook
+:date: 2015-06-08 09:44:37
+:slug: notebook-2015-06-08
+:tags: notebook, aio
+
+
+AIO for June 8, 2015
+
+
+This AIO reflects the period of May 25 to June 7.
+
+Last week's accomplishments
+===========================
+
+Job Search
+
+- [0.5 hr, Done] Email Dr. Eke about Sac State.
+- [0.5 hr, Done] Email Dr. Joshi.
+- [1 hr, Done] Look through UCD and Sac State job openings.
+
+PyDy
+
+- [1 hr, Done 1.1 hr] Meet with Sahil and others before GSoC starts.
+- [8 hr, Done 11.2 hr] Fix bugs in PyDy for the release.
+- [0.5 hr, Done] Send in info for conference and register.
+
+Plotly
+
+- [0.5 hr, Done] Send in contract.
+- [4 hr, Done 12.5 hr] Start first notebook.
+
+Extra Accomplishments
+=====================
+
+- [53.2 hr] Prepped and interviewed at UCD for lecturer position.
+
+Missed goals from last week
+===========================
+
+Job Search
+
+- [1 hr] Look through UC Berkeley openings.
+- [1 hr] Look through biomech-l job postings.
+- [0.5 hr] Apply to Ekso bionics.
+- [2 hr] Create an industry 2 page resume.
+- [1 hr] Setup spreadsheet to track jobs.
+
+Gait Control Direct ID Paper
+
+- [16 hr] Write.
+
+Attention + Control Project
+
+- [1 hr] Write out a plan of action to Zhoadan in an email.
+- [2 hr] Draft more on the grant: come up with goals.
+- [0.5 hr] Figure out if I will actually be guaranteed a position.
+
+Last week's issues
+==================
+
+Spent most of my time preparing for the interview and neglected everything
+else.
+
+This week's objectives
+======================
+
+PyDy
+
+- [16 hr] Fix all remaining 0.3.0 milestone bugs in PyDy and make the release.
+- [0.5 hr] Respond to mailing list about Sahil's API desing.
+- [0.5 hr] Rally the devs for the June 15 release.
+- [8 hr] Update the tutorial to work with PyDy 0.3.0.
+- [0.5 hr] Buy tickets to Austin (plane/train?)
+- [1.5 hr] Review Sahil's work.
+- [1 hr] Meet with Sahil if needed.
+
+Plotly
+
+- [4 hr] Polish the bicycle control notebook.
+
+EPak AIP Project
+
+- [0.5 hr] Review contract and see if everything is in order.
+- [1 hr] Open issues on Github for all things in the agreement.
+- [3 hr] Get familiar with the code base.
+- [2 hr] Do a shiny tutorial.
+- [2 hr] Fix some issues.
+
+HMC Lab
+
+- [1 hr] Send signed contract back to Ton.
+
+Gait Direct ID Paper
+
+- [3 hr] Respond to issues on Github.

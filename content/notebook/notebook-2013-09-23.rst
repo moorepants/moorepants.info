@@ -1,0 +1,15 @@
+==============
+Notebook Entry
+==============
+
+:subtitle: September 23, 2013
+:category: notebook
+:date: 2013-09-23 10:22:10
+:slug: notebook-2013-09-23
+:tags: notebook
+
+
+
+- Contacted Futurlec about the electronic components
+- Got the whipple id paper down to 9 pages
+

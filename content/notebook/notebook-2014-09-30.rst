@@ -1,0 +1,180 @@
+==============
+Notebook Entry
+==============
+
+:subtitle: September 30, 2014
+:category: notebook
+:date: 2014-09-30 10:39:11
+:slug: notebook-2014-09-30
+:tags: notebook, aio
+
+
+AIO for September 30, 2014
+
+
+
+Last week's accomplishments
+===========================
+
+Objectives from last week:
+
+Lab Stuff
+
+- [0.5 hr took 1.9 hr] Make sure that the hmc.csuohio.edu offsite backup can be restored.
+  -- Done: offsite website backups work and can be fully restored.
+- [0.5 hr] Undo the review workflow on the website. -- Deferred: I asked Sabrina to take
+  care of this.
+
+Inverted Pendulum Parameter Estimation Source
+
+- [3 hr took 15 hr] Flesh out the collocator class design more. Specifically
+  how to add extra constraints and maybe even the objective. -- Done: I
+  refactored all the code into smaller modules and created a
+  ConstraintCollocator class that can take any general symbolic equations of
+  motion and form the constraint function and the constraint Jacobian function
+  that works with unknown parameters and unknown input trajectories.
+
+Inverted Pendulum Parameter Estimation Paper
+
+- [3 hr took 2 hr] Find and read papers on using DC for parameter estimation. -- Done: I
+  found several on parameter estimation with multiple shooting and maybe some
+  on parameter identification with direct collocation. There are quite a few
+  people working with similar methods. Betts has a paper that may be what I'm
+  doing, but I don't understand it all yet.
+- [1 hr took 0.9 hr] Make a pass through the outline to define things better,
+  i.e. like specific plots, etc. -- Done: Reviewed Ton's suggestions and
+  cleaned up some some stuff. Will probably reduce the scope of the paper,
+  leaving out single shooting and direct approach.
+
+Bicycle Steer Torque Paper
+
+- [0.25 hr took 0.1 hr] Check in with Mont about his review at end of week. --
+  Done: sent him a reminder email.
+
+Bicycle Data Paper
+
+- [1 hr took 2 hr] Finish raw data README. -- Done.
+- [2 hr took 2.1 hr] Create calibration data README. -- Done.
+
+I created a README in the BicycleDAQ repo that explains all of the data it
+produces:
+
+https://github.com/moorepants/BicycleDAQ/blob/master/README.rst
+
+The I finalized the raw data releases and made them public on Figshare:
+
+Trial Data: http://dx.doi.org/10.6084/m9.figshare.1164632
+
+Calibration Data: http://dx.doi.org/10.6084/m9.figshare.1164630
+
+- [1 hr] Try to upload the davis instrumented bicycle h5 file (with raw and
+  processed data) to Figshare. -- Done: I'm actually going to upload the file
+  to Zenodo instead of Figshare because they don't have a prohibitive file size
+  limit.
+
+Software Carpentry
+
+- [0.5 hr] Respond to Nick Hermez. -- Done.
+- [1 hr] Decide on a date, confer with Ahmet, and let Software Carpentry know.
+  -- Done.
+- [0.5 hr] Make a list of tasks that need to be done so I can divvy them up. --
+  Done.
+
+I decided to can the Software Carpentry plans because I'm leaving town soon and
+Cleveland doesn't seem ready for it. The others involved may do something with
+it.
+
+Other stuff I did:
+
+- Couple hours of SymPy dev with 2 PRs.
+- The next IEEE Open Source Night is setup for this Friday, Oct 3.
+- Told Ibrahim and Rashidi I could no longer teach Advanced Dynamics in the
+  Spring.
+
+Last week's issues
+==================
+
+I got consumed with refactoring and generalizing my direct collocation code and
+spent 25 hours on it (with just a bit more work I should be able to solve all
+the problems that Ton has demonstrated with minimal coding). Thus I neglected
+finishing my actual objectives. This is a pattern I often fall into.
+
+Inverted Pendulum Parameter Estimation Source
+
+- [2 hr] Implement both process and measurement noise. -- I spent a lot of time
+  thinking about this. Ton has also given me some insight, but I'm still not
+  sure I agree with Ton's suggestions. See this issue:
+  https://github.com/csu-hmc/inverted-pendulum-sys-id/issues/7 for some
+  background.
+- [2 hr] Implement a validation simulation on a portion of the data. -- Didn't
+  get to.
+- [3 hr] Setup runs to create the convergence and global minima chance plots.
+  -- This is on hold till I get everything working properly again.
+
+I updated the physical parameter values to be more human-like in size and mass.
+I think this has caused the optimization to have trouble converging, as I
+didn't see this issue until I did that update. But there could be a bug
+introduced in the giant code refactor that I'm missing. The gains are much
+higher now that the mass and lengths are higher.
+
+I also have a lateral force as the perturbation input as opposed to specifying
+the acceleration directly. I'm having trouble picking a force (sum of sines)
+that gives appropriate motions.
+
+Perturbed Walking Data Paper
+
+- [2 hr] Decide on what will actually be the processed data and write script to
+  produce it from raw. -- Didn't get to. I think I'm going to upload everything
+  in one big gzipped tar ball to Zenodo but exclude the Cortex dumps.
+- [3 hr] Add in the belt acceleration compensation to GTK. -- Didn't get to.
+
+Bicycle Steer Torque Paper
+
+I didn't get to these things.
+
+- [1 hr] Change R plots to a prettier ggplot2 version.
+- [1.5 hr] Improve the matplotlib plots to make them prettier.
+- [1 hr] Figure out the best citation for Kageyama's design.
+
+Job Search
+
+- [2 hours] Draft a plan/outline for a new research statement for prof
+  applications. -- I'm not sure I'm going to apply for professorships, so this
+  is on hold.
+
+This week's objectives
+======================
+
+Inverted Pendulum Parameter Estimation Source
+
+- [4 hr] Implement general time specific constraints, like x(0) = 0.
+- [1 hr] Add Ton's pendulum example to the code.
+- [1 hr] Add the pendulum parameter id example.
+- [5 hr] Decide what to do about process and measurement noise and implement it.
+
+Perturbed Walking Data Paper
+
+- [2 hr] Read the Betts paper more thoroughly.
+- [3 hr] Decide on what will actually be the processed data and write script to
+  produce it from raw to prepare for a Zenodo upload.
+- [6 hr] Add in the belt acceleration compensation to GTK.
+
+Inverted Pendulum Parameter Estimation Paper
+
+- [3 hr] Fluff up the intro with citations in the outline and rewrite it to
+  discuss the issues with shooting and the direct approach.
+
+Bicycle Steer Torque Paper
+
+- [3 hr] Change R plots to a prettier ggplot2 version.
+- [2 hr] Improve the matplotlib plots to make them prettier.
+- [1 hr] Figure out the best citation for Kageyama's design.
+
+Bicycle Data Paper
+
+- [1 hr] Make a figshare data set for the additional trial csv file.
+- [1 hr] Make a figshare item for the bicycle parameter raw data.
+
+IEEE Open Source Code Night
+
+- [2 hr] Prep materials.

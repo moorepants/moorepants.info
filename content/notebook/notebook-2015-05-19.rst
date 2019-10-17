@@ -1,0 +1,84 @@
+==============
+Notebook Entry
+==============
+
+:subtitle: May 19, 2015
+:category: notebook
+:date: 2015-05-19 13:06:48
+:slug: notebook-2015-05-19
+:tags: notebook, aio
+
+
+AIO for May 19, 2015
+
+
+Last week's accomplishments
+===========================
+
+PyDy
+
+- [10 hr, Done 2.2 hr] Work on issues for the release.
+
+Gait Control Direct ID Paper
+
+- [10 hr, Done 12.2 hr] Write!
+- [5 hr, Done 30 min] Implement the Wang/Srinivasan work?
+- [10 hr, Done 2.2 hr] Plots.
+
+Extra Accomplishments
+=====================
+
+Nothing
+
+Missed goals from last week
+===========================
+
+PyDy
+
+- [1 hr] Meeting with Sahil.
+
+Attention + Control Project
+
+- [1 hr] Write out a plan of action to Zhoadan in an email.
+- [2 hr] Draft more on the grant.
+- [0.5 hr] Figure out if I will actually be guaranteed a position.
+
+Last week's issues
+==================
+
+Only worked 17.6 hrs. Had visitors in town and traveled.
+
+This week's objectives
+======================
+
+Job Search
+
+- [0.5 hr] Email Dr. Eke about Sac State.
+- [0.5 hr] Email Dr. Joshi.
+- [1 hr] Look through UCD and Sac State job openings.
+- [1 hr] Look through UC Berkeley openings.
+- [1 hr] Look through biomech-l job postings.
+- [0.5 hr] Apply to Ekso bionics.
+- [2 hr] Create an industry 2 page resume.
+- [1 hr] Setup spreadsheet to track jobs.
+
+Gait Control Direct ID Paper
+
+- [16 hr] Write.
+
+Attention + Control Project
+
+- [1 hr] Write out a plan of action to Zhoadan in an email.
+- [2 hr] Draft more on the grant: come up with goals.
+- [0.5 hr] Figure out if I will actually be guaranteed a position.
+
+PyDy
+
+- [1 hr] Meet with Sahil and others before GSoC starts.
+- [8 hr] Fix bugs in PyDy for the release.
+- [0.5 hr] Send in info for conference and register.
+
+Plotly
+
+- [0.5 hr] Send in contract.
+- [4 hr] Start first notebook.

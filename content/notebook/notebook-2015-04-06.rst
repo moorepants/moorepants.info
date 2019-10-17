@@ -1,0 +1,86 @@
+==============
+Notebook Entry
+==============
+
+:subtitle: April 6, 2015
+:category: notebook
+:date: 2015-04-06 09:14:27
+:slug: notebook-2015-04-06
+:tags: notebook, aio
+
+
+AIO for April 6, 2015
+
+
+
+Last week's accomplishments
+===========================
+
+Gait Control Direct ID Paper
+
+- [15 hr, Done 14.2 hr] Finish up the inverse dynamics speedup.
+- [5 hr, Not Done 7.8 hr] Get all the plots in place in the paper.
+- [5 hr, Not Done 7.3 hr] Flesh out the results writing more for a first draft.
+
+- [Done 0.8 hr] Methods section.
+
+Yeadon Software Paper
+
+- [0.2 hr, Done] Check in with Chris about proof review.
+
+SciPy
+
+- [1 hr, Done 1 hr] Submit SymPy tutorial proposal.
+
+GSoC
+
+- [2 hr, Done 3 hr] Review proposals.
+
+Last week's issues
+==================
+
+Gait Control Direct ID Paper
+
+Discovered oddities in the DFlow generated marker data that I never noticed.
+The fast inverse dynamics routines exposed them. The DFlow mocap module outputs
+a 'TimeStamp' column and a 'FrameNumber' column. I was under the impression
+that the FrameNumber column corresponded to a frame from Cortex which should be
+guaranteed to be delivered at 100 hz. And I thought the TimeStamp column is the
+DFlow computer time that DFlow records each time it gets a frame. The TimeStamp
+in the mocap module is the only way to syncronize with the TimeStamp column in
+the data collected in the record module. But it seems DFlow doesn't maintain
+100 hz on the TimeStamp and that frames will stack up, i.e. multiple frame
+numbers will have the same time stamp. All of the calculations in the
+GaitAnalysis Toolkit relied on the fact that the TimeStamp was reasonably
+reliable, but now I don't think it is.
+
+Yeadon Software Paper
+
+Still waiting on them to post the final version. Chris sent in the copy edits.
+
+This week's objectives
+======================
+
+Gait Control Direct ID Paper
+
+- [10 hr] Figure out the marker time stamp issue.
+- [10 hr] Regenerate all the plots.
+- [5 hr] Generate the results plots.
+
+Yeadon Software Paper
+
+- [0.5 hr] Paste in the reviewer responses into the commenting section on the
+  journal website.
+
+ISCSB
+
+- [0.5 hr] Determine if I can go to the conference.
+
+Biosport Lab
+
+- [4 hr] Help triage the lab contents.
+- [10 hr] Get the website back online.
+
+GSoC
+
+- [1 hr] Get mentor responses and submit requested PyDy slots.

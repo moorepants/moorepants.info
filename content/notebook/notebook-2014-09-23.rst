@@ -1,0 +1,193 @@
+==============
+Notebook Entry
+==============
+
+:subtitle: September 23, 2014
+:category: notebook
+:date: 2014-09-23 09:27:17
+:slug: notebook-2014-09-23
+:tags: notebook, aio
+
+
+AIO for September 23, 2014
+
+
+
+Last week's accomplishments
+===========================
+
+Objectives from last week
+
+Lab Stuff
++++++++++
+
+- [6 hr, took 9.6 hr] Create a presentation for the lab seminar on the 17th. -- Done:
+  http://www.moorepants.info/presentations/2014/csu-fall-hmc-seminar/fall-csu-hmc-seminar.slides.html
+
+Perturbed Walking Data Paper
+++++++++++++++++++++++++++++
+
+- [1 hr, took 1.6 hr] Write draft of data processing software section. -- Done:
+  https://github.com/csu-hmc/perturbed-data-paper/commit/207f679949114d18701829538e6352ad0f944088
+
+Parameter Identification with Direct Collocation Paper
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+- [1 hr, took 1.2 hr] Add a section about how the direct collocation is
+  implemented with a backward Euler integration assumption. -- Done:
+  https://github.com/csu-hmc/inverted-pendulum-sys-id-paper/commit/40a78b939cd51adfa19c6be367faf31525e4894f
+
+Parameter Identification with Direct Collocation Source Code
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Spent 11 hrs on this stuff instead of 3...
+
+- [2 hr] Add the ability to specify constants and arrays explicitly in
+  ufuncify_matrix to avoid creating arrays of constants in the jacobian
+  evaluation function. -- Done:
+  https://github.com/csu-hmc/inverted-pendulum-sys-id/commit/8502a154914d6345158c92ffaac1fb5d3946a532
+- [1 hr] Move the indice computation out of the jacobian evaluation
+  computation. -- Done:
+  https://github.com/csu-hmc/inverted-pendulum-sys-id/commit/ee87327a564c736e4eaa375097e72e689f5638ff
+
+With these final changes the speed of the constraint function evaluation is
+really fast. For example, when comparing to the original naive implementation
+of the constraint Jacobian evaluation I get a ~110X speedup for the case below
+where there are 1,056,000 non-zero values in the Jacobian. The function
+evaluations are now ~10X faster than the IPOPT computation time.
+
+The new (7094e45a42)::
+
+   In [1]: run pendulum.py -n 1 -d 480.0 -r -s 100.0 -i known
+
+   In [2]: %timeit identifier.con_jac_func(identifier.initial_guess)
+   1 loops, best of 3: 126 ms per loop
+
+   In [3]: len(identifier.initial_guess)
+   Out[3]: 192008
+
+The old (bc00f1d)::
+
+   In [1]: run pendulum.py -n 1 -d 480.0 -r -s 100.0 -i known
+
+   In [3]: %timeit identifier.con_jac_func(identifier.initial_guess)
+   1 loops, best of 3: 13.9 s per loop
+
+   In [4]: 13.9 / .126
+   Out[4]: 110.31746031746032
+
+Bicycle Steer Torque Paper
+++++++++++++++++++++++++++
+
+Spent 1.9 hrs on this, most on improving the plots...see issues.
+
+- [0.5 hr] Add in a good photo of the actual steer torque design to go along
+  with the CAD model. -- Done:
+  https://github.com/moorepants/steer-torque-manuscript/commit/987ae39dca43a4234666625833adf24bfb39b81c
+
+Yeadon Paper
+++++++++++++
+
+- [0.25 hr, took 0.6 hr] Commit latest draft from the journal to Git. -- Done:
+  https://github.com/chrisdembia/python-yeadon-paper/commit/88523bac88325eec74a56ef661442c9897eb1ba5
+
+Other things I did
+
+- Yeadon paper was published and is now waiting peer review:
+  http://f1000research.com/articles/3-223/v1
+- Implemented a temp directory for ufuncify_matrix code gen files:
+  https://github.com/csu-hmc/inverted-pendulum-sys-id/commit/7094e45a42b1334bf066beac1f4c9b63fd6a9fec
+- Read a nice paper by Victoria Stodden on reproducibility:
+  http://web.stanford.edu/~vcs/papers/SMPRCS2010.pdf
+
+Last week's issues
+==================
+
+I really overestimated my time, especially since I didn't work Friday,
+Saturday, or Sunday. So there are a bunch of tasks I didn't finish. I also
+spent too much time on the tasks I did do and wasted time learning about
+general collocation and optimization tools and working on my general
+implementation with SymPy.
+
+Lab Stuff
+
+- [0.5 hr] Make sure that the hmc.csuohio.edu offsite backup can be restored.
+
+Bicycle Steer Torque Paper
+
+- [1 hr] Change R plots to a prettier ggplot2 version. -- This is mostly done.
+  I was having some trouble with the ggplot histogram and also need to get the
+  fonts to match the fonts in the paper.
+- [1 hr] Improve the matplotlib plots to make them prettier.
+- [0.5 hr] Figure out the best citation for Kageyama's design.
+
+Bicycle Data Paper
+
+- [1 hr] Finish raw data README.
+- [2 hr] Create calibration data README.
+- [0.5 hr] Try to upload the davis instrumented bicycle h5 file (with raw and
+  processed data) to Figshare.
+
+Job Search
+
+- [2 hours] Draft a plan/outline for a new research statement for prof
+  applications.
+
+Software Carpentry
+
+- [1 hr] Respond to Nick Hermez.
+- [1 hr] Decide on a date, confer with Ahmet, and let Software Carpentry know.
+- [0.5 hr] Make a list of tasks that need to be done so I can divvy them up.
+
+This week's objectives
+======================
+
+Lab Stuff
+
+- [0.5 hr] Make sure that the hmc.csuohio.edu offsite backup can be restored.
+- [0.5 hr] Undo the review workflow on the website.
+
+Inverted Pendulum Parameter Estimation Source
+
+- [2 hr] Implement both process and measurement noise.
+- [2 hr] Implement a validation simulation on a portion of the data.
+- [3 hr] Setup runs to create the convergence and global minima chance plots.
+- [3 hr] Flesh out the collocator class design more. Specifically how to add
+  extra constraints and maybe even the objective.
+
+Inverted Pendulum Parameter Estimation Paper
+
+- [3 hr] Find and read papers on using DC for parameter estimation.
+- [1 hr] Make a pass through the outline to define things better, i.e. like
+  specific plots, etc.
+
+Perturbed Walking Data Paper
+
+- [2 hr] Decide on what will actually be the processed data and write script to
+  produce it from raw.
+- [3 hr] Add in the belt acceleration compensation to GTK.
+
+Bicycle Steer Torque Paper
+
+- [1 hr] Change R plots to a prettier ggplot2 version.
+- [1.5 hr] Improve the matplotlib plots to make them prettier.
+- [1 hr] Figure out the best citation for Kageyama's design.
+- [0.25 hr] Check in with Mont about his review at end of week.
+
+Bicycle Data Paper
+
+- [1 hr] Finish raw data README.
+- [2 hr] Create calibration data README.
+- [1 hr] Try to upload the davis instrumented bicycle h5 file (with raw and
+  processed data) to Figshare.
+
+Job Search
+
+- [2 hours] Draft a plan/outline for a new research statement for prof
+  applications.
+
+Software Carpentry
+
+- [0.5 hr] Respond to Nick Hermez.
+- [1 hr] Decide on a date, confer with Ahmet, and let Software Carpentry know.
+- [0.5 hr] Make a list of tasks that need to be done so I can divvy them up.

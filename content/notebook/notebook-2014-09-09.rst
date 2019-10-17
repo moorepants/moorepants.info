@@ -1,0 +1,98 @@
+==============
+Notebook Entry
+==============
+
+:subtitle: September 9, 2014
+:category: notebook
+:date: 2014-09-09 09:48:30
+:slug: notebook-2014-09-09
+:tags: notebook, aio
+
+
+AIO for September 9, 2014
+
+
+
+Last week's accomplishments
+===========================
+
+Objectives from last week:
+
+- Fix the permissions issues for offline backups for the HMC website. -- Done,
+  the backups are now collecting on my server twice a month. See
+  https://github.com/csu-hmc/hmc.csuohio.edu#backup for details of the
+  implementation.
+- Implement the 50X faster constraints Jacobian evaluation for the pendulum id
+  problem. -- Done, didn't quite get 50x increase, but iterations for 6000
+  nodes are down to 1 second an iteration. Now IPOPT is the slow part and the
+  function evaluations are in general faster. There is an interesting thread at
+  http://list.coin-or.org/pipermail/ipopt/2014-September/003817.html discussing
+  how to improve the IPOPT speed.
+- Write the draft of the raw data section in the perturbed data paper. -- Done,
+  see https://github.com/csu-hmc/perturbed-data-paper/blob/master/paper.tex.
+- Add more detail to direct collocation id outline. -- Done,
+  https://github.com/csu-hmc/inverted-pendulum-sys-id-paper.
+- Write an introduction to the direct collocation id paper. -- Done,
+  https://github.com/csu-hmc/inverted-pendulum-sys-id-paper/blob/master/paper.tex.
+- Fix all remaining issues on the yeadon paper and submit to F1000Research. --
+  Done, see https://github.com/chrisdembia/python-yeadon-paper/pull/30.
+- Create a figshare item for the raw bicycle data. -- Done, I've created a
+  fileset for each the trial data and the calibration data.
+- Touch base with Luke on visiting scholar idea. -- Done, sent him an email,
+  but no response.
+- Think of the exercises I will use for teaching git/github in the open source
+  software night. -- Done, developed the teaching plans more in the google doc.
+- Advertise for open source software night. -- Done, sent emails to ME profs
+  and the CS department plus posted flyers on the ME floor in Stillwell.
+
+Other things I did:
+
+- Submitted a patch to SymPy about the Fortran printers:
+  https://github.com/sympy/sympy/pull/7968
+- Helped Ton with Git/Github.
+- Sat in on Ton's class.
+- Submitted a PR to yeadon so you can load config files:
+  https://github.com/chrisdembia/yeadon/pull/105
+- Move direct collocation system id code into its on repository:
+  https://github.com/csu-hmc/inverted-pendulum-sys-id. I used this method:
+  http://stackoverflow.com/a/359759/467314, as the simpler looking filter
+  branch methods seemed to leave all the history in the new repo instead of
+  just the commits related to the files in the repo.
+
+Last week's issues
+==================
+
+- Finish table in the steer torque paper. Update the spreadsheet and insert
+  into the latex doc. -- Did not get to this, but will be priority for this
+  week.
+- Add in torque wrench section into the steer torque paper. -- Same as above.
+
+This week's objectives
+======================
+
+- [1 hour] Make a blog post explaining how I setup the Plone offsite backups.
+- [0.5 hour] Make sure that the hmc.csuohio.edu offsite backup can be restored.
+- [3 hours] Finish table in the steer torque paper. Update the spreadsheet and
+  insert into the latex doc.
+- [2 hours] Add in torque wrench section into the steer torque paper.
+- [0.5 hour] Make a figshare dataset for the torque wrench experiments csv
+  file.
+- [4 hours] Send Mont a first draft of the steer torque paper for review (by
+  Saturday).
+- [0.5 hour] Try to upload the davis instrumented bicycle h5 file (with raw and
+  processed data) to Figshare.
+- [1 hour] Write and introduction to the bicycle data paper.
+- [1 hour] Write a section about the raw data in the bicycle data paper.
+- [2 hours] Add README's and any other needed data to the davis instrumented
+  bicycle raw data sets and make public.
+- [4 hours] Prepare materials for the IEEE open source night (by Friday).
+- [0.5 hour] Send out installation instructions for IEEE open source night (by
+  Thursday).
+- [2 hours] Pick a talk topic for the seminar and draft an outline of the talk.
+- [1 hour] Write system description section in the inverted pendulum paper.
+- [5 hours] Implement a ufuncify for vectorized matrix evaluations for the
+  inverted pendulum direct id code. The compile times currently are prohibitive
+  for more than two links.
+- [1 hour] Write meta data description in perturbed walking data paper.
+- [2 hours] Draft a plan/outline for a new research statement for prof
+  applications.

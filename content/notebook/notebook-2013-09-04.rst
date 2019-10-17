@@ -1,0 +1,67 @@
+==============
+Notebook Entry
+==============
+
+:subtitle: September 4, 2013
+:category: notebook
+:date: 2013-09-04 10:15:11
+:slug: notebook-2013-09-04
+:tags: notebook, walking, system identification
+
+
+
+Today's task list:
+
+- [x] Work on parsing the walking data
+- [x] Talk to Tommie Barclay about domain name
+- [x] Read Sandy's report
+- [] Work on BMD papers
+- [] Book hotel for BMD
+- [] Post update about BMD copyright
+- [] Finish reading the van der Kooij paper
+- [] See if our controller can drive an OpenSim model or Ton's 2D model
+- [] Wrap the HBM C code
+- [] Duplicate website backups on a S3 bucket
+- [] Work on the website theme
+- [] Make generic settings on the lab website
+- [] Review the TODO items on the Yeadon paper
+- [] Do CITI course
+- [] Do FERPA course
+- [] Write up database proposal
+- [] Try out CSympy with some mechanics problems
+
+
+
+hmc.csuohio.edu
+===============
+
+Finally got in touch with Tommie Barclay about mapping hmc.csuohio.edu to our
+IP address: 54.221.204.249. She's going to get back to me next week about it.
+
+Walking System Identification
+=============================
+
+I made good progress today squashing bugs in my walking system identification
+code. The results of using the methods and software are here:
+
+http://nbviewer.ipython.org/urls/raw.github.com/moorepants/walking-sys-id/5f88812eba5b5bbf26153f3fca83d122b2135073/src/control_solver_example.ipynb
+
+I can compute the optimal linear gains at specified instances along the gait
+cycle for an arbitrary data set.
+
+The library for the code is in:
+
+https://github.com/moorepants/DynamicistToolKit
+
+And the notebooks explaining things are now stored here:
+
+https://github.com/moorepants/walking-sys-id
+
+The next things to add are:
+
+1. Add an option to use a sparse matrix data type for the A matrix and the
+   sparse least squares solvers for them.
+2. Output the variance of the fit and the covariance of the parameters,
+   including plots.
+3. Make plots of the resulting plant inputs from the controller and compare
+   them to the "measured" inputs.

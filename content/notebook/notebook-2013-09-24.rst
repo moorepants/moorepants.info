@@ -1,0 +1,15 @@
+==============
+Notebook Entry
+==============
+
+:subtitle: September 24, 2013
+:category: notebook
+:date: 2013-09-24 12:42:12
+:slug: notebook-2013-09-24
+:tags: notebook, BMD2013
+
+
+
+- checked into paying for some Plone work with Ton
+- got code running for the canonical bicycle id
+

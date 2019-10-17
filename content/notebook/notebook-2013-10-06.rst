@@ -1,0 +1,67 @@
+==============
+Notebook Entry
+==============
+
+:subtitle: October 6, 2013
+:category: notebook
+:date: 2013-10-06 16:24:08
+:slug: notebook-2013-10-06
+:tags: notebook, plone, system identification, walking
+
+
+- Make control contribution plots by taking average of sensors
+- Started a people page on the website
+- Final evaluation for Tarun [September 27]
+- Request quotes from Plone dev to do all this stuff.
+- Got my work computer finally.
+- Brought the gyrobike to the lab.
+
+
+
+Walking System Identification
+=============================
+
+I've added a few things to the analysis and fixed some bugs (see
+https://github.com/moorepants/DynamicistToolKit/issues?page=1&state=closedfor
+closed issues.
+
+I have a nicer plot for the model quality comparison which gives the VAF and
+the RMS of the residuals. This still is validating against the data used to
+identify the model. My next step is to validate against different data.
+
+I also spent a bunch of time trying to plot the moment contributions due to the
+error in each sensor and the corresponding gain. To do this, I made the
+assumption that the commanded sensors during the gait cycle are the mean of the
+sensors over all cycles. This shows that most of the measured moments are due
+to the nominal walking moment and the controller contributes to the small
+deviations away from the nominal motion. If we had perturbed data then the
+contributions from the controller would be higher and maybe the gains be more
+certain. These plots didn't really give the kind of insight I was after.
+
+I've limited the sensors and controls to something one may find on a simple
+exoskeleton design.
+
+The gain plots don't really show any discernible patterns. But removing the left
+to right side coupling between sensors and controls with the gain omission
+matrix shows that the quality of the fit doesn't decrease.
+
+The latest IPython notebook with the results is here:
+
+http://nbviewer.ipython.org/urls/raw.github.com/moorepants/walking-sys-id/bd7b6d335d46be04579c085833f76103e8b4ab41/src/control_solver_example.ipynb
+
+Bugs fixed:
+
+- Signs of Ax and b have been made consistent and correct in the derivation,
+  tests, and source.
+- The estimated controls and plots are now correct.
+- Fixed the variance solution for the gains when a gain omission matrix is
+  present.
+
+Plone
+=====
+
+Got a bunch of offers to work on the website. Looks like prices are going to be
+between 90-165 an hour. The snazzy folks are steeper priced but probably more
+guaranteed to make something cool. I'm not sure this is worth it though as I
+can tinker with it for 3-5 times less cost but of course more time. I'll see
+what some of the other quotes come out to be before deciding.

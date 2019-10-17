@@ -1,0 +1,43 @@
+==============
+Notebook Entry
+==============
+
+:subtitle: August 26, 2013
+:category: notebook
+:date: 2013-08-26 09:00:00
+:slug: notebook-2013-08-26
+:tags: notebook, bmd2013, walking, system identification
+
+
+
+Today's task list:
+
+- [x] Work on parsing the walking data
+- [] Make generic settings on the lab website
+- [] Setup a data backup for the website
+- [] Work on the website theme
+- [] Review the TODO items on the Yeadon paper
+- [] Run variations in guesses for structural id
+- [x] Work on BMD papers
+- [x] Book flight for BMD
+- [] Book hotel for BMD
+- [] Post update about BMD copyright
+
+
+
+BMD 2013
+========
+
+Booked a flight to Tokyo Narita. I fly out Friday November 8, get to Narita the
+9th in the afternoon, and fly back on the 14th. Now I need to find somewhere to
+stay.
+
+Whipple paper update:
+
+https://github.com/moorepants/BMD2013/commit/200629f86a012fea416fb31ffa3dd3a35c509028
+
+Walking System ID
+=================
+
+I started work on a data class with the methods needed to put the data in
+usuable forms for the control identification.

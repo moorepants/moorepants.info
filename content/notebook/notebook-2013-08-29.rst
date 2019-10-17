@@ -1,0 +1,74 @@
+==============
+Notebook Entry
+==============
+
+:subtitle: August 29, 2013
+:category: notebook
+:date: 2013-08-29 09:36:28
+:slug: notebook-2013-08-29
+:tags: notebook, plone
+
+
+
+Today's task list:
+
+- [x] Email HR about other post docs
+- [x] Email HR about shower facilities
+- [x] Setup a data backup for the website
+- [] Duplicate website backups on a S3 bucket
+- [x] Work on the website theme
+- [x] Setup our new computers and monitors
+- [] Order Matlab
+- [] Work on parsing the walking data
+- [] Make generic settings on the lab website
+- [] Review the TODO items on the Yeadon paper
+- [] Work on BMD papers
+- [] Book hotel for BMD
+- [] Post update about BMD copyright
+- [] Finish reading the van der kooij paper
+- [] Make course idea descriptions
+- [] See if our controller can drive an OpenSim model
+- [] Sit down with Ton to learn how to wrap the HBM
+
+
+
+Plone 4.3 Backup
+================
+
+I ended up using the backup script that is included in the UnifiedInstaller to
+backup the Data.fs and the blob storage. It is a nice wrapper to the repozo
+script and does a little more. I also added this `nice utility
+<https://pypi.python.org/pypi/collective.recipe.backup>` to my production
+buildout file to add the script to cron::
+
+  ############################################
+  # Runs the backup scripts only on the server
+  [backupcronjob]
+  recipe = z3c.recipe.usercrontab
+  times = 1 3 1,16 * *
+  command = ${buildout:directory}/bin/backup
+
+The ``backupcronjob`` must also be added to the ``parts`` list in the
+``[buildout]`` section. It worked like a charm.
+
+The next step is to make some copies to an S3 bucket so we have a dual backup.
+This tool http://s3tools.org/s3cmd looks like a nice option to make that easy.
+
+Info on basic Plone backups are here:
+
+http://plone.org/documentation/kb/backup-plone
+
+Plone Theming
+=============
+
+We figured out how to use the new Plone theme editor and started learning how
+to apply Diazo rules. It seems to be simple but making sure you map everything
+that is needed will take some time. We wasted a lot of time trying rules with
+no result in the inspectors until we realized you had to press "Preview Theme"
+to see the result of the rules.
+
+I also refactored the theme into a Plone product:
+
+https://github.com/csu-hmc/hmc.theme
+
+Still some work to do there to clean up all the links in index.html.

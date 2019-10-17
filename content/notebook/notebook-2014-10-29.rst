@@ -1,0 +1,59 @@
+==============
+Notebook Entry
+==============
+
+:subtitle: October 29, 2014
+:category: notebook
+:date: 2014-10-29 12:02:12
+:slug: notebook-2014-10-29
+:tags: notebook, aio
+
+
+AIO for October 29, 2014
+
+
+
+Last week's accomplishments
+===========================
+
+- [7 hr, Done 7 hr] CSU Open Access Symposia
+
+  - Met some cool folks from the CSU library, U of Toledo, and Emory
+    University. Nice symposia.
+
+- [Done] Go on a bicycle ride through Phnom Phen.
+
+Other
+
+- Ate a meal of bugs.
+- Biked around Angkor Wat/Thom.
+
+Eating a tarantula:
+
+.. image:: https://objects-us-east-1.dream.io/moorepants/jason-tarantula.jpg
+   :class: img-rounded
+   :width: 400px
+
+Biking through the east gate of Angkor Thom:
+
+.. image:: https://objects-us-east-1.dream.io/moorepants/jason-bicycling-angkor-wat-02.jpg
+   :class: img-rounded
+   :width: 400px
+
+Last week's issues
+==================
+
+Not done:
+
+- [2 hr] Draft consulting agreement and send to Ton.
+
+I worked on this a bit on the flight, but still need to do more.
+
+- [5 hr] Go over Mont's commments on the steer torque paper and fix them.
+- [2 hr] Use seaborn to improve the matplotlib histogram plots in the steer
+  torque paper.
+
+This week's objectives
+======================
+
+- beach

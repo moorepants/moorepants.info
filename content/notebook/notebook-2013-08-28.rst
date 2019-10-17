@@ -1,0 +1,37 @@
+==============
+Notebook Entry
+==============
+
+:subtitle: August 28, 2013
+:category: notebook
+:date: 2013-08-28 10:22:21
+:slug: notebook-2013-08-28
+:tags: notebook, walking, system idenfication
+
+
+
+Today's task list:
+
+- [x] Work on parsing the walking data
+- [] Make generic settings on the lab website
+- [] Setup a data backup for the website
+- [] Work on the website theme
+- [] Review the TODO items on the Yeadon paper
+- [] Work on BMD papers
+- [] Book hotel for BMD
+- [] Post update about BMD copyright
+- [] Finish reading the van der kooij paper
+- [] Make course idea descriptions
+- [] See if our controller can drive an OpenSim model
+- [] Sit down with Ton to learn how to wrap the HBM
+- [] Email HR about other post docs
+- [] Email HR about shower facilities
+
+
+
+Walking System Identification
+=============================
+
+I've got a nice data object for walking data and it splits the timeseries data
+on steps. I'm having a hard time renaming axis labels in Pandas after I splice
+up my data in steps.

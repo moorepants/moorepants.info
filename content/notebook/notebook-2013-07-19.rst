@@ -1,0 +1,54 @@
+==============
+Notebook Entry
+==============
+
+:subtitle: July 19, 2013
+:category: notebook
+:date: 2013-07-19 09:07:00
+:slug: notebook-2013-07-19
+:tags: notebook, system identification
+
+
+
+Today's task list:
+
+- [x] Push yesterday's notebook
+- [x] Review Tarun's timeline
+- [~] Run structural identifications for Dr. Hess
+- [x] Mingle and chat at the lab grand opening
+- Finish computer purchase paperwork and send it in
+- Read and do exercises in Chapter of Professional Plone Development
+- Reply to Open Science email
+- Review the todo items on the Yeadon paper
+- Work on parsing the walking data
+- Do D-Flow/Cortex tutorial
+
+
+
+Structural Model Identification
+===============================
+
+- 10 runs with the Boeing 747 (no process noise) ID
+
+The one that will require a re-do of your algorithm will be the four original
+tasks, this time with process noise ID.  Of course, if you can to the Boeing
+747 also with process noise ID, that would be great.  I’m anxious to get the
+paper uploaded to the AIAA website?
+
+Each data file should have a plant identifier and a run number. The plants can
+be loaded from the data file or from the plant.m file (given the plant number).
+
+plant-01-run-01.mat
+
+Plants
+
+- 1 : 1 / s
+- 2 : 1 / s(s + 1)
+- 3 : 1 / s(s + 0.2)
+- 4 : 10 / (s + 10)
+- 5 : 5 / (s + 10)
+- 6 : 10 / (s^2 +.2 * s)
+- 7 : -5.2632(s-17.28) / (s^3+12.88s^2+77.92s)
+- 8 : -5.7616(s-17.24) / (s^3+12.46s^2+74.24)
+
+Not much progress here today...will have to work on it during next week.

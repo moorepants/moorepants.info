@@ -1,0 +1,67 @@
+==============
+Notebook Entry
+==============
+
+:subtitle: July 16, 2014
+:category: notebook
+:date: 2014-07-16 18:45:15
+:slug: notebook-2014-07-16
+:tags: notebook, ncsrr, stanford, opensim, simbody, direct collocation, system identification, plan
+
+NCSRR 5 week plan.
+
+NCSRR Biweekly Plan
+===================
+
+Started on Monday July 14
+
+Thursday Jul 17
+
+- Prepare and give kickoff talk
+- Setup latest Opensim/Simbody dev environment
+- Read some papers to get an idea of scale limits in NLP problems with IPOPT
+  and/or SNOPT
+- Complete all the orientation stuff for Stanford
+- Complete initial test run of inverted pendulum on cart problem with 10,000
+  nodes in IPOPT
+- Talk with Jack Wang about using his existing code (if I can use the code, below
+  plans may be altered)
+- Discuss direct collocation vs shooting with Ton and others
+
+Monday Jul 21
+
+- Test the limits of scaling in the inverted pendulum code, make computational
+  speed improvements.
+- Build (or obtain) a basic torque driven 9/10 DoF model in Opensim
+
+Thursday Jul 24
+
+- Implement gain scheduled black box control structure for the planar walking
+  model in Opensim
+
+Monday Jul 28
+
+- Start development of direct collocation code in C++ (port stuff from my
+  current Python code) using numerical functionality from Simbody
+
+Thursday Jul 31
+
+- Complete initial direct collocation implementation
+
+Monday Aug 4
+
+- Iterate on direct collocation solutions: testing initial guesses, minimal
+  data sets, # discretization nodes, improve computational speed, etc.
+- Implement IPOPT + paradiso on an AWS instance
+
+Thursday Aug 7
+
+- Either polish things that work or fix things that don't.
+
+Monday Aug 11
+
+- Either polish things more that work or fix things that don't.
+
+Thursday Aug 14
+
+- Prepare and present results and findings

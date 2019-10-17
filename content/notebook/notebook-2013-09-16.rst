@@ -1,0 +1,85 @@
+==============
+Notebook Entry
+==============
+
+:subtitle: September 16, 2013
+:category: notebook
+:date: 2013-09-16 14:37:20
+:slug: notebook-2013-09-16
+:tags: notebook, pycon2014, system identification, walking
+
+
+
+Today's task list:
+
+- [x] Review Tarun's and Sachin's PRs
+- [x] Work on the website content and structure
+- [] Work on BMD papers
+- [~] Do CITI course
+- [x] Work on parsing the walking data
+- [x] Submit PyCon proposals
+- [] Working on wrapping Ton's walking models
+- [] Book hotel for BMD
+- [] Post update about BMD copyright
+- [] Finish reading the van der Kooij paper
+- [] See if our controller can drive an OpenSim model or Ton's 2D model
+- [] Wrap the HBM C code
+- [] Duplicate website backups on a S3 bucket
+- [] Work on the website theme
+- [] Make generic settings on the lab website
+- [] Review the TODO items on the Yeadon paper
+- [] Do FERPA course, due Sept 20
+- [] Write up database proposal
+- [] Try out CSympy with some mechanics problems
+- [] Email Mounir about teaching
+
+
+
+System Identification
+=====================
+
+I've been using sys id for a long time now and learnt it on my own for my
+dissertation work, but I've hit enough walls in just being a user that I really
+need to start understanding what the hell is going on. I like Ljung's book
+"System Identification: Theory for the User", but it think the title would
+better be "System Identification: Theory for the Theorist" because he doesn't
+show you how to actually implement things computationally, which is what a
+"user" really needs. So I'm going to work through his book from page one and
+come up with the computations for the main methods in a series of IPython
+notebooks. I hope that my knowledge will then be sufficient to design a general
+system id package in Python and actually be readable (unlike the system id
+toolbox in Matlab).
+
+The repo is at:
+
+https://github.com/moorepants/ljung1999
+
+And the computations for Chapter 1 have been started here:
+
+http://nbviewer.ipython.org/urls/raw.github.com/moorepants/ljung1999/master/Chapter_01.ipynb
+
+Walking System Identification
+=============================
+
+Over the weekend I implemented a method to zero out the identification of
+particular gains in the gain matrix (closing issue
+https://github.com/moorepants/DynamicistToolKit/issues/5).
+
+The results are here for the example data:
+
+http://nbviewer.ipython.org/urls/raw.github.com/moorepants/walking-sys-id/cfc1143c684ce0e6d1cc4daed0d96f3bc6a5f3d5/src/control_solver_example.ipynb
+
+I'm not sure why the sum of the residuals is being returned as zero from
+numpu.linalg.lstsq. It seems like the A matrix becomes rank deficient once I
+delete columns which correspond to different feedback loops. It also seems like
+the gains that I don't zero out have similar profiles to the previous full gain
+matrix calculations.
+
+I also found some bugs and spent a long time working on it today. Will report
+more tomorrow.
+
+PYCON 2014
+==========
+
+I submitted a PyDy tutorial and a python for human walking data analysis for
+PyCon 2014 in Montreal. We'll see what happens...

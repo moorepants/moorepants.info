@@ -1,0 +1,71 @@
+==============
+Notebook Entry
+==============
+
+:subtitle: November 12, 2014
+:category: notebook
+:date: 2014-11-12 07:17:50
+:slug: notebook-2014-11-12
+:tags: notebook, aio
+
+
+AIO for November 12, 2014
+
+
+
+Last week's accomplishments
+===========================
+
+- [6 hr] Reworked direct collocation software into a package:
+  https://github.com/csu-hmc/opty
+- [3 hr] Updated hmc.csuohio.edu Plone installation and maintenance instructions:
+  https://github.com/csu-hmc/hmc.csuohio.edu
+- [0.5 hr] Wrote to HR with some questions and told them my final date of
+  employment.
+
+Last week's issues
+==================
+
+None.
+
+This week's objectives
+======================
+
+opty
+
+- [4 hr] Implement trapezoidal rule integration and test on parameter id
+  problems.
+
+GaitAnalysisToolKit
+
+- [3 hr] Show Sabrina how to install and assign her an issue.
+
+PyDy
+
+- [3 hr] Make all generated Cython files go to a tmp directory.
+
+Inverted Pendulum Paper
+
+- [6 hr] Figure out why convergence is poor for the human parameter set.
+- [3 hr] Setup the direct id approach for the Park model.
+- [5 hr] Setup the shooting approach for the Park model.
+
+Peturbed Walking Data Paper
+
+- [0.5 hr] Fix the stride/step/gait cycle terminology.
+- [3 hr] Create light boxplots instead of the histograms.
+- [0.5 hr] Merge Sandy's PR.
+- [0.5 hr] Make an appendix with the long tables and other crud.
+
+Steer Torque Paper
+
+- [8 hr] Work on revision, fixing issues reported by Mont.
+
+Website
+
+- [2 hr] Go over server maintenance stuff with Sabrina.
+
+Other
+
+- [3 hr] Reveiw bicycle dynamics paper for VSD.
+- [2 hr] Write up consulting proposal and budget.

@@ -1,0 +1,76 @@
+==============
+Notebook Entry
+==============
+
+:subtitle: March 25, 2014
+:category: notebook
+:date: 2014-03-25 09:42:33
+:slug: notebook-2014-03-25
+:tags: notebook, scipy, sparse matrices
+
+
+Some on sparse matrix solve speed.
+
+
+
+The sparse solvers in scipy don't necessarily seem faster but these are tiny matrices.
+
+::
+
+  In [1]: from scipy import sparse
+
+  In [6]: a = sparse.lil_matrix([[1., 0.], [0., 4.]])
+
+  In [7]: a
+  Out[7]:
+  <2x2 sparse matrix of type '<type 'numpy.float64'>'
+     with 2 stored elements in LInked List format>
+
+  In [8]: b = sparse.lil_matrix([[5.], [6.0]])
+
+  In [9]: b
+  Out[9]:
+  <2x1 sparse matrix of type '<type 'numpy.float64'>'
+     with 2 stored elements in LInked List format>
+
+  In [10]: from scipy.sparse.linalg import spsolve
+
+  In [12]: spsolve(a.tocsr(), b)
+  Out[12]: array([ 5. ,  1.5])
+
+  In [13]: import numpy
+
+  In [14]: A = numpy.array([[1.0, 0.0], [0.0, 4.0]])
+
+  In [15]: B = numpy.array([[5.], [6.0]])
+
+  In [16]: %timeit numpy.linalg.solve(A, B)
+  10000 loops, best of 3: 19.6 µs per loop
+
+  In [17]: %timeit spsolve(a, b)
+  1000 loops, best of 3: 370 µs per loop
+
+  In [18]: from scipy.sparse.linalg import factorized
+
+  In [20]: a0 = a.tocsr()
+
+  In [21]: %timeit spsolve(a, b)
+  1000 loops, best of 3: 370 µs per loop
+
+  In [22]: a1 = a.tocsc()
+
+  In [23]: %timeit spsolve(a1, b)
+  1000 loops, best of 3: 196 µs per loop
+
+  In [24]: solve = factorized(a1)
+
+  In [29]: b = numpy.array([5., 6.0])
+
+  In [30]: solve(b)
+  Out[30]: array([ 5. ,  1.5])
+
+  In [31]: %timeit solve(b)
+  100000 loops, best of 3: 11 µs per loop
+
+  In [32]: %timeit solve = factorized(a1); solve(b)
+  10000 loops, best of 3: 158 µs per loop

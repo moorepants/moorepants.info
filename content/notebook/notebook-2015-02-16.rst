@@ -1,0 +1,123 @@
+==============
+Notebook Entry
+==============
+
+:subtitle: February 16, 2015
+:category: notebook
+:date: 2015-02-16 14:32:25
+:slug: notebook-2015-02-16
+:tags: notebook, aio
+
+
+AIO for February 16, 2015
+
+
+
+Last week's accomplishments
+===========================
+
+Yeadon Paper
+
+- [30 min, Done 30 min] Email authors to start the second revision process and
+  open some new Github issues.
+
+  - All issues are here: https://github.com/chrisdembia/python-yeadon-paper/issues
+
+- [Additional, 1.3 hr] Fixed the syntax highlighting issue and helped Mont
+  get setup to contribute on Github.
+- [Additional, 0.4 hr] Fixed the pinned versions in the advanced example.
+
+Perturbed Data Paper
+
+- [1 hr, Done 0.8 hr] Create issues in the repository for all the fixes.
+
+  - https://github.com/csu-hmc/perturbed-data-paper/issues
+
+- [30 min, Done 0.5 hr] Email co-authors with tasks and deadline.
+- [2 hr, Done 1.5 hr] Write draft of response in the github repo.
+
+  - https://github.com/csu-hmc/perturbed-data-paper/pull/135
+
+Quiet Standing Identification Paper
+
+- [6 hr, Done 14.7 hr] Finish direct/indirection bias comparison plot.
+
+  - https://github.com/csu-hmc/inverted-pendulum-sys-id-paper/issues/1
+
+- [5 hr, Done 3.5 hr] Make a gain accuracy vs duration of simulation plot.
+
+  - https://github.com/csu-hmc/inverted-pendulum-sys-id-paper/issues/2
+
+- [Additional, 2.2 hr] Got the data generation working better.
+- [Additional, 1.1 hr] Implemented threaded parallelization to the Jacobian
+  evaluation. This has significant speed ups for Jacobians with large
+  expressions. https://github.com/csu-hmc/opty/pull/28
+
+Gait Control Direct ID Paper
+
+- [1 hr, Done 0.2 hr] Setup a repository (convert the walking-sys-id repo and
+  move to csu-hmc org.
+
+  - https://github.com/csu-hmc/gait-control-direct-id-paper
+
+- [2 hr, Done 0.4 hr] Draft an outline and what figures tables should be
+  present.
+
+  - https://github.com/csu-hmc/gait-control-direct-id-paper/blob/master/outline.rst
+
+Last week's issues
+==================
+
+Quiet Standing Identification Paper
+
+- The bias comparison plots did not come out completely as expected.
+
+  - https://github.com/csu-hmc/inverted-pendulum-sys-id-paper/issues/1
+  - We would expect that the ratio of platform acceleration to process noise
+    (reference noise in this case) would be the primary independent variable
+    when looking at relative error in the gain identification. But I'm not
+    getting that as a result. It seems like there isn't a clear relationship to
+    the ratio. I'm not yet sure if I have a bug in my code or if it is correct.
+  - I was expecting the error in the identification of the gains to remain
+    constant with respect to platform acceleration in the indirect
+    identification results, but that also was not the case. It seems to have
+    the same properties as the direct identification. Again, I'm not sure
+    what is going on here.
+
+- I'm not sure what to make of the relative gain error vs measurement duration
+  plot for the indirect collocation method. I don't get very consistent
+  results. I would have expected the curve to be smooth and have some trend,
+  likely error decreases with increase in duration. But it is erratic, so I
+  need to manually check the solution on these.
+
+- [5 hr, Partially done 1 hr] Finish computation speed results.
+
+  - Started implementing this code. Shouldn't take much more.
+
+- [5 hr, Did not get done] Try a set of initial conditions with each method and
+  compare which ones converge and which don't.
+
+This week's objectives
+======================
+
+Yeadon Paper
+
+- [5 hr] Fix as many issues as I can and prod others to do so. Our self-imposed
+  deadline is the 23rd for the revision.
+
+Perturbed Data Paper
+
+- [1 hr] Draft out the response to reviewer #3.
+- [5 hr] Fix as many issues in the alloted time.
+
+Quiet Standing Identification Paper
+
+- [5 hr] Finish computation speed results.
+- [5 hr] Try a set of initial conditions with each method and compare which
+  ones converge and which don't.
+- [10 hr] Get some draft text down for each section in the paper to work from.
+  First draft deadline is end of February.
+
+Gait Control Direct ID Paper
+
+- [5 hr] Draft up an introduction.

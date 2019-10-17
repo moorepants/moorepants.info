@@ -1,0 +1,174 @@
+==============
+Notebook Entry
+==============
+
+:subtitle: October 7, 2014
+:category: notebook
+:date: 2014-10-07 09:56:15
+:slug: notebook-2014-10-07
+:tags: notebook, aio
+
+
+AIO for October 7, 2014
+
+
+
+Last week's accomplishments
+===========================
+
+Objectives from last week:
+
+Inverted Pendulum Parameter Estimation Source
+
+- [4 hr, Done took 6 hr] Implement general time specific constraints, like x(0) = 0.
+
+  - See this commit: https://github.com/csu-hmc/inverted-pendulum-sys-id/commit/7face7257f025fbc8b9f95c6005ceb9f87b1e048
+
+- [1 hr, Done took 2 hr] Add Ton's pendulum example to the code.
+
+  - The software can now solve general direct collocation problems with minimal
+    problem setup and a nice API. This shows how you'd solve the same Problem
+    Ton presented during the HMC seminar but with lots less coding:
+    https://github.com/csu-hmc/inverted-pendulum-sys-id/blob/master/pendulum_swing_up.py
+
+- [1 hr, Done took 3 hr] Add the pendulum parameter id example.
+
+  - This example shows a simple parameter identification. Note that the
+    backward Euler integration introduces damping in the solution but get's
+    near the parameter result. Once I implement the trapezoidal rule, this will
+    converge better. See this file for the implementation:
+    https://github.com/csu-hmc/inverted-pendulum-sys-id/blob/master/vyasarayani2011.py
+
+- [5 hr, Done took 0.5 hr] Decide what to do about process and measurement
+  noise and implement it.
+
+  - See this discussion: https://github.com/csu-hmc/inverted-pendulum-sys-id/issues/7,
+    still up in the air.
+
+Perturbed Walking Data Paper
+
+- [2 hr, Done took 1 hr] Read the Betts paper more thoroughly.
+
+  - This paper implements the parameter id methods that I have done, except in a
+    more robust, efficient (except maybe the numerical differences part), and
+    general way. So I don't think what we have is fundamentally new, but it may
+    be new for the biomechanics world, especially if I can identify the walking
+    control.
+
+- [3 hr] Decide on what will actually be the processed data and write script to
+  produce it from raw to prepare for a Zenodo upload.
+
+  - I think I'm only going to host the raw data along with the
+    GaitAnalysisToolkit which can parse it and not host any processed data. I
+    wrote a script to package the raw data for zenodo or figshare:
+    https://github.com/moorepants/walking-sys-id/blob/master/src/prep_data_for_zenodo.py
+
+- [6 hr, Done took 0 hr] Add in the belt acceleration compensation to GTK.o
+
+  - This is nixed for now. Ton pointed out that since we've done the
+    identification on the unperturbed data and get the same results, then this
+    is likely inconsequential.
+
+Bicycle Steer Torque Paper
+
+- [3 hr, Done took 1 hr] Change R plots to a prettier ggplot2 version.
+
+Bicycle Data Paper
+
+- [1 hr, Done took 1 hr] Make a figshare data set for the additional trial csv file.
+
+  - http://dx.doi.org/10.6084/m9.figshare.1187092
+
+IEEE Open Source Code Night
+
+- [2 hr, Done took 1.5 hr] Prep materials.
+
+Other stuff I did:
+
+- [3.5 hr] Gave the second IEEE Open Source Code night tutorial.
+- [7 hr] Working on adding the Ackermann et. al 2010 walking open loop
+  identification problem as an example to the direct collocation software.
+- [1 hr] Updated DTK to work with a range of dep versions and fixed a bug.
+- [1 hr] Updated BicycleParameters to work with latest DTK and pinned versions.
+- [1.8 hr] Pushed two PRs to sympy to fix issues associated with differentiating the
+  walking model.
+- [1 hr] Discuss steer torque paper with Mont.
+
+Last week's issues
+==================
+
+Inverted Pendulum Parameter Estimation Paper
+
+Didn't get to this besides reading the Bett's paper more thoroughly. It will be
+my main reference, I believe.
+
+- [3 hr] Fluff up the intro with citations in the outline and rewrite it to
+  discuss the issues with shooting and the direct approach.
+
+Still trying to clarify the goals of the inverted pendulum paper and what to
+actually include.
+
+Bicycle Steer Torque Paper
+
+I'm working to update the software packages that are used to create the
+matplotlib plots so that I can run everything as a complete pipeline with the
+latest dependencies. So the matplotlib improvements are holding off till then.
+
+- [2 hr] Improve the matplotlib plots to make them prettier.
+- [1 hr] Figure out the best citation for Kageyama's design.
+
+Bicycle Data Paper
+
+Didn't get to this.
+
+- [1 hr] Make a figshare item for the bicycle parameter raw data.
+
+This week's objectives
+======================
+
+Walking System ID
+
+- [1 hr] Read Manoj's recent paper.
+
+Inverted Pendulum Paper
+
+- [0.25 hr] Email Samin to inquire about co-authorship.
+- [1 hr] Discuss paper direction with Ton.
+- [1 hr] Rework the outline to reflect Ton and my discussion.
+- [1 hr] Implement the first example in the Betts et.al 2003 paper.
+- [2 hr] Implement the Kuo standing model for the paper.
+- [0.5 hr] Get the numerical values of the human model to match Kuo.
+- [0.5 hr] Obtain examples of process noise levels that will produce nominal
+  wiggly human motion.
+- [4 hr] Implement process noise, measurement noise (both on states and torques), and
+  perturbation accelerations.
+- [5 hr] Finish implementing the Ackermann 2010 example.
+- [3 hr] Get two relevant sympy prs into sympy.
+
+Walking Data Paper
+
+- [0.5 hr] Decide what will and will not be published data.
+- [1 hr] Describe the GaitAnalysisToolkit DFlow data and it's output.
+- [1 hr] Decide on what plots to show that display the nature of the data and
+  add to the outline.
+- [1 hr] Write a closing paragraph.
+
+Bicycle Steer Torque Paper
+
+- [4 hr] Update BicycleParameters to work with the latest Yeadon and
+  uncertainties 1 and 2.
+- [2 hr] Use seaborn to improve the matplotlib plots.
+- [2 hr] Go through Mont's review, fix minor stuff, and prioritize larger
+  changes.
+
+Bicycle Data Paper
+
+- [3 hr] Update BicycleDataProcessor to work with latest DTK,
+  BicycleParameters, and PyTables.
+- [0.5 hr] Create a raw data H5 file for upload to Zenodo.
+- [1 hr] Create a raw and processed data H5 file (no filtering) for upload to
+  Zenodo.
+
+Other
+
+- [2 hr] Send ENG 4 teaching materials to Yuri.

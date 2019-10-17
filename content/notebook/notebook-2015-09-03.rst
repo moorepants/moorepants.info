@@ -1,0 +1,88 @@
+==============
+Notebook Entry
+==============
+
+:subtitle: September 3, 2015
+:category: notebook
+:date: 2015-09-03 10:46:31
+:slug: notebook-2015-09-03
+:tags: notebook, aio
+
+
+AIO for September 3, 2015
+
+
+Before Quarter Goals
+====================
+
+31 - 6
+
+- Fix up website
+- Syllabus
+- Create 150A course website
+- Get office!
+- Order computer
+
+7 - 13
+
+- Design assignments
+- Move stuff into office
+- Setup any course software
+- Prepare first lectures
+
+14 - 20
+
+- Prepare first lectures
+- Visit Olin
+
+21 - 27
+
+- Orientation workshop
+- Meet with TA
+
+Last week's accomplishments
+===========================
+
+NA
+
+Extra Accomplishments
+=====================
+
+NA
+
+Missed goals from last week
+===========================
+
+NA
+
+Last week's issues
+==================
+
+NA
+
+This week's objectives
+======================
+
+Olin Visit
+
+- Book room
+
+UCD
+
+- Purchase med center bus tickets
+- Sign up for showers
+- Fix email
+
+EME 150A
+
+- Get access to the solution manual
+- Get listed in Banner and Smartsite access
+- Create course website
+- Create syllabus
+- Research course designs and materials
+- Read through Mike's materials
+- Work on course design
+
+SymPy
+
+- 0.7.6.1 hot fix

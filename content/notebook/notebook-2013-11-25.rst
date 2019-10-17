@@ -1,0 +1,65 @@
+==============
+Notebook Entry
+==============
+
+:subtitle: November 25, 2013
+:category: notebook
+:date: 2013-11-25 16:52:06
+:slug: notebook-2013-11-25
+:tags: notebook, biomechanicstoolkit, cmake
+
+
+- [x] Get travis testing working on DynamicistToolKit. There are issues with
+  the Cython version, numpy version to build pandas.
+- [x] Clean up and make a release of Dynamicist toolkit
+- [x] Try the HBM.exe file with Wine (it works).
+- [x] Send Alex Clark's quote through to CSU purchasing.
+- [x] Email Mounir about teaching reproducible scientific computing course.
+- [x] Make a Whipple ID paper presentation
+- [x] Make time series plot showing the model outputs compared to the measured
+- [x] Make a Rider Control ID poster
+- [x] Review Sachins PR 2478
+- [x] Convert pydy-code-gen to class structure
+
+
+
+Installing BTK on Ubuntu 13.10
+==============================
+
+.. code::
+
+   # documentation build dependencies
+   sudo aptitude install doxygen
+   # python wrapper dependencies
+   sudo aptitude install swig python-numpy
+   # octave wrapper dependencies
+   sudo aptitude install swig octave liboctave-dev
+   # mokka dependencies
+   sudo aptitude install libvtk5-dev libvtk5.8-qt4 libphonon-dev
+
+   git clone git@github.com:Biomechanical-ToolKit/BTKCore.git ~/src/BTKCore
+   git clone git@github.com:Biomechanical-ToolKit/BTKData.git ~/Data/BTKData
+   cd ~/src/BTKCore
+   mkdir build
+   cd build
+   cmake \
+      -DCMAKE_BUILD_TYPE:CHAR=Release \
+      -DBUILD_SHARED_LIBS:BOOL=1 \
+      -DBTK_WRAP_PYTHON:BOOL=1 \
+      -DBTK_WRAP_OCTAVE:BOOL=1 \
+      -DBUILD_TESTING:BOOL=1 \
+      -DBTK_TESTING_DATA_PATH:CHAR=~/Data/BTKData \
+      -DBTK_EXTRA_COMPILER_WARNINGS:BOOL=1 \
+      -DBUILD_DOCUMENTATION:BOOL=1 \
+      -DBUILD_DOCUMENTATION_API:BOOL=1 \
+      -DBUILD_DOCUMENTATION_API_UNSELECTED_MODULES:BOOL=1 \
+      -DBUILD_EXAMPLES:BOOL=1 \
+      -DPYTHON_LIBRARY:CHAR=/usr/lib/x86_64-linux-gnu/libpython2.7.so \
+      -DPYTHON_INCLUDE_DIR:CHAR=/usr/include/python2.7 \
+      -DBTK_USE_VISSUPPORT:BOOL=1 \
+      -DBTK_USE_VTK:BOOL=1 \
+      -DBUILD_TOOLS:BOOL=1 \
+      -DQT_MOC_EXECUTABLE:PATH=/usr/bin/moc \
+      -DQT_UIC_EXECUTABLE:PATH=/usr/bin/uic \
+      -G "Unix Makefiles" ..
+   make

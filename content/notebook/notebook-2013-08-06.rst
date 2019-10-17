@@ -1,0 +1,63 @@
+==============
+Notebook Entry
+==============
+
+:subtitle: August 6, 2013
+:category: notebook
+:date: 2013-08-06 09:25:00
+:slug: notebook-2013-08-06
+:tags: notebook, code generation, sympy, pydy, system identification, walking
+
+
+
+Today's task list:
+
+- [x] Send code for theano and sympy
+- [x] Work on parsing the walking data
+- [~] Figure out the bug I'm getting at the end of page 153 on the plone book
+- [] Work on the website theme
+- [] Figure out what to do about the incorrect budget category for the
+  computers
+- [] Review the TODO items on the Yeadon paper
+- [] Do D-Flow/Cortex tutorial (Due August 12)
+
+
+
+SymPy Code Generation
+=====================
+
+Another person needing code gen of complex SymPy derived ODEs:
+https://groups.google.com/forum/#!topic/sympy/VtaxCRNO4sE
+
+Pushed my pydy code gen experiments:
+https://github.com/PythonDynamics/pydy-code-gen
+
+And a patch for the theano stuff in sympy:
+https://github.com/sympy/sympy/pull/2358
+
+Fred speed up my theano implementation a lot:
+https://github.com/PythonDynamics/pydy-code-gen/pull/1
+
+Walking System Identification
+=============================
+
+I added a walk module to my DynamicistToolKit:
+
+https://github.com/moorepants/DynamicistToolKit/blob/master/dtk/walk.py
+
+For steady walking we need to derive the average motion (sorta the limit
+cycle). Steps:
+
+1. Use ground reaction force data to find heel strike and toe-off times.
+2. Splice the joint angle and joint rate data up according to the
+   heelstrike/toe-off times. This will give stance phase of each leg, alternating.
+3. For the whole run average the angle, rate, and force data to get the average
+   motion and torques.
+4. Now list the variables that are potentially feedback variables, $s$ and all of
+   the potential control variables (joint torques), $M$.
+
+Obinna gave me some new data with good ground reaction force measurements. The
+one Ton provided seemed like the person was dragging their left foot. Chris's
+heel strike/toe-off finder worked great for the data. I'm working up the maths
+for the controller solver and will post once I've scribbled enough in my paper
+notebook.

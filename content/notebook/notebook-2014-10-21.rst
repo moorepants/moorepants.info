@@ -1,0 +1,144 @@
+==============
+Notebook Entry
+==============
+
+:subtitle: October 21, 2014
+:category: notebook
+:date: 2014-10-21 10:07:24
+:slug: notebook-2014-10-21
+:tags: notebook, aio
+
+
+AIO for October 21, 2014
+
+
+
+Last week's accomplishments
+===========================
+
+Inverted Pendulum Paper
+
+- [1 hr, Done ~ 2 hr] Finish SymPy reserved words PR.
+
+  - This fixed some issues related to computing the symbolic Jacobian of the
+    walking model. (#8199_, #8200_)
+
+- [5 hr, Done ~ 5 hr] Implement simulation with process noise, measurement
+  noise (both on states and torques), and perturbation accelerations.
+
+  - I've implemented the `Park 2004 model`_ and the parameter id for it, but it
+    doesn't work fully yet. See the issues.
+
+- [1 hr, Done 0.5 hr] Rework the outline to reflect Ton and my discussion.
+
+  - Outline is in the README_.
+
+- [0.25 hr, Done 0.1 hr] Email Samin to inquire about co-authorship.
+- [1 hr, Done 1 hr] Decide on specific figures to include.
+
+  - See the README_.
+
+.. _#8199: https://github.com/sympy/sympy/pull/8199
+.. _#8200: https://github.com/sympy/sympy/pull/8200
+.. _README: https://github.com/csu-hmc/inverted-pendulum-sys-id-paper/blob/master/README.rst
+.. _Park 2004 model: https://github.com/csu-hmc/inverted-pendulum-sys-id/blob/master/park2004.py
+
+Walking Data Paper
+
+- [1 hr, Done 2 hr] Describe the GaitAnalysisToolkit DFlow data and it's output.
+
+  - See `latest pdf`_.
+
+- [1 hr, Done 1 hr] Write a closing paragraph.
+
+  - See the conclusion in the `latest pdf`_.
+
+- [1 hr, Done 1 hr] Decide on what plots to show that display the nature of the data and
+  add to the outline.
+- [4 hr, Done 11 hr] Create the plots for the paper.
+
+  - Two draft plots are created and can be seen in the `latest pdf`_. Also see
+    this conversation_.
+
+.. _latest pdf: https://www.sharelatex.com/github/repos/csu-hmc/perturbed-data-paper/builds/latest/output.pdf
+.. _conversation: https://github.com/csu-hmc/perturbed-data-paper/issues/2
+
+Bicycle Data Paper
+
+- [2 hr] Write section describing the instrumentation.
+- [2 hr] Write section describing the experiments.
+- [1 hr] Decide on figures in the paper.
+
+Done, 2.6 hr. See the `latest version`_.
+
+.. _latest version: https://www.sharelatex.com/github/repos/moorepants/bicycle-data-paper/builds/b7ee2d446f653d590603971f87a59a0d222c7225/raw/output.pdf
+
+Old website
+
+Two people asked me for materials on my old website this past week which was
+erased by the UCD IT deparment.
+
+- [2 hr] Send ENG 4 teaching materials to Yuri.
+- [2 hr] Setup my old website so the pedal desk students can access the
+  information.
+
+Done, 1 hr, website is up temporarily here: http://www.moorepants.info/jkm/
+
+Other
+
+- [3 hr] Cleaned up the GaitAnalysisToolKit_ to get it in shape for release and
+  publication. Bunch of commits.
+
+.. _GaitAnalysisToolKit: https://github.com/csu-hmc/GaitAnalysisToolKit
+
+
+Last week's issues
+==================
+
+Inverted Pendulum Paper
+
+- The Park 2004 identification.
+
+  - When I use realistic human parameters I'm having a hard time getting
+    convergence. See `issue 18`_.
+
+- [5 hr] Finish implementing the Ackermann 2010 example.
+
+  - I fixed all the issues related to computing the symbolic Jacobian but now I
+    think I have an issue with the additional constraints for periodicity. I'm
+    not sure, but IPOPT is balking with this error::
+
+      iter    objective    inf_pr   inf_du lg(mu)  ||d||  lg(rg) alpha_du alpha_pr
+      ls
+         0  2.4293529e+07 2.16e+07 5.03e+00   0.0 0.00e+00    -  0.00e+00 0.00e+00
+      0
+      WARNING: Problem in step computation; switching to emergency mode.
+         1r 2.4293529e+07 2.16e+07 9.99e+02   6.7 0.00e+00  20.0 0.00e+00 0.00e+00R
+      1
+      WARNING: Problem in step computation; switching to emergency mode.
+      Restoration phase is called at point that is almost feasible,
+        with constraint violation 0.000000e+00. Abort.
+        Restoration phase in the restoration phase failed.
+
+.. _issue 18: https://github.com/csu-hmc/inverted-pendulum-sys-id/issues/18
+
+
+Bicycle Steer Torque Paper
+
+Didn't get to this at all.
+
+- [5 hr] Go over Mont's commments and fix them.
+- [2 hr] Use seaborn to improve the matplotlib histogram plots.
+
+
+This week's objectives
+======================
+
+- [7 hr] CSU Open Access Symposia
+- [2 hr] Draft consulting agreement and send to Ton.
+- Go on a bicycle ride through Phnom Phen.
+- [5 hr] Go over Mont's commments on the steer torque paper and fix them.
+- [2 hr] Use seaborn to improve the matplotlib histogram plots in the steer
+  torque paper.
+
+I'm not going to make any other objectives but will work on some stuff.

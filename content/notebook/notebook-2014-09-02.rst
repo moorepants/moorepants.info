@@ -1,0 +1,84 @@
+==============
+Notebook Entry
+==============
+
+:subtitle: September 2, 2014
+:category: notebook
+:date: 2014-09-02 10:01:26
+:slug: notebook-2014-09-02
+:tags: notebook, aio
+
+
+AIO for September 2, 2014
+
+
+
+Last week's accomplishments
+===========================
+
+Objectives from last week:
+
+- Finish implementing a tight matrix eval broadcasted loop to speed up the
+  inverted pendulum direct collocation. -- Partially done: Speed benchmarks are
+  done with C with Cython and Fortran 95 with f2py. The constraint eval
+  computation speed was doubled and there is a projected 50X speed increase for
+  the constraint Jacobian eval speed, but that still needs to be implemented.
+  See this blog post for details:
+  http://www.moorepants.info/blog/fast-matrix-eval.html.
+- Meet with Brad to discuss implementing direct collocation in Opensim on
+  Wednesday. -- Done: I gave Brad an intro to Ton's direct collocation methods
+  and we discussed what an Opensim direct collocation tool would look like.
+- Write outline for direct collocation system id paper. -- Done:
+  https://github.com/csu-hmc/inverted-pendulum-sys-id-paper
+- Write two sections for the perturbed walking paper. -- Done: abstract, intro
+  and start of "raw data" sections are drafted,
+  https://github.com/csu-hmc/perturbed-data-paper/blob/master/paper.tex.
+- Figure out the basic topics and time allotments for the topics at the IEEE
+  open source hack night. -- Done: Event is set for Friday September 12 and
+  flyers have been made.
+- Email RUG, PUG, and NASA Python guys about the SWC workshop and cc Ahmet. --
+  Done: Tristan from NASA is asking around there about the interest level.
+- Write outline for a bicycle data paper. -- Done :
+  https://github.com/moorepants/bicycle-data-paper
+
+Other things I did:
+
+- Discussed visiting scholar project with Ton. We are thinking of creating a DC
+  tool that will allow the user to supply system dynamics, additional
+  constraints, and desired unknowns. It should be able to solve Ton's previous
+  gait problems, my system id problems, and other general test cases. Ton likes
+  the GPOPS API in Matlab which could copied for the Matlab wrapper. The tool
+  would likely be implemented in C++ and wrapped for Python and Matlab use.
+
+Last week's issues
+==================
+
+- Setup offline backups for the HMC website -- Still 90% done. I didn't work on
+  this last week, overestimated time.
+- Run more example optimizations on the inverted pendulum (after speed up is
+  implemented). -- Haven't finished the speed optimizations, plus goal is too
+  broad. Breaking this one up more below.
+- Finish table in the steer torque paper. -- Overestimated time in the holiday
+  week.
+- Add in torque wrench section into the steer torque paper. -- Same as above.
+- Go through the next two chapters in Accelerated C++. Overestimated time.
+  Removing this one for now, till I get back to some C++.
+
+This week's objectives
+======================
+
+- Fix the permissions issues for offline backups for the HMC website.
+- Implement the 50X faster constraints Jacobian evaluation for the pendulum id
+  problem.
+- Finish table in the steer torque paper. Update the spreadsheet and insert
+  into the latex doc.
+- Add in torque wrench section into the steer torque paper.
+- Write the draft of the raw data section in the perturbed data paper.
+- Add more detail to direct collocation id outline.
+- Write an introduction to the direct collocation id paper.
+- Fix all remaining issues on the yeadon paper and submit to F1000Research.
+- Create a figshare item for the raw bicycle data.
+- Touch base with Luke on visiting scholar idea.
+- Think of the exercises I will use for teaching git/github in the open source
+  software night.
+- Advertise for open source software night.

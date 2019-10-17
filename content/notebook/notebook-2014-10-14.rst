@@ -1,0 +1,215 @@
+==============
+Notebook Entry
+==============
+
+:subtitle: October 14, 2014
+:category: notebook
+:date: 2014-10-14 10:25:21
+:slug: notebook-2014-10-14
+:tags: notebook, aio
+
+
+AIO for October 14, 2014
+
+
+
+Last week's accomplishments
+===========================
+
+Objectives from last week:
+
+Walking System ID
+
+- [1 hr, Done 0.7 hr] Read Manoj's recent paper.
+
+  - The paper was ok, nothing revolutionary. They basically found linear
+    correlatiosn between the current state of the hip and the next placement of
+    the foot to try to suppor the theory that we balance by placing our foot
+    based on feedback.
+
+Inverted Pendulum Paper
+
+- [1 hr, Done 1.2 hr] Discuss paper direction with Ton.
+
+  - Going to move the paper premise to a direct approach comparison to the
+    indirect approach using direct collocation.
+
+- [1 hr, Done 0.8 hr] Implement the first example in the Betts et.al 2003 paper.
+
+  - I had to do a little "hack" to deal with the explicit time and it doesn't
+    handle the difference in nodes vs measurement samples as elegantly as Betts
+    et. al but it works fine with the backwards Euler integration. See:
+    betts2003.py_.
+
+- [2 hr, Done 5 hr] Implement the Kuo standing model for the paper.
+
+  - See park2004.py_. Park et. al don't explain their model in detail enough to
+    reproduce it exactly, so I made it similar. It is basically a two link
+    version of the PyDy tutorial with base acceleration as an input.
+
+- [0.5 hr, Done 1.3 hr] Get the numerical values of the human model to match Kuo.
+
+  - Park et. al don't seem to provide the numerical values of the body segment
+    parameters in their paper, so I am making use of the output from my yeadon
+    software with measurements from my body.
+
+- [3 hr, Done-ish 3.3] Get two relevant sympy prs into sympy.
+
+  - `PR #8199`_ is in and `PR #8200`_ is mostly complete.
+
+.. _betts2003.py: https://github.com/csu-hmc/inverted-pendulum-sys-id/blob/master/betts2003.py
+.. _park2004.py: https://github.com/csu-hmc/inverted-pendulum-sys-id/blob/master/park2004.py
+.. _PR #8199: https://github.com/sympy/sympy/pull/8199
+.. _PR #8200: https://github.com/sympy/sympy/pull/8200
+
+Walking Data Paper
+
+- [0.5 hr, Done 0.1 hr] Decide what will and will not be published data.
+
+  - I'm only going to share the "raw" data and the GATK software but include
+    plots of processed data in the paper. See this `Issue #2`_.
+
+.. _Issue #2: https://github.com/csu-hmc/perturbed-data-paper/issues/2
+
+Bicycle Steer Torque Paper
+
+- [4 hr, Done 7.4 hr] Update BicycleParameters to work with the latest Yeadon
+  and uncertainties 2+.
+
+  - BicycleParameters_ 0.2.0 was released and now works with pinned
+    dependencies and supports the newer versions of Yeadon and uncertainties.
+  - A `sample raw data set`_ that can be used with BicycleParameters was
+    prepared and released to Figshare.
+
+- [2 hr, Done 2.6 hr] Go through Mont's review, fix minor stuff, and prioritize
+  larger changes.
+
+  - Mont revised the paper and raised some issues. I spoke with him,took notes,
+    and merged in his changes. See the `steer torque manuscript`_ repository
+    for details.
+
+.. _BicycleParameters: https://pypi.python.org/pypi/BicycleParameters/0.2.0
+.. _sample raw data set: http://dx.doi.org/10.6084/m9.figshare.1198429
+.. _steer torque manuscript: https://github.com/moorepants/steer-torque-manuscript
+
+Bicycle Data Paper
+
+- [3 hr, Done 3 hr] Update BicycleDataProcessor to work with latest DTK,
+  BicycleParameters, and PyTables.
+
+  - I made the first release (0.1.0) of the BicycleDataProcessor_ along with
+    instructions to use it with the datasets shared on Figshare. See below.
+
+- [0.5 hr, Done 6 hr] Create a raw data H5 file for upload to Zenodo.
+
+  - This ended up taking longer than expected, but I packaged all of the
+    necessary raw data from the bicycle system id experiements and it is now
+    available on Figshare. [`Dataset 1`_], [`Dataset 2`_], [`Dataset 3`_], and
+    [`Dataset 4`].
+
+- [1 hr, 1.4 hr] Create a raw and processed data H5 file (no filtering) for
+  upload to Zenodo.
+
+  - I prepared this file which ended up being 550 mb (compressed with bzip2)
+    and it is too large to upload to Figshare (limit is 500 mb). Zenodo will
+    accept it but they have a bug in their upload system and are looking into
+    it.
+
+.. _BicycleDataProcessor: https://pypi.python.org/pypi/BicycleDataProcessor/0.1.0
+.. _Dataset 1: http://dx.doi.org/10.6084/m9.figshare.1164632
+.. _Dataset 2: http://dx.doi.org/10.6084/m9.figshare.1164630
+.. _Dataset 3: http://dx.doi.org/10.6084/m9.figshare.1187092
+.. _Dataset 4: http://dx.doi.org/10.6084/m9.figshare.1198518
+
+Other stuff I did:
+
+- [1.5 hr] Watched an excellent talk by Gentry Lee at the Clinic.
+- [2.7 hr] Attende both of Jeff Speck's talks at CSU, which were also
+  excellent.
+- [0.5 hr] Delt with trying to get the data from our old biosport website.
+- [0.5 hr] Wrote a SymPy wiki page_ for new contributors.
+
+.. _page: https://github.com/sympy/sympy/wiki/introduction-to-contributing
+
+Last week's issues
+==================
+
+I spent too much time on getting the bicycle data and software finalized and
+neglected some of my other objectives. The following objectices were not
+completed due to poor time management.
+
+Inverted Pendulum Paper
+
+- [5 hr] Finish implementing the Ackermann 2010 example.
+- [4 hr] Implement process noise, measurement noise (both on states and torques), and
+  perturbation accelerations.
+- [0.25 hr] Email Samin to inquire about co-authorship.
+- [1 hr] Rework the outline to reflect Ton and my discussion.
+- [0.5 hr] Obtain examples of process noise levels that will produce nominal
+  wiggly human motion.
+- I'm having an issue with class attributes that are mutable with super and
+  subclasses in my SymPy PR for dealing with reserved words in the C language.
+- The symbolic derivatives for the walking model are currently given real and
+  imaginary parts. I need to investigate that more, it may be as simple as
+  setting some variables to be real and/or positive.
+
+Walking Data Paper
+
+- [1 hr] Describe the GaitAnalysisToolkit DFlow data and it's output.
+- [1 hr] Write a closing paragraph.
+- [1 hr] Decide on what plots to show that display the nature of the data and
+  add to the outline.
+
+Bicycle Steer Torque Paper
+
+- [2 hr] Use seaborn to improve the matplotlib plots.
+
+Bicycle Data Paper
+
+- Zenodo has a bug and it will not let you upload large files. Their limit for
+  file size is supposedly 2 GB per file. Their developers are looking in to it.
+  I may be able to upload all of the walking data to Zenodo in one file if
+  their limit is actually 2 GB, otherwise I've written a script to package the
+  data into multiple files.
+
+Other
+
+- [2 hr] Send ENG 4 teaching materials to Yuri.
+
+This week's objectives
+======================
+
+Inverted Pendulum Paper
+
+- [1 hr] Finish SymPy reserved words PR.
+- [5 hr] Implement simulation with process noise, measurement noise (both on
+  states and torques), and perturbation accelerations.
+- [1 hr] Rework the outline to reflect Ton and my discussion.
+- [5 hr] Finish implementing the Ackermann 2010 example.
+- [0.25 hr] Email Samin to inquire about co-authorship.
+- [1 hr] Decide on specific figures to include.
+
+Walking Data Paper
+
+- [1 hr] Describe the GaitAnalysisToolkit DFlow data and it's output.
+- [1 hr] Write a closing paragraph.
+- [1 hr] Decide on what plots to show that display the nature of the data and
+  add to the outline.
+- [4 hr] Create the plots for the paper.
+
+Bicycle Steer Torque Paper
+
+- [5 hr] Go over Mont's commments and fix them.
+- [2 hr] Use seaborn to improve the matplotlib histogram plots.
+
+Bicycle Data Paper
+
+- [2 hr] Write section describing the instrumentation.
+- [2 hr] Write section describing the experiments.
+- [1 hr] Decide on figures in the paper.
+
+Other
+
+- [2 hr] Send ENG 4 teaching materials to Yuri.
+- [2 hr] Setup my old website so the pedal desk students can access the
+  information.

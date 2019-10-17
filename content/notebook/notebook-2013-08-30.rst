@@ -1,0 +1,35 @@
+==============
+Notebook Entry
+==============
+
+:subtitle: August 30, 2013
+:category: notebook
+:date: 2013-08-30 09:43:12
+:slug: notebook-2013-08-30
+:tags: notebook, education
+
+
+
+Today's task list:
+
+- [] Duplicate website backups on a S3 bucket
+- [] Work on the website theme
+- [] Order Matlab
+- [x] Work on parsing the walking data
+- [] Make generic settings on the lab website
+- [] Review the TODO items on the Yeadon paper
+- [] Work on BMD papers
+- [] Book hotel for BMD
+- [] Post update about BMD copyright
+- [] Finish reading the van der kooij paper
+- [x] Make course idea descriptions
+- [] See if our controller can drive an OpenSim model
+- [] Sit down with Ton to learn how to wrap the HBM
+- [] Read Sandy's report
+
+
+
+Course Idea Descriptions
+========================
+
+Here: http://moorepants.info/teaching
