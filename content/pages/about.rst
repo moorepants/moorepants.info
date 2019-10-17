@@ -100,13 +100,11 @@ regular basis.
 Social
 ------
 
+- `Flickr <http://www.flickr.com/photos/9067819@N03/>`_
 - `Google + <https://plus.google.com/110966557175293116547>`_
 - `Twitter <https://twitter.com/moorepants>`_
-- `Flickr <http://www.flickr.com/photos/9067819@N03/>`_
-- `YouTube <http://www.youtube.com/user/moorepants>`_
 - `Yahoo <http://profile.yahoo.com/FZ7FUUIZEX2YXC7NKVWH3PKPQM/>`_
-- `Klout <http://klout.com/#/moorepants>`_
-- `LocalWiki <https://localwiki.org/Users/moorepants>`_
+- `YouTube <http://www.youtube.com/user/moorepants>`_
 
 Professional
 ------------
@@ -118,45 +116,59 @@ Professional
 Academic
 --------
 
+- `Academia.edu <http://ucdavis.academia.edu/JasonMoore>`_
 - `Google Scholar <http://scholar.google.com/citations?user=i9c-QOYAAAAJ>`_
 - `ORCID <http://orcid.org/0000-0002-8698-6143>`_
 - `ResearchGate <https://www.researchgate.net/profile/Jason_Moore/>`_
-- `Academia.edu <http://ucdavis.academia.edu/JasonMoore>`_
 - `Zotero <https://www.zotero.org/moorepants>`_
+
+Wiki
+----
+
+- `LocalWiki <https://localwiki.org/Users/moorepants>`_
 - `Wikipedia <http://en.wikipedia.org/wiki/User:Moorepants>`_
-- `Sport Biomechanics Lab <http://biosport.ucdavis.edu>`_
 
 Software
 --------
 
 - `Github <https://github.com/moorepants>`_
+- `Gitlab <https://gitlab.com/moorepants>`_
 - `StackOverFlow <http://stackoverflow.com/users/467314/moorepants>`_
 
 Hospitality Networks
 --------------------
 
-- `Couchsurfing <http://www.couchsurfing.org/people/moorepants/>`_
 - `BeWelcome <http://www.bewelcome.org/members/moorepants>`_
+- `Couchsurfing <http://www.couchsurfing.org/people/moorepants/>`_
 - `WarmShowers <http://www.warmshowers.org/users/moorepants>`_
 
-Websites I maintain
--------------------
+Websites I Current Maintain
+---------------------------
 
+- `BMD Conference Series <https://bmdconf.org>`_
+- `ODU HPV <http://www.lions.odu.edu/~dlandman/hpv/>`_
 - `Older personal site <http://moorepants.info/jkm/>`_
-- `Sport Biomechanics Lab <http://biosport.ucdavis.edu>`_
+- `moorebicycles <http://moorebicycles.blogspot.com/>`_
+
+Websites I Used to Maintain
+---------------------------
+
 - `BikeDavis.info <http://www.bikedavis.info>`_
 - `Davis Bike Collective <http://www.davisbikecollective.org>`_
 - `N Street Co-housing <http://www.nstreetcohousing.org>`_
-- `ODU HPV <http://www.lions.odu.edu/~dlandman/hpv/>`_
-- `moorebicycles <http://moorebicycles.blogspot.com/>`_
+- `Sport Biomechanics Lab <http://biosport.ucdavis.edu>`_
 
 Public Keys
 ===========
 
-UL30A::
+garuda (x250)::
 
-  ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDY09oSQS0iA8S12s7Bi75oWY7auG5AZKexOztH2UYk3KwYw0FEPIJSv7Eh82KVwM7BWwo/erx7NXmM4gkuLziQJ8wPFSHh7X7rnnsVTQTO6pY+7cgFPUpQQuBxkatHpr1/x+vPtegXecob6ltDfZ5wDFVHMvS7FE1+oevc/HIuOzMEqrOrBD3B0THrA6WgTfpEk1vH9BjmgiIpGYDrD68SxtL0RPU2bx4BVxCbR7+5zA4qcxyWc9ZxJ+MMhYrwKFSbDbsop0cE5g6WeOTTnv1sf5HvFEYu1TE6yZkRjNbuP07dwuwlziKpOfLHtI4/lJgL6SM3oDATMij5Rj1V+Csx moorepants@gmail.com
+   ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDG1RKTxPK5C25en6L9koKF6JPKSLBi8phH4YSYhVyYWMd/QV/bbes9EFyeyAO5E3x3FqRXH62w+dHzAOvBVHDeIx+9wwoa66hMMh+WPlN6r7H2fceNll5A4y0gK6Ne/JOYDhW29FZmGs8NE8YkyUfABuAeR5925zasHDDazVGxt9wM2V433PIhRyyakSGtCwmnTwPhPSvXRX6/Be6foTiFa4RAQDeewv9oUgKxPCc4gF0xmKQBgFcu9IYMqi0qfxe7ZwVxH9WNUhuthdBRx8bPgyq6GhGpScF4/pOisJbEBwI4605F5VrU7NFCOhxBDvELwpJxj3YeC6jmH0pUxuND moorepants@gmail.com
 
 agni (2170p)::
 
   ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDdKOH+UN8xtUfhRb9oYM0YchWWzHzFWxmGQislexI9/bg1K7V4QKfuU6B7KszM5OwN9huU4V+U+HsmKW2cFtbjXL6MBsgwA2y3vQWs5US6xRnaZ1oSQTDZPXux+7tvOlSLD6rFtUKvNcF/4qsecWkTOuVo/ZtaMOAm2lCVSEAXwB6sN8t4MyqltzFPfor/zsWjTVOmAnp3v4iMXb3F6FLPW6FGMLlYhSy6y5BEdCIVLyc5kfN6QduKqnht3krRa4ifEDMI8lFFieaxb4QBRR3fUdUmZjFJmVlmzp/uxtUbKzOpTXFwPcbtlp1wTXNwPUmrq2buvPhZN0l+vaCad8/1 moorepants@gmail.com
+
+UL30A::
+
+  ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDY09oSQS0iA8S12s7Bi75oWY7auG5AZKexOztH2UYk3KwYw0FEPIJSv7Eh82KVwM7BWwo/erx7NXmM4gkuLziQJ8wPFSHh7X7rnnsVTQTO6pY+7cgFPUpQQuBxkatHpr1/x+vPtegXecob6ltDfZ5wDFVHMvS7FE1+oevc/HIuOzMEqrOrBD3B0THrA6WgTfpEk1vH9BjmgiIpGYDrD68SxtL0RPU2bx4BVxCbR7+5zA4qcxyWc9ZxJ+MMhYrwKFSbDbsop0cE5g6WeOTTnv1sf5HvFEYu1TE6yZkRjNbuP07dwuwlziKpOfLHtI4/lJgL6SM3oDATMij5Rj1V+Csx moorepants@gmail.com
