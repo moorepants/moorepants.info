@@ -11,7 +11,7 @@ sys.path.append(os.curdir)
 from pelicanconf import *
 
 if os.environ['TRAVIS'] == 'true':
-    SITEURL = 'https://moorepants.info.github.io'
+    SITEURL = 'https://moorepants.github.io/moorepants.info'
     # NOTE : The theme and plugins are installed alongside this file on the
     # Travis build.
     THEME = "pelican-alchemy/alchemy"
