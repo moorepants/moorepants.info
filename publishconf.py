@@ -16,6 +16,8 @@ if os.environ['TRAVIS'] == 'true':
     # Travis build.
     THEME = "pelican-alchemy/alchemy"
     PLUGIN_PATHS = "pelican-plugins"
+    MENUITEMS = [('Blog', '{}/blog/'.format(SITEURL))]
+
 else:
     SITEURL = 'https://moorepants.info'
     DISQUS_SITENAME = "moorepants"
