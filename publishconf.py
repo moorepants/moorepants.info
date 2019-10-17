@@ -13,6 +13,8 @@ from pelicanconf import *
 # If your site is available via HTTPS, make sure SITEURL begins with https://
 if os.environ['TRAVIS'] == 'true':
     SITEURL = 'https://moorepants.info.github.io'
+    THEME = "pelican-alchemy/alchemy"
+    PLUGIN_PATHS = "pelican-plugins"
 else:
     SITEURL = 'https://moorepants.info'
     DISQUS_SITENAME = "moorepants"
