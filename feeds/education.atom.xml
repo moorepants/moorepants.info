@@ -509,4 +509,4 @@ materials.&lt;/p&gt;
     (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</content><category term="education"></category><category term="engineering"></category><category term="python"></category><category term="jupyter"></category><category term="computational thinking"></category></entry></feed>
+&lt;/script&gt;</content><category term="education"></category><category term="education"></category><category term="engineering"></category><category term="python"></category><category term="jupyter"></category><category term="computational thinking"></category></entry></feed>
