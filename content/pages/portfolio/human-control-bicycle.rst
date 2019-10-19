@@ -23,16 +23,6 @@ Human Control of a Bicycle
 Publications
 ============
 
-Dissertation
-------------
-
-Jason K. Moore. Human Control of a Bicycle". PhD thesis. Davis, CA: University
-of California, Davis, Aug. 2012.
-
-- `HTML Version <http://moorepants.github.io/dissertation>`_
-- `PDF Version <https://objects-us-east-1.dream.io/moorepants/Moore2012.pdf>`_
-- `Sphinx Source <https://github.com/moorepants/dissertation>`_
-
 Journal Papers
 --------------
 
@@ -59,10 +49,19 @@ Engineers, Part K: Journal of Multi-body Dynamics 227(4), December 2013, doi:
 - `Source code <https://github.com/moorepants/RiderID>`__
 - `Research Gate hosted paper <https://www.researchgate.net/publication/274474103_Rider_control_identification_in_bicycling_using_lateral_force_perturbation_tests>`__
 
+Dissertation
+------------
+
+Jason K. Moore. Human Control of a Bicycle". PhD thesis. Davis, CA: University
+of California, Davis, Aug. 2012.
+
+- `HTML Version <http://moorepants.github.io/dissertation>`_
+- `PDF Version <https://objects-us-east-1.dream.io/moorepants/Moore2012.pdf>`_
+- `Sphinx Source <https://github.com/moorepants/dissertation>`_
+
+
 Media
 =====
-
-- `Photos from the UC Davis Experiments <https://plus.google.com/photos/+JasonMoorepants/albums/5579914617322976369>`_
 
 UC Media
 --------
@@ -74,8 +73,9 @@ This was a promotional piece done by the University of California media.
    <iframe
      width="560"
      height="315"
-     src="http://www.youtube.com/embed/HcYbn_RCLiw"
+     src="https://www.youtube.com/embed/HcYbn_RCLiw"
      frameborder="0"
+     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
      allowfullscreen>
    </iframe>
 
@@ -89,8 +89,9 @@ KQED did a piece on the project.
    <iframe
      width="560"
      height="315"
-     src="http://www.youtube.com/embed/zShn5xMueso"
+     src="https://www.youtube.com/embed/zShn5xMueso"
      frameborder="0"
+     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
      allowfullscreen>
    </iframe>
 
@@ -120,11 +121,11 @@ All of the software used in the project is open sourced and can be found in
 online hosting repositories:
 
 - BicycleDAQ https://github.com/moorepants/BicycleDAQ
-- InstrumentedBicycle https://github.com/moorepants/InstrumentedBicycle
 - BicycleDataProcessor https://github.com/moorepants/BicycleDataProcessor
-- CanoncialBicycleID https://github.com/moorepants/CanonicalBicycleID
 - BicycleID https://github.com/moorepants/BicycleID
 - BicycleSystemID https://github.com/moorepants/BicycleSystemID
+- CanoncialBicycleID https://github.com/moorepants/CanonicalBicycleID
+- InstrumentedBicycle https://github.com/moorepants/InstrumentedBicycle
 
 Data
 ====
