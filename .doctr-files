@@ -131,16 +131,19 @@
 ./blog/pycon-2014-proposal.html
 ./blog/pycon2014.html
 ./blog/pydy-code-gen.html
+./blog/sacrt-yctd-letter.html
 ./blog/scipy-2017-bof.html
 ./blog/smud-solar-regatta-2016.html
 ./blog/swc-git-for-cs-undergrads.html
 ./blog/ucd-hacker-within-launch.html
 ./blog/yeadon.html
 ./categories.html
+./category/advocacy.html
 ./category/education.html
 ./category/misc.html
 ./category/notebook.html
 ./category/software.html
+./feeds/advocacy.atom.xml
 ./feeds/all.atom.xml
 ./feeds/education.atom.xml
 ./feeds/misc.atom.xml
@@ -191,6 +194,7 @@
 ./tag/closed-loop-system.html
 ./tag/cmake.html
 ./tag/code-generation.html
+./tag/commute.html
 ./tag/computational-thinking.html
 ./tag/computer-science.html
 ./tag/conference.html
@@ -279,6 +283,7 @@
 ./tag/scientific-computing.html
 ./tag/scipy.html
 ./tag/senior-design.html
+./tag/shuttle.html
 ./tag/simbody.html
 ./tag/simulation.html
 ./tag/social-media.html
@@ -298,6 +303,7 @@
 ./tag/time.html
 ./tag/timestamp.html
 ./tag/tourism.html
+./tag/transportation.html
 ./tag/uc-davis.html
 ./tag/ucd.html
 ./tag/walking-model.html
