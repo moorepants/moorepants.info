@@ -12,20 +12,22 @@ A Tale Of Three Transit Stooges
 For the past several months I have been involved with some 200 transit riders
 in an attempt to save the 30+ year old UC Davis Intercampus Shuttle from the
 ill-decided changes by UC Davis (my employer), The City of Sacramento (where I
-live), Sacramento Regional Transit, and Yolo County Transit district . We have
-salvaged some of the service that we rely on by advocating to the University
-and the Councial members involved in the two transit agencies, but there is
-still much to do to bring back what has been unfairly made worse for the
-riders. This experience exposed to me how poorly Universities and Cities make
-decisions that affect their constituents and also how poorly they handle being
-called out on that. The story behind the fate of the UCD Intercampus Shuttle is
-suprisingly tied up in intertwined planned schemes where the actors did and
-didn't know what was going on. Quite a few fishy things were exposed to me and
-the purpose of this peice is to write them all down together, at length, so
-that some light can be shed on the behind-the-scenes potentially dubious
-workings of the parties involved. When each of the items are take individually
-it is easy to write them off, but when taken together maybe they shouldn't be
-written off.
+live), Sacramento Regional Transit, and Yolo County Transit District. We have
+salvaged some of the service by investing hundreds of hours in advocacy work
+that we rely on by advocating to the University and the Councial members
+involved in the two transit agencies, but there is still much to do to bring
+back what has been unfairly made worse for the riders.
+
+This experience exposed to me how poorly Universities, Cities, and public
+agencies make decisions that affect their constituents and also how poorly they
+handle being called out on doing so. The story behind the fate of the UCD
+Intercampus Shuttle is suprisingly tied up in intertwined planned schemes where
+the actors did and didn't know what was going on. Quite a few fishy things were
+exposed to me and the purpose of this peice is to write them all down together,
+at length, so that some light can be shed on the behind-the-scenes potentially
+dubious workings of the parties involved.  When each of the items are take
+individually it is easy to write them off, but when taken together maybe they
+shouldn't be written off.
 
 I'll start by listing the main points and below they will be backed up with
 evidence and commentary:
@@ -75,8 +77,25 @@ September 27th, 2019
    Some subset of riders were informed of town hall style meetings during the
    first week of classes.
 
-Volkswagen's Emisions Scandal and Sacramento the new "Green City"
-=================================================================
+Volkswagen's Emisions Scandal Settlement and Sacramento, the new "Green City"
+=============================================================================
+
+.. topic:: TLDR;
+   :class: alert alert-info
+
+   1. Electrify America agreed to use $44M of the $800M California settlement funds to
+      introduce public electric car chargers, a ZEV car‐sharing program, a ZEV
+      delivery fleet, and a ZEV taxi fleet provider to Sacramento. This
+      investment plan was approved by the California Air Resources Board.
+      Instead, $11M was used to purchase unapproved (by CARB) electric buses
+      for SacRT and YCTD and the remainder was used to introduce chargers and
+      ZEV car-sharing. No delivery fleets or taxi fleets were implemented. Many
+      of these items were not completed by the January 1, 2020 deadline.
+   2. Sacramento pledged to use the $44M to focus almost exclusively on
+      disadvantaged Sacramento residents, in particular the homeless, yet the
+      reality is that those residents were a mere afterthought in the
+      executution of the programs and virtually none of the investments will
+      help them.
 
 As a part of the `Volkswagen Emissions Scandal Settlement`_ to the United
 States of America, Volkswagen has to pay $2 billion for "clean-emissions
@@ -86,7 +105,7 @@ primary purpose is to fund and manage a non-proprietary network of electric
 vehicle charging stations around the country.
 
 .. _Volkswagen Emissions Scandal Settlement: https://en.wikipedia.org/wiki/Volkswagen_emissions_scandal#Settlement
-.. _Electricify America: https://en.wikipedia.org/wiki/Electrify_America
+.. _Electrify America: https://en.wikipedia.org/wiki/Electrify_America
 
 Electrify America LLC developed investment plans for different geographic
 locations. For California, they are to spend $800 million (of the $2B) over 10
@@ -178,13 +197,6 @@ TODO: Read supplement [#]_
 .. [#] California ZEV Investment Plan: Cycle 1 March 18, 2017 https://ww3.arb.ca.gov/msprog/vw_info/vsi/vw-zevinvest/documents/vwinvestplan1_031317.pdf
 .. [#]  (need to read) Supplement to investment plan: https://ww3.arb.ca.gov/msprog/vw_info/vsi/vw-zevinvest/documents/california_zev_investment_plan_supplement_062917.pdf
 
-In June of 2017, Gary May, UC Davis's incoming Chancellor, takes Darrell
-Steinberg to Atlanta Georgia to show him Atlanta's "Tech Square" [#]_. In late
-July 2017, Electrify America officially announces the Green City award to
-Sacramento. Gary May starts at UC Davis on August 1, 2017 and announces on his
-first day that he is going to create a Sacramento Tech Center.
-
-.. [#] https://www.ucdavis.edu/news/sacramento-mayor-visit-georgia-tech%E2%80%99s-technology-square-uc-davis-chancellor-designate/
 
 The California Air Resources Board wrote a Staff Analysis of Electrify
 America's Investment plan [#]_ in July of 2017. The executive summary states:
@@ -291,8 +303,24 @@ employee.
 The New Chancellor and the Mayor
 ================================
 
+In June of 2017, Gary May, UC Davis's incoming Chancellor, takes Darrell
+Steinberg to Atlanta Georgia to show him Atlanta's "Tech Square" [#]_. In late
+July 2017, Electrify America officially announces the Green City award to
+Sacramento. Gary May starts at UC Davis on August 1, 2017 and announces on his
+first day that he is going to create a Sacramento Tech Center.
+
+.. [#] https://www.ucdavis.edu/news/sacramento-mayor-visit-georgia-tech%E2%80%99s-technology-square-uc-davis-chancellor-designate/
+
 Missing the Emissions Point
 ===========================
+
+.. topic:: TLDR;
+   :class: alert alert-info
+
+   The most effective way to reduce transportation related emissions is to
+   reduce the number of single occupancy vehicles. Yet the decision makers do
+   all they can to avoid this solution. Switching to all electric vehicles will
+   not solve our emissions and climate issues.
 
 - Decreasing single occupancy vehicles is single most effective way to reduce
   vehicle emissions
@@ -302,9 +330,20 @@ Missing the Emissions Point
 Approval of Fudged Grant Proposals
 ==================================
 
+.. topic:: TLDR;
+   :class: alert alert-info
+
+   1. Electrify America LLC awarded $11M of unapproved funds for the purchase
+      of electric buses and electric bus charging stations based on a
+      non-evidence backed, shoddy, and partially falsified grant proposal
+      written by SacRT and YCTD.
+   2. SACOG awarded $XM of funds for the electric buses based on a falsified,
+      non-evidence backed, and shoddy grant proposals written by SacRT and
+      YCTD.
+
 - EA's grant proposal was a joke
 - SACOG's proposal
-- Air resources board proposal
+- Air resources board proposal TODO: need to get a copy
 
 Grant Proposal to Electrify America LLC.
 ----------------------------------------
