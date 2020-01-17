@@ -34,10 +34,10 @@ evidence and commentary:
 
 - A new public transit line conceived, designed, and almost completely finalized that
   did not serve the needs of the primary target riders
-- SACOG and Electricfy America award millions based on proposals with little to
+- SACOG and Electrify America award millions based on proposals with little to
   no evidence.
 - UCD and Sacramento sends speakers to public hearings to advocate against
-  their consituents.
+  their constituents.
 - Electrify America, LLC is company, funding granter, and political advocate
   all in one.
 - Planning at the transit agencies is poor and not data driven.
@@ -47,35 +47,47 @@ evidence and commentary:
 - SacRT do the bidding of the boards not the public
 - This was not part of Sacramento's Electric Vehicle strategy.
 - Focus on Electric vehicles misses the point.
-- Lost focuson low income communities
+- Lost focus on low income communities
 - Bought the wrong buses
 - EA funds had to be spent by 2020
 - UCD is not saving money
 - No accountability on what is proposed
-- Electrify America's goal is to position Volkswagen favorbly for electric cars
+- Electrify America's goal is to position Volkswagen favorably for electric cars
   not reduce emissions
 
+Timeline
+========
 
-Here is a brief recap of what went down:
-
+July 27, 2017
+   The California Air Resources Board approved Electrify America's proposed
+   investment plan in Resolution 17-23.
+December 12, 2017
+   Sacramento City Council approves the City's Electric Vehicle Strategy.
+   Mayor Steinberg declares there will be electric shuttles between UCD and
+   Sacramento even though he pointed out it was not part of the approved
+   Electric Vehicle Strategy.
+September 24, 2018
+   YCTD board approves a cooperative agreement with Electrify America to cover
+   the capital costs of a replacement for the UCD Intercampus Shuttle.
 Spring Quarter
    Some shuttle riders pieced together clues that UCD and
    Sacramento were partnering to implement an electric bus service between UC
    Davis Davis Campus and UCD Sacramento Campus that sounded a lot like the
    Intercampus Shuttle.
 July 19, 2019
-   We self-surveyed the riders about their needs and wrote a letter to UC Davis leadership expressing that
-   we wanted to know what was going on.
+   Intercampus shuttle riders self-surveyed the riders about their needs and
+   wrote a letter to UC Davis leadership expressing that we wanted to know what
+   was going on.
 August 19, 2019
-  Recieved a response from Kelly Ratliff (sent to wrong email on July 23, 2019)
+   Received a response from Kelly Ratliff (sent to wrong email on July 23,
+   2019)
 August 28, 2019
    I responded to Ratliff
 September 3, 2019
    Matt Dulcich write back to me.
-
 September 27th, 2019
-   Some subset of riders were informed of town hall style meetings during the
-   first week of classes.
+   A small subset of riders were informed of town hall style meetings during
+   the first week of classes.
 
 Volkswagen's Emisions Scandal Settlement and Sacramento, the new "Green City"
 =============================================================================
@@ -119,9 +131,9 @@ ultimately awarded. Darrell Steinberg opens the proposal with a letter that
 spends a fair amount of time talking about how he's hired Mike McKeever
 (retired SACOG CEO of 14 years [#]_) as his Chief of Staff and that McKeever would be in
 charge of the Green City program, would it be awarded. If there is a central
-theme to this proposal, it is most certainly how Sacramento will use the money
-for electric vehicles to help the city's most disadvantaged people in the
-city's most disadvantaged neighborhoods, i.e. "Promise Zones". There is one
+theme to this proposal, **it is most certainly how Sacramento will use the
+money for electric vehicles to help the city's most disadvantaged people in the
+city's most disadvantaged neighborhoods**, i.e. "Promise Zones". There is one
 small mention of EV shuttle routes:
 
    Another priority for Green City programs will be design of a system of
@@ -135,7 +147,7 @@ small mention of EV shuttle routes:
 
 As far as I know, there are no "dynamic ZEV shuttle routes" for the homeless
 that have been proposed or created over the last year 30 months. This is
-clearly both an example of not doing what you proposed and fluffing up a grant
+clearly both an example of not doing what one proposes and fluffing up a grant
 proposal with utter bullshit. Personal electric vehicles are a rich man's toy
 that justifies their excessive consumption of public resources. If you really
 want to help the disadvantaged with $44M you could let poor people swap their
@@ -327,6 +339,107 @@ Missing the Emissions Point
 - Compare swapping all diesel public transit buses to EVs to getting X number
   of drivers to take transit
 
+Politicians and transportation decision makers in Sacramento and California
+seem to have a strong fetish with electric vehicles. It is their #1 proposed
+solution to climate and emissions issues. Yes, if all petroleum powered cars
+were switched to electric power, we'd have positive improvements in emissions
+within areas in the state that are dense with motor vehicle traffic. But I
+believe the true reason that the fetish is with electric vehicles is because
+decision makers don't want to consider the real solution to climate change and
+emissions due to the transportation sector. That solution is to **reduce the
+number of (or elimate) low occupancy vehicles on our roads**.
+
+Research shows that huge improvements in emissions, particulates, climate
+warming, traffic congestion, traffic related injuries/deaths, outdated vehicle
+waste, government spending, and people's happiness will occur if we make
+serious reductions. But decision makers don't want to think about this because
+they are car drivers and they can't possibly imagine giving up their own car,
+so instead the fetish develops with the electric car, i.e. a way for them to
+keep their car and feel like they are saving the environment. It doesn't take a
+rocket scientist to show that focusing on reducing cars will vastly outpace
+positive impacts than switching to electric vehicles [#]_.
+
+Reducing traffic congestion
+   Switching to electric vehicles causes **zero** improvement to traffic
+   congestion.
+Traffic related injuries and deaths
+   Switching to electric vehicles causes **zero** improvement to traffic
+   deaths.
+Outdated vehicle waste
+   Switching to electric vehicles will make vehicle waste problems worse
+   because of the electric batteries.
+Government spending
+   Switching to electric vehicles will not reduce the money needed to fund and
+   maintain infrastructure to support motor vehicles.
+
+Emissions
+---------
+
+Tailpipe emissions are made up of numerous noxious components that harm our
+environment and ourselves in a variety of ways. CO2 is one harmful component
+that is linked to rising global temperatures. As an example on emissions
+reductions, here are some numbers that provide estimate C02 emissions based on
+California's electricity generation:
+
+.. class:: table table-striped table-bordered
+
+.. list-table::
+   :header-rows: 1
+
+   * - Vehicle Type
+     - Average grams of CO2 per passenger per mile
+   * - Single occpuancy vehicle [?]
+     - 410
+   * - Diesel bus [within city]
+     -
+   * - CNG bus [within city]
+     -
+   * - Electric bus [within city]
+     -
+   * - Single occupancy vehicle [on freeway]
+     -
+   * - Diesel bus [on freeway]
+     - 56
+   * - CNG bus [on freeway]
+     -
+   * - EV bus [on Freeway]
+     - 11
+
+California has a mandate to switch all public transit vehicles to electric by
+2036. Agencies, like SacRT, will have to meet this. To do this, requires huge
+investments in resources. What if those resources were instead used to change
+the mode choice of SOV drivers to transit?
+
+To get the same reduction in CO2 emissions as switching all public transit
+vehicles electric the state could instead **cause X number of SOV drivers to
+switch to transit** that uses CNG vehicles or X number for diesel vehicles.
+
+This relates to the Intercampus Shuttle issue because the decision makers could
+not see beyond their fetish for electric buses. The proposed change to the
+service would have degraded the service such that ridership would have very
+likely declined [#]_. For example, moving a passenger from a single occupancy
+vehicle to a diesel bus reduces per person total emissions **9 times more**
+than switching a passenger from a diesel bus to an electric bus on this
+particular route [#]_. Any changes or additions to transit between Davis and
+Sacramento should wholly be focused on increasing ridership, i.e. causing SOV
+passengers to choose the bus instead. Few to no riders will make that switch
+solely based on a bus being electric versus diesel or CNG. Riders will make
+that switch based on convenience, trip duration, frequency, stop locations,
+safety, ride quality as primary motivators. Decision makers that do not
+understand these research backed principles for increasing ridership should
+simply not be making decisions about transit.
+
+.. [#] We should likely do both things, but it still isn't clear that the
+   massive production of batteries is going to be good for the environment
+   either. So we may gain in emissions but lose in hazarddous waste increases.
+   Fortunately, reducing cars makes gains on both.
+.. [#] More on this is in the section about the SACOG grant proposal. There is
+   is shown that the grant writers VMT caculations completely disregarded the
+   number of riders that would quit riding the bus and switch back to SOVs.
+.. [#] 8.9 = (410 gCO2/passenger/mile [SOV] - 11 gCO2/passenger/mile [EV Bus
+   Freeway])/(56 gCO2/passenger/mile [Diesel Bus Freeway] - 11
+   gCO2/passenger/mile [EV Bus Freeway])
+
 Approval of Fudged Grant Proposals
 ==================================
 
@@ -344,6 +457,38 @@ Approval of Fudged Grant Proposals
 - EA's grant proposal was a joke
 - SACOG's proposal
 - Air resources board proposal TODO: need to get a copy
+
+Grant Proposal to SACOG
+-----------------------
+
+pg 1
+~~~~
+
+- Total funding request: $5.291M, Total project cost $12.216M
+
+pg 4
+~~~~
+
+- "In June 2018 the partners were notified that Electrify America awarded them
+  twelve (12) ZEBs and the associated charging infrastructure needed to make
+  the project a reality. With the capital costs completely funded by private
+  grantors, the Partners now seek to establish a committed source of operating
+  funding to make this sustainable transportation connection between Davis and
+  Sacramento a reality."
+
+"Approve 2018 Four-County SACOG Funding Round Programming Recommendations"
+
+pg 40
+~~~~~
+
+- $5.291M was requested, SACOG recommended to fund $3M
+- Application requested half the operating costs for 5 years
+- EA will provide 12 electric buses
+
+pg 41
+~~~~~
+
+- Unitrans requests $10.202M for 12 40' electric buses
 
 Grant Proposal to Electrify America LLC.
 ----------------------------------------
@@ -364,11 +509,13 @@ Submitted by David Goldman and Jose Perez on behalf of SacRT and YCTD.
 
    No
 
+1. Existing Service
+
 This is a blatant lie on the first page. Introducing the proposed service was
 clearly going to eliminate the 30+ year old UC Davis Intercampus Shuttle which
 has been contracted to All West Coach Lines Inc. since 2016.
 
-   *Please describe any relevant proposed programs or grant requests your
+   *a.ii. Please describe any relevant proposed programs or grant requests your
    organization may be pursuing that may affect your proposal*
 
    Any proposed programs or grant requests will not negatively affect this
@@ -377,8 +524,8 @@ has been contracted to All West Coach Lines Inc. since 2016.
 This is also a lie. This service depends on $700K annually from UC Davis as
 well as grants from SACOG and the Air Resources Board.
 
-   *Would your fare structure change with an investment by Electrify America
-   Green Cities in ZEV shuttle/bus? If so why?*
+   *a.vi. Would your fare structure change with an investment by Electrify
+   America Green Cities in ZEV shuttle/bus? If so why?*
 
    For the UC Davis to Sacramento service, we foresee transitioning the fare
    structure for the existing service to one that more closely reflects the
@@ -393,7 +540,7 @@ They propose to quadruple frequency of the service, which would be 4 buses,
 each way, from 5:30AM to 8:30PM. With only this grant, there is no way they can
 even match the current service level.
 
-   *Detail your organizations timeline for the proposed use case*
+   *b.i. Detail your organizations timeline for the proposed use case*
 
    Key dates for the ZEV project include (as stated above, CNG buses will be
    utilized in the interim until the zero-emission buses and infrastructure is
@@ -412,7 +559,8 @@ proposed. It is important to note that the riders were officially informed of
 the upcoming change in November 2019, 1 year after the supposed start date. We
 have never seen CNG bus on the route.
 
-   *Detail your organizations key delivery milestones for proposed use case*
+   *b.ii. Detail your organizations key delivery milestones for proposed use
+   case*
 
    1. Project Approval: April 2018
    2. Environmental Documentation: April-June 2018
@@ -435,8 +583,8 @@ have never seen CNG bus on the route.
 
 Apparently none of these milestones were met.
 
-   *Would any current or new ZEV shuttle/bus routes affect other shuttle/bus
-   service providers?  If so how?*
+   *c.i. Would any current or new ZEV shuttle/bus routes affect other
+   shuttle/bus service providers?  If so how?*
 
    We do not foresee our proposed routes adversely affecting any other service
    provider. In fact, there will be positive impacts on other transit providers
@@ -477,8 +625,8 @@ the survey they conducted.
 This proposal says there will be additional stops in West Sacramento and
 Downtown Sacramento. As of Jan 1, 2020 there are no West Sacramento stops.
 
-   *Would any current or new routes result in an overlap of service?  If so
-   where and how?*
+   *c.ii. Would any current or new routes result in an overlap of service?  If
+   so where and how?*
 
    This project would not result in an overlap of service; it would takeover
    existing low-frequency services and increase the frequencies dramatically,
@@ -491,7 +639,9 @@ Downtown Sacramento. As of Jan 1, 2020 there are no West Sacramento stops.
 This is also a lie. It clearly would overlap with the existing Intercampus
 Shuttle.
 
-   *Outline proposed area of investment by Electrify America Green Cities*
+2. Fleet
+
+   *a. Outline proposed area of investment by Electrify America Green Cities*
 
    ZEV buses and related infrastructure to operate two express bus service
    routes serving 1) UC Davis and Sacramento and 2) Sacramento International
@@ -500,7 +650,21 @@ Shuttle.
 The UCD Sacramento service is stated to be "express" here but the design
 proposed was not express.
 
-   *Provide proposed vehicle driving patterns including routes, miles, speeds, etc.*
+   *b. Would this proposed area of investment by Electrify America Green Cities
+   replace ICE shuttle/bus, or be in addition to an existing fleet?*
+
+   This investment will result in an addition to the Partner's existing bus
+   fleets and is necessary for the expansion of service as outlined above. The
+   12 electric buses for the UC Davis route running at 15 minute frequencies
+   would replace the two diesel buses currently being used for hourly service
+   by a third-party vendor.
+
+Another claim of 15 minute frequencies. The service approved by SacRT and YCTD
+do not have 15 minutes frequencies.
+
+
+   *c. Provide proposed vehicle driving patterns including routes, miles,
+   speeds, etc.*
 
    Project component 1: Approximately 23 mile express bus service route
    connecting UC Davis with West Sacramento, downtown Sacramento and UC Davis
@@ -510,7 +674,10 @@ proposed was not express.
    ...
 
 How is it express if it connects UCD, West Sac, downtown Sac, and UCD Med
-Center?
+Center? The travel time for the existing express service is between 25 minutes
+at non-peak and 90 minutes at peak depending on traffic congestion. These
+estimates provided here are poor estimates, admittedly made by simply selecting
+points on Google Maps by SacRT transit planners.
 
 TODO : Attachment 1 has generalized maps.
 
@@ -569,6 +736,23 @@ for some later reason.
    *Would any current or new ZEV shuttle/bus routes affect other shuttle/bus
    service providers?  If so how?*
 
+   We do not foresee our proposed routes adversely affecting any other service
+   provider. In fact, there will be positive impacts on other transit providers
+   by increasing the prevalence of public transit ridership in general and
+   improving connectivity of the regional transit system. Also, as the largest
+   transit operators in the Capitol Region, funding from this grant would kick
+   start the region's evolution to zero-emission technology for smaller transit
+   operators to follow.
+
+   University of California, Davis (UC Davis) currently runs a diesel bus
+   shuttle between the main campus and the UC Davis Medical Center in
+   Sacramento on an hourly basis. This service is contracted out to a third
+   party and the contract is slated to end in the near future. A recent
+   survey conducted by UC Davis found that the number one improvement riders
+   wanted was increased frequencies. This project would enhance the current
+   service by increasing frequencies to every 15 minutes and providing
+   additional stops in West Sacramento and Downtown Sacramento.
+
 Did UC Davis Know It Had an Intercampus Shuttle?
 ================================================
 
@@ -594,4 +778,19 @@ Riders are transient
 ====================
 
 
+YCTD December 2019 Board Meeting Packet
+=======================================
 
+"It is proposed that UCD agree to guarantee that any shortages in the budgeted
+$200,000 in fare revenue be covered by the university." pg 5
+
+"On the capital side, new vehicle and parts related capital costs (estimated at
+nearly $12 million for the 12 buses and an undisclosed amount for the charging
+infrastructure) are fully funded by Electrify America (EA), and EA is absorbing
+all costs associated with building the charging infrastructure to operate these
+battery/electric buses." pg 5
+
+"New vehicle costs are fully funded by Electrify America (EA) through the
+Cooperative Agreement approved by the Board of Directors on September 24, 2018.
+The service would total approximately 13,500 revenue hours per year, split
+approximately evenly between SacRT and YCTD." -- pdf pg 90
