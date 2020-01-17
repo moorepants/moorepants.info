@@ -58,9 +58,13 @@ evidence and commentary:
 Timeline
 ========
 
+March 8, 2017
+   Electrify America submits Cycle 1 draft investment plan to CARB.
+June 29, 2017
+   Electrify America submits Cycle 1 draft Supplement investment plan to CARB.
 July 27, 2017
    The California Air Resources Board approved Electrify America's proposed
-   investment plan in Resolution 17-23.
+   Cycle 1 investment plan in Resolution 17-23.
 December 12, 2017
    Sacramento City Council approves the City's Electric Vehicle Strategy.
    Mayor Steinberg declares there will be electric shuttles between UCD and
@@ -235,6 +239,49 @@ of Sacramento but an odd summarized answer was given:
 .. [#] Staff Analysis of Electrify America's First Zero Emission Vehicle
    Investment Plan July 21, 2017 https://ww3.arb.ca.gov/msprog/vw_info/vsi/vw-zevinvest/documents/staff_analysis_072117.pdf
 
+On July 27, 2017 CARB passed a resolution [#]_ that stated:
+
+   The ZEV Investment Plan and the Plan Supplement together form one complete
+   body of terms for creditable spending in the first 30-month Cycle in the
+   amount of $200 million, and includes only the following types of projects
+   and activities, with spending in the following estimated amounts, unless ARB
+   agrees otherwise in writing:
+
+   - Spending on investments in the following four spending categories in the
+     estimated sums laid out, unless ARB agrees otherwise in writing:
+
+     - ZEV Infrastructure ($120 million will fund about 2,000-3,000 chargers at
+       approximately 400 charging stations):
+
+        - $75 million for a high-speed highway network
+        - $45 million for community charging in Fresno, Los Angeles,
+          Sacramento, San Diego, San Francisco, and San Jose;
+
+     - ZEV Access, including Sacramento Green City ($44 million)
+
+       - Green City initiatives include ZEV car sharing, ZEV delivery fleet,
+         and ZEV taxi fleet; and
+
+     - ZEV Awareness ($20 million):
+
+        - $20 million will be directed to public education initiatives designed
+          to use various media to highlight ZEV benefits and overcome barriers
+          to ZEV adoption. $2-3 million of that $20 million will be
+          specifically targeted toward new partnerships with entities that have
+          particular access to, and credibility within, California's
+          disadvantaged and low-income communities.
+        - Awareness projects will be in other languages where·
+          appropriate;Resolution 17-23
+
+    - Allowable overhead ($18 million);
+
+This clearly states that any changes to this spending plan must be agreed upon
+in writing by the ARB.
+
+.. [#] State of California Air Resources Board, Volkswagen Zero Emission
+   Vehicles Investment Plan, Resolution 17-23, July 27, 2017, Agenda Item No.:
+   17-8-3
+
 On August 2, 2017, Sacramento City Council directed Sacramento City staff went
 to work with Electrify America LLC. Staff also had a directive to develop an
 "Electric Vehicle Strategy" [#]_ for Sacramento. The "Electric Vehicle
@@ -374,6 +421,14 @@ Government spending
 
 Emissions
 ---------
+
+In 2017, 40% of greenhouse gas emission in California were created by
+transportation tail-pipe emissions (the largest source). 28% of greenhouse gas
+emissions in California are created by passenger gasoline vehicles and 8.4% are
+by heavy-duty diesel vehicles. Total greenhouse gas emissions were 424 million
+metric tons of Co2 equivalent [#]_.
+
+.. [#] https://ww3.arb.ca.gov/cc/inventory/pubs/reports/2000_2016/ghg_inventory_trends_00-16.pdf
 
 Tailpipe emissions are made up of numerous noxious components that harm our
 environment and ourselves in a variety of ways. CO2 is one harmful component
