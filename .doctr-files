@@ -22,6 +22,7 @@
 ./blog/hindawi-spam.html
 ./blog/index.html
 ./blog/introducing-resonance.html
+./blog/lightweight-prototyping.html
 ./blog/ncsrr-wrap-up.html
 ./blog/netherlands-recs.html
 ./blog/new-site.html
@@ -208,6 +209,7 @@
 ./tag/data-processing.html
 ./tag/data-science.html
 ./tag/data.html
+./tag/design.html
 ./tag/direct-collocation.html
 ./tag/drive5.html
 ./tag/dynamics.html
@@ -245,6 +247,7 @@
 ./tag/matlab.html
 ./tag/matrices.html
 ./tag/mayavi.html
+./tag/mechanical-engineering.html
 ./tag/mgview.html
 ./tag/modeling.html
 ./tag/motek.html
@@ -266,6 +269,7 @@
 ./tag/plone.html
 ./tag/prediction.html
 ./tag/professorship.html
+./tag/prototyping.html
 ./tag/pst.html
 ./tag/publishing.html
 ./tag/purchasing.html
