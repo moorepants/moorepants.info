@@ -5,6 +5,7 @@ Reference and Recommendation Letter Requests
 :authors: Jason K. Moore
 :date: 1999
 :status: hidden
+:slug: recommendation-requests
 
 Many students ask me to be a reference for them or to write a letter of
 recommendation. I am generally very happy to recommend outstanding students
