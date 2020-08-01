@@ -6,12 +6,11 @@ Teaching
 :description: pants teachings
 :date: 1999
 
-I am an Assistant Professor of Teaching Mechanical and Aerospace Engineering
-where I focus on instruction in a number of undergraduate/graduate courses,
-curriculum design and improvement, accreditation assessment, and innovation in
-engineering education. Below you will find various links to my teaching related
-activities including my teaching philosophy and materials for the courses I
-teach.
+I am an Assistant Professor of BioMechanical Engineering at TU Delft where I
+focus on instruction in a number of undergraduate/graduate courses, curriculum
+design and improvement, accreditation assessment, and innovation in engineering
+education. Below you will find various links to my teaching related activities
+including my teaching philosophy and materials for the courses I teach.
 
 Teaching Statements
 ===================
