@@ -14,15 +14,15 @@ cancer. I was named after Keith; my middle name, that is. The seats in the
 Arrow were black vinyl and would get super hot in the summer time, as would the
 engine. But that sure was a fun little hatchback car. I painted a giant
 Autobots_ symbol on the hood and hooked up some ear deafening speakers to pump
-out the glory of the punk rock music that I'd recently discovered. It became a
-portable stereo system for the skateparks and skate spots around southern
-Piedmont Virginia and northern North Carolina. I used to ride with my grandpa,
-Pop, in that car when I was young. After we were seated, he'd always turn to
-me, pat me on the left leg, and give my leg a mighty squeeze with a big grin on
-his face. He didn't say much, the stroke and all, but even though that squeeze
-hurt like the dickens, I'd smile back and expect one every time I got in that
-car. Too bad he didn't make it till I was sixteen and would have been in the
-driver's seat, where I could repay the love.
+out the glory of the punk rock music that I'd discovered. It became a portable
+stereo system for the skateparks and skate spots around southern Piedmont
+Virginia and northern North Carolina. I used to ride with my grandpa, Pop, in
+that car when I was young. After we were seated, he'd always turn to me, pat me
+on the left leg, and give my leg a mighty squeeze with a big grin on his face.
+He didn't say much, the stroke and all, but even though that squeeze hurt like
+the dickens, I'd smile back and expect one every time I got in that car. Too
+bad he didn't make it till I was sixteen and would have been in the driver's
+seat, where I could repay the love.
 
 .. _Autobots: http://en.wikipedia.org/wiki/Autobot
 
@@ -43,29 +43,32 @@ Capital of the World`_ where I lived in a squat called the Poppehuis which
 freed up rent money for me to indulge on Belgian beer and couchsurfing all
 around Europe. My fondness for engineering carried me further to many other
 countries in the world to learn from our most resourceful tinkers, makers, and
-thinkers. After postdoctoral limbo working on powered leg prosthetics I'm back
-in California at my alma mater working to breath some life into engineering
-education.
+thinkers. After postdoctoral limbo working on powered leg prosthetics in
+Cleveland I returned back to California and my alma mater to breath some life
+into engineering education. After five years searching for gold again, the
+bicycle path angled back towards Europe where I am now engineering bicycles and
+teaching the next generation.
 
 .. _Dixie: http://en.wikipedia.org/wiki/Pittsylvania_County,_Virginia
 .. _Bicycle Capital of the World: https://en.wikipedia.org/wiki/Netherlands
 
-You can learn more about what I think about by reading my blog or following me
+You can learn more about what I think about by reading my blog_ or following me
 on social media where I post commentary on a variety of things.
+
+.. _blog: {filename}/blog.rst
 
 Contact
 =======
 
-I work at UC Davis in the Mechanical and Aerospace Engineering Department and
-you can get a hold of me with regards to my business there and my academic life
-with this info:
+I work at TU Delft in the BioMechanical Engineering Department and you can get
+a hold of me with regards to my business there and my academic life with this
+info:
 
 | Jason K. Moore
-| Mechanical & Aerospace Engineering Department
-| University of California
-| One Shields Avenue
-| Davis, CA 95616
-| jkm@ucdavis.edu
+| BioMechanical Engineering
+| Delft University of Technology
+| Mekelweg 2, NL 2628 CD Delft, The Netherlands
+| j.k.moore@tudelft.nl
 |
 
 Contact me for personal communication at:
@@ -73,23 +76,13 @@ Contact me for personal communication at:
 moorepants@gmail.com
 
 If you would like to meet with me, my free time is shown on `my work calendar
-<work-calendar.html>`_.
+<work-calendar.html>`_. Please send me a request to meet by email with some
+suggested times.
 
-Resume and C.V.
-===============
+Curriculum vitae
+================
 
 `Curriculum vitae PDF <https://moorepants.github.io/resume/resume.pdf>`_
-
-LinkedIn_ Profile:
-
-.. _LinkedIn: http://www.linkedin.com/pub/jason-moore/40/550/322_
-
-.. raw:: html
-
-   <script src="//platform.linkedin.com/in.js" type="text/javascript"></script>
-   <script type="IN/MemberProfile"
-     data-id="http://www.linkedin.com/pub/jason-moore/40/550/322"
-     data-format="inline" data-related="false"></script>
 
 Web Presence
 ============
@@ -101,9 +94,7 @@ Social
 ------
 
 - `Flickr <http://www.flickr.com/photos/9067819@N03/>`_
-- `Google + <https://plus.google.com/110966557175293116547>`_
 - `Twitter <https://twitter.com/moorepants>`_
-- `Yahoo <http://profile.yahoo.com/FZ7FUUIZEX2YXC7NKVWH3PKPQM/>`_
 - `YouTube <http://www.youtube.com/user/moorepants>`_
 
 Professional
@@ -111,7 +102,7 @@ Professional
 
 - LinkedIn_
 
-.. _LinkedIn: http://www.linkedin.com/pub/jason-moore/40/550/322_
+.. _LinkedIn: https://www.linkedin.com/in/jason-k-moore-32255040
 
 Academic
 --------
@@ -138,14 +129,13 @@ Software
 Hospitality Networks
 --------------------
 
-- `BeWelcome <http://www.bewelcome.org/members/moorepants>`_
 - `Couchsurfing <http://www.couchsurfing.org/people/moorepants/>`_
-- `WarmShowers <http://www.warmshowers.org/users/moorepants>`_
 
 Websites I Current Maintain
 ---------------------------
 
 - `BMD Conference Series <https://bmdconf.org>`_
+- `Laboratorium of Marvelous Mechanical Motum <http://mechmotum.github.io>`_
 - `ODU HPV <http://www.lions.odu.edu/~dlandman/hpv/>`_
 - `Older personal site <http://moorepants.info/jkm/>`_
 - `moorebicycles <http://moorebicycles.blogspot.com/>`_
