@@ -62,18 +62,22 @@ Contact
 
 I work at TU Delft in the BioMechanical Engineering Department and you can get
 a hold of me with regards to my business there and my academic life with this
-info:
+information:
 
 | Jason K. Moore
-| BioMechanical Engineering
+| BioMechanical Engineering Department
+| Faculty of Mechanical, Maritime and Materials Engineering (3mE)
 | Delft University of Technology
 | Mekelweg 2, NL 2628 CD Delft, The Netherlands
 | j.k.moore@tudelft.nl
+| Office Room #: 34 F-1-140
 |
 
 Contact me for personal communication at:
 
-moorepants@gmail.com
+- Email: moorepants@gmail.com
+- Skype: moorepants
+- Google Hangouts: moorepants@gmail.com
 
 If you would like to meet with me, my free time is shown on `my work calendar
 <work-calendar.html>`_. Please send me a request to meet by email with some
@@ -87,23 +91,6 @@ Curriculum vitae
 Web Presence
 ============
 
-If you'd like to track all my activity, simply visit the sites below on an
-regular basis.
-
-Social
-------
-
-- `Flickr <http://www.flickr.com/photos/9067819@N03/>`_
-- `Twitter <https://twitter.com/moorepants>`_
-- `YouTube <http://www.youtube.com/user/moorepants>`_
-
-Professional
-------------
-
-- LinkedIn_
-
-.. _LinkedIn: https://www.linkedin.com/in/jason-k-moore-32255040
-
 Academic
 --------
 
@@ -113,11 +100,12 @@ Academic
 - `ResearchGate <https://www.researchgate.net/profile/Jason_Moore/>`_
 - `Zotero <https://www.zotero.org/moorepants>`_
 
-Wiki
-----
+Professional
+------------
 
-- `LocalWiki <https://localwiki.org/Users/moorepants>`_
-- `Wikipedia <http://en.wikipedia.org/wiki/User:Moorepants>`_
+- LinkedIn_
+
+.. _LinkedIn: https://www.linkedin.com/in/jason-k-moore-32255040
 
 Software
 --------
@@ -125,6 +113,19 @@ Software
 - `Github <https://github.com/moorepants>`_
 - `Gitlab <https://gitlab.com/moorepants>`_
 - `StackOverFlow <http://stackoverflow.com/users/467314/moorepants>`_
+
+Wiki
+----
+
+- `LocalWiki <https://localwiki.org/Users/moorepants>`_
+- `Wikipedia <http://en.wikipedia.org/wiki/User:Moorepants>`_
+
+Social
+------
+
+- `Flickr <http://www.flickr.com/photos/9067819@N03/>`_
+- `Twitter <https://twitter.com/moorepants>`_
+- `YouTube <http://www.youtube.com/user/moorepants>`_
 
 Hospitality Networks
 --------------------
@@ -151,14 +152,14 @@ Websites I Used to Maintain
 Public Keys
 ===========
 
-garuda (x250)::
+garuda (Thinkpad x250)::
 
    ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDG1RKTxPK5C25en6L9koKF6JPKSLBi8phH4YSYhVyYWMd/QV/bbes9EFyeyAO5E3x3FqRXH62w+dHzAOvBVHDeIx+9wwoa66hMMh+WPlN6r7H2fceNll5A4y0gK6Ne/JOYDhW29FZmGs8NE8YkyUfABuAeR5925zasHDDazVGxt9wM2V433PIhRyyakSGtCwmnTwPhPSvXRX6/Be6foTiFa4RAQDeewv9oUgKxPCc4gF0xmKQBgFcu9IYMqi0qfxe7ZwVxH9WNUhuthdBRx8bPgyq6GhGpScF4/pOisJbEBwI4605F5VrU7NFCOhxBDvELwpJxj3YeC6jmH0pUxuND moorepants@gmail.com
 
-agni (2170p)::
+agni (HP 2170p)::
 
   ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDdKOH+UN8xtUfhRb9oYM0YchWWzHzFWxmGQislexI9/bg1K7V4QKfuU6B7KszM5OwN9huU4V+U+HsmKW2cFtbjXL6MBsgwA2y3vQWs5US6xRnaZ1oSQTDZPXux+7tvOlSLD6rFtUKvNcF/4qsecWkTOuVo/ZtaMOAm2lCVSEAXwB6sN8t4MyqltzFPfor/zsWjTVOmAnp3v4iMXb3F6FLPW6FGMLlYhSy6y5BEdCIVLyc5kfN6QduKqnht3krRa4ifEDMI8lFFieaxb4QBRR3fUdUmZjFJmVlmzp/uxtUbKzOpTXFwPcbtlp1wTXNwPUmrq2buvPhZN0l+vaCad8/1 moorepants@gmail.com
 
-UL30A::
+(Asus UL30A)::
 
   ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDY09oSQS0iA8S12s7Bi75oWY7auG5AZKexOztH2UYk3KwYw0FEPIJSv7Eh82KVwM7BWwo/erx7NXmM4gkuLziQJ8wPFSHh7X7rnnsVTQTO6pY+7cgFPUpQQuBxkatHpr1/x+vPtegXecob6ltDfZ5wDFVHMvS7FE1+oevc/HIuOzMEqrOrBD3B0THrA6WgTfpEk1vH9BjmgiIpGYDrD68SxtL0RPU2bx4BVxCbR7+5zA4qcxyWc9ZxJ+MMhYrwKFSbDbsop0cE5g6WeOTTnv1sf5HvFEYu1TE6yZkRjNbuP07dwuwlziKpOfLHtI4/lJgL6SM3oDATMij5Rj1V+Csx moorepants@gmail.com
