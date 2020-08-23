@@ -66,6 +66,8 @@ ARTICLE_LIST_SUBTITLE = 'Blog'
 # excludes these categories from the main blog list
 EXCLUDED_CATEGORIES = ['notebook']
 TWITTER_USERNAME = 'moorepants'
+# pelican-alchemy removed the original theme.css, so bring it back.
+THEME_CSS_OVERRIDES = ['theme/css/origtheme.css']
 
 ## PLUGINS
 
