@@ -7,18 +7,20 @@ Teaching
 :date: 1999
 
 I am an Assistant Professor of BioMechanical Engineering at TU Delft where I
-focus on instruction in a number of undergraduate/graduate courses, curriculum
-design and improvement, accreditation assessment, and innovation in engineering
-education. Below you will find various links to my teaching related activities
-including my teaching philosophy and materials for the courses I teach.
+focus on instruction in a number of courses, curriculum design and improvement,
+accreditation assessment, and innovation in engineering education. Below you
+will find various links to my teaching related activities including my teaching
+philosophy and materials for the courses I teach and have taught.
 
 Teaching Statements
 ===================
 
+- `2019 Teaching Statement`_
 - `2018 Teaching Statement`_
 - `2015 Teaching Statement`_
 - `2013 Teaching Statement`_
 
+.. _2019 Teaching Statement: https://moorepants.github.io/application-materials/2019/tudelft/teaching-statement.pdf
 .. _2018 Teaching Statement: https://moorepants.github.io/application-materials/2018/generic/teaching-statement.pdf
 .. _2015 Teaching Statement: {filename}/pages/teaching-statement-2015.rst
 .. _2013 Teaching Statement: {filename}/pages/teaching-statement-2013.rst
@@ -28,16 +30,80 @@ Courses
 
 I maintain public websites for each of my courses and post as much of my
 teaching and learning materials as possible under permissible open access
-friendly licenses, e.g. CC-BY and CC0.
+friendly licenses, e.g. CC-BY and CC0. The UC Davis courses were given on a
+Winter, Spring, Summer, Fall quarter system for any given year.
 
-- `Analysis, Simulation and Design of Mechatronic Systems [EME 171] <https://moorepants.github.io/eme171>`_, Winter 2019, Fall 2019
-- `Engineering Graphics in Design [ENG 004] <http://www.moorepants.info/jkm/courses/eng4>`_: Fall 2012
-- `Graduate Seminar [MAE 297] <https://moorepants.github.io/mae297>`_: Spring 2017
-- `Introduction to Mechanical Vibrations [ENG 122] <http://moorepants.github.io/eng122>`_: Fall 2016, Fall 2017, Winter 2020
-- `Mechanical Design [EME 150A] <http://moorepants.github.io/eme150a>`_: Fall 2015, Fall 2016
-- `Mechanical Systems Design Project [EME 185A/B] <https://moorepants.github.io/eme185>`_: Winter/Spring 2016, 2017, 2018, 2019
-- `Multibody System Dynamics [MAE 223] <https://moorepants.github.io/mae223>`_: Fall 2017, Fall 2019
-- `Vehicle Stability [EME 134] <https://moorepants.github.io/eme134>`_: Fall 2018, Spring 2020
+- Analysis, Simulation and Design of Mechatronic Systems [EME 171]:
+
+  - `EME 171 2020 Winter`_
+  - `EME 171 2019 Fall`_
+  - `EME 171 2019 Winter`_
+
+- Engineering Graphics in Design [ENG 004]:
+
+  - `ENG 004 2012 Fall`_
+
+- Introduction to Mechanical Vibrations [ENG 122]:
+
+  - `ENG 122 2020 Winter`_
+  - `ENG 122 2017 Fall`_
+  - `ENG 122 2016 Fall`_
+
+- Mechanical and Aerospace Engineering Graduate Seminar [MAE 297]:
+
+  - `MAE 297 2017 Spring`_
+
+- Mechanical Design [EME 150A]:
+
+  - `EME 150A 2016 Fall`_
+  - `EME 150A 2015 Fall`_
+
+- Mechanical Systems Design Project [EME 185A/B]:
+
+  - `EME 185A/B 2019 Winter/Spring`_
+  - `EME 185A/B 2018 Winter/Spring`_
+  - EME 185A/B 2017 Winter/Spring
+  - `EME 185A/B 2016 Winter/Spring`_
+
+- Multibody System Dynamics [MAE 223]:
+
+  - `MAE 223 2019 Fall`_
+  - `MAE 223 2017 Fall`_ [Videos_]
+
+- Vehicle Stability [EME 134]
+
+  - `EME 134 2020 Spring`_
+  - `EME 134 2018 Fall`_
+
+.. _EME 171 2020 Winter: https://moorepants.github.io/eme171/2020w
+.. _EME 171 2019 Fall: https://moorepants.github.io/eme171/2019f
+.. _EME 171 2019 Winter: https://moorepants.github.io/eme171/2019w
+
+.. _ENG 004 2012 Fall: https://www.moorepants.info/jkm/courses/eng4
+
+.. _ENG 122 2016 Fall: https://moorepants.github.io/eng122/2016f
+.. _ENG 122 2017 Fall: https://moorepants.github.io/eng122/2017f
+.. _ENG 122 2020 Winter: https://moorepants.github.io/eng122
+
+.. _MAE 297 2017 Spring: https://moorepants.github.io/mae297
+
+.. _EME 150A 2015 Fall: http://moorepants.github.io/eme150a/2015f
+.. _EME 150A 2016 Fall: http://moorepants.github.io/eme150a/2016f
+
+.. TODO : EME 185 2017 was having errors during build.
+
+.. _EME 185A/B 2016 Winter/Spring: https://moorepants.github.io/eme185/2016
+.. _EME 185A/B 2017 Winter/Spring: https://moorepants.github.io/eme185/2017
+.. _EME 185A/B 2018 Winter/Spring: https://moorepants.github.io/eme185/2018
+.. _EME 185A/B 2019 Winter/Spring: https://moorepants.github.io/eme185/2019
+
+.. _MAE 223 2017 Fall: https://moorepants.github.io/mae223/2017
+.. _Videos: https://www.youtube.com/watch?list=PLzAwokZEM7auZEBOJKNa_lCgz2rdgpYLL&v=1Tyxgv7RUdk
+.. _MAE 223 2019 Fall: https://moorepants.github.io/mae223
+
+.. _EME 134 2018 Fall: https://moorepants.github.io/eme134/2018
+.. _EME 134 2020 Spring: https://moorepants.github.io/eme134
+
 
 Workshops, Tutorials, & Short Courses
 =====================================
