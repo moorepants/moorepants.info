@@ -30,8 +30,13 @@ Courses
 
 I maintain public websites for each of my courses and post as much of my
 teaching and learning materials as possible under permissible open access
-friendly licenses, e.g. CC-BY and CC0. The UC Davis courses were given on a
-Winter, Spring, Summer, Fall quarter system for any given year.
+friendly licenses, e.g. CC-BY and CC0.
+
+University of California, Davis
+-------------------------------
+
+The UC Davis courses were given on a Winter, Spring, Summer, Fall quarter
+system for any given year.
 
 - Analysis, Simulation and Design of Mechatronic Systems [EME 171]:
 
