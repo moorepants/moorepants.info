@@ -73,11 +73,11 @@ information:
 | Office Room #: 34 F-1-140
 |
 
-Contact me for personal communication at:
+Contact me for direct communication at:
 
-- Email: moorepants@gmail.com
-- Skype: moorepants
-- Google Chat/Hangouts/Meet/Duo: moorepants@gmail.com
+- Email: moorepants@gmail.com (personal), j.k.moore@tudelft.nl (work)
+- Skype: moorepants (personal/work)
+- Google Chat/Hangouts/Meet/Duo: moorepants@gmail.com (personal/work)
 
 Email is the best way to reach me, although I firmly treat it as asynchronous
 communication and will respond when I can, which may be instantly or take
@@ -88,6 +88,9 @@ synchronous communication, and request a response if one is needed.
 If you would like to meet with me, my free time is shown on `my work calendar
 <work-calendar.html>`_. Please send me a request to meet by email with some
 suggested times.
+
+If you are writing to request a recommendation please read and follow `my
+instructions <{filename}/pages/rec-letter-instructions.rst>`_.
 
 Curriculum vitae
 ================
