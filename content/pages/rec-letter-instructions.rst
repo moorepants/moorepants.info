@@ -12,12 +12,15 @@ recommendation. I am generally very happy to recommend outstanding students
 that have worked with me or been in my classes. For me to be a reference or
 write a letter you must meet one of the following two criteria:
 
-- You were in a class of mine and received an A grade (or equivalent).
-- You worked with me outside of class on a project and did outstanding work.
+- You were in a class of mine and received grade that is exceptional.
+- You worked with me outside of class for a substantial amount of time and did
+  exceptional work.
 
-If you meet one of the above criteria you need to then send me an email
-requesting to list me as a reference or requesting to write a letter of
-recommendation before you apply to any positions. This email must be sent at
+If you think you meet one of the above criteria you need to then send me an
+email requesting to list me as a reference or requesting to write a letter of
+recommendation before you apply to any positions. If I decide you meet my
+subjective criteria and I am able to write a strong letter for you, then you
+will need to provide me with more information. You should send another email at
 least two weeks before the earliest deadline or expected phone call. This email
 must contain the following:
 
@@ -39,6 +42,15 @@ request. I may or may not agree to your request depending on my work load and
 relationship with you. Any new request needs to follow steps 1-7 even if you
 have sent prior requests.
 
-In general, I will not provide you with a copy of the recommendation letter and
-will not submit one unless you have waived your right to see the letter. You
-must provide a method for me to directly provide the letter to the requester.
+If you are applying to numerous schools and want recommendation letters for
+each I will agree to an initial number of letters and will not accept
+additional schools for that application season. You must prepare a list of all
+schools before making your request to me. Deadlines for all of the schools may
+vary. I will not continuously send letters over the months long application
+period. You need to arrange the requests from the schools into a minimal number
+of batches to make it as easy for me as possible.
+
+I will not provide you with a copy of the recommendation letter and will not
+submit one unless you have waived your right to see the letter. You must
+provide a method for me to directly provide the letter to the requester. I will
+not send the letter through you to the requester.
