@@ -32,6 +32,13 @@ I maintain public websites for each of my courses and post as much of my
 teaching and learning materials as possible under permissible open access
 friendly licenses, e.g. CC-BY and CC0.
 
+Delft University of Technology
+------------------------------
+
+- Special Topics in Sports Engineering [ME41035]
+
+  - `ME41035 2020/2021 Q4 <https://moorepants.github.io/me41035/>`_
+  
 University of California, Davis
 -------------------------------
 
