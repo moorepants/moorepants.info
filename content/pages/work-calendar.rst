@@ -7,6 +7,13 @@ Work Calendar
 :date: 1999
 :status: hidden
 
+If you would like to add my calendar to your calender application, you can use
+this ics_ file link:
+
+https://calendar.google.com/calendar/ical/d3ic3ceq4dpicabt2l86l27ld0%40group.calendar.google.com/public/basic.ics
+
+.. _ics: https://en.wikipedia.org/wiki/ICalendar
+
 .. raw:: html
 
    <iframe
