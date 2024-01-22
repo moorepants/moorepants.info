@@ -44,7 +44,7 @@ DEFAULT_PAGINATION = False
 
 try:
     with open('config.yml', 'r') as config_file:
-        config_data = yaml.load(config_file)
+        config_data = yaml.load(config_file, Loader=yaml.FullLoader)
 except IOError:
     THEME = ''
     PLUGIN_PATHS = ['']
@@ -65,7 +65,6 @@ DESCRIPTION = ''
 ARTICLE_LIST_SUBTITLE = 'Blog'
 # excludes these categories from the main blog list
 EXCLUDED_CATEGORIES = ['notebook']
-TWITTER_USERNAME = 'moorepants'
 # pelican-alchemy removed the original theme.css, so bring it back.
 THEME_CSS_OVERRIDES = ['theme/css/origtheme.css']
 

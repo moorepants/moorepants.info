@@ -38,7 +38,7 @@ Delft University of Technology
 - Special Topics in Sports Engineering [ME41035]
 
   - `ME41035 2020/2021 Q4 <https://moorepants.github.io/me41035/>`_
-  
+
 University of California, Davis
 -------------------------------
 
