@@ -15,6 +15,9 @@ philosophy and materials for the courses I teach and have taught.
 Teaching Statements
 ===================
 
+I have written various teaching statements over the years for job applications,
+here are several of them:
+
 - `2019 Teaching Statement`_
 - `2018 Teaching Statement`_
 - `2015 Teaching Statement`_
@@ -24,6 +27,26 @@ Teaching Statements
 .. _2018 Teaching Statement: https://moorepants.github.io/application-materials/2018/generic/teaching-statement.pdf
 .. _2015 Teaching Statement: {filename}/pages/teaching-statement-2015.rst
 .. _2013 Teaching Statement: {filename}/pages/teaching-statement-2013.rst
+
+Books
+=====
+
+I begin working on an interactive book for my upper level vibrations course
+[Moore2017]_ but it likely remains indefinitely in draft form due to moving
+institutions and not teaching the course anymore. In 2018, we developed a guide
+to teaching and learning with Jupyter [Barba2018]_ which also remains mostly as
+a first draft. In 2022, I wrote an interactive book for use in my TU Delft
+Multibody Dynamics course [Moore2022]_ and updated it significantly in 2023. It
+is in a complete and usable state but still needs some split and polish to call
+it done.
+
+.. [Moore2017] Jason K. Moore and Kenneth Lyons. Resonance: Learning Mechanical
+   Vibration Enginering Through Computation. Dec. 2017.
+   https://moorepants.github.io/resonance/.
+.. [Barba2018]  Lorena A. Barba et al. Teaching and Learning with Jupyter. Nov.
+   2018.  https://jupyter4edu.github.io/jupyter-edu-book/.
+.. [Moore2022] Jason K. Moore. Learn Multibody Dynamics. Aug. 2022.
+   https://moorepants.github.io/learn-multibody-dynamics/
 
 Courses
 =======
@@ -35,9 +58,18 @@ friendly licenses, e.g. CC-BY and CC0.
 Delft University of Technology
 ------------------------------
 
-- Special Topics in Sports Engineering [ME41035]
+- Multibody Dynamics:
 
-  - `ME41035 2020/2021 Q4 <https://moorepants.github.io/me41035/>`_
+  - `ME40156 2023/2024 Q3 & Q4 <https://moorepants.github.io/me41055>`_
+  - `ME40155 2022/2023 Q3 & Q4 <https://moorepants.github.io/me41055/2023>`_
+  - `ME40155 2021/2022 Q3 & Q4 <https://moorepants.github.io/me41055/2022>`_
+
+- Special Topics in Sports Engineering:
+
+  - `ME41035 2023/2024 Q5 <https://moorepants.github.io/me41035/>`_
+  - ME41035 2022/2023 Q5
+  - ME41035 2021/2022 Q5
+  - ME41035 2020/2021 Q5
 
 University of California, Davis
 -------------------------------
