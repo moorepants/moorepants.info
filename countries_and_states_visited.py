@@ -36,6 +36,7 @@ countries_visited = [
     'CUB',
     'DEU',
     'DNK',
+    'ESP',
     'FRA',
     'GBR',
     'GTM',
