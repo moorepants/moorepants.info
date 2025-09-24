@@ -60,13 +60,17 @@ Delft University of Technology
 
 - Multibody Dynamics:
 
-  - `ME40156 2023/2024 Q3 & Q4 <https://moorepants.github.io/me41055>`_
-  - `ME40155 2022/2023 Q3 & Q4 <https://moorepants.github.io/me41055/2023>`_
-  - `ME40155 2021/2022 Q3 & Q4 <https://moorepants.github.io/me41055/2022>`_
+  - `ME41056 2024/2025 Q3 & Q4 <https://moorepants.github.io/me41055>`_, 226
+    students
+  - `ME41056 2023/2024 Q3 & Q4 <https://moorepants.github.io/me41055/2024>`_
+  - `ME41055 2022/2023 Q3 & Q4 <https://moorepants.github.io/me41055/2023>`_
+  - `ME41055 2021/2022 Q3 & Q4 <https://moorepants.github.io/me41055/2022>`_
 
 - Special Topics in Sports Engineering:
 
-  - `ME41035 2023/2024 Q5 <https://moorepants.github.io/me41035/>`_
+  - `ME41035 2024/2025 Q5 <https://moorepants.github.io/me41035/>`_, 43
+    students
+  - ME41035 2023/2024 Q5
   - ME41035 2022/2023 Q5
   - ME41035 2021/2022 Q5
   - ME41035 2020/2021 Q5
@@ -147,7 +151,6 @@ system for any given year.
 
 .. _EME 134 2018 Fall: https://moorepants.github.io/eme134/2018
 .. _EME 134 2020 Spring: https://moorepants.github.io/eme134
-
 
 Workshops, Tutorials, & Short Courses
 =====================================
