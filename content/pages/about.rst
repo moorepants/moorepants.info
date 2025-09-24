@@ -28,7 +28,7 @@ seat, where I could repay the love.
 
 I hail from Dixie_ where the moonshine flowed like water and our summer nights
 were spent chasing lightning bugs through the tobacco fields. I skateboarded my
-way through high school and moved to the big city of Norfolk to learn some bits
+way through high school and moved to the big city of Norfolk_ to learn some bits
 about machines and equations. After attempting to race small formula cars and
 sitting in tunnel traffic all too many hours, the bicycle entered my life. What
 an amazing, even perfect machine. After the military shrouded city started to
@@ -37,23 +37,24 @@ United States <http://en.wikipedia.org/wiki/Davis,_California>`_ out in sunny
 California. Little gold was to be found, but lots of like minded folks were in
 abundance. `The Bike Church of Davis <http://daviswiki.org/bike_church>`_ was
 my first calling, after running from my Southern Baptist upbringing. I got
-ordained as a Reverend and somehow in my spare time obtained a Master's and
-Ph.D. about balancing on bicycles. Senator Fulbright sent me to the `Bicycle
-Capital of the World`_ where I lived in a squat called the Poppehuis which
-freed up rent money for me to indulge on Belgian beer and couchsurfing all
-around Europe. My fondness for engineering carried me further to many other
+ordained as a Bicycle Reverend and somehow in my spare time obtained a Master's
+and Ph.D. about balancing on bicycles. Senator Fulbright sent me to the
+`Bicycle Capital of the World`_ where I lived in a squat called the Poppehuis
+which freed up rent money for me to indulge on Belgian beer and couchsurfing
+all around Europe. My fondness for engineering carried me further to many other
 countries in the world to learn from our most resourceful tinkers, makers, and
-thinkers. After postdoctoral limbo working on powered leg prosthetics in
-Cleveland I returned back to California and my alma mater to breath some life
+thinkers. After a postdoctoral stint working on powered leg prosthetics in
+Cleveland, I returned back to California and my alma mater to breath some life
 into engineering education. After five years searching for gold again, the
 bicycle path angled back towards Europe where I am now engineering bicycles and
-teaching the next generation.
+teaching dynamics in Johannes Vermeer's hometown_.
 
+.. _Norfolk: https://en.wikipedia.org/wiki/Norfolk,_Virginia
 .. _Dixie: http://en.wikipedia.org/wiki/Pittsylvania_County,_Virginia
 .. _Bicycle Capital of the World: https://en.wikipedia.org/wiki/Netherlands
+.. _hometown: https://en.wikipedia.org/wiki/Delft
 
-You can learn more about what I think about by reading my blog_ or following me
-on social media where I post commentary on a variety of things.
+You can learn more about what I think about by reading my blog_.
 
 .. _blog: {filename}/blog.rst
 
@@ -77,7 +78,7 @@ Contact me for direct communication at:
 
 - Email: moorepants@gmail.com (personal), j.k.moore@tudelft.nl (work)
 - Skype: moorepants (personal/work)
-- Google Chat/Hangouts/Meet/Duo: moorepants@gmail.com (personal/work)
+- Google Chat/Meet: moorepants@gmail.com (personal/work)
 
 Email is the best way to reach me, although I firmly treat it as asynchronous
 communication and will respond when I can, which may be instantly or take
@@ -103,11 +104,10 @@ Web Presence
 Academic
 --------
 
-- `Academia.edu <http://ucdavis.academia.edu/JasonMoore>`_
 - `Google Scholar <http://scholar.google.com/citations?user=i9c-QOYAAAAJ>`_
 - `ORCID <http://orcid.org/0000-0002-8698-6143>`_
-- `ResearchGate <https://www.researchgate.net/profile/Jason_Moore/>`_
 - `Zotero <https://www.zotero.org/moorepants>`_
+- `ResearchGate <https://www.researchgate.net/profile/Jason_Moore/>`_
 
 Professional
 ------------
@@ -126,14 +126,14 @@ Software
 Wiki
 ----
 
-- `LocalWiki <https://localwiki.org/Users/moorepants>`_
 - `Wikipedia <http://en.wikipedia.org/wiki/User:Moorepants>`_
+- `LocalWiki <https://localwiki.org/Users/moorepants>`_
 
 Social
 ------
 
+- `Reddit <https://www.reddit.com/user/moorepants/>`_
 - `Flickr <http://www.flickr.com/photos/9067819@N03/>`_
-- `Twitter <https://twitter.com/moorepants>`_
 - `YouTube <http://www.youtube.com/user/moorepants>`_
 
 Hospitality Networks
@@ -141,11 +141,11 @@ Hospitality Networks
 
 - `Couchsurfing <http://www.couchsurfing.org/people/moorepants/>`_
 
-Websites I Current Maintain
----------------------------
+Websites I Maintain
+-------------------
 
 - `BMD Conference Series <https://bmdconf.org>`_
-- `Laboratorium of Marvelous Mechanical Motum <http://mechmotum.github.io>`_
+- `TU Delft Bicycle Laboratorium <http://mechmotum.github.io>`_
 - `ODU HPV <http://www.lions.odu.edu/~dlandman/hpv/>`_
 - `Older personal site <http://moorepants.info/jkm/>`_
 - `moorebicycles <http://moorebicycles.blogspot.com/>`_
