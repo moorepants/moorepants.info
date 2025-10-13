@@ -10,11 +10,11 @@ Research
 My research is centered around the general topic of human mobility. I work on
 vehicle and assistive device design, simulation, analysis, and control of human
 locomotion and manually controlled vehicles, and engineering computation
-software development. I lead the `Laboratorium of Marvelous Mechanical Motum`_
-and advise undergraduate and graduate students researchers in the BioMechanical
+software development. I lead the `TU Delft Bicycle Laboratorium`_ and advise
+undergraduate and graduate students researchers in the BioMechanical
 Engineering Department at Delft University of Technology.
 
-.. _Laboratorium of Marvelous Mechanical Motum: https://mechmotum.github.io
+.. _TU Delft Bicycle Laboratorium: https://mechmotum.github.io
 
 Research Statements
 ===================
@@ -106,152 +106,107 @@ Journal Articles
 Conference Papers
 -----------------
 
-2025
-^^^^
-
-- R. R. Dukalski, J. K. Moore, P. J. Beek, and F. M. Brazier, “Discovering Road
-  Cyclists’ Needs and Preferences for  Mixed Reality User Interfaces Using
-  Immersive  Simulation,” presented at the HCI International, 2025. *Under
-  Review*
-- R. R. Dukalski, J. K. Moore, P. J. Beek, and F. M. Brazier, “A Low-Tech
-  Methodology for Understanding User Needs and Preferences for User- Interface
-  Design for Mixed Reality for a Dynamic Motion Context,” presented at the
-  SportsHCI, 2025. *Under Review*
-
-2024
-^^^^
-
-- L. Alizadehsaravi, S. Draukšas, J. K. Moore, R. Happee, and L.
-  Marchal-Crespo, “Enhancing Motor Learning in Cycling Tasks: The Role of Model
-  Predictive Control and Training Sequence,” in 2024 10th IEEE RAS/EMBS
-  International Conference for Biomedical Robotics and Biomechatronics
-  (BioRob), Sept. 2024, pp. 728–733. doi: 10.1109/BioRob60516.2024.10719950.
-
-2023
-^^^^
-
-- T. J. Stienstra, S. G. Brockie, and J. K. Moore, “BRiM: A modular
-  bicycle-rider modeling framework,” presented at the Bicycle and Motorcycle
-  Dynamics 2023, Delft, The Netherlands: TU Delft OPEN Publishing, Oct. 2023.
-  doi: 10.59490/6504c5a765e8118fc7b106c3.
-- C. M. Schmidt, A. Dabiri, F. Schulte, R. Happee, and J. Moore, “Essential
-  bicycle dynamics for microscopic traffic simulation: An example using the
-  social force model,” presented at the Bicycle and Motorcycle Dynamics 2023,
-  Delft, The Netherlands: TU Delft OPEN Publishing, 2023. doi:
-  10.59490/65037d08763775ba4854da53.
-- A. Dressel and J. K. Moore, “Adapting a variable stability mechanism for a
-  tilting tricycle from the delta to the tadpole wheel configuration,”
-  presented at the Bicycle and Motorcycle Dynamics 2023, Delft, The
-  Netherlands: TU Delft OPEN Publishing, 2023. doi:
-  10.59490/650479434cc364571baa0cfc.
-
-2019
-^^^^
-
-- J. K. Moore and M. Hubbard, “Expanded Optimization for Discovering Optimal
-  Lateral Handling Bicycles,” presented at the Bicycle and Motorcycle Dynamics
-  2019: Symposium for Dynamics and Control of Single Track Vehicles, Padua,
-  Italy, 2019, p. 12.
-- R. Gilboa, A. Kubicki, A. Toribio, M. Hubbard, and J. K. Moore, “Practical
-  Realization of a Theoretical Optimal-Handling Bicycle,” presented at the
-  Bicycle and Motorcycle Dynamics: Symposium on Dynamics and Control of Single
-  Track Vehicles, 2019, p. 11.
-- T. Z. Metz and J. K. Moore, “Design of an Electric Bicycle Speed Controller,”
-  presented at the Bicycle and Motorcycle Dynamics 2019: Symposium on the
-  Dynamics and Control of Single Track Vehicles, Padua, Italy, 2019.
-
-2017
-^^^^
-
-- S. W. Kresie, J. K. Moore, M. Hubbard, and R. A. Hess, “Experimental
-  Validation of Bicycle Handling Prediction,” in Proceedings of the 6th Annual
-  International Cycling Safety Conference, Davis, CA, USA, 2017.
-- J. K. Moore, M. Hubbard, and R. A. Hess, “Optimal bicycle design to maximize
-  handling and safety,” in Proceedings of the 6th Annual International Cycling
-  Safety Conference, Davis, CA, USA, 2017.
-
-2016
-^^^^
-
-- J. Moore, M. Hubbard, and R. A. Hess, “An Optimal Handling Bicycle,” in
-  Proceedings of the 2016 Bicycle and Motorcycle Dynamics Conference, 2016.
-
-2013
-^^^^
-
-- G. Gede, D. L. Peterson, A. S. Nanjangud, J. K. Moore, and M. Hubbard,
-  “Constrained Multibody Dynamics With Python: From Symbolic Equation
-  Generation to Publication,” in Volume 7B: 9th International Conference on
-  Multibody Systems, Nonlinear Dynamics, and Control, Portland, Oregeon, USA,
-  2013.
-- J. K. Moore and M. Hubbard, “Identification of open loop dynamics of a
-  manually controlled bicycle-rider system,” in Proceedings of Bicycle and
-  Motorcycle Dynamics: Symposium on the Dynamics and Control of Single Track
-  Vehicles, Narashino, Chiba, Japan, 2013.
-- J. K. Moore and M. Hubbard, “Methods for elimination of crosstalk and
-  inertial effects in bicycle and motorcycle steer torque estimation,” in
-  Proceedings of Bicycle and Motorcycle Dynamics: Symposium on the Dynamics and
-  Control of Single Track Vehicles, Narashino, Chiba, Japan, 2013.
-- R. A. Hess and J. K. Moore, “Estimating Parameters of the Structural Pilot
-  Model Using Simulation Tracking Data,” in AIAA Guidance, Navigation, and
-  Control Conference, 2013.
-
-2012
-^^^^
-
-- A. Schwab, P. de Lange, and J. K. Moore, “Rider Optimal Control
-  Identification in Bicycling,” in Proceedings of the 5th Annual Dynamic
-  Systems and Control Conference and 11th Annual Motion and Vibration
-  Conference, Fort Lauderdale, Florida, USA, 2012.
-- A. L. Schwab, P. D. L. de Lange, R. Happee, and J. K. Moore, “Rider control
-  identification in bicycling, parameter estimation of a linear model using
-  lateral force perturbation tests,” in Proceedings of the IMSD2012 - The 2nd
-  Joint International Conference on Multibody System Dynamics, Stuttgart,
-  Germany., 2012.
-
-2010
-^^^^
-
-- J. K. Moore, M. Hubbard, D. L. Peterson, A. L. Schwab, and J. D. G.
-  Kooijman, “An Accurate Method of Measuring and Comparing a Bicycle’s Physical
-  Parameters,” in Proceedings of Bicycle and Motorcycle Dynamics: Symposium on
-  the Dynamics and Control of Single Track Vehicles, Delft, Netherlands, 2010.
-- D. L. Peterson, J. K. Moore, D. Fintelman, and M. Hubbard, “Low-power,
-  modular, wireless dynamic measurement of bicycle motion,” in Procedia
-  Engineering, 2010, vol. 2, pp. 2949–2954.
-- J. K. Moore, M. Hubbard, A. L. Schwab, J. D. G. Kooijman, and D. L. Peterson,
-  “Statistics of bicycle rider motion,” in The Engineering of Sport 8  -
-  Engineering Emotion, 2010, vol. 2, pp. 2937–2942.
-
-2009
-^^^^
-
-- J. D. G. Kooijman, A. L. Schwab, and J. K. Moore, “Some Observations on Human
-  Control of a Bicycle,” in Proceedings of the ASME 2009 International Design
-  and Engineering Technical Conferences & Computers and Information in
-  Engineering Conference, 2009.
-- J. K. Moore, J. D. G. Kooijman, M. Hubbard, and A. L. Schwab, “A Method for
-  Estimating Physical Properties of a Combined Bicycle and Rider,” in
-  Proceedings of the ASME 2009 International Design Engineering Technical
-  Conferences & Computers and Information in Engineering Conference, IDETC/CIE
-  2009, San Diego, CA, USA, 2009.
-- J. K. Moore, J. D. G. Kooijman, and A. L. Schwab, “Rider motion
-  identification during normal bicycling by means of principal component
-  analysis,” in Proceedings of Multibody Dynamics 2009, ECCOMAS Thematic
-  Conference, Warsaw, Poland, 2009.
-
-2008
-^^^^
-
-- J. Moore and M. Hubbard, “Parametric Study of Bicycle Stability,” in The
-  Engineering of Sport 7, 2008, vol. 2.
-
-2007
-^^^^
-
-- J. K. Moore, D. L. Peterson, and M. Hubbard, “Influence of rider dynamics on
-  the Whipple bicycle model,” in Proceedings of the 11th International
-  Symposium on Computer Simulation in Biomechanics, Tainan, Taiwan, 2007.
+#. R. R. Dukalski, J. K. Moore, P. J. Beek, and F. M. Brazier, “Discovering
+   Road Cyclists’ Needs and Preferences for  Mixed Reality User Interfaces
+   Using Immersive  Simulation,” presented at the HCI International, 2025.
+   *Under Review*
+#. R. R. Dukalski, J. K. Moore, P. J. Beek, and F. M. Brazier, “A Low-Tech
+   Methodology for Understanding User Needs and Preferences for User- Interface
+   Design for Mixed Reality for a Dynamic Motion Context,” presented at the
+   SportsHCI, 2025. *Under Review*
+#. L. Alizadehsaravi, S. Draukšas, J. K. Moore, R. Happee, and L.
+   Marchal-Crespo, “Enhancing Motor Learning in Cycling Tasks: The Role of
+   Model Predictive Control and Training Sequence,” in 2024 10th IEEE RAS/EMBS
+   International Conference for Biomedical Robotics and Biomechatronics
+   (BioRob), Sept. 2024, pp. 728–733. doi: 10.1109/BioRob60516.2024.10719950.
+#. T. J. Stienstra, S. G. Brockie, and J. K. Moore, “BRiM: A modular
+   bicycle-rider modeling framework,” presented at the Bicycle and Motorcycle
+   Dynamics 2023, Delft, The Netherlands: TU Delft OPEN Publishing, Oct. 2023.
+   doi: 10.59490/6504c5a765e8118fc7b106c3.
+#. C. M. Schmidt, A. Dabiri, F. Schulte, R. Happee, and J. Moore, “Essential
+   bicycle dynamics for microscopic traffic simulation: An example using the
+   social force model,” presented at the Bicycle and Motorcycle Dynamics 2023,
+   Delft, The Netherlands: TU Delft OPEN Publishing, 2023. doi:
+   10.59490/65037d08763775ba4854da53.
+#. A. Dressel and J. K. Moore, “Adapting a variable stability mechanism for a
+   tilting tricycle from the delta to the tadpole wheel configuration,”
+   presented at the Bicycle and Motorcycle Dynamics 2023, Delft, The
+   Netherlands: TU Delft OPEN Publishing, 2023. doi:
+   10.59490/650479434cc364571baa0cfc.
+#. J. K. Moore and M. Hubbard, “Expanded Optimization for Discovering Optimal
+   Lateral Handling Bicycles,” presented at the Bicycle and Motorcycle Dynamics
+   2019: Symposium for Dynamics and Control of Single Track Vehicles, Padua,
+   Italy, 2019, p. 12.
+#. R. Gilboa, A. Kubicki, A. Toribio, M. Hubbard, and J. K. Moore, “Practical
+   Realization of a Theoretical Optimal-Handling Bicycle,” presented at the
+   Bicycle and Motorcycle Dynamics: Symposium on Dynamics and Control of Single
+   Track Vehicles, 2019, p. 11.
+#. T. Z. Metz and J. K. Moore, “Design of an Electric Bicycle Speed
+   Controller,” presented at the Bicycle and Motorcycle Dynamics 2019:
+   Symposium on the Dynamics and Control of Single Track Vehicles, Padua,
+   Italy, 2019.
+#. S. W. Kresie, J. K. Moore, M. Hubbard, and R. A. Hess, “Experimental
+   Validation of Bicycle Handling Prediction,” in Proceedings of the 6th Annual
+   International Cycling Safety Conference, Davis, CA, USA, 2017.
+#. J. K. Moore, M. Hubbard, and R. A. Hess, “Optimal bicycle design to maximize
+   handling and safety,” in Proceedings of the 6th Annual International Cycling
+   Safety Conference, Davis, CA, USA, 2017.
+#. J. Moore, M. Hubbard, and R. A. Hess, “An Optimal Handling Bicycle,” in
+   Proceedings of the 2016 Bicycle and Motorcycle Dynamics Conference, 2016.
+#. G. Gede, D. L. Peterson, A. S. Nanjangud, J. K. Moore, and M. Hubbard,
+   “Constrained Multibody Dynamics With Python: From Symbolic Equation
+   Generation to Publication,” in Volume 7B: 9th International Conference on
+   Multibody Systems, Nonlinear Dynamics, and Control, Portland, Oregeon, USA,
+   2013.
+#. J. K. Moore and M. Hubbard, “Identification of open loop dynamics of a
+   manually controlled bicycle-rider system,” in Proceedings of Bicycle and
+   Motorcycle Dynamics: Symposium on the Dynamics and Control of Single Track
+   Vehicles, Narashino, Chiba, Japan, 2013.
+#. J. K. Moore and M. Hubbard, “Methods for elimination of crosstalk and
+   inertial effects in bicycle and motorcycle steer torque estimation,” in
+   Proceedings of Bicycle and Motorcycle Dynamics: Symposium on the Dynamics
+   and Control of Single Track Vehicles, Narashino, Chiba, Japan, 2013.
+#. R. A. Hess and J. K. Moore, “Estimating Parameters of the Structural Pilot
+   Model Using Simulation Tracking Data,” in AIAA Guidance, Navigation, and
+   Control Conference, 2013.
+#. A. Schwab, P. de Lange, and J. K. Moore, “Rider Optimal Control
+   Identification in Bicycling,” in Proceedings of the 5th Annual Dynamic
+   Systems and Control Conference and 11th Annual Motion and Vibration
+   Conference, Fort Lauderdale, Florida, USA, 2012.
+#. A. L. Schwab, P. D. L. de Lange, R. Happee, and J. K. Moore, “Rider control
+   identification in bicycling, parameter estimation of a linear model using
+   lateral force perturbation tests,” in Proceedings of the IMSD2012 - The 2nd
+   Joint International Conference on Multibody System Dynamics, Stuttgart,
+   Germany., 2012.
+#. J. K. Moore, M. Hubbard, D. L. Peterson, A. L. Schwab, and J. D. G.
+   Kooijman, “An Accurate Method of Measuring and Comparing a Bicycle’s
+   Physical Parameters,” in Proceedings of Bicycle and Motorcycle Dynamics:
+   Symposium on the Dynamics and Control of Single Track Vehicles, Delft,
+   Netherlands, 2010.
+#. D. L. Peterson, J. K. Moore, D. Fintelman, and M. Hubbard, “Low-power,
+   modular, wireless dynamic measurement of bicycle motion,” in Procedia
+   Engineering, 2010, vol. 2, pp. 2949–2954.
+#. J. K. Moore, M. Hubbard, A. L. Schwab, J. D. G. Kooijman, and D. L.
+   Peterson, “Statistics of bicycle rider motion,” in The Engineering of Sport
+   8  - Engineering Emotion, 2010, vol. 2, pp. 2937–2942.
+#. J. D. G. Kooijman, A. L. Schwab, and J. K. Moore, “Some Observations on
+   Human Control of a Bicycle,” in Proceedings of the ASME 2009 International
+   Design and Engineering Technical Conferences & Computers and Information in
+   Engineering Conference, 2009.
+#. J. K. Moore, J. D. G. Kooijman, M. Hubbard, and A. L. Schwab, “A Method for
+   Estimating Physical Properties of a Combined Bicycle and Rider,” in
+   Proceedings of the ASME 2009 International Design Engineering Technical
+   Conferences & Computers and Information in Engineering Conference, IDETC/CIE
+   2009, San Diego, CA, USA, 2009.
+#. J. K. Moore, J. D. G. Kooijman, and A. L. Schwab, “Rider motion
+   identification during normal bicycling by means of principal component
+   analysis,” in Proceedings of Multibody Dynamics 2009, ECCOMAS Thematic
+   Conference, Warsaw, Poland, 2009.
+#. J. Moore and M. Hubbard, “Parametric Study of Bicycle Stability,” in The
+   Engineering of Sport 7, 2008, vol. 2.
+#. J. K. Moore, D. L. Peterson, and M. Hubbard, “Influence of rider dynamics on
+   the Whipple bicycle model,” in Proceedings of the 11th International
+   Symposium on Computer Simulation in Biomechanics, Tainan, Taiwan, 2007.
 
 Software
 --------
