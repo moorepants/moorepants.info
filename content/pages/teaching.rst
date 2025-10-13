@@ -171,9 +171,9 @@ Workshops, Tutorials, & Short Courses
 
 - Computational Thinking in the Engineering Curriculum (with Allen Downey), UCD
   CEE and DSI, Davis, CA, USA, January 10, 2017, https://youtu.be/lfRVRqdYdjM
-  (105 views)
+  (331 views)
 - Automatic Code Generation with SymPy, SCIPY 2017, Austin, Texas, USA, July
-  10, 2017, https://youtu.be/5jzIVp6bTy0 (6,186 views)
+  10, 2017, https://youtu.be/5jzIVp6bTy0 (17K views)
 - Software Carpentry Workshop (with Jamie Ashander), Delta Stewardship Council
   Sacramento, California, USA, May 18-19, 2017
 
@@ -184,7 +184,8 @@ Workshops, Tutorials, & Short Courses
   Excellence Davis, California, USA, August 25, 2016
 - Software Carpentry Workshop, iHub Nairobi, Kenya June 17-18, 2016
 - Simulating Robot, Vehicle, Spacecraft, and Animal Motion, SCIPY 2016, Austin,
-  Texas, USA, July 14, 2016, https://youtu.be/r4piIKV4sDw (8,059 views)
+  Texas, USA, July 14, 2016, https://youtu.be/r4piIKV4sDw (21K views)
+- Introduction to Git, ECS 198, UC Davis, January 27, 2016
 
 2015
 ----
@@ -192,7 +193,7 @@ Workshops, Tutorials, & Short Courses
 - Software Carpentry Workshop (with Andreas Zonca), UCI Data Science Initiative
   Irvine, California, USA February 21-22, 2015
 - Multibody Dynamics and Control with Python, SCIPY 2015, Austin, Texas, USA,
-  July 18, 2015, https://youtu.be/mdo2NYtA-xY (6,318 views)
+  July 18, 2015, https://youtu.be/mdo2NYtA-xY (12K views)
 
 2014
 ----
@@ -201,6 +202,6 @@ Workshops, Tutorials, & Short Courses
 - Multibody Dynamics and Control with Python, SCIPY 2014, Austin, Texas, USA,
   July 6, 2014, (3,057 views)
 - Dynamics and Control with Python, PYCON 2014, Montreal, Quebec, Canada, April
-  9, 2014, https://youtu.be/IoMR-ESzqw8 (2,841 views)
+  9, 2014, https://youtu.be/IoMR-ESzqw8 (3.8K views)
 - Simulation and Control of Biomechanical Systems with Python, MASB 2014,
   Akron, Ohio, USA, March 9, 2014
