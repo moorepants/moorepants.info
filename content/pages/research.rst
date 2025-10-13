@@ -12,7 +12,9 @@ vehicle and assistive device design, simulation, analysis, and control of human
 locomotion and manually controlled vehicles, and engineering computation
 software development. I lead the `TU Delft Bicycle Laboratorium`_ and advise
 undergraduate and graduate students researchers in the BioMechanical
-Engineering Department at Delft University of Technology.
+Engineering Department at Delft University of Technology. See my `Google
+Scholar <https://scholar.google.com/citations?user=i9c-QOYAAAAJ&hl=en>`_
+profile for citation information.
 
 .. _TU Delft Bicycle Laboratorium: https://mechmotum.github.io
 
@@ -33,8 +35,8 @@ Books
    Proceedings of the 5th Symposium on the Dynamics and Control of Single-track
    Vehicles: Bicycle and Motorcycle Dynamics 2023, October 18-20, Delft, The
    Netherlands. TU Delft OPEN Books, 2024. doi: 10.59490/mg.121.
-#. J. K. Moore, Learn Multibody Dynamics, Version 0.1. 2022. [Online].
-   Available: https://moorepants.github.io/learn-multibody-dynamics/
+#. J. K. Moore, “Human Control of a Bicycle,” Doctor of Philosophy, University
+   of California, Davis, CA, 2012. http://moorepants.github.io/dissertation
 
 Journal Articles
 ----------------
