@@ -33,12 +33,8 @@ Books
    Proceedings of the 5th Symposium on the Dynamics and Control of Single-track
    Vehicles: Bicycle and Motorcycle Dynamics 2023, October 18-20, Delft, The
    Netherlands. TU Delft OPEN Books, 2024. doi: 10.59490/mg.121.
-#. J. K. Moore, Learn Multibody Dynamics, 2022.
-   https://moorepants.github.io/learn-multibody-dynamics/
-#. L.A. Barba et al., Teaching and Learning with Jupyter. 2018.
-#. J.K. Moore and K. Lyons, Resonance: Learning Mechanical Vibration
-   Engineering Through Computation. 2017. *Draft*
-#. J.K. Moore, Human Control of a Bicycle, 2012.
+#. J. K. Moore, Learn Multibody Dynamics, Version 0.1. 2022. [Online].
+   Available: https://moorepants.github.io/learn-multibody-dynamics/
 
 Journal Articles
 ----------------
