@@ -29,52 +29,125 @@ Research Products
 Books
 -----
 
-- L.A. Barba et al., Teaching and Learning with Jupyter. 2018. *Draft*
-- J.K. Moore and K. Lyons, Resonance: Learning Mechanical Vibration Engineering
-  Through Computation. 2017. *Draft*
-- J.K. Moore, Human Control of a Bicycle, 2012.
+#. J. K. Moore, E. de Vries, A. Dressel, and L. Alizadehsaravi, Eds.,
+   Proceedings of the 5th Symposium on the Dynamics and Control of Single-track
+   Vehicles: Bicycle and Motorcycle Dynamics 2023, October 18-20, Delft, The
+   Netherlands. TU Delft OPEN Books, 2024. doi: 10.59490/mg.121.
+#. J. K. Moore, Learn Multibody Dynamics, 2022.
+   https://moorepants.github.io/learn-multibody-dynamics/
+#. L.A. Barba et al., Teaching and Learning with Jupyter. 2018.
+#. J.K. Moore and K. Lyons, Resonance: Learning Mechanical Vibration
+   Engineering Through Computation. 2017. *Draft*
+#. J.K. Moore, Human Control of a Bicycle, 2012.
 
 Journal Articles
 ----------------
 
-1. X. Qian, J. K. Moore, and D. Niemeier, “Predicting Bicycle Pavement Ride
+#. G. Dell’Orto et al., “Vibration Characterisation of Strollers and Cargo
+   Bicycles for Transporting Infants: Including Recommendations for Users,
+   Designers, Manufacturers, and Researchers,” Sept. 22, 2025, Engineering
+   Archive. doi: 10.31224/4415. *In Preparation*
+#. J. Ronné, J. K. Moore, L. Dubuis, and T. Robert, “Personal Preference or
+   Intrinsic Quality? A Study on Bicycle Handling Quality,” 2025. *Under
+   Review*
+#. M. T. Haitjema, L. Alizadehsaravi, and J. K. Moore, “Automatic Bicycle
+   Balance Assistance Reduces Probability of Falling at Low Speeds When
+   Subjected to Handlebar Perturbations,” Oct. 09, 2024, engrXiv, Under Review.
+   doi: 10.31224/4003. *Under Review*
+#. C. M. Konrad, A. Dabiri, F. Schulte, J. K. Moore, and R. Happee, “Cycling
+   Safety Assessment in Microscopic Traffic Simulation: A Review and
+   Methodological Framework,” 2024. *Under Review*
+#. A. Singh, H. Vreman, A. E. Dressel, and J. K. Moore, “Bicycle disc brake
+   noise analysis and mitigation,” Journal of Vibration and Control, p.
+   10775463241273021, Aug. 2024, doi: 10.1177/10775463241273021.
+#. J. T. Heinen, S. G. Brockie, R. ten Broek, E. van der Kruk, and J. K. Moore,
+   “Maximizing ollie height by optimizing control strategy and skateboard
+   geometry using direct collocation,” Sports Eng, vol. 27, no. 1, p. 8, Feb.
+   2024, doi: 10.1007/s12283-023-00448-y.
+#. G. Dell’Orto, G. Mastinu, R. Happee, and J. K. Moore, “Measurement of
+   lateral characteristics and identification of Magic Formula parameters of
+   city and cargo bicycle tyres,” Vehicle System Dynamics, 2024, doi:
+   10.1080/00423114.2024.2338143.
+#. L. Alizadehsaravi and J. K. Moore, “Bicycle balance assist system reduces
+   roll and steering motion for young and older bicyclists during real-life
+   safety challenges,” PeerJ, vol. 11, p. e16206, Oct. 2023, doi:
+   10.7717/peerj.16206.
+#. X. Qian, J. K. Moore, and D. Niemeier, “Predicting Bicycle Pavement Ride
    Quality: Sensor-based Statistical Model,” Journal of Infrastructure Systems,
    vol. 26, no. 3, p. 04020033, 2020, doi: 10.1061/(ASCE)IS.1943-555X.0000571.
-2. B. Cloud et al., “Adaptive smartphone-based sensor fusion for estimating
+#. B. Cloud et al., “Adaptive smartphone-based sensor fusion for estimating
    competitive rowing kinematic metrics,” PLOS ONE, vol. 14, no. 12, p.
    e0225690, Dec. 2019, doi: 10.1371/journal.pone.0225690.
-3. J. K. Moore and M. Hubbard, “skijumpdesign: A Ski Jump Design Tool for
+#. J. K. Moore and M. Hubbard, “skijumpdesign: A Ski Jump Design Tool for
    Specified Equivalent Fall Height,” The Journal of Open Source Software, vol.
    3, no. 28, p. 818, Aug. 2018, doi: 10.21105/joss.00818.
-4. J. K. Moore and A. van den Bogert, “opty: Software for trajectory
+#. J. K. Moore and A. van den Bogert, “opty: Software for trajectory
    optimization and parameter identification using direct collocation,” Journal
    of Open Source Software, vol. 3, no. 21, p. 300, Jan. 2018, doi:
    10.21105/joss.00300.
-5. A. Meurer et al., “SymPy: symbolic computing in Python,” PeerJ Comput.
+#. A. Meurer et al., “SymPy: symbolic computing in Python,” PeerJ Comput.
    Sci., vol. 3, no. e103, Jan. 2017, doi: 10.7717/peerj-cs.103.
-6. J. K. Moore, S. K. Hnat, and A. J. van den Bogert, “An elaborate data set on
+#. J. K. Moore, S. K. Hnat, and A. J. van den Bogert, “An elaborate data set on
    human gait and the effect of mechanical perturbations,” PeerJ, vol. 3, no.
    e918, Apr. 2015, doi: 10.7717/peerj.918.
-7. C. Dembia, J. K. Moore, and M. Hubbard, “An object oriented implementation
+#. C. Dembia, J. K. Moore, and M. Hubbard, “An object oriented implementation
    of the Yeadon human inertia model,” F1000Research, vol. 3, no. 233, Apr.
    2015, doi: 10.12688/f1000research.5292.2.
-8. A. L. Schwab, P. D. L. de Lange, R. Happee, and J. K. Moore, “Rider control
+#. A. L. Schwab, P. D. L. de Lange, R. Happee, and J. K. Moore, “Rider control
    identification in bicycling using lateral force perturbation tests,”
    Proceedings of the Institution of Mechanical Engineers, Part K: Journal of
    Multi-body Dynamics, vol. 227, no. 4, pp. 390–406, Aug. 2013, doi:
    10.1177/1464419313492317.
-9. R. Hess, J. K. Moore, and M. Hubbard, “Modeling the Manually Controlled
+#. R. Hess, J. K. Moore, and M. Hubbard, “Modeling the Manually Controlled
    Bicycle,” IEEE Transactions on Systems, Man, and Cybernetics - Part A:
    Systems and Humans, vol. 42, no. 3, pp. 545–557, Feb. 2012, doi:
    10.1109/TSMCA.2011.2164244.
-10. J. K. Moore, J. D. G. Kooijman, A. L. Schwab, and M. Hubbard, “Rider motion
-    identification during normal bicycling by means of principal component
-    analysis,” Multibody Syst Dyn, vol. 25, no. 2, pp. 225–244, Feb. 2011, doi:
-    10.1007/s11044-010-9225-8.
-
+#. J. K. Moore, J. D. G. Kooijman, A. L. Schwab, and M. Hubbard, “Rider motion
+   identification during normal bicycling by means of principal component
+   analysis,” Multibody Syst Dyn, vol. 25, no. 2, pp. 225–244, Feb. 2011, doi:
+   10.1007/s11044-010-9225-8.
 
 Conference Papers
 -----------------
+
+2025
+^^^^
+
+- R. R. Dukalski, J. K. Moore, P. J. Beek, and F. M. Brazier, “Discovering Road
+  Cyclists’ Needs and Preferences for  Mixed Reality User Interfaces Using
+  Immersive  Simulation,” presented at the HCI International, 2025. *Under
+  Review*
+- R. R. Dukalski, J. K. Moore, P. J. Beek, and F. M. Brazier, “A Low-Tech
+  Methodology for Understanding User Needs and Preferences for User- Interface
+  Design for Mixed Reality for a Dynamic Motion Context,” presented at the
+  SportsHCI, 2025. *Under Review*
+
+2024
+^^^^
+
+- L. Alizadehsaravi, S. Draukšas, J. K. Moore, R. Happee, and L.
+  Marchal-Crespo, “Enhancing Motor Learning in Cycling Tasks: The Role of Model
+  Predictive Control and Training Sequence,” in 2024 10th IEEE RAS/EMBS
+  International Conference for Biomedical Robotics and Biomechatronics
+  (BioRob), Sept. 2024, pp. 728–733. doi: 10.1109/BioRob60516.2024.10719950.
+
+2023
+^^^^
+
+- T. J. Stienstra, S. G. Brockie, and J. K. Moore, “BRiM: A modular
+  bicycle-rider modeling framework,” presented at the Bicycle and Motorcycle
+  Dynamics 2023, Delft, The Netherlands: TU Delft OPEN Publishing, Oct. 2023.
+  doi: 10.59490/6504c5a765e8118fc7b106c3.
+- C. M. Schmidt, A. Dabiri, F. Schulte, R. Happee, and J. Moore, “Essential
+  bicycle dynamics for microscopic traffic simulation: An example using the
+  social force model,” presented at the Bicycle and Motorcycle Dynamics 2023,
+  Delft, The Netherlands: TU Delft OPEN Publishing, 2023. doi:
+  10.59490/65037d08763775ba4854da53.
+- A. Dressel and J. K. Moore, “Adapting a variable stability mechanism for a
+  tilting tricycle from the delta to the tadpole wheel configuration,”
+  presented at the Bicycle and Motorcycle Dynamics 2023, Delft, The
+  Netherlands: TU Delft OPEN Publishing, 2023. doi:
+  10.59490/650479434cc364571baa0cfc.
 
 2019
 ^^^^
