@@ -22,38 +22,84 @@ ax.add_feature(cartopy.feature.OCEAN)
 #ax.add_feature(cartopy.feature.RIVERS)
 ax.set_extent([-150, 60, -25, 60])
 
-shpfilename = shpreader.natural_earth(resolution='110m',
-                                      category='cultural',
-                                      name='admin_0_countries')
-reader = shpreader.Reader(shpfilename)
-countries = reader.records()
+country_shpfilename = shpreader.natural_earth(
+    resolution='110m', category='cultural', name='admin_0_countries')
+country_reader = shpreader.Reader(country_shpfilename)
+countries = country_reader.records()
+
+usa_states_shpfilename = shpreader.natural_earth(
+    resolution='110m', category='cultural',
+    name='admin_1_states_provinces_lakes')
+usa_states_reader = shpreader.Reader(usa_states_shpfilename)
+usa_states = usa_states_reader.records()
 
 countries_visited = [
-    'ARG',
-    'BEL',
-    'CAN',
-    'CHE',
-    'CUB',
-    'DEU',
-    'DNK',
-    'ESP',
-    'FRA',
-    'GBR',
-    'GTM',
-    'HND',
-    'IND',
-    'ITA',
-    'JPN',
-    'KEN',
-    'KHM',
-    'LAO',
-    'MEX',
-    'NLD',
-    'POL',
-    'SWE',
-    'THA',
-    'USA',
-    'ZMB',
+    'ARG',  # Argentina
+    'AUT',  # Austria
+    'BEL',  # Belgium
+    'CAN',  # Canada
+    'CHE',  # Swizterland
+    'CUB',  # Cuba
+    'CZE',  # Czech Republic
+    'DEU',  # Germany
+    'DNK',  # Denmark: 2008
+    'ESP',  # Spain
+    'FIN',  # Finland: 2025
+    'FRA',  # France
+    'GBR',  # United Kingdom
+    'GTM',  # Guatemala
+    'HND',  # Honduras
+    'IND',  # India: 2005, 2010
+    'ITA',  # Italy
+    'JPN',  # Japan
+    'KEN',  # Kenya
+    'KHM',  # Cambodia
+    'LAO',  # Laos
+    'MEX',  # Mexico
+    'NLD',  # The Netherlands
+    'NOR',  # Norway
+    'POL',  # Poland
+    'SWE',  # Sweden: 2008, 2025
+    'THA',  # Thailand
+    'USA',  # United States of America
+    'ZMB',  # Zambia
+]
+
+usa_states_visited = [
+    'Alabama',
+    'Arizona',
+    'California',
+    'Florida',
+    'Georgia',
+    'Hawaii',
+    'Idaho',
+    'Illinois',
+    'Indiana',
+    'Iowa',
+    'Kentucky',
+    'Maryland',
+    'Massachusetts',
+    'Michigan',
+    'Minnesota',
+    'Montana',
+    'Nebraska',
+    'Nevada',
+    'New Mexico',
+    'New York',
+    'North Carolina',
+    'Ohio',
+    'Oregon',
+    'Pennsylvania',
+    'South Carolina',
+    'South Dakota',
+    'Tennessee',
+    'Texas',
+    'Utah',
+    'Virginia',
+    'Washington',
+    'West Virginia',
+    'Wisconsin',
+    'Wyoming',
 ]
 
 key = 'ADM0_A3'
@@ -69,5 +115,16 @@ for country in countries:
         ax.add_geometries([country.geometry], ccrs.PlateCarree(),
                           facecolor=(0, 1, 0),
                           label=country.attributes[key])
+ax.set_title(f'{len(countries_visited)} Countries and {len(usa_states_visited)} USA States Visited')
+
+for state in usa_states:
+    print(state.attributes['name_en'])
+    if state.attributes['name_en'] in usa_states_visited:
+        ax.add_geometries([state.geometry], ccrs.PlateCarree(),
+                          facecolor=(1, 0, 0))
+    else:
+        ax.add_geometries([state.geometry], ccrs.PlateCarree(),
+                          facecolor=(0, 1, 0))
+
 
 plt.show()
