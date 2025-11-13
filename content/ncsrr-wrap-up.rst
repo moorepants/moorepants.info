@@ -257,7 +257,7 @@ series of massless links with a mass at each joint. There are actuators at each
 pin joint that apply a torque between the connected bodies. An external force
 can be applied to the cart base to perturb the system.
 
-.. image:: https://objects-us-east-1.dream.io/moorepants/n-pendulum-with-cart.png
+.. image:: https://moorepants.s3.us-east-005.dream.io/n-pendulum-with-cart.png
    :align: center
 
 The source code for the following example can be found here:
@@ -315,13 +315,13 @@ The numerical values of the controller can easily be found by solving an LQR
 control problem once the numerical values are chosen for the open loop model
 parameters. An example simulation is shown below:
 
-.. image:: https://objects-us-east-1.dream.io/moorepants/one-link-pendulum-trajectory.png
+.. image:: https://moorepants.s3.us-east-005.dream.io/one-link-pendulum-trajectory.png
 
 .. raw:: html
 
    <video width="640" height="480" controls>
-     <source src=https://objects-us-east-1.dream.io/moorepants/one-link.mp4 type="video/mp4">
-     <source src=https://objects-us-east-1.dream.io/moorepants/one-link.ogg type="video/ogg">
+     <source src=https://moorepants.s3.us-east-005.dream.io/one-link.mp4 type="video/mp4">
+     <source src=https://moorepants.s3.us-east-005.dream.io/one-link.ogg type="video/ogg">
    Your browser does not support the video tag.
    </video>
 
@@ -532,12 +532,12 @@ time unnecessary time spent in the function calls.
 
 The constraint violations after finding the optimum look like:
 
-.. image:: https://objects-us-east-1.dream.io/moorepants/one-link-pendulum-constraint-violation.png
+.. image:: https://moorepants.s3.us-east-005.dream.io/one-link-pendulum-constraint-violation.png
 
 And you can see that the predicted trajectories are tightly aligned with the
 measurements:
 
-.. image:: https://objects-us-east-1.dream.io/moorepants/one-link-pendulum-trajectory-comparison.png
+.. image:: https://moorepants.s3.us-east-005.dream.io/one-link-pendulum-trajectory-comparison.png
 
 Four Link Pendulum
 ------------------
@@ -548,24 +548,24 @@ initial guesses for the 40 gains.
 .. raw:: html
 
    <video width="640" height="480" controls>
-     <source src=https://objects-us-east-1.dream.io/moorepants/four-link.mp4 type="video/mp4">
-     <source src=https://objects-us-east-1.dream.io/moorepants/four-link.ogg type="video/ogg">
+     <source src=https://moorepants.s3.us-east-005.dream.io/four-link.mp4 type="video/mp4">
+     <source src=https://moorepants.s3.us-east-005.dream.io/four-link.ogg type="video/ogg">
    Your browser does not support the video tag.
    </video>
 
-.. image:: https://objects-us-east-1.dream.io/moorepants/four-link-pendulum-trajectory.png
+.. image:: https://moorepants.s3.us-east-005.dream.io/four-link-pendulum-trajectory.png
 
 The constraint violations given the known gains:
 
-.. image:: https://objects-us-east-1.dream.io/moorepants/four-link-pendulum-constraint-violation-from-initial-guess.png
+.. image:: https://moorepants.s3.us-east-005.dream.io/four-link-pendulum-constraint-violation-from-initial-guess.png
 
 The constraint violations given the optimal gains:
 
-.. image:: https://objects-us-east-1.dream.io/moorepants/four-link-pendulum-constraint-violation-from-optimal-solution.png
+.. image:: https://moorepants.s3.us-east-005.dream.io/four-link-pendulum-constraint-violation-from-optimal-solution.png
 
 The trajectory comparison:
 
-.. image:: https://objects-us-east-1.dream.io/moorepants/four-link-pendulum-trajectory-comparison.png
+.. image:: https://moorepants.s3.us-east-005.dream.io/four-link-pendulum-trajectory-comparison.png
    :width: 800px
 
 Planar Gait System ID
@@ -587,12 +587,12 @@ planar gait model:
 - Still needs subject specific scaling
 - Constructed with the Opensim C++ API
 
-.. image:: https://objects-us-east-1.dream.io/moorepants/osgait2d.png
+.. image:: https://moorepants.s3.us-east-005.dream.io/osgait2d.png
 
 Controller
 ----------
 
-.. image:: https://objects-us-east-1.dream.io/moorepants/gait-gain-scheduled-controller.png
+.. image:: https://moorepants.s3.us-east-005.dream.io/gait-gain-scheduled-controller.png
 
 A gain gait cycle scheduled joint angle/rate feedback controller was
 implemented by sub-classing ``OpenSim::Controller``. It follows this control

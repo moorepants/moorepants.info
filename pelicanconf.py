@@ -54,7 +54,7 @@ else:
 
 # Alchemy theme settings
 SITESUBTITLE = 'a websitee'
-SITEIMAGE = 'https://objects-us-east-1.dream.io/moorepants/headshot.jpg'
+SITEIMAGE = 'https://moorepants.s3.us-east-005.dream.io/headshot.jpg'
 DESCRIPTION = ''
 #GOOGLE_ANALYTICS = ''
 #DISQUS_SITENAME = ''

@@ -5,7 +5,7 @@ Mobile Ministry Unit
 :subtitle: american cargo rickshaw
 :description: built a custom cargo rickshaw
 :summary-sentence: American made Indian influenced cargo rickshaw.
-:summary-image: https://objects-us-east-1.dream.io/moorepants/mmu.jpg
+:summary-image: https://moorepants.s3.us-east-005.dream.io/mmu.jpg
 :date: 2010-09-18 00:00:00
 :startdate: 2010-09-18 00:00:00
 :enddate: 2012-12-23 00:00:00

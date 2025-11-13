@@ -129,7 +129,7 @@ Here is the updated code, data, and paper:
 
 - Source code: https://github.com/moorepants/structuralid
 - Data: http://figshare.com/articles/SISO_Human_Operator_Tracking_Tasks/96176
-- `Paper <https://objects-us-east-1.dream.io/moorepants/hess-moore-mst-final.pdf>`_
+- `Paper <https://moorepants.s3.us-east-005.dream.io/hess-moore-mst-final.pdf>`_
 
 In my opinion, this still needs some major work. I haven't really been happy
 with the results but Ron seems to think it is ok. Maybe I can rethink it all

@@ -50,7 +50,7 @@ shape their conceptual design:
 #. Static failure modeling and analysis.
 #. Dynamic failure modeling and analysis.
 
-.. figure:: https://objects-us-east-1.dream.io/moorepants/bus-inspection.jpg
+.. figure:: https://moorepants.s3.us-east-005.dream.io/bus-inspection.jpg
    :width: 600px
 
    Andrew Wyly, the Unitrans Maintenance Manager, describing the details of the
@@ -139,7 +139,7 @@ described above to realize a 1:10 scaled version of their two design sketches.
 Pairs of students worked on each design. We also provided them a 1:10 scale
 bicycle laser cut from thin steel to use as a reference prop.
 
-.. figure:: https://objects-us-east-1.dream.io/moorepants/bike-rack-prototyping.jpg
+.. figure:: https://moorepants.s3.us-east-005.dream.io/bike-rack-prototyping.jpg
    :width: 600px
 
    Students in during the prototyping lesson in the MAE Design Studio.
@@ -150,7 +150,7 @@ static and dynamically, i.e. we shook the table. Secondly, we tested whether or
 not the rack could withstand the maximum specified load applied to the worst
 case location and checked for failure and deflection.
 
-.. figure:: https://objects-us-east-1.dream.io/moorepants/bike-rack-testing.jpg
+.. figure:: https://moorepants.s3.us-east-005.dream.io/bike-rack-testing.jpg
    :width: 600px
 
    A bicycle rack prototype under load.
@@ -167,12 +167,12 @@ produced two prototypes in just under two hours. The upper photo shows an
 example lightweight prototype and the lower photo shows the final CAD design
 that this prototype inspired.
 
-.. figure:: https://objects-us-east-1.dream.io/moorepants/bike-rack-prototype.jpg
+.. figure:: https://moorepants.s3.us-east-005.dream.io/bike-rack-prototype.jpg
    :width: 600px
 
    An example 1:10 scale prototype.
 
-.. figure:: https://objects-us-east-1.dream.io/moorepants/bike-rack-cad.jpg
+.. figure:: https://moorepants.s3.us-east-005.dream.io/bike-rack-cad.jpg
    :width: 600px
 
    The final CAD model depicting the bicycle rack design.
@@ -214,7 +214,7 @@ With only one comment being slightly negative:
   perspective of a machinist. That being said, I also feel that this type of
   lower-level designing has less applicability to our real-world applications."
 
-.. figure:: https://objects-us-east-1.dream.io/moorepants/bike-rack-prototyping-class.jpg
+.. figure:: https://moorepants.s3.us-east-005.dream.io/bike-rack-prototyping-class.jpg
    :width: 600px
 
    Fall 2016 EME 150A students with their lightweight bicycle rack prototypes.

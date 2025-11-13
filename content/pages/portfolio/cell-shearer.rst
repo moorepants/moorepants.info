@@ -5,7 +5,7 @@ Cell Shearer
 :subtitle: shear your blood
 :description: a device that applies shear stress to fluids
 :summary-sentence: Biomedical blood cell shearing device machine design.
-:summary-image: https://objects-us-east-1.dream.io/moorepants/fancy-cell-shearer.png
+:summary-image: https://moorepants.s3.us-east-005.dream.io/fancy-cell-shearer.png
 :date: 2007-08-01 00:00:00
 :startdate: 2007-08-01 00:00:00
 :enddate: 2009-08-31 00:00:00
@@ -29,13 +29,13 @@ The design criteria for the tolerances of the cone/fluid interaction were
 extremely tight and most of the work was spent figuring out ways to ensure the
 relative dimensions of the cone and plate.
 
-.. image:: https://objects-us-east-1.dream.io/moorepants/cone-diagram.png
+.. image:: https://moorepants.s3.us-east-005.dream.io/cone-diagram.png
 
 The principle of operation is based around rotation of a shallow cone in a
 fluid which theoretically generates a linear variation in shear stress with
 respect to the height of the cone.
 
-.. image:: https://objects-us-east-1.dream.io/moorepants/cell-shearer-fea.png
+.. image:: https://moorepants.s3.us-east-005.dream.io/cell-shearer-fea.png
 
 Downloads
 =========
@@ -44,6 +44,6 @@ Downloads
 - Working drawings [pdf__]
 - Assembly drawings [pdf__]
 
-__ https://objects-us-east-1.dream.io/moorepants/DeVerse2010.pdf
-__ https://objects-us-east-1.dream.io/moorepants/cell-shearer-08-11-12.pdf
-__ https://objects-us-east-1.dream.io/moorepants/cell-shearer-assembly.pdf
+__ https://moorepants.s3.us-east-005.dream.io/DeVerse2010.pdf
+__ https://moorepants.s3.us-east-005.dream.io/cell-shearer-08-11-12.pdf
+__ https://moorepants.s3.us-east-005.dream.io/cell-shearer-assembly.pdf

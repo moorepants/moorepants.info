@@ -8,7 +8,7 @@ Yeadon
                    popular method for estimating the body segment parameters of
                    a human. The package can be used as library, as in
                    BicycleParameters, or as a standalone GUI application.
-:summary-image: https://objects-us-east-1.dream.io/moorepants/yeadon-gui-screenshot.png
+:summary-image: https://moorepants.s3.us-east-005.dream.io/yeadon-gui-screenshot.png
 :date: 2011-06-01 00:00:00
 :startdate: 2011-06-01 00:00:00
 :enddate: 2014-11-30 10:00:00
@@ -79,10 +79,10 @@ This screencast shows how to use the GUI.
 Screenshots
 -----------
 
-.. image:: https://objects-us-east-1.dream.io/moorepants/haya.png
+.. image:: https://moorepants.s3.us-east-005.dream.io/haya.png
    :class: img-rounded
    :align: center
 
-.. image:: https://objects-us-east-1.dream.io/moorepants/ice-skater-double.png
+.. image:: https://moorepants.s3.us-east-005.dream.io/ice-skater-double.png
    :class: img-rounded
    :align: center

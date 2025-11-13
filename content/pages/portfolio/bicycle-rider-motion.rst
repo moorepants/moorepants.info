@@ -5,14 +5,14 @@ Motion Analysis of a Bicyclist
 :subtitle: shake those markers
 :description: Description of the bicycling motion capture project.
 :summary-sentence:
-:summary-image: https://objects-us-east-1.dream.io/moorepants/jason-bicycle-mo-cap.jpg
+:summary-image: https://moorepants.s3.us-east-005.dream.io/jason-bicycle-mo-cap.jpg
 :date: 2008-11-20 00:00:00
 :startdate: 2008-11-20 00:00:00
 :enddate: 2013-08-21 00:00:00
 :status: hidden
 :slug: portfolio/bicycle-rider-motion
 
-.. image:: https://objects-us-east-1.dream.io/moorepants/jason-bicycle-mo-cap.jpg
+.. image:: https://moorepants.s3.us-east-005.dream.io/jason-bicycle-mo-cap.jpg
    :class: img-rounded
    :align: center
 

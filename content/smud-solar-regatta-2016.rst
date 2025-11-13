@@ -10,7 +10,7 @@ Introducing the UCD MAE Solar Regatta Team
 :slug: smud-solar-regatta-2016
 :tags: ucd, mae, senior design, solar regatta
 
-.. figure:: https://objects-us-east-1.dream.io/moorepants/fiberglassing-800-600.jpg
+.. figure:: https://moorepants.s3.us-east-005.dream.io/fiberglassing-800-600.jpg
    :class: img-rounded
    :width: 400px
 

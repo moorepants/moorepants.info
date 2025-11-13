@@ -13,7 +13,7 @@ Bicycle and Rider Physical Parameters
                    damping constants, etc. Starting at TU Delft with Jodi
                    Kooijman's tools and methods, I refined a technique for
                    measuring both the bicycle and rider's basic parameters.
-:summary-image: https://objects-us-east-1.dream.io/moorepants/jodi-jason-bike-par-meas.jpg
+:summary-image: https://moorepants.s3.us-east-005.dream.io/jodi-jason-bike-par-meas.jpg
 :date: 2006-01-01 00:00:00
 :startdate: 2006-01-01 00:00:00
 :enddate: 2012-08-21 00:00:00

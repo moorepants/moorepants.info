@@ -9,7 +9,7 @@ Freeport Boulevard Road Diet
 :slug: freeport-bicycle-lanes
 :tags: bicycle, advocacy, sacramento, bicycle lane
 
-.. figure:: https://objects-us-east-1.dream.io/moorepants/sacbee-freeport.jpeg
+.. figure:: https://moorepants.s3.us-east-005.dream.io/sacbee-freeport.jpeg
    :alt: Image of bicyclist on Freeport Blvd in Sacramento
    :class: img-rounded
    :width: 400px

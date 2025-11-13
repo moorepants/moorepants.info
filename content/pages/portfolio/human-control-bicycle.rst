@@ -13,7 +13,7 @@ Human Control of a Bicycle
                    perturbations. This data was then used to identify both a
                    plant and control model of the underlying system and
                    validate our hypotheses about the rider's control structure.
-:summary-image: https://objects-us-east-1.dream.io/moorepants/jason-on-instrumented-bicycle.jpg
+:summary-image: https://moorepants.s3.us-east-005.dream.io/jason-on-instrumented-bicycle.jpg
 :date: 2009-10-01 00:00:00
 :startdate: 2009-10-01 00:00:00
 :enddate: 2012-08-21 00:00:00
@@ -56,7 +56,7 @@ Jason K. Moore. Human Control of a Bicycle". PhD thesis. Davis, CA: University
 of California, Davis, Aug. 2012.
 
 - `HTML Version <http://moorepants.github.io/dissertation>`_
-- `PDF Version <https://objects-us-east-1.dream.io/moorepants/Moore2012.pdf>`_
+- `PDF Version <https://moorepants.s3.us-east-005.dream.io/Moore2012.pdf>`_
 - `Sphinx Source <https://github.com/moorepants/dissertation>`_
 
 

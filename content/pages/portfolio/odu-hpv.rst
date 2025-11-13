@@ -5,7 +5,7 @@ ODU Human Powered Vehicle
 :subtitle: Tuscaloosa here we come
 :description: We built a racer for the ASME HPV competition
 :summary-sentence: ODU human powered vehicle senior design project.
-:summary-image: https://objects-us-east-1.dream.io/moorepants/odu-hpv.jpg
+:summary-image: https://moorepants.s3.us-east-005.dream.io/odu-hpv.jpg
 :date: 2003-09-01 10:00:00
 :startdate: 2003-09-01 10:00:00
 :enddate: 2005-01-01 10:00:00

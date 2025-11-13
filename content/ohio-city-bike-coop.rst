@@ -9,7 +9,7 @@ Ohio City Bicycle Co-op
 :slug: ohio-city-bike-coop
 :tags: bicycle collective, Cleveland, bicycle repair
 
-.. image:: https://objects-us-east-1.dream.io/moorepants/cleveland-bridge.jpg
+.. image:: https://moorepants.s3.us-east-005.dream.io/cleveland-bridge.jpg
    :class: img-rounded
    :width: 400px
 

@@ -7,13 +7,13 @@ Bauer Compressors
 :description: Info on projects as an intern at Bauer Compressors
 :summary-sentence: CAD modeling and machine design internship at Bauer
                    Compressors in Norfolk, VA.
-:summary-image: https://objects-us-east-1.dream.io/moorepants/bauer-compressor-3d.jpg
+:summary-image: https://moorepants.s3.us-east-005.dream.io/bauer-compressor-3d.jpg
 :startdate: 2003-06-01 00:00:00
 :enddate: 2003-12-31 00:00:00
 :status: hidden
 :slug: portfolio/bauer-compressors
 
-.. image:: https://objects-us-east-1.dream.io/moorepants/bauer-compressor-3d.jpg
+.. image:: https://moorepants.s3.us-east-005.dream.io/bauer-compressor-3d.jpg
    :align: center
    :class: img-rounded
 
@@ -37,5 +37,5 @@ vouch for my work there.
 - Air tank storage redesign.
 - Designed parts and prepared drawings for fabrication.
 
-.. image:: https://objects-us-east-1.dream.io/moorepants/bauer-compressor-2d.jpg
+.. image:: https://moorepants.s3.us-east-005.dream.io/bauer-compressor-2d.jpg
    :align: center

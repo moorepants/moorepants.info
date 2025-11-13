@@ -60,10 +60,10 @@ https://gist.github.com/moorepants/6597067
 
 The resulting plot is:
 
-.. image:: https://objects-us-east-1.dream.io/moorepants/butterworth-nyquist.png
+.. image:: https://moorepants.s3.us-east-005.dream.io/butterworth-nyquist.png
    :class: img-rounded
    :width: 400px
-   :target: https://objects-us-east-1.dream.io/moorepants/butterworth-nyquist.png
+   :target: https://moorepants.s3.us-east-005.dream.io/butterworth-nyquist.png
    :alt: Figure show affects of changing the Nyquist frequency
 
 If you choose a larger Nyquist frequency than the signal, then you push the

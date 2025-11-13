@@ -99,7 +99,7 @@ other:
 
 ~1509 total work hours - 1097.0 (all the other stuff) = 412.4 hrs ~ 11 hrs/week
 
-.. image:: https://objects-us-east-1.dream.io/moorepants/time-spent-pie-chart-2014-03-24.png
+.. image:: https://moorepants.s3.us-east-005.dream.io/time-spent-pie-chart-2014-03-24.png
    :alt: Pie chart of my time spent
 
 So I'm spending way too much time doing a ton of other random stuff that isn't

@@ -30,13 +30,13 @@ Other
 
 Eating a tarantula:
 
-.. image:: https://objects-us-east-1.dream.io/moorepants/jason-tarantula.jpg
+.. image:: https://moorepants.s3.us-east-005.dream.io/jason-tarantula.jpg
    :class: img-rounded
    :width: 400px
 
 Biking through the east gate of Angkor Thom:
 
-.. image:: https://objects-us-east-1.dream.io/moorepants/jason-bicycling-angkor-wat-02.jpg
+.. image:: https://moorepants.s3.us-east-005.dream.io/jason-bicycling-angkor-wat-02.jpg
    :class: img-rounded
    :width: 400px
 

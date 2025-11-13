@@ -24,7 +24,7 @@ journal club next quarter.
   Namasté,
   Jonathan
 
-Here is a `flyer <https://objects-us-east-1.dream.io/moorepants/building-efficiency-journal-club-flyer.pdf>`_
+Here is a `flyer <https://moorepants.s3.us-east-005.dream.io/building-efficiency-journal-club-flyer.pdf>`_
 for the course.
 
 

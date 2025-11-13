@@ -6,7 +6,7 @@ Pedal Desk
 :description: a desk that charges your laptop while you work with human power
 :summary-sentence: The pedal powered laptop charging station and energy
                    demonstration device.
-:summary-image: https://objects-us-east-1.dream.io/moorepants/pedal-desk.jpg
+:summary-image: https://moorepants.s3.us-east-005.dream.io/pedal-desk.jpg
 :date: 2007-03-01 00:00:00
 :startdate: 2007-03-01 00:00:00
 :enddate: 2007-12-31 00:00:00

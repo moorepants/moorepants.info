@@ -9,7 +9,7 @@ Comments from a concerned Sacramento citizen and Intercampus Shuttle rider regar
 :tags: transportation, advocacy, shuttle, commute
 :category: advocacy
 
-.. image:: https://objects-us-east-1.dream.io/moorepants/shuttle-cartoon.png
+.. image:: https://moorepants.s3.us-east-005.dream.io/shuttle-cartoon.png
    :width: 800px
    :align: center
 

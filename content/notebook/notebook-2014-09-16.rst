@@ -92,7 +92,7 @@ Other things I did
 
 My time graph for the past week
 
-.. image:: https://objects-us-east-1.dream.io/moorepants/aio-2014-09-16.png
+.. image:: https://moorepants.s3.us-east-005.dream.io/aio-2014-09-16.png
    :width: 800px
 
 Last week's issues

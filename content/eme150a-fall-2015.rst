@@ -259,7 +259,7 @@ compute fatigue failure, but they didn't (at least not early enough). We
 provided them with the acceleration data and they made use of it estimate the
 fluctuating stresses in their designs.
 
-.. image:: https://objects-us-east-1.dream.io/moorepants/bus-accel-data.png
+.. image:: https://moorepants.s3.us-east-005.dream.io/bus-accel-data.png
    :class: img-rounded
    :width: 600px
    :alt: Time series graph of bus vertical nose acceleration data.
@@ -275,30 +275,30 @@ candy from their presentations/reports of the different designs:
    <table>
      <tr>
        <td>
-         <img width="400 px" src=https://objects-us-east-1.dream.io/moorepants/capscrew.png />
+         <img width="400 px" src=https://moorepants.s3.us-east-005.dream.io/capscrew.png />
        </td>
        <td>
-         <img width="400 px" src=https://objects-us-east-1.dream.io/moorepants/crankshaft.png />
-       </td>
-     </tr>
-     <tr>
-       <td>
-         <img width="400 px" src=https://objects-us-east-1.dream.io/moorepants/flywheel.png />
-       </td>
-       <td>
-         <img width="400 px" src=https://objects-us-east-1.dream.io/moorepants/helical-spring.png />
-       </td>
-     <tr>
-       <td>
-         <img width="400 px" src=https://objects-us-east-1.dream.io/moorepants/planetary-gear.png />
-       </td>
-       <td>
-         <img width="400 px" src=https://objects-us-east-1.dream.io/moorepants/roller-bearing.png />
+         <img width="400 px" src=https://moorepants.s3.us-east-005.dream.io/crankshaft.png />
        </td>
      </tr>
      <tr>
        <td>
-         <img width="400 px" src=https://objects-us-east-1.dream.io/moorepants/weldment.png />
+         <img width="400 px" src=https://moorepants.s3.us-east-005.dream.io/flywheel.png />
+       </td>
+       <td>
+         <img width="400 px" src=https://moorepants.s3.us-east-005.dream.io/helical-spring.png />
+       </td>
+     <tr>
+       <td>
+         <img width="400 px" src=https://moorepants.s3.us-east-005.dream.io/planetary-gear.png />
+       </td>
+       <td>
+         <img width="400 px" src=https://moorepants.s3.us-east-005.dream.io/roller-bearing.png />
+       </td>
+     </tr>
+     <tr>
+       <td>
+         <img width="400 px" src=https://moorepants.s3.us-east-005.dream.io/weldment.png />
        </td>
        <td>
        </td>
