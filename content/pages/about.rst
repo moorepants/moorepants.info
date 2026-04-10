@@ -77,7 +77,6 @@ information:
 Contact me for direct communication at:
 
 - Email: moorepants@gmail.com (personal), j.k.moore@tudelft.nl (work)
-- Skype: moorepants (personal/work)
 - Google Chat/Meet: moorepants@gmail.com (personal/work)
 
 Email is the best way to reach me, although I firmly treat it as asynchronous
@@ -107,14 +106,6 @@ Academic
 - `Google Scholar <http://scholar.google.com/citations?user=i9c-QOYAAAAJ>`_
 - `ORCID <http://orcid.org/0000-0002-8698-6143>`_
 - `Zotero <https://www.zotero.org/moorepants>`_
-- `ResearchGate <https://www.researchgate.net/profile/Jason_Moore/>`_
-
-Professional
-------------
-
-- LinkedIn_
-
-.. _LinkedIn: https://www.linkedin.com/in/jason-k-moore-32255040
 
 Software
 --------
@@ -126,8 +117,8 @@ Software
 Wiki
 ----
 
-- `Wikipedia <http://en.wikipedia.org/wiki/User:Moorepants>`_
 - `LocalWiki <https://localwiki.org/Users/moorepants>`_
+- `Wikipedia <http://en.wikipedia.org/wiki/User:Moorepants>`_
 
 Social
 ------
@@ -168,10 +159,6 @@ nandi (Dell 7300)::
 garuda (Thinkpad x250)::
 
    ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDG1RKTxPK5C25en6L9koKF6JPKSLBi8phH4YSYhVyYWMd/QV/bbes9EFyeyAO5E3x3FqRXH62w+dHzAOvBVHDeIx+9wwoa66hMMh+WPlN6r7H2fceNll5A4y0gK6Ne/JOYDhW29FZmGs8NE8YkyUfABuAeR5925zasHDDazVGxt9wM2V433PIhRyyakSGtCwmnTwPhPSvXRX6/Be6foTiFa4RAQDeewv9oUgKxPCc4gF0xmKQBgFcu9IYMqi0qfxe7ZwVxH9WNUhuthdBRx8bPgyq6GhGpScF4/pOisJbEBwI4605F5VrU7NFCOhxBDvELwpJxj3YeC6jmH0pUxuND moorepants@gmail.com
-
-agni (HP 2170p)::
-
-  ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDdKOH+UN8xtUfhRb9oYM0YchWWzHzFWxmGQislexI9/bg1K7V4QKfuU6B7KszM5OwN9huU4V+U+HsmKW2cFtbjXL6MBsgwA2y3vQWs5US6xRnaZ1oSQTDZPXux+7tvOlSLD6rFtUKvNcF/4qsecWkTOuVo/ZtaMOAm2lCVSEAXwB6sN8t4MyqltzFPfor/zsWjTVOmAnp3v4iMXb3F6FLPW6FGMLlYhSy6y5BEdCIVLyc5kfN6QduKqnht3krRa4ifEDMI8lFFieaxb4QBRR3fUdUmZjFJmVlmzp/uxtUbKzOpTXFwPcbtlp1wTXNwPUmrq2buvPhZN0l+vaCad8/1 moorepants@gmail.com
 
 (Asus UL30A)::
 
