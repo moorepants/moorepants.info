@@ -7,14 +7,14 @@ Research
 :description: moorepants' ponderings
 :date: 1999
 
-My research is centered around the general topic of human mobility. I work on
-vehicle and assistive device design, simulation, analysis, and control of human
-locomotion and manually controlled vehicles, and engineering computation
-software development. I lead the `TU Delft Bicycle Laboratorium`_ and advise
-undergraduate and graduate students researchers in the BioMechanical
-Engineering Department at Delft University of Technology. See my `Google
-Scholar <https://scholar.google.com/citations?user=i9c-QOYAAAAJ&hl=en>`_
-profile for citation information.
+My research is centered around bicycle engineering. I study how we balance and
+control the bicycle and use this information to improve transportation and
+sports by addressing safety, performance, and design. I lead the `TU Delft
+Bicycle Laboratorium`_ and advise undergraduate and graduate students
+researchers in the BioMechanical Engineering Department at Delft University of
+Technology. See my `Google Scholar
+<https://scholar.google.com/citations?user=i9c-QOYAAAAJ&hl=en>`_ profile for
+citation information.
 
 .. _TU Delft Bicycle Laboratorium: https://mechmotum.github.io
 
