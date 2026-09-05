@@ -82,8 +82,10 @@ Contact me for direct communication at:
 Email is the best way to reach me, although I firmly treat it as asynchronous
 communication and will respond when I can, which may be instantly or take
 months. I also do not necessarily respond to emails that don't necessitate a
-response. Write "URGENT" in your subject line if urgent, call me if you need
-synchronous communication, and request a response if one is needed.
+response. If I suspect you used generative AI to write an email to me, do not
+expect a response. Write "URGENT" in your subject line if urgent, call me if
+you need synchronous communication, and request a response if one is needed.
+Please include deadlines for responses if you have a deadline.
 
 If you would like to meet with me, my free time is shown on `my work calendar
 <work-calendar.html>`_. Please send me a request to meet by email with some
