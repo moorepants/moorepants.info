@@ -4,6 +4,7 @@ You Don't Expect Me to Read 100 Papers, Do You?
 :authors: Jason K. Moore
 :date: 2026-09-16 18:30:00
 :description: A student questioned why would you read 100 academic papers.
+:category: education
 :tags: student, generative ai, tu delft
 
 I was the (co-)grader today for presentations about MSc students' literature
