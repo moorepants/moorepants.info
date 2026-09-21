@@ -19,18 +19,17 @@ supports the choice by declaring that the tendering process was "thorough".
 I've had at least one run in with this tendering process early in my time at TU
 Delft and I was surprised how opaque it was. In my case, it seemed quite clear
 that the university was already working with a company and had to legally make
-a tender before continuing to pay them. But the university's approach was to
-post the tender in a way that aligns closely with what the company they already
-work with offers and only publicly visible for the minimal time.  This is
-seemingly so that no other company has a chance to compete and the
-predetermined company is all but guaranteed to win the tender. This is a
-well-known strategy, also used when one is legally obliged to post job
-advertisements and you already know who you want to hire. I questioned the
-tendering process I witnessed and was quickly put on a blacklist by the people
-involved. This was only one of many negative introductions I had to how TU
-Delft internally functions. I have no proof of this suspicion but TU Delft is
-not so transparent about these tenders. It would be interesting to see how many
-pass the smell test.
+a tender before continuing to pay them. But an approach can be to post the
+tender in a way that aligns closely with what the company they already work
+with offers and only publicly visible for the minimal time. This is seemingly
+so that no other company has a chance to compete and the predetermined company
+is all but guaranteed to win the tender. This is a well-known strategy, also
+used when one is legally obliged to post job advertisements and you already
+know who you want to hire. I questioned the tendering process I witnessed and
+was quickly put on a blacklist by the people involved. This was only one of
+many negative introductions I had to how TU Delft internally functions. I don't
+get the sense that TU Delft is so transparent about these tenders. It would be
+interesting to see how many pass the smell test.
 
 D2L, the company that makes Brightspace, is a Canadian company. We have too
 many services that trust non-European companies access to our student and
