@@ -7,7 +7,6 @@ A TU Delft PhD Student's Public Explanation of His Termination
               details of his experience publicly.
 :tags: phd, advising, tu delft, social safety
 
-
 .. raw:: html
 
    <p>
@@ -47,3 +46,7 @@ doesn't seem his requests for an alternative path were ever granted. Regardless
 of where the blame lies or whether justice should be served, this experience is
 so egregious that it should be taken seriously by the university. I hope it has
 and/or will be.
+
+*Edit 2026-09-24: There is a `July 1, 2025 statement from TU Delft
+<https://www.tudelft.nl/en/2025/tbm/statement-from-the-dean>`_ indicating that
+Mr. Zhao has had an independent review and judgement.*
