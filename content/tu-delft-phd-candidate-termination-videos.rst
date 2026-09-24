@@ -7,26 +7,23 @@ A TU Delft PhD Student's Public Explanation of His Termination
               details of his experience publicly.
 :tags: phd, advising, tu delft, social safety
 
-Mr. Hanxin Zhao's recent YouTube video popped into my YouTube feed this
-morning:
 
 .. raw:: html
 
-   <iframe width="560" height="315"
-   src="https://www.youtube.com/embed/kfRuzHBLSaM?si=M0535sQsu6gtZEVh"
-   title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
-   clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-   referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-I watched it and then also watched his original video posted a year ago:
-
-.. raw:: html
-
-   <iframe width="560" height="315"
-   src="https://www.youtube.com/embed/ChS0eT683bA?si=6qbXAd9LdOK-HSbn"
-   title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
-   clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-   referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+   <p>
+   Mr. Hanxin Zhao's
+   recent YouTube
+   <a href="https://youtu.be/kfRuzHBLSaM?si=BjFg5J2CO-u9I9Ug" style="text-decoration: none !important; color: inherit !important; background-color: inherit !important; border-bottom: initial !important">
+   video
+   </a>
+   popped into my YouTube feed this morning. I watched it and then also watched
+   his
+   original
+   <a href="https://youtu.be/ChS0eT683bA?si=dKbAXlPNZ5vyV_z7" style="text-decoration: none !important; color: inherit !important; background-color: inherit !important; border-bottom: initial !important">
+   video
+   </a>
+   posted a year ago.
+   </p>
 
 This is only his side of the story but the emails and voice recordings that he
 posts gives a large amount of evidence for his position. He is brave to share
