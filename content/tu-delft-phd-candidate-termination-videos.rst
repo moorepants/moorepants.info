@@ -47,6 +47,7 @@ of where the blame lies or whether justice should be served, this experience is
 so egregious that it should be taken seriously by the university. I hope it has
 and/or will be.
 
-*Edit 2026-09-24: There is a `July 1, 2025 statement from TU Delft
-<https://www.tudelft.nl/en/2025/tbm/statement-from-the-dean>`_ indicating that
-Mr. Zhao has had an independent review and judgement.*
+*Edit 2026-09-24: There is a* `July 1, 2025 statement from TU Delft`_ *indicating
+that Mr. Zhao has had an independent review and judgement.*
+
+.. _July 1, 2025 statement from TU Delft: https://www.tudelft.nl/en/2025/tbm/statement-from-the-dean
