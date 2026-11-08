@@ -40,7 +40,7 @@ delivery. In the talk, I give some introduction to the disregard generative AI
 model builders have towards copyrighted materials and raise the concern that
 both copyright is ignored and that current copyright laws may not protect human
 labor in the age of AI. I've been worried about license dilution with AI
-contributions to SymPy on since the introduction of the new tools and `Paul
+contributions to SymPy since the introduction of the new tools and `Paul
 Ivanov's talk from a year ago
 <https://pirsquared.org/blog/current-challenges-in-free-software-and-open-source-development.html>`_
 did a great job putting such thoughts into words. Here is my short expression
