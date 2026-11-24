@@ -6,6 +6,7 @@ Human-in-the-Loop AI, Is it Necessary?
 :date: 2026-11-24 07:39:00
 :description: Engineers may need to know the same things they always have in
               the age of AI.
+:category: education
 :tags: generative ai, education, tu delft
 
 The chair of the TU Delft executive board, Ingrid Thijssen, implied in a recent
