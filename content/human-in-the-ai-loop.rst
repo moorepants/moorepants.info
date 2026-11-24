@@ -49,10 +49,10 @@ engineer who must do engineering themselves needs the same knowledge and mostly
 the same skills to check the engineering of others, including that of
 generative AI.
 
-If Ingrid Thijssen's comment is implying that she believes human's should not
-be in the AI engineering loop, then our curriculum may serve no purpose at all;
-a university may serve no purpose at all. It is hard to see a future with
-humans not embedded firmly in the engineering loop other than one that leads
-towards a general state of idiocracy_.
+If Ingrid Thijssen's comment is implying that humans should not be in the AI
+engineering loop, then our curriculum may serve no purpose at all; a university
+may serve no purpose at all. It is hard to see a future with humans not
+embedded firmly in the engineering loop other than one that leads towards a
+general state of idiocracy_.
 
 .. _idiocracy: https://en.wikipedia.org/wiki/Idiocracy
