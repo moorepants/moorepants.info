@@ -42,12 +42,12 @@ must, at least, check the engineering work done by generative AI, shouldn't
 they know mostly the same things about engineering that society has always
 expected them to know? For a human to evaluate others' engineering work,
 whether AI generated or not, we send them through years of intensive training
-that builds the set of skills and knowledge necessary to be an engineer. If the
-answer is "no" to removing the human from the AI engineering loop, then I do
-not think our engineering curriculum should change all that much. I conjecture
-that an engineer who must do engineering themselves needs the same knowledge
-and mostly the same skills to check the engineering of others, including that
-of generative AI.
+that builds the set of skills and knowledge necessary to be an engineer. If we
+should not remove the human from the AI engineering loop, then I do not think
+our engineering curriculum should change all that much. I conjecture that an
+engineer who must do engineering themselves needs the same knowledge and mostly
+the same skills to check the engineering of others, including that of
+generative AI.
 
 If Ingrid Thijssen's comment is implying that she believes human's should not
 be in the AI engineering loop, then our curriculum may serve no purpose at all;
